@@ -1,0 +1,402 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    1400
+  </width>
+  
+  
+  <height>
+    1460
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="1460" w="10" x="0" y="0"/>
+    
+    
+    <rect h="40" w="990" x="10" y="20"/>
+    
+    
+    <rect h="30" w="370" x="10" y="550"/>
+    
+    
+    <rect h="30" w="250" x="10" y="580"/>
+    
+    
+    <rect h="170" w="220" x="10" y="610"/>
+    
+    
+    <rect h="120" w="990" x="10" y="940"/>
+    
+    
+    <rect h="80" w="1390" x="10" y="1380"/>
+    
+    
+    <rect h="20" w="20" x="30" y="1210"/>
+    
+    
+    <rect h="40" w="150" x="50" y="210"/>
+    
+    
+    <rect h="20" w="20" x="110" y="1270"/>
+    
+    
+    <rect h="30" w="210" x="170" y="520"/>
+    
+    
+    <rect h="60" w="140" x="170" y="880"/>
+    
+    
+    <rect h="50" w="180" x="200" y="470"/>
+    
+    
+    <rect h="20" w="40" x="200" y="1310"/>
+    
+    
+    <rect h="110" w="180" x="220" y="250"/>
+    
+    
+    <rect h="20" w="40" x="330" y="1330"/>
+    
+    
+    <rect h="120" w="270" x="350" y="820"/>
+    
+    
+    <rect h="40" w="200" x="380" y="360"/>
+    
+    
+    <rect h="40" w="30" x="400" y="320"/>
+    
+    
+    <rect h="30" w="110" x="430" y="720"/>
+    
+    
+    <rect h="40" w="450" x="550" y="640"/>
+    
+    
+    <rect h="50" w="210" x="580" y="530"/>
+    
+    
+    <rect h="90" w="250" x="750" y="680"/>
+    
+    
+    <rect h="310" w="210" x="790" y="60"/>
+    
+    
+    <rect h="20" w="100" x="830" y="560"/>
+    
+    
+    <rect h="50" w="140" x="860" y="890"/>
+    
+    
+    <rect h="20" w="10" x="990" y="0"/>
+    
+    
+    <rect h="20" w="10" x="990" y="370"/>
+    
+    
+    <rect h="160" w="10" x="990" y="480"/>
+    
+    
+    <rect h="120" w="10" x="990" y="770"/>
+    
+    
+    <rect h="40" w="140" x="1010" y="550"/>
+    
+    
+    <rect h="20" w="20" x="1020" y="1010"/>
+    
+    
+    <rect h="20" w="20" x="1070" y="930"/>
+    
+    
+    <rect h="20" w="80" x="1110" y="1070"/>
+    
+    
+    <rect h="20" w="20" x="1180" y="880"/>
+    
+    
+    <rect h="20" w="20" x="1190" y="1350"/>
+    
+    
+    <rect h="20" w="20" x="1210" y="580"/>
+    
+    
+    <rect h="20" w="20" x="1270" y="820"/>
+    
+    
+    <rect h="20" w="20" x="1270" y="1310"/>
+    
+    
+    <rect h="20" w="20" x="1280" y="630"/>
+    
+    
+    <rect h="20" w="20" x="1290" y="1100"/>
+    
+    
+    <rect h="20" w="20" x="1310" y="1250"/>
+    
+    
+    <rect h="20" w="20" x="1320" y="770"/>
+    
+    
+    <rect h="20" w="20" x="1350" y="700"/>
+    
+    
+    <rect h="20" w="20" x="1350" y="1170"/>
+    
+    
+    <rect h="1380" w="10" x="1390" y="0"/>
+    
+  
+  </solids>
+  
+  
+  <fakesolids>
+    
+    
+    <rect h="90" w="10" x="990" y="390"/>
+    
+  
+  </fakesolids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <level3_spike3 height="40" width="10" x="540" y="640"/>
+    
+    
+    <level3_spike2 height="10" width="240" x="750" y="770"/>
+    
+    
+    <LargeCrate x="590" y="580"/>
+    
+    
+    <level3_spike0 height="10" width="40" x="310" y="930"/>
+    
+    
+    <helpBox helpString="Patience, it's going to take a lot of patience." type="0" x="1030" y="490"/>
+    
+    
+    <helpBox helpString="The glass ceiling can be an illusion, the walls however solid, can be too." type="0" x="440" y="300"/>
+    
+    
+    <level3_spike0 height="10" width="410" x="10" y="1370"/>
+    
+    
+    <level3_spike0 height="10" width="240" x="1150" y="1370"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <movingPlatforms>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="90" x="580" y="360">
+      
+      
+      <node x="580" y="460"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+  
+  </movingPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level3_painting3 scrollFactor="0.2" x="250" y="610"/>
+    
+    
+    <level3_salesChart height="67" scrollFactor="0.2" width="67" x="20" y="400"/>
+    
+    
+    <level3_salesChart height="67" scrollFactor="0.2" width="67" x="600" y="160"/>
+    
+    
+    <level3_painting3 scrollFactor="0.2" x="130" y="450"/>
+    
+    
+    <level3_painting1 scrollFactor="0.2" x="480" y="120"/>
+    
+    
+    <level3_painting3 scrollFactor="0.2" x="700" y="220"/>
+    
+    
+    <level3_painting3 scrollFactor="0.2" x="80" y="800"/>
+    
+    
+    <level3_painting2 scrollFactor="0.2" x="380" y="90"/>
+    
+    
+    <level3_painting1 scrollFactor="0.2" x="410" y="440"/>
+    
+    
+    <level3_window height="320" scrollFactor="0.2" width="650" x="10" y="230"/>
+    
+    
+    <level3_painting1 scrollFactor="0.2" x="140" y="1110"/>
+    
+    
+    <level3_painting2 scrollFactor="0.2" x="280" y="1150"/>
+    
+    
+    <level3_painting3 scrollFactor="0.2" x="460" y="1190"/>
+    
+    
+    <level3_salesChart height="67" scrollFactor="0.2" width="67" x="650" y="1220"/>
+    
+    
+    <level3_window height="320" scrollFactor="0.2" width="970" x="10" y="1060"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer2>
+    
+    
+    <level3_painting1 scrollFactor="0.9" x="1020" y="1170"/>
+    
+    
+    <level3_painting3 scrollFactor="0.9" x="1030" y="660"/>
+    
+    
+    <level3_painting2 scrollFactor="0.9" x="1110" y="950"/>
+    
+  
+  </BGLayer2>
+  
+  
+  <BGLayer3>
+    
+    
+    <sugarBags scrollFactor="0.2" x="50" y="170"/>
+    
+    
+    <palettes scrollFactor="0.2" x="220" y="210"/>
+    
+    
+    <palettes scrollFactor="0.2" x="200" y="430"/>
+    
+    
+    <palettes scrollFactor="0.2" x="170" y="840"/>
+    
+    
+    <sugarBags scrollFactor="0.2" x="430" y="680"/>
+    
+    
+    <level3_desk1 x="350" y="750"/>
+    
+    
+    <level3_desk1 x="580" y="460"/>
+    
+    
+    <level3_desk2 x="640" y="870"/>
+    
+    
+    <sodaPack scrollFactor="0.2" x="890" y="620"/>
+    
+    
+    <sodaPack scrollFactor="0.2" x="860" y="870"/>
+    
+    
+    <level3_desk1 x="420" y="1310"/>
+    
+    
+    <level3_desk3 x="690" y="1350"/>
+    
+    
+    <level3_desk2 x="970" y="1310"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <exit nextLevel="2" x="146" y="121"/>
+    
+    
+    <smallSugarBag width="22" x="17" y="253"/>
+    
+    
+    <L1_SmallCrate width="32" x="577" y="797"/>
+    
+    
+    <Bottle width="12" x="36" y="1171"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <army movementType="1" speed="70" talkString="The war crimes tribunal in this region is neither harsh nor fair. I will fix this if it's the last thing I do." x="230" y="200">
+      
+      
+      <node x="360" y="200"/>
+      
+    
+    </army>
+    
+    
+    <player andreInitialFlip="1" followHeight="1060" followWidth="1000" levelName="With Our Hearts In Our Hands" liselotInitialFlip="0" movementType="1" speed="40" startsFirst="1" talkString="No client is too big or too small. We'll sell to the military, we'll sell to the local street vendors." x="950" y="840">
+      
+      
+      <node x="970" y="840"/>
+      
+    
+    </player>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="30" y="890">
+      
+      
+      <node x="30" y="890"/>
+      
+    
+    </liselot>
+    
+    
+    <worker movementType="1" speed="70" talkString="The fake walls? Well, no, of course I do not speak of them to outsiders." x="590" y="490">
+      
+      
+      <node x="750" y="490"/>
+      
+    
+    </worker>
+    
+    
+    <chef movementType="1" speed="70" talkString="It's always darkest before the dawn, but pink lemonade tastes better at dusk." x="670" y="590">
+      
+      
+      <node x="950" y="590"/>
+      
+    
+    </chef>
+    
+    
+    <inspector movementType="1" speed="70" talkString="False walls and hidden rooms violate many many laws." x="620" y="900">
+      
+      
+      <node x="830" y="900"/>
+      
+    
+    </inspector>
+    
+  
+  </characters>
+  
+
+</level>

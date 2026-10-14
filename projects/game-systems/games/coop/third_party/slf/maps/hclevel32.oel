@@ -1,0 +1,192 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    1060
+  </width>
+  
+  
+  <height>
+    640
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="10" w="1060" x="0" y="0"/>
+    
+    
+    <rect h="630" w="10" x="0" y="10"/>
+    
+    
+    <rect h="110" w="1050" x="10" y="530"/>
+    
+    
+    <rect h="280" w="50" x="240" y="250"/>
+    
+    
+    <rect h="280" w="30" x="390" y="250"/>
+    
+    
+    <rect h="280" w="20" x="580" y="250"/>
+    
+    
+    <rect h="20" w="20" x="800" y="230"/>
+    
+    
+    <rect h="50" w="260" x="800" y="420"/>
+    
+    
+    <rect h="20" w="20" x="890" y="190"/>
+    
+    
+    <rect h="160" w="110" x="950" y="260"/>
+    
+    
+    <rect h="60" w="110" x="950" y="470"/>
+    
+    
+    <rect h="20" w="20" x="960" y="160"/>
+    
+    
+    <rect h="20" w="20" x="1020" y="130"/>
+    
+    
+    <rect h="250" w="10" x="1050" y="10"/>
+    
+  
+  </solids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <LargeCrate x="790" y="470"/>
+    
+    
+    <level3_spike3 height="50" width="10" x="790" y="420"/>
+    
+    
+    <level3_spike0 height="10" width="100" x="290" y="520"/>
+    
+    
+    <level3_spike0 height="10" width="160" x="420" y="520"/>
+    
+    
+    <level3_spike0 height="10" width="60" x="600" y="520"/>
+    
+    
+    <level3_spike0 height="10" width="100" x="950" y="250"/>
+    
+    
+    <level3_spike3 height="210" width="10" x="230" y="270"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <movingPlatforms>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="80" x="710" y="280">
+      
+      
+      <node x="710" y="450"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="120" x="190" y="230">
+      
+      
+      <node x="190" y="460"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+  
+  </movingPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level3_window height="320" scrollFactor="0.2" width="960" x="0" y="210"/>
+    
+    
+    <level3_painting1 scrollFactor="0.2" x="20" y="80"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer2>
+    
+    
+    <filingCab2 scrollFactor="0.9" x="360" y="470"/>
+    
+    
+    <filingCab2 scrollFactor="0.9" x="520" y="470"/>
+    
+  
+  </BGLayer2>
+  
+  
+  <BGLayer3>
+    
+    
+    <plant2 scrollFactor="0.2" x="20" y="430"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <exit nextLevel="2" x="41" y="440"/>
+    
+    
+    <Bottle width="12" x="991" y="39"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <player andreInitialFlip="0" followHeight="0" followWidth="0" levelName="Wait For It" liselotInitialFlip="1" movementType="1" speed="40" startsFirst="1" talkString="The airline office is just down the road. I suggest we sell them refreshments." x="80" y="480">
+      
+      
+      <node x="120" y="480"/>
+      
+    
+    </player>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="920" y="480">
+      
+      
+      <node x="940" y="480"/>
+      
+    
+    </liselot>
+    
+    
+    <chef movementType="1" speed="40" talkString="Orange peel and quinine and sometimes lemon rind makes our bitters." x="800" y="370">
+      
+      
+      <node x="910" y="370"/>
+      
+    
+    </chef>
+    
+  
+  </characters>
+  
+
+</level>

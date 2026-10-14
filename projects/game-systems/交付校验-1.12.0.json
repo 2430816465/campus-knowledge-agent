@@ -1,0 +1,14 @@
+{
+  "version": "1.12.0",
+  "versionCode": 14,
+  "sha256": "7d257ddf684a10b99467e778654826fe44a9cf79685d3050a9e5715fa7c6ea32",
+  "bytes": 101761974,
+  "packedFilesVerified": 568,
+  "unchangedTowerSourceFiles": 28,
+  "zipIntegrity": true,
+  "sourceParity": true,
+  "verificationSource": "C:\\Users\\24308\\Desktop\\总\\发布快照-1.12.0",
+  "workingTreeDifferences": [],
+  "androidDeviceTested": false,
+  "apk": "C:\\Users\\24308\\Desktop\\总\\再来亿把-1.12.0.apk"
+}

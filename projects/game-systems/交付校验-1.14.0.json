@@ -1,0 +1,24 @@
+{
+  "version": "1.14.0",
+  "versionCode": 17,
+  "sha256": "4065284a9264be3cbfef6e8f8c3c4b1756bf24b9819436c14fa53659cf031d66",
+  "bytes": 121796100,
+  "packedFilesVerified": 638,
+  "zipIntegrity": true,
+  "sourceParity": true,
+  "verificationSource": "C:\\Users\\24308\\Desktop\\总\\发布快照-1.14.0-再闯美术",
+  "baseline": "C:\\Users\\24308\\Desktop\\总\\发布快照-1.13.0-定稿",
+  "scope": "Stable 1.13.0 collection plus coop art/UI/tutorial; concurrent changes in other chats excluded",
+  "unchangedHeroActionFiles": 6,
+  "protectedCoopSourceFiles": [
+    "game-shared.js",
+    "campaign-catalog.js",
+    "remade-campaign.js",
+    "solo.js",
+    "phone-host-worker.js",
+    "hero-video-config.js",
+    "hero-jump-config.js"
+  ],
+  "androidDeviceTested": false,
+  "apk": "C:\\Users\\24308\\Desktop\\总\\再来亿把-1.14.0.apk"
+}

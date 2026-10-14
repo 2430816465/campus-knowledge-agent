@@ -1,0 +1,75 @@
+{
+  "record_type": "historical_local_report_summary",
+  "retrieval": {
+    "checked_at": "2026-10-09T18:14:17.651185+08:00",
+    "before_summary": {
+      "math_development/selected": {
+        "questions": 20,
+        "recall_at_3": 20,
+        "recall_at_6": 20
+      },
+      "math_development/global": {
+        "questions": 20,
+        "recall_at_3": 12,
+        "recall_at_6": 15
+      },
+      "other_notices_transfer/selected": {
+        "questions": 8,
+        "recall_at_3": 6,
+        "recall_at_6": 7
+      },
+      "other_notices_transfer/global": {
+        "questions": 8,
+        "recall_at_3": 2,
+        "recall_at_6": 2
+      }
+    },
+    "after_summary": {
+      "math_development/selected": {
+        "questions": 20,
+        "recall_at_3": 20,
+        "recall_at_6": 20
+      },
+      "math_development/global": {
+        "questions": 20,
+        "recall_at_3": 20,
+        "recall_at_6": 20
+      },
+      "other_notices_transfer/selected": {
+        "questions": 8,
+        "recall_at_3": 8,
+        "recall_at_6": 8
+      },
+      "other_notices_transfer/global": {
+        "questions": 8,
+        "recall_at_3": 8,
+        "recall_at_6": 8
+      }
+    },
+    "limits": [
+      "Public-source literal recall only; no teacher rule approval or generated-answer accuracy.",
+      "All 28 questions have now been used in development; not an independent or school-wide benchmark.",
+      "Both ranking versions use identical real query vectors; timings are not throughput measurements."
+    ]
+  },
+  "answer_source_check": {
+    "checked_at": "2026-10-09T18:17:38.880852+08:00",
+    "passed": true,
+    "questions": 11,
+    "successful_literal_answers": 11,
+    "unique_question_wordings": 9
+  },
+  "database_restore": {
+    "checked_at": "2026-10-10T06:26:25.311200+08:00",
+    "passed": true,
+    "foreign_key_constraints": 4,
+    "raw_files_verified": 14910,
+    "real_notice_retrieval_passed": true,
+    "active_database_overwritten": false
+  },
+  "source_report_sha256": {
+    "student-retrieval.json": "fba67440613f21cc1893ed620556b0422a50ddd560ec225cbf66c0bc5d23a734",
+    "student-answer-acceptance.json": "d4d2e11e951e8e41d49868664631f81934849f4f206c38d900b45284e2811a89",
+    "postgres-restore-check.json": "db000c87f4c586f2fb683111ad52de794d7233223e93257efcd0eab477583afd"
+  }
+}

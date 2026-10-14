@@ -1,0 +1,219 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    800
+  </width>
+  
+  
+  <height>
+    640
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="10" w="800" x="0" y="0"/>
+    
+    
+    <rect h="170" w="160" x="0" y="10"/>
+    
+    
+    <rect h="460" w="10" x="0" y="180"/>
+    
+    
+    <rect h="190" w="150" x="10" y="450"/>
+    
+    
+    <rect h="10" w="640" x="160" y="630"/>
+    
+    
+    <rect h="40" w="240" x="350" y="140"/>
+    
+    
+    <rect h="200" w="320" x="480" y="430"/>
+    
+    
+    <rect h="190" w="100" x="490" y="180"/>
+    
+    
+    <rect h="230" w="170" x="630" y="140"/>
+    
+    
+    <rect h="130" w="10" x="790" y="10"/>
+    
+    
+    <rect h="60" w="10" x="790" y="370"/>
+    
+  
+  </solids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <LargeCrate x="500" y="370"/>
+    
+    
+    <level1_specialPlatform animated="0" movementType="1" speed="40" x="130" y="330"/>
+    
+    
+    <spike0 height="10" width="300" x="170" y="620"/>
+    
+    
+    <spike1 height="170" width="10" x="160" y="450"/>
+    
+    
+    <spike3 height="170" width="10" x="470" y="450"/>
+    
+    
+    <spike1 height="230" width="10" x="590" y="140"/>
+    
+    
+    <spike3 height="230" width="10" x="620" y="140"/>
+    
+    
+    <level1_specialBlock animated="0" movementType="1" speed="40" x="230" y="310"/>
+    
+    
+    <level1_specialBlock animated="0" movementType="1" speed="40" x="250" y="270"/>
+    
+    
+    <spike3 height="40" width="10" x="340" y="140"/>
+    
+    
+    <spike1 height="40" width="10" x="290" y="270"/>
+    
+    
+    <spike1 height="190" width="10" x="10" y="180"/>
+    
+    
+    <spike2 height="10" width="120" x="40" y="180"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <movingPlatforms>
+    
+    
+    <level1_specialPlatformSmall animated="1" movementType="5" speed="80" x="290" y="220">
+      
+      
+      <node x="450" y="220"/>
+      
+    
+    </level1_specialPlatformSmall>
+    
+    
+    <level1_specialPlatformSmall animated="1" movementType="5" speed="110" x="160" y="430">
+      
+      
+      <node x="440" y="430"/>
+      
+    
+    </level1_specialPlatformSmall>
+    
+  
+  </movingPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level1_windows height="54" scrollFactor="0.1" width="300" x="170" y="270"/>
+    
+    
+    <noticeBoard scrollFactor="0.2" x="170" y="380"/>
+    
+    
+    <noticeBoard scrollFactor="0.2" x="190" y="510"/>
+    
+    
+    <noticeBoard scrollFactor="0.25" x="590" y="380"/>
+    
+    
+    <level1_shelfTile height="480" scrollFactor="0.2" width="240" x="0" y="160"/>
+    
+    
+    <level1_shelfTile height="480" scrollFactor="0.2" width="160" x="410" y="160"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer2>
+    
+    
+    <sugarBagsAndCrates scrollFactor="0.65" x="330" y="500"/>
+    
+    
+    <sugarBagsAndCrates scrollFactor="0.6" x="0" y="320"/>
+    
+    
+    <noticeBoard scrollFactor="0.9" x="180" y="80"/>
+    
+  
+  </BGLayer2>
+  
+  
+  <BGLayer3>
+    
+    
+    <sugarBags scrollFactor="0.2" x="390" y="100"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <exit nextLevel="2" x="486" y="50"/>
+    
+    
+    <L1_SmallCrate width="32" x="159" y="307"/>
+    
+    
+    <Bottle width="12" x="603" y="155"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <player andreInitialFlip="0" followHeight="0" followWidth="0" levelName="Hop, Skip" liselotInitialFlip="1" movementType="1" speed="40" startsFirst="1" talkString="As a result of our trade partners in Holland, we also were able to import Flying Dutchmen style billy carts." x="20" y="400">
+      
+      
+      <node x="70" y="400"/>
+      
+    
+    </player>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="730" y="380">
+      
+      
+      <node x="760" y="380"/>
+      
+    
+    </liselot>
+    
+    
+    <worker movementType="1" speed="40" talkString="How can you even begin to know of my own personal struggles?" x="630" y="100">
+      
+      
+      <node x="760" y="100"/>
+      
+    
+    </worker>
+    
+  
+  </characters>
+  
+
+</level>

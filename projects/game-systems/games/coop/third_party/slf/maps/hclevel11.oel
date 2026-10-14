@@ -1,0 +1,234 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    1380
+  </width>
+  
+  
+  <height>
+    640
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="10" w="1380" x="0" y="0"/>
+    
+    
+    <rect h="630" w="80" x="0" y="10"/>
+    
+    
+    <rect h="300" w="150" x="80" y="150"/>
+    
+    
+    <rect h="90" w="1300" x="80" y="550"/>
+    
+    
+    <rect h="80" w="60" x="160" y="10"/>
+    
+    
+    <rect h="100" w="100" x="410" y="150"/>
+    
+    
+    <rect h="100" w="700" x="410" y="350"/>
+    
+    
+    <rect h="340" w="130" x="590" y="10"/>
+    
+    
+    <rect h="40" w="100" x="780" y="150"/>
+    
+    
+    <rect h="20" w="60" x="950" y="150"/>
+    
+    
+    <rect h="100" w="200" x="1080" y="150"/>
+    
+    
+    <rect h="20" w="20" x="1130" y="430"/>
+    
+    
+    <rect h="110" w="100" x="1280" y="440"/>
+    
+    
+    <rect h="430" w="10" x="1370" y="10"/>
+    
+  
+  </solids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <LargeCrate x="150" y="90"/>
+    
+    
+    <LargeCrate x="420" y="290"/>
+    
+    
+    <level1_specialBlock animated="0" movementType="1" speed="40" x="430" y="250"/>
+    
+    
+    <spike3 height="340" width="10" x="580" y="10"/>
+    
+    
+    <LargeCrate x="140" y="490"/>
+    
+    
+    <level1_specialBlock animated="0" movementType="1" speed="40" x="170" y="450"/>
+    
+    
+    <spike1 height="100" width="10" x="230" y="150"/>
+    
+    
+    <spike3 height="60" width="10" x="400" y="170"/>
+    
+    
+    <spike1 height="100" width="10" x="230" y="350"/>
+    
+    
+    <spike1 height="340" width="10" x="720" y="10"/>
+    
+    
+    <spike3 height="20" width="10" x="770" y="160"/>
+    
+    
+    <spike0 height="10" width="20" x="980" y="140"/>
+    
+    
+    <spike0 height="10" width="90" x="1280" y="430"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <movingPlatforms>
+    
+    
+    <level1_specialBlock animated="0" movementType="5" speed="120" x="240" y="150">
+      
+      
+      <node x="240" y="440"/>
+      
+    
+    </level1_specialBlock>
+    
+    
+    <level1_specialPlatformSmall animated="1" movementType="5" speed="60" x="730" y="130">
+      
+      
+      <node x="730" y="290"/>
+      
+    
+    </level1_specialPlatformSmall>
+    
+  
+  </movingPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level1_windows height="54" scrollFactor="0.1" width="180" x="100" y="30"/>
+    
+    
+    <level1_shelfTile height="560" scrollFactor="0.2" width="480" x="70" y="0"/>
+    
+    
+    <L1_Shelf scrollFactor="0.2" x="580" y="230"/>
+    
+    
+    <level1_shelfTile height="560" scrollFactor="0.2" width="400" x="840" y="0"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer2>
+    
+    
+    <sugarBags scrollFactor="0.5" x="390" y="510"/>
+    
+    
+    <cratesBox scrollFactor="0.6" x="230" y="370"/>
+    
+    
+    <cratesBox scrollFactor="0.8" x="780" y="370"/>
+    
+    
+    <sugarBagsAndCrates scrollFactor="0.95" x="870" y="220"/>
+    
+  
+  </BGLayer2>
+  
+  
+  <BGLayer3>
+    
+    
+    <sugarBags scrollFactor="0.2" x="410" y="110"/>
+    
+    
+    <sodaPack scrollFactor="0.2" x="800" y="130"/>
+    
+    
+    <sodaPack scrollFactor="0.2" x="640" y="530"/>
+    
+    
+    <palettes scrollFactor="0.2" x="1030" y="510"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <exit nextLevel="2" x="1212" y="59"/>
+    
+    
+    <L1_SmallCrate width="32" x="500" y="328"/>
+    
+    
+    <Bottle width="12" x="1318" y="205"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <player andreInitialFlip="0" followHeight="0" followWidth="0" levelName="Bust Out" liselotInitialFlip="0" movementType="1" speed="40" startsFirst="1" talkString="That army general is always asking for inside information on the workers here. I tell him what I can, not what I know." x="80" y="100">
+      
+      
+      <node x="110" y="100"/>
+      
+    
+    </player>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="90" y="500">
+      
+      
+      <node x="120" y="500"/>
+      
+    
+    </liselot>
+    
+    
+    <army movementType="1" speed="120" talkString="A machete is needed for the long grass in the areas outside of the city. Don't ever mess with a man with a machete." x="780" y="300">
+      
+      
+      <node x="1080" y="300"/>
+      
+    
+    </army>
+    
+  
+  </characters>
+  
+
+</level>

@@ -1,0 +1,252 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    1200
+  </width>
+  
+  
+  <height>
+    640
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="10" w="1200" x="0" y="0"/>
+    
+    
+    <rect h="630" w="10" x="0" y="10"/>
+    
+    
+    <rect h="30" w="140" x="10" y="430"/>
+    
+    
+    <rect h="90" w="1190" x="10" y="550"/>
+    
+    
+    <rect h="20" w="20" x="70" y="20"/>
+    
+    
+    <rect h="60" w="50" x="90" y="240"/>
+    
+    
+    <rect h="30" w="70" x="100" y="460"/>
+    
+    
+    <rect h="40" w="430" x="140" y="260"/>
+    
+    
+    <rect h="20" w="20" x="180" y="20"/>
+    
+    
+    <rect h="120" w="80" x="290" y="140"/>
+    
+    
+    <rect h="160" w="80" x="290" y="300"/>
+    
+    
+    <rect h="20" w="20" x="470" y="20"/>
+    
+    
+    <rect h="20" w="30" x="540" y="240"/>
+    
+    
+    <rect h="20" w="20" x="560" y="20"/>
+    
+    
+    <rect h="60" w="30" x="660" y="240"/>
+    
+    
+    <rect h="40" w="390" x="690" y="260"/>
+    
+    
+    <rect h="120" w="130" x="830" y="140"/>
+    
+    
+    <rect h="190" w="130" x="830" y="300"/>
+    
+    
+    <rect h="20" w="20" x="1070" y="490"/>
+    
+    
+    <rect h="20" w="20" x="1090" y="330"/>
+    
+    
+    <rect h="20" w="20" x="1120" y="430"/>
+    
+    
+    <rect h="20" w="20" x="1160" y="360"/>
+    
+    
+    <rect h="540" w="10" x="1190" y="10"/>
+    
+  
+  </solids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <level3_spike1 height="160" width="10" x="370" y="300"/>
+    
+    
+    <level3_spike3 height="160" width="10" x="280" y="300"/>
+    
+    
+    <level3_spike2 height="10" width="80" x="290" y="460"/>
+    
+    
+    <level3_spike2 height="10" width="20" x="70" y="40"/>
+    
+    
+    <level3_spike2 height="10" width="20" x="180" y="40"/>
+    
+    
+    <level3_spike2 height="10" width="20" x="470" y="40"/>
+    
+    
+    <level3_spike2 height="10" width="20" x="560" y="40"/>
+    
+    
+    <LargeCrate x="860" y="490"/>
+    
+    
+    <level3_spike0 height="10" width="150" x="1040" y="540"/>
+    
+    
+    <level3_spike1 height="40" width="10" x="1080" y="260"/>
+    
+    
+    <LargeCrate x="100" y="490"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level3_window height="320" scrollFactor="0.2" width="1200" x="0" y="230"/>
+    
+    
+    <level3_salesChart height="67" scrollFactor="0.2" width="67" x="380" y="70"/>
+    
+    
+    <level3_painting2 scrollFactor="0.2" x="40" y="110"/>
+    
+    
+    <level3_painting2 scrollFactor="0.2" x="470" y="150"/>
+    
+    
+    <level3_painting3 scrollFactor="0.2" x="600" y="120"/>
+    
+    
+    <bookCase scrollFactor="0.2" x="220" y="460"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer2>
+    
+    
+    <filingCab2 scrollFactor="0.2" x="190" y="490"/>
+    
+    
+    <filingCab1 scrollFactor="0.6" x="420" y="460"/>
+    
+    
+    <filingCab2 scrollFactor="0.9" x="400" y="200"/>
+    
+    
+    <filingCab2 scrollFactor="0.9" x="740" y="200"/>
+    
+    
+    <bookCase scrollFactor="1" x="960" y="170"/>
+    
+  
+  </BGLayer2>
+  
+  
+  <BGLayer3>
+    
+    
+    <plant1 scrollFactor="0.2" x="130" y="440"/>
+    
+    
+    <plant1 scrollFactor="0.2" x="370" y="150"/>
+    
+    
+    <plant2 scrollFactor="0.2" x="270" y="160"/>
+    
+    
+    <plant2 scrollFactor="0.2" x="610" y="450"/>
+    
+    
+    <plant2 scrollFactor="0.2" x="1000" y="450"/>
+    
+    
+    <plant2 scrollFactor="0.2" x="50" y="330"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <exit nextLevel="2" x="165" y="171"/>
+    
+    
+    <L1_SmallCrate width="32" x="90" y="217"/>
+    
+    
+    <L1_SmallCrate width="32" x="315" y="117"/>
+    
+    
+    <Bottle width="12" x="608" y="267"/>
+    
+    
+    <L1_SmallCrate width="32" x="877" y="116"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="10" y="500">
+      
+      
+      <node x="70" y="500"/>
+      
+    
+    </liselot>
+    
+    
+    <player andreInitialFlip="1" followHeight="640" followWidth="690" levelName="Action And Action" liselotInitialFlip="0" movementType="1" speed="40" startsFirst="1" talkString="This is very strictly a family business." x="800" y="500">
+      
+      
+      <node x="860" y="500"/>
+      
+    
+    </player>
+    
+    
+    <chef movementType="1" speed="70" talkString="Our telephone number is 48. The post office is 15. Or just dial the operator." x="220" y="500">
+      
+      
+      <node x="760" y="500"/>
+      
+    
+    </chef>
+    
+  
+  </characters>
+  
+
+</level>

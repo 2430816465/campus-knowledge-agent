@@ -1,0 +1,84 @@
+<level>
+  <width>960</width>
+  <height>500</height>
+  <solids>
+    <rect x="0" y="0" w="960" h="10"/>
+    <rect x="0" y="10" w="10" h="490"/>
+    <rect x="10" y="180" w="840" h="50"/>
+    <rect x="10" y="380" w="950" h="120"/>
+    <rect x="180" y="10" w="40" h="110"/>
+    <rect x="690" y="10" w="40" h="110"/>
+    <rect x="950" y="10" w="10" h="370"/>
+  </solids>
+  <extraPlatforms>
+    <spike0 x="180" y="370" width="140" height="10"/>
+    <level1_specialBlock x="910" y="260" speed="40" movementType="1" animated="0"/>
+    <level1_specialBlock x="850" y="130" speed="40" movementType="1" animated="0"/>
+    <spike2 x="400" y="230" width="150" height="10"/>
+    <spike0 x="850" y="120" width="40" height="10"/>
+    <spike0 x="910" y="250" width="40" height="10"/>
+    <spike2 x="850" y="170" width="40" height="10"/>
+    <spike2 x="910" y="300" width="40" height="10"/>
+    <spike3 x="840" y="130" width="10" height="40"/>
+    <spike1 x="890" y="130" width="10" height="40"/>
+    <spike3 x="900" y="260" width="10" height="40"/>
+    <spike0 x="400" y="170" width="150" height="10"/>
+    <LargeCrate x="670" y="120"/>
+    <LargeCrate x="160" y="120"/>
+    <helpBox x="750" y="320" type="0" helpString="Touching spikes will kill you. Be nimble."/>
+  </extraPlatforms>
+  <movingPlatforms>
+    <level1_specialPlatform x="850" y="70" speed="80" movementType="5" animated="0">
+      <node x="850" y="360"/>
+    </level1_specialPlatform>
+    <level1_specialPlatformSmall x="180" y="300" speed="70" movementType="5" animated="1">
+      <node x="280" y="300"/>
+    </level1_specialPlatformSmall>
+    <level1_specialPlatformSmall x="400" y="100" speed="80" movementType="5" animated="1">
+      <node x="510" y="100"/>
+    </level1_specialPlatformSmall>
+  </movingPlatforms>
+  <BGLayer1>
+    <level1_windows x="270" y="90" width="240" height="54" scrollFactor="0.1"/>
+    <level1_windows x="660" y="90" width="240" height="54" scrollFactor="0.1"/>
+    <L1_Shelf x="110" y="60" scrollFactor="0.2"/>
+    <L1_Shelf x="620" y="60" scrollFactor="0.2"/>
+    <noticeBoard x="470" y="100" scrollFactor="0.2"/>
+    <noticeBoard x="120" y="300" scrollFactor="0.2"/>
+    <noticeBoard x="520" y="310" scrollFactor="0.2"/>
+    <level1_shelfTile x="360" y="60" width="320" height="400" scrollFactor="0.3"/>
+  </BGLayer1>
+  <BGLayer2>
+    <cratesBox x="320" y="200" scrollFactor="0.7"/>
+    <palettes x="670" y="340" scrollFactor="0.85"/>
+    <palettes x="780" y="340" scrollFactor="0.2"/>
+    <palettes x="190" y="340" scrollFactor="0.87"/>
+    <sugarBagsAndCrates x="740" y="250" scrollFactor="0.76"/>
+    <sugarBags x="0" y="340" scrollFactor="0.8"/>
+    <sugarBags x="90" y="140" scrollFactor="0.75"/>
+  </BGLayer2>
+  <BGLayer3>
+    <sodaPack x="560" y="360" scrollFactor="0.2"/>
+    <palettes x="600" y="340" scrollFactor="0.2"/>
+  </BGLayer3>
+  <objects>
+    <Bottle x="232" y="19" width="12"/>
+    <exit x="577" y="90" nextLevel="2"/>
+    <andreCheckPoint x="787" y="124" player="1"/>
+    <smallSugarBag x="464" y="54" width="22"/>
+  </objects>
+  <characters>
+    <player x="20" y="330" speed="40" movementType="1" startsFirst="1" levelName="Wack Kerojack" andreInitialFlip="0" liselotInitialFlip="0" followWidth="0" followHeight="0" talkString="Our sons will run this factory one day. And their sons. And their son's sons.">
+      <node x="50" y="330"/>
+    </player>
+    <army x="400" y="330" speed="40" movementType="1" talkString="If you agree to supply us with soft drinks, you'll need to sign a contract.">
+      <node x="740" y="330"/>
+    </army>
+    <liselot x="10" y="130" speed="40" movementType="1" talkString="Just say yes.">
+      <node x="60" y="130"/>
+    </liselot>
+    <chef x="260" y="130" speed="40" movementType="1" talkString="&quot;We keep it clean here. That food inspector is such a idiot! We keep it clean, he should leave us alone.">
+      <node x="350" y="130"/>
+    </chef>
+  </characters>
+</level>

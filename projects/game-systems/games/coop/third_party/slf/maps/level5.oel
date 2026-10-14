@@ -1,0 +1,68 @@
+<level>
+  <width>900</width>
+  <height>640</height>
+  <solids>
+    <rect x="0" y="0" w="900" h="10"/>
+    <rect x="0" y="10" w="160" h="170"/>
+    <rect x="0" y="180" w="10" h="460"/>
+    <rect x="10" y="450" w="150" h="190"/>
+    <rect x="160" y="630" w="740" h="10"/>
+    <rect x="300" y="140" w="600" h="40"/>
+    <rect x="480" y="430" w="420" h="200"/>
+    <rect x="490" y="180" w="100" h="190"/>
+    <rect x="630" y="180" w="50" h="190"/>
+    <rect x="760" y="10" w="140" h="130"/>
+    <rect x="890" y="180" w="10" h="250"/>
+  </solids>
+  <extraPlatforms>
+    <LargeCrate x="500" y="370"/>
+    <level1_specialPlatform x="130" y="330" speed="40" movementType="1" animated="0"/>
+    <spike0 x="170" y="620" width="300" height="10"/>
+    <spike1 x="160" y="450" width="10" height="170"/>
+    <spike3 x="470" y="450" width="10" height="170"/>
+    <spike1 x="590" y="180" width="10" height="190"/>
+    <spike3 x="620" y="180" width="10" height="190"/>
+    <level1_specialBlock x="230" y="310" speed="40" movementType="1" animated="0"/>
+    <level1_specialBlock x="250" y="270" speed="40" movementType="1" animated="0"/>
+    <level1_specialBlock x="270" y="230" speed="40" movementType="1" animated="0"/>
+    <helpBox x="540" y="370" type="0" helpString="Checkpoints will save your position if you die."/>
+  </extraPlatforms>
+  <movingPlatforms>
+    <level1_specialPlatform x="160" y="430" speed="80" movementType="5" animated="0">
+      <node x="380" y="430"/>
+    </level1_specialPlatform>
+  </movingPlatforms>
+  <BGLayer1>
+    <level1_windows x="170" y="270" width="300" height="54" scrollFactor="0.1"/>
+    <noticeBoard x="170" y="380" scrollFactor="0.2"/>
+    <noticeBoard x="190" y="510" scrollFactor="0.2"/>
+    <level1_shelfTile x="0" y="160" width="240" height="480" scrollFactor="0.2"/>
+    <level1_shelfTile x="410" y="160" width="160" height="480" scrollFactor="0.2"/>
+  </BGLayer1>
+  <BGLayer2>
+    <sugarBagsAndCrates x="330" y="500" scrollFactor="0.65"/>
+    <sugarBagsAndCrates x="0" y="320" scrollFactor="0.6"/>
+    <noticeBoard x="180" y="80" scrollFactor="0.9"/>
+  </BGLayer2>
+  <BGLayer3>
+    <sugarBags x="470" y="100" scrollFactor="0.2"/>
+  </BGLayer3>
+  <objects>
+    <exit x="326" y="50" nextLevel="2"/>
+    <L1_SmallCrate x="159" y="307" width="32"/>
+    <Bottle x="604" y="244" width="12"/>
+    <andreCheckPoint x="676" y="373" player="1"/>
+    <liselotCheckPoint x="125" y="394" player="1"/>
+  </objects>
+  <characters>
+    <liselot x="840" y="380" speed="40" movementType="1" talkString="Just say yes.">
+      <node x="860" y="380"/>
+    </liselot>
+    <worker x="370" y="100" speed="40" movementType="1" talkString="This factory started out in Andre's father's garage. He was content to keep circulation small. Andre has big plans to widen the reach of his product.">
+      <node x="710" y="100"/>
+    </worker>
+    <player x="20" y="400" speed="40" movementType="1" startsFirst="1" levelName="new level" andreInitialFlip="0" liselotInitialFlip="0" followWidth="0" followHeight="0" talkString="I just heard Don't Fence Me In on the wireless. Fantastic song!">
+      <node x="60" y="400"/>
+    </player>
+  </characters>
+</level>

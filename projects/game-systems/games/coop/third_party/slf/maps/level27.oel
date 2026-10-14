@@ -1,0 +1,111 @@
+<level>
+  <width>960</width>
+  <height>960</height>
+  <solids>
+    <rect x="0" y="0" w="960" h="10"/>
+    <rect x="0" y="10" w="10" h="950"/>
+    <rect x="10" y="250" w="850" h="140"/>
+    <rect x="10" y="590" w="40" h="40"/>
+    <rect x="10" y="830" w="950" h="130"/>
+    <rect x="110" y="590" w="850" h="40"/>
+    <rect x="130" y="10" w="20" h="140"/>
+    <rect x="240" y="690" w="50" h="140"/>
+    <rect x="280" y="10" w="280" h="90"/>
+    <rect x="370" y="160" w="190" h="90"/>
+    <rect x="420" y="710" w="30" h="90"/>
+    <rect x="570" y="710" w="50" h="120"/>
+    <rect x="790" y="10" w="100" h="30"/>
+    <rect x="790" y="100" w="170" h="20"/>
+    <rect x="950" y="10" w="10" h="90"/>
+    <rect x="950" y="120" w="10" h="470"/>
+    <rect x="950" y="630" w="10" h="200"/>
+  </solids>
+  <extraPlatforms>
+    <level3_specialBlock x="150" y="90" speed="40" movementType="1" animated="0"/>
+    <LargeCrate x="460" y="100"/>
+    <level3_spike0 x="10" y="240" width="360" height="10"/>
+    <level3_spike3 x="120" y="10" width="10" height="140"/>
+    <level3_spike3 x="270" y="10" width="10" height="90"/>
+    <level3_specialBlock x="500" y="550" speed="40" movementType="1" animated="0"/>
+    <level3_specialBlock x="500" y="390" speed="40" movementType="1" animated="0"/>
+    <level3_specialBlock x="260" y="390" speed="40" movementType="1" animated="0"/>
+    <level3_specialBlock x="260" y="550" speed="40" movementType="1" animated="0"/>
+    <level3_specialBlock x="740" y="390" speed="40" movementType="1" animated="0"/>
+    <level3_specialBlock x="740" y="550" speed="40" movementType="1" animated="0"/>
+    <level3_spike2 x="300" y="390" width="200" height="10"/>
+    <level3_spike2 x="540" y="390" width="200" height="10"/>
+    <level3_spike1 x="50" y="590" width="10" height="40"/>
+    <level3_spike3 x="100" y="590" width="10" height="40"/>
+    <level3_spike1 x="560" y="200" width="10" height="50"/>
+    <level3_spike1 x="290" y="730" width="10" height="100"/>
+    <level3_spike3 x="560" y="740" width="10" height="90"/>
+    <level3_spike3 x="230" y="710" width="10" height="120"/>
+    <level3_spike0 x="300" y="580" width="200" height="10"/>
+    <level3_spike0 x="540" y="580" width="200" height="10"/>
+    <LargeCrate x="800" y="40"/>
+  </extraPlatforms>
+  <movingPlatforms>
+    <level3_specialPlatform x="300" y="400" speed="55" movementType="5" animated="0">
+      <node x="300" y="560"/>
+    </level3_specialPlatform>
+    <level3_specialPlatform x="400" y="400" speed="75" movementType="5" animated="0">
+      <node x="400" y="560"/>
+    </level3_specialPlatform>
+    <level3_specialPlatform x="540" y="400" speed="50" movementType="5" animated="0">
+      <node x="540" y="560"/>
+    </level3_specialPlatform>
+    <level3_specialPlatform x="640" y="400" speed="70" movementType="5" animated="0">
+      <node x="640" y="560"/>
+    </level3_specialPlatform>
+    <level3_specialBlock x="190" y="690" speed="40" movementType="5" animated="0">
+      <node x="190" y="790"/>
+    </level3_specialBlock>
+    <level3_specialPlatformSmall x="10" y="210" speed="100" movementType="5" animated="1">
+      <node x="330" y="210"/>
+    </level3_specialPlatformSmall>
+    <level3_specialPlatformSmall x="640" y="120" speed="90" movementType="5" animated="1">
+      <node x="750" y="120"/>
+    </level3_specialPlatformSmall>
+  </movingPlatforms>
+  <BGLayer1>
+    <level3_window x="0" y="510" width="960" height="320" scrollFactor="0.2"/>
+    <bookCase x="140" y="740" scrollFactor="0.2"/>
+    <bookCase x="340" y="740" scrollFactor="0.2"/>
+  </BGLayer1>
+  <BGLayer2>
+    <bookCase x="640" y="160" scrollFactor="0.9"/>
+    <filingCab1 x="910" y="500" scrollFactor="0.9"/>
+    <filingCab2 x="10" y="530" scrollFactor="1"/>
+  </BGLayer2>
+  <BGLayer3>
+    <level3_desk2 x="690" y="180"/>
+    <level3_desk2 x="10" y="760"/>
+  </BGLayer3>
+  <objects>
+    <exit x="893" y="740" nextLevel="2"/>
+    <L1_SmallCrate x="488" y="806" width="32"/>
+    <andreCheckPoint x="407" y="104" player="1"/>
+    <liselotCheckPoint x="369" y="104" player="1"/>
+    <liselotCheckPoint x="787" y="534" player="1"/>
+    <andreCheckPoint x="841" y="534" player="1"/>
+    <Bottle x="18" y="19" width="12"/>
+    <L1_SmallCrate x="810" y="227" width="32"/>
+  </objects>
+  <characters>
+    <liselot x="900" y="50" speed="40" movementType="1" talkString="Just say yes.">
+      <node x="930" y="60"/>
+    </liselot>
+    <player x="160" y="40" speed="40" movementType="1" startsFirst="1" levelName="8mm Film" andreInitialFlip="0" liselotInitialFlip="0" followWidth="0" followHeight="0" talkString="From Batavia we heard the news that extremists were kidnapping people, even throwing them alive into deep wells.">
+      <node x="180" y="40"/>
+    </player>
+    <chef x="570" y="200" speed="120" movementType="1" talkString="Pink lemonade is gaining popularity. I am going to spend some time in the lab tightening up the recipe.">
+      <node x="780" y="200"/>
+    </chef>
+    <inspector x="110" y="550" speed="40" movementType="1" talkString="I have come here to chew bubblegum and inspect the cleanliness of this factory... and I'm all out of bubblegum.">
+      <node x="230" y="550"/>
+    </inspector>
+    <army x="620" y="780" speed="40" movementType="1" talkString="I have the contracts drawn up for you to supply us. I would you remind you that saying no will not be beneficial for anyone.">
+      <node x="850" y="780"/>
+    </army>
+  </characters>
+</level>

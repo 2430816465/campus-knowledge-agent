@@ -1,0 +1,93 @@
+/* Role-focused generated frame animation, on the actual seat. */
+.table-seat{z-index:3}
+.table-seats .action-actor .actor-body[data-action]{animation:none;transition:none}
+.table-seats .accused .actor-body[data-action=""]{animation:open-recoil 700ms ease-out calc(var(--age) + 1400ms) both}
+.table-seats .card-flipper,.table-seats .card-back{animation-delay:calc(var(--age) + 1400ms + var(--card)*140ms)}
+.table-seats .challenger .actor-art{outline:3px solid #ffc477;outline-offset:3px;border-radius:4px;box-shadow:0 0 18px #ffc47770}
+.table-seats .accused .actor-art{outline:2px solid #ffe9b7;outline-offset:3px;border-radius:4px}
+.phase-reveal .table-seat:not(:has(.challenger)):not(:has(.accused)) .actor-art{opacity:.5}
+.table-seats .focus-loser .actor-art{outline:3px solid #ec92da;box-shadow:0 0 18px #ca71bd80}
+.table-seats .focus-loser .seat-role,.table-seats .drinker+.seat-role,.table-seat:has(.drinker) .seat-role{visibility:visible;background:#714068;color:#ffedf9}
+.table-seats .focus-loser .seat-role{background:#714068!important;color:#ffedf9!important}
+.table-seats .seat-outcome .actor-art,.table-seats .seat-potion .actor-art{outline:3px solid #ec92da;box-shadow:0 0 18px #ca71bd80}
+.table-seat.seat-outcome[data-beat=drinking] .actor-body{filter:drop-shadow(0 3px 0 #201c24);opacity:1}
+.challenge-trace{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:2;pointer-events:none}
+.challenge-trace line{stroke:#ffe2a0;stroke-width:3;stroke-dasharray:7 5;filter:drop-shadow(0 2px 2px #38291e);animation:trace-march .7s linear infinite}
+.challenge-trace[data-beat=verdict]{opacity:.3}
+.phase-reveal .play-top{opacity:.3}
+.ownership-verdict[data-beat=verdict] .scene-heading{color:#ffd6ed}
+.reduced-motion .challenge-trace line{animation:none}
+.reduced-motion .table-seats[data-beat=challenge] .card-back{visibility:visible}
+.reduced-motion .table-seats[data-beat=challenge] .card-flipper img{visibility:hidden}
+.paused-actions .table-seats *,.paused-actions .challenge-trace *{animation-play-state:paused!important}
+@keyframes trace-march{to{stroke-dashoffset:-24}}
+@media(max-height:540px){.challenge-trace line{stroke-width:2}.seat-role{padding:0 4px}.ownership-verdict{grid-template-columns:1fr 1.65fr}}
+
+/* A clock at the acting seat; the central emblem now shows only the table. */
+:root{--clock-size:42px;--focus-size:106px}
+.seat-timer{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:var(--clock-size);height:var(--clock-size);display:grid;place-items:center;z-index:5;border-radius:50%;background:conic-gradient(#ffe2a0 calc(var(--remaining)*1turn),#655843 0);border:2px solid #f0d29b;box-shadow:0 2px 6px #20180edb;color:#fff2cc;font:800 23px system-ui;isolation:isolate}
+.seat-timer:before{content:'';position:absolute;inset:4px;border-radius:50%;background:#342c23;z-index:-1}
+.seat-timer[hidden]{display:none}.seat-timer.urgent{color:#ffb8a4;border-color:#ed967d}.seat-timer.potion-clock{border-color:#e2b6dd;background:conic-gradient(#e2b6dd calc(var(--remaining)*1turn),#655843 0)}
+.center-reveal{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;pointer-events:none;width:max-content;max-width:100%;text-align:center}
+.reveal-focus{padding:7px 10px;background:#30251ae8;border:1px solid #e9c78e;border-radius:5px;box-shadow:0 5px 20px #16100890;animation:focus-arrive 450ms ease-out calc(var(--age) + 1200ms) both}
+.reveal-focus>strong{display:block;font:700 14px system-ui;color:#ffe4ad;margin-bottom:5px;white-space:nowrap}.reveal-focus>strong small{font-size:11px;font-weight:400;color:#dec79e}
+.focus-cards{display:flex;justify-content:center;gap:7px}.focus-card{width:var(--focus-size)}
+.center-reveal .card-flipper{width:var(--focus-size);height:var(--focus-size);margin:0;animation-delay:calc(var(--age) + 1400ms + var(--card)*140ms)}
+.center-reveal .card-back{animation-delay:calc(var(--age) + 1400ms + var(--card)*140ms)}
+.center-reveal .card-flipper img{object-fit:contain;image-rendering:pixelated;background:#e8cf9f}
+.focus-card>span{display:flex;justify-content:center;gap:6px;font:12px system-ui;color:#ffebc9;margin-top:3px;opacity:0}.center-reveal[data-beat=verdict] .focus-card>span{opacity:1}.focus-card>span b{visibility:hidden;color:#183c22;background:#b5e3b0;min-width:17px;padding:0 2px}.focus-card.false-card>span b{color:white;background:#b83b31}
+.center-reveal[data-beat=verdict] .focus-card>span b{visibility:visible}.center-reveal[data-beat=verdict] .false-card img{border:3px solid #ff8875;box-shadow:0 0 0 2px #852a23}.phase-reveal .play-top{visibility:hidden}
+@keyframes focus-arrive{from{opacity:0;transform:translate(var(--from-x,0px),var(--from-y,0px)) scale(.42)}to{opacity:1;transform:translate(0,0) scale(1)}}
+.paused-actions .center-reveal *{animation-play-state:paused!important}
+.reduced-motion .center-reveal *{animation:none!important}.reduced-motion .center-reveal[data-beat=challenge]{visibility:hidden}.reduced-motion .center-reveal[data-beat=challenge] .card-back{visibility:visible}
+@media(max-height:540px){:root{--clock-size:32px;--focus-size:60px}.seat-timer{font-size:18px}.seat-timer:before{inset:3px}.reveal-focus{padding:4px 7px}.reveal-focus>strong{font-size:11px;margin-bottom:3px}.reveal-focus>strong small{font-size:9px}.focus-cards{gap:5px}.focus-card>span{font-size:10px;line-height:12px;gap:4px}.center-reveal .card-back{font-size:22px}}
+@media(max-height:350px){:root{--clock-size:28px;--focus-size:44px}.seat-timer{font-size:16px}.reveal-focus{padding:3px 5px}.reveal-focus>strong{font-size:10px}.reveal-focus>strong small{font-size:8px}.focus-cards{gap:4px}.focus-card>span{font-size:9px;line-height:11px;gap:3px}}
+@media(max-height:540px){.phase-reveal .owned-pile{transform:translateX(12px)}.phase-reveal .table-seat:is(.self-seat,[data-position="3"]) .owned-pile{transform:translateX(-12px)}.reveal-focus{padding:3px 7px}.reveal-focus>strong{line-height:12px;margin-bottom:2px}.focus-card>span{line-height:11px;margin-top:1px}}
+@media(max-height:350px){.reveal-focus{padding:2px 5px}.reveal-focus>strong{line-height:11px;margin-bottom:1px}.focus-card>span{line-height:10px}}
+:is(.phase-playing,.phase-potion) .owned-pile{transform:translateX(-12px)}:is(.phase-playing,.phase-potion) .table-seat:is(.self-seat,[data-position="3"]) .owned-pile{transform:translateX(12px)}
+@media(min-height:351px) and (max-height:400px){:root{--focus-size:54px}}
+/* Keep potion odds and its action visible together in the compact bottom dock. */
+.event-box.potion-scene{display:grid;grid-template-columns:1fr auto;column-gap:10px;align-items:center}
+.event-box.potion-scene>.eyebrow,.event-box.potion-scene>:not(.drinker):not(.eyebrow){grid-column:1}
+.event-box.potion-scene>button:not(.drinker):not(.eyebrow){grid-column:2;grid-row:1/5;align-self:center}
+.event-box.potion-scene>p:last-child{display:block}
+
+/* Keep controls inside the hand dock, including selected fan cards. */
+.at-table .hand-zone .selection-note{grid-column:1;min-height:0;height:auto;margin:0;align-self:center}
+.at-table .hand-zone .actions{grid-row:1/-1;align-self:stretch;gap:6px}
+.at-table .hand-zone .actions button{flex:0 0 auto;min-height:44px;padding:8px 4px;line-height:18px}
+.at-table .hand-zone .hand{padding:14px 10px 0;align-self:stretch}
+.at-table .hand-zone{grid-template-columns:minmax(0,1fr) 180px;grid-template-rows:20px minmax(0,1fr) 25px}
+.at-table .hand-zone .hand,.at-table .hand-zone .card{min-width:0;min-height:0}
+.at-table .hand-zone .card{height:100%;display:flex;flex-direction:column;align-self:stretch}
+.at-table .hand-zone .card img{flex:1;min-height:0;object-fit:contain}
+.at-table .hand-zone .card span{flex:0 0 auto}
+@media(max-height:540px){.phase-playing{--dock-height:100px}.at-table .hand-zone .actions button{font-size:12px}.at-table .hand-zone .hand{padding-top:12px}}
+@media(max-height:350px){.phase-playing{--dock-height:100px}.at-table .hand-zone .actions{gap:4px}.at-table .hand-zone .actions button{font-size:10px;padding:6px 2px}.at-table .hand-zone .hand{padding-top:12px}}
+@media(max-height:540px){.at-table .hand-zone{grid-template-columns:minmax(0,1fr) 130px;grid-template-rows:14px minmax(0,1fr) 18px}}
+@media(max-height:350px){.at-table .hand-zone{grid-template-columns:minmax(0,1fr) 106px;grid-template-rows:12px minmax(0,1fr) 15px}}
+
+/* Finish actions must be visible without scrolling the small event dock. */
+.phase-finished .finish-layer{inset:max(10px,env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) max(10px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left));height:auto;background:#20190f9c}
+.at-table .finish-scene{width:min(520px,100%);max-height:100%;padding:16px;overflow:auto;text-align:center}
+.finish-winner{display:flex;align-items:baseline;justify-content:center;gap:10px;margin:8px 0}
+.finish-winner .result-name{font:700 28px camp,system-ui;color:#ffe0a2;margin:0}
+.finish-winner h2{margin:0}
+.finish-scene #receipt-state{font:12px system-ui;margin:8px 0;color:#eed7ab}
+.finish-scene .row{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:10px 0}
+.finish-scene .row button{min-height:44px;min-width:140px;line-height:20px;padding:8px 14px}
+.finish-scene .history{display:grid;grid-template-columns:1fr 1fr;gap:4px;font:11px system-ui;margin:8px 0 0;color:#ddcaa8}
+.finish-scene .history li{margin:0}
+@media(max-height:540px){.at-table .finish-scene{padding:12px}.finish-winner .result-name{font-size:24px}.finish-scene .row{margin:8px 0}}
+
+/* The acting role and its new pile move together; card faces remain hidden. */
+.play-actor .actor-art{outline:3px solid #ffe6aa;outline-offset:3px;border-radius:4px;box-shadow:0 0 18px #ffe2a060}
+.play-actor .seat-role{visibility:visible!important;background:#eed197!important;color:#322817!important}
+.table-seats .play-actor .actor-body[data-action=""]{animation:seat-play 700ms ease-out var(--play-age) both}
+.play-actor .latest-card .pile-back{animation:seat-card 450ms ease-out calc(var(--play-age) + var(--card)*70ms) both}
+.table-seat .seat-speech{top:0;bottom:auto;left:0;right:auto;width:calc(50% - 6px);margin:0;font-size:10px;line-height:14px}
+.table-seat:is(.self-seat,[data-position="3"]) .seat-speech{left:auto;right:0}
+body.at-table #table-menu{width:44px;height:44px;min-height:44px}
+.seat-timer.urgent{box-shadow:0 0 0 3px #d45a4245,0 2px 6px #20180edb}
+@keyframes seat-play{0%,100%{transform:translateY(0)}35%{transform:translateY(-8px) rotate(-5deg)}65%{transform:translateY(-3px) rotate(2deg)}}
+@keyframes seat-card{from{opacity:0;transform:translateY(15px) scale(.65)}to{opacity:1;transform:translateY(0) scale(1)}}

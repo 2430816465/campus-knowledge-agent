@@ -1,0 +1,27 @@
+{
+  "generator": "Built-in image_gen; original art generated 2026-10-07",
+  "reference": "assets/home-v05/home-garden.png; original project garden, used as color/style reference",
+  "processing": "tools/prepare-painted-ui.py: crop unused margins, resize with alpha retained. No drawn replacement art.",
+  "assets": {
+    "panel-jade": "C:\\Users\\24308\\.codex\\generated_images\\01a10e57-8ff5-7211-8677-39443dda10ef\\exec-428ff805-959e-4870-86bf-fb3a4c98946f.png",
+    "panel-paper": "C:\\Users\\24308\\.codex\\generated_images\\01a10e57-8ff5-7211-8677-39443dda10ef\\exec-43f90a91-72e1-4291-b102-b530b3ad901e.png",
+    "button-jade": "C:\\Users\\24308\\.codex\\generated_images\\01a10e57-8ff5-7211-8677-39443dda10ef\\exec-dab074a9-51bf-4fcb-aff7-0740dd484967.png",
+    "button-gold": "C:\\Users\\24308\\.codex\\generated_images\\01a10e57-8ff5-7211-8677-39443dda10ef\\exec-cbbf3f24-ac5b-4fea-87a6-1279c8bd43e6.png",
+    "icon-flower": "C:\\Users\\24308\\.codex\\generated_images\\01a10e57-8ff5-7211-8677-39443dda10ef\\exec-d8a31d25-5a73-44d0-b429-5e6eae23eff9.png",
+    "icon-feather": "C:\\Users\\24308\\.codex\\generated_images\\01a10e57-8ff5-7211-8677-39443dda10ef\\exec-8de2d586-2578-4a36-b012-8f62fe5ae6e9.png",
+    "icon-sands": "C:\\Users\\24308\\.codex\\generated_images\\01a10e57-8ff5-7211-8677-39443dda10ef\\exec-9b065421-523f-4d02-abf2-55bbe3f93178.png",
+    "icon-goblet": "C:\\Users\\24308\\.codex\\generated_images\\01a10e57-8ff5-7211-8677-39443dda10ef\\exec-5ff5a5dd-9393-42cc-ac6c-3c3402b748a8.png",
+    "icon-circlet": "C:\\Users\\24308\\.codex\\generated_images\\01a10e57-8ff5-7211-8677-39443dda10ef\\exec-07491335-9c42-42ec-8379-81254b2a3003.png",
+    "icon-summon": "C:\\Users\\24308\\.codex\\generated_images\\01a10e57-8ff5-7211-8677-39443dda10ef\\exec-03a299b9-ecbc-4792-8274-0871c4ae70b7.png",
+    "icon-cloud": "C:\\Users\\24308\\.codex\\generated_images\\01a10e57-8ff5-7211-8677-39443dda10ef\\exec-2452c987-72e8-4b03-ba87-66ffee63633f.png",
+    "icon-rank": "C:\\Users\\24308\\.codex\\generated_images\\01a10e57-8ff5-7211-8677-39443dda10ef\\exec-4f6362ab-95f5-43c0-95d1-e915aa83a8a1.png",
+    "icon-checkin": "C:\\Users\\24308\\.codex\\generated_images\\01a10e57-8ff5-7211-8677-39443dda10ef\\exec-0fafe231-cd01-46b8-ba99-996b9dc2af26.png",
+    "icon-stages": "C:\\Users\\24308\\.codex\\generated_images\\01a10e57-8ff5-7211-8677-39443dda10ef\\exec-964f242b-58e8-478a-8f8e-758c04430302.png",
+    "icon-roster": "C:\\Users\\24308\\.codex\\generated_images\\01a10e57-8ff5-7211-8677-39443dda10ef\\exec-8ee5c16a-df84-4d10-b1af-c53a135dda2b.png",
+    "icon-stone": "C:\\Users\\24308\\.codex\\generated_images\\01a10e57-8ff5-7211-8677-39443dda10ef\\exec-641a48f3-b087-4e19-8460-1ba7bdf9b9c3.png",
+    "icon-xp": "C:\\Users\\24308\\.codex\\generated_images\\01a10e57-8ff5-7211-8677-39443dda10ef\\exec-57afcaeb-16e9-4698-854a-667748b98992.png",
+    "icon-fate": "C:\\Users\\24308\\.codex\\generated_images\\01a10e57-8ff5-7211-8677-39443dda10ef\\exec-297f73cb-bd95-4d8a-b817-1099a40742a4.png",
+    "icon-guild": "C:\\Users\\24308\\.codex\\generated_images\\01a10e57-8ff5-7211-8677-39443dda10ef\\exec-c8829f4e-7ee4-4a64-83ef-959c1c7c29b4.png",
+    "icon-affairs": "C:\\Users\\24308\\.codex\\generated_images\\01a10e57-8ff5-7211-8677-39443dda10ef\\exec-2af0319a-8a11-41da-becd-9ac281b94f44.png"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "version": "1.12.1",
+  "versionCode": 15,
+  "sha256": "8fadd04b1ff2dc1050d0a816f3ddb288613a40402df74566cd592d27f085abb0",
+  "bytes": 101795605,
+  "packedFilesVerified": 568,
+  "zipIntegrity": true,
+  "sourceParity": true,
+  "verificationSource": "C:\\Users\\24308\\Desktop\\总\\发布快照-1.12.1",
+  "baseRelease": "1.12.0",
+  "changedResources": [
+    "app.js",
+    "package.json",
+    "games/coop/index.html",
+    "games/coop/css/room.css",
+    "games/coop/src/art-renderer.js",
+    "games/coop/src/client.js",
+    "games/coop/src/game-shared.js",
+    "games/coop/src/phone-host-worker.js"
+  ],
+  "otherGamesUnchanged": true,
+  "androidDeviceTested": false,
+  "apk": "C:\\Users\\24308\\Desktop\\总\\再来亿把-1.12.1.apk",
+  "signatureSchemes": [
+    "v1",
+    "v2"
+  ],
+  "signerSha256": "e20cb1a412e77f5c0cb4952840176d8735b30435ca412f1576ed6093c8ea8314",
+  "sameSignerAsPrevious": true
+}

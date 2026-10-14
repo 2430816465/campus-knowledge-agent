@@ -1,0 +1,23 @@
+{
+  "version": "1.10.0",
+  "versionCode": 12,
+  "sha256": "e31ffa19393c801a4d1d029f460a02734e1840c93d800e0cd7fbe889d26d7de1",
+  "bytes": 94261466,
+  "packedFilesVerified": 521,
+  "unchangedTowerSourceFiles": 28,
+  "zipIntegrity": true,
+  "sourceParity": true,
+  "verificationSource": "C:\\Users\\24308\\Desktop\\总\\发布快照-1.10.0",
+  "workingTreeDifferences": [
+    "app.js",
+    "index.html",
+    "live-games.js",
+    "pixel-home.js",
+    "pixel-icons.js",
+    "reference-art.js",
+    "services.js",
+    "views.js"
+  ],
+  "androidDeviceTested": false,
+  "apk": "C:\\Users\\24308\\Desktop\\总\\再来亿把-1.10.0.apk"
+}

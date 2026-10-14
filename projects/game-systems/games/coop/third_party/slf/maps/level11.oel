@@ -1,0 +1,399 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  
+  
+  
+  
+  <width>
+    
+    
+    640
+  
+  
+  </width>
+  
+  
+  
+  
+  
+  
+  <height>
+    
+    
+    640
+  
+  
+  </height>
+  
+  
+  
+  
+  
+  
+  <solids>
+    
+    
+    
+    
+    
+    
+    <rect h="640" w="80" x="0" y="0"/>
+    
+    
+    
+    
+    
+    
+    <rect h="100" w="150" x="80" y="150"/>
+    
+    
+    
+    
+    
+    
+    <rect h="100" w="150" x="80" y="350"/>
+    
+    
+    
+    
+    
+    
+    <rect h="90" w="560" x="80" y="550"/>
+    
+    
+    
+    
+    
+    
+    <rect h="100" w="100" x="410" y="150"/>
+    
+    
+    
+    
+    
+    
+    <rect h="100" w="230" x="410" y="350"/>
+    
+    
+    
+    
+    
+    
+    <rect h="350" w="80" x="560" y="0"/>
+    
+    
+    
+    
+    
+    
+    <rect h="100" w="80" x="560" y="450"/>
+    
+    
+    
+  
+  
+  
+  </solids>
+  
+  
+  
+  
+  
+  
+  <extraPlatforms>
+    
+    
+    
+    
+    
+    
+    <LargeCrate x="140" y="290"/>
+    
+    
+    
+    
+    
+    
+    <LargeCrate x="420" y="290"/>
+    
+    
+    
+    
+    
+    
+    <level1_specialBlock animated="0" movementType="1" speed="40" x="170" y="250"/>
+    
+    
+    
+    
+    
+    
+    <level1_specialBlock animated="0" movementType="1" speed="40" x="430" y="250"/>
+    
+    
+    
+    
+    
+    
+    <spike3 height="150" width="10" x="550" y="0"/>
+    
+    
+    
+    
+    
+    
+    <LargeCrate x="140" y="490"/>
+    
+    
+    
+    
+    
+    
+    <level1_specialBlock animated="0" movementType="1" speed="40" x="170" y="450"/>
+    
+    
+    
+    
+    
+    
+    <helpBox helpString="Don't be afraid to press pause and restart the level." type="0" x="110" y="290"/>
+    
+    
+    
+  
+  
+  
+  </extraPlatforms>
+  
+  
+  
+  
+  
+  
+  <movingPlatforms>
+    
+    
+    
+    
+    
+    
+    <level1_specialBlock animated="0" movementType="5" speed="50" x="250" y="150">
+      
+      
+      
+      
+      
+      
+      <node x="250" y="440"/>
+      
+      
+      
+    
+    
+    
+    </level1_specialBlock>
+    
+    
+    
+  
+  
+  
+  </movingPlatforms>
+  
+  
+  
+  
+  
+  
+  <BGLayer1>
+    
+    
+    
+    
+    
+    
+    <level1_windows height="54" scrollFactor="0.1" width="180" x="100" y="30"/>
+    
+    
+    
+    
+    
+    
+    <level1_shelfTile height="560" scrollFactor="0.2" width="480" x="70" y="0"/>
+    
+    
+    
+  
+  
+  
+  </BGLayer1>
+  
+  
+  
+  
+  
+  
+  <BGLayer2>
+    
+    
+    
+    
+    
+    
+    <sugarBags scrollFactor="0.5" x="390" y="510"/>
+    
+    
+    
+    
+    
+    
+    <cratesBox scrollFactor="0.6" x="230" y="370"/>
+    
+    
+    
+  
+  
+  
+  </BGLayer2>
+  
+  
+  
+  
+  
+  
+  <BGLayer3>
+    
+    
+    
+    
+    
+    
+    <sugarBags scrollFactor="0.2" x="410" y="110"/>
+    
+    
+    
+  
+  
+  
+  </BGLayer3>
+  
+  
+  
+  
+  
+  
+  <objects>
+    
+    
+    
+    
+    
+    
+    <exit nextLevel="2" x="135" y="60"/>
+    
+    
+    
+    
+    
+    
+    <L1_SmallCrate width="32" x="500" y="328"/>
+    
+    
+    
+    
+    
+    
+    <Bottle width="12" x="524" y="131"/>
+    
+    
+    
+  
+  
+  
+  </objects>
+  
+  
+  
+  
+  
+  
+  <characters>
+    
+    
+    
+    
+    
+    
+    <player andreInitialFlip="0" followHeight="0" followWidth="0" levelName="Bust Out" liselotInitialFlip="0" movementType="1" speed="40" startsFirst="1" talkString="Sometimes I feel the information I hand over to the army is more valuable than they give credit for. I am responsible for airing the community's thoughts and grievances. Do they care?" x="80" y="300">
+      
+      
+      
+      
+      
+      
+      <node x="100" y="300"/>
+      
+      
+      
+    
+    
+    
+    </player>
+    
+    
+    
+    
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="80" y="500">
+      
+      
+      
+      
+      
+      
+      <node x="110" y="500"/>
+      
+      
+      
+    
+    
+    
+    </liselot>
+    
+    
+    
+    
+    
+    
+    <army movementType="1" speed="40" talkString="We can't force you to supply us with soft drinks. Answering no will make things very difficult for you and your family." x="230" y="500">
+      
+      
+      
+      
+      
+      
+      <node x="520" y="500"/>
+      
+      
+      
+    
+    
+    
+    </army>
+    
+    
+    
+  
+  
+  
+  </characters>
+  
+  
+  
+
+
+
+</level>

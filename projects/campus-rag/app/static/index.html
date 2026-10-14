@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#245ac4">
+  <title>晓庄校园助手 · 让校园生活多一点从容</title>
+  <link rel="stylesheet" href="/static/style.css"><link rel="stylesheet" href="/static/portal.css?v=visual-20261013-final">
+  <script src="/static/followups.js?v=1" defer></script><script src="/static/source-answer.js?v=2" defer></script><script src="/static/answer-view.js?v=7" defer></script><script src="/static/chat-turn.js?v=1" defer></script><script src="/static/student.js?v=visual-20261013-final" defer></script><script src="/static/pet-widget.js?v=visual-20261013-final" defer></script>
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-9 9H3v-9a9 9 0 1 1 18 0Z"/><path d="M8 10h8M8 14h5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5c-3-2-7-2-10-1v15c3-1 7-1 10 1 3-2 7-2 10-1V4c-3-1-7-1-10 1v15"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H5v20h14V7l-5-5v6h5M8 12h8M8 16h8"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 2.8 7.2L22 12l-7.2 2.8L12 22l-2.8-7.2L2 12l7.2-2.8Z"/></symbol>
+  </defs></svg>
+  <a class="skip-link" href="#directory">跳至校园资料</a>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="晓庄校园助手首页"><span class="brand-mark" aria-hidden="true">晓</span><span class="brand-name">晓庄<span class="brand-subtitle">校园助手</span></span></a>
+    <nav aria-label="主导航"><a href="#directory">校园资料</a><a href="#consult">问问晓庄</a><a href="/admin" class="teacher-link">教师管理 <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="school"><span class="school-line" aria-hidden="true"></span> 南京晓庄学院 · 校园生活问答</p>
+        <h1 id="hero-title">校园里的大小事，<br><em>问问晓庄。</em></h1>
+        <p class="intro-text">从一条通知，到一次办事。<br>帮你查资料、理清要求，让每个答案都有出处。</p>
+        <div class="hero-actions"><a class="primary-link" href="#consult"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>开始提问<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="text-link" href="#directory">浏览校园资料 <span aria-hidden="true">↓</span></a></div>
+        <p class="hero-note">支持连续追问 <span>·</span> 原文随答附上 <span>·</span> 联网补充线索</p>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-orbit"></div><div class="hero-orbit orbit-inner"></div><div class="hero-greeting">你好呀，我是晓庄<span>有校园问题，来找我。</span></div><div class="hero-mascot"></div>
+        <div class="hero-paper"><svg class="icon"><use href="#i-book"/></svg><div>把资料变成答案<span>也把出处留给你</span></div><span class="paper-check">✓</span></div><svg class="hero-spark spark-one icon"><use href="#i-spark"/></svg><svg class="hero-spark spark-two icon"><use href="#i-spark"/></svg>
+      </div>
+    </section>
+    <section class="quick-start" aria-label="常用校园问题">
+      <div class="quick-heading"><span class="quick-dot" aria-hidden="true"></span><strong>从这里问起</strong><span>选一个问题，和晓庄聊聊</span></div>
+      <div class="quick-topics">
+        <button type="button" data-campus="true" data-question="普通话什么时候报名？"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><span><strong>普通话考试</strong><small>报名时间与考试要求</small></span><span class="topic-arrow" aria-hidden="true">↗</span></button>
+        <button type="button" data-campus="true" data-question="档案查询如何办理？"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span><strong>档案与办事</strong><small>办理流程与所需材料</small></span><span class="topic-arrow" aria-hidden="true">↗</span></button>
+        <button type="button" data-campus="true" data-question="学校的校训是什么？"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><span><strong>认识晓庄</strong><small>从校训开始了解校园</small></span><span class="topic-arrow" aria-hidden="true">↗</span></button>
+      </div>
+    </section>
+    <section id="directory" class="directory" aria-labelledby="directory-title">
+      <div class="section-head"><div><p class="section-kicker">通知 · 教务 · 办事 · 活动</p><h2 id="directory-title">校园资料，有据可查</h2><p>按标题与年度查阅已收录资料，也可以交给晓庄帮你找。</p></div><a class="directory-ask" href="#consult">让晓庄帮我查 <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      <form id="filters" class="filters"><label class="wide">搜索校园资料<span class="search-field"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><input name="q" placeholder="输入关键词，如普通话、档案、校园活动"></span></label><label>发布年度<input name="year" type="number" min="2000" max="2100" placeholder="全部年度"></label><label class="check"><input name="verified" type="checkbox" value="true">只看教师审核发布</label><button type="submit">查询资料</button></form>
+      <details class="collection-notes"><summary>资料范围与使用说明</summary><div><p id="coverage">正在读取资料范围…</p><p id="archive-progress" aria-live="polite"></p><p>按官网发布时间从新到旧排列，时间未知的置于末尾；相同标题、日期及正文的来源合并展示。已关联的图片和附件见详情，尚不可公开查阅的资料不在此列。时间按北京时间显示。</p><p>收录不代表学校审核发布。历史资料请核对适用时间，具体要求以官网原文为准。</p></div></details>
+      <div class="result-head"><p id="result-count" aria-live="polite"></p><button id="reset" class="quiet" type="button">清除筛选</button></div><div id="competition-list" class="competition-list" aria-live="polite"></div><div class="pagination"><button id="prev" class="quiet" type="button">上一页</button><span id="pages"></span><button id="next" class="quiet" type="button">下一页</button></div>
+    </section>
+    <section class="feedback" aria-labelledby="feedback-title"><div><p class="section-kicker">一起让资料更准确</p><h2 id="feedback-title">发现遗漏或错误？</h2><p>留下需要核实的内容，供教师查看。</p></div><form id="feedback-form"><label><span class="sr-only">问题描述</span><input id="feedback-message" maxlength="1000" minlength="3" required placeholder="资料标题与问题，无需填写个人信息"></label><button type="submit">保存反馈 <span aria-hidden="true">↗</span></button><span id="feedback-status" aria-live="polite"></span></form></section>
+  </main>
+  <footer><span class="footer-brand">晓庄校园助手</span><p>公开资料试用版 · 尚未接入学校统一身份认证</p><p id="health" aria-live="polite">正在检查服务…</p></footer>
+  <button id="campus-pet" class="pet-launcher" type="button" aria-label="打开晓庄校园智能问答，可拖动移动" aria-controls="consult" aria-expanded="false" data-state="idle"><span class="pet-art" aria-hidden="true"></span><span class="pet-label">问问晓庄 <span aria-hidden="true">↗</span></span></button>
+  <section id="consult" class="consult pet-panel" role="dialog" aria-modal="false" aria-labelledby="pet-title" hidden data-state="idle">
+    <header id="pet-drag-handle" class="pet-heading"><span class="pet-avatar" aria-hidden="true"></span><div class="pet-heading-copy"><h2 id="pet-title">晓庄校园助手</h2><p>陪你查清校园里的每一件小事</p></div><div class="pet-heading-actions"><button id="new-chat" class="quiet" type="button" title="清空当前对话并开始新话题">新对话 <span aria-hidden="true">＋</span></button><button id="pet-close" type="button" class="quiet icon-button" aria-label="关闭问答窗口">×</button></div></header>
+    <div class="chat-panel">
+      <div id="chat-log" class="chat-log" aria-live="polite"><div class="chat-hint chat-welcome"><span class="welcome-mascot" aria-hidden="true"></span><p class="welcome-eyebrow">你的校园问答伙伴</p><h3>你好，我是晓庄</h3><p>想了解什么校园事项？<br>我会帮你查找资料，并附上原文出处。</p><div class="welcome-questions" aria-label="试着问晓庄"><button type="button" data-campus="true" data-question="普通话什么时候报名？"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><span>普通话什么时候报名？</span><span aria-hidden="true">↗</span></button><button type="button" data-campus="true" data-question="档案查询如何办理？"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span>档案查询如何办理？</span><span aria-hidden="true">↗</span></button><button type="button" data-campus="true" data-question="学校的校训是什么？"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><span>学校的校训是什么？</span><span aria-hidden="true">↗</span></button></div><p class="welcome-tip">遇到缺少的资料，我会说明；有多个学期时，我们一起核对。</p></div></div>
+      <form id="chat-form"><div class="composer-box"><label class="question-label"><span class="sr-only">你的问题</span><textarea id="question" required maxlength="1000" rows="2" placeholder="把校园问题交给晓庄…"></textarea></label><div class="composer-options"><label class="web-search-choice"><input id="allow-web-search" type="checkbox" checked> 联网查缺，优先官网</label><span class="context-hint" title="保留最近30轮语境；点击新对话可开始新话题">连续追问 · 30轮语境</span></div><div class="chat-controls"><label><span class="sr-only">限定赛事</span><select id="chat-competition"><option value="">自动查找校园资料</option></select></label><button id="ask" type="submit">查阅并回答</button></div></div><p class="composer-note">回答供参考，具体要求请核对原文与适用学期。</p></form>
+    </div>
+  </section>
+  <dialog id="detail"><button id="close-detail" class="close quiet" aria-label="关闭详情">关闭</button><div id="detail-content"></div></dialog>
+</body>
+</html>

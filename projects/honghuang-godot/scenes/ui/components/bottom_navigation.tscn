@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3]
+[ext_resource type="Theme" path="res://assets/ui-foundation/foundation.tres" id="theme"]
+[ext_resource type="Script" path="res://scripts/ui/navigation.gd" id="script"]
+[ext_resource type="PackedScene" path="res://scenes/ui/components/function_entry.tscn" id="entry"]
+[node name="Navigation" type="PanelContainer"]
+custom_minimum_size = Vector2(0,164)
+theme = ExtResource("theme")
+metadata/ui_foundation = true
+script = ExtResource("script")
+theme_type_variation = &"Nav"
+
+
+[node name="Items" type="HBoxContainer" parent="."]
+theme_override_constants/separation = 8
+
+
+[node name="Estate" parent="Items" instance=ExtResource("entry")]
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0,120)
+caption = "仙府"
+icon_key = "estate"
+
+
+[node name="Roster" parent="Items" instance=ExtResource("entry")]
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0,120)
+caption = "神仙"
+icon_key = "friends"
+
+
+[node name="Forge" parent="Items" instance=ExtResource("entry")]
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0,120)
+caption = "炼器"
+icon_key = "forge"
+theme_type_variation = &"Gold"
+
+
+[node name="Adventure" parent="Items" instance=ExtResource("entry")]
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0,120)
+caption = "历练"
+icon_key = "adventure"
+
+
+[node name="Shop" parent="Items" instance=ExtResource("entry")]
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0,120)
+caption = "商城"
+icon_key = "chest"
+

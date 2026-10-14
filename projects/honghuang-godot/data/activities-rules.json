@@ -1,0 +1,839 @@
+{
+  "schema": 1,
+  "ruleVersion": "activities-v08.1",
+  "designNote": "本文件为本项目原创规则；参考需求清单机制类别，不声称复现原作精确数值。联网项处于待联网验证，仅提供标识清楚的无真实资产本地演练。",
+  "sources": [
+    "洪荒众仙府_全系统易懂名称版.txt",
+    "洪荒众仙府_寻道大千全系统核对与改造清单_20261007.txt"
+  ],
+  "entryCost": {
+    "stone": 12
+  },
+  "reward": {
+    "stone": 18,
+    "xp": 12,
+    "material": 4
+  },
+  "specialRewards": {
+    "049": {
+      "abilitypage": 2
+    },
+    "053": {
+      "bodypill": 2
+    },
+    "071": {
+      "sealfragment": 2
+    },
+    "075": {
+      "petfood": 2
+    },
+    "078": {
+      "spiritessence": 2
+    },
+    "081": {
+      "lifecore": 2
+    }
+  },
+  "damageChests": [
+    {
+      "damage": 300,
+      "name": "初鸣宝箱",
+      "reward": {
+        "stone": 10,
+        "material": 2
+      }
+    },
+    {
+      "damage": 900,
+      "name": "破阵宝箱",
+      "reward": {
+        "stone": 18,
+        "material": 4
+      }
+    },
+    {
+      "damage": 1800,
+      "name": "凌云宝箱",
+      "reward": {
+        "stone": 28,
+        "material": 8
+      }
+    }
+  ],
+  "limits": {
+    "runs": 999999,
+    "log": 6,
+    "history": 20,
+    "maxResource": 999999999,
+    "turns": 60
+  },
+  "definitions": [
+    {
+      "id": "047",
+      "name": "主线历练",
+      "kind": "existing",
+      "description": "自动普攻与标志技能推进已有关卡，首通记录沿用。",
+      "group": "adventure",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "048",
+      "name": "挑战妖王",
+      "kind": "boss",
+      "description": "选择妖王特点，实际自动战斗；首次战胜后开放对应扫荡。",
+      "group": "challenge",
+      "cost": {
+        "stone": 12
+      },
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "049",
+      "name": "镇妖塔",
+      "kind": "tower",
+      "description": "逐层自动交锋，取胜后选择局内加成；每五层可携成果离塔。",
+      "group": "tower",
+      "cost": {
+        "stone": 12
+      },
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "050",
+      "name": "讨伐凶兽",
+      "kind": "damage",
+      "description": "固定行动窗口累计实际伤害，按伤害阶段结算个人奖励。",
+      "group": "challenge",
+      "cost": {
+        "stone": 12
+      },
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "051",
+      "name": "星宿试炼",
+      "kind": "astral",
+      "description": "选择五行星宿，护盾、治疗、灼烧等机制各不相同。",
+      "group": "challenge",
+      "cost": {
+        "stone": 12
+      },
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "052",
+      "name": "三界试炼",
+      "kind": "online",
+      "description": "联合阵容与协作阶层；本地仅排阵演练，真实组队待接入。",
+      "group": "practice",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "待联网验证"
+    },
+    {
+      "id": "053",
+      "name": "炼体试炼",
+      "kind": "body",
+      "description": "选择攻伐、护体或续战试炼，个人实战取得对应炼体进度。",
+      "group": "challenge",
+      "cost": {
+        "stone": 12
+      },
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "054",
+      "name": "斗法",
+      "kind": "online",
+      "description": "选择防守目标与积分赛程；真人防守快照、段位须服务端。",
+      "group": "practice",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "待联网验证"
+    },
+    {
+      "id": "054b",
+      "name": "论道大会",
+      "kind": "online",
+      "description": "报名、分组、晋级、赛季结算独立于普通斗法。",
+      "group": "bracket",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "待联网验证"
+    },
+    {
+      "id": "055",
+      "name": "组队斗法",
+      "kind": "online",
+      "description": "队长建队、三方支援槽、准备与匹配，真实组队暂未接入。",
+      "group": "practice",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "待联网验证"
+    },
+    {
+      "id": "056",
+      "name": "仙盟",
+      "kind": "existing",
+      "description": "沿用本地仙盟捐献、贡献、商店；真实成员与权限待服务端。",
+      "group": "guild",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "057",
+      "name": "仙盟寻宝",
+      "kind": "online",
+      "description": "逐块提交地图线索，本地演练只记录自己的演练进度。",
+      "group": "clues",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "待联网验证"
+    },
+    {
+      "id": "058",
+      "name": "仙盟大会",
+      "kind": "online",
+      "description": "报名后按三轮成绩推进，真人赛程需服务端。",
+      "group": "tournament",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "待联网验证"
+    },
+    {
+      "id": "059",
+      "name": "九幽战场",
+      "kind": "online",
+      "description": "相邻阵眼占领与核心防守，本地沙盘不计真人战功。",
+      "group": "territory",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "待联网验证"
+    },
+    {
+      "id": "060",
+      "name": "封神战场",
+      "kind": "online",
+      "description": "遗迹节点占领和补给行动，赛季共享地图待接入。",
+      "group": "territory",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "待联网验证"
+    },
+    {
+      "id": "060b",
+      "name": "归墟战场",
+      "kind": "online",
+      "description": "潮汐令部分节点暂时封闭，独立地图与进度。",
+      "group": "tide",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "待联网验证"
+    },
+    {
+      "id": "060c",
+      "name": "仙盟决战",
+      "kind": "online",
+      "description": "先占前哨再争核心，本地作战演练不发正式赛季奖励。",
+      "group": "core",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "待联网验证"
+    },
+    {
+      "id": "061",
+      "name": "海外仙山",
+      "kind": "online",
+      "description": "探索未知节点收集线索，联合争夺需联网。",
+      "group": "explore",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "待联网验证"
+    },
+    {
+      "id": "061b",
+      "name": "昆仑争夺",
+      "kind": "online",
+      "description": "雪岭据点消耗局内补给，控制高地后开放核心。",
+      "group": "territory",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "待联网验证"
+    },
+    {
+      "id": "062",
+      "name": "北海争锋",
+      "kind": "online",
+      "description": "局内木材与营地成长独立，有限继承仅用于沙盘演练。",
+      "group": "development",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "待联网验证"
+    },
+    {
+      "id": "063",
+      "name": "归墟海域",
+      "kind": "online",
+      "description": "海域探索与潮汐灵力，独立演练地图。",
+      "group": "tide",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "待联网验证"
+    },
+    {
+      "id": "063b",
+      "name": "天魔战场",
+      "kind": "online",
+      "description": "据点灵力用于守护界隙阵眼，真实仙盟竞争待联网。",
+      "group": "core",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "待联网验证"
+    },
+    {
+      "id": "064",
+      "name": "仙盟争霸",
+      "kind": "online",
+      "description": "准备、报名、分轮目标与结算状态独立记录。",
+      "group": "league",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "待联网验证"
+    },
+    {
+      "id": "065",
+      "name": "交易",
+      "kind": "online",
+      "description": "物品占用、挂单、撤单与结算须权威账本；演练资产独立。",
+      "group": "trade",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "待联网验证"
+    },
+    {
+      "id": "065b",
+      "name": "拍卖",
+      "kind": "online",
+      "description": "演练挂单、出价、超价退回、到期结算与冷却。",
+      "group": "auction",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "待联网验证"
+    },
+    {
+      "id": "066",
+      "name": "好友赠礼",
+      "kind": "online",
+      "description": "演练赠送资格、次数、收取去重；不消耗真实礼物。",
+      "group": "gift",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "待联网验证"
+    },
+    {
+      "id": "066b",
+      "name": "好友互助",
+      "kind": "online",
+      "description": "演练请求、帮助、收取去重；真实好友同步暂未接入。",
+      "group": "aid",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "待联网验证"
+    },
+    {
+      "id": "067",
+      "name": "梦境试炼",
+      "kind": "dream",
+      "description": "梦内重新成长：每关三选一后自动挑战，带回本局成果。",
+      "group": "exploration",
+      "cost": {
+        "stone": 12
+      },
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "068",
+      "name": "归墟探宝",
+      "kind": "ruins",
+      "description": "探路、冒险与撤离；危险只影响未带回的临时战利品。",
+      "group": "exploration",
+      "cost": {
+        "stone": 12
+      },
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "069",
+      "name": "法相封印",
+      "kind": "online",
+      "description": "封印活动投影后可反抗解除，永久角色不受影响。",
+      "group": "seal",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "待联网验证"
+    },
+    {
+      "id": "069b",
+      "name": "解救盟友",
+      "kind": "online",
+      "description": "援助解除活动投影封印；真人协助需服务端确认。",
+      "group": "rescue",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "待联网验证"
+    },
+    {
+      "id": "070",
+      "name": "神符斗法",
+      "kind": "cards",
+      "description": "构筑临时神符牌组；分配随机灵力，选择承伤牌并逐关成长。",
+      "group": "strategy",
+      "cost": {
+        "stone": 12
+      },
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "071",
+      "name": "镇魔阵",
+      "kind": "sigils",
+      "description": "在九宫阵纹盘落符，同行同列或三元素组合增强镇魔效果。",
+      "group": "strategy",
+      "cost": {
+        "stone": 12
+      },
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "072",
+      "name": "棋盘破阵",
+      "kind": "chess",
+      "description": "逐格移动、吃掉孤立敌子，敌军每步追击；存活八回合。",
+      "group": "strategy",
+      "cost": {
+        "stone": 12
+      },
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "073",
+      "name": "道兵除魔",
+      "kind": "construct",
+      "description": "探索得到零件，制作武器或护甲，选择天赋后挑战守关者。",
+      "group": "exploration",
+      "cost": {
+        "stone": 12
+      },
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "074",
+      "name": "傀儡斗法",
+      "kind": "puppet",
+      "description": "原创本地演练：临时木甲符兵培养与轮次挑战；真人排名待联网。",
+      "group": "strategy",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "075",
+      "name": "灵兽对战",
+      "kind": "beasts",
+      "description": "独立兽魂队伍，锁定保护、主副传承和技能继承后逐关挑战。",
+      "group": "strategy",
+      "cost": {
+        "stone": 12
+      },
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "076",
+      "name": "守护仙府",
+      "kind": "defense",
+      "description": "招募、同阶合成、三路布置，守住仙府并攻破敌方阵眼。",
+      "group": "strategy",
+      "cost": {
+        "stone": 12
+      },
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "077",
+      "name": "落珠寻宝",
+      "kind": "plinko",
+      "description": "选定投珠位置，灵珠逐钉偏转并按真实落点获得本局积分。",
+      "group": "casual",
+      "cost": {
+        "stone": 12
+      },
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "078",
+      "name": "座驾竞速",
+      "kind": "race",
+      "description": "选择赛道避障，取灵风加速，耐久与速度影响最终里程成绩。",
+      "group": "casual",
+      "cost": {
+        "stone": 12
+      },
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": true,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "079",
+      "name": "五行采集",
+      "kind": "match",
+      "description": "选择相邻同色灵珠消除，补落新珠；用有限步数完成采集目标。",
+      "group": "casual",
+      "cost": {
+        "stone": 12
+      },
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "080",
+      "name": "大能洞府",
+      "kind": "mansion",
+      "description": "选择探索房间，识别线索、解开门阵，使用钥匙取得遗宝。",
+      "group": "exploration",
+      "cost": {
+        "stone": 12
+      },
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "080b",
+      "name": "机关寻宝",
+      "kind": "puzzle",
+      "description": "转动五行机关，让横纵阵纹归位；提示免费，可继续原局。",
+      "group": "exploration",
+      "cost": {
+        "stone": 12
+      },
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "081",
+      "name": "飞剑护舟",
+      "kind": "escort",
+      "description": "分配飞剑至三路，修补或蓄力，抵挡六波来敌保护仙舟。",
+      "group": "strategy",
+      "cost": {
+        "stone": 12
+      },
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "082",
+      "name": "轮回历练",
+      "kind": "reincarnation",
+      "description": "选择独立轮回节点，累积善缘与心火，带回本轮修行成果。",
+      "group": "exploration",
+      "cost": {
+        "stone": 12
+      },
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "082b",
+      "name": "封神除魔",
+      "kind": "exorcism",
+      "description": "沿封神遗迹独立节点收集符印、破封、除魔，保存自身进度。",
+      "group": "exploration",
+      "cost": {
+        "stone": 12
+      },
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "083",
+      "name": "节日活动",
+      "kind": "festival",
+      "description": "花灯制作、谜语任务、玩法参与和收集兑换均记录真实进度。",
+      "group": "festival",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "083b",
+      "name": "论道庆典",
+      "kind": "celebration",
+      "description": "选择论题与答辩获得庆典印记，独立任务和纪念外观兑换。",
+      "group": "festival",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    },
+    {
+      "id": "084",
+      "name": "累计奖励",
+      "kind": "milestones",
+      "description": "追溯已投入的培养资源与首通、累计活动成绩，奖励仅能领一次。",
+      "group": "festival",
+      "cost": {},
+      "unlockStage": 0,
+      "ruleOrigin": "本项目原创",
+      "network": false,
+      "status": "已实现未验证"
+    }
+  ],
+  "milestones": [
+    {
+      "id": "growth-120",
+      "name": "累计消耗",
+      "metric": "cultivationSpent",
+      "target": 120,
+      "reward": {
+        "stone": 50,
+        "material": 8
+      }
+    },
+    {
+      "id": "growth-600",
+      "name": "累计消耗",
+      "metric": "cultivationSpent",
+      "target": 600,
+      "reward": {
+        "stone": 120,
+        "herb": 12
+      }
+    },
+    {
+      "id": "story-3",
+      "name": "山海初行",
+      "metric": "storyClears",
+      "target": 3,
+      "reward": {
+        "xp": 80,
+        "material": 12
+      }
+    },
+    {
+      "id": "runs-3",
+      "name": "三境历练",
+      "metric": "completed",
+      "target": 3,
+      "reward": {
+        "stone": 60,
+        "herb": 10
+      }
+    },
+    {
+      "id": "runs-10",
+      "name": "十方来仪",
+      "metric": "completed",
+      "target": 10,
+      "reward": {
+        "stone": 120,
+        "material": 25
+      }
+    }
+  ],
+  "festivalOffers": [
+    {
+      "id": "herbs",
+      "name": "灵药包",
+      "price": 4,
+      "limit": 3,
+      "reward": {
+        "herb": 12
+      }
+    },
+    {
+      "id": "materials",
+      "name": "灵材匣",
+      "price": 5,
+      "limit": 3,
+      "reward": {
+        "material": 15
+      }
+    },
+    {
+      "id": "lantern",
+      "name": "纪念名片·万灯长明",
+      "price": 10,
+      "limit": 1,
+      "cosmetic": "lantern-v08",
+      "reward": {}
+    }
+  ],
+  "celebrationOffers": [
+    {
+      "id": "wisdom",
+      "name": "论道心得",
+      "price": 4,
+      "limit": 3,
+      "reward": {
+        "xp": 45
+      }
+    },
+    {
+      "id": "banner",
+      "name": "纪念名片·青山论道",
+      "price": 10,
+      "limit": 1,
+      "cosmetic": "debate-v08",
+      "reward": {}
+    }
+  ],
+  "topics": [
+    {
+      "question": "受伤后继续探宝，先考虑什么？",
+      "answers": [
+        "是否能安全撤离",
+        "只看战利品多少",
+        "永远继续深入"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "队友受困时，怎样安排援助？",
+      "answers": [
+        "保留共同目标与退路",
+        "所有人各自离开",
+        "消耗永久神仙"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "培养神仙最稳妥的方式？",
+      "answers": [
+        "按阵容用途分配材料",
+        "只凭品质忽略配合",
+        "培养会清空已有角色"
+      ],
+      "correct": 0
+    }
+  ],
+  "riddle": {
+    "question": "无足行千里，有翼不离山。抬头轻似絮，落地万木欢。",
+    "answers": [
+      "云雨",
+      "炉火",
+      "山石"
+    ],
+    "correct": 0
+  }
+}

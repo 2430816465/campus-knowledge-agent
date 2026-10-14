@@ -1,0 +1,568 @@
+{
+  "schema": 1,
+  "title": "047–084 活动机制实施与边界核对",
+  "reviewedAt": "2026-10-07",
+  "rulesOrigin": "所有新数值、关卡和奖励为本项目原创；机制类别依据两份用户方案，不声称原作精确数值。",
+  "sourceFiles": [
+    "洪荒众仙府_全系统易懂名称版.txt",
+    "洪荒众仙府_寻道大千全系统核对与改造清单_20261007.txt"
+  ],
+  "acceptanceScope": "活动模块命令、独立存档和独立页面验收；不等同于全项目88系统、完整UI审美或商业成品验收。",
+  "verified": {
+    "headless": "6254 checks / 0 failures",
+    "nativeGpu": "6254 checks / 0 failures，OpenGL NVIDIA RTX4060，exit 0",
+    "settledRules": 44,
+    "uiStates": 126,
+    "viewports": [
+      "540×960",
+      "360×800",
+      "320×844",
+      "320×568"
+    ],
+    "shortestBody": "296×309；320×568主壳可用内容区独立夹具，无滚动容器。10px紧凑文字保证几何容纳，不代表舒适的手机阅读与触控尺寸已验收。",
+    "boundaryTests": [
+      "JSON存档重进与随机流重演",
+      "失败扣费和资源/材料上限原子回滚",
+      "重复结算和过期revision拒绝",
+      "同帧连续点击只扣一次入场费",
+      "退出页面和销毁宿主后的deferred生命周期",
+      "文字完整高度、按钮子标签边界与棋盘边界",
+      "四卡神符、六候选守府、传承确认、论题选项和已结算待领取状态",
+      "真实座驾培养→竞速成长快照→培养材料奖励",
+      "纪念名片装备、更换、卸下及JSON存档恢复",
+      "新版本资源/培养材料净消耗、失败原子性、旧培养基线不重复计算",
+      "真实座驾初速、碰撞减伤、最高培养加成封顶与损坏快照拒绝",
+      "054b两败淘汰、064任务去重与沙盘纪念、062有限继承",
+      "挂起主线/秘境/万仙/渡劫票据阻塞活动交锋，非战斗小游戏可继续",
+      "309px训练态策略提示、四张神符、六名待命与满布阵、传承确认和论题选项"
+    ],
+    "warning": "运行环境有 Failed to read the root certificate store，与活动脚本无关，测试退出码0。",
+    "screenshots": [
+      "runtime-home/Godot/app_userdata/洪荒众仙府 · V0.5/activities-v08-dense-054b-309.png",
+      "runtime-home/Godot/app_userdata/洪荒众仙府 · V0.5/activities-v08-dense-076-309.png",
+      "runtime-home/Godot/app_userdata/洪荒众仙府 · V0.5/activities-v08-078-540x960.png",
+      "runtime-home/Godot/app_userdata/洪荒众仙府 · V0.5/activities-v08-083-540x960.png"
+    ]
+  },
+  "serviceContract": {
+    "implemented": "GameActivities.service_contract 返回 POST /v1/activities/{id}/commands 的字段约定；activityOnlineRequest 明确 NETWORK_UNAVAILABLE",
+    "notImplemented": "没有真实客户端传输、账号授权或部署中的权威服务。不能将这个约定计作联网完成。"
+  },
+  "entries": [
+    {
+      "id": "047",
+      "name": "主线历练",
+      "implementation": "根目录沿用旧主线实际自动战斗、通关与首通记录；GameActivities 不另建主线。",
+      "verification": "沿用根项目模块，未在本活动测试中重复验收",
+      "test": "根项目现有测试",
+      "networkBoundary": "本地单机规则",
+      "remaining": [
+        "沿用模块的挂机收益与完整主线表现由根项目验收，活动测试没有替它背书。"
+      ]
+    },
+    {
+      "id": "048",
+      "name": "挑战妖王",
+      "implementation": "护盾、回复、多目标三类妖王实际自动战斗；领取胜利结算才取得对应扫荡资格。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_trials",
+      "networkBoundary": "本地单机规则",
+      "remaining": []
+    },
+    {
+      "id": "049",
+      "name": "镇妖塔",
+      "implementation": "独立保存二十层塔；实际战斗后选攻击或防御祝福，五层后可携成果离塔；奖励神通残页。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_trials",
+      "networkBoundary": "本地单机规则",
+      "remaining": []
+    },
+    {
+      "id": "050",
+      "name": "讨伐凶兽",
+      "implementation": "五十次实际战斗行动累计所有我方伤害；三档伤害阈值分别叠加宝箱奖励。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_trials",
+      "networkBoundary": "本地单机规则",
+      "remaining": [
+        "仅个人伤害记录；真实排行榜未部署。"
+      ]
+    },
+    {
+      "id": "051",
+      "name": "星宿试炼",
+      "implementation": "护盾、治疗、多目标、灼烧、蓄势五类敌阵；按真实队伍和培养快照自动结算。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_trials",
+      "networkBoundary": "本地单机规则",
+      "remaining": []
+    },
+    {
+      "id": "052",
+      "name": "三界试炼",
+      "implementation": "本地演练三个受限支援槽、就绪、三轮策略选择；不创建真实队伍。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_online",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "账号、授权、服务端权威状态、真人匹配/协作和网络恢复未部署；本地演练不发真实资源或真人排名。"
+      ]
+    },
+    {
+      "id": "053",
+      "name": "炼体试炼",
+      "implementation": "根路由已转到035正式炼体页，使用既有 progBodyTrial 战斗、部位门槛和炼体丹；活动模块三目标备用实现不对玩家另开入口。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_trials",
+      "networkBoundary": "本地单机规则",
+      "remaining": [
+        "正式入口由根项目路由035；Activities 测试验证备用规则而非正式炼体部位解锁。"
+      ]
+    },
+    {
+      "id": "054",
+      "name": "斗法",
+      "implementation": "本地选择演练目标和三轮攻守策略；没有真实防守快照、段位或榜单。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_online",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "账号、授权、服务端权威状态、真人匹配/协作和网络恢复未部署；本地演练不发真实资源或真人排名。"
+      ]
+    },
+    {
+      "id": "054b",
+      "name": "论道大会",
+      "implementation": "本地三轮淘汰赛沙盘，每轮三局两胜；显示对手策略和相克关系，两败即淘汰，三轮晋级成功。独立轮次和胜负保存，不提交真人段位。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_online / _distinct_sandboxes",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "正式报名、真人分组、匹配、服务器赛程和权威段位未部署；本地沙盘不发真实资源或真人排名。"
+      ]
+    },
+    {
+      "id": "055",
+      "name": "组队斗法",
+      "implementation": "本地三个支援位与准备流程，三轮策略推演；没有匹配真人队友或晋级服务。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_online",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "账号、授权、服务端权威状态、真人匹配/协作和网络恢复未部署；本地演练不发真实资源或真人排名。"
+      ]
+    },
+    {
+      "id": "056",
+      "name": "仙盟",
+      "implementation": "根目录沿用 GameCommunity 本地仙盟捐献、贡献和商店。",
+      "verification": "沿用根项目模块，未在本活动测试中重复验收",
+      "test": "根项目现有测试",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "真实组织、成员权限与跨账号贡献未接入。"
+      ]
+    },
+    {
+      "id": "057",
+      "name": "仙盟寻宝",
+      "implementation": "九块地图线索的独立收集与去重，本地共同成果流程；不发送真实盟员贡献。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_online",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "账号、授权、服务端权威状态、真人匹配/协作和网络恢复未部署；本地演练不发真实资源或真人排名。"
+      ]
+    },
+    {
+      "id": "058",
+      "name": "仙盟大会",
+      "implementation": "本地轮次策略与晋级演练分支；不生成真人组织赛程。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_online",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "账号、授权、服务端权威状态、真人匹配/协作和网络恢复未部署；本地演练不发真实资源或真人排名。"
+      ]
+    },
+    {
+      "id": "059",
+      "name": "九幽战场",
+      "implementation": "九宫相邻连通占点、补给与推进，不用纯榜单替代地图。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_online",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "账号、授权、服务端权威状态、真人匹配/协作和网络恢复未部署；本地演练不发真实资源或真人排名。"
+      ]
+    },
+    {
+      "id": "060",
+      "name": "封神战场",
+      "implementation": "独立领土地图演练、相邻进攻和补给；独立于归墟潮汐与核心攻防记录。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_online",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "账号、授权、服务端权威状态、真人匹配/协作和网络恢复未部署；本地演练不发真实资源或真人排名。"
+      ]
+    },
+    {
+      "id": "060b",
+      "name": "归墟战场",
+      "implementation": "潮汐轮转封锁一个地块的地图推进，独立补给与存档。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_online",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "账号、授权、服务端权威状态、真人匹配/协作和网络恢复未部署；本地演练不发真实资源或真人排名。"
+      ]
+    },
+    {
+      "id": "060c",
+      "name": "仙盟决战",
+      "implementation": "先取得前哨才能攻核心的独立地图演练。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_online",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "账号、授权、服务端权威状态、真人匹配/协作和网络恢复未部署；本地演练不发真实资源或真人排名。"
+      ]
+    },
+    {
+      "id": "061",
+      "name": "海外仙山",
+      "implementation": "本地遗岛相邻探索与节点结果，独立探索存档。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_online",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "账号、授权、服务端权威状态、真人匹配/协作和网络恢复未部署；本地演练不发真实资源或真人排名。"
+      ]
+    },
+    {
+      "id": "061b",
+      "name": "昆仑争夺",
+      "implementation": "本地连通据点争夺与补给，独立于海外仙山存档。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_online",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "账号、授权、服务端权威状态、真人匹配/协作和网络恢复未部署；本地演练不发真实资源或真人排名。"
+      ]
+    },
+    {
+      "id": "062",
+      "name": "北海争锋",
+      "implementation": "本地地图发展沙盘，读取实际出战神仙平均等级，有限继承0–3点初始补给；局内营地升级、补给生产、相邻据点推进，不重置或修改局外成长。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_online / _distinct_sandboxes",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "账号、共享地图、组织协作、服务端权威状态和网络恢复未部署；局内沙盘不能算真实跨服玩法。"
+      ]
+    },
+    {
+      "id": "063",
+      "name": "归墟海域",
+      "implementation": "独立潮汐海域探索、封锁轮转和连通推进。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_online",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "账号、授权、服务端权威状态、真人匹配/协作和网络恢复未部署；本地演练不发真实资源或真人排名。"
+      ]
+    },
+    {
+      "id": "063b",
+      "name": "天魔战场",
+      "implementation": "独立界隙地图，前哨门槛和最终核心，不把探索成绩写入真人战功。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_online",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "账号、授权、服务端权威状态、真人匹配/协作和网络恢复未部署；本地演练不发真实资源或真人排名。"
+      ]
+    },
+    {
+      "id": "064",
+      "name": "仙盟争霸",
+      "implementation": "本地三轮盟会赛程沙盘；每轮独立完成筹备、攻关、巡防任务，再选择相克对策；任务不可重复，三轮积分生成并保存明确标注沙盘的纪念旗。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_online / _distinct_sandboxes",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "真实成员、共享组织任务、服务器赛程、荣耀收藏服务未部署；纪念旗是本地沙盘记录，不是真实仙盟奖项。"
+      ]
+    },
+    {
+      "id": "065",
+      "name": "交易",
+      "implementation": "沙盘挂单占用临时物品、撤单返还、截止和成交凭证；不触碰真实库存。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_online",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "账号、授权、服务端权威状态、真人匹配/协作和网络恢复未部署；本地演练不发真实资源或真人排名。"
+      ]
+    },
+    {
+      "id": "065b",
+      "name": "拍卖",
+      "implementation": "沙盘出价、加价退回原占用、截止、成交或撤单与去重；仅临时余额。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_online",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "账号、授权、服务端权威状态、真人匹配/协作和网络恢复未部署；本地演练不发真实资源或真人排名。"
+      ]
+    },
+    {
+      "id": "066",
+      "name": "好友赠礼",
+      "implementation": "本地礼物请求、准备、收取和重复收取保护；没有向另一账户送物。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_online",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "账号、授权、服务端权威状态、真人匹配/协作和网络恢复未部署；本地演练不发真实资源或真人排名。"
+      ]
+    },
+    {
+      "id": "066b",
+      "name": "好友互助",
+      "implementation": "本地互助请求、回应和收取回执；没有实际好友服务。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_online",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "账号、授权、服务端权威状态、真人匹配/协作和网络恢复未部署；本地演练不发真实资源或真人排名。"
+      ]
+    },
+    {
+      "id": "067",
+      "name": "梦境试炼",
+      "implementation": "五节点临时等级与防御成长选择、续战生命和真实自动战斗；永久神仙不被重置。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_exploration",
+      "networkBoundary": "本地单机规则",
+      "remaining": []
+    },
+    {
+      "id": "068",
+      "name": "归墟探宝",
+      "implementation": "安全探索或高风险探宝、临时战利品、两层后撤离；失败仅损失本次未带回成果。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_exploration",
+      "networkBoundary": "本地单机规则",
+      "remaining": []
+    },
+    {
+      "id": "069",
+      "name": "法相封印",
+      "implementation": "本地法相投影封印请求、三次助力解除和回执状态；不控制真人角色。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_online",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "账号、授权、服务端权威状态、真人匹配/协作和网络恢复未部署；本地演练不发真实资源或真人排名。"
+      ]
+    },
+    {
+      "id": "069b",
+      "name": "解救盟友",
+      "implementation": "独立盟友解救请求、回应与去重回执；没有真实跨账号关联。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_online",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "账号、授权、服务端权威状态、真人匹配/协作和网络恢复未部署；本地演练不发真实资源或真人排名。"
+      ]
+    },
+    {
+      "id": "070",
+      "name": "神符斗法",
+      "implementation": "三张初始临时神符、随机灵力预算、攻击/护持分配、选出战符和承伤符、四阶段成长选择。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_boards",
+      "networkBoundary": "本地单机规则",
+      "remaining": []
+    },
+    {
+      "id": "071",
+      "name": "镇魔阵",
+      "implementation": "九宫符盘的横竖斜线同纹/相生组合；组合改变实际自动战斗的攻击和防御，三阶段持续挑战。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_boards",
+      "networkBoundary": "本地单机规则",
+      "remaining": []
+    },
+    {
+      "id": "072",
+      "name": "棋盘破阵",
+      "implementation": "五乘五棋盘，相邻移动、吃子、敌方追击与碰撞伤害；八回合生存或消灭敌子。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_boards",
+      "networkBoundary": "本地单机规则",
+      "remaining": []
+    },
+    {
+      "id": "073",
+      "name": "道兵除魔",
+      "implementation": "临时道兵装备制作、一次天赋选择、三次探索取材或遭遇战，最终实际自动挑战。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_construct_and_beasts",
+      "networkBoundary": "本地单机规则",
+      "remaining": []
+    },
+    {
+      "id": "074",
+      "name": "傀儡斗法",
+      "implementation": "沿用临时道兵培养的独立零成本演练，不发真实奖励。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_construct_and_beasts",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "原作完整细则未核实；当前仅项目原创候选演练，不宣称等量复现。"
+      ]
+    },
+    {
+      "id": "075",
+      "name": "灵兽对战",
+      "implementation": "四兽魂独立队伍、出战位与收藏锁、传承预览/确认、副兽消耗和可选技能继承、三个关卡。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_construct_and_beasts",
+      "networkBoundary": "本地单机规则",
+      "remaining": []
+    },
+    {
+      "id": "076",
+      "name": "守护仙府",
+      "implementation": "本局铜钱招募、同阶合成、前后六位布阵与召回；三路复用既有神仙头像和真实技能战斗，守护本方且攻击敌阵。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_defense_and_casual",
+      "networkBoundary": "本地单机规则",
+      "remaining": [
+        "短屏满格时隐藏过小头像，仅保留神仙名称和阶级；尚非商业美术或战斗演出验收。"
+      ]
+    },
+    {
+      "id": "077",
+      "name": "落珠寻宝",
+      "implementation": "五次落珠，五入口与六层确定性随机路径；落点积分影响结算。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_defense_and_casual",
+      "networkBoundary": "本地单机规则",
+      "remaining": []
+    },
+    {
+      "id": "078",
+      "name": "座驾竞速",
+      "implementation": "原创三道十二段个人竞速；相邻换道、障碍预告、乘风加速、里程计分。开局只读选中真实座驾的等级/星级形成快照，成长加成上限2，提高初速并降低碰撞损伤；结算奖励可用于座驾培养的灵魄精华。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_defense_and_casual / _growth_and_receipts",
+      "networkBoundary": "待真实服务端验收，当前为本地功能或演练",
+      "remaining": [
+        "真实玩家竞速与共享成绩未接入；当前明确为个人赛。"
+      ]
+    },
+    {
+      "id": "079",
+      "name": "五行采集",
+      "implementation": "五乘五同色相邻收集、坠落补齐、有效步数和连通性检查；八步目标、可达成功也有真实失败。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_defense_and_casual",
+      "networkBoundary": "本地单机规则",
+      "remaining": [
+        "采集消除为项目原创规则，原活动精确步骤未核实。"
+      ]
+    },
+    {
+      "id": "080",
+      "name": "大能洞府",
+      "implementation": "六间密室的线索、钥匙、守卫战、恢复、机关答题和宝室条件；错误答案与提示不额外收费。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_exploration",
+      "networkBoundary": "本地单机规则",
+      "remaining": [
+        "机关规则为原创；未宣称复现原活动全部机关。"
+      ]
+    },
+    {
+      "id": "080b",
+      "name": "机关寻宝",
+      "implementation": "独立九宫交叉轮转机关；随机初盘可解，免费下一步提示可逐步还原。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_exploration",
+      "networkBoundary": "本地单机规则",
+      "remaining": [
+        "独立原创机关规则；未宣称原作精确解法。"
+      ]
+    },
+    {
+      "id": "081",
+      "name": "飞剑护舟",
+      "implementation": "三路飞剑配置、集中防御、灵力蓄能和修船；六波来敌损害仙舟，奖励命核。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_defense_and_casual",
+      "networkBoundary": "本地单机规则",
+      "remaining": [
+        "防守数值与关卡原创，原活动细则仍待核。"
+      ]
+    },
+    {
+      "id": "082",
+      "name": "轮回历练",
+      "implementation": "六节点轮回选择、临时成长和间隔实际战斗；慈悲、勇毅、休整导致不同路径。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_exploration",
+      "networkBoundary": "本地单机规则",
+      "remaining": [
+        "六节点与分支为项目原创，原活动细则未全部核实。"
+      ]
+    },
+    {
+      "id": "082b",
+      "name": "封神除魔",
+      "implementation": "独立六节点封神除魔，法印、诅咒、守御与最终封印战，不共享轮回进度。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_exploration",
+      "networkBoundary": "本地单机规则",
+      "remaining": [
+        "独立封印节点为项目原创，原活动细则未全部核实。"
+      ]
+    },
+    {
+      "id": "083",
+      "name": "节日活动",
+      "implementation": "三次花灯制作、原创灯谜、实际活动参与条件、收集物兑换、限购与纪念名片；已拥有名片可佩戴/卸下，保存展示名称供首页真实读取。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_festival，首页显示由test_system_ui_v08另验",
+      "networkBoundary": "本地单机规则",
+      "remaining": []
+    },
+    {
+      "id": "083b",
+      "name": "论道庆典",
+      "implementation": "三个原创论题与答案、独立收集物、参与奖励和纪念名片兑换；题干预览可返回，已拥有名片可佩戴/切换/卸下并跨存档保留。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_festival / _ui_edges，首页显示由test_system_ui_v08另验",
+      "networkBoundary": "本地单机规则",
+      "remaining": []
+    },
+    {
+      "id": "084",
+      "name": "累计奖励",
+      "implementation": "本版起在GameEconomy成功事务提交前逐资源、逐培养材料记录净减少；旧档只追溯已知神仙stone/xp培养台账，不伪造历史材料流水。累计消耗、首通和实际活动结算达到里程碑后一次领取；奖励/退款不计消耗，失败事务不入账。",
+      "verification": "本地机制命令流程与存档校验通过",
+      "test": "tests/test_activities_v08.gd::_festival / _growth_and_receipts",
+      "networkBoundary": "本地单机规则",
+      "remaining": [
+        "旧版未记录的装备、座驾、法则等材料历史消耗无法回填；同一事务内资源返还抵扣当次消耗，本台账统计净消耗而非毛消耗。"
+      ]
+    }
+  ],
+  "historicalScope": "2026-10-07活动局部验收历史；V0.10主线/塔/凶兽路由与养成由2026-10-08基线覆盖。旧验证记录不代表当前全部实现状态。",
+  "currentFrameworkMatrix": "docs/框架执行矩阵-20261008.json"
+}

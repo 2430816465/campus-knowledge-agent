@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Theme" path="res://assets/ui-foundation/foundation.tres" id="theme"]
+[ext_resource type="Script" path="res://scripts/ui/product_card.gd" id="script"]
+
+[node name="ProductCard" type="PanelContainer"]
+theme = ExtResource("theme")
+metadata/ui_foundation = true
+script = ExtResource("script")
+custom_minimum_size = Vector2(300,230)
+
+
+[node name="Content" type="VBoxContainer" parent="."]
+
+
+[node name="Title" type="Label" parent="Content"]
+text = "商品标题"
+autowrap_mode = 3
+
+theme_override_font_sizes/font_size = 32
+mouse_filter = 2
+
+
+[node name="Description" type="Label" parent="Content"]
+autowrap_mode = 3
+text = "奖励与限制由既有商品数据提供"
+theme_override_font_sizes/font_size = 24
+mouse_filter = 2
+
+
+[node name="Buy" type="Button" parent="Content"]
+text = "未配置价格"
+disabled = true
+theme_type_variation = &"Gold"
+

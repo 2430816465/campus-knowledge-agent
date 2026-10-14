@@ -1,0 +1,276 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    1000
+  </width>
+  
+  
+  <height>
+    750
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="10" w="1000" x="0" y="0"/>
+    
+    
+    <rect h="740" w="10" x="0" y="10"/>
+    
+    
+    <rect h="30" w="100" x="10" y="170"/>
+    
+    
+    <rect h="230" w="230" x="10" y="310"/>
+    
+    
+    <rect h="100" w="990" x="10" y="650"/>
+    
+    
+    <rect h="30" w="350" x="110" y="540"/>
+    
+    
+    <rect h="10" w="150" x="180" y="150"/>
+    
+    
+    <rect h="190" w="180" x="240" y="350"/>
+    
+    
+    <rect h="150" w="40" x="420" y="390"/>
+    
+    
+    <rect h="20" w="40" x="450" y="170"/>
+    
+    
+    <rect h="20" w="90" x="460" y="470"/>
+    
+    
+    <rect h="20" w="60" x="570" y="170"/>
+    
+    
+    <rect h="30" w="30" x="590" y="290"/>
+    
+    
+    <rect h="40" w="40" x="670" y="530"/>
+    
+    
+    <rect h="20" w="80" x="710" y="170"/>
+    
+    
+    <rect h="50" w="40" x="710" y="380"/>
+    
+    
+    <rect h="20" w="290" x="710" y="550"/>
+    
+    
+    <rect h="120" w="190" x="810" y="430"/>
+    
+    
+    <rect h="80" w="190" x="810" y="570"/>
+    
+    
+    <rect h="420" w="10" x="990" y="10"/>
+    
+  
+  </solids>
+  
+  
+  <fakesolids>
+    
+    
+    <rect h="80" w="350" x="110" y="570"/>
+    
+  
+  </fakesolids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <level3_spike0 height="10" width="150" x="180" y="140"/>
+    
+    
+    <level3_specialBlock animated="0" movementType="1" speed="40" x="810" y="150"/>
+    
+    
+    <level3_specialBlock animated="0" movementType="1" speed="40" x="650" y="120"/>
+    
+    
+    <level3_specialBlock animated="0" movementType="1" speed="40" x="510" y="150"/>
+    
+    
+    <level3_specialBlock animated="0" movementType="1" speed="40" x="390" y="120"/>
+    
+    
+    <level3_spike0 height="10" width="40" x="450" y="160"/>
+    
+    
+    <level3_spike0 height="10" width="60" x="570" y="160"/>
+    
+    
+    <level3_spike0 height="10" width="80" x="710" y="160"/>
+    
+    
+    <level3_spike1 height="20" width="10" x="490" y="170"/>
+    
+    
+    <level3_spike1 height="20" width="10" x="630" y="170"/>
+    
+    
+    <level3_spike1 height="20" width="10" x="790" y="170"/>
+    
+    
+    <level3_spike3 height="20" width="10" x="440" y="170"/>
+    
+    
+    <level3_spike3 height="20" width="10" x="560" y="170"/>
+    
+    
+    <level3_spike3 height="20" width="10" x="700" y="170"/>
+    
+    
+    <level3_spike0 height="10" width="30" x="590" y="280"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <movingPlatforms>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="100" x="180" y="100">
+      
+      
+      <node x="290" y="100"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="90" x="950" y="200">
+      
+      
+      <node x="950" y="350"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+  
+  </movingPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level3_painting3 scrollFactor="0.2" x="530" y="320"/>
+    
+    
+    <level3_painting1 scrollFactor="0.2" x="390" y="200"/>
+    
+    
+    <level3_salesChart height="67" scrollFactor="0.2" width="67" x="660" y="450"/>
+    
+    
+    <level3_window height="320" scrollFactor="0.2" width="560" x="0" y="0"/>
+    
+    
+    <level3_window height="320" scrollFactor="0.2" width="540" x="120" y="430"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer2>
+    
+    
+    <filingCab2 scrollFactor="0.76" x="730" y="590"/>
+    
+  
+  </BGLayer2>
+  
+  
+  <BGLayer3>
+    
+    
+    <level3_desk2 x="130" y="240"/>
+    
+    
+    <level3_desk1 x="310" y="280"/>
+    
+    
+    <plant2 scrollFactor="0.2" x="520" y="550"/>
+    
+    
+    <plant1 scrollFactor="0.2" x="110" y="200"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <exit nextLevel="2" x="25" y="80"/>
+    
+    
+    <Bottle width="12" x="54" y="580"/>
+    
+    
+    <L1_SmallCrate width="32" x="517" y="446"/>
+    
+    
+    <L1_SmallCrate width="32" x="910" y="407"/>
+    
+    
+    <smallSugarBag width="22" x="594" y="240"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <player andreInitialFlip="0" followHeight="0" followWidth="0" levelName="You'll Remember When I'm Gone" liselotInitialFlip="1" movementType="1" speed="40" startsFirst="1" talkString="Working at the customs office I have now seen the difference between government and private enterprise." x="480" y="600">
+      
+      
+      <node x="510" y="600"/>
+      
+    
+    </player>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="820" y="380">
+      
+      
+      <node x="850" y="380"/>
+      
+    
+    </liselot>
+    
+    
+    <inspector movementType="1" speed="40" talkString="I do believe we'll be able to reach an agreement." x="10" y="270">
+      
+      
+      <node x="220" y="270"/>
+      
+    
+    </inspector>
+    
+    
+    <army movementType="1" speed="40" talkString="My medic kit is empty. Can we have the name of some local importers that you trust." x="240" y="300">
+      
+      
+      <node x="390" y="300"/>
+      
+    
+    </army>
+    
+  
+  </characters>
+  
+
+</level>

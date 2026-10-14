@@ -1,0 +1,336 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    1260
+  </width>
+  
+  
+  <height>
+    1260
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="10" w="1260" x="0" y="0"/>
+    
+    
+    <rect h="1250" w="10" x="0" y="10"/>
+    
+    
+    <rect h="170" w="1250" x="10" y="1090"/>
+    
+    
+    <rect h="10" w="20" x="40" y="280"/>
+    
+    
+    <rect h="10" w="20" x="40" y="580"/>
+    
+    
+    <rect h="10" w="20" x="80" y="430"/>
+    
+    
+    <rect h="60" w="210" x="140" y="210"/>
+    
+    
+    <rect h="60" w="210" x="140" y="720"/>
+    
+    
+    <rect h="60" w="60" x="230" y="150"/>
+    
+    
+    <rect h="140" w="60" x="230" y="270"/>
+    
+    
+    <rect h="120" w="60" x="230" y="600"/>
+    
+    
+    <rect h="200" w="60" x="230" y="780"/>
+    
+    
+    <rect h="30" w="30" x="410" y="20"/>
+    
+    
+    <rect h="20" w="20" x="410" y="210"/>
+    
+    
+    <rect h="20" w="20" x="430" y="720"/>
+    
+    
+    <rect h="30" w="60" x="470" y="20"/>
+    
+    
+    <rect h="20" w="20" x="490" y="210"/>
+    
+    
+    <rect h="60" w="140" x="530" y="720"/>
+    
+    
+    <rect h="30" w="80" x="560" y="20"/>
+    
+    
+    <rect h="60" w="80" x="560" y="210"/>
+    
+    
+    <rect h="30" w="60" x="670" y="20"/>
+    
+    
+    <rect h="60" w="60" x="670" y="210"/>
+    
+    
+    <rect h="20" w="20" x="750" y="720"/>
+    
+    
+    <rect h="30" w="30" x="760" y="20"/>
+    
+    
+    <rect h="20" w="20" x="780" y="210"/>
+    
+    
+    <rect h="60" w="240" x="850" y="210"/>
+    
+    
+    <rect h="60" w="240" x="850" y="720"/>
+    
+    
+    <rect h="60" w="60" x="910" y="150"/>
+    
+    
+    <rect h="140" w="60" x="910" y="270"/>
+    
+    
+    <rect h="120" w="60" x="910" y="600"/>
+    
+    
+    <rect h="200" w="60" x="910" y="780"/>
+    
+    
+    <rect h="10" w="20" x="1140" y="790"/>
+    
+    
+    <rect h="10" w="20" x="1180" y="930"/>
+    
+    
+    <rect h="1080" w="10" x="1250" y="10"/>
+    
+  
+  </solids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <level3_spike1 height="10" width="10" x="60" y="280"/>
+    
+    
+    <level3_spike1 height="10" width="10" x="60" y="580"/>
+    
+    
+    <level3_spike3 height="10" width="10" x="70" y="430"/>
+    
+    
+    <level3_spike0 height="10" width="20" x="40" y="270"/>
+    
+    
+    <level3_spike0 height="10" width="20" x="80" y="420"/>
+    
+    
+    <level3_spike0 height="10" width="20" x="40" y="570"/>
+    
+    
+    <level3_spike2 height="10" width="20" x="40" y="290"/>
+    
+    
+    <level3_spike2 height="10" width="20" x="40" y="590"/>
+    
+    
+    <level3_spike2 height="10" width="20" x="80" y="440"/>
+    
+    
+    <level3_spike2 height="10" width="30" x="410" y="50"/>
+    
+    
+    <level3_spike2 height="10" width="60" x="470" y="50"/>
+    
+    
+    <level3_spike2 height="10" width="80" x="560" y="50"/>
+    
+    
+    <level3_spike2 height="10" width="60" x="670" y="50"/>
+    
+    
+    <level3_spike2 height="10" width="30" x="760" y="50"/>
+    
+    
+    <level3_spike1 height="10" width="10" x="1160" y="790"/>
+    
+    
+    <level3_spike3 height="10" width="10" x="1170" y="930"/>
+    
+    
+    <level3_spike0 height="10" width="20" x="1140" y="780"/>
+    
+    
+    <level3_spike0 height="10" width="20" x="1180" y="920"/>
+    
+    
+    <level3_spike2 height="10" width="20" x="1140" y="800"/>
+    
+    
+    <level3_spike2 height="10" width="20" x="1180" y="940"/>
+    
+    
+    <LargeCrate x="600" y="150"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <movingPlatforms>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="120" x="50" y="210">
+      
+      
+      <node x="50" y="360"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="100" x="1150" y="720">
+      
+      
+      <node x="1150" y="1020"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="90" x="90" y="360">
+      
+      
+      <node x="90" y="510"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="60" x="50" y="510">
+      
+      
+      <node x="50" y="660"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+  
+  </movingPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level3_window height="320" scrollFactor="0.2" width="640" x="0" y="80"/>
+    
+    
+    <level3_painting1 scrollFactor="0.2" x="130" y="430"/>
+    
+    
+    <level3_painting2 scrollFactor="0.2" x="350" y="450"/>
+    
+    
+    <level3_painting3 scrollFactor="0.2" x="570" y="470"/>
+    
+    
+    <level3_window height="320" scrollFactor="0.2" width="1260" x="0" y="640"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer3>
+    
+    
+    <level3_desk3 x="470" y="1060"/>
+    
+    
+    <sodaPack scrollFactor="0.2" x="560" y="700"/>
+    
+    
+    <level3_desk2 x="40" y="1020"/>
+    
+    
+    <level3_desk1 x="1020" y="1020"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <L1_SmallCrate width="32" x="246" y="578"/>
+    
+    
+    <L1_SmallCrate width="32" x="927" y="576"/>
+    
+    
+    <exit nextLevel="2" x="1026" y="120"/>
+    
+    
+    <smallSugarBag width="22" x="584" y="598"/>
+    
+    
+    <Bottle width="12" x="649" y="23"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <army movementType="1" speed="40" talkString="Friday doesn't mean the same to a military man as it does to a civilian." x="10" y="1040">
+      
+      
+      <node x="440" y="1040"/>
+      
+    
+    </army>
+    
+    
+    <inspector movementType="1" speed="40" talkString="I've been trying to find sodium based cleaning agents, but ever since the war supplies have been short." x="650" y="1050">
+      
+      
+      <node x="1000" y="1050"/>
+      
+    
+    </inspector>
+    
+    
+    <player andreInitialFlip="0" followHeight="0" followWidth="0" levelName="Final Countdown" liselotInitialFlip="1" movementType="1" speed="40" startsFirst="1" talkString="Family is all." x="200" y="1040">
+      
+      
+      <node x="300" y="1040"/>
+      
+    
+    </player>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="1140" y="1040">
+      
+      
+      <node x="1190" y="1040"/>
+      
+    
+    </liselot>
+    
+  
+  </characters>
+  
+
+</level>

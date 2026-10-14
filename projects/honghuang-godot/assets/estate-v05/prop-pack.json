@@ -1,0 +1,111 @@
+{
+  "schema": "generate2dmap.prop-pack.v1",
+  "raw": "../../art-source/estate-v05/garden-props-raw.png",
+  "rows": 2,
+  "columns": 2,
+  "cellSize": [
+    256,
+    256
+  ],
+  "camera": "Native Godot 2:1 isometric estate camera",
+  "assets": [
+    {
+      "id": "jade-blossom",
+      "source": "art-source/estate-v05/processed/prop-1.png",
+      "runtime": "assets/estate-v05/jade-blossom.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "alpha": true,
+      "source_edge_touch": false,
+      "output_edge_touch": false,
+      "path": "jade-blossom.png",
+      "grid": [
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        208
+      ],
+      "occlusionClass": "low edge decoration",
+      "occupantPolicy": "outside-buildable-footprint",
+      "actorSafeArea": "central plot 3x3 cells"
+    },
+    {
+      "id": "vermilion-lantern",
+      "source": "art-source/estate-v05/processed/prop-2.png",
+      "runtime": "assets/estate-v05/vermilion-lantern.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "alpha": true,
+      "source_edge_touch": false,
+      "output_edge_touch": false,
+      "path": "vermilion-lantern.png",
+      "grid": [
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        208
+      ],
+      "occlusionClass": "low edge decoration",
+      "occupantPolicy": "outside-buildable-footprint",
+      "actorSafeArea": "central plot 3x3 cells"
+    },
+    {
+      "id": "scholar-rock",
+      "source": "art-source/estate-v05/processed/prop-3.png",
+      "runtime": "assets/estate-v05/scholar-rock.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "alpha": true,
+      "source_edge_touch": false,
+      "output_edge_touch": false,
+      "path": "scholar-rock.png",
+      "grid": [
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        208
+      ],
+      "occlusionClass": "low edge decoration",
+      "occupantPolicy": "outside-buildable-footprint",
+      "actorSafeArea": "central plot 3x3 cells"
+    },
+    {
+      "id": "azalea",
+      "source": "art-source/estate-v05/processed/prop-4.png",
+      "runtime": "assets/estate-v05/azalea.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "alpha": true,
+      "source_edge_touch": false,
+      "output_edge_touch": false,
+      "path": "azalea.png",
+      "grid": [
+        1,
+        1
+      ],
+      "anchor": [
+        128,
+        208
+      ],
+      "occlusionClass": "low edge decoration",
+      "occupantPolicy": "outside-buildable-footprint",
+      "actorSafeArea": "central plot 3x3 cells"
+    }
+  ],
+  "qc": "../../art-source/estate-v05/processed/pipeline-meta.json",
+  "accepted": true
+}

@@ -1,0 +1,59 @@
+/* Shared geometry only. Game colors live in game-themes.css. */
+/* C reference: a single late presentation layer for every game. No field geometry. */
+html[data-game-ui]{}
+html[data-game-ui] body{}
+html[data-game-ui] :is(.panel,.dialog,.result-card,.portrait-card,.lobby-panel,.room-panel){border:1px solid var(--game-line)}
+html[data-game-ui] :is(.button,.m-btn,.iconbtn,.icon-button,.copy-button,.buy-button){border:1px solid var(--game-line)}
+html[data-game-ui] :is(.button-primary,.m-btn.gold,.m-btn.primary){border-color:var(--game-line)}
+html[data-game-ui] :is(input,select){border-color:var(--game-line)}
+html[data-game-ui] :is(.dialog h1,.dialog h2,.dialog p,.dialog li,.dialog small){}
+html[data-game-ui] :is(.dialog,.result-card,.portrait-card){border-radius:18px}
+html[data-game-ui="tower"] :is(.panel.left,.boardbox){border-width:1px}
+html[data-game-ui="tower"] .panel.left{}
+html[data-game-ui="tower"] .panel.left .stat{border-radius:8px}
+html[data-game-ui="tower"] .touchpad button{border:1px solid var(--game-line);border-radius:12px}
+html[data-game-ui="tower"] :is(.info-sheet,.manual-sheet,#modal:not(.dialogue-modal) .sheet,.tutorial-card){border-color:var(--game-line)}
+html[data-game-ui="tower"] #infoOverlay .info-grid .info-card{border-color:var(--game-line)}
+html[data-game-ui="tower"] :is(.toast,#toast){}
+html[data-game-ui="marble"] .hero{background-image:url('../../assets/reference/pixel-camp.png');background-size:234.87% 683.15%;background-position:91.31% 42.07%;border:1px solid var(--game-line);border-radius:18px}
+html[data-game-ui="marble"] .hero-shade{}
+html[data-game-ui="marble"] .hero-copy :is(h1,h2,p){}
+html[data-game-ui="marble"] .home-marble{display:none}
+html[data-game-ui="marble"] .marble-home .top{display:grid;grid-template-columns:auto 1fr auto;gap:12px;font-size:12px}
+html[data-game-ui="marble"] .marble-home .top>.m-btn{width:auto;margin:0;padding:7px 12px;font-size:12px}
+html[data-game-ui="marble"] .marble-home .top>span{text-align:center;white-space:nowrap}
+html[data-game-ui="marble"] .marble-home .hero-copy{position:absolute;left:18px;bottom:22px;top:auto;padding:0;right:12px}
+html[data-game-ui="marble"] .marble-home .hero-copy>p{display:none}
+html[data-game-ui="marble"] .marble-home .hero-copy h1{margin:0 0 10px}
+html[data-game-ui="marble"] .story{border-color:var(--game-line)}
+html[data-game-ui="marble"] :is(.story strong,.story p,.footnote,.section-label,.result p,.result-panel small){}
+html[data-game-ui="marble"] :is(.arena-sidebar,.arena-level,.arena-support,.owned-power){border-color:var(--game-line)}
+html[data-game-ui="marble"] .arena-sidebar{}
+html[data-game-ui="marble"] .arena-sidebar :is(small,.arena-panel-note,.empty-powers,.arena-level small){}
+html[data-game-ui="marble"] .arena-sidebar :is(button,.arena-panel-tools .m-btn){border:1px solid var(--game-line);min-height:44px}
+html[data-game-ui="marble"] .arena-xp{}
+html[data-game-ui="marble"] .arena-xp i{}
+html[data-game-ui="marble"] .inline-card{border:2px solid var(--rarity);border-radius:14px}
+html[data-game-ui="marble"] .inline-card :is(.pick-power,p,small,.card-title b){}
+html[data-game-ui="marble"] .inline-card .pick-label{}
+html[data-game-ui="marble"] .arena-choices{backdrop-filter:blur(3px)}
+html[data-game-ui="marble"] .arena-choices header{}
+html[data-game-ui="marble"] .tier-ad{border-color:var(--game-line)}
+html[data-game-ui="coop"] :is(.invite-code,.player-slot,.room-level-select,.level-card,.shop-card,.currency){border:1px solid var(--game-line)}
+html[data-game-ui="coop"] :is(.lobby-panel,.room-panel,.result-card){border-radius:18px}
+html[data-game-ui="coop"] .home-hero{border:1px solid var(--game-line);overflow:hidden}
+html[data-game-ui="coop"] .hero-art{background-image:url('../../assets/reference/pixel-camp.png');background-size:233.6% 678.07%;background-position:91.48% 68.49%;border-radius:14px}
+html[data-game-ui="coop"] .hero-art>*{visibility:hidden}
+html[data-game-ui="coop"] .hero-copy :is(h1,h1 em,p){}
+html[data-game-ui="coop"] .hero-glow{display:none}
+html[data-game-ui="coop"] :is(.tags span,.campaign-card,.campaign-button){border-color:var(--game-line)}
+html[data-game-ui="coop"] :is(.contract-offer,.contract-card,.contract-panel){border-color:var(--game-line)}
+html[data-game-ui="coop"] :is(.contract-offer,.contract-card,.contract-panel) :is(p,small){}
+html[data-game-ui="coop"] .game-topline{border-color:var(--game-line)!important}
+html[data-game-ui="coop"] :is(.lan-info,.lan-address,.lan-phone-card){border-color:var(--game-line)}
+.mine-draft{border:1px solid var(--game-line);border-radius:18px}
+.mine-draft p{}.mine-draft button{border:1px solid var(--game-line);border-radius:12px}
+@media(prefers-reduced-motion:reduce){html[data-game-ui] *,html[data-game-ui] *:before,html[data-game-ui] *:after{animation:none!important;transition:none!important}}
+
+/* Quiet paper texture for exposed menu space; no overlay or hit target. */
+html[data-game-ui] body:not(.in-game){}

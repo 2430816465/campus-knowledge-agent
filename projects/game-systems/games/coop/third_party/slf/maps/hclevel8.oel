@@ -1,0 +1,285 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    1200
+  </width>
+  
+  
+  <height>
+    640
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="10" w="1200" x="0" y="0"/>
+    
+    
+    <rect h="630" w="10" x="0" y="10"/>
+    
+    
+    <rect h="20" w="300" x="10" y="270"/>
+    
+    
+    <rect h="70" w="1190" x="10" y="570"/>
+    
+    
+    <rect h="120" w="180" x="130" y="290"/>
+    
+    
+    <rect h="140" w="20" x="260" y="130"/>
+    
+    
+    <rect h="120" w="30" x="280" y="150"/>
+    
+    
+    <rect h="310" w="90" x="370" y="260"/>
+    
+    
+    <rect h="20" w="70" x="380" y="130"/>
+    
+    
+    <rect h="300" w="50" x="520" y="150"/>
+    
+    
+    <rect h="60" w="660" x="540" y="510"/>
+    
+    
+    <rect h="20" w="20" x="550" y="130"/>
+    
+    
+    <rect h="220" w="60" x="570" y="230"/>
+    
+    
+    <rect h="40" w="430" x="770" y="230"/>
+    
+    
+    <rect h="140" w="70" x="950" y="10"/>
+    
+    
+    <rect h="240" w="250" x="950" y="270"/>
+    
+    
+    <rect h="220" w="10" x="1190" y="10"/>
+    
+  
+  </solids>
+  
+  
+  <fakesolids>
+    
+    
+    <rect h="80" w="70" x="950" y="150"/>
+    
+  
+  </fakesolids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <spike3 height="120" width="10" x="120" y="290"/>
+    
+    
+    <level1_specialBlock animated="0" movementType="1" speed="40" x="10" y="380"/>
+    
+    
+    <spike1 height="250" width="10" x="310" y="150"/>
+    
+    
+    <spike3 height="200" width="10" x="510" y="150"/>
+    
+    
+    <LargeCrate x="550" y="450"/>
+    
+    
+    <level1_specialPlatform animated="0" movementType="1" speed="40" x="790" y="390"/>
+    
+    
+    <level1_specialPlatform animated="0" movementType="1" speed="70" x="280" y="130"/>
+    
+    
+    <level1_specialPlatform animated="0" movementType="1" speed="40" x="450" y="130"/>
+    
+    
+    <spike2 height="10" width="150" x="130" y="410"/>
+    
+    
+    <level1_specialBlock animated="0" movementType="1" speed="40" x="800" y="20"/>
+    
+    
+    <level1_specialBlock animated="0" movementType="1" speed="40" x="800" y="190"/>
+    
+    
+    <level1_specialPlatform animated="0" movementType="1" speed="40" x="610" y="210"/>
+    
+    
+    <spike0 height="10" width="30" x="400" y="250"/>
+    
+    
+    <spike2 height="10" width="40" x="800" y="60"/>
+    
+    
+    <level1_specialBlock animated="0" movementType="1" speed="40" x="670" y="330"/>
+    
+    
+    <spike3 height="310" width="10" x="360" y="260"/>
+    
+    
+    <spike1 height="310" width="10" x="460" y="260"/>
+    
+    
+    <spike2 height="10" width="70" x="380" y="150"/>
+    
+    
+    <spike0 height="10" width="40" x="800" y="180"/>
+    
+    
+    <helpBox helpString="Talk to Andre by pressing '_Action' while facing him." type="0" x="140" y="210"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <movingPlatforms>
+    
+    
+    <level1_specialPlatformSmall animated="1" movementType="5" speed="110" x="320" y="260">
+      
+      
+      <node x="320" y="510"/>
+      
+    
+    </level1_specialPlatformSmall>
+    
+    
+    <level1_specialPlatformSmall animated="1" movementType="5" speed="110" x="470" y="260">
+      
+      
+      <node x="470" y="550"/>
+      
+    
+    </level1_specialPlatformSmall>
+    
+  
+  </movingPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level1_shelfTile height="320" scrollFactor="0.2" width="400" x="550" y="190"/>
+    
+    
+    <level1_windows height="54" scrollFactor="0.1" width="180" x="600" y="110"/>
+    
+    
+    <level1_windows height="54" scrollFactor="0.1" width="420" x="60" y="350"/>
+    
+    
+    <level1_windows height="54" scrollFactor="0.1" width="120" x="90" y="110"/>
+    
+    
+    <level1_windows height="54" scrollFactor="0.1" width="240" x="300" y="20"/>
+    
+    
+    <level1_shelfTile height="640" scrollFactor="0.2" width="480" x="0" y="0"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer2>
+    
+    
+    <sugarBags scrollFactor="0.2" x="180" y="530"/>
+    
+    
+    <sugarBags scrollFactor="0.75" x="720" y="470"/>
+    
+    
+    <cratesBox scrollFactor="0.65" x="310" y="390"/>
+    
+    
+    <cratesBox scrollFactor="0.6" x="540" y="330"/>
+    
+    
+    <sugarBagsAndCrates scrollFactor="0.6" x="30" y="440"/>
+    
+  
+  </BGLayer2>
+  
+  
+  <BGLayer3>
+    
+    
+    <palettes scrollFactor="0.2" x="80" y="230"/>
+    
+    
+    <palettes scrollFactor="0.2" x="280" y="90"/>
+    
+    
+    <sodaPack scrollFactor="0.2" x="830" y="490"/>
+    
+    
+    <sodaPack scrollFactor="0.2" x="250" y="550"/>
+    
+    
+    <sodaPack scrollFactor="0.2" x="890" y="490"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <L1_SmallCrate width="32" x="500" y="107"/>
+    
+    
+    <exit nextLevel="2" x="841" y="300"/>
+    
+    
+    <Bottle width="12" x="1159" y="161"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <player andreInitialFlip="0" followHeight="640" followWidth="960" levelName="Edge of the Ledge" liselotInitialFlip="0" movementType="1" speed="40" startsFirst="1" talkString="One does not simply walk into a Lemonade Factory." x="10" y="330">
+      
+      
+      <node x="30" y="330"/>
+      
+    
+    </player>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="20" y="220">
+      
+      
+      <node x="50" y="220"/>
+      
+    
+    </liselot>
+    
+    
+    <inspector movementType="1" speed="40" talkString="Clean all the things!" x="260" y="90">
+      
+      
+      <node x="540" y="90"/>
+      
+    
+    </inspector>
+    
+  
+  </characters>
+  
+
+</level>

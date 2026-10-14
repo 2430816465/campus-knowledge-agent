@@ -1,0 +1,86 @@
+{
+  "version": "1.27.0",
+  "versionCode": 33,
+  "baseVersion": "1.26.0",
+  "environment": "development-acceptance",
+  "commercialReady": false,
+  "ads": "development-simulation",
+  "coopCampaign": {
+    "version": "slf72-v1",
+    "normal": 36,
+    "difficult": 36,
+    "mapLayoutChanged": false
+  },
+  "integratedBatches": [
+    "1.26.0-守夜与闯关修复",
+    "1.26.0-守夜技能与备战优化",
+    "再选一次",
+    "再选一次-玩法与美术深化",
+    "再闯一关",
+    "再骗一杯",
+    "面包工坊"
+  ],
+  "workshopOneHourGoalMet": false,
+  "groups": {
+    "collection": {
+      "files": 98,
+      "bytes": 16016318,
+      "digest": "da549cdf9d42813d3e4c5641bbbf096ee706ecb0a569795df1bc4d1303e30178"
+    },
+    "chess": {
+      "files": 25,
+      "bytes": 611825,
+      "digest": "e0503c07dcd4bd2442dd1e9e53e47b9b5e54e62205d76b3b4dfac706583cfa6e"
+    },
+    "coop": {
+      "files": 144,
+      "bytes": 29060896,
+      "digest": "38f6136226139e3f37d2a0f733c295461f6f31c0dad3ceb0a0bfcd99350a4c85"
+    },
+    "evolve": {
+      "files": 34,
+      "bytes": 1191801,
+      "digest": "7b60d25018055e080f33d86bf352b0e2d9e42909b9e320dca8a3ec083628a122"
+    },
+    "liars": {
+      "files": 78,
+      "bytes": 2065248,
+      "digest": "c2a00f50c95eaee408419fc2fb7244627a426f500c80213831160c25197d3f91"
+    },
+    "marble": {
+      "files": 56,
+      "bytes": 625270,
+      "digest": "d44a4e251eaa4b1019924f126e43c8d078e556b3206c4c71b6d4456d6a6115c4"
+    },
+    "mine": {
+      "files": 197,
+      "bytes": 20707987,
+      "digest": "542c3e29db48f1dccdb5c4fd1c0074b5f61b2cea22283e87df7d5c3e8ebbc664"
+    },
+    "nightwatch": {
+      "files": 99,
+      "bytes": 5089995,
+      "digest": "c0f9375b2146d89afaa84554b1b44e1b7cd225be37dbe83e612770309cc50a47"
+    },
+    "rush": {
+      "files": 39,
+      "bytes": 5958963,
+      "digest": "5c7db6e1d5248bacccefde963a0d610f672b07680bd75ffd6329f80353c63c5d"
+    },
+    "shared": {
+      "files": 11,
+      "bytes": 85628,
+      "digest": "59e4aaee8eba433ba1de61dd8e7e7494cae6600fc47ae8de8fdd7931b1b63881"
+    },
+    "tower": {
+      "files": 126,
+      "bytes": 25401144,
+      "digest": "372bad1f728a3fc78a215db565f16212b82ca22dc5e091e9ae8cb637414ae3b9"
+    },
+    "workshop": {
+      "files": 109,
+      "bytes": 35248874,
+      "digest": "fd7f93818d72cb856425257b8963e257461b8bed6f5d3c8e658f531fb85526a0"
+    }
+  }
+}

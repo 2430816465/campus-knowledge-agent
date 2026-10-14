@@ -1,0 +1,16 @@
+body[data-page="preview"]{overflow:hidden;background:#080e17}
+body[data-page="preview"] .shell{width:100%;max-width:none;padding:0;margin:0}
+body[data-page="preview"] .topbar,body[data-page="preview"] footer,body[data-page="preview"] .world,body[data-page="preview"] .developer{display:none}
+body[data-page="preview"] #main{padding:0;margin:0;max-width:none;animation:none}
+.game-toolbar{height:54px;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:5px max(10px,env(safe-area-inset-right)) 5px max(10px,env(safe-area-inset-left));background:#101d2b;border-bottom:1px solid #695733;box-sizing:border-box}
+.game-toolbar button{min-height:42px;padding:7px 12px}.game-toolbar strong{font-size:16px;color:#f0dba8}.game-toolbar .tag{font-size:11px}
+.live-game{position:relative;height:calc(100dvh - 54px);height:calc(100svh - 54px);width:100%;background:#080e17;overflow:hidden}
+.live-game .game-stage{position:relative;height:100%;min-height:0;border:0;background:none;border-radius:0;display:block;aspect-ratio:auto}
+.game-frame{width:100%;height:100%;border:0;display:block;background:#080e17}
+.game-loading,.game-error{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px;background:#101d2b;z-index:2;text-align:center;padding:24px}
+@media(max-width:400px){.game-toolbar .tag{display:none}.game-toolbar strong{font-size:14px}}
+@media(orientation:landscape) and (max-height:520px){.game-toolbar{height:46px}.game-toolbar button{min-height:36px}.live-game{height:calc(100dvh - 46px)}}
+
+.equipped-game-badge{width:34px;height:34px;display:block}.equipped-game-badge .item-art{width:100%;height:100%;margin:0}.equipped-game-badge img{width:100%;height:100%;object-fit:contain}
+body[data-page='preview'][data-mode='liars'] .game-toolbar{display:none}
+body[data-page='preview'][data-mode='liars'] .live-game{height:100dvh;height:100svh}

@@ -1,0 +1,124 @@
+{
+  "version": "v0.8.0",
+  "tool": "tools/subset-font.py",
+  "fontTools": "4.57.0",
+  "scope": "All non-whitespace scripts/data/scenes characters plus printable ASCII",
+  "runtimeCharacters": 1903,
+  "runtimeHanCharacters": 1780,
+  "inputFiles": [
+    "data/activities-rules.json",
+    "data/activity-implementation-matrix.json",
+    "data/equipment-rules.json",
+    "data/game-data.json",
+    "data/godot-rules.json",
+    "data/progression-rules.json",
+    "data/progression-stories.json",
+    "data/progression-systems.json",
+    "data/roster-expansion.json",
+    "data/roster-guides.json",
+    "data/system-catalog.json",
+    "scenes/battle.tscn",
+    "scenes/building.tscn",
+    "scenes/estate.tscn",
+    "scenes/main.tscn",
+    "scripts/activities_screen.gd",
+    "scripts/adventure_screen.gd",
+    "scripts/battle_actor.gd",
+    "scripts/battle_effects.gd",
+    "scripts/battle_view.gd",
+    "scripts/building_view.gd",
+    "scripts/character_screen.gd",
+    "scripts/community_screen.gd",
+    "scripts/estate_progression_landmarks.gd",
+    "scripts/estate_screen.gd",
+    "scripts/estate_view.gd",
+    "scripts/game_activities.gd",
+    "scripts/game_audio.gd",
+    "scripts/game_combat.gd",
+    "scripts/game_community.gd",
+    "scripts/game_data.gd",
+    "scripts/game_economy.gd",
+    "scripts/game_equipment.gd",
+    "scripts/game_expedition.gd",
+    "scripts/game_file_lock.gd",
+    "scripts/game_illustrated_icon.gd",
+    "scripts/game_names.gd",
+    "scripts/game_online_mock.gd",
+    "scripts/game_progression.gd",
+    "scripts/game_safe_area.gd",
+    "scripts/game_store.gd",
+    "scripts/game_theme.gd",
+    "scripts/home_screen.gd",
+    "scripts/main.gd",
+    "scripts/page_pager.gd",
+    "scripts/progression_screen.gd",
+    "scripts/progression_visual.gd",
+    "scripts/roster_screen.gd",
+    "scripts/summon_cinematic.gd",
+    "scripts/summon_movie.gd",
+    "scripts/summon_screen.gd",
+    "scripts/system_hub.gd"
+  ],
+  "assets": [
+    {
+      "path": "assets/fonts/NotoSansSC-Regular.otf",
+      "origin": "Local OFL Noto font; subset of all runtime scripts/data/scenes",
+      "sourceFile": "NotoSansSC-VF.ttf",
+      "sourceLocation": "C:\\WINDOWS\\Fonts\\NotoSansSC-VF.ttf",
+      "sourceSha256": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a",
+      "sourceFamily": [
+        "Noto Sans SC"
+      ],
+      "sourceVersion": [
+        "Version 2.04;241114210130;non-release"
+      ],
+      "copyright": [
+        "© 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'."
+      ],
+      "license": "assets/fonts/LICENSE.txt",
+      "embeddedLicense": [
+        "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software."
+      ],
+      "licenseUrl": [
+        "http://scripts.sil.org/OFL"
+      ],
+      "weight": 400,
+      "transformation": "fontTools subset; variable weight fixed to 400",
+      "container": "OpenType sfnt; original .otf resource paths retained",
+      "bytes": 600832,
+      "sha256": "c58ce030fad70a85192abf2b0ddcab2373ca5a6b3fdb1584205327c72717953a",
+      "cmapCharacters": 1903,
+      "missingRuntimeCharacters": 0
+    },
+    {
+      "path": "assets/fonts/NotoSerifSC-Regular.otf",
+      "origin": "Local OFL Noto font; subset of all runtime scripts/data/scenes",
+      "sourceFile": "NotoSerifSC-VF.ttf",
+      "sourceLocation": "C:\\WINDOWS\\Fonts\\NotoSerifSC-VF.ttf",
+      "sourceSha256": "a4aed9985a5916fbf6690456f8732a9fccd517938e353165d4142b4f11a39280",
+      "sourceFamily": [
+        "Noto Serif SC"
+      ],
+      "sourceVersion": [
+        "Version 2.02;241114204558;non-release"
+      ],
+      "copyright": [
+        "© 2017-2023 Adobe (http://www.adobe.com/)."
+      ],
+      "license": "assets/fonts/LICENSE.txt",
+      "embeddedLicense": [
+        "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software."
+      ],
+      "licenseUrl": [
+        "http://scripts.sil.org/OFL"
+      ],
+      "weight": 400,
+      "transformation": "fontTools subset; variable weight fixed to 400",
+      "container": "OpenType sfnt; original .otf resource paths retained",
+      "bytes": 815056,
+      "sha256": "c33c5bc31fffa7f471f9f485e9e7d21f04c8e4def01f77c3236f8a28fa97a4b3",
+      "cmapCharacters": 1903,
+      "missingRuntimeCharacters": 0
+    }
+  ]
+}

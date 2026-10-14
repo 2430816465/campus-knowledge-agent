@@ -1,0 +1,276 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    1000
+  </width>
+  
+  
+  <height>
+    1100
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="10" w="1000" x="0" y="0"/>
+    
+    
+    <rect h="1090" w="10" x="0" y="10"/>
+    
+    
+    <rect h="100" w="390" x="10" y="250"/>
+    
+    
+    <rect h="230" w="200" x="10" y="870"/>
+    
+    
+    <rect h="70" w="350" x="50" y="450"/>
+    
+    
+    <rect h="180" w="60" x="90" y="10"/>
+    
+    
+    <rect h="70" w="180" x="120" y="650"/>
+    
+    
+    <rect h="20" w="220" x="180" y="350"/>
+    
+    
+    <rect h="160" w="790" x="210" y="940"/>
+    
+    
+    <rect h="20" w="20" x="320" y="870"/>
+    
+    
+    <rect h="80" w="50" x="350" y="370"/>
+    
+    
+    <rect h="50" w="180" x="380" y="670"/>
+    
+    
+    <rect h="20" w="480" x="400" y="500"/>
+    
+    
+    <rect h="70" w="320" x="450" y="870"/>
+    
+    
+    <rect h="70" w="350" x="460" y="230"/>
+    
+    
+    <rect h="110" w="40" x="510" y="390"/>
+    
+    
+    <rect h="50" w="330" x="550" y="450"/>
+    
+    
+    <rect h="150" w="60" x="590" y="10"/>
+    
+    
+    <rect h="100" w="290" x="590" y="690"/>
+    
+    
+    <rect h="40" w="190" x="810" y="260"/>
+    
+    
+    <rect h="170" w="20" x="840" y="520"/>
+    
+    
+    <rect h="170" w="30" x="970" y="520"/>
+    
+    
+    <rect h="250" w="10" x="990" y="10"/>
+    
+    
+    <rect h="220" w="10" x="990" y="300"/>
+    
+    
+    <rect h="250" w="10" x="990" y="690"/>
+    
+  
+  </solids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <level3_spike3 height="60" width="10" x="580" y="100"/>
+    
+    
+    <level3_spike0 height="10" width="240" x="210" y="930"/>
+    
+    
+    <level3_spike3 height="80" width="10" x="340" y="370"/>
+    
+    
+    <LargeCrate x="80" y="190"/>
+    
+    
+    <LargeCrate x="580" y="170"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <movingPlatforms>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="120" x="10" y="450">
+      
+      
+      <node x="10" y="800"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+  
+  </movingPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level3_painting2 scrollFactor="0.2" x="50" y="100"/>
+    
+    
+    <level3_salesChart height="67" scrollFactor="0.2" width="67" x="230" y="130"/>
+    
+    
+    <level3_painting2 scrollFactor="0.2" x="410" y="360"/>
+    
+    
+    <level3_painting2 scrollFactor="0.2" x="440" y="90"/>
+    
+    
+    <level3_painting3 scrollFactor="0.2" x="370" y="100"/>
+    
+    
+    <level3_painting3 scrollFactor="0.2" x="490" y="340"/>
+    
+    
+    <level3_painting3 scrollFactor="0.2" x="510" y="80"/>
+    
+    
+    <level3_painting3 scrollFactor="0.2" x="860" y="140"/>
+    
+    
+    <level3_window height="320" scrollFactor="0.2" width="1000" x="0" y="620"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer2>
+    
+    
+    <bookCase scrollFactor="0.75" x="610" y="360"/>
+    
+  
+  </BGLayer2>
+  
+  
+  <BGLayer3>
+    
+    
+    <level3_desk3 x="20" y="840"/>
+    
+    
+    <palettes scrollFactor="0.2" x="140" y="610"/>
+    
+    
+    <palettes scrollFactor="0.2" x="210" y="210"/>
+    
+    
+    <level3_desk1 x="100" y="380"/>
+    
+    
+    <level3_desk1 x="460" y="600"/>
+    
+    
+    <level3_desk1 x="440" y="800"/>
+    
+    
+    <level3_desk1 x="480" y="160"/>
+    
+    
+    <sugarBags scrollFactor="0.2" x="550" y="410"/>
+    
+    
+    <palettes scrollFactor="0.2" x="590" y="650"/>
+    
+    
+    <sugarBags scrollFactor="0.2" x="650" y="830"/>
+    
+    
+    <palettes scrollFactor="0.2" x="650" y="190"/>
+    
+    
+    <sodaPack scrollFactor="0.2" x="810" y="430"/>
+    
+    
+    <level3_desk1 x="810" y="870"/>
+    
+    
+    <level3_spike2 height="10" width="60" x="590" y="160"/>
+    
+    
+    <level3_spike2 height="10" width="170" x="10" y="350"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <exit nextLevel="2" x="661" y="600"/>
+    
+    
+    <smallSugarBag width="22" x="327" y="679"/>
+    
+    
+    <Bottle width="12" x="309" y="400"/>
+    
+    
+    <L1_SmallCrate width="32" x="737" y="207"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="20" y="200">
+      
+      
+      <node x="60" y="200"/>
+      
+    
+    </liselot>
+    
+    
+    <player andreInitialFlip="1" followHeight="0" followWidth="0" levelName="Dance Dance" liselotInitialFlip="0" movementType="1" speed="40" startsFirst="1" talkString="We made sure everyone got a taste of our product at the party." x="950" y="210">
+      
+      
+      <node x="950" y="210"/>
+      
+    
+    </player>
+    
+    
+    <inspector movementType="1" speed="40" talkString="The recycling of glass bottles has to happen. It's economically viable, and ecologically friendly. Just clean them properly!" x="750" y="410">
+      
+      
+      <node x="840" y="410"/>
+      
+    
+    </inspector>
+    
+  
+  </characters>
+  
+
+</level>

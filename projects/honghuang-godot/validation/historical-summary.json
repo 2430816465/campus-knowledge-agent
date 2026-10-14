@@ -1,0 +1,248 @@
+{
+  "record_type": "historical_delivered_source_report",
+  "scope": "Delivered source module tests; not current reproduction or visual acceptance",
+  "suites": 40,
+  "passed": 40,
+  "results": [
+    {
+      "file": "test_activities_v08.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 6.19
+    },
+    {
+      "file": "test_adventure_v05.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 1.83
+    },
+    {
+      "file": "test_battle_presentation.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 0.83
+    },
+    {
+      "file": "test_battle_single_screen_v05.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 4.47
+    },
+    {
+      "file": "test_battle_v05.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 0.55
+    },
+    {
+      "file": "test_chapter_presentation.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 0.55
+    },
+    {
+      "file": "test_character_challenges.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 9.06
+    },
+    {
+      "file": "test_character_screen.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 47.45
+    },
+    {
+      "file": "test_combat.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 3.31
+    },
+    {
+      "file": "test_combat_expansion.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 1.47
+    },
+    {
+      "file": "test_community.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 1.02
+    },
+    {
+      "file": "test_demo_expansion.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 0.73
+    },
+    {
+      "file": "test_economy.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 1.38
+    },
+    {
+      "file": "test_economy_flow.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 9.42
+    },
+    {
+      "file": "test_equipment.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 1.84
+    },
+    {
+      "file": "test_equipment_labels_v06.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 0.55
+    },
+    {
+      "file": "test_estate.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 0.91
+    },
+    {
+      "file": "test_estate_screen.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 2.22
+    },
+    {
+      "file": "test_expedition.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 0.81
+    },
+    {
+      "file": "test_focus_resume.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 1.66
+    },
+    {
+      "file": "test_home_v08.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 4.53
+    },
+    {
+      "file": "test_integration_v08.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 0.81
+    },
+    {
+      "file": "test_interrupted_save.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 0.73
+    },
+    {
+      "file": "test_online_mock.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 0.27
+    },
+    {
+      "file": "test_progression_v08.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 0.91
+    },
+    {
+      "file": "test_progression_visual_v08.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 5.73
+    },
+    {
+      "file": "test_roster_guides.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 0.17
+    },
+    {
+      "file": "test_roster_v06.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 28.69
+    },
+    {
+      "file": "test_safe_area_presentation.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 2.48
+    },
+    {
+      "file": "test_single_screen.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 22.59
+    },
+    {
+      "file": "test_storage.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 1.09
+    },
+    {
+      "file": "test_summon_cinematic_v06.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 2.59
+    },
+    {
+      "file": "test_summon_movie_v08.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 3.5
+    },
+    {
+      "file": "test_summon_presentation.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 2.12
+    },
+    {
+      "file": "test_summon_v05.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 1.75
+    },
+    {
+      "file": "test_system_ui_v08.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 29.5
+    },
+    {
+      "file": "test_ui.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 13.05
+    },
+    {
+      "file": "test_ui_failures.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 4.27
+    },
+    {
+      "file": "test_ui_v09.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 10.62
+    },
+    {
+      "file": "test_wallet_recovery_presentation.gd",
+      "passed": true,
+      "code": 0,
+      "seconds": 2.23
+    }
+  ]
+}

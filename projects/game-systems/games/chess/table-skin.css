@@ -1,0 +1,99 @@
+/* One continuous hand, fixed playing areas, and original readable vector faces. */
+html[data-wood-game="chess"] .table-view{background:radial-gradient(ellipse at 50% 25%,#3b4232,#171f1b 80%)}
+html[data-wood-game="chess"] .table-view .felt{background:radial-gradient(ellipse at 50% 25%,#3c7567,#205045 65%,#183e37);border:3px solid #967147;border-radius:34px;box-shadow:0 0 0 3px #2d251b,inset 0 0 0 2px #d7b17142,inset 0 -40px 70px #0a242632,0 4px 12px #080d0b70}
+html[data-wood-game="chess"] .table-view .felt-inner{inset:12px;border:1px solid #d1bc8d25;border-radius:23px;background:radial-gradient(ellipse at center,#ddc99604,transparent 70%)}
+html[data-wood-game="chess"] .table-meta{color:#c9d5c4;background:#1b2e2780}
+html[data-wood-game="chess"] .table-view .card{border:1px solid #dbcdb4;border-radius:6px;background:linear-gradient(145deg,#fffef9 45%,#f3efe3);box-shadow:0 2px 0 #bcb498,0 3px 4px #071d243b;color:#172839;padding:0;overflow:hidden;position:relative;isolation:isolate}
+html[data-wood-game="chess"] .table-view .card.red{color:#b32d36}
+.card-art{position:absolute;inset:18% 18% 15% 28%;pointer-events:none;opacity:.94}.pip-field{position:absolute;inset:0}.face-pip{position:absolute;translate:-50% -50%;width:24%;height:22%}.face-pip svg{width:100%;height:100%;display:block}
+html[data-wood-game="chess"] .table-view .card-rank{position:absolute;top:3px;left:4px;font-size:19px;line-height:1;font-family:Arial,sans-serif;font-weight:800;letter-spacing:-1px;z-index:2}
+html[data-wood-game="chess"] .table-view .card-suit{position:absolute;top:25px;left:4px;width:14px;height:15px;z-index:2}
+.reverse-index{position:absolute;right:4px;bottom:4px;display:flex;flex-direction:column;align-items:center;rotate:180deg;font:bold 10px Arial;line-height:1}.reverse-index svg{width:8px;height:8px;margin-top:2px}
+.court-medallion{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid currentColor;border-radius:45% 45% 30% 30%;background:linear-gradient(135deg,#fffef800,#e6c68250)}.court-medallion svg:first-child{width:60%;height:27%;color:#ba9041}.court-medallion>b{font:bold 27px Georgia,serif}.court-medallion svg:last-child{width:30%;height:23%}
+.joker-art{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:.9}.joker-art svg{width:90%;height:75%}.joker-art small{font:700 6px Arial;letter-spacing:.5px}
+html[data-wood-game="chess"] .table-view .card-rank.joker{writing-mode:vertical-rl;letter-spacing:2px;font-size:11px;line-height:1.1;top:4px;left:3px}
+html[data-wood-game="chess"] .table-view .wild-badge{z-index:4;font-size:9px;background:#9f2452;color:#fff3ca;right:3px;bottom:4px;left:auto;top:auto}
+html[data-wood-game="chess"] .table-view .hand-wrap{left:110px;right:30px;bottom:35px;z-index:5}
+html[data-wood-game="chess"] .table-view .hand-cards{--hand-cardw:70px;--hand-cardh:100px;--hand-step:39px;display:grid;grid-template-columns:repeat(calc(var(--count) - 1),minmax(0,1fr)) var(--hand-cardw);width:min(100%,calc((var(--count) - 1)*var(--hand-step) + var(--hand-cardw)));max-width:100%;padding:0;gap:0;justify-content:initial;align-items:end;margin:0 auto;touch-action:none;overflow:visible}
+html[data-wood-game="chess"] .table-view .hand-cards:has(.card:only-child){grid-template-columns:var(--hand-cardw)}
+html[data-wood-game="chess"] .table-view .hand-cards .card{--cardw:var(--hand-cardw);--cardh:var(--hand-cardh);width:var(--cardw);height:var(--cardh);margin:0;transform:none;translate:0 0;transition:translate .12s,border-color .12s;box-shadow:0 2px 0 #bcb498,0 4px 8px #0a232b55;border-width:1px;z-index:auto}
+html[data-wood-game="chess"] .table-view .hand-cards .card.selected{translate:0 -18px;background:linear-gradient(145deg,#fffef5,#ffe7ad);border:2px solid #efb44a;box-shadow:0 2px 0 #947341,0 7px 10px #0a20294d;z-index:auto}
+html[data-wood-game="chess"] .table-view .hand-caption{left:110px;right:30px;bottom:4px;height:25px;padding:0 3px;color:#c1d0c2}
+html[data-wood-game="chess"] .poker .felt .action-bar{bottom:155px;gap:10px;align-items:center}
+html[data-wood-game="chess"] .poker .felt .selection-message{bottom:211px;left:35%;right:25%;font-size:12px;line-height:20px}
+html[data-wood-game="chess"] .poker .felt .turn-notice{top:16px;bottom:auto;left:50%;right:auto;transform:translateX(-50%);font-size:12px;max-width:25%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;background:#163d3260;border-radius:20px;padding:4px 10px}
+html[data-wood-game="chess"] .poker:has(.seat.top) .felt .turn-notice{left:23%;transform:none}
+html[data-wood-game="chess"] .poker .play-left{left:17%;top:25%;width:21%}
+html[data-wood-game="chess"] .poker .play-right{right:17%;top:25%;width:21%}
+html[data-wood-game="chess"] .poker .play-top{left:40%;top:17%;width:20%}
+html[data-wood-game="chess"] .poker .play-self{left:40%;width:20%;bottom:255px}
+html[data-wood-game="chess"] .table-view .seat.self{left:14px;bottom:22px;flex-direction:column;gap:4px;max-width:76px;text-align:center}
+html[data-wood-game="chess"] .table-view .seat.self .seat-copy>b{max-width:80px}
+html[data-wood-game="chess"] .table-view .seat.self .seat-stats{justify-content:center}
+html[data-wood-game="chess"] .table-view .seat.self .presence{display:none}
+html[data-wood-game="chess"] .table-view .seat img{background:linear-gradient(130deg,#294237,#566753);border:1px solid #d4b374;border-radius:10px}
+html[data-wood-game="chess"] .table-view .zone-cards .card-rank{font-size:13px;left:3px;top:2px}
+html[data-wood-game="chess"] .table-view .zone-cards .card-suit{width:9px;height:10px;left:3px;top:17px}
+.zone-cards .card-art,.bottom-cards .card-art,.result-remaining .card-art{inset:22% 18% 20% 31%;opacity:.7}.zone-cards .reverse-index,.bottom-cards .reverse-index,.result-remaining .reverse-index{display:none}
+html[data-wood-game="chess"] .table-view .bottom-cards{gap:2px}.bottom-cards .card-rank{font-size:9px!important;left:2px!important;top:2px!important}.bottom-cards .card-suit{top:12px!important;width:7px!important;height:7px!important;left:2px!important}.bottom-cards .card-rank.joker{font-size:7px!important;letter-spacing:0!important}
+html[data-wood-game="chess"] .table-view .tile{border-radius:5px;background:linear-gradient(120deg,#fffef5,#f5f2e6);box-shadow:0 4px 0 #17704e,0 5px 2px #0e382d90;border-color:#c8c7b3;color:#1b3856}
+.tile-pattern{position:absolute;inset:4%;width:92%;height:92%;pointer-events:none}.tile-glyph{position:absolute;inset:6% 9%;display:flex;flex-direction:column;align-items:center;justify-content:center}.tile-glyph>b{font:800 22px 'KaiTi','Microsoft YaHei',serif;line-height:1.2;color:#253650}.tile-glyph>strong{font:800 24px 'KaiTi','Microsoft YaHei',serif;color:#ac2634;line-height:1.1}.honor-glyph{position:absolute;inset:0;display:grid;place-items:center;font:800 28px 'KaiTi','Microsoft YaHei',serif;color:#243b57}.honor-glyph.red-honor{color:#b62536}.honor-glyph.green-honor{color:#197c4e}.white-dragon{position:absolute;inset:17% 18%;border:2px double #304c89;border-radius:2px;box-shadow:inset 0 0 0 2px #fff}
+html[data-wood-game="chess"] .mahjong .hand-cards{--hand-cardw:47px;--hand-cardh:68px;--hand-step:50px}
+html[data-wood-game="chess"] .mahjong .hand-cards:has(.drawn){grid-template-columns:repeat(calc(var(--count) - 1),minmax(0,1fr)) calc(var(--hand-cardw) + 7px)}
+html[data-wood-game="chess"] .mahjong .hand-cards .drawn{margin-left:7px;border:2px solid #e8b64b;box-shadow:0 4px 0 #9a791f,0 4px 10px #ecc65925}
+.river .tile-glyph>b,.meld-group .tile-glyph>b{font-size:8px}.river .tile-glyph>strong,.meld-group .tile-glyph>strong{font-size:9px}.river .honor-glyph,.meld-group .honor-glyph{font-size:12px}
+@media(max-height:620px) and (orientation:landscape){
+ html[data-wood-game="chess"] .table-view .felt{border-radius:26px;margin:0 9px 7px;border-width:2px}.table-view .felt-inner{border-radius:19px}
+ html[data-wood-game="chess"] .table-view .hand-wrap{left:96px;right:24px;bottom:33px}
+ html[data-wood-game="chess"] .table-view .hand-cards{--hand-cardw:59px;--hand-cardh:86px;--hand-step:31px}
+ html[data-wood-game="chess"] .table-view .hand-cards .card-rank{font-size:19px;left:3px;top:3px}
+ html[data-wood-game="chess"] .table-view .hand-cards .card-suit{top:25px;left:3px;width:13px;height:14px}
+ html[data-wood-game="chess"] .table-view .long-hand .hand-cards .card-rank{font-size:14px;letter-spacing:-.6px;left:2px}
+ html[data-wood-game="chess"] .table-view .long-hand .hand-cards .card-suit{width:10px;height:11px;left:2px;top:20px}
+ html[data-wood-game="chess"] .table-view .hand-cards .card-rank.joker{font-size:10px;letter-spacing:2px;left:2px}
+ html[data-wood-game="chess"] .table-view .hand-cards .selected{translate:0 -15px}
+ html[data-wood-game="chess"] .table-view .hand-caption{left:96px;right:24px}
+ html[data-wood-game="chess"] .table-view .seat.self{left:9px;bottom:22px;max-width:73px}.seat.self .portrait{width:47px;height:47px}
+ html[data-wood-game="chess"] .poker .felt .action-bar{bottom:127px;gap:8px}
+ html[data-wood-game="chess"] .poker .felt .selection-message{bottom:172px;left:36%;right:25%;font-size:10px;line-height:18px}
+ html[data-wood-game="chess"] .poker .felt .turn-notice{top:8px;font-size:10px;padding:3px 8px}
+ html[data-wood-game="chess"] .poker .play-left{left:17%;top:55px;width:20%}
+ html[data-wood-game="chess"] .poker .play-right{right:17%;top:55px;width:20%}
+ html[data-wood-game="chess"] .poker .play-top{left:40%;top:54px;width:20%}
+ html[data-wood-game="chess"] .poker .play-self{left:9px;top:auto;bottom:133px;width:80px}
+ html[data-wood-game="chess"] .table-view .zone-cards{--zonew:32px;--zoneh:45px;width:calc(var(--played-count)*17px + 15px);padding-right:15px}
+ html[data-wood-game="chess"] .table-view .zone-cards .card-rank{font-size:12px;top:2px;left:2px}
+ html[data-wood-game="chess"] .table-view .zone-cards .card-suit{width:9px;height:10px;top:17px;left:2px}
+ html[data-wood-game="chess"] .mahjong .hand-cards{--hand-cardw:40px;--hand-cardh:59px;--hand-step:44px}.tile-glyph>b{font-size:20px}.tile-glyph>strong{font-size:21px}.honor-glyph{font-size:26px}
+ html[data-wood-game="chess"] .mahjong .felt .action-bar{bottom:117px}.mahjong .felt .selection-message{bottom:160px}.mahjong .meld-display{left:100px;bottom:100px}
+}
+@media(max-width:650px) and (orientation:landscape){
+ html[data-wood-game="chess"] .table-view .hand-wrap{left:79px;right:15px;bottom:29px}
+ html[data-wood-game="chess"] .table-view .hand-cards{--hand-cardw:45px;--hand-cardh:65px;--hand-step:22px}
+ html[data-wood-game="chess"] .table-view .hand-cards .card-rank{font-size:16px;left:2px}
+ html[data-wood-game="chess"] .table-view .hand-cards .card-suit{width:11px;height:12px;left:2px;top:22px}
+ html[data-wood-game="chess"] .table-view .long-hand .hand-cards .card-rank{font-size:10px;letter-spacing:-.8px;left:1px}
+ html[data-wood-game="chess"] .table-view .long-hand .hand-cards .card-suit{width:8px;height:9px;left:1px;top:16px}
+ html[data-wood-game="chess"] .table-view .hand-cards .card-rank.joker{font-size:9px;letter-spacing:1px;left:1px}
+ html[data-wood-game="chess"] .table-view .hand-cards .selected{translate:0 -12px}.card-art{opacity:.82}.court-medallion>b{font-size:21px}
+ html[data-wood-game="chess"] .table-view .hand-caption{left:79px;right:15px;height:23px;bottom:2px;font-size:8px}.hand-tools .text-btn{font-size:9px!important}
+ html[data-wood-game="chess"] .table-view .seat.self{left:4px;bottom:21px;max-width:65px}.seat.self .portrait{width:35px;height:35px}.seat.self .seat-copy>b{font-size:8px}.seat.self .role{font-size:7px}
+ html[data-wood-game="chess"] .poker .felt .action-bar{bottom:101px;gap:5px}
+ html[data-wood-game="chess"] .poker .felt .selection-message{bottom:140px;left:36%;right:25%;font-size:9px;line-height:16px}
+ html[data-wood-game="chess"] .poker .felt .turn-notice{font-size:8px;top:6px;max-width:24%}
+ html[data-wood-game="chess"] .poker .play-left{left:17%;top:45px;width:21%}
+ html[data-wood-game="chess"] .poker .play-right{right:17%;top:45px;width:21%}
+ html[data-wood-game="chess"] .poker .play-top{left:41%;top:42px;width:18%}
+ html[data-wood-game="chess"] .poker .play-self{left:5px;bottom:109px;width:66px}
+ html[data-wood-game="chess"] .table-view .zone-cards{--zonew:25px;--zoneh:27px;padding-right:10px;width:calc(var(--played-count)*12px + 13px)}
+ html[data-wood-game="chess"] .table-view .zone-cards .card-rank{font-size:9px;left:1px;top:2px}
+ html[data-wood-game="chess"] .table-view .zone-cards .card-suit{width:7px;height:8px;left:1px;top:13px}.play-type{font-size:7px}
+ html[data-wood-game="chess"] .mahjong .hand-cards{--hand-cardw:29px;--hand-cardh:46px;--hand-step:32px}.tile-glyph>b{font-size:15px}.tile-glyph>strong{font-size:17px}.honor-glyph{font-size:21px}.mahjong .meld-display{left:83px;bottom:86px}
+}
+html[data-wood-game="chess"] #dialog [hidden]{display:none!important}
+html[data-wood-game="chess"] .hand-tools .auto-active{color:#ffd280!important;font-weight:800}
+.court-medallion>b{font-size:calc(var(--cardw)*.38)}
+.hand-peek{position:fixed;pointer-events:none;z-index:36;opacity:0;translate:0 6px;transition:opacity .08s,translate .08s;filter:drop-shadow(0 5px 8px #081f2770)}.hand-peek.show{opacity:1;translate:0 0}
+html[data-wood-game="chess"] .table-view .hand-peek .card{--cardw:70px;--cardh:98px;width:70px;height:98px;border:2px solid #d7b05c;border-radius:7px;display:block}
+html[data-wood-game="chess"] .table-view .hand-peek .card-rank{font-size:22px!important;left:4px!important;top:4px!important}.hand-peek .tile-glyph>b{font-size:27px}.hand-peek .tile-glyph>strong{font-size:29px}.hand-peek .honor-glyph{font-size:38px}
+

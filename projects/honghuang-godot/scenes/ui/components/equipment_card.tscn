@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Theme" path="res://assets/ui-foundation/foundation.tres" id="theme"]
+[ext_resource type="Script" path="res://scripts/ui/equipment_card.gd" id="script"]
+
+[ext_resource type="Texture2D" path="res://assets/ui-foundation/background.png" id="bg"]
+
+[node name="EquipmentCard" type="PanelContainer"]
+theme = ExtResource("theme")
+metadata/ui_foundation = true
+script = ExtResource("script")
+theme_type_variation = &"EquipmentOld"
+custom_minimum_size = Vector2(0,300)
+mouse_filter = 0
+
+
+[node name="Landscape" type="TextureRect" parent="."]
+texture = ExtResource("bg")
+expand_mode = 1
+stretch_mode = 6
+modulate = Color(0.7,0.9,0.83,0.16)
+mouse_filter = 2
+[node name="Content" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+
+[node name="Heading" type="Label" parent="Content"]
+horizontal_alignment = 1
+text = "当前装备"
+theme_override_font_sizes/font_size = 28
+mouse_filter = 2
+
+
+[node name="Icon" type="TextureRect" parent="Content"]
+custom_minimum_size = Vector2(0,160)
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+
+[node name="Name" type="Label" parent="Content"]
+horizontal_alignment = 1
+text_overrun_behavior = 3
+text = "尚未装备"
+theme_override_font_sizes/font_size = 29
+mouse_filter = 2
+
+
+[node name="Stat" type="Label" parent="Content"]
+horizontal_alignment = 1
+text_overrun_behavior = 3
+text = "炼器后查看属性"
+theme_override_font_sizes/font_size = 28
+mouse_filter = 2
+
+
+[node name="Quantity" type="Label" parent="Content"]
+horizontal_alignment = 1
+text = ""
+theme_override_font_sizes/font_size = 20
+mouse_filter = 2
+
+
+[node name="Details" type="Label" parent="Content"]
+autowrap_mode = 3
+text = ""
+theme_override_font_sizes/font_size = 26
+mouse_filter = 2
+

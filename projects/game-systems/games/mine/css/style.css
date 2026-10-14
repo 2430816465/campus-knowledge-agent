@@ -1,0 +1,47 @@
+/* 再挖一层 · 地下矿坑 V0.1 —— 页面外壳样式
+ * 画布内部的一切（地图 / 按钮 / 面板）全部由 Canvas 绘制，
+ * CSS 只负责页面背景与画布自适应（和《再上一层》一样：纯前端、零依赖、零构建）。
+ */
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #0a0c12;
+  overflow: hidden;
+}
+
+.app {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+#board {
+  display: block;
+  flex: 0 0 auto;
+  min-width: 0;
+  min-height: 0;
+  max-width: 100%;
+  max-height: 100%;
+  background: #0d1019;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  image-rendering: auto;
+}
+
+/* The portrait canvas retains its hit mapping; side space shows the same mine. */
+@media(orientation:landscape){
+ html[data-game-ui="mine"] body>.app{
+  background:linear-gradient(90deg,#101b1ae6,#15201ed9 38%,#15201ed9 62%,#101b1ae6),url('../assets/mining/scenes/mine-entrance-v1.png') center/cover no-repeat;
+ }
+ html[data-game-ui="mine"] body>.app>#board{box-shadow:0 0 0 1px #8b9b854d,0 0 40px #071511b3}
+}

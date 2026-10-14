@@ -1,0 +1,73 @@
+<level>
+  <width>960</width>
+  <height>640</height>
+  <solids>
+    <rect x="0" y="0" w="960" h="10"/>
+    <rect x="0" y="10" w="10" h="630"/>
+    <rect x="10" y="560" w="950" h="80"/>
+    <rect x="150" y="10" w="250" h="110"/>
+    <rect x="150" y="220" w="250" h="100"/>
+    <rect x="150" y="440" w="120" h="120"/>
+    <rect x="560" y="10" w="250" h="110"/>
+    <rect x="560" y="220" w="250" h="100"/>
+    <rect x="690" y="440" w="120" h="120"/>
+    <rect x="950" y="10" w="10" h="550"/>
+  </solids>
+  <extraPlatforms>
+    <spike0 x="400" y="550" width="150" height="10"/>
+    <level1_specialBlock x="460" y="220" speed="40" movementType="1" animated="0"/>
+    <LargeCrate x="310" y="160"/>
+    <level1_specialBlock x="330" y="120" speed="40" movementType="1" animated="0"/>
+    <LargeCrate x="610" y="160"/>
+    <level1_specialBlock x="630" y="120" speed="40" movementType="1" animated="0"/>
+    <spike1 x="810" y="220" width="10" height="100"/>
+    <spike3 x="940" y="220" width="10" height="100"/>
+    <spike3 x="550" y="220" width="10" height="100"/>
+    <spike1 x="400" y="220" width="10" height="100"/>
+    <helpBox x="790" y="500" type="0" helpString="When touching each other, press '_Piggy' to piggyback."/>
+    <helpBox x="200" y="160" type="0" helpString="You can still bust crates while piggybacking. Just press '_Action'."/>
+    <helpBox x="150" y="380" type="0" helpString="Talk to Andre by pressing '_Action' while facing him."/>
+  </extraPlatforms>
+  <movingPlatforms>
+    <level1_specialPlatform x="10" y="220" speed="70" movementType="5" animated="0">
+      <node x="10" y="430"/>
+    </level1_specialPlatform>
+    <level1_specialPlatformSmall x="360" y="480" speed="70" movementType="5" animated="1">
+      <node x="550" y="480"/>
+    </level1_specialPlatformSmall>
+  </movingPlatforms>
+  <BGLayer1>
+    <level1_windows x="10" y="140" width="480" height="54" scrollFactor="0.1"/>
+    <level1_shelfTile x="0" y="0" width="480" height="570" scrollFactor="0.2"/>
+    <level1_shelfTile x="500" y="120" width="240" height="480" scrollFactor="0.4"/>
+    <level1_shelfTile x="770" y="330" width="160" height="240" scrollFactor="0.3"/>
+  </BGLayer1>
+  <BGLayer2>
+    <cratesBox x="270" y="380" scrollFactor="0.6"/>
+    <sugarBagsAndCrates x="560" y="430" scrollFactor="0.6"/>
+  </BGLayer2>
+  <BGLayer3>
+    <palettes x="80" y="520" scrollFactor="0.2"/>
+    <sugarBags x="210" y="180" scrollFactor="0.2"/>
+  </BGLayer3>
+  <objects>
+    <L1_SmallCrate x="769" y="417" width="32"/>
+    <exit x="744" y="130" nextLevel="2"/>
+    <Bottle x="906" y="217" width="12"/>
+    <L1_SmallCrate x="230" y="417" width="32"/>
+    <andreCheckPoint x="150" y="165" player="1"/>
+    <liselotCheckPoint x="179" y="165" player="1"/>
+    <smallSugarBag x="470" y="186" width="22"/>
+  </objects>
+  <characters>
+    <liselot x="20" y="510" speed="40" movementType="1" talkString="Just say yes.">
+      <node x="70" y="510"/>
+    </liselot>
+    <worker x="550" y="520" speed="40" movementType="1" talkString="7 to 4, 9 to 5, 10 to 6, the hours long, and the work hard on the body.">
+      <node x="660" y="520"/>
+    </worker>
+    <player x="910" y="510" speed="40" movementType="1" startsFirst="1" levelName="new level" andreInitialFlip="0" liselotInitialFlip="0" followWidth="0" followHeight="0" talkString="We run a tight ship. I learned that from my time in the Customs Office. Without solid rules, everything runs foul. My workers respect this. They follow my rules.">
+      <node x="930" y="510"/>
+    </player>
+  </characters>
+</level>

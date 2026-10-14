@@ -1,0 +1,20 @@
+config_version=5
+[application]
+config/name="洪荒众仙府 · V0.5"
+config/version="0.10.0"
+config/icon="res://assets/ui/estate.svg"
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+[display]
+window/size/viewport_width=540
+window/size/viewport_height=960
+window/size/window_width_override=540
+window/size/window_height_override=960
+window/stretch/mode="canvas_items"
+[testing]
+free_currency=true
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+environment/defaults/default_clear_color=Color(0.933, 0.878, 0.737, 1)

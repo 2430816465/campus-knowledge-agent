@@ -1,0 +1,77 @@
+{
+  "method": "built-in image_gen; transparent original PNG, alpha trim and nearest-neighbor reduction",
+  "entries": [
+    {
+      "name": "mill",
+      "prompt": "Use case: stylized-concept. Asset type: single transparent game sprite for a friendly demon bakery. Subject: A small wheat grinding mill machine: simple wooden box with round gray millstone, gold wheat hopper on top, flour sack at outlet. No house or windmill building. Style: strict low resolution pixel art, chunky square pixels, dark brown 2 pixel outline, warm golden wood, red accents. Front view with slightly visible top, matching cozy 16-bit farming game sprites. Entire object centered with padding, clear recognizable silhouette. Actual transparent background, no shadow outside sprite, no UI, no text, no labels, no frame, no environment, no icon badge. Keep details sparse and readable at 96 pixels wide.",
+      "source": "C:\\Users\\24308\\.codex\\generated_images\\01a0f399-32d3-74c0-bf70-9ec7d68a7a20\\exec-503dc17e-a2f6-43a1-b189-fb2e27350942.png",
+      "copiedSource": "games/workshop/assets/bakery-mill-source.png",
+      "projectAsset": "games/workshop/assets/bakery-mill.webp",
+      "width": 82,
+      "height": 128
+    },
+    {
+      "name": "jam",
+      "prompt": "Use case: stylized-concept. Asset type: single transparent game sprite for a friendly demon bakery. Subject: A berry jam cooking station: rounded copper pot with bright red jam on a short brick stove, spoon and two berries. Style: strict low resolution pixel art, chunky square pixels, dark brown 2 pixel outline, warm golden wood, red accents. Front view with slightly visible top, matching cozy 16-bit farming game sprites. Entire object centered with padding, clear recognizable silhouette. Actual transparent background, no shadow outside sprite, no UI, no text, no labels, no frame, no environment, no icon badge. Keep details sparse and readable at 96 pixels wide.",
+      "source": "C:\\Users\\24308\\.codex\\generated_images\\01a0f399-32d3-74c0-bf70-9ec7d68a7a20\\exec-28aaae5f-226e-43fc-9aeb-769e6c8fff25.png",
+      "copiedSource": "games/workshop/assets/bakery-jam-source.png",
+      "projectAsset": "games/workshop/assets/bakery-jam.webp",
+      "width": 112,
+      "height": 97
+    },
+    {
+      "name": "rack",
+      "prompt": "Use case: stylized-concept. Asset type: single transparent game sprite for a friendly demon bakery. Subject: A wooden bread display shelf with three large clearly visible golden bread loaves, two open shelves. Style: strict low resolution pixel art, chunky square pixels, dark brown 2 pixel outline, warm golden wood, red accents. Front view with slightly visible top, matching cozy 16-bit farming game sprites. Entire object centered with padding, clear recognizable silhouette. Actual transparent background, no shadow outside sprite, no UI, no text, no labels, no frame, no environment, no icon badge. Keep details sparse and readable at 96 pixels wide.",
+      "source": "C:\\Users\\24308\\.codex\\generated_images\\01a0f399-32d3-74c0-bf70-9ec7d68a7a20\\exec-e3da1cf0-aaa3-4870-945b-3bbfe9776aed.png",
+      "copiedSource": "games/workshop/assets/bakery-rack-source.png",
+      "projectAsset": "games/workshop/assets/bakery-rack.webp",
+      "width": 112,
+      "height": 121
+    },
+    {
+      "name": "table",
+      "prompt": "Use case: stylized-concept. Asset type: single transparent game sprite for a friendly demon bakery. Subject: A rustic long dining table with two benches, two empty wooden plates. No people. Style: strict low resolution pixel art, chunky square pixels, dark brown 2 pixel outline, warm golden wood, red accents. Front view with slightly visible top, matching cozy 16-bit farming game sprites. Entire object centered with padding, clear recognizable silhouette. Actual transparent background, no shadow outside sprite, no UI, no text, no labels, no frame, no environment, no icon badge. Keep details sparse and readable at 96 pixels wide.",
+      "source": "C:\\Users\\24308\\.codex\\generated_images\\01a0f399-32d3-74c0-bf70-9ec7d68a7a20\\exec-aa9bce65-d44b-4798-a762-c7d93cdeb202.png",
+      "copiedSource": "games/workshop/assets/bakery-table-source.png",
+      "projectAsset": "games/workshop/assets/bakery-table.webp",
+      "width": 144,
+      "height": 85
+    },
+    {
+      "name": "pack",
+      "prompt": "Use case: stylized-concept. Asset type: single transparent game sprite for a friendly demon bakery. Subject: A wooden bread packing workbench with a woven basket, plain cream wrapping paper and red tie. Style: strict low resolution pixel art, chunky square pixels, dark brown 2 pixel outline, warm golden wood, red accents. Front view with slightly visible top, matching cozy 16-bit farming game sprites. Entire object centered with padding, clear recognizable silhouette. Actual transparent background, no shadow outside sprite, no UI, no text, no labels, no frame, no environment, no icon badge. Keep details sparse and readable at 96 pixels wide.",
+      "source": "C:\\Users\\24308\\.codex\\generated_images\\01a0f399-32d3-74c0-bf70-9ec7d68a7a20\\exec-e26feaa0-4b9a-4c6d-adba-a55fd035429f.png",
+      "copiedSource": "games/workshop/assets/bakery-pack-source.png",
+      "projectAsset": "games/workshop/assets/bakery-pack.webp",
+      "width": 112,
+      "height": 93
+    },
+    {
+      "name": "wagon",
+      "prompt": "Use case: stylized-concept. Asset type: single transparent game sprite for a friendly demon bakery. Subject: A small wooden fantasy delivery wagon parking station: single compact cart with two wheels, bread baskets and short cream canopy. No horse, no scenery. Style: strict low resolution pixel art, chunky square pixels, dark brown 2 pixel outline, warm golden wood, red accents. Front view with slightly visible top, matching cozy 16-bit farming game sprites. Entire object centered with padding, clear recognizable silhouette. Actual transparent background, no shadow outside sprite, no UI, no text, no labels, no frame, no environment, no icon badge. Keep details sparse and readable at 96 pixels wide.",
+      "source": "C:\\Users\\24308\\.codex\\generated_images\\01a0f399-32d3-74c0-bf70-9ec7d68a7a20\\exec-f41ecc31-81f7-4a36-a961-966fd4a59143.png",
+      "copiedSource": "games/workshop/assets/bakery-wagon-source.png",
+      "projectAsset": "games/workshop/assets/bakery-wagon.webp",
+      "width": 142,
+      "height": 128
+    },
+    {
+      "name": "jam-bread",
+      "prompt": "Use case: stylized-concept. Asset type: single transparent game sprite for a friendly demon bakery. Subject: One large golden bread bun split open showing bright red berry jam. Single edible dropped item. Style: strict low resolution pixel art, chunky square pixels, dark brown 2 pixel outline, warm golden wood, red accents. Front view with slightly visible top, matching cozy 16-bit farming game sprites. Entire object centered with padding, clear recognizable silhouette. Actual transparent background, no shadow outside sprite, no UI, no text, no labels, no frame, no environment, no icon badge. Keep details sparse and readable at 96 pixels wide.",
+      "source": "C:\\Users\\24308\\.codex\\generated_images\\01a0f399-32d3-74c0-bf70-9ec7d68a7a20\\exec-d98a0e9a-bc92-41db-b774-e2947ee18b86.png",
+      "copiedSource": "games/workshop/assets/bakery-jam-bread-source.png",
+      "projectAsset": "games/workshop/assets/bakery-jam-bread.webp",
+      "width": 112,
+      "height": 105
+    },
+    {
+      "name": "parcel",
+      "prompt": "Use case: stylized-concept. Asset type: single transparent game sprite for a friendly demon bakery. Subject: One woven bread delivery basket containing three visible golden loaves, with a red cloth napkin. Single physical carried object. Style: strict low resolution pixel art, chunky square pixels, dark brown 2 pixel outline, warm golden wood, red accents. Front view with slightly visible top, matching cozy 16-bit farming game sprites. Entire object centered with padding, clear recognizable silhouette. Actual transparent background, no shadow outside sprite, no UI, no text, no labels, no frame, no environment, no icon badge. Keep details sparse and readable at 96 pixels wide.",
+      "source": "C:\\Users\\24308\\.codex\\generated_images\\01a0f399-32d3-74c0-bf70-9ec7d68a7a20\\exec-0cbd0c0c-5885-4daa-b837-7c2d9bd693bc.png",
+      "copiedSource": "games/workshop/assets/bakery-parcel-source.png",
+      "projectAsset": "games/workshop/assets/bakery-parcel.webp",
+      "width": 112,
+      "height": 114
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+<level>
+  <width>1400</width>
+  <height>640</height>
+  <solids>
+    <rect x="0" y="0" w="20" h="640"/>
+    <rect x="20" y="520" w="1380" h="120"/>
+    <rect x="260" y="440" w="260" h="80"/>
+    <rect x="740" y="400" w="280" h="120"/>
+    <rect x="1090" y="450" w="70" h="70"/>
+    <rect x="1390" y="0" w="10" h="520"/>
+  </solids>
+  <extraPlatforms>
+    <level1_specialBlock x="220" y="480" speed="40" movementType="1" animated="0"/>
+    <level1_specialBlock x="520" y="480" speed="40" movementType="1" animated="0"/>
+    <spike0 x="1020" y="510" width="70" height="10"/>
+    <helpBox x="740" y="340" type="0" helpString="Push this crate off the ledge to the left."/>
+    <helpBox x="620" y="460" type="0" helpString="If a ledge is too high, switch to Liselot by pressing A."/>
+    <helpBox x="1040" y="390" type="0" helpString="Sugar bags will replenish lost lives."/>
+    <helpBox x="900" y="340" type="0" helpString="Collecting the bottle will earn you a bottle cap badge for this level."/>
+  </extraPlatforms>
+  <BGLayer1>
+    <level1_windows x="0" y="290" width="480" height="54" scrollFactor="0.1"/>
+    <level1_windows x="300" y="200" width="540" height="54" scrollFactor="0.1"/>
+    <level1_shelfTile x="260" y="0" width="560" height="520" scrollFactor="0.2"/>
+    <L1_Shelf x="20" y="200" scrollFactor="0.2"/>
+  </BGLayer1>
+  <BGLayer2>
+    <cratesBox x="0" y="340" scrollFactor="0.5"/>
+    <sugarBagsAndCrates x="380" y="390" scrollFactor="0.7"/>
+    <sugarBagsAndCrates x="720" y="390" scrollFactor="0.6"/>
+    <sugarBagsAndCrates x="1100" y="390" scrollFactor="0.7"/>
+  </BGLayer2>
+  <BGLayer3>
+    <sodaPack x="330" y="420" scrollFactor="0.2"/>
+    <palettes x="880" y="360" scrollFactor="0.2"/>
+  </BGLayer3>
+  <objects>
+    <exit x="1320" y="431" nextLevel="2"/>
+    <L1_SmallCrate x="763" y="373" width="32"/>
+    <smallSugarBag x="1250" y="366" width="22"/>
+    <Bottle x="1058" y="294" width="12"/>
+  </objects>
+  <characters>
+    <player x="50" y="470" speed="40" movementType="1" startsFirst="1" levelName="new level" andreInitialFlip="0" liselotInitialFlip="0" followWidth="0" followHeight="0" talkString="Liselot, my sweet emerald. I give you  my heart, my word and my life. I will work for our family so that they can have a good life.">
+      <node x="110" y="470"/>
+    </player>
+    <army x="260" y="390" speed="40" movementType="1" talkString="You've got to remember, we are here as peace keepers. The guerrillas are the enemy.">
+      <node x="490" y="390"/>
+    </army>
+    <liselot x="580" y="470" speed="40" movementType="1" talkString="Just say yes.">
+      <node x="630" y="470"/>
+    </liselot>
+    <worker x="1170" y="480" speed="40" movementType="1" talkString="The government is blaming The Super Lemonade Factory for all the broken glass on the road. Can't anyone take some responsibility for themselves.">
+      <node x="1290" y="480"/>
+    </worker>
+  </characters>
+</level>

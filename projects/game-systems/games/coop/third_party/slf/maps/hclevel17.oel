@@ -1,0 +1,207 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    1000
+  </width>
+  
+  
+  <height>
+    480
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="10" w="1000" x="0" y="0"/>
+    
+    
+    <rect h="470" w="10" x="0" y="10"/>
+    
+    
+    <rect h="80" w="990" x="10" y="400"/>
+    
+    
+    <rect h="20" w="290" x="50" y="140"/>
+    
+    
+    <rect h="70" w="60" x="60" y="10"/>
+    
+    
+    <rect h="20" w="40" x="60" y="320"/>
+    
+    
+    <rect h="20" w="60" x="190" y="270"/>
+    
+    
+    <rect h="130" w="20" x="320" y="10"/>
+    
+    
+    <rect h="150" w="30" x="370" y="210"/>
+    
+    
+    <rect h="20" w="120" x="470" y="280"/>
+    
+    
+    <rect h="20" w="20" x="510" y="260"/>
+    
+    
+    <rect h="30" w="20" x="550" y="370"/>
+    
+    
+    <rect h="20" w="20" x="650" y="220"/>
+    
+    
+    <rect h="150" w="30" x="730" y="210"/>
+    
+    
+    <rect h="230" w="30" x="800" y="10"/>
+    
+    
+    <rect h="20" w="20" x="860" y="280"/>
+    
+    
+    <rect h="30" w="80" x="920" y="200"/>
+    
+    
+    <rect h="190" w="10" x="990" y="10"/>
+    
+    
+    <rect h="170" w="10" x="990" y="230"/>
+    
+  
+  </solids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <level2_spike0 height="10" width="20" x="550" y="360"/>
+    
+    
+    <LargeCrate x="50" y="80"/>
+    
+    
+    <level2_specialBlock animated="0" movementType="1" speed="40" x="330" y="270"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <movingPlatforms>
+    
+    
+    <level2_specialBlock animated="0" movementType="5" speed="120" x="10" y="160">
+      
+      
+      <node x="10" y="330"/>
+      
+    
+    </level2_specialBlock>
+    
+  
+  </movingPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level2_MG2 scrollFactor="0.1" x="0" y="140"/>
+    
+    
+    <level2_pipe1 height="70" scrollFactor="0.1" width="690" x="10" y="240"/>
+    
+    
+    <level2_greenPipe height="480" scrollFactor="0.2" width="20" x="140" y="0"/>
+    
+    
+    <level2_greenPipe height="480" scrollFactor="0.4" width="20" x="370" y="0"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer2>
+    
+    
+    <level2_metalPipe height="480" scrollFactor="0.6" width="30" x="200" y="0"/>
+    
+    
+    <level2_tank scrollFactor="0.8" x="250" y="0"/>
+    
+    
+    <level2_FMG3 scrollFactor="0.7" x="50" y="90"/>
+    
+    
+    <level2_greenPipe height="480" scrollFactor="0.7" width="20" x="510" y="0"/>
+    
+    
+    <level2_tank scrollFactor="0.7" x="470" y="180"/>
+    
+  
+  </BGLayer2>
+  
+  
+  <objects>
+    
+    
+    <exit nextLevel="2" x="939" y="110"/>
+    
+    
+    <L1_SmallCrate width="32" x="215" y="246"/>
+    
+    
+    <L1_SmallCrate width="32" x="541" y="251"/>
+    
+    
+    <Bottle width="12" x="151" y="68"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <player andreInitialFlip="1" followHeight="0" followWidth="0" levelName="Summer in December" liselotInitialFlip="0" movementType="1" speed="40" startsFirst="0" talkString="When night fell and Pa still had not returned home, my mother became extremely concerned as this was out of character for him." x="460" y="350">
+      
+      
+      <node x="480" y="350"/>
+      
+    
+    </player>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="60" y="350">
+      
+      
+      <node x="90" y="350"/>
+      
+    
+    </liselot>
+    
+    
+    <worker movementType="1" speed="40" talkString="The working underclass is a prison cell." x="130" y="100">
+      
+      
+      <node x="280" y="100"/>
+      
+    
+    </worker>
+    
+  
+  </characters>
+  
+  
+  <FGLayer1>
+    
+    
+    <level2_chainTile height="477" scrollFactor="2" width="12" x="241" y="3"/>
+    
+  
+  </FGLayer1>
+  
+
+</level>

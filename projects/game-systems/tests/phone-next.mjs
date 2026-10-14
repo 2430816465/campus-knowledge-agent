@@ -1,0 +1,124 @@
+import {chromium} from 'file:///C:/Users/24308/.codex/skills/develop-web-game/node_modules/playwright/index.mjs';
+import {spawn} from 'node:child_process';
+import {createInterface} from 'node:readline';
+import {createServer} from 'node:http';
+import {readFile} from 'node:fs/promises';
+import {resolve,extname} from 'node:path';
+import {networkInterfaces} from 'node:os';
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+const {controller}=createRequire(import.meta.url)('./coop-integration.cjs');
+const ip=Object.values(networkInterfaces()).flat().find(a=>a.family==='IPv4'&&!a.internal&&a.address.startsWith('192.168.'))?.address;
+assert(ip,'LAN IPv4 needed for transport test');
+const root=resolve('.');
+const http=createServer(async(req,res)=>{try{const path=resolve(root,'.'+decodeURIComponent(new URL(req.url,'http://local').pathname));if(!path.startsWith(root))throw Error();const body=await readFile(path.endsWith('coop')?path+'/index.html':path);res.setHeader('Content-Type',({'.js':'text/javascript','.html':'text/html','.css':'text/css','.json':'application/json','.svg':'image/svg+xml'})[extname(path)]||'application/octet-stream');res.end(body);}catch{res.statusCode=404;res.end();}});
+await new Promise(r=>http.listen(38473,'127.0.0.1',r));
+const java=spawn('C:/Users/24308/AppData/Local/CodexAndroidBuild/jdk17/jdk-17.0.20.1+1/bin/java.exe',['-Dfile.encoding=UTF-8','-cp','artifacts/native-test','LanHarness',ip]);
+const lines=createInterface({input:java.stdout});let host;const pending=[];let delay=0;
+lines.on('line',line=>{const [kind,id,...rest]=line.split('\t');if(kind==='ready')return;const e={kind,id,host:rest[0]==='true',text:rest.join('\t')};if(!host)pending.push(e);else setTimeout(()=>host.evaluate(e=>window.nativeEvents.push(e),e).catch(()=>{}),delay);});
+java.stderr.on('data',x=>console.error(String(x)));
+const browser=await chromium.launch({headless:true});const guestBrowser=await chromium.launch({headless:true});let errors=[];
+try{
+ const context=await browser.newContext({viewport:{width:980,height:680},hasTouch:true,userAgent:'Mozilla/5.0 AdventureCampAndroid/1.7'});
+ host=await context.newPage();host.on('pageerror',e=>errors.push(e.message));
+ await host.exposeFunction('nativeSend',(id,text)=>java.stdin.write(id+'\t'+text+'\n'));
+ await host.addInitScript(({ip})=>{
+  window.nativeEvents=[];window.nativeActive=false;
+  const Original=WebSocket;window.WebSocket=class extends Original{constructor(...args){super(...args);if(args[0].includes('v=1'))window.testSocket=this;}};
+  window.orientationCalls=[];window.CampOrientation={setLandscape(value){orientationCalls.push(value);}};
+  window.CampLan={start(){nativeActive=true;return JSON.stringify({address:ip,url:'ws://'+ip+':38474/ws?v=1&host=test-host'});},stop(){nativeActive=false;},active(){return nativeActive;},poll(){return JSON.stringify(nativeEvents.splice(0,128));},send(id,text){nativeSend(id,text);}};
+ },{ip});
+ await host.goto('http://127.0.0.1:38473/games/coop/index.html');
+ await host.evaluate(()=>CampCoop.enter({choice:0}));
+ await host.setViewportSize({width:390,height:760});await host.screenshot({path:'artifacts/phone-lan-setup.png'});await host.setViewportSize({width:980,height:680});
+ await host.locator('[data-host]').click();
+ await host.waitForFunction(()=>CampCoop.snapshot()?.code);
+ const snap=await host.evaluate(()=>CampCoop.snapshot());
+ const guestContext=await guestBrowser.newContext({viewport:{width:980,height:680},hasTouch:true,userAgent:'Mozilla/5.0 AdventureCampAndroid/1.7'});
+ const guest=await guestContext.newPage();guest.on('pageerror',e=>errors.push(e.message));
+ await guest.addInitScript(()=>{window.CampLan={stop(){},active(){return false;}};const Original=WebSocket;window.WebSocket=class extends Original{constructor(...args){super(...args);if(args[0].includes('v=1'))window.testSocket=this;}};});
+ await guest.goto('http://127.0.0.1:38473/games/coop/index.html');
+ await guest.evaluate(code=>CampCoop.enter({roomCode:code}),snap.code);
+ await guest.locator('[name=address]').fill('8.8.8.8');
+ await guest.locator('#phoneLanSetup button[type=submit]').click();
+ assert.match(await guest.locator('[data-error]').textContent(),/仅支持/);
+ await guest.locator('[name=address]').fill(ip);
+ await guest.locator('#phoneLanSetup button[type=submit]').click();
+ await guest.waitForFunction(()=>CampCoop.snapshot()?.players.every(p=>p.joined));
+ await guest.evaluate(()=>window.testSocket.close());
+ await host.waitForFunction(()=>CampCoop.snapshot()?.phase==='paused');
+ assert.equal(await host.evaluate(()=>document.body.classList.contains('in-game')),false,'lobby disconnect must not enter playfield');
+ assert.equal(await host.evaluate(()=>orientationCalls.includes(true)),false,'no landscape request before start');
+ await host.waitForFunction(()=>CampCoop.snapshot()?.phase==='lobby'&&CampCoop.snapshot().players.every(p=>p.connected));
+ const refused=await guest.evaluate(()=>new Promise(resolve=>{testSocket.addEventListener('message',function listen(e){const m=JSON.parse(e.data);if(m.type==='error'){testSocket.removeEventListener('message',listen);resolve(m.message);}});testSocket.send(JSON.stringify({type:'create',accountId:'forged_account',level:0}));}));
+ assert.match(refused,/仅房主/);
+ const versionRejected=await guest.evaluate(ip=>new Promise(resolve=>{const s=new WebSocket('ws://'+ip+':38474/ws?v=999');s.onopen=()=>resolve(false);s.onclose=()=>resolve(true);s.onerror=()=>{};}),ip);
+ assert.equal(versionRejected,true);
+ const contract=snap.contracts.offer[0].id;
+ // Drive normal visible buttons after inspecting their semantic attributes.
+ await host.locator('[data-contract="'+contract+'"]').click();
+ await guest.locator('[data-contract="'+contract+'"]').click();
+ await host.locator('#readyButton').click();
+ await guest.locator('#readyButton').click();
+ await host.locator('#startButton').click();
+ await guest.waitForFunction(()=>CampCoop.snapshot()?.phase==='playing');
+ assert.equal(await host.evaluate(()=>orientationCalls.at(-1)),true);
+ for(const viewport of [{width:844,height:390},{width:1280,height:720},{width:1024,height:768}]){
+  await host.setViewportSize(viewport);
+  const rect=await host.locator('#board').boundingBox();assert.equal(rect.width,viewport.width);assert.equal(rect.height,viewport.height);
+  assert.equal(await host.locator('#cornerPanel').isVisible(),false);
+  await host.screenshot({path:'artifacts/coop-fullscreen-'+viewport.width+'.png'});
+ }
+ await host.setViewportSize({width:844,height:390});
+ await host.locator('#cornerMenu').click();assert.equal(await host.locator('#helpButton').isVisible(),true);
+ await host.screenshot({path:'artifacts/coop-corner-menu.png'});
+ await host.locator('#helpButton').click();assert.equal(await host.locator('#gameHelp').isVisible(),true);
+ await host.locator('#closeHelp').click();assert.equal(await host.locator('#cornerPanel').isVisible(),false);
+ const initialX=await host.evaluate(()=>CampCoop.snapshot().world.players[0].x);
+ await host.keyboard.down('d');await new Promise(r=>setTimeout(r,500));await host.keyboard.up('d');
+ const hs=await host.evaluate(()=>CampCoop.snapshot()),gs=await guest.evaluate(()=>CampCoop.snapshot());
+ assert.equal(hs.roomId,gs.roomId);assert.equal(hs.phase,'playing');assert(hs.world.players[0].x>initialX+10);assert(Math.abs(hs.world.players[0].x-gs.world.players[0].x)<40);
+ await host.screenshot({path:'artifacts/phone-host.png'});await guest.screenshot({path:'artifacts/phone-guest.png'});
+
+ // Complete the first level through normal input on the actual phone worker.
+ controller.firstStage='push';controller.firstInteractTick=0;controller.partnerStage=null;
+ const held=[{},{}];
+ for(let deadline=Date.now()+90000;Date.now()<deadline;){
+  const snap=await host.evaluate(()=>CampCoop.snapshot());if(snap.phase==='intermission')break;
+  for(const [i,p] of [host,guest].entries()){
+   const input=controller(0,snap.world,i);
+   for(const [key,code] of Object.entries({left:'ArrowLeft',right:'ArrowRight',jump:'Space',interact:'KeyE'})){
+    if(!!input[key]!==!!held[i][key]){await p.keyboard[input[key]?'down':'up'](code);held[i][key]=!!input[key]}
+   }
+  }
+  await new Promise(r=>setTimeout(r,25));
+ }
+ await host.waitForFunction(()=>CampCoop.snapshot()?.phase==='intermission',null,{timeout:2000});
+ await guest.waitForFunction(()=>CampCoop.snapshot()?.phase==='intermission');
+ await host.setViewportSize({width:740,height:360});await guest.setViewportSize({width:740,height:360});
+ await host.screenshot({path:'artifacts/phone-next-result.png'});
+ assert.equal(await guest.locator('#resultNext').isDisabled(),true,'only host continues');
+ const settlementId=await host.evaluate(()=>CampCoop.snapshot().settlement.id);
+ await guest.evaluate(id=>testSocket.send(JSON.stringify({type:'next-level',settlementId:id})),settlementId);
+ await host.waitForTimeout(180);assert.equal(await host.evaluate(()=>CampCoop.snapshot().phase),'intermission','guest packet cannot advance room');
+ await host.evaluate(()=>testSocket.send(JSON.stringify({type:'next-level',settlementId:'stale'})));
+ await host.waitForTimeout(180);assert.equal(await host.evaluate(()=>CampCoop.snapshot().phase),'intermission','stale settlement cannot advance');
+ await host.locator('#resultNext').tap();
+ await host.waitForFunction(()=>CampCoop.snapshot()?.phase==='playing'&&CampCoop.snapshot().world.levelIndex===1);
+ assert.equal(await host.locator('#result').isVisible(),false);
+ await host.screenshot({path:'artifacts/phone-next-level2.png'});
+ await guest.waitForFunction(()=>CampCoop.snapshot()?.phase==='playing'&&CampCoop.snapshot().world.levelIndex===1);
+ await host.evaluate(id=>testSocket.send(JSON.stringify({type:'next-level',settlementId:id})),settlementId);
+ await host.waitForTimeout(120);assert.equal(await host.evaluate(()=>CampCoop.snapshot().world.levelIndex),1,'duplicate next does not skip level');
+ console.log('Phone worker: actual level 1 completion -> host one click -> both start level 2; guest/stale/duplicate rejected');
+
+ delay=120;
+ await guest.evaluate(()=>window.testSocket.close());
+ await host.waitForFunction(()=>CampCoop.snapshot()?.phase==='paused');
+ await guest.waitForFunction(()=>CampCoop.snapshot()?.phase==='playing',null,{timeout:12000});
+ await host.evaluate(()=>window.nativeActive=false);
+ await host.waitForFunction(()=>!PhoneLan.url);
+ assert.equal(await host.evaluate(()=>CampCoop.snapshot()),null);
+ assert.deepEqual(errors,[]);
+ console.log(JSON.stringify({passed:true,ip,separateContexts:2,transport:'actual Java WebSocket',worker:'actual packaged worker',nativeBridge:'simulated',checks:['host','join','contract','ready','start','movement','120ms bridge delay','network reconnect','host background cleanup'],deviceTested:false}));
+}finally{await browser.close();await guestBrowser.close();java.stdin.end('stop\n');java.kill();http.close();}

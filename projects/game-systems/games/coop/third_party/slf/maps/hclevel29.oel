@@ -1,0 +1,74 @@
+<level>
+  <width>1200</width>
+  <height>640</height>
+  <solids>
+    <rect x="0" y="0" w="1200" h="10"/>
+    <rect x="0" y="10" w="10" h="630"/>
+    <rect x="10" y="240" w="80" h="400"/>
+    <rect x="90" y="270" w="110" h="180"/>
+    <rect x="90" y="540" w="1110" h="100"/>
+    <rect x="290" y="470" w="20" h="20"/>
+    <rect x="310" y="260" w="20" h="20"/>
+    <rect x="390" y="460" w="20" h="20"/>
+    <rect x="490" y="450" w="20" h="20"/>
+    <rect x="570" y="260" w="20" h="20"/>
+    <rect x="580" y="460" w="20" h="20"/>
+    <rect x="670" y="470" w="20" h="20"/>
+    <rect x="840" y="260" w="60" h="220"/>
+    <rect x="940" y="200" w="190" h="30"/>
+    <rect x="1000" y="310" w="200" h="50"/>
+    <rect x="1030" y="420" w="170" h="120"/>
+    <rect x="1190" y="10" w="10" h="300"/>
+    <rect x="1190" y="360" w="10" h="60"/>
+  </solids>
+  <extraPlatforms>
+    <LargeCrate x="830" y="480"/>
+    <level3_spike0 x="280" y="530" width="470" height="10"/>
+    <level3_spike3 x="300" y="260" width="10" height="20"/>
+    <level3_spike3 x="560" y="260" width="10" height="20"/>
+    <level3_spike1 x="330" y="260" width="10" height="20"/>
+    <level3_spike1 x="590" y="260" width="10" height="20"/>
+    <level3_spike3 x="830" y="260" width="10" height="220"/>
+    <level3_spike1 x="900" y="260" width="10" height="220"/>
+    <heightChart x="1090" y="360"/>
+    <LargeCrate x="1050" y="360"/>
+  </extraPlatforms>
+  <movingPlatforms>
+    <level3_specialPlatformSmall x="200" y="300" speed="100" movementType="5" animated="1">
+      <node x="700" y="300"/>
+    </level3_specialPlatformSmall>
+    <level3_specialPlatformSmall x="760" y="260" speed="40" movementType="5" animated="1">
+      <node x="760" y="460"/>
+    </level3_specialPlatformSmall>
+  </movingPlatforms>
+  <BGLayer1>
+    <level3_window x="0" y="220" width="1200" height="320" scrollFactor="0.2"/>
+    <level3_painting1 x="140" y="40" scrollFactor="0.2"/>
+    <level3_painting2 x="230" y="50" scrollFactor="0.2"/>
+    <level3_painting3 x="320" y="60" scrollFactor="0.2"/>
+  </BGLayer1>
+  <BGLayer2>
+    <filingCab2 x="160" y="480" scrollFactor="0.7"/>
+    <filingCab2 x="110" y="210" scrollFactor="0.9"/>
+  </BGLayer2>
+  <BGLayer3>
+    <plant2 x="160" y="170" scrollFactor="0.2"/>
+    <sodaPack x="120" y="520" scrollFactor="0.2"/>
+  </BGLayer3>
+  <objects>
+    <exit x="17" y="150" nextLevel="2"/>
+    <Bottle x="451" y="94" width="12"/>
+    <L1_SmallCrate x="1096" y="286" width="32"/>
+  </objects>
+  <characters>
+    <liselot x="1140" y="370" speed="40" movementType="1" talkString="Just say yes.">
+      <node x="1180" y="370"/>
+    </liselot>
+    <player x="220" y="490" speed="40" movementType="1" startsFirst="1" levelName="Night Fright" andreInitialFlip="0" liselotInitialFlip="1" followWidth="0" followHeight="0" talkString="Our first big contract was with Dutch import and export company.">
+      <node x="250" y="490"/>
+    </player>
+    <army x="940" y="150" speed="50" movementType="1" talkString="Now that we are in business together, let's say we toast to mutual interests.">
+      <node x="1090" y="150"/>
+    </army>
+  </characters>
+</level>

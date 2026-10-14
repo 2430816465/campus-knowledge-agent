@@ -1,0 +1,228 @@
+[gd_resource type="Theme" load_steps=30 format=3]
+
+[ext_resource type="FontFile" path="res://assets/fonts/NotoSerifSC-Regular.otf" id="font"]
+
+[ext_resource type="Texture2D" path="res://assets/ui-foundation/paper.svg" id="paper"]
+
+[ext_resource type="Texture2D" path="res://assets/ui-foundation/jade.svg" id="jade"]
+
+[ext_resource type="Texture2D" path="res://assets/ui-foundation/gold.svg" id="gold"]
+
+[ext_resource type="Texture2D" path="res://assets/ui-foundation/secondary.svg" id="secondary"]
+
+[ext_resource type="Texture2D" path="res://assets/ui-foundation/old.svg" id="old"]
+
+[ext_resource type="Texture2D" path="res://assets/ui-foundation/new.svg" id="new"]
+
+[ext_resource type="Texture2D" path="res://assets/ui-foundation/nav.svg" id="nav"]
+
+[ext_resource type="Texture2D" path="res://assets/ui-foundation/disabled.svg" id="disabled"]
+
+[ext_resource type="Texture2D" path="res://assets/ui-foundation/pressed.svg" id="pressed"]
+
+[ext_resource type="Texture2D" path="res://assets/ui-foundation/skins.png" id="skin_atlas"]
+
+[ext_resource type="Script" path="res://scripts/ui/painted_skin.gd" id="painted"]
+
+[sub_resource type="AtlasTexture" id="atlas_paper"]
+atlas = ExtResource("skin_atlas")
+region = Rect2(30,45,575,551)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_gold"]
+atlas = ExtResource("skin_atlas")
+region = Rect2(638,44,585,556)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_secondary"]
+atlas = ExtResource("skin_atlas")
+region = Rect2(32,644,577,538)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_jade"]
+atlas = ExtResource("skin_atlas")
+region = Rect2(637,638,586,551)
+filter_clip = true
+
+[sub_resource type="StyleBox" id="paper"]
+script = ExtResource("painted")
+texture = ExtResource("skin_atlas")
+source_rect = Rect2(30,45,575,551)
+source_margin = 125.0
+border_width = 36.0
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+
+[sub_resource type="StyleBox" id="jade"]
+script = ExtResource("painted")
+texture = ExtResource("skin_atlas")
+source_rect = Rect2(637,638,586,551)
+source_margin = 125.0
+border_width = 28.0
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+
+[sub_resource type="StyleBox" id="gold"]
+script = ExtResource("painted")
+texture = ExtResource("skin_atlas")
+source_rect = Rect2(638,44,585,556)
+source_margin = 125.0
+border_width = 28.0
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+
+[sub_resource type="StyleBox" id="secondary"]
+script = ExtResource("painted")
+texture = ExtResource("skin_atlas")
+source_rect = Rect2(32,644,577,538)
+source_margin = 125.0
+border_width = 28.0
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="old"]
+texture = ExtResource("old")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="new"]
+texture = ExtResource("new")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="nav"]
+texture = ExtResource("nav")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="disabled"]
+texture = ExtResource("disabled")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="pressed"]
+texture = ExtResource("pressed")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="empty"]
+
+[sub_resource type="FontVariation" id="body_font"]
+base_font = ExtResource("font")
+variation_embolden = 0.55
+
+[resource]
+
+default_font = SubResource("body_font")
+
+default_font_size = 28
+
+Label/colors/font_color = Color(0.18,0.14,0.10,1)
+
+Label/font_sizes/font_size = 28
+
+Button/colors/font_color = Color(0.19,0.12,0.05,1)
+
+Button/colors/font_hover_color = Color(0.15,0.09,0.03,1)
+
+Button/colors/font_pressed_color = Color(1,0.96,0.8,1)
+
+Button/colors/font_disabled_color = Color(0.4,0.42,0.4,1)
+
+Button/font_sizes/font_size = 34
+
+Button/styles/normal = SubResource("secondary")
+
+Button/styles/hover = SubResource("gold")
+
+Button/styles/pressed = SubResource("pressed")
+
+Button/styles/disabled = SubResource("disabled")
+
+PanelContainer/styles/panel = SubResource("paper")
+
+Primary/base_type = &"Button"
+
+Primary/styles/normal = SubResource("jade")
+
+Primary/colors/font_color = Color(1,0.95,0.74,1)
+
+Primary/font_sizes/font_size = 95
+
+Gold/base_type = &"Button"
+
+Gold/styles/normal = SubResource("gold")
+
+IconEntry/base_type = &"Button"
+
+IconEntry/styles/normal = SubResource("empty")
+
+IconEntry/styles/disabled = SubResource("empty")
+
+IconEntry/styles/hover = SubResource("empty")
+
+IconEntry/styles/pressed = SubResource("nav")
+
+Tab/base_type = &"Button"
+
+Tab/styles/normal = SubResource("secondary")
+
+Tab/styles/pressed = SubResource("gold")
+
+EquipmentOld/base_type = &"PanelContainer"
+
+EquipmentOld/styles/panel = SubResource("old")
+
+EquipmentNew/base_type = &"PanelContainer"
+
+EquipmentNew/styles/panel = SubResource("new")
+
+Nav/base_type = &"PanelContainer"
+
+Nav/styles/panel = SubResource("nav")
+
+HBoxContainer/constants/separation = 14
+
+VBoxContainer/constants/separation = 8
+
+CheckButton/font_sizes/font_size = 27
+Button/colors/font_focus_color = Color(0.2,0.13,0.06,1)
+Button/styles/focus = SubResource("gold")

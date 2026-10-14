@@ -1,0 +1,27 @@
+{
+  "tool": "builtin image_gen",
+  "generated": "2026-10-01",
+  "entries": [
+    {
+      "name": "wheat-drop",
+      "source": "C:\\Users\\24308\\.codex\\generated_images\\01a0f399-32d3-74c0-bf70-9ec7d68a7a20\\exec-b2119c01-aa92-48dc-86a1-a2a25233fa8d.png",
+      "projectAsset": "C:/Users/24308/Desktop/总/adventure-camp/games/workshop/assets/bakery-wheat-drop.webp",
+      "copiedSource": "C:/Users/24308/Desktop/总/adventure-camp/games/workshop/assets/bakery-wheat-drop-source.png",
+      "prompt": "A single small bundle of ripe golden wheat lying diagonally on the ground, tied with a simple brown string, clearly visible golden heads, chunky pixel art game world pickup sprite. Three-quarter overhead camera in a cute fantasy bakery, warm gold and deep brown outline, crisp nearest-neighbor square pixel clusters like a 32x32 sprite enlarged. No icon frame, no pedestal, no UI, no text, no surrounding scene, no glow. Entire object fits with generous transparent margin. True transparent background."
+    },
+    {
+      "name": "milk-drop",
+      "source": "C:\\Users\\24308\\.codex\\generated_images\\01a0f399-32d3-74c0-bf70-9ec7d68a7a20\\exec-f7658522-6b80-46c9-89ba-30ed89ddf700.png",
+      "projectAsset": "C:/Users/24308/Desktop/总/adventure-camp/games/workshop/assets/bakery-milk-drop.webp",
+      "copiedSource": "C:/Users/24308/Desktop/总/adventure-camp/games/workshop/assets/bakery-milk-drop-source.png",
+      "prompt": "A single open small metal milk pail filled with white milk, sturdy curved handle folded sideways, three-quarter overhead perspective, physical object resting on the ground, chunky pixel art game world pickup sprite for cute fantasy bakery. Clear cream milk top and blue-gray pail sides, deep brown dark outline, crisp square pixel clusters like a 32x32 sprite enlarged. No icon frame, no badge, no pedestal, no text, no surrounding scene, no glow. Entire pail fits with generous transparent margin. True transparent background."
+    },
+    {
+      "name": "berry-drop",
+      "source": "C:\\Users\\24308\\.codex\\generated_images\\01a0f399-32d3-74c0-bf70-9ec7d68a7a20\\exec-5158a455-cef0-42d7-b124-38367e47982f.png",
+      "projectAsset": "C:/Users/24308/Desktop/总/adventure-camp/games/workshop/assets/bakery-berry-drop.webp",
+      "copiedSource": "C:/Users/24308/Desktop/总/adventure-camp/games/workshop/assets/bakery-berry-drop-source.png",
+      "prompt": "A single loose small cluster of three ripe red raspberries and one tiny green leaf resting on ground, three-quarter overhead perspective, chunky pixel art physical world pickup sprite for cute fantasy bakery. Bright raspberry red, dark brown outline, crisp square pixel clusters like a 32x32 sprite enlarged, clear simple silhouette. No icon frame, no badge, no pedestal, no text, no surrounding scene, no glow. Entire object fits with generous transparent margin. True transparent background."
+    }
+  ]
+}

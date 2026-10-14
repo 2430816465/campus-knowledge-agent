@@ -1,0 +1,92 @@
+/* Environment follows the original hero's fine pixel outlines. UI uses CSS pixels for legibility. */
+html[data-game-ui="coop"] body.in-game :is(.stage,#board){background:#352d2b;image-rendering:pixelated}
+html[data-game-ui="coop"] body.in-game :is(#cornerMenu,#switchPlayer,.touch-controls button,#cornerPanel,#gameHelp){border-radius:2px;border-width:2px;backdrop-filter:none}
+html[data-game-ui="coop"] body.in-game #cornerPanel{background:#2b2523f5;color:#fff2d5;border-color:#ad8c56;max-height:calc(100dvh - 72px);overflow:auto}
+html[data-game-ui="coop"] body.in-game #gameHelp{background:#2b2523f5;color:#fff2d5;border-color:#ad8c56;max-height:calc(100dvh - 130px);overflow:auto}
+html[data-game-ui="coop"] body.in-game .touch-actions{display:flex;flex-direction:column;gap:8px}
+html[data-game-ui="coop"] body.in-game .touch-controls button{width:54px;height:48px;min-height:48px;border:2px solid #f1d5a3;background:#403229ed;color:#fff4d7;font-size:14px;box-shadow:2px 2px 0 #171411}
+html[data-game-ui="coop"] body.in-game .touch-controls .touch-jump{height:54px;font-size:20px;background:#855e32ed}
+html[data-game-ui="coop"] body.in-game .touch-controls .touch-interact.ready{background:#23555bf0;color:#edffff;border-color:#a1eee5}
+html[data-game-ui="coop"] body.in-game #moveJoystick{border-radius:12px;background:#302b2999;border-color:#f1d5a3;box-shadow:inset 0 0 0 5px #17141155;opacity:.6}
+html[data-game-ui="coop"] #moveJoystick .joystick-knob{border-radius:6px;box-shadow:2px 2px 0 #171411}
+#mechanismHud{position:absolute;z-index:7;top:max(10px,env(safe-area-inset-top));left:50%;transform:translateX(-50%);padding:5px 8px;border:1px solid #9f8259;background:#28211fed;color:#fff2d5;font:600 13px/1.4 "Microsoft YaHei",sans-serif;white-space:nowrap;pointer-events:none;max-width:calc(100% - 300px);overflow:hidden;text-overflow:ellipsis}
+#rotateHint{display:none}
+html[data-game-ui="coop"] body.in-game #portrait{display:none;pointer-events:none}
+html[data-game-ui="coop"] body.in-game .game-screen{opacity:1;pointer-events:auto}
+#mechanismGuide,#guideLibrary{box-sizing:border-box;position:absolute;z-index:24;background:#2b2523fa;color:#fff2d5;border:2px solid #e8c48b;box-shadow:4px 4px 0 #161311;padding:12px;font:14px/1.55 "Microsoft YaHei",sans-serif}
+#mechanismGuide{right:max(76px,env(safe-area-inset-right));top:max(72px,env(safe-area-inset-top));width:min(400px,calc(100% - 96px));max-height:calc(100dvh - 94px);overflow:auto}
+#mechanismGuide[hidden],#guideLibrary[hidden]{display:none}
+#guideMode{color:#ddc5a0;font-size:12px;display:block;padding-right:32px}
+#guideClose,#closeGuideLibrary{position:absolute;right:0;top:0;width:44px;min-height:44px;border:0;background:transparent;color:#fff2d5;font-size:24px}
+.guide-content{display:grid;grid-template-columns:50px minmax(0,1fr);gap:12px;align-items:start;margin-top:10px}
+#guideImage{width:48px;height:52px;object-fit:contain;image-rendering:pixelated;padding:3px;background:#1f1b18;border:1px solid #8d7657}
+#mechanismGuide h2,#guideLibrary h2{font-size:17px;line-height:1.3;color:#ffe0a8;margin:0 0 8px}
+#guideBody{margin:0;font-size:14px;line-height:1.55;white-space:normal}
+.guide-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:12px}
+#mechanismGuide button:not(#guideClose),#guideLibrary button:not(#closeGuideLibrary){min-height:44px;padding:8px 12px;border:2px solid #b99a6e;background:#48372b;color:#fff2d5;border-radius:0;font:600 14px/1.4 "Microsoft YaHei",sans-serif;cursor:pointer;touch-action:manipulation}
+#mechanismGuide #guideConfirm{background:#e7bd7c;color:#2b221c}
+#mechanismGuide.practice{width:min(330px,calc(100% - 96px));opacity:.97;pointer-events:auto}
+#mechanismGuide.practice .guide-content{grid-template-columns:32px minmax(0,1fr);gap:8px;margin-top:6px}
+#mechanismGuide.practice #guideImage{width:30px;height:34px}
+#mechanismGuide.practice .guide-actions{margin-top:6px}
+#mechanismGuide.practice #guideSkip{display:none}
+#mechanismGuide.practice h2{font-size:15px;margin-bottom:4px}
+#guideLibrary{left:50%;top:max(60px,env(safe-area-inset-top));transform:translateX(-50%);width:min(600px,calc(100% - 32px));max-height:calc(100dvh - 80px);overflow:auto}
+#guideLibrary p{font-size:13px;margin:4px 0 10px}
+#guideList{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:12px}
+#guideList button{text-align:left;white-space:normal}
+#resetGuides{width:100%}
+#mechanismGuide button:focus-visible,#guideLibrary button:focus-visible{outline:3px solid #a2e9e6;outline-offset:2px}
+@media(orientation:landscape) and (max-height:450px){
+ #mechanismGuide{top:64px;padding:10px;width:min(380px,calc(100% - 96px))}
+ #mechanismGuide.practice{width:min(320px,calc(100% - 96px))}
+ .guide-content{gap:8px;margin-top:6px}.guide-actions{margin-top:8px}
+ #guideLibrary{top:12px;max-height:calc(100dvh - 24px)}
+}
+@media(orientation:portrait) and (max-width:700px){
+ #rotateHint{display:block;position:absolute;left:50%;top:25%;transform:translateX(-50%);width:90%;text-align:center;font:14px/1.4 sans-serif;color:#fff2d5;pointer-events:none}
+ #mechanismHud{top:70px;max-width:calc(100% - 32px)}
+ #mechanismGuide,#mechanismGuide.practice{top:90px;left:16px;right:16px;width:auto;max-height:calc(100dvh - 180px)}
+ #guideLibrary{top:90px;max-height:calc(100dvh - 110px)}
+ #guideList{grid-template-columns:minmax(0,1fr)}
+}
+
+/* Floating movement wheel: only visible while held, action buttons stay above it. */
+html[data-game-ui="coop"] body.in-game #moveZone{top:64px;width:100%;z-index:0;overflow:visible}
+html[data-game-ui="coop"] body.in-game .touch-actions{z-index:2}
+html[data-game-ui="coop"] body.in-game #moveJoystick{visibility:hidden;opacity:0;border-radius:50%;background:#3a3029b8;border:2px solid #e6c18a;box-shadow:inset 0 0 0 7px #f3d39b18,0 2px 0 #17141180}
+html[data-game-ui="coop"] body.in-game #moveJoystick.pressed{visibility:visible;opacity:1}
+html[data-game-ui="coop"] body.in-game #moveJoystick .joystick-knob{box-sizing:border-box;left:calc(50% - 22px);top:calc(50% - 22px);width:44px;height:44px;border-radius:50%}
+
+/* Final geometry owns containment after the legacy/shared skins. Instructions
+   live in Help, so the action grid never stretches a button to fit long copy. */
+html[data-game-ui="coop"] body.in-game #cornerPanel:not([hidden]){grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:6px;overflow:auto;max-height:calc(100dvh - max(56px,calc(env(safe-area-inset-top) + 50px)) - max(8px,env(safe-area-inset-bottom)))}
+html[data-game-ui="coop"] body.in-game #cornerPanel .stage-hint{display:none}
+html[data-game-ui="coop"] body.in-game #cornerPanel button:not([hidden]){display:flex;align-items:center;justify-content:center;gap:6px;align-self:start;min-width:0;min-height:44px;padding:7px 6px;font-size:13px;line-height:1.4;white-space:normal;overflow-wrap:anywhere}
+html[data-game-ui="coop"] body.in-game #cornerPanel button span{font-size:inherit;margin:0}
+html[data-game-ui="coop"] body.in-game #cornerPanel .control-symbol{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;flex:none;font:18px/1 sans-serif}
+html[data-game-ui="coop"] body.in-game :is(#cornerMenu,.touch-controls button,#closeHelp,#guideClose,#closeGuideLibrary){display:flex;align-items:center;justify-content:center;padding:0;line-height:1}
+html[data-game-ui="coop"] body.in-game #gameHelp{padding-top:48px}
+html[data-game-ui="coop"] #guideLibrary>div:first-child{padding-right:40px}
+html[data-game-ui="coop"] #mechanismGuide h2{padding-right:22px}
+html[data-game-ui="coop"] :is(.pause-banner,.toast,.global-toast){max-width:calc(100vw - 24px);min-width:0;white-space:normal;overflow-wrap:anywhere}
+html[data-game-ui="coop"] .level-panel .panel-heading{flex-wrap:wrap;gap:8px}
+html[data-game-ui="coop"] body.in-game #cornerPanel .network-pill{min-width:0;flex-wrap:wrap}
+html[data-game-ui="coop"] #phoneLanSetup input::placeholder{color:#695740;opacity:1}
+@media(orientation:landscape) and (max-height:420px){
+ html[data-game-ui="coop"] body.in-game #cornerPanel:not([hidden]){width:min(420px,calc(100vw - 24px));grid-template-columns:repeat(3,minmax(0,1fr));padding:8px}
+ html[data-game-ui="coop"] body.in-game #cornerPanel .game-brand{padding:4px 8px;min-height:34px}
+ html[data-game-ui="coop"] body.in-game #cornerPanel .network-pill{padding:4px 8px;min-height:26px}
+ html[data-game-ui="coop"] .result-card{display:flex;flex-wrap:wrap;gap:6px 8px;padding:12px 16px}
+ html[data-game-ui="coop"] .result-card>*{width:100%;margin:0}
+ html[data-game-ui="coop"] .result-card :is(h2,p,#nextStatus){margin:0;line-height:1.4}
+ html[data-game-ui="coop"] .result-card #contractResult:empty{display:none}
+ html[data-game-ui="coop"] .result-card :is(#resultNext,#resultHome){width:calc(50% - 4px);order:10}
+ html[data-game-ui="coop"] .result-card #resultHome{flex:1}
+ html[data-game-ui="coop"] .result-card #adOutcome{order:11}
+ html[data-game-ui="coop"] #phoneLanSetup .server-setup-card{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding:12px;max-width:540px;width:min(100%,540px)}
+ html[data-game-ui="coop"] #phoneLanSetup .server-setup-card :is(h2,p:nth-child(2),[data-error]){grid-column:1/-1}
+ html[data-game-ui="coop"] #phoneLanSetup .server-setup-card h2{font-size:18px}
+ html[data-game-ui="coop"] #phoneLanSetup .server-setup-card p{font-size:12px;line-height:1.4}
+ html[data-game-ui="coop"] #phoneLanSetup [data-error]:empty{display:none}
+}

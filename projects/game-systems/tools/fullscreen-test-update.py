@@ -1,0 +1,4 @@
+from pathlib import Path
+p=Path('games/marble/ui-endless.js');s=p.read_text(encoding='utf-8').replace("btn('暂停 / 返回','pause')","btn('暂停 / 返回','settingsPause')");p.write_text(s,encoding='utf-8')
+p=Path('games/marble/main.js');s=p.read_text(encoding='utf-8').replace("if(a==='pause'){","if(a==='pause'||a==='settingsPause'){");p.write_text(s,encoding='utf-8')
+p=Path('tools/marble-endless-browser.mjs');s=p.read_text(encoding='utf-8').replace("await page.locator('[data-action=freeze]').click();", "if(await page.locator('.arena-sidebar').isHidden())await page.locator('[data-action=togglePanel]').first().click();await page.locator('[data-action=freeze]').click();").replace("await page.locator('[data-action=extraChoice]').click();", "if(await page.locator('.arena-sidebar').isHidden())await page.locator('[data-action=togglePanel]').first().click();await page.locator('[data-action=extraChoice]').click();");p.write_text(s,encoding='utf-8')

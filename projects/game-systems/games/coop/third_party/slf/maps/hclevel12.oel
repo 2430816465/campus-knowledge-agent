@@ -1,0 +1,291 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    1480
+  </width>
+  
+  
+  <height>
+    640
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="10" w="1480" x="0" y="0"/>
+    
+    
+    <rect h="170" w="160" x="0" y="10"/>
+    
+    
+    <rect h="460" w="10" x="0" y="180"/>
+    
+    
+    <rect h="70" w="150" x="10" y="570"/>
+    
+    
+    <rect h="120" w="70" x="90" y="450"/>
+    
+    
+    <rect h="10" w="1320" x="160" y="630"/>
+    
+    
+    <rect h="50" w="700" x="230" y="180"/>
+    
+    
+    <rect h="20" w="20" x="300" y="390"/>
+    
+    
+    <rect h="110" w="60" x="350" y="10"/>
+    
+    
+    <rect h="30" w="60" x="470" y="150"/>
+    
+    
+    <rect h="200" w="220" x="480" y="430"/>
+    
+    
+    <rect h="110" w="60" x="590" y="10"/>
+    
+    
+    <rect h="30" w="60" x="720" y="150"/>
+    
+    
+    <rect h="20" w="20" x="900" y="390"/>
+    
+    
+    <rect h="170" w="220" x="1090" y="10"/>
+    
+    
+    <rect h="200" w="380" x="1100" y="430"/>
+    
+    
+    <rect h="160" w="40" x="1270" y="270"/>
+    
+    
+    <rect h="90" w="170" x="1310" y="340"/>
+    
+    
+    <rect h="330" w="10" x="1470" y="10"/>
+    
+  
+  </solids>
+  
+  
+  <fakesolids>
+    
+    
+    <rect h="90" w="40" x="1270" y="180"/>
+    
+  
+  </fakesolids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <spike0 height="10" width="300" x="170" y="620"/>
+    
+    
+    <spike1 height="170" width="10" x="160" y="450"/>
+    
+    
+    <spike3 height="170" width="10" x="470" y="450"/>
+    
+    
+    <spike0 height="10" width="380" x="710" y="620"/>
+    
+    
+    <spike1 height="170" width="10" x="700" y="450"/>
+    
+    
+    <spike3 height="170" width="10" x="1090" y="450"/>
+    
+    
+    <level1_specialBlock animated="0" movementType="1" speed="40" x="1230" y="330"/>
+    
+    
+    <LargeCrate x="340" y="120"/>
+    
+    
+    <spike0 height="10" width="40" x="480" y="140"/>
+    
+    
+    <spike2 height="10" width="40" x="600" y="120"/>
+    
+    
+    <spike1 height="20" width="10" x="320" y="390"/>
+    
+    
+    <spike1 height="20" width="10" x="920" y="390"/>
+    
+    
+    <spike3 height="20" width="10" x="290" y="390"/>
+    
+    
+    <spike3 height="20" width="10" x="890" y="390"/>
+    
+    
+    <spike3 height="170" width="10" x="1080" y="10"/>
+    
+    
+    <spike0 height="10" width="160" x="1310" y="330"/>
+    
+    
+    <spike0 height="10" width="40" x="730" y="140"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <movingPlatforms>
+    
+    
+    <level1_specialBlock animated="0" movementType="5" speed="90" x="930" y="250">
+      
+      
+      <node x="1190" y="250"/>
+      
+    
+    </level1_specialBlock>
+    
+    
+    <level1_specialPlatformSmall animated="1" movementType="5" speed="120" x="1310" y="270">
+      
+      
+      <node x="1430" y="270"/>
+      
+    
+    </level1_specialPlatformSmall>
+    
+    
+    <level1_specialPlatformSmall animated="1" movementType="5" speed="120" x="160" y="430">
+      
+      
+      <node x="440" y="430"/>
+      
+    
+    </level1_specialPlatformSmall>
+    
+    
+    <level1_specialPlatformSmall animated="1" movementType="5" speed="120" x="700" y="430">
+      
+      
+      <node x="1060" y="430"/>
+      
+    
+    </level1_specialPlatformSmall>
+    
+  
+  </movingPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <L1_Shelf scrollFactor="0.2" x="230" y="320"/>
+    
+    
+    <level1_windows height="54" scrollFactor="0.1" width="900" x="160" y="40"/>
+    
+    
+    <L1_Shelf scrollFactor="0.4" x="730" y="320"/>
+    
+    
+    <level1_shelfTile height="460" scrollFactor="0.2" width="160" x="10" y="180"/>
+    
+    
+    <level1_shelfTile height="640" scrollFactor="0.2" width="240" x="470" y="0"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer2>
+    
+    
+    <sugarBagsAndCrates scrollFactor="0.6" x="170" y="500"/>
+    
+    
+    <sugarBagsAndCrates scrollFactor="0.6" x="690" y="500"/>
+    
+    
+    <sugarBags scrollFactor="0.7" x="820" y="590"/>
+    
+    
+    <sodaPack scrollFactor="0.8" x="900" y="610"/>
+    
+  
+  </BGLayer2>
+  
+  
+  <BGLayer3>
+    
+    
+    <palettes scrollFactor="0.2" x="840" y="140"/>
+    
+    
+    <sodaPack scrollFactor="0.2" x="600" y="160"/>
+    
+    
+    <sodaPack scrollFactor="0.2" x="1110" y="410"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <L1_SmallCrate width="32" x="93" y="427"/>
+    
+    
+    <exit nextLevel="2" x="244" y="90"/>
+    
+    
+    <smallSugarBag width="22" x="1037" y="55"/>
+    
+    
+    <Bottle width="12" x="1452" y="131"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <player andreInitialFlip="0" followHeight="640" followWidth="1300" levelName="It's All About Timing" liselotInitialFlip="1" movementType="1" speed="40" startsFirst="0" talkString="There's always money in the Lemonade Factory, except when there is lemons." x="10" y="520">
+      
+      
+      <node x="70" y="520"/>
+      
+    
+    </player>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="1230" y="380">
+      
+      
+      <node x="1250" y="380"/>
+      
+    
+    </liselot>
+    
+    
+    <chef movementType="1" speed="60" talkString="Apparently there are local food and drink critics who take soft drink seriously." x="480" y="380">
+      
+      
+      <node x="670" y="380"/>
+      
+    
+    </chef>
+    
+  
+  </characters>
+  
+
+</level>

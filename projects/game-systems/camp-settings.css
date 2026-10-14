@@ -1,0 +1,20 @@
+/* 1.15.0 paper palette, compact settings and pause controls. */
+#modal[data-kind=settings],#modal[data-kind=menu]{width:min(480px,calc(100vw - 24px));padding:18px;max-height:calc(100dvh - 24px);box-sizing:border-box;overflow:visible}
+#modal[data-kind=settings] h2,#modal[data-kind=menu] h2{margin:4px 0 12px;font-size:25px}
+.wood-tabs{display:flex;gap:8px;margin-bottom:12px}.wood-tabs>button{flex:1;min-height:44px}
+.wood-tabs [aria-selected=true]{background:#e8b784;border-color:#ad7848;color:#482e24}
+.wood-settings-row{display:flex;align-items:center;gap:12px;min-height:58px;border-bottom:1px solid #dfbea0}
+.wood-settings-row>svg{width:22px;height:22px;flex:none}.wood-settings-row b{min-width:60px}.wood-settings-row input[type=range]{flex:1;width:0;accent-color:#a9512f;min-width:40px}.wood-settings-row output{min-width:28px;text-align:right}
+.switch-wrap{margin-left:auto;display:flex;align-items:center;gap:8px}.switch-wrap em{font-style:normal;font-size:12px}
+.wood-settings-copy p,.wood-save-note{font-size:12px;line-height:1.5;margin:8px 0;color:#817268}.wood-settings-copy{min-height:0}.wood-settings-footer{display:flex;gap:10px;margin-top:12px}.wood-settings-footer>button{flex:1;min-height:44px}
+.wood-menu-note{font-size:13px;line-height:1.5;margin:6px 0 12px}.wood-menu-tools{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}.wood-menu-tools button{min-height:44px}.wood-continue,.wood-exit{min-height:48px}
+.game-menu-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+@media(max-height:520px) and (orientation:landscape){
+#modal[data-kind=settings],#modal[data-kind=menu]{width:min(700px,calc(100vw - 24px));padding:10px 16px}
+#modal[data-kind=settings] .modal-top,#modal[data-kind=menu] .modal-top{position:absolute;right:8px;top:8px;width:40px}.modal-top .eyebrow{display:none}
+#modal[data-kind=settings] h2,#modal[data-kind=menu] h2{font-size:21px;margin:0 44px 6px 0;line-height:28px}
+#modal[data-kind=settings] .wood-tabs{margin-bottom:6px;gap:8px}.wood-settings-body{display:grid;grid-template-columns:1fr 1fr;gap:16px}.wood-settings-row{min-height:46px;gap:8px}.wood-settings-copy p{margin:4px 0}.wood-settings-copy{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:center}.wood-settings-copy p{grid-column:1/-1}.wood-settings-copy>.button{min-height:44px}.wood-settings-footer{margin-top:6px}.wood-save-note{margin:4px 0}
+#modal[data-kind=menu] .wood-menu-note{margin:2px 0 6px;line-height:1.4}.wood-menu-tools{margin:6px 0}.wood-continue{width:calc(50% - 4px);float:left}.wood-exit{width:calc(50% - 4px);margin-left:8px!important}.wood-menu-tools{clear:both}#modal[data-kind=menu]>[data-action=menu-options]{width:calc(50% - 4px);float:left;min-height:44px}#modal[data-kind=menu]:after{content:'';display:block;clear:both}
+}
+.camp-important-action{background:linear-gradient(#934326,#71301d)!important;color:#fff5e4!important;border:2px solid #542619!important;box-shadow:0 3px 0 #4c2318!important;font-weight:800!important;opacity:1!important;min-height:44px}
+.camp-important-action:disabled{opacity:.5!important}

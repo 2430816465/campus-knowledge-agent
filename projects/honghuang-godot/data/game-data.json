@@ -1,0 +1,6696 @@
+{
+  "content": {
+    "BATTLE_RULE_VERSION": "v0.3.0",
+    "BOONS": [
+      {
+        "id": "barrier",
+        "name": "破障",
+        "description": "每场开局削去敌方40%初始护盾；若敌方没有初始护盾，则改为己方前排获得8%最大生命护盾。两种效果互斥。",
+        "power": 0.08,
+        "shieldCut": 0.4,
+        "limit": 1,
+        "scope": "battle"
+      },
+      {
+        "id": "victory",
+        "name": "乘胜",
+        "description": "每轮首次由己方正常行动或持续伤害击败敌人，强化本轮己方下一次合法普攻：额外追加45%攻击打击，最多一次；追加不再触发追击或反击。",
+        "power": 0.45,
+        "limit": 1,
+        "scope": "round"
+      },
+      {
+        "id": "shade",
+        "name": "余荫",
+        "description": "每轮首次己方护盾耗尽或存活者生命降至一半以下，恢复最低生命比例友方5%最大生命；两个入口共用一次上限。",
+        "power": 0.05,
+        "limit": 1,
+        "scope": "round"
+      },
+      {
+        "id": "clarity",
+        "name": "澄明",
+        "description": "每轮首次有效净化后，为净化接受者提供7%最大生命护盾；无减益移除不触发。",
+        "power": 0.07,
+        "limit": 1,
+        "scope": "round"
+      },
+      {
+        "id": "initiative",
+        "name": "先声",
+        "description": "首轮首次主动神通后，强化己方下一次合法普攻：追加35%攻击打击并使其目标攻击削弱12%，1回合；每场最多一次。",
+        "power": 0.35,
+        "attackDown": 0.12,
+        "turns": 1,
+        "limit": 1,
+        "scope": "battle"
+      },
+      {
+        "id": "solidarity",
+        "name": "同守",
+        "description": "每轮首次使用护持，为受护持的存活友方增加7%最大生命护盾；不提供额外行动。",
+        "power": 0.07,
+        "limit": 1,
+        "scope": "round"
+      }
+    ],
+    "CHAPTERS": [
+      "灵泉初醒",
+      "丹火寻真",
+      "雷泽归府"
+    ],
+    "CHARACTERS": [
+      {
+        "id": "yangjian",
+        "name": "杨戬",
+        "faction": "阐教",
+        "rarity": "divine",
+        "hp": 480,
+        "atk": 104,
+        "def": 25,
+        "speed": 106,
+        "attackName": "三尖斩",
+        "skillName": "天眼破妄",
+        "skillDescription": "破阵：可指定后排。造成 190% 伤害，施加天眼标记与 30% 破防，持续 2 回合。",
+        "passiveDescription": "攻击标记目标伤害提高 25%；自身即可完成标记与集中打击。",
+        "branches": [
+          "贯目：对标记目标追加 65% 一击",
+          "照群：天眼扩散，对另外两敌施加破防"
+        ],
+        "treasure": "三尖两刃刀",
+        "treasureEffect": "一段：天眼打击额外削减 40% 当前护盾。",
+        "fx": "eye-spear",
+        "color": "#8ad1cf",
+        "portraitIndex": 0,
+        "background": "清源妙道",
+        "skill": {
+          "target": "enemyAny",
+          "multiplier": 1.9,
+          "cooldown": 2,
+          "turns": 2,
+          "triggerLimit": 1,
+          "effect": "mark+defDown",
+          "fx": "eye-spear",
+          "shape": "纵向眼纹与长刃",
+          "trajectory": "先锁定，再直线穿刺",
+          "beats": [
+            0,
+            140,
+            310
+          ]
+        }
+      },
+      {
+        "id": "nezha",
+        "name": "哪吒",
+        "faction": "阐教",
+        "rarity": "immortal",
+        "hp": 435,
+        "atk": 99,
+        "def": 21,
+        "speed": 112,
+        "attackName": "火尖枪",
+        "skillName": "乾坤火环",
+        "skillDescription": "火环覆盖全敌，造成 105% 伤害并灼烧 2 回合；对低血或受削弱目标追加一次 60% 追击。",
+        "passiveDescription": "每个正常行动至多追击一次，追击不触发新的追击。",
+        "branches": [
+          "追火：追击提高到 100%，偏单体收割",
+          "散焰：群攻提高到 130%，偏清场"
+        ],
+        "treasure": "乾坤圈",
+        "treasureEffect": "一段：追击优先攻击后排最低血目标，且可触及后排。",
+        "fx": "fire-ring",
+        "color": "#e78667",
+        "portraitIndex": 1,
+        "background": "莲花化身",
+        "skill": {
+          "target": "allEnemies",
+          "multiplier": 1.05,
+          "cooldown": 2,
+          "turns": 2,
+          "triggerLimit": 1,
+          "effect": "burn+follow",
+          "fx": "fire-ring",
+          "shape": "旋转双火环",
+          "trajectory": "环形扩张，折返追击",
+          "beats": [
+            0,
+            120,
+            250,
+            390
+          ]
+        }
+      },
+      {
+        "id": "taiyi",
+        "name": "太乙真人",
+        "faction": "阐教",
+        "rarity": "immortal",
+        "hp": 500,
+        "atk": 77,
+        "def": 27,
+        "speed": 90,
+        "attackName": "拂尘清风",
+        "skillName": "莲华护生",
+        "skillDescription": "恢复全队相当于攻击 95% 的生命，净化每人一个减益，并给予 12% 最大生命护盾。",
+        "passiveDescription": "每轮首次治疗低于一半生命者，额外恢复攻击 35%。",
+        "branches": [
+          "长明：附加 2 回合持续恢复",
+          "法焰：恢复净化仍生效，同时灼烧全敌"
+        ],
+        "treasure": "九龙神火罩",
+        "treasureEffect": "一段：护盾额外增加 8% 最大生命。",
+        "fx": "lotus-flame",
+        "color": "#e7c58f",
+        "portraitIndex": 2,
+        "background": "乾元山金光洞",
+        "skill": {
+          "target": "allAllies",
+          "multiplier": 0.95,
+          "cooldown": 3,
+          "turns": 2,
+          "triggerLimit": 1,
+          "effect": "heal+cleanse+shield",
+          "fx": "lotus-flame",
+          "shape": "莲华与九焰",
+          "trajectory": "花瓣向队伍展开",
+          "beats": [
+            0,
+            140,
+            310
+          ]
+        }
+      },
+      {
+        "id": "leizhenzi",
+        "name": "雷震子",
+        "faction": "阐教",
+        "rarity": "immortal",
+        "hp": 470,
+        "atk": 92,
+        "def": 24,
+        "speed": 100,
+        "attackName": "风雷棍",
+        "skillName": "风雷折势",
+        "skillDescription": "雷击全敌，造成 110% 伤害，削减敌方蓄势 1 点与首领定力 2 点。",
+        "passiveDescription": "首次命中蓄势中的目标，本轮为全队提供 8% 最大生命护盾。",
+        "branches": [
+          "摧势：额外削减 1 点蓄势与 2 点定力",
+          "疾雷：命中后全队速度提高 15%，持续 2 回合"
+        ],
+        "treasure": "风雷双翼",
+        "treasureEffect": "一段：雷翼护盾提高至 14%；神通无蓄势目标时也可触发，每轮仍至多一次。",
+        "fx": "chain-lightning",
+        "color": "#9ba9e1",
+        "portraitIndex": 3,
+        "background": "风雷羽翼",
+        "skill": {
+          "target": "allEnemies",
+          "multiplier": 1.1,
+          "cooldown": 2,
+          "turns": 2,
+          "triggerLimit": 1,
+          "effect": "chargeDown+willDown",
+          "fx": "chain-lightning",
+          "shape": "分叉雷纹",
+          "trajectory": "由前至后逐个跳跃",
+          "beats": [
+            0,
+            140,
+            310
+          ]
+        }
+      },
+      {
+        "id": "tongtian",
+        "name": "通天教主",
+        "faction": "截教",
+        "rarity": "divine",
+        "hp": 505,
+        "atk": 110,
+        "def": 26,
+        "speed": 92,
+        "attackName": "青萍剑",
+        "skillName": "四象剑阵",
+        "skillDescription": "剑阵对全敌造成 120% 伤害，每层阵势另加 15%，施放后积累一层阵势（最多 3 层）。",
+        "passiveDescription": "每次正常攻击积累一层阵势，最多 3 层；可独立成阵。",
+        "branches": [
+          "镇阵：剑阵同时为全队加 10% 护盾",
+          "绝锋：消耗阵势，对最低血敌另斩 90%＋每层10%"
+        ],
+        "treasure": "青萍剑",
+        "treasureEffect": "一段：开场获得一层阵势。",
+        "fx": "sword-array",
+        "color": "#94bfc0",
+        "portraitIndex": 4,
+        "background": "碧游宫教主",
+        "skill": {
+          "target": "allEnemies",
+          "multiplier": 1.2,
+          "cooldown": 2,
+          "turns": 2,
+          "triggerLimit": 3,
+          "effect": "formation",
+          "fx": "sword-array",
+          "shape": "四把展开长剑与阵盘",
+          "trajectory": "四角展开，次第落剑",
+          "beats": [
+            0,
+            100,
+            200,
+            350
+          ]
+        }
+      },
+      {
+        "id": "zhaogongming",
+        "name": "赵公明",
+        "faction": "截教",
+        "rarity": "divine",
+        "hp": 630,
+        "atk": 92,
+        "def": 35,
+        "speed": 82,
+        "attackName": "金鞭落",
+        "skillName": "定海珠环",
+        "skillDescription": "全队获得 16% 最大生命护盾；对目标进行三段各 55% 宝珠打击，自身获得反制 2 回合。",
+        "passiveDescription": "友方以护盾、护持或护卫抵挡直接攻击后，每轮至多一次以 60% 伤害反制；追加不触发新的反制。",
+        "branches": [
+          "镇海：全队护盾提高到 23%",
+          "连珠：三段攻击提高到各 75%"
+        ],
+        "treasure": "定海珠",
+        "treasureEffect": "一段：护盾破裂后、无盾时仍可反制，反制次数仍限每轮一次。",
+        "fx": "pearl-orbit",
+        "color": "#b6b5da",
+        "portraitIndex": 5,
+        "background": "峨眉山罗浮洞",
+        "skill": {
+          "target": "enemyFront",
+          "multiplier": 0.55,
+          "cooldown": 3,
+          "turns": 2,
+          "triggerLimit": 1,
+          "effect": "shield+multi+counter",
+          "fx": "pearl-orbit",
+          "shape": "三颗绕身宝珠",
+          "trajectory": "环绕护体，再三段弧线射出",
+          "beats": [
+            0,
+            100,
+            230,
+            360
+          ]
+        }
+      },
+      {
+        "id": "yunxiao",
+        "name": "云霄",
+        "faction": "截教",
+        "rarity": "divine",
+        "hp": 500,
+        "atk": 86,
+        "def": 27,
+        "speed": 104,
+        "attackName": "云绫",
+        "skillName": "混元金斗",
+        "skillDescription": "金斗对全敌造成 85% 伤害，削弱其攻击 25% 与防御 20%，持续 2 回合；首领削减定力 4 点。",
+        "passiveDescription": "首领定力耗尽时产生破绽；普通敌人每轮最多被金斗牵制一个。",
+        "branches": [
+          "缚阵：牵制首个普通敌人一轮；首领再减 2 定力",
+          "解护：移除全敌普通增益并削减 35% 当前护盾"
+        ],
+        "treasure": "混元金斗",
+        "treasureEffect": "一段：减益持续增加至 3 回合。",
+        "fx": "gold-dipper",
+        "color": "#d7be83",
+        "portraitIndex": 6,
+        "background": "三仙岛长姊",
+        "skill": {
+          "target": "allEnemies",
+          "multiplier": 0.85,
+          "cooldown": 2,
+          "turns": 2,
+          "triggerLimit": 1,
+          "effect": "weaken+defDown+willDown",
+          "fx": "gold-dipper",
+          "shape": "金斗与盘旋云纹",
+          "trajectory": "高处倾下，阵纹收拢",
+          "beats": [
+            0,
+            140,
+            310
+          ]
+        }
+      },
+      {
+        "id": "qiongxiao",
+        "name": "琼霄",
+        "faction": "截教",
+        "rarity": "immortal",
+        "hp": 440,
+        "atk": 105,
+        "def": 22,
+        "speed": 108,
+        "attackName": "虹刃",
+        "skillName": "金蛟断云",
+        "skillDescription": "破阵：指定任意敌人，造成 180% 伤害；若有任意通用减益，伤害提高 35%。",
+        "passiveDescription": "击倒目标后为最低血队友恢复攻击 65%，每轮一次。",
+        "branches": [
+          "斩弱：对削弱目标额外移除 40% 护盾",
+          "掠阵：主目标之外再伤两敌各 65%"
+        ],
+        "treasure": "金蛟剪",
+        "treasureEffect": "一段：命中削弱目标降低自己神通冷却 1（每次施法一次）。",
+        "fx": "twin-scissors",
+        "color": "#dfae90",
+        "portraitIndex": 7,
+        "background": "三仙岛虹光",
+        "skill": {
+          "target": "enemyAny",
+          "multiplier": 1.8,
+          "cooldown": 2,
+          "turns": 2,
+          "triggerLimit": 1,
+          "effect": "debuffExploit",
+          "fx": "twin-scissors",
+          "shape": "交错双蛟金刃",
+          "trajectory": "两弧合拢剪击",
+          "beats": [
+            0,
+            140,
+            310
+          ]
+        }
+      },
+      {
+        "id": "bixiao",
+        "name": "碧霄",
+        "faction": "截教",
+        "rarity": "immortal",
+        "hp": 535,
+        "atk": 79,
+        "def": 29,
+        "speed": 94,
+        "attackName": "碧羽",
+        "skillName": "碧水守阵",
+        "skillDescription": "全队获得 22% 最大生命护盾与 2 回合护持（减伤 25%），维持阵势。",
+        "passiveDescription": "每轮队伍首次破盾，给最低血队友补 8% 最大生命护盾。",
+        "branches": [
+          "坚壁：盾额外增加 8%",
+          "回澜：全队同时恢复攻击 75% 生命"
+        ],
+        "treasure": "碧霞环",
+        "treasureEffect": "一段：维阵同时赋予全队 15% 速度增益 2 回合。",
+        "fx": "water-ward",
+        "color": "#8bcbaa",
+        "portraitIndex": 8,
+        "background": "三仙岛碧霞",
+        "skill": {
+          "target": "allAllies",
+          "multiplier": 0.22,
+          "cooldown": 3,
+          "turns": 2,
+          "triggerLimit": 1,
+          "effect": "shield+guard",
+          "fx": "water-ward",
+          "shape": "水纹六瓣法阵",
+          "trajectory": "由地面升起环形护罩",
+          "beats": [
+            0,
+            140,
+            310
+          ]
+        }
+      },
+      {
+        "id": "zhouwang",
+        "name": "纣王",
+        "faction": "人间",
+        "rarity": "divine",
+        "hp": 615,
+        "atk": 103,
+        "def": 29,
+        "speed": 88,
+        "attackName": "帝刃",
+        "skillName": "玄鸟战令",
+        "skillDescription": "对前排目标造成 160% 伤害；全队攻击提高 20%，持续 2 回合。每点战意提高本次伤害 15%（最多 3 点）。",
+        "passiveDescription": "受直接攻击积累战意（最多 3 点），每轮至多一次 50% 反击；不消耗永久资源。",
+        "branches": [
+          "霸击：消耗战意追加一次 80% 打击",
+          "号令：全队同时获得 12% 最大生命护盾"
+        ],
+        "treasure": "玄鸟王印",
+        "treasureEffect": "一段：开场获得一点战意，战令额外削减 2 定力。",
+        "fx": "imperial-banner",
+        "color": "#ce8979",
+        "portraitIndex": 9,
+        "background": "朝歌 · 商王",
+        "skill": {
+          "target": "enemyFront",
+          "multiplier": 1.6,
+          "cooldown": 3,
+          "turns": 2,
+          "triggerLimit": 1,
+          "effect": "morale+atkUp",
+          "fx": "imperial-banner",
+          "shape": "玄鸟与王印",
+          "trajectory": "高举号令，重刃下落",
+          "beats": [
+            0,
+            140,
+            310
+          ]
+        }
+      },
+      {
+        "id": "bigan",
+        "name": "比干",
+        "faction": "人间",
+        "rarity": "immortal",
+        "hp": 520,
+        "atk": 79,
+        "def": 27,
+        "speed": 95,
+        "attackName": "正气笔",
+        "skillName": "七窍明心",
+        "skillDescription": "全队恢复攻击 100% 的生命，净化每人一个减益，获得 2 回合持续恢复（每轮攻击 35%）。",
+        "passiveDescription": "本方每轮首次受直接攻击后，为最低血队友恢复攻击 25%，每轮一次。",
+        "branches": [
+          "安神：额外净化一个减益，并减弱敌方蓄势 1 点",
+          "明心：持续恢复提高到每轮攻击 55%"
+        ],
+        "treasure": "玲珑心灯",
+        "treasureEffect": "一段：治疗后生命仍低于 45% 的队友额外获 12% 最大生命护盾。",
+        "fx": "heart-lantern",
+        "color": "#d1cfaa",
+        "portraitIndex": 10,
+        "background": "朝歌 · 商臣",
+        "skill": {
+          "target": "allAllies",
+          "multiplier": 1,
+          "cooldown": 3,
+          "turns": 2,
+          "triggerLimit": 1,
+          "effect": "heal+cleanse+regen",
+          "fx": "heart-lantern",
+          "shape": "七瓣心灯",
+          "trajectory": "灯火跳动，细光连结全队",
+          "beats": [
+            0,
+            140,
+            310
+          ]
+        }
+      },
+      {
+        "id": "huangfeihu",
+        "name": "黄飞虎",
+        "faction": "人间",
+        "rarity": "immortal",
+        "hp": 690,
+        "atk": 80,
+        "def": 38,
+        "speed": 78,
+        "attackName": "镇军枪",
+        "skillName": "武成护军",
+        "skillDescription": "保护全队 2 回合：分担受击者 40% 直接伤害（群攻不分担），自身获得 25% 最大生命护盾与护持。",
+        "passiveDescription": "替队友分担伤害后自身仍存活时，队友获得 15% 攻击增益 2 回合，每轮至多两次。",
+        "branches": [
+          "固守：自身护盾增加到 38%",
+          "奋军：队伍获得攻击 20% 增益"
+        ],
+        "treasure": "五色神牛令",
+        "treasureEffect": "一段：护军为最低血队友追加 18% 最大生命护盾。",
+        "fx": "tiger-guard",
+        "color": "#c7b080",
+        "portraitIndex": 11,
+        "background": "西岐 · 武成王",
+        "skill": {
+          "target": "allAllies",
+          "multiplier": 0.25,
+          "cooldown": 2,
+          "turns": 2,
+          "triggerLimit": 2,
+          "effect": "protect+shield+guard",
+          "fx": "tiger-guard",
+          "shape": "军旗与虎纹盾",
+          "trajectory": "前排展开横向盾墙",
+          "beats": [
+            0,
+            140,
+            310
+          ]
+        }
+      },
+      {
+        "id": "jifa",
+        "name": "姬发",
+        "faction": "人间",
+        "rarity": "immortal",
+        "hp": 495,
+        "atk": 87,
+        "def": 25,
+        "speed": 98,
+        "attackName": "岐山弓",
+        "skillName": "凤鸣集令",
+        "skillDescription": "破阵：指定敌人，造成 110% 伤害并施加集火标记 2 回合；全队获得攻击 20% 增益。",
+        "passiveDescription": "队友攻击集火目标时附加 15% 伤害，与通用天眼标记共用规则，不叠加无限乘区。",
+        "branches": [
+          "疾令：全队同时速度提高 20%",
+          "稳令：全队同时获得 12% 最大生命护盾"
+        ],
+        "treasure": "凤鸣弓",
+        "treasureEffect": "一段：号令额外恢复最低血队友攻击 90% 的生命。",
+        "fx": "phoenix-arrow",
+        "color": "#d3c48d",
+        "portraitIndex": 12,
+        "background": "西岐 · 周王",
+        "skill": {
+          "target": "enemyAny",
+          "multiplier": 1.1,
+          "cooldown": 2,
+          "turns": 2,
+          "triggerLimit": 1,
+          "effect": "mark+atkUp",
+          "fx": "phoenix-arrow",
+          "shape": "凤凰箭与旌旗",
+          "trajectory": "箭弧锁定，旗纹展开",
+          "beats": [
+            0,
+            140,
+            310
+          ]
+        }
+      },
+      {
+        "id": "xuandu",
+        "name": "玄都法师",
+        "faction": "人教",
+        "rarity": "divine",
+        "hp": 515,
+        "atk": 76,
+        "def": 29,
+        "speed": 102,
+        "attackName": "阴阳尘",
+        "skillName": "两仪调和",
+        "skillDescription": "选择“来源 → 接受者”。复制来源一个普通可转移增益到接受者，并给予 18% 最大生命护盾；无合法增益时仍有护盾。",
+        "passiveDescription": "调和后为生命最低者恢复攻击 60%；不能复制额外回合、被动、首领状态或复制事件。",
+        "branches": [
+          "转阳：移除来源所选增益，接受者护盾增加到 30%",
+          "守衡：复制一个增益，来源同时获得 12% 护盾"
+        ],
+        "treasure": "两仪拂尘",
+        "treasureEffect": "一段：调和额外净化接受者一个减益。",
+        "fx": "yin-yang",
+        "color": "#a1c0c5",
+        "portraitIndex": 13,
+        "background": "人教 · 调和阴阳",
+        "skill": {
+          "target": "sourceRecipient",
+          "multiplier": 0.18,
+          "cooldown": 2,
+          "turns": 2,
+          "triggerLimit": 1,
+          "effect": "copy+shield",
+          "fx": "yin-yang",
+          "shape": "双鱼太极环",
+          "trajectory": "来源半环转向接受者，合成完整太极",
+          "beats": [
+            0,
+            140,
+            310
+          ]
+        }
+      }
+    ],
+    "CHARACTER_GUIDES": {
+      "yangjian": {
+        "role": "建立锁定与破防，普遍放大队友合法攻击。",
+        "partners": [
+          "nezha",
+          "qiongxiao"
+        ],
+        "substitutes": [
+          "jifa"
+        ],
+        "route": "mark-follow",
+        "tip": "姬发锁定、破护诀也能建立集火条件。"
+      },
+      "nezha": {
+        "role": "群敌清理；通用减益或低生命目标使正常行动产生一次追击。",
+        "partners": [
+          "yangjian",
+          "yunxiao",
+          "jifa"
+        ],
+        "substitutes": [
+          "leizhenzi",
+          "tongtian"
+        ],
+        "route": "mark-follow",
+        "tip": "任何通用减益都能开启追击，无需指定搭档。"
+      },
+      "taiyi": {
+        "role": "恢复、净化与护盾同时保全队伍。",
+        "partners": [
+          "huangfeihu",
+          "zhaogongming"
+        ],
+        "substitutes": [
+          "bigan"
+        ],
+        "route": "ward-counter",
+        "tip": "比干加护持、清心诀可分工替代。"
+      },
+      "leizhenzi": {
+        "role": "群攻清场并削减可见蓄势和首领定力。",
+        "partners": [
+          "bigan",
+          "yunxiao"
+        ],
+        "substitutes": [
+          "yunxiao",
+          "bigan"
+        ],
+        "route": "support",
+        "tip": "护持承受预告强招也是合法应对。"
+      },
+      "tongtian": {
+        "role": "积累已有剑阵后群体爆发，独立运行。",
+        "partners": [
+          "yunxiao",
+          "bixiao"
+        ],
+        "substitutes": [
+          "nezha",
+          "leizhenzi"
+        ],
+        "route": "array-pressure",
+        "tip": "哪吒、雷震子清场，不要求三霄齐全。"
+      },
+      "zhaogongming": {
+        "role": "珠环护盾；己方被护盾或护持抵挡的直接攻击引发每轮一次反制。",
+        "partners": [
+          "huangfeihu",
+          "bixiao",
+          "taiyi"
+        ],
+        "substitutes": [
+          "huangfeihu",
+          "bixiao"
+        ],
+        "route": "ward-counter",
+        "tip": "通用护持和法门也能创造抵挡条件。"
+      },
+      "yunxiao": {
+        "role": "群体削弱和破防；三霄齐全时可选择合阵，普通式仍独立可用。",
+        "partners": [
+          "qiongxiao",
+          "tongtian",
+          "bixiao"
+        ],
+        "substitutes": [
+          "yangjian",
+          "jifa"
+        ],
+        "route": "array-pressure",
+        "tip": "破护诀、太乙法焰等通用减益仍支持琼霄。"
+      },
+      "qiongxiao": {
+        "role": "利用任意通用减益集中打击，击倒后有限恢复。",
+        "partners": [
+          "yunxiao",
+          "yangjian",
+          "nezha"
+        ],
+        "substitutes": [
+          "yangjian",
+          "zhouwang"
+        ],
+        "route": "array-pressure",
+        "tip": "没有云霄仍可利用锁定、破防或灼烧。"
+      },
+      "bixiao": {
+        "role": "全队护盾、减伤和每轮续盾；维持已有剑阵。",
+        "partners": [
+          "tongtian",
+          "zhaogongming",
+          "yunxiao"
+        ],
+        "substitutes": [
+          "huangfeihu",
+          "taiyi"
+        ],
+        "route": "array-pressure",
+        "tip": "没有通天和另两霄仍完整提供防护。"
+      },
+      "zhouwang": {
+        "role": "受直接攻击积战意，消耗后爆发并给全队战令。",
+        "partners": [
+          "huangfeihu",
+          "jifa",
+          "bigan"
+        ],
+        "substitutes": [
+          "jifa",
+          "yangjian"
+        ],
+        "route": "morale-focus",
+        "tip": "战令适用于混教派队伍，姬发锁定适用于所有攻击者。"
+      },
+      "bigan": {
+        "role": "有效恢复与净化，A分支还能削势。",
+        "partners": [
+          "huangfeihu",
+          "leizhenzi"
+        ],
+        "substitutes": [
+          "taiyi"
+        ],
+        "route": "morale-focus",
+        "tip": "太乙或清心诀可提供不同组合的续航。"
+      },
+      "huangfeihu": {
+        "role": "分担单体直接伤害；护卫后给被保护者战令。",
+        "partners": [
+          "zhaogongming",
+          "zhouwang",
+          "bigan"
+        ],
+        "substitutes": [
+          "bixiao",
+          "zhaogongming"
+        ],
+        "route": "ward-counter",
+        "tip": "群攻用全队护持、碧霄和法门承受。"
+      },
+      "jifa": {
+        "role": "通用锁定与全队战令，提供集火方向。",
+        "partners": [
+          "zhouwang",
+          "nezha",
+          "yangjian"
+        ],
+        "substitutes": [
+          "yangjian",
+          "zhouwang"
+        ],
+        "route": "mark-follow",
+        "tip": "混教派正常受益；同名增益取较强值而非无限叠加。"
+      },
+      "xuandu": {
+        "role": "仅转移/复制一项战令、疾行、护持或持续恢复。",
+        "partners": [
+          "jifa",
+          "bixiao",
+          "bigan"
+        ],
+        "substitutes": [
+          "bixiao",
+          "taiyi"
+        ],
+        "route": "support",
+        "tip": "无可用增益仍给基础护盾；不复制独有资源、合阵或机缘。"
+      }
+    },
+    "CHARACTER_SYNERGIES": {
+      "yangjian": {
+        "purpose": "建立锁定与破防，普遍放大队友合法攻击。",
+        "tags": [
+          "识破",
+          "破防"
+        ],
+        "partners": [
+          "nezha",
+          "qiongxiao"
+        ],
+        "alternative": "姬发锁定、破护诀也能建立集火条件。"
+      },
+      "nezha": {
+        "purpose": "群敌清理；通用减益或低生命目标使正常行动产生一次追击。",
+        "tags": [
+          "追击",
+          "群攻"
+        ],
+        "partners": [
+          "yangjian",
+          "yunxiao",
+          "jifa"
+        ],
+        "alternative": "任何通用减益都能开启追击，无需指定搭档。"
+      },
+      "taiyi": {
+        "purpose": "恢复、净化与护盾同时保全队伍。",
+        "tags": [
+          "净化",
+          "恢复",
+          "护盾"
+        ],
+        "partners": [
+          "huangfeihu",
+          "zhaogongming"
+        ],
+        "alternative": "比干加护持、清心诀可分工替代。"
+      },
+      "leizhenzi": {
+        "purpose": "群攻清场并削减可见蓄势和首领定力。",
+        "tags": [
+          "削势",
+          "群攻"
+        ],
+        "partners": [
+          "bigan",
+          "yunxiao"
+        ],
+        "alternative": "护持承受预告强招也是合法应对。"
+      },
+      "tongtian": {
+        "purpose": "积累已有剑阵后群体爆发，独立运行。",
+        "tags": [
+          "阵势",
+          "群攻"
+        ],
+        "partners": [
+          "yunxiao",
+          "bixiao"
+        ],
+        "alternative": "哪吒、雷震子清场，不要求三霄齐全。"
+      },
+      "zhaogongming": {
+        "purpose": "珠环护盾；己方被护盾或护持抵挡的直接攻击引发每轮一次反制。",
+        "tags": [
+          "护盾",
+          "反击"
+        ],
+        "partners": [
+          "huangfeihu",
+          "bixiao",
+          "taiyi"
+        ],
+        "alternative": "通用护持和法门也能创造抵挡条件。"
+      },
+      "yunxiao": {
+        "purpose": "群体削弱和破防；三霄齐全时可选择合阵，普通式仍独立可用。",
+        "tags": [
+          "削弱",
+          "破防",
+          "合阵"
+        ],
+        "partners": [
+          "qiongxiao",
+          "tongtian",
+          "bixiao"
+        ],
+        "alternative": "破护诀、太乙法焰等通用减益仍支持琼霄。"
+      },
+      "qiongxiao": {
+        "purpose": "利用任意通用减益集中打击，击倒后有限恢复。",
+        "tags": [
+          "利用削弱",
+          "集火"
+        ],
+        "partners": [
+          "yunxiao",
+          "yangjian",
+          "nezha"
+        ],
+        "alternative": "没有云霄仍可利用锁定、破防或灼烧。"
+      },
+      "bixiao": {
+        "purpose": "全队护盾、减伤和每轮续盾；维持已有剑阵。",
+        "tags": [
+          "护盾",
+          "续阵"
+        ],
+        "partners": [
+          "tongtian",
+          "zhaogongming",
+          "yunxiao"
+        ],
+        "alternative": "没有通天和另两霄仍完整提供防护。"
+      },
+      "zhouwang": {
+        "purpose": "受直接攻击积战意，消耗后爆发并给全队战令。",
+        "tags": [
+          "战意",
+          "战令",
+          "反击"
+        ],
+        "partners": [
+          "huangfeihu",
+          "jifa",
+          "bigan"
+        ],
+        "alternative": "战令适用于混教派队伍，姬发锁定适用于所有攻击者。"
+      },
+      "bigan": {
+        "purpose": "有效恢复与净化，A分支还能削势。",
+        "tags": [
+          "恢复",
+          "净化"
+        ],
+        "partners": [
+          "huangfeihu",
+          "leizhenzi"
+        ],
+        "alternative": "太乙或清心诀可提供不同组合的续航。"
+      },
+      "huangfeihu": {
+        "purpose": "分担单体直接伤害；护卫后给被保护者战令。",
+        "tags": [
+          "护卫",
+          "战令"
+        ],
+        "partners": [
+          "zhaogongming",
+          "zhouwang",
+          "bigan"
+        ],
+        "alternative": "群攻用全队护持、碧霄和法门承受。"
+      },
+      "jifa": {
+        "purpose": "通用锁定与全队战令，提供集火方向。",
+        "tags": [
+          "锁定",
+          "战令"
+        ],
+        "partners": [
+          "zhouwang",
+          "nezha",
+          "yangjian"
+        ],
+        "alternative": "混教派正常受益；同名增益取较强值而非无限叠加。"
+      },
+      "xuandu": {
+        "purpose": "仅转移/复制一项战令、疾行、护持或持续恢复。",
+        "tags": [
+          "增益调和",
+          "护盾"
+        ],
+        "partners": [
+          "jifa",
+          "bixiao",
+          "bigan"
+        ],
+        "alternative": "无可用增益仍给基础护盾；不复制独有资源、合阵或机缘。"
+      }
+    },
+    "COMBAT_RULES": {
+      "levelCap": 20,
+      "treasureCap": 3,
+      "hpGrowth": 0.115,
+      "attackGrowth": 0.105,
+      "defenseGrowth": 0.055,
+      "attackMultiplier": 1,
+      "minimumDamage": 5,
+      "damageVariance": 0.05,
+      "shieldCap": 0.75,
+      "guardReduction": 0.38,
+      "guardShield": 0.12,
+      "guardTurns": 2,
+      "protectShare": 0.4,
+      "maximumRounds": 60,
+      "willRecovery": 2,
+      "defenseCoefficient": 0.62,
+      "generalMarkBonus": 0.15,
+      "shakenReduction": 0.3,
+      "shakenTurns": 2,
+      "shakenChargeDown": 1,
+      "treasureStatGrowth": 0.06,
+      "roundTiming": "新一轮开始：结算灼烧/恢复 → 全体状态剩余回合减 1 → 冷却减 1 → 重算速度顺序。CD2 在施法后的下一轮为1、再下一轮为0并可用。",
+      "statusTiming": "状态的2回合指将跨越接下来两次轮开始；在第二次轮开始持续结算后移除。牵制按一次行动消耗。",
+      "branchesOpenLevel": 3
+    },
+    "COMBINED_FORM": {
+      "name": "三霄合阵",
+      "required": [
+        "yunxiao",
+        "qiongxiao",
+        "bixiao"
+      ],
+      "blockingStatuses": [
+        "stun"
+      ],
+      "cooldown": 3,
+      "multiplier": 0.8,
+      "weaken": 0.3,
+      "defenseDown": 0.25,
+      "shield": 0.12,
+      "reduction": 0.15,
+      "turns": 2,
+      "willDown": 4,
+      "fx": "three-cloud-array",
+      "description": "三霄均存活且均未受牵制，云霄可正常施法时消耗她本次行动；全敌 80% 伤害、攻击削弱30%及破防25%，全队12%护盾与15%减伤，2回合；与普通式共享CD，合阵写入CD3。琼霄、碧霄继续各自正常行动；同伴受牵制时仍可用普通式。"
+    },
+    "ENEMY_SKILLS": {
+      "attack": {
+        "multiplier": 1
+      },
+      "stone": {
+        "selfShield": 0.16,
+        "allyShield": 0.18,
+        "cooldown": 2,
+        "turns": 2
+      },
+      "shield": {
+        "selfShield": 0.22,
+        "reduction": 0.2,
+        "cooldown": 3,
+        "turns": 2
+      },
+      "burner": {
+        "multiplier": 0.55,
+        "burn": 0.22,
+        "cooldown": 3,
+        "turns": 2
+      },
+      "healer": {
+        "multiplier": 1.8,
+        "threshold": 0.85,
+        "cooldown": 2
+      },
+      "charger": {
+        "charge": 2,
+        "multiplier": 1.2,
+        "perCharge": 0.65,
+        "cooldown": 2
+      },
+      "furnace": {
+        "charge": 2,
+        "multiplier": 1.1,
+        "perCharge": 0.45,
+        "phaseBonus": 0.15,
+        "burn": 0.22,
+        "turns": 2,
+        "cooldown": 2
+      },
+      "dragon": {
+        "charge": 3,
+        "multiplier": 1.1,
+        "perCharge": 0.45,
+        "phaseBonus": 0.15,
+        "phaseShield": 0.1,
+        "phaseCharge": 1,
+        "phaseThreshold": 0.5,
+        "cooldown": 2
+      }
+    },
+    "METHODS": [
+      {
+        "id": "break",
+        "name": "破护诀",
+        "description": "每战一次；在本方行动时独立施放，全敌护盾减少 60%，防御降低 25% 持续 2 回合，并削减 2 定力。",
+        "maxUses": 1,
+        "shieldCut": 0.6,
+        "power": 0.25,
+        "turns": 2,
+        "reduction": 0,
+        "willDown": 2,
+        "cleanseCount": 0
+      },
+      {
+        "id": "ward",
+        "name": "同心护持",
+        "description": "每战一次；本方全队获得 20% 最大生命护盾与 25% 减伤，持续 2 回合。",
+        "maxUses": 1,
+        "shieldCut": 0,
+        "power": 0.2,
+        "turns": 2,
+        "reduction": 0.25,
+        "willDown": 0,
+        "cleanseCount": 0
+      },
+      {
+        "id": "cleanse",
+        "name": "清心诀",
+        "description": "每战一次；本方全队净化两个减益并恢复 15% 最大生命。",
+        "maxUses": 1,
+        "shieldCut": 0,
+        "power": 0.15,
+        "turns": 0,
+        "reduction": 0,
+        "willDown": 0,
+        "cleanseCount": 2
+      },
+      {
+        "id": "thunderward",
+        "name": "雷泽护持",
+        "description": "每战一次；全队获得 24% 最大生命护盾与 18% 减伤，持续 2 回合。占用原法门槽；仅雷泽传法用途启用时可装备。",
+        "maxUses": 1,
+        "shieldCut": 0,
+        "power": 0.24,
+        "turns": 2,
+        "reduction": 0.18,
+        "willDown": 0,
+        "cleanseCount": 0
+      }
+    ],
+    "PILLS": [
+      {
+        "id": "training",
+        "name": "聚气丹",
+        "description": "开场全队攻击提高 12%，持续 3 回合。",
+        "power": 0.12,
+        "turns": 3
+      },
+      {
+        "id": "ward",
+        "name": "护元丹",
+        "description": "开场全队获得 20% 最大生命护盾。",
+        "power": 0.2,
+        "turns": 0
+      },
+      {
+        "id": "heal",
+        "name": "回春丹",
+        "description": "开场赋予持续恢复，每轮恢复 6% 最大生命，持续 3 回合。",
+        "power": 0.06,
+        "turns": 3
+      },
+      {
+        "id": "cleanse",
+        "name": "清心丹",
+        "description": "开场为每名友方准备一次净化：本战首次受到普通减益时立即移除该减益，每人仅一次。与其他丹药共用唯一携带槽，不复活。",
+        "power": 1,
+        "turns": 0
+      }
+    ],
+    "SECRET_ENCOUNTERS": {
+      "danfire": {
+        "1": {
+          "name": "丹火入口",
+          "description": "炉灵灼烧，守卫无初始盾。",
+          "stageId": 8,
+          "enemies": [
+            {
+              "id": "df_soldier",
+              "name": "遗境炉卫",
+              "role": "soldier",
+              "row": "front",
+              "hp": 560,
+              "atk": 82,
+              "def": 25,
+              "speed": 72,
+              "shield": 0,
+              "will": 0
+            },
+            {
+              "id": "df_burner",
+              "name": "遗境火灵",
+              "role": "burner",
+              "row": "back",
+              "hp": 440,
+              "atk": 80,
+              "def": 18,
+              "speed": 86,
+              "shield": 0,
+              "will": 0
+            },
+            {
+              "id": "df_healer",
+              "name": "丹息药灵",
+              "role": "healer",
+              "row": "back",
+              "hp": 400,
+              "atk": 65,
+              "def": 20,
+              "speed": 79,
+              "shield": 0,
+              "will": 0
+            }
+          ]
+        },
+        "3": {
+          "name": "凝火护阵",
+          "description": "开场护盾与连续灼烧；破障、澄明或防护均可。",
+          "stageId": 8,
+          "enemies": [
+            {
+              "id": "df_shield",
+              "name": "凝火甲卫",
+              "role": "shield",
+              "row": "front",
+              "hp": 900,
+              "atk": 96,
+              "def": 32,
+              "speed": 73,
+              "shield": 260,
+              "will": 0
+            },
+            {
+              "id": "df_charge",
+              "name": "炉前重卫",
+              "role": "charger",
+              "row": "front",
+              "hp": 900,
+              "atk": 112,
+              "def": 30,
+              "speed": 78,
+              "shield": 0,
+              "will": 0
+            },
+            {
+              "id": "df_elite_fire",
+              "name": "凝火炉灵",
+              "role": "burner",
+              "row": "back",
+              "hp": 650,
+              "atk": 92,
+              "def": 24,
+              "speed": 90,
+              "shield": 0,
+              "will": 0
+            }
+          ]
+        },
+        "5": {
+          "name": "遗境炉心",
+          "description": "炉心蓄势重击，药灵维持；削势与护持净化有不同收益。",
+          "stageId": 8,
+          "enemies": [
+            {
+              "id": "df_boss",
+              "name": "遗境炉君",
+              "role": "furnace",
+              "row": "front",
+              "hp": 3000,
+              "atk": 132,
+              "def": 37,
+              "speed": 82,
+              "shield": 180,
+              "will": 10
+            },
+            {
+              "id": "df_boss_fire",
+              "name": "遗境丹火",
+              "role": "burner",
+              "row": "back",
+              "hp": 600,
+              "atk": 95,
+              "def": 22,
+              "speed": 90,
+              "shield": 0,
+              "will": 0
+            },
+            {
+              "id": "df_boss_heal",
+              "name": "炉心药侍",
+              "role": "healer",
+              "row": "back",
+              "hp": 540,
+              "atk": 78,
+              "def": 23,
+              "speed": 80,
+              "shield": 0,
+              "will": 0
+            }
+          ]
+        }
+      },
+      "thundermarsh": {
+        "1": {
+          "name": "雷泽残桥",
+          "description": "前排护盾与穿阵弓妖；关注后排生命。",
+          "stageId": 12,
+          "enemies": [
+            {
+              "id": "tz_shield",
+              "name": "残桥雷卫",
+              "role": "shield",
+              "row": "front",
+              "hp": 850,
+              "atk": 106,
+              "def": 31,
+              "speed": 79,
+              "shield": 220,
+              "will": 0
+            },
+            {
+              "id": "tz_arrow1",
+              "name": "泽弓影",
+              "role": "archer",
+              "row": "back",
+              "hp": 580,
+              "atk": 104,
+              "def": 22,
+              "speed": 102,
+              "shield": 0,
+              "will": 0
+            },
+            {
+              "id": "tz_arrow2",
+              "name": "泽弓影",
+              "role": "archer",
+              "row": "back",
+              "hp": 560,
+              "atk": 101,
+              "def": 22,
+              "speed": 99,
+              "shield": 0,
+              "will": 0
+            }
+          ]
+        },
+        "3": {
+          "name": "雷火交阵",
+          "description": "蓄势与灼烧同时出现，没有初始护盾。",
+          "stageId": 12,
+          "enemies": [
+            {
+              "id": "tz_charge",
+              "name": "雷泽重卫",
+              "role": "charger",
+              "row": "front",
+              "hp": 1250,
+              "atk": 130,
+              "def": 35,
+              "speed": 82,
+              "shield": 0,
+              "will": 0
+            },
+            {
+              "id": "tz_guard",
+              "name": "残境前卫",
+              "role": "soldier",
+              "row": "front",
+              "hp": 900,
+              "atk": 105,
+              "def": 28,
+              "speed": 85,
+              "shield": 0,
+              "will": 0
+            },
+            {
+              "id": "tz_fire",
+              "name": "雷火残灵",
+              "role": "burner",
+              "row": "back",
+              "hp": 730,
+              "atk": 110,
+              "def": 25,
+              "speed": 103,
+              "shield": 0,
+              "will": 0
+            }
+          ]
+        },
+        "5": {
+          "name": "雷泽残蛟",
+          "description": "护卫保护后排首领，半血雷暴与阶段护盾；可破阵削势或防护反制。",
+          "stageId": 12,
+          "enemies": [
+            {
+              "id": "tz_boss_guard",
+              "name": "残蛟甲卫",
+              "role": "shield",
+              "row": "front",
+              "hp": 1000,
+              "atk": 118,
+              "def": 36,
+              "speed": 78,
+              "shield": 260,
+              "will": 0
+            },
+            {
+              "id": "tz_boss",
+              "name": "雷泽残蛟",
+              "role": "dragon",
+              "row": "back",
+              "hp": 3900,
+              "atk": 155,
+              "def": 43,
+              "speed": 95,
+              "shield": 220,
+              "will": 12
+            },
+            {
+              "id": "tz_boss_fire",
+              "name": "雷泽残侍",
+              "role": "burner",
+              "row": "back",
+              "hp": 680,
+              "atk": 118,
+              "def": 26,
+              "speed": 105,
+              "shield": 0,
+              "will": 0
+            }
+          ]
+        }
+      }
+    },
+    "SKILL_CONFIG": {
+      "yangjian": {
+        "target": "enemyAny",
+        "multiplier": 1.9,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "mark+defDown",
+        "fx": "eye-spear",
+        "shape": "纵向眼纹与长刃",
+        "trajectory": "先锁定，再直线穿刺",
+        "beats": [
+          0,
+          140,
+          310
+        ]
+      },
+      "nezha": {
+        "target": "allEnemies",
+        "multiplier": 1.05,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "burn+follow",
+        "fx": "fire-ring",
+        "shape": "旋转双火环",
+        "trajectory": "环形扩张，折返追击",
+        "beats": [
+          0,
+          120,
+          250,
+          390
+        ]
+      },
+      "taiyi": {
+        "target": "allAllies",
+        "multiplier": 0.95,
+        "cooldown": 3,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "heal+cleanse+shield",
+        "fx": "lotus-flame",
+        "shape": "莲华与九焰",
+        "trajectory": "花瓣向队伍展开",
+        "beats": [
+          0,
+          140,
+          310
+        ]
+      },
+      "leizhenzi": {
+        "target": "allEnemies",
+        "multiplier": 1.1,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "chargeDown+willDown",
+        "fx": "chain-lightning",
+        "shape": "分叉雷纹",
+        "trajectory": "由前至后逐个跳跃",
+        "beats": [
+          0,
+          140,
+          310
+        ]
+      },
+      "tongtian": {
+        "target": "allEnemies",
+        "multiplier": 1.2,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 3,
+        "effect": "formation",
+        "fx": "sword-array",
+        "shape": "四把展开长剑与阵盘",
+        "trajectory": "四角展开，次第落剑",
+        "beats": [
+          0,
+          100,
+          200,
+          350
+        ]
+      },
+      "zhaogongming": {
+        "target": "enemyFront",
+        "multiplier": 0.55,
+        "cooldown": 3,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "shield+multi+counter",
+        "fx": "pearl-orbit",
+        "shape": "三颗绕身宝珠",
+        "trajectory": "环绕护体，再三段弧线射出",
+        "beats": [
+          0,
+          100,
+          230,
+          360
+        ]
+      },
+      "yunxiao": {
+        "target": "allEnemies",
+        "multiplier": 0.85,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "weaken+defDown+willDown",
+        "fx": "gold-dipper",
+        "shape": "金斗与盘旋云纹",
+        "trajectory": "高处倾下，阵纹收拢",
+        "beats": [
+          0,
+          140,
+          310
+        ]
+      },
+      "qiongxiao": {
+        "target": "enemyAny",
+        "multiplier": 1.8,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "debuffExploit",
+        "fx": "twin-scissors",
+        "shape": "交错双蛟金刃",
+        "trajectory": "两弧合拢剪击",
+        "beats": [
+          0,
+          140,
+          310
+        ]
+      },
+      "bixiao": {
+        "target": "allAllies",
+        "multiplier": 0.22,
+        "cooldown": 3,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "shield+guard",
+        "fx": "water-ward",
+        "shape": "水纹六瓣法阵",
+        "trajectory": "由地面升起环形护罩",
+        "beats": [
+          0,
+          140,
+          310
+        ]
+      },
+      "zhouwang": {
+        "target": "enemyFront",
+        "multiplier": 1.6,
+        "cooldown": 3,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "morale+atkUp",
+        "fx": "imperial-banner",
+        "shape": "玄鸟与王印",
+        "trajectory": "高举号令，重刃下落",
+        "beats": [
+          0,
+          140,
+          310
+        ]
+      },
+      "bigan": {
+        "target": "allAllies",
+        "multiplier": 1,
+        "cooldown": 3,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "heal+cleanse+regen",
+        "fx": "heart-lantern",
+        "shape": "七瓣心灯",
+        "trajectory": "灯火跳动，细光连结全队",
+        "beats": [
+          0,
+          140,
+          310
+        ]
+      },
+      "huangfeihu": {
+        "target": "allAllies",
+        "multiplier": 0.25,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 2,
+        "effect": "protect+shield+guard",
+        "fx": "tiger-guard",
+        "shape": "军旗与虎纹盾",
+        "trajectory": "前排展开横向盾墙",
+        "beats": [
+          0,
+          140,
+          310
+        ]
+      },
+      "jifa": {
+        "target": "enemyAny",
+        "multiplier": 1.1,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "mark+atkUp",
+        "fx": "phoenix-arrow",
+        "shape": "凤凰箭与旌旗",
+        "trajectory": "箭弧锁定，旗纹展开",
+        "beats": [
+          0,
+          140,
+          310
+        ]
+      },
+      "xuandu": {
+        "target": "sourceRecipient",
+        "multiplier": 0.18,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "copy+shield",
+        "fx": "yin-yang",
+        "shape": "双鱼太极环",
+        "trajectory": "来源半环转向接受者，合成完整太极",
+        "beats": [
+          0,
+          140,
+          310
+        ]
+      }
+    },
+    "SKILL_TUNING": {
+      "yangjian": {
+        "markBonus": 0.25,
+        "mark": 0.15,
+        "defenseDown": 0.3,
+        "treasureShieldCut": 0.4,
+        "branchFollow": 0.65,
+        "branchSpread": 2
+      },
+      "nezha": {
+        "burn": 0.22,
+        "follow": 0.6,
+        "branchFollow": 1,
+        "branchArea": 1.3,
+        "followHealthThreshold": 0.5
+      },
+      "taiyi": {
+        "shield": 0.12,
+        "treasureShield": 0.08,
+        "lowHealthHeal": 0.35,
+        "lowHealthThreshold": 0.5,
+        "regeneration": 0.35,
+        "branchBurn": 0.38,
+        "cleanseCount": 1
+      },
+      "leizhenzi": {
+        "chargeDown": 1,
+        "branchChargeDown": 2,
+        "willDown": 2,
+        "branchWillDown": 4,
+        "shield": 0.08,
+        "treasureShield": 0.14,
+        "haste": 0.15
+      },
+      "tongtian": {
+        "perLayer": 0.15,
+        "consumeStrike": 0.9,
+        "consumePerLayer": 0.1,
+        "branchShield": 0.1,
+        "maxLayers": 3,
+        "treasureLayers": 1,
+        "layersPerAction": 1
+      },
+      "zhaogongming": {
+        "shield": 0.16,
+        "branchShield": 0.23,
+        "branchHit": 0.75,
+        "counter": 0.6,
+        "hitCount": 3,
+        "counterLimit": 1
+      },
+      "yunxiao": {
+        "weaken": 0.25,
+        "defenseDown": 0.2,
+        "willDown": 4,
+        "branchWillDown": 6,
+        "shieldCut": 0.35,
+        "treasureTurns": 1,
+        "stunActions": 1
+      },
+      "qiongxiao": {
+        "weakenedBonus": 0.35,
+        "defeatHeal": 0.65,
+        "shieldCut": 0.4,
+        "spreadHit": 0.65,
+        "spreadCount": 2,
+        "treasureCooldownCut": 1,
+        "healLimit": 1
+      },
+      "bixiao": {
+        "branchShieldExtra": 0.08,
+        "guard": 0.25,
+        "branchHeal": 0.75,
+        "treasureHaste": 0.15,
+        "breakShield": 0.08,
+        "breakLimit": 1,
+        "maintainLayers": 1
+      },
+      "zhouwang": {
+        "moralePerLayer": 0.15,
+        "maxMorale": 3,
+        "counter": 0.5,
+        "counterLimit": 1,
+        "attackUp": 0.2,
+        "branchShield": 0.12,
+        "branchHit": 0.8,
+        "treasureWillDown": 2,
+        "treasureMorale": 1,
+        "moralePerHit": 1
+      },
+      "bigan": {
+        "regeneration": 0.35,
+        "branchRegeneration": 0.55,
+        "cleanseCount": 1,
+        "branchCleanseCount": 2,
+        "treasureShieldThreshold": 0.45,
+        "treasureShield": 0.12,
+        "passiveHeal": 0.25,
+        "passiveLimit": 1,
+        "branchChargeDown": 1
+      },
+      "huangfeihu": {
+        "shield": 0.25,
+        "branchShield": 0.38,
+        "guard": 0.3,
+        "branchAttackUp": 0.2,
+        "protectAttackUp": 0.15,
+        "treasureShield": 0.18,
+        "protectLimit": 2
+      },
+      "jifa": {
+        "mark": 0.15,
+        "attackUp": 0.2,
+        "branchHaste": 0.2,
+        "branchShield": 0.12,
+        "treasureHeal": 0.9
+      },
+      "xuandu": {
+        "shield": 0.18,
+        "transferShield": 0.3,
+        "sourceShield": 0.12,
+        "passiveHeal": 0.6,
+        "copiedBuffLimit": 1,
+        "treasureCleanse": 1
+      }
+    },
+    "STAGES": [
+      {
+        "id": 1,
+        "name": "泉畔妖影",
+        "chapter": 1,
+        "boss": false,
+        "description": "三只泉妖聚集。尝试普攻、火环群攻与护持，仙府需要你的第一份灵材。",
+        "recommendedLevel": 1,
+        "enemies": [
+          {
+            "id": "spring_a",
+            "name": "泉妖",
+            "role": "soldier",
+            "row": "front",
+            "hp": 160,
+            "atk": 36,
+            "def": 8,
+            "speed": 62,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "spring_b",
+            "name": "苔妖",
+            "role": "soldier",
+            "row": "front",
+            "hp": 170,
+            "atk": 34,
+            "def": 9,
+            "speed": 58,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "spring_c",
+            "name": "泉灵影",
+            "role": "archer",
+            "row": "back",
+            "hp": 130,
+            "atk": 32,
+            "def": 6,
+            "speed": 70,
+            "shield": 0,
+            "will": 0
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "古道伏兵",
+        "chapter": 1,
+        "boss": false,
+        "description": "两前排守卫保护后排弓妖。普攻优先前排，破阵神通可直取后排。首通结缘雷震子并开放第四位。",
+        "recommendedLevel": 1,
+        "enemies": [
+          {
+            "id": "road_a",
+            "name": "石卫",
+            "role": "soldier",
+            "row": "front",
+            "hp": 205,
+            "atk": 40,
+            "def": 13,
+            "speed": 65,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "road_b",
+            "name": "藤卫",
+            "role": "soldier",
+            "row": "front",
+            "hp": 185,
+            "atk": 38,
+            "def": 11,
+            "speed": 67,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "road_c",
+            "name": "弓妖",
+            "role": "archer",
+            "row": "back",
+            "hp": 155,
+            "atk": 44,
+            "def": 8,
+            "speed": 76,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "road_d",
+            "name": "弓妖",
+            "role": "archer",
+            "row": "back",
+            "hp": 145,
+            "atk": 42,
+            "def": 8,
+            "speed": 73,
+            "shield": 0,
+            "will": 0
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "断流石阵",
+        "chapter": 1,
+        "boss": false,
+        "description": "石壳卫开场有护盾。集火与破护诀可拆解；首通结缘自选并开放第五位。",
+        "recommendedLevel": 2,
+        "enemies": [
+          {
+            "id": "stone_a",
+            "name": "石壳卫",
+            "role": "shield",
+            "row": "front",
+            "hp": 245,
+            "atk": 48,
+            "def": 16,
+            "speed": 60,
+            "shield": 100,
+            "will": 0
+          },
+          {
+            "id": "stone_b",
+            "name": "石壳卫",
+            "role": "shield",
+            "row": "front",
+            "hp": 230,
+            "atk": 43,
+            "def": 14,
+            "speed": 62,
+            "shield": 90,
+            "will": 0
+          },
+          {
+            "id": "stone_c",
+            "name": "阵眼妖",
+            "role": "archer",
+            "row": "back",
+            "hp": 190,
+            "atk": 46,
+            "def": 10,
+            "speed": 78,
+            "shield": 0,
+            "will": 0
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "石甲妖将",
+        "chapter": 1,
+        "boss": true,
+        "description": "妖将会维持护盾并保护小怪。可先清怪再爆发，也可破护诀配合控制击穿妖将。带回灵脉核心开放丹器别院。",
+        "recommendedLevel": 3,
+        "enemies": [
+          {
+            "id": "boss_stone",
+            "name": "石甲妖将",
+            "role": "stone",
+            "row": "front",
+            "hp": 1420,
+            "atk": 88,
+            "def": 30,
+            "speed": 70,
+            "shield": 210,
+            "will": 8
+          },
+          {
+            "id": "stone_minion_a",
+            "name": "石甲侍卫",
+            "role": "soldier",
+            "row": "back",
+            "hp": 300,
+            "atk": 54,
+            "def": 13,
+            "speed": 72,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "stone_minion_b",
+            "name": "阵眼妖",
+            "role": "archer",
+            "row": "back",
+            "hp": 260,
+            "atk": 56,
+            "def": 10,
+            "speed": 84,
+            "shield": 0,
+            "will": 0
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "丹火游魂",
+        "chapter": 2,
+        "boss": false,
+        "description": "炉灵施加灼烧。比干或太乙可净化，火环与风雷可快速清理火灵。",
+        "recommendedLevel": 5,
+        "enemies": [
+          {
+            "id": "fire_a",
+            "name": "火灵",
+            "role": "soldier",
+            "row": "front",
+            "hp": 350,
+            "atk": 65,
+            "def": 17,
+            "speed": 81,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "fire_b",
+            "name": "火灵",
+            "role": "soldier",
+            "row": "front",
+            "hp": 340,
+            "atk": 62,
+            "def": 17,
+            "speed": 79,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "fire_c",
+            "name": "炉灵",
+            "role": "burner",
+            "row": "back",
+            "hp": 305,
+            "atk": 63,
+            "def": 14,
+            "speed": 83,
+            "shield": 0,
+            "will": 0
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "守炉阵线",
+        "chapter": 2,
+        "boss": false,
+        "description": "火卫护持后排；队伍保护与护盾可减少受到的连续伤害。",
+        "recommendedLevel": 6,
+        "enemies": [
+          {
+            "id": "forge_a",
+            "name": "赤甲卫",
+            "role": "shield",
+            "row": "front",
+            "hp": 435,
+            "atk": 72,
+            "def": 24,
+            "speed": 70,
+            "shield": 140,
+            "will": 0
+          },
+          {
+            "id": "forge_b",
+            "name": "赤甲卫",
+            "role": "shield",
+            "row": "front",
+            "hp": 400,
+            "atk": 70,
+            "def": 21,
+            "speed": 72,
+            "shield": 125,
+            "will": 0
+          },
+          {
+            "id": "forge_c",
+            "name": "炼火妖",
+            "role": "burner",
+            "row": "back",
+            "hp": 340,
+            "atk": 75,
+            "def": 15,
+            "speed": 88,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "forge_d",
+            "name": "灵药妖",
+            "role": "healer",
+            "row": "back",
+            "hp": 300,
+            "atk": 53,
+            "def": 15,
+            "speed": 79,
+            "shield": 0,
+            "will": 0
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "预告重锤",
+        "chapter": 2,
+        "boss": false,
+        "description": "重锤妖蓄势后重击。观察意图，护持或雷震子的折势可以改变结果。",
+        "recommendedLevel": 7,
+        "enemies": [
+          {
+            "id": "hammer_a",
+            "name": "重锤妖",
+            "role": "charger",
+            "row": "front",
+            "hp": 630,
+            "atk": 94,
+            "def": 23,
+            "speed": 76,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "hammer_b",
+            "name": "炉前卫",
+            "role": "soldier",
+            "row": "front",
+            "hp": 420,
+            "atk": 73,
+            "def": 21,
+            "speed": 77,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "hammer_c",
+            "name": "丹火妖",
+            "role": "burner",
+            "row": "back",
+            "hp": 345,
+            "atk": 72,
+            "def": 15,
+            "speed": 88,
+            "shield": 0,
+            "will": 0
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "赤炉妖王",
+        "chapter": 2,
+        "boss": true,
+        "description": "赤炉妖王先蓄势再爆发，护持、削势、净化与恢复均可应对。取得炉心开放演法台地与二段灵宝修复。",
+        "recommendedLevel": 8,
+        "enemies": [
+          {
+            "id": "boss_furnace",
+            "name": "赤炉妖王",
+            "role": "furnace",
+            "row": "front",
+            "hp": 2360,
+            "atk": 128,
+            "def": 34,
+            "speed": 82,
+            "shield": 120,
+            "will": 10
+          },
+          {
+            "id": "furnace_minion_a",
+            "name": "炼火侍",
+            "role": "burner",
+            "row": "back",
+            "hp": 460,
+            "atk": 87,
+            "def": 17,
+            "speed": 92,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "furnace_minion_b",
+            "name": "赤炉卫",
+            "role": "soldier",
+            "row": "front",
+            "hp": 530,
+            "atk": 83,
+            "def": 23,
+            "speed": 73,
+            "shield": 0,
+            "will": 0
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "雷泽护卫",
+        "chapter": 3,
+        "boss": false,
+        "description": "护卫与弓妖互相配合。群攻清场或破阵直取后排，均有明确收益。",
+        "recommendedLevel": 9,
+        "enemies": [
+          {
+            "id": "marsh_a",
+            "name": "雷甲卫",
+            "role": "shield",
+            "row": "front",
+            "hp": 590,
+            "atk": 96,
+            "def": 28,
+            "speed": 80,
+            "shield": 170,
+            "will": 0
+          },
+          {
+            "id": "marsh_b",
+            "name": "雷甲卫",
+            "role": "shield",
+            "row": "front",
+            "hp": 560,
+            "atk": 91,
+            "def": 26,
+            "speed": 77,
+            "shield": 150,
+            "will": 0
+          },
+          {
+            "id": "marsh_c",
+            "name": "泽弓妖",
+            "role": "archer",
+            "row": "back",
+            "hp": 420,
+            "atk": 97,
+            "def": 18,
+            "speed": 105,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "marsh_d",
+            "name": "泽弓妖",
+            "role": "archer",
+            "row": "back",
+            "hp": 400,
+            "atk": 94,
+            "def": 18,
+            "speed": 101,
+            "shield": 0,
+            "will": 0
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "雷火交织",
+        "chapter": 3,
+        "boss": false,
+        "description": "灼烧与蓄势同时出现。别让后排药妖持续恢复，观察目标与行动条。",
+        "recommendedLevel": 10,
+        "enemies": [
+          {
+            "id": "storm_a",
+            "name": "泽重卫",
+            "role": "charger",
+            "row": "front",
+            "hp": 730,
+            "atk": 113,
+            "def": 28,
+            "speed": 82,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "storm_b",
+            "name": "雷卫",
+            "role": "soldier",
+            "row": "front",
+            "hp": 570,
+            "atk": 100,
+            "def": 25,
+            "speed": 89,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "storm_c",
+            "name": "雷火妖",
+            "role": "burner",
+            "row": "back",
+            "hp": 470,
+            "atk": 99,
+            "def": 19,
+            "speed": 105,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "storm_d",
+            "name": "药妖",
+            "role": "healer",
+            "row": "back",
+            "hp": 430,
+            "atk": 78,
+            "def": 19,
+            "speed": 98,
+            "shield": 0,
+            "will": 0
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "蛟宫阵门",
+        "chapter": 3,
+        "boss": false,
+        "description": "护卫、灼烧与回复形成完整敌队。普通攻击清前排，控制与清场切断配合。",
+        "recommendedLevel": 11,
+        "enemies": [
+          {
+            "id": "gate_a",
+            "name": "蛟宫护卫",
+            "role": "shield",
+            "row": "front",
+            "hp": 760,
+            "atk": 109,
+            "def": 32,
+            "speed": 80,
+            "shield": 220,
+            "will": 0
+          },
+          {
+            "id": "gate_b",
+            "name": "蛟宫重卫",
+            "role": "charger",
+            "row": "front",
+            "hp": 710,
+            "atk": 115,
+            "def": 30,
+            "speed": 84,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "gate_c",
+            "name": "蛟宫雷侍",
+            "role": "burner",
+            "row": "back",
+            "hp": 530,
+            "atk": 106,
+            "def": 21,
+            "speed": 108,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "gate_d",
+            "name": "蛟宫药侍",
+            "role": "healer",
+            "row": "back",
+            "hp": 475,
+            "atk": 82,
+            "def": 20,
+            "speed": 102,
+            "shield": 0,
+            "will": 0
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "雷泽蛟君",
+        "chapter": 3,
+        "boss": true,
+        "description": "蛟君受前排护卫保护，预告雷暴；半血后获得阶段护盾。削势破护队可抢节奏，护军净化队可承受雷暴后反攻。获得雷泽核心，仙府升格。",
+        "recommendedLevel": 12,
+        "enemies": [
+          {
+            "id": "dragon_guard",
+            "name": "蛟君护卫",
+            "role": "shield",
+            "row": "front",
+            "hp": 830,
+            "atk": 110,
+            "def": 33,
+            "speed": 79,
+            "shield": 240,
+            "will": 0
+          },
+          {
+            "id": "boss_dragon",
+            "name": "雷泽蛟君",
+            "role": "dragon",
+            "row": "back",
+            "hp": 3250,
+            "atk": 146,
+            "def": 40,
+            "speed": 96,
+            "shield": 190,
+            "will": 12
+          },
+          {
+            "id": "dragon_fire",
+            "name": "雷泽妖侍",
+            "role": "burner",
+            "row": "back",
+            "hp": 560,
+            "atk": 109,
+            "def": 23,
+            "speed": 107,
+            "shield": 0,
+            "will": 0
+          }
+        ]
+      }
+    ],
+    "STATUS_CONFIG": {
+      "mark": {
+        "name": "锁定",
+        "debuff": true,
+        "transferable": false,
+        "description": "受到集中攻击额外伤害；破阵技能可指定后排。"
+      },
+      "defDown": {
+        "name": "破防",
+        "debuff": true,
+        "transferable": false,
+        "description": "防御按标示比例下降。"
+      },
+      "weakened": {
+        "name": "削弱",
+        "debuff": true,
+        "transferable": false,
+        "description": "攻击按标示比例下降。"
+      },
+      "burn": {
+        "name": "灼烧",
+        "debuff": true,
+        "transferable": false,
+        "description": "每轮开始受持续伤害，先扣护盾。"
+      },
+      "stun": {
+        "name": "牵制",
+        "debuff": true,
+        "transferable": false,
+        "description": "下个正常行动被跳过；首领转为定力削减。"
+      },
+      "shaken": {
+        "name": "定力破绽",
+        "debuff": true,
+        "transferable": false,
+        "description": "首领伤害与防御降低；仍可普通行动，不会永久失去行动。"
+      },
+      "atkUp": {
+        "name": "战令",
+        "debuff": false,
+        "transferable": true,
+        "description": "攻击按标示比例提高。"
+      },
+      "haste": {
+        "name": "疾行",
+        "debuff": false,
+        "transferable": true,
+        "description": "下一轮排序时速度提高；不补本轮额外行动。"
+      },
+      "guard": {
+        "name": "护持",
+        "debuff": false,
+        "transferable": true,
+        "description": "直接伤害降低；与护盾共同结算。"
+      },
+      "regen": {
+        "name": "持续恢复",
+        "debuff": false,
+        "transferable": true,
+        "description": "每轮开始恢复生命。"
+      },
+      "protect": {
+        "name": "护卫",
+        "debuff": false,
+        "transferable": false,
+        "description": "来源分担 40% 单体直接伤害；群攻不重复分担。"
+      },
+      "counter": {
+        "name": "珠环反制",
+        "debuff": false,
+        "transferable": false,
+        "description": "受直接攻击后有限反制；每轮一次。"
+      }
+    },
+    "SYNERGY_ROUTES": [
+      {
+        "id": "mark-follow",
+        "name": "识破追击",
+        "description": "锁定与破防服务合法攻击者，哪吒利用通用减益产生有限追击。",
+        "characters": [
+          "yangjian",
+          "nezha",
+          "jifa"
+        ],
+        "tags": [
+          "锁定",
+          "破防",
+          "追击"
+        ]
+      },
+      {
+        "id": "array-pressure",
+        "name": "布阵压制",
+        "description": "通用削弱供琼霄利用，剑阵独立积累，碧霄保护和维持；三霄齐全可合阵。",
+        "characters": [
+          "yunxiao",
+          "qiongxiao",
+          "tongtian",
+          "bixiao"
+        ],
+        "tags": [
+          "削弱",
+          "阵势",
+          "防护"
+        ]
+      },
+      {
+        "id": "ward-counter",
+        "name": "护持反击",
+        "description": "护盾、护持或分担实际抵挡后，赵公明每轮一次反制；通用法门同样能创造条件。",
+        "characters": [
+          "zhaogongming",
+          "huangfeihu",
+          "bixiao",
+          "taiyi"
+        ],
+        "tags": [
+          "护卫",
+          "护盾",
+          "反制"
+        ]
+      },
+      {
+        "id": "morale-focus",
+        "name": "战意集火",
+        "description": "黄飞虎护军、姬发锁定与战令、纣王承压积战意形成不同分工；混编仍有效。",
+        "characters": [
+          "zhouwang",
+          "jifa",
+          "huangfeihu",
+          "bigan"
+        ],
+        "tags": [
+          "战意",
+          "锁定",
+          "战令"
+        ]
+      }
+    ],
+    "SYNERGY_RULES": {
+      "protectedCounterLimit": 1,
+      "multiHitTriggers": "同一正常行动的多段攻击共享追击上限；反击和机缘追加不触发任何攻击追加。",
+      "autoHealMissingRatio": 0.15,
+      "autoProtectHealthRatio": 0.65
+    },
+    "TRIAL_TEMPLATES": [
+      {
+        "id": "break",
+        "name": "破防集火",
+        "description": "带盾前排与低血后排；锁定、破防和合法目标练习。",
+        "stageId": 4,
+        "level": 5,
+        "treasure": 1,
+        "partners": [
+          "huangfeihu",
+          "bigan",
+          "nezha",
+          "yangjian"
+        ],
+        "defaultTeam": [
+          "nezha",
+          "huangfeihu",
+          "bigan",
+          "leizhenzi",
+          "yangjian"
+        ],
+        "enemies": [
+          {
+            "id": "trial_armor",
+            "name": "石甲陪练",
+            "role": "shield",
+            "row": "front",
+            "hp": 1800,
+            "atk": 88,
+            "def": 65,
+            "speed": 68,
+            "shield": 500,
+            "will": 0
+          },
+          {
+            "id": "trial_eye",
+            "name": "阵眼陪练",
+            "role": "archer",
+            "row": "back",
+            "hp": 950,
+            "atk": 85,
+            "def": 35,
+            "speed": 83,
+            "shield": 0,
+            "will": 0
+          }
+        ]
+      },
+      {
+        "id": "clear",
+        "name": "群敌清理",
+        "description": "五名中等生命敌人，练习群攻、多段与削弱利用。",
+        "stageId": 6,
+        "level": 5,
+        "treasure": 1,
+        "partners": [
+          "huangfeihu",
+          "bigan",
+          "nezha",
+          "leizhenzi"
+        ],
+        "defaultTeam": [
+          "nezha",
+          "huangfeihu",
+          "bigan",
+          "leizhenzi",
+          "tongtian"
+        ],
+        "enemies": [
+          {
+            "id": "trial_c1",
+            "name": "前阵陪练",
+            "role": "soldier",
+            "row": "front",
+            "hp": 800,
+            "atk": 65,
+            "def": 22,
+            "speed": 70,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "trial_c2",
+            "name": "前阵陪练",
+            "role": "soldier",
+            "row": "front",
+            "hp": 850,
+            "atk": 65,
+            "def": 22,
+            "speed": 72,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "trial_c3",
+            "name": "弓术陪练",
+            "role": "archer",
+            "row": "back",
+            "hp": 700,
+            "atk": 68,
+            "def": 18,
+            "speed": 82,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "trial_c4",
+            "name": "火术陪练",
+            "role": "burner",
+            "row": "back",
+            "hp": 700,
+            "atk": 64,
+            "def": 18,
+            "speed": 78,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "trial_c5",
+            "name": "灵符陪练",
+            "role": "healer",
+            "row": "back",
+            "hp": 650,
+            "atk": 58,
+            "def": 18,
+            "speed": 75,
+            "shield": 0,
+            "will": 0
+          }
+        ]
+      },
+      {
+        "id": "guard",
+        "name": "护持抗压",
+        "description": "提前预告的重击与灼烧；练习护持、净化、削势和恢复。",
+        "stageId": 8,
+        "level": 5,
+        "treasure": 1,
+        "partners": [
+          "huangfeihu",
+          "bigan",
+          "zhaogongming",
+          "leizhenzi"
+        ],
+        "defaultTeam": [
+          "huangfeihu",
+          "zhaogongming",
+          "bigan",
+          "leizhenzi",
+          "bixiao"
+        ],
+        "enemies": [
+          {
+            "id": "trial_hammer",
+            "name": "重击陪练",
+            "role": "charger",
+            "row": "front",
+            "hp": 2200,
+            "atk": 145,
+            "def": 28,
+            "speed": 76,
+            "shield": 0,
+            "will": 0
+          },
+          {
+            "id": "trial_flame",
+            "name": "灼烧陪练",
+            "role": "burner",
+            "row": "back",
+            "hp": 1000,
+            "atk": 110,
+            "def": 24,
+            "speed": 82,
+            "shield": 0,
+            "will": 0
+          }
+        ]
+      }
+    ]
+  },
+  "economy": {
+    "BUILDING_TYPES": [
+      {
+        "id": "hall",
+        "name": "万仙殿",
+        "description": "固定地标，见证结缘与仙府升格。",
+        "region": 0,
+        "fixed": true,
+        "max": 1,
+        "cost": {
+          "stone": 0,
+          "material": 0
+        },
+        "duration": 0,
+        "specialist": []
+      },
+      {
+        "id": "spring",
+        "name": "灵泉",
+        "description": "每分钟产出修为；玉色滋养地块让灵田增产20%。",
+        "region": 0,
+        "fixed": true,
+        "max": 1,
+        "cost": {
+          "stone": 0,
+          "material": 0
+        },
+        "duration": 0,
+        "specialist": [
+          "bigan",
+          "xuandu"
+        ]
+      },
+      {
+        "id": "farm",
+        "name": "灵田",
+        "description": "每分钟产出灵药；最多建设两座，滋养地块增产20%。",
+        "region": 0,
+        "fixed": false,
+        "max": 2,
+        "cost": {
+          "stone": 60,
+          "material": 12
+        },
+        "duration": 30000,
+        "specialist": [
+          "taiyi",
+          "bixiao"
+        ]
+      },
+      {
+        "id": "alchemy",
+        "name": "丹坊",
+        "description": "灵药加工为三类丹药，每战仅携带一种。",
+        "region": 0,
+        "fixed": false,
+        "max": 1,
+        "cost": {
+          "stone": 120,
+          "material": 20
+        },
+        "duration": 30000,
+        "specialist": [
+          "taiyi",
+          "xuandu"
+        ]
+      },
+      {
+        "id": "forge",
+        "name": "炼器坊",
+        "description": "加工灵材，支持三段标志灵宝修复。",
+        "region": 0,
+        "fixed": false,
+        "max": 1,
+        "cost": {
+          "stone": 120,
+          "material": 20
+        },
+        "duration": 30000,
+        "specialist": [
+          "yangjian",
+          "zhaogongming"
+        ]
+      },
+      {
+        "id": "library",
+        "name": "藏经阁",
+        "description": "研究破护、护持、净化三种通用法门。",
+        "region": 0,
+        "fixed": false,
+        "max": 1,
+        "cost": {
+          "stone": 90,
+          "material": 15
+        },
+        "duration": 30000,
+        "specialist": [
+          "yunxiao",
+          "jifa"
+        ]
+      },
+      {
+        "id": "arena",
+        "name": "演武台",
+        "description": "固定对手、全角色临时试用，不发经济奖励。",
+        "region": 0,
+        "fixed": false,
+        "max": 1,
+        "cost": {
+          "stone": 70,
+          "material": 12
+        },
+        "duration": 30000,
+        "specialist": [
+          "huangfeihu",
+          "zhouwang"
+        ]
+      }
+    ],
+    "CORE_NAMES": {
+      "spring": "灵脉核心",
+      "furnace": "炉心",
+      "thunder": "雷泽核心"
+    },
+    "DAILY_TASKS": [
+      {
+        "id": "estate",
+        "name": "府中有获",
+        "description": "建设设施或领取一次产物",
+        "goal": 1,
+        "reward": {
+          "stone": 60,
+          "herb": 3
+        }
+      },
+      {
+        "id": "battle",
+        "name": "历练一战",
+        "description": "取得一次主线、材料扫荡或秘境节点胜利",
+        "goal": 1,
+        "reward": {
+          "xp": 80,
+          "material": 5
+        }
+      },
+      {
+        "id": "cultivation",
+        "name": "温习法相",
+        "description": "升级、修复灵宝或切换一次已解锁神通分支",
+        "goal": 1,
+        "reward": {
+          "stone": 50,
+          "xp": 60
+        }
+      }
+    ],
+    "DEMO_PRESETS": [
+      {
+        "id": "new",
+        "name": "A · 普通新手",
+        "description": "默认3角色、12召请符及真实资源，完整解锁流程。"
+      },
+      {
+        "id": "roster",
+        "name": "B · 阵容试用",
+        "description": "全50角色统一5级、一段灵宝；90件灵装与强化材料，仅在隔离档比较阵容。"
+      },
+      {
+        "id": "estate-initial",
+        "name": "C1 · 仙府初建",
+        "description": "仅灵泉庭院，实际建设、生产、搬动与驻府。"
+      },
+      {
+        "id": "estate-expanded",
+        "name": "C2 · 仙府扩建",
+        "description": "已融入灵脉核心，比较丹器别院、基础设施与新增扩地建设。"
+      },
+      {
+        "id": "estate-complete",
+        "name": "C3 · 仙府成形",
+        "description": "三片区域24地块与10类设施，建筑分级；建设、生产、搬迁仍走实际规则。"
+      },
+      {
+        "id": "expedition-project",
+        "name": "D · 秘境与工程",
+        "description": "两路线已开放，11级队伍，从勘定亲手完成引雷工程。"
+      }
+    ],
+    "ECONOMY": {
+      "divineChance": 0.12,
+      "pityAt": 20,
+      "duplicateImmortal": 3,
+      "duplicateDivine": 8,
+      "redeemImmortal": 40,
+      "redeemDivine": 100,
+      "maxLevel": 20,
+      "branchLevel": 3,
+      "offlineCapMs": 43200000,
+      "warehouseCapacity": 4000,
+      "itemWarehouseCapacity": 99,
+      "resourceCaps": {
+        "stone": 999999,
+        "xp": 999999,
+        "material": 99999,
+        "herb": 99999,
+        "ticket": 9999,
+        "fate": 999999
+      },
+      "resources": [
+        {
+          "id": "stone",
+          "name": "灵石",
+          "source": "主线、建设任务",
+          "sink": "培养、建设、研究",
+          "cap": 999999
+        },
+        {
+          "id": "xp",
+          "name": "修为",
+          "source": "灵泉、主线、事务",
+          "sink": "角色基础修为",
+          "cap": 999999
+        },
+        {
+          "id": "material",
+          "name": "灵材",
+          "source": "历练、炼器坊加工",
+          "sink": "建设、灵宝、加速",
+          "cap": 99999
+        },
+        {
+          "id": "herb",
+          "name": "灵药",
+          "source": "灵田、主线",
+          "sink": "丹坊加工",
+          "cap": 99999
+        },
+        {
+          "id": "ticket",
+          "name": "召请符",
+          "source": "首通、事务",
+          "sink": "单抽、十连",
+          "cap": 9999
+        },
+        {
+          "id": "fate",
+          "name": "道缘",
+          "source": "每抽、重复转化",
+          "sink": "定向结缘兑换",
+          "cap": 999999
+        }
+      ]
+    },
+    "ECONOMY_RULE_VERSION": "v0.3.0",
+    "GIFT_CHOICES": [
+      "yangjian",
+      "zhaogongming",
+      "yunxiao",
+      "zhouwang"
+    ],
+    "MATERIAL_SWEEP_MS": 60000,
+    "METHODS": [
+      {
+        "id": "break",
+        "name": "破护诀",
+        "description": "一次性削弱敌方护盾与定力；每战一次。",
+        "cost": {
+          "stone": 80,
+          "material": 10
+        }
+      },
+      {
+        "id": "ward",
+        "name": "同心护持",
+        "description": "一次性护持全队；每战一次。",
+        "cost": {
+          "stone": 80,
+          "material": 10
+        }
+      },
+      {
+        "id": "cleanse",
+        "name": "清心诀",
+        "description": "一次性净化己方普通减益；每战一次。",
+        "cost": {
+          "stone": 80,
+          "material": 10
+        }
+      },
+      {
+        "id": "thunderward",
+        "name": "雷泽护持",
+        "description": "每战一次，为全队提供有限护盾；引雷工程传法用途活动时可装备。",
+        "cost": {
+          "stone": 0,
+          "material": 0
+        }
+      }
+    ],
+    "PLOTS": [
+      {
+        "id": "p0",
+        "region": 0,
+        "x": 0.46,
+        "y": 0.16,
+        "nourished": false,
+        "fixed": "hall"
+      },
+      {
+        "id": "p1",
+        "region": 0,
+        "x": 0.19,
+        "y": 0.32,
+        "nourished": false,
+        "fixed": "spring"
+      },
+      {
+        "id": "p2",
+        "region": 0,
+        "x": 0.4,
+        "y": 0.39,
+        "nourished": true
+      },
+      {
+        "id": "p3",
+        "region": 0,
+        "x": 0.68,
+        "y": 0.32,
+        "nourished": true
+      },
+      {
+        "id": "p4",
+        "region": 0,
+        "x": 0.53,
+        "y": 0.55,
+        "nourished": false
+      },
+      {
+        "id": "p5",
+        "region": 1,
+        "x": 0.17,
+        "y": 0.6,
+        "nourished": false
+      },
+      {
+        "id": "p6",
+        "region": 1,
+        "x": 0.34,
+        "y": 0.75,
+        "nourished": false
+      },
+      {
+        "id": "p7",
+        "region": 2,
+        "x": 0.72,
+        "y": 0.6,
+        "nourished": false
+      },
+      {
+        "id": "p8",
+        "region": 2,
+        "x": 0.65,
+        "y": 0.8,
+        "nourished": false
+      }
+    ],
+    "PRODUCTION_RULES": {
+      "training": {
+        "cost": {
+          "herb": 3,
+          "material": 1
+        },
+        "output": {
+          "item": "training",
+          "count": 1
+        },
+        "duration": 30000,
+        "building": "alchemy"
+      },
+      "ward": {
+        "cost": {
+          "herb": 4,
+          "material": 2
+        },
+        "output": {
+          "item": "ward",
+          "count": 1
+        },
+        "duration": 45000,
+        "building": "alchemy"
+      },
+      "heal": {
+        "cost": {
+          "herb": 5,
+          "material": 2
+        },
+        "output": {
+          "item": "heal",
+          "count": 1
+        },
+        "duration": 45000,
+        "building": "alchemy"
+      },
+      "refine": {
+        "cost": {
+          "stone": 30
+        },
+        "output": {
+          "resource": "material",
+          "count": 10
+        },
+        "duration": 30000,
+        "building": "forge"
+      },
+      "thunder-component": {
+        "cost": {
+          "stone": 100,
+          "material": 25,
+          "herb": 10
+        },
+        "output": {
+          "item": "thunder-component",
+          "count": 1
+        },
+        "duration": 45000,
+        "building": "forge"
+      },
+      "cleanse": {
+        "cost": {
+          "herb": 4,
+          "material": 2
+        },
+        "output": {
+          "item": "cleanse",
+          "count": 1
+        },
+        "duration": 45000,
+        "building": "alchemy"
+      }
+    },
+    "PRODUCTION_RULES_BY_VERSION": {
+      "v0.1.0": {
+        "training": {
+          "cost": {
+            "herb": 3,
+            "material": 1
+          },
+          "output": {
+            "item": "training",
+            "count": 1
+          },
+          "duration": 30000,
+          "building": "alchemy"
+        },
+        "ward": {
+          "cost": {
+            "herb": 4,
+            "material": 2
+          },
+          "output": {
+            "item": "ward",
+            "count": 1
+          },
+          "duration": 45000,
+          "building": "alchemy"
+        },
+        "heal": {
+          "cost": {
+            "herb": 5,
+            "material": 2
+          },
+          "output": {
+            "item": "heal",
+            "count": 1
+          },
+          "duration": 45000,
+          "building": "alchemy"
+        },
+        "refine": {
+          "cost": {
+            "stone": 30
+          },
+          "output": {
+            "resource": "material",
+            "count": 10
+          },
+          "duration": 30000,
+          "building": "forge"
+        }
+      },
+      "v0.2.0": {
+        "training": {
+          "cost": {
+            "herb": 3,
+            "material": 1
+          },
+          "output": {
+            "item": "training",
+            "count": 1
+          },
+          "duration": 30000,
+          "building": "alchemy"
+        },
+        "ward": {
+          "cost": {
+            "herb": 4,
+            "material": 2
+          },
+          "output": {
+            "item": "ward",
+            "count": 1
+          },
+          "duration": 45000,
+          "building": "alchemy"
+        },
+        "heal": {
+          "cost": {
+            "herb": 5,
+            "material": 2
+          },
+          "output": {
+            "item": "heal",
+            "count": 1
+          },
+          "duration": 45000,
+          "building": "alchemy"
+        },
+        "refine": {
+          "cost": {
+            "stone": 30
+          },
+          "output": {
+            "resource": "material",
+            "count": 10
+          },
+          "duration": 30000,
+          "building": "forge"
+        },
+        "thunder-component": {
+          "cost": {
+            "stone": 100,
+            "material": 25,
+            "herb": 10
+          },
+          "output": {
+            "item": "thunder-component",
+            "count": 1
+          },
+          "duration": 45000,
+          "building": "forge"
+        }
+      },
+      "v0.3.0": {
+        "training": {
+          "cost": {
+            "herb": 3,
+            "material": 1
+          },
+          "output": {
+            "item": "training",
+            "count": 1
+          },
+          "duration": 30000,
+          "building": "alchemy"
+        },
+        "ward": {
+          "cost": {
+            "herb": 4,
+            "material": 2
+          },
+          "output": {
+            "item": "ward",
+            "count": 1
+          },
+          "duration": 45000,
+          "building": "alchemy"
+        },
+        "heal": {
+          "cost": {
+            "herb": 5,
+            "material": 2
+          },
+          "output": {
+            "item": "heal",
+            "count": 1
+          },
+          "duration": 45000,
+          "building": "alchemy"
+        },
+        "refine": {
+          "cost": {
+            "stone": 30
+          },
+          "output": {
+            "resource": "material",
+            "count": 10
+          },
+          "duration": 30000,
+          "building": "forge"
+        },
+        "thunder-component": {
+          "cost": {
+            "stone": 100,
+            "material": 25,
+            "herb": 10
+          },
+          "output": {
+            "item": "thunder-component",
+            "count": 1
+          },
+          "duration": 45000,
+          "building": "forge"
+        },
+        "cleanse": {
+          "cost": {
+            "herb": 4,
+            "material": 2
+          },
+          "output": {
+            "item": "cleanse",
+            "count": 1
+          },
+          "duration": 45000,
+          "building": "alchemy"
+        }
+      }
+    },
+    "RECIPES": [
+      {
+        "id": "training",
+        "name": "聚气丹",
+        "building": "alchemy",
+        "cost": {
+          "herb": 3,
+          "material": 1
+        },
+        "duration": 30000,
+        "output": {
+          "item": "training",
+          "count": 1
+        },
+        "description": "开场提供有限增益；每战携带一种。"
+      },
+      {
+        "id": "ward",
+        "name": "护元丹",
+        "building": "alchemy",
+        "cost": {
+          "herb": 4,
+          "material": 2
+        },
+        "duration": 45000,
+        "output": {
+          "item": "ward",
+          "count": 1
+        },
+        "description": "开场护盾；每战携带一种。"
+      },
+      {
+        "id": "heal",
+        "name": "回春丹",
+        "building": "alchemy",
+        "cost": {
+          "herb": 5,
+          "material": 2
+        },
+        "duration": 45000,
+        "output": {
+          "item": "heal",
+          "count": 1
+        },
+        "description": "每轮边界恢复6%生命，持续3轮；每战携带一种。"
+      },
+      {
+        "id": "cleanse",
+        "name": "清心丹",
+        "building": "alchemy",
+        "cost": {
+          "herb": 4,
+          "material": 2
+        },
+        "duration": 45000,
+        "output": {
+          "item": "cleanse",
+          "count": 1
+        },
+        "description": "每名友方首次遭受普通减益时净化一次；沿用唯一丹药槽。"
+      },
+      {
+        "id": "refine",
+        "name": "灵材淬炼",
+        "building": "forge",
+        "cost": {
+          "stone": 30
+        },
+        "duration": 30000,
+        "output": {
+          "resource": "material",
+          "count": 10
+        },
+        "description": "30灵石换10灵材，投入在排队时扣除。"
+      },
+      {
+        "id": "thunder-component",
+        "name": "引雷构件",
+        "building": "forge",
+        "cost": {
+          "stone": 100,
+          "material": 25,
+          "herb": 10
+        },
+        "duration": 45000,
+        "output": {
+          "item": "thunder-component",
+          "count": 1
+        },
+        "description": "引雷工程专用构件；准备阶段在炼器坊加工，收取后用于稳脉。"
+      }
+    ],
+    "SAVE_SCHEMA_REVISION": 1,
+    "TASKS": [
+      {
+        "id": "build",
+        "name": "重建仙府",
+        "description": "建设一座可选设施",
+        "stat": "builds",
+        "goal": 1,
+        "reward": {
+          "stone": 160,
+          "xp": 120,
+          "material": 20
+        }
+      },
+      {
+        "id": "battle",
+        "name": "初探灵脉",
+        "description": "取得三场历练胜利",
+        "stat": "battles",
+        "goal": 3,
+        "reward": {
+          "stone": 200,
+          "xp": 180,
+          "ticket": 2
+        }
+      },
+      {
+        "id": "harvest",
+        "name": "府中初收",
+        "description": "从仓库领取一次产物",
+        "stat": "harvests",
+        "goal": 1,
+        "reward": {
+          "stone": 160,
+          "xp": 140,
+          "herb": 8
+        }
+      },
+      {
+        "id": "upgrade",
+        "name": "法相契合",
+        "description": "培养角色三次",
+        "stat": "upgrades",
+        "goal": 3,
+        "reward": {
+          "stone": 180,
+          "xp": 180,
+          "material": 20
+        }
+      }
+    ],
+    "THUNDER_PROJECT": {
+      "id": "thunder-project",
+      "name": "引雷入府",
+      "region": 2,
+      "stages": [
+        {
+          "id": "survey",
+          "name": "勘定",
+          "description": "确认雷泽首通或已融入成果，勘定演法台地的导引区域。"
+        },
+        {
+          "id": "prepare",
+          "name": "准备",
+          "description": "在炼器坊加工引雷构件，收取后投入导引。"
+        },
+        {
+          "id": "stabilize",
+          "name": "稳脉",
+          "description": "回认任一已开放短秘境的首领胜利，稳定灵脉。"
+        },
+        {
+          "id": "form",
+          "name": "成形",
+          "description": "先查看用途，再选择雷淬工坊或雷泽传法。"
+        }
+      ],
+      "directions": [
+        {
+          "id": "forge",
+          "name": "雷淬工坊",
+          "description": "炼器坊开放雷淬修复：原灵石投入、约半数灵材、较多常规灵药；三段限制沿用旧规则。"
+        },
+        {
+          "id": "teaching",
+          "name": "雷泽传法",
+          "description": "开放雷泽护持，放入既有一个战前法门槽；每战一次全队有限护盾。"
+        }
+      ]
+    }
+  },
+  "expedition": {
+    "ROUTES": [
+      {
+        "id": "danfire",
+        "name": "丹火遗境",
+        "unlockStage": 8,
+        "recommendedLevel": 7,
+        "description": "炉灵灼烧与凝火护阵，恢复净化、破障或护持均有用。",
+        "nodes": [
+          "普通战斗",
+          "三选一机缘",
+          "强敌战斗",
+          "三选一机缘",
+          "遗境炉心"
+        ],
+        "completionReward": {
+          "stone": 160,
+          "xp": 120,
+          "material": 12,
+          "herb": 4
+        },
+        "firstReward": {
+          "stone": 80,
+          "xp": 80,
+          "material": 5,
+          "herb": 10
+        }
+      },
+      {
+        "id": "thundermarsh",
+        "name": "雷泽残境",
+        "unlockStage": 12,
+        "recommendedLevel": 11,
+        "description": "穿阵弓妖、雷火蓄势与受护残蛟，考验集火削势或防护反制。",
+        "nodes": [
+          "普通战斗",
+          "三选一机缘",
+          "强敌战斗",
+          "三选一机缘",
+          "雷泽残蛟"
+        ],
+        "completionReward": {
+          "stone": 190,
+          "xp": 140,
+          "material": 16,
+          "herb": 5
+        },
+        "firstReward": {
+          "stone": 100,
+          "xp": 100,
+          "material": 6,
+          "herb": 12
+        }
+      }
+    ]
+  },
+  "initialState": {
+    "version": 3,
+    "schemaRevision": 1,
+    "randomStreams": {
+      "summon": 2433219416,
+      "battle": 2329626762,
+      "expedition": 3447860436
+    },
+    "branchUnlocks": [],
+    "daily": {
+      "day": "2026-10-06",
+      "progress": {
+        "estate": 0,
+        "battle": 0,
+        "cultivation": 0
+      },
+      "claimed": []
+    },
+    "materialSweep": null,
+    "mainBattle": null,
+    "demo": null,
+    "revision": 0,
+    "createdAt": 1791256200000,
+    "lastTime": 1791256200000,
+    "clockWarnings": 0,
+    "resources": {
+      "stone": 1200,
+      "xp": 700,
+      "material": 120,
+      "herb": 25,
+      "ticket": 12,
+      "fate": 0
+    },
+    "owned": {
+      "nezha": {
+        "level": 1,
+        "branch": "A",
+        "treasure": 0,
+        "spent": {
+          "stone": 0,
+          "xp": 0
+        }
+      },
+      "huangfeihu": {
+        "level": 1,
+        "branch": "A",
+        "treasure": 0,
+        "spent": {
+          "stone": 0,
+          "xp": 0
+        }
+      },
+      "bigan": {
+        "level": 1,
+        "branch": "A",
+        "treasure": 0,
+        "spent": {
+          "stone": 0,
+          "xp": 0
+        }
+      }
+    },
+    "team": [
+      "nezha",
+      "huangfeihu",
+      "bigan"
+    ],
+    "slots": 3,
+    "cleared": [],
+    "pity": 0,
+    "drawHistory": [],
+    "buildings": [
+      {
+        "id": "hall",
+        "type": "hall",
+        "plot": "p0",
+        "level": 1,
+        "readyAt": 0,
+        "queue": [],
+        "assigned": null,
+        "progress": 0
+      },
+      {
+        "id": "spring",
+        "type": "spring",
+        "plot": "p1",
+        "level": 1,
+        "readyAt": 0,
+        "queue": [],
+        "assigned": null,
+        "progress": 0
+      }
+    ],
+    "warehouse": {
+      "resources": {
+        "stone": 0,
+        "xp": 0,
+        "material": 0,
+        "herb": 0,
+        "ticket": 0,
+        "fate": 0
+      },
+      "items": {},
+      "repairs": [],
+      "sources": {}
+    },
+    "items": {},
+    "methods": [],
+    "chosenMethod": null,
+    "chosenPill": null,
+    "choicePending": false,
+    "giftChosen": null,
+    "cores": [],
+    "integratedCores": [],
+    "unlockedRegions": [
+      0
+    ],
+    "settledBattles": [],
+    "transactions": [],
+    "stats": {
+      "builds": 0,
+      "battles": 0,
+      "harvests": 0,
+      "upgrades": 0
+    },
+    "claimedTasks": [],
+    "wishlist": null,
+    "teamPresets": [
+      null,
+      null,
+      null
+    ],
+    "thunderProject": {
+      "id": "thunder-project",
+      "stage": "unstarted",
+      "direction": null,
+      "completedStages": [],
+      "invested": {}
+    },
+    "expeditions": {
+      "active": null,
+      "settled": [],
+      "firstCleared": [],
+      "bossClears": [],
+      "closed": []
+    },
+    "settings": {
+      "sound": true,
+      "music": false,
+      "speed": 1,
+      "simplified": false,
+      "tutorialSkipped": false
+    }
+  },
+  "demoStates": {
+    "new": {
+      "version": 3,
+      "schemaRevision": 1,
+      "randomStreams": {
+        "summon": 2433219416,
+        "battle": 2329626762,
+        "expedition": 3447860436
+      },
+      "branchUnlocks": [],
+      "daily": {
+        "day": "2026-10-06",
+        "progress": {
+          "estate": 0,
+          "battle": 0,
+          "cultivation": 0
+        },
+        "claimed": []
+      },
+      "materialSweep": null,
+      "mainBattle": null,
+      "demo": "new",
+      "revision": 0,
+      "createdAt": 1791256200000,
+      "lastTime": 1791256200000,
+      "clockWarnings": 0,
+      "resources": {
+        "stone": 1200,
+        "xp": 700,
+        "material": 120,
+        "herb": 25,
+        "ticket": 12,
+        "fate": 0
+      },
+      "owned": {
+        "nezha": {
+          "level": 1,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 0,
+            "xp": 0
+          }
+        },
+        "huangfeihu": {
+          "level": 1,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 0,
+            "xp": 0
+          }
+        },
+        "bigan": {
+          "level": 1,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 0,
+            "xp": 0
+          }
+        }
+      },
+      "team": [
+        "nezha",
+        "huangfeihu",
+        "bigan"
+      ],
+      "slots": 3,
+      "cleared": [],
+      "pity": 0,
+      "drawHistory": [],
+      "buildings": [
+        {
+          "id": "hall",
+          "type": "hall",
+          "plot": "p0",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "spring",
+          "type": "spring",
+          "plot": "p1",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        }
+      ],
+      "warehouse": {
+        "resources": {
+          "stone": 0,
+          "xp": 0,
+          "material": 0,
+          "herb": 0,
+          "ticket": 0,
+          "fate": 0
+        },
+        "items": {},
+        "repairs": [],
+        "sources": {}
+      },
+      "items": {},
+      "methods": [],
+      "chosenMethod": null,
+      "chosenPill": null,
+      "choicePending": false,
+      "giftChosen": null,
+      "cores": [],
+      "integratedCores": [],
+      "unlockedRegions": [
+        0
+      ],
+      "settledBattles": [],
+      "transactions": [],
+      "stats": {
+        "builds": 0,
+        "battles": 0,
+        "harvests": 0,
+        "upgrades": 0
+      },
+      "claimedTasks": [],
+      "wishlist": null,
+      "teamPresets": [
+        null,
+        null,
+        null
+      ],
+      "thunderProject": {
+        "id": "thunder-project",
+        "stage": "unstarted",
+        "direction": null,
+        "completedStages": [],
+        "invested": {}
+      },
+      "expeditions": {
+        "active": null,
+        "settled": [],
+        "firstCleared": [],
+        "bossClears": [],
+        "closed": []
+      },
+      "settings": {
+        "sound": true,
+        "music": false,
+        "speed": 1,
+        "simplified": false,
+        "tutorialSkipped": false
+      }
+    },
+    "roster": {
+      "version": 3,
+      "schemaRevision": 1,
+      "randomStreams": {
+        "summon": 2433219416,
+        "battle": 2329626762,
+        "expedition": 3447860436
+      },
+      "branchUnlocks": [
+        "nezha",
+        "huangfeihu",
+        "bigan",
+        "leizhenzi",
+        "yangjian",
+        "taiyi",
+        "tongtian",
+        "zhaogongming",
+        "yunxiao",
+        "qiongxiao",
+        "bixiao",
+        "zhouwang",
+        "jifa",
+        "xuandu"
+      ],
+      "daily": {
+        "day": "2026-10-06",
+        "progress": {
+          "estate": 0,
+          "battle": 0,
+          "cultivation": 0
+        },
+        "claimed": []
+      },
+      "materialSweep": null,
+      "mainBattle": null,
+      "demo": "roster",
+      "revision": 0,
+      "createdAt": 1791256200000,
+      "lastTime": 1791256200000,
+      "clockWarnings": 0,
+      "resources": {
+        "stone": 17540,
+        "xp": 16000,
+        "material": 1121,
+        "herb": 400,
+        "ticket": 36,
+        "fate": 200
+      },
+      "owned": {
+        "nezha": {
+          "level": 5,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 300,
+            "xp": 230
+          }
+        },
+        "huangfeihu": {
+          "level": 5,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 300,
+            "xp": 230
+          }
+        },
+        "bigan": {
+          "level": 5,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 300,
+            "xp": 230
+          }
+        },
+        "leizhenzi": {
+          "level": 5,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 300,
+            "xp": 230
+          }
+        },
+        "yangjian": {
+          "level": 5,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 300,
+            "xp": 230
+          }
+        },
+        "taiyi": {
+          "level": 5,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 300,
+            "xp": 230
+          }
+        },
+        "tongtian": {
+          "level": 5,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 300,
+            "xp": 230
+          }
+        },
+        "zhaogongming": {
+          "level": 5,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 300,
+            "xp": 230
+          }
+        },
+        "yunxiao": {
+          "level": 5,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 300,
+            "xp": 230
+          }
+        },
+        "qiongxiao": {
+          "level": 5,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 300,
+            "xp": 230
+          }
+        },
+        "bixiao": {
+          "level": 5,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 300,
+            "xp": 230
+          }
+        },
+        "zhouwang": {
+          "level": 5,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 300,
+            "xp": 230
+          }
+        },
+        "jifa": {
+          "level": 5,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 300,
+            "xp": 230
+          }
+        },
+        "xuandu": {
+          "level": 5,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 300,
+            "xp": 230
+          }
+        }
+      },
+      "team": [
+        "nezha",
+        "huangfeihu",
+        "bigan",
+        "leizhenzi",
+        "yangjian"
+      ],
+      "slots": 5,
+      "cleared": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "pity": 0,
+      "drawHistory": [],
+      "buildings": [
+        {
+          "id": "hall",
+          "type": "hall",
+          "plot": "p0",
+          "level": 4,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "spring",
+          "type": "spring",
+          "plot": "p1",
+          "level": 2,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "farm-1",
+          "type": "farm",
+          "plot": "p2",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "library-2",
+          "type": "library",
+          "plot": "p3",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "arena-3",
+          "type": "arena",
+          "plot": "p4",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "forge-4",
+          "type": "forge",
+          "plot": "p5",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "alchemy-5",
+          "type": "alchemy",
+          "plot": "p6",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        }
+      ],
+      "warehouse": {
+        "resources": {
+          "stone": 0,
+          "xp": 0,
+          "material": 0,
+          "herb": 0,
+          "ticket": 0,
+          "fate": 0
+        },
+        "items": {},
+        "repairs": [],
+        "sources": {
+          "spring": {
+            "resources": {
+              "stone": 0,
+              "xp": 0,
+              "material": 0,
+              "herb": 0,
+              "ticket": 0,
+              "fate": 0
+            },
+            "items": {},
+            "repairs": []
+          },
+          "farm-1": {
+            "resources": {
+              "stone": 0,
+              "xp": 0,
+              "material": 0,
+              "herb": 0,
+              "ticket": 0,
+              "fate": 0
+            },
+            "items": {},
+            "repairs": []
+          }
+        }
+      },
+      "items": {
+        "training": 9,
+        "ward": 9,
+        "heal": 9,
+        "cleanse": 9
+      },
+      "methods": [
+        "break",
+        "ward",
+        "cleanse"
+      ],
+      "chosenMethod": "ward",
+      "chosenPill": null,
+      "choicePending": false,
+      "giftChosen": "yangjian",
+      "cores": [],
+      "integratedCores": [
+        "spring",
+        "furnace",
+        "thunder"
+      ],
+      "unlockedRegions": [
+        0,
+        1,
+        2
+      ],
+      "settledBattles": [
+        "demo-seed-1",
+        "demo-seed-2",
+        "demo-seed-3",
+        "demo-seed-4",
+        "demo-seed-5",
+        "demo-seed-6",
+        "demo-seed-7",
+        "demo-seed-8",
+        "demo-seed-9",
+        "demo-seed-10",
+        "demo-seed-11",
+        "demo-seed-12"
+      ],
+      "transactions": [],
+      "stats": {
+        "builds": 5,
+        "battles": 12,
+        "harvests": 0,
+        "upgrades": 0
+      },
+      "claimedTasks": [],
+      "wishlist": null,
+      "teamPresets": [
+        null,
+        null,
+        null
+      ],
+      "thunderProject": {
+        "id": "thunder-project",
+        "stage": "unstarted",
+        "direction": null,
+        "completedStages": [],
+        "invested": {}
+      },
+      "expeditions": {
+        "active": null,
+        "settled": [],
+        "firstCleared": [],
+        "bossClears": [],
+        "closed": []
+      },
+      "settings": {
+        "sound": true,
+        "music": false,
+        "speed": 1,
+        "simplified": false,
+        "tutorialSkipped": true
+      }
+    },
+    "estate-initial": {
+      "version": 3,
+      "schemaRevision": 1,
+      "randomStreams": {
+        "summon": 2433219416,
+        "battle": 2329626762,
+        "expedition": 3447860436
+      },
+      "branchUnlocks": [
+        "nezha",
+        "huangfeihu",
+        "bigan",
+        "yangjian",
+        "taiyi",
+        "leizhenzi",
+        "tongtian",
+        "zhaogongming",
+        "yunxiao",
+        "qiongxiao",
+        "bixiao",
+        "zhouwang",
+        "jifa",
+        "xuandu"
+      ],
+      "daily": {
+        "day": "2026-10-06",
+        "progress": {
+          "estate": 0,
+          "battle": 0,
+          "cultivation": 0
+        },
+        "claimed": []
+      },
+      "materialSweep": null,
+      "mainBattle": null,
+      "demo": "estate-initial",
+      "revision": 0,
+      "createdAt": 1791256200000,
+      "lastTime": 1791256200000,
+      "clockWarnings": 0,
+      "resources": {
+        "stone": 17820,
+        "xp": 16000,
+        "material": 1168,
+        "herb": 400,
+        "ticket": 36,
+        "fate": 200
+      },
+      "owned": {
+        "nezha": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "huangfeihu": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "bigan": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "yangjian": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "taiyi": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "leizhenzi": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "tongtian": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "zhaogongming": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "yunxiao": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "qiongxiao": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "bixiao": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "zhouwang": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "jifa": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "xuandu": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        }
+      },
+      "team": [
+        "nezha",
+        "huangfeihu",
+        "bigan"
+      ],
+      "slots": 3,
+      "cleared": [],
+      "pity": 0,
+      "drawHistory": [],
+      "buildings": [
+        {
+          "id": "hall",
+          "type": "hall",
+          "plot": "p0",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "spring",
+          "type": "spring",
+          "plot": "p1",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "farm-1",
+          "type": "farm",
+          "plot": "p2",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "alchemy-2",
+          "type": "alchemy",
+          "plot": "p3",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        }
+      ],
+      "warehouse": {
+        "resources": {
+          "stone": 0,
+          "xp": 0,
+          "material": 0,
+          "herb": 0,
+          "ticket": 0,
+          "fate": 0
+        },
+        "items": {},
+        "repairs": [],
+        "sources": {
+          "spring": {
+            "resources": {
+              "stone": 0,
+              "xp": 0,
+              "material": 0,
+              "herb": 0,
+              "ticket": 0,
+              "fate": 0
+            },
+            "items": {},
+            "repairs": []
+          },
+          "farm-1": {
+            "resources": {
+              "stone": 0,
+              "xp": 0,
+              "material": 0,
+              "herb": 0,
+              "ticket": 0,
+              "fate": 0
+            },
+            "items": {},
+            "repairs": []
+          }
+        }
+      },
+      "items": {
+        "training": 9,
+        "ward": 9,
+        "heal": 9,
+        "cleanse": 9
+      },
+      "methods": [],
+      "chosenMethod": null,
+      "chosenPill": null,
+      "choicePending": false,
+      "giftChosen": null,
+      "cores": [],
+      "integratedCores": [],
+      "unlockedRegions": [
+        0
+      ],
+      "settledBattles": [],
+      "transactions": [],
+      "stats": {
+        "builds": 2,
+        "battles": 0,
+        "harvests": 0,
+        "upgrades": 0
+      },
+      "claimedTasks": [],
+      "wishlist": null,
+      "teamPresets": [
+        null,
+        null,
+        null
+      ],
+      "thunderProject": {
+        "id": "thunder-project",
+        "stage": "unstarted",
+        "direction": null,
+        "completedStages": [],
+        "invested": {}
+      },
+      "expeditions": {
+        "active": null,
+        "settled": [],
+        "firstCleared": [],
+        "bossClears": [],
+        "closed": []
+      },
+      "settings": {
+        "sound": true,
+        "music": false,
+        "speed": 1,
+        "simplified": false,
+        "tutorialSkipped": true
+      }
+    },
+    "estate-expanded": {
+      "version": 3,
+      "schemaRevision": 1,
+      "randomStreams": {
+        "summon": 2433219416,
+        "battle": 2329626762,
+        "expedition": 3447860436
+      },
+      "branchUnlocks": [
+        "nezha",
+        "huangfeihu",
+        "bigan",
+        "leizhenzi",
+        "yangjian",
+        "taiyi",
+        "tongtian",
+        "zhaogongming",
+        "yunxiao",
+        "qiongxiao",
+        "bixiao",
+        "zhouwang",
+        "jifa",
+        "xuandu"
+      ],
+      "daily": {
+        "day": "2026-10-06",
+        "progress": {
+          "estate": 0,
+          "battle": 0,
+          "cultivation": 0
+        },
+        "claimed": []
+      },
+      "materialSweep": null,
+      "mainBattle": null,
+      "demo": "estate-expanded",
+      "revision": 0,
+      "createdAt": 1791256200000,
+      "lastTime": 1791256200000,
+      "clockWarnings": 0,
+      "resources": {
+        "stone": 17540,
+        "xp": 16000,
+        "material": 1121,
+        "herb": 400,
+        "ticket": 36,
+        "fate": 200
+      },
+      "owned": {
+        "nezha": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "huangfeihu": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "bigan": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "leizhenzi": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "yangjian": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "taiyi": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "tongtian": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "zhaogongming": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "yunxiao": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "qiongxiao": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "bixiao": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "zhouwang": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "jifa": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "xuandu": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        }
+      },
+      "team": [
+        "nezha",
+        "huangfeihu",
+        "bigan",
+        "leizhenzi",
+        "yangjian"
+      ],
+      "slots": 5,
+      "cleared": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pity": 0,
+      "drawHistory": [],
+      "buildings": [
+        {
+          "id": "hall",
+          "type": "hall",
+          "plot": "p0",
+          "level": 2,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "spring",
+          "type": "spring",
+          "plot": "p1",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "farm-1",
+          "type": "farm",
+          "plot": "p2",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "library-2",
+          "type": "library",
+          "plot": "p3",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "arena-3",
+          "type": "arena",
+          "plot": "p4",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "forge-4",
+          "type": "forge",
+          "plot": "p5",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "alchemy-5",
+          "type": "alchemy",
+          "plot": "p6",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        }
+      ],
+      "warehouse": {
+        "resources": {
+          "stone": 0,
+          "xp": 0,
+          "material": 0,
+          "herb": 0,
+          "ticket": 0,
+          "fate": 0
+        },
+        "items": {},
+        "repairs": [],
+        "sources": {
+          "spring": {
+            "resources": {
+              "stone": 0,
+              "xp": 0,
+              "material": 0,
+              "herb": 0,
+              "ticket": 0,
+              "fate": 0
+            },
+            "items": {},
+            "repairs": []
+          },
+          "farm-1": {
+            "resources": {
+              "stone": 0,
+              "xp": 0,
+              "material": 0,
+              "herb": 0,
+              "ticket": 0,
+              "fate": 0
+            },
+            "items": {},
+            "repairs": []
+          }
+        }
+      },
+      "items": {
+        "training": 9,
+        "ward": 9,
+        "heal": 9,
+        "cleanse": 9
+      },
+      "methods": [
+        "break",
+        "ward",
+        "cleanse"
+      ],
+      "chosenMethod": "ward",
+      "chosenPill": null,
+      "choicePending": false,
+      "giftChosen": "yangjian",
+      "cores": [],
+      "integratedCores": [
+        "spring"
+      ],
+      "unlockedRegions": [
+        0,
+        1
+      ],
+      "settledBattles": [
+        "demo-seed-1",
+        "demo-seed-2",
+        "demo-seed-3",
+        "demo-seed-4"
+      ],
+      "transactions": [],
+      "stats": {
+        "builds": 5,
+        "battles": 4,
+        "harvests": 0,
+        "upgrades": 0
+      },
+      "claimedTasks": [],
+      "wishlist": null,
+      "teamPresets": [
+        null,
+        null,
+        null
+      ],
+      "thunderProject": {
+        "id": "thunder-project",
+        "stage": "unstarted",
+        "direction": null,
+        "completedStages": [],
+        "invested": {}
+      },
+      "expeditions": {
+        "active": null,
+        "settled": [],
+        "firstCleared": [],
+        "bossClears": [],
+        "closed": []
+      },
+      "settings": {
+        "sound": true,
+        "music": false,
+        "speed": 1,
+        "simplified": false,
+        "tutorialSkipped": true
+      }
+    },
+    "estate-complete": {
+      "version": 3,
+      "schemaRevision": 1,
+      "randomStreams": {
+        "summon": 2433219416,
+        "battle": 2329626762,
+        "expedition": 3447860436
+      },
+      "branchUnlocks": [
+        "nezha",
+        "huangfeihu",
+        "bigan",
+        "leizhenzi",
+        "yangjian",
+        "taiyi",
+        "tongtian",
+        "zhaogongming",
+        "yunxiao",
+        "qiongxiao",
+        "bixiao",
+        "zhouwang",
+        "jifa",
+        "xuandu"
+      ],
+      "daily": {
+        "day": "2026-10-06",
+        "progress": {
+          "estate": 0,
+          "battle": 0,
+          "cultivation": 0
+        },
+        "claimed": []
+      },
+      "materialSweep": null,
+      "mainBattle": null,
+      "demo": "estate-complete",
+      "revision": 0,
+      "createdAt": 1791256200000,
+      "lastTime": 1791256200000,
+      "clockWarnings": 0,
+      "resources": {
+        "stone": 17540,
+        "xp": 16000,
+        "material": 1121,
+        "herb": 400,
+        "ticket": 36,
+        "fate": 200
+      },
+      "owned": {
+        "nezha": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "huangfeihu": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "bigan": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "leizhenzi": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "yangjian": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "taiyi": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "tongtian": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "zhaogongming": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "yunxiao": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "qiongxiao": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "bixiao": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "zhouwang": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "jifa": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "xuandu": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        }
+      },
+      "team": [
+        "nezha",
+        "huangfeihu",
+        "bigan",
+        "leizhenzi",
+        "yangjian"
+      ],
+      "slots": 5,
+      "cleared": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "pity": 0,
+      "drawHistory": [],
+      "buildings": [
+        {
+          "id": "hall",
+          "type": "hall",
+          "plot": "p0",
+          "level": 4,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "spring",
+          "type": "spring",
+          "plot": "p1",
+          "level": 2,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "farm-1",
+          "type": "farm",
+          "plot": "p2",
+          "level": 2,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "library-2",
+          "type": "library",
+          "plot": "p3",
+          "level": 2,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "arena-3",
+          "type": "arena",
+          "plot": "p4",
+          "level": 2,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "forge-4",
+          "type": "forge",
+          "plot": "p5",
+          "level": 3,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "alchemy-5",
+          "type": "alchemy",
+          "plot": "p6",
+          "level": 3,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        }
+      ],
+      "warehouse": {
+        "resources": {
+          "stone": 0,
+          "xp": 0,
+          "material": 0,
+          "herb": 0,
+          "ticket": 0,
+          "fate": 0
+        },
+        "items": {},
+        "repairs": [],
+        "sources": {
+          "spring": {
+            "resources": {
+              "stone": 0,
+              "xp": 0,
+              "material": 0,
+              "herb": 0,
+              "ticket": 0,
+              "fate": 0
+            },
+            "items": {},
+            "repairs": []
+          },
+          "farm-1": {
+            "resources": {
+              "stone": 0,
+              "xp": 0,
+              "material": 0,
+              "herb": 0,
+              "ticket": 0,
+              "fate": 0
+            },
+            "items": {},
+            "repairs": []
+          }
+        }
+      },
+      "items": {
+        "training": 9,
+        "ward": 9,
+        "heal": 9,
+        "cleanse": 9
+      },
+      "methods": [
+        "break",
+        "ward",
+        "cleanse"
+      ],
+      "chosenMethod": "ward",
+      "chosenPill": null,
+      "choicePending": false,
+      "giftChosen": "yangjian",
+      "cores": [],
+      "integratedCores": [
+        "spring",
+        "furnace",
+        "thunder"
+      ],
+      "unlockedRegions": [
+        0,
+        1,
+        2
+      ],
+      "settledBattles": [
+        "demo-seed-1",
+        "demo-seed-2",
+        "demo-seed-3",
+        "demo-seed-4",
+        "demo-seed-5",
+        "demo-seed-6",
+        "demo-seed-7",
+        "demo-seed-8",
+        "demo-seed-9",
+        "demo-seed-10",
+        "demo-seed-11",
+        "demo-seed-12"
+      ],
+      "transactions": [],
+      "stats": {
+        "builds": 5,
+        "battles": 12,
+        "harvests": 0,
+        "upgrades": 0
+      },
+      "claimedTasks": [],
+      "wishlist": null,
+      "teamPresets": [
+        null,
+        null,
+        null
+      ],
+      "thunderProject": {
+        "id": "thunder-project",
+        "stage": "unstarted",
+        "direction": null,
+        "completedStages": [],
+        "invested": {}
+      },
+      "expeditions": {
+        "active": null,
+        "settled": [],
+        "firstCleared": [],
+        "bossClears": [],
+        "closed": []
+      },
+      "settings": {
+        "sound": true,
+        "music": false,
+        "speed": 1,
+        "simplified": false,
+        "tutorialSkipped": true
+      }
+    },
+    "expedition-project": {
+      "version": 3,
+      "schemaRevision": 1,
+      "randomStreams": {
+        "summon": 2433219416,
+        "battle": 2329626762,
+        "expedition": 3447860436
+      },
+      "branchUnlocks": [
+        "nezha",
+        "huangfeihu",
+        "bigan",
+        "leizhenzi",
+        "yangjian",
+        "taiyi",
+        "tongtian",
+        "zhaogongming",
+        "yunxiao",
+        "qiongxiao",
+        "bixiao",
+        "zhouwang",
+        "jifa",
+        "xuandu"
+      ],
+      "daily": {
+        "day": "2026-10-06",
+        "progress": {
+          "estate": 0,
+          "battle": 0,
+          "cultivation": 0
+        },
+        "claimed": []
+      },
+      "materialSweep": null,
+      "mainBattle": null,
+      "demo": "expedition-project",
+      "revision": 0,
+      "createdAt": 1791256200000,
+      "lastTime": 1791256200000,
+      "clockWarnings": 0,
+      "resources": {
+        "stone": 17540,
+        "xp": 16000,
+        "material": 1121,
+        "herb": 400,
+        "ticket": 36,
+        "fate": 200
+      },
+      "owned": {
+        "nezha": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "huangfeihu": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "bigan": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "leizhenzi": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "yangjian": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "taiyi": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "tongtian": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "zhaogongming": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "yunxiao": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "qiongxiao": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "bixiao": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "zhouwang": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "jifa": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "xuandu": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        }
+      },
+      "team": [
+        "nezha",
+        "huangfeihu",
+        "bigan",
+        "leizhenzi",
+        "yangjian"
+      ],
+      "slots": 5,
+      "cleared": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "pity": 0,
+      "drawHistory": [],
+      "buildings": [
+        {
+          "id": "hall",
+          "type": "hall",
+          "plot": "p0",
+          "level": 4,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "spring",
+          "type": "spring",
+          "plot": "p1",
+          "level": 2,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "farm-1",
+          "type": "farm",
+          "plot": "p2",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "library-2",
+          "type": "library",
+          "plot": "p3",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "arena-3",
+          "type": "arena",
+          "plot": "p4",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "forge-4",
+          "type": "forge",
+          "plot": "p5",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "alchemy-5",
+          "type": "alchemy",
+          "plot": "p6",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        }
+      ],
+      "warehouse": {
+        "resources": {
+          "stone": 0,
+          "xp": 0,
+          "material": 0,
+          "herb": 0,
+          "ticket": 0,
+          "fate": 0
+        },
+        "items": {},
+        "repairs": [],
+        "sources": {
+          "spring": {
+            "resources": {
+              "stone": 0,
+              "xp": 0,
+              "material": 0,
+              "herb": 0,
+              "ticket": 0,
+              "fate": 0
+            },
+            "items": {},
+            "repairs": []
+          },
+          "farm-1": {
+            "resources": {
+              "stone": 0,
+              "xp": 0,
+              "material": 0,
+              "herb": 0,
+              "ticket": 0,
+              "fate": 0
+            },
+            "items": {},
+            "repairs": []
+          }
+        }
+      },
+      "items": {
+        "training": 9,
+        "ward": 9,
+        "heal": 9,
+        "cleanse": 9
+      },
+      "methods": [
+        "break",
+        "ward",
+        "cleanse"
+      ],
+      "chosenMethod": "ward",
+      "chosenPill": null,
+      "choicePending": false,
+      "giftChosen": "yangjian",
+      "cores": [],
+      "integratedCores": [
+        "spring",
+        "furnace",
+        "thunder"
+      ],
+      "unlockedRegions": [
+        0,
+        1,
+        2
+      ],
+      "settledBattles": [
+        "demo-seed-1",
+        "demo-seed-2",
+        "demo-seed-3",
+        "demo-seed-4",
+        "demo-seed-5",
+        "demo-seed-6",
+        "demo-seed-7",
+        "demo-seed-8",
+        "demo-seed-9",
+        "demo-seed-10",
+        "demo-seed-11",
+        "demo-seed-12"
+      ],
+      "transactions": [],
+      "stats": {
+        "builds": 5,
+        "battles": 12,
+        "harvests": 0,
+        "upgrades": 0
+      },
+      "claimedTasks": [],
+      "wishlist": null,
+      "teamPresets": [
+        null,
+        null,
+        null
+      ],
+      "thunderProject": {
+        "id": "thunder-project",
+        "stage": "unstarted",
+        "direction": null,
+        "completedStages": [],
+        "invested": {}
+      },
+      "expeditions": {
+        "active": null,
+        "settled": [],
+        "firstCleared": [],
+        "bossClears": [],
+        "closed": []
+      },
+      "settings": {
+        "sound": true,
+        "music": false,
+        "speed": 1,
+        "simplified": false,
+        "tutorialSkipped": true
+      }
+    }
+  },
+  "buildingVisuals": {
+    "hall": {
+      "1": {
+        "width": 428,
+        "height": 438,
+        "displayWidth": 112,
+        "groundAnchor": {
+          "x": 0.5,
+          "y": 0.7168949771689498
+        },
+        "foundation": {
+          "center": {
+            "x": 214,
+            "y": 314
+          },
+          "corners": [
+            {
+              "x": 8,
+              "y": 315
+            },
+            {
+              "x": 214,
+              "y": 194
+            },
+            {
+              "x": 420,
+              "y": 314
+            },
+            {
+              "x": 220,
+              "y": 436
+            }
+          ]
+        }
+      },
+      "2": {
+        "width": 520,
+        "height": 432,
+        "displayWidth": 132,
+        "groundAnchor": {
+          "x": 0.5,
+          "y": 0.7013888888888888
+        },
+        "foundation": {
+          "center": {
+            "x": 260,
+            "y": 303
+          },
+          "corners": [
+            {
+              "x": 2,
+              "y": 304
+            },
+            {
+              "x": 260,
+              "y": 175
+            },
+            {
+              "x": 518,
+              "y": 303
+            },
+            {
+              "x": 265,
+              "y": 431
+            }
+          ]
+        }
+      },
+      "3": {
+        "width": 520,
+        "height": 432,
+        "displayWidth": 132,
+        "groundAnchor": {
+          "x": 0.5,
+          "y": 0.7013888888888888
+        },
+        "foundation": {
+          "center": {
+            "x": 260,
+            "y": 303
+          },
+          "corners": [
+            {
+              "x": 2,
+              "y": 304
+            },
+            {
+              "x": 260,
+              "y": 175
+            },
+            {
+              "x": 518,
+              "y": 303
+            },
+            {
+              "x": 265,
+              "y": 431
+            }
+          ]
+        }
+      },
+      "4": {
+        "width": 520,
+        "height": 432,
+        "displayWidth": 132,
+        "groundAnchor": {
+          "x": 0.5,
+          "y": 0.7013888888888888
+        },
+        "foundation": {
+          "center": {
+            "x": 260,
+            "y": 303
+          },
+          "corners": [
+            {
+              "x": 2,
+              "y": 304
+            },
+            {
+              "x": 260,
+              "y": 175
+            },
+            {
+              "x": 518,
+              "y": 303
+            },
+            {
+              "x": 265,
+              "y": 431
+            }
+          ]
+        }
+      }
+    },
+    "spring": {
+      "1": {
+        "width": 438,
+        "height": 434,
+        "displayWidth": 95,
+        "groundAnchor": {
+          "x": 0.5,
+          "y": 0.6866359447004609
+        },
+        "foundation": {
+          "center": {
+            "x": 219,
+            "y": 298
+          },
+          "corners": [
+            {
+              "x": 3,
+              "y": 284
+            },
+            {
+              "x": 219,
+              "y": 168
+            },
+            {
+              "x": 435,
+              "y": 296
+            },
+            {
+              "x": 217,
+              "y": 433
+            }
+          ]
+        }
+      },
+      "2": {
+        "width": 438,
+        "height": 434,
+        "displayWidth": 95,
+        "groundAnchor": {
+          "x": 0.5,
+          "y": 0.6866359447004609
+        },
+        "foundation": {
+          "center": {
+            "x": 219,
+            "y": 298
+          },
+          "corners": [
+            {
+              "x": 3,
+              "y": 284
+            },
+            {
+              "x": 219,
+              "y": 168
+            },
+            {
+              "x": 435,
+              "y": 296
+            },
+            {
+              "x": 217,
+              "y": 433
+            }
+          ]
+        }
+      },
+      "3": {
+        "width": 438,
+        "height": 434,
+        "displayWidth": 95,
+        "groundAnchor": {
+          "x": 0.5,
+          "y": 0.6866359447004609
+        },
+        "foundation": {
+          "center": {
+            "x": 219,
+            "y": 298
+          },
+          "corners": [
+            {
+              "x": 3,
+              "y": 284
+            },
+            {
+              "x": 219,
+              "y": 168
+            },
+            {
+              "x": 435,
+              "y": 296
+            },
+            {
+              "x": 217,
+              "y": 433
+            }
+          ]
+        }
+      },
+      "4": {
+        "width": 438,
+        "height": 434,
+        "displayWidth": 95,
+        "groundAnchor": {
+          "x": 0.5,
+          "y": 0.6866359447004609
+        },
+        "foundation": {
+          "center": {
+            "x": 219,
+            "y": 298
+          },
+          "corners": [
+            {
+              "x": 3,
+              "y": 284
+            },
+            {
+              "x": 219,
+              "y": 168
+            },
+            {
+              "x": 435,
+              "y": 296
+            },
+            {
+              "x": 217,
+              "y": 433
+            }
+          ]
+        }
+      }
+    },
+    "farm": {
+      "1": {
+        "width": 438,
+        "height": 377,
+        "displayWidth": 95,
+        "groundAnchor": {
+          "x": 0.5,
+          "y": 0.5649867374005305
+        },
+        "foundation": {
+          "center": {
+            "x": 219,
+            "y": 213
+          },
+          "corners": [
+            {
+              "x": 3,
+              "y": 213
+            },
+            {
+              "x": 219,
+              "y": 53
+            },
+            {
+              "x": 435,
+              "y": 213
+            },
+            {
+              "x": 219,
+              "y": 374
+            }
+          ]
+        }
+      },
+      "2": {
+        "width": 438,
+        "height": 377,
+        "displayWidth": 95,
+        "groundAnchor": {
+          "x": 0.5,
+          "y": 0.5649867374005305
+        },
+        "foundation": {
+          "center": {
+            "x": 219,
+            "y": 213
+          },
+          "corners": [
+            {
+              "x": 3,
+              "y": 213
+            },
+            {
+              "x": 219,
+              "y": 53
+            },
+            {
+              "x": 435,
+              "y": 213
+            },
+            {
+              "x": 219,
+              "y": 374
+            }
+          ]
+        }
+      },
+      "3": {
+        "width": 438,
+        "height": 377,
+        "displayWidth": 95,
+        "groundAnchor": {
+          "x": 0.5,
+          "y": 0.5649867374005305
+        },
+        "foundation": {
+          "center": {
+            "x": 219,
+            "y": 213
+          },
+          "corners": [
+            {
+              "x": 3,
+              "y": 213
+            },
+            {
+              "x": 219,
+              "y": 53
+            },
+            {
+              "x": 435,
+              "y": 213
+            },
+            {
+              "x": 219,
+              "y": 374
+            }
+          ]
+        }
+      },
+      "4": {
+        "width": 438,
+        "height": 377,
+        "displayWidth": 95,
+        "groundAnchor": {
+          "x": 0.5,
+          "y": 0.5649867374005305
+        },
+        "foundation": {
+          "center": {
+            "x": 219,
+            "y": 213
+          },
+          "corners": [
+            {
+              "x": 3,
+              "y": 213
+            },
+            {
+              "x": 219,
+              "y": 53
+            },
+            {
+              "x": 435,
+              "y": 213
+            },
+            {
+              "x": 219,
+              "y": 374
+            }
+          ]
+        }
+      }
+    },
+    "alchemy": {
+      "1": {
+        "width": 438,
+        "height": 438,
+        "displayWidth": 95,
+        "groundAnchor": {
+          "x": 0.502283105022831,
+          "y": 0.7009132420091324
+        },
+        "foundation": {
+          "center": {
+            "x": 220,
+            "y": 307
+          },
+          "corners": [
+            {
+              "x": 16,
+              "y": 306
+            },
+            {
+              "x": 220,
+              "y": 199
+            },
+            {
+              "x": 423,
+              "y": 308
+            },
+            {
+              "x": 221,
+              "y": 415
+            }
+          ]
+        }
+      },
+      "2": {
+        "width": 438,
+        "height": 438,
+        "displayWidth": 111,
+        "groundAnchor": {
+          "x": 0.502283105022831,
+          "y": 0.7511415525114156
+        },
+        "foundation": {
+          "center": {
+            "x": 220,
+            "y": 329
+          },
+          "corners": [
+            {
+              "x": 13,
+              "y": 329
+            },
+            {
+              "x": 220,
+              "y": 232
+            },
+            {
+              "x": 425,
+              "y": 329
+            },
+            {
+              "x": 235,
+              "y": 427
+            }
+          ]
+        }
+      },
+      "3": {
+        "width": 520,
+        "height": 476,
+        "displayWidth": 119,
+        "groundAnchor": {
+          "x": 0.5,
+          "y": 0.75
+        },
+        "foundation": {
+          "center": {
+            "x": 260,
+            "y": 357
+          },
+          "corners": [
+            {
+              "x": 3,
+              "y": 356
+            },
+            {
+              "x": 260,
+              "y": 241
+            },
+            {
+              "x": 517,
+              "y": 350
+            },
+            {
+              "x": 285,
+              "y": 475
+            }
+          ]
+        }
+      },
+      "4": {
+        "width": 520,
+        "height": 476,
+        "displayWidth": 119,
+        "groundAnchor": {
+          "x": 0.5,
+          "y": 0.75
+        },
+        "foundation": {
+          "center": {
+            "x": 260,
+            "y": 357
+          },
+          "corners": [
+            {
+              "x": 3,
+              "y": 356
+            },
+            {
+              "x": 260,
+              "y": 241
+            },
+            {
+              "x": 517,
+              "y": 350
+            },
+            {
+              "x": 285,
+              "y": 475
+            }
+          ]
+        }
+      }
+    },
+    "forge": {
+      "1": {
+        "width": 438,
+        "height": 438,
+        "displayWidth": 95,
+        "groundAnchor": {
+          "x": 0.5045662100456622,
+          "y": 0.7031963470319634
+        },
+        "foundation": {
+          "center": {
+            "x": 221,
+            "y": 308
+          },
+          "corners": [
+            {
+              "x": 10,
+              "y": 302
+            },
+            {
+              "x": 221,
+              "y": 190
+            },
+            {
+              "x": 431,
+              "y": 315
+            },
+            {
+              "x": 222,
+              "y": 426
+            }
+          ]
+        }
+      },
+      "2": {
+        "width": 438,
+        "height": 438,
+        "displayWidth": 95,
+        "groundAnchor": {
+          "x": 0.5045662100456622,
+          "y": 0.7031963470319634
+        },
+        "foundation": {
+          "center": {
+            "x": 221,
+            "y": 308
+          },
+          "corners": [
+            {
+              "x": 10,
+              "y": 302
+            },
+            {
+              "x": 221,
+              "y": 190
+            },
+            {
+              "x": 431,
+              "y": 315
+            },
+            {
+              "x": 222,
+              "y": 426
+            }
+          ]
+        }
+      },
+      "3": {
+        "width": 438,
+        "height": 438,
+        "displayWidth": 95,
+        "groundAnchor": {
+          "x": 0.5045662100456622,
+          "y": 0.7031963470319634
+        },
+        "foundation": {
+          "center": {
+            "x": 221,
+            "y": 308
+          },
+          "corners": [
+            {
+              "x": 10,
+              "y": 302
+            },
+            {
+              "x": 221,
+              "y": 190
+            },
+            {
+              "x": 431,
+              "y": 315
+            },
+            {
+              "x": 222,
+              "y": 426
+            }
+          ]
+        }
+      },
+      "4": {
+        "width": 438,
+        "height": 438,
+        "displayWidth": 95,
+        "groundAnchor": {
+          "x": 0.5045662100456622,
+          "y": 0.7031963470319634
+        },
+        "foundation": {
+          "center": {
+            "x": 221,
+            "y": 308
+          },
+          "corners": [
+            {
+              "x": 10,
+              "y": 302
+            },
+            {
+              "x": 221,
+              "y": 190
+            },
+            {
+              "x": 431,
+              "y": 315
+            },
+            {
+              "x": 222,
+              "y": 426
+            }
+          ]
+        }
+      }
+    },
+    "library": {
+      "1": {
+        "width": 431,
+        "height": 438,
+        "displayWidth": 95,
+        "groundAnchor": {
+          "x": 0.5127610208816705,
+          "y": 0.776255707762557
+        },
+        "foundation": {
+          "center": {
+            "x": 221,
+            "y": 340
+          },
+          "corners": [
+            {
+              "x": 24,
+              "y": 344
+            },
+            {
+              "x": 221,
+              "y": 244
+            },
+            {
+              "x": 411,
+              "y": 336
+            },
+            {
+              "x": 197,
+              "y": 435
+            }
+          ]
+        }
+      },
+      "2": {
+        "width": 431,
+        "height": 438,
+        "displayWidth": 95,
+        "groundAnchor": {
+          "x": 0.5127610208816705,
+          "y": 0.776255707762557
+        },
+        "foundation": {
+          "center": {
+            "x": 221,
+            "y": 340
+          },
+          "corners": [
+            {
+              "x": 24,
+              "y": 344
+            },
+            {
+              "x": 221,
+              "y": 244
+            },
+            {
+              "x": 411,
+              "y": 336
+            },
+            {
+              "x": 197,
+              "y": 435
+            }
+          ]
+        }
+      },
+      "3": {
+        "width": 431,
+        "height": 438,
+        "displayWidth": 95,
+        "groundAnchor": {
+          "x": 0.5127610208816705,
+          "y": 0.776255707762557
+        },
+        "foundation": {
+          "center": {
+            "x": 221,
+            "y": 340
+          },
+          "corners": [
+            {
+              "x": 24,
+              "y": 344
+            },
+            {
+              "x": 221,
+              "y": 244
+            },
+            {
+              "x": 411,
+              "y": 336
+            },
+            {
+              "x": 197,
+              "y": 435
+            }
+          ]
+        }
+      },
+      "4": {
+        "width": 431,
+        "height": 438,
+        "displayWidth": 95,
+        "groundAnchor": {
+          "x": 0.5127610208816705,
+          "y": 0.776255707762557
+        },
+        "foundation": {
+          "center": {
+            "x": 221,
+            "y": 340
+          },
+          "corners": [
+            {
+              "x": 24,
+              "y": 344
+            },
+            {
+              "x": 221,
+              "y": 244
+            },
+            {
+              "x": 411,
+              "y": 336
+            },
+            {
+              "x": 197,
+              "y": 435
+            }
+          ]
+        }
+      }
+    },
+    "arena": {
+      "1": {
+        "width": 438,
+        "height": 417,
+        "displayWidth": 95,
+        "groundAnchor": {
+          "x": 0.5,
+          "y": 0.6091127098321343
+        },
+        "foundation": {
+          "center": {
+            "x": 219,
+            "y": 254
+          },
+          "corners": [
+            {
+              "x": 1,
+              "y": 254
+            },
+            {
+              "x": 219,
+              "y": 91
+            },
+            {
+              "x": 437,
+              "y": 254
+            },
+            {
+              "x": 219,
+              "y": 416
+            }
+          ]
+        }
+      },
+      "2": {
+        "width": 438,
+        "height": 417,
+        "displayWidth": 95,
+        "groundAnchor": {
+          "x": 0.5,
+          "y": 0.6091127098321343
+        },
+        "foundation": {
+          "center": {
+            "x": 219,
+            "y": 254
+          },
+          "corners": [
+            {
+              "x": 1,
+              "y": 254
+            },
+            {
+              "x": 219,
+              "y": 91
+            },
+            {
+              "x": 437,
+              "y": 254
+            },
+            {
+              "x": 219,
+              "y": 416
+            }
+          ]
+        }
+      },
+      "3": {
+        "width": 438,
+        "height": 417,
+        "displayWidth": 95,
+        "groundAnchor": {
+          "x": 0.5,
+          "y": 0.6091127098321343
+        },
+        "foundation": {
+          "center": {
+            "x": 219,
+            "y": 254
+          },
+          "corners": [
+            {
+              "x": 1,
+              "y": 254
+            },
+            {
+              "x": 219,
+              "y": 91
+            },
+            {
+              "x": 437,
+              "y": 254
+            },
+            {
+              "x": 219,
+              "y": 416
+            }
+          ]
+        }
+      },
+      "4": {
+        "width": 438,
+        "height": 417,
+        "displayWidth": 95,
+        "groundAnchor": {
+          "x": 0.5,
+          "y": 0.6091127098321343
+        },
+        "foundation": {
+          "center": {
+            "x": 219,
+            "y": 254
+          },
+          "corners": [
+            {
+              "x": 1,
+              "y": 254
+            },
+            {
+              "x": 219,
+              "y": 91
+            },
+            {
+              "x": 437,
+              "y": 254
+            },
+            {
+              "x": 219,
+              "y": 416
+            }
+          ]
+        }
+      }
+    }
+  }
+}

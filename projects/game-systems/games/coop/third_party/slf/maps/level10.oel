@@ -1,0 +1,588 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  
+  
+  
+  
+  <width>
+    
+    
+    1000
+  
+  
+  </width>
+  
+  
+  
+  
+  
+  
+  <height>
+    
+    
+    640
+  
+  
+  </height>
+  
+  
+  
+  
+  
+  
+  <solids>
+    
+    
+    
+    
+    
+    
+    <rect h="640" w="10" x="0" y="0"/>
+    
+    
+    
+    
+    
+    
+    <rect h="70" w="990" x="10" y="570"/>
+    
+    
+    
+    
+    
+    
+    <rect h="380" w="120" x="260" y="190"/>
+    
+    
+    
+    
+    
+    
+    <rect h="30" w="30" x="460" y="170"/>
+    
+    
+    
+    
+    
+    
+    <rect h="40" w="390" x="460" y="470"/>
+    
+    
+    
+    
+    
+    
+    <rect h="60" w="270" x="730" y="0"/>
+    
+    
+    
+    
+    
+    
+    <rect h="410" w="120" x="730" y="60"/>
+    
+    
+    
+    
+    
+    
+    <rect h="20" w="40" x="860" y="360"/>
+    
+    
+    
+    
+    
+    
+    <rect h="20" w="40" x="860" y="490"/>
+    
+    
+    
+    
+    
+    
+    <rect h="20" w="20" x="930" y="280"/>
+    
+    
+    
+    
+    
+    
+    <rect h="20" w="40" x="940" y="430"/>
+    
+    
+    
+    
+    
+    
+    <rect h="20" w="20" x="960" y="210"/>
+    
+    
+    
+    
+    
+    
+    <rect h="510" w="10" x="990" y="60"/>
+    
+    
+    
+  
+  
+  
+  </solids>
+  
+  
+  
+  
+  
+  
+  <extraPlatforms>
+    
+    
+    
+    
+    
+    
+    <spike0 height="10" width="40" x="10" y="560"/>
+    
+    
+    
+    
+    
+    
+    <spike0 height="10" width="40" x="220" y="560"/>
+    
+    
+    
+    
+    
+    
+    <spike1 height="70" width="10" x="10" y="310"/>
+    
+    
+    
+    
+    
+    
+    <spike1 height="70" width="10" x="10" y="400"/>
+    
+    
+    
+    
+    
+    
+    <spike3 height="70" width="10" x="250" y="310"/>
+    
+    
+    
+    
+    
+    
+    <spike3 height="70" width="10" x="250" y="400"/>
+    
+    
+    
+    
+    
+    
+    <LargeCrate x="470" y="510"/>
+    
+    
+    
+    
+    
+    
+    <level1_specialBlock animated="0" movementType="1" speed="40" x="200" y="210"/>
+    
+    
+    
+    
+    
+    
+    <LargeCrate x="810" y="510"/>
+    
+    
+    
+    
+    
+    
+    <spike0 height="10" width="50" x="940" y="560"/>
+    
+    
+    
+  
+  
+  
+  </extraPlatforms>
+  
+  
+  
+  
+  
+  
+  <movingPlatforms>
+    
+    
+    
+    
+    
+    
+    <level1_specialPlatform animated="0" movementType="5" speed="80" x="10" y="290">
+      
+      
+      
+      
+      
+      
+      <node x="160" y="290"/>
+      
+      
+      
+    
+    
+    
+    </level1_specialPlatform>
+    
+    
+    
+    
+    
+    
+    <level1_specialPlatform animated="0" movementType="5" speed="60" x="10" y="380">
+      
+      
+      
+      
+      
+      
+      <node x="160" y="380"/>
+      
+      
+      
+    
+    
+    
+    </level1_specialPlatform>
+    
+    
+    
+    
+    
+    
+    <level1_specialPlatform animated="0" movementType="5" speed="40" x="10" y="470">
+      
+      
+      
+      
+      
+      
+      <node x="160" y="470"/>
+      
+      
+      
+    
+    
+    
+    </level1_specialPlatform>
+    
+    
+    
+    
+    
+    
+    <level1_specialBlock animated="0" movementType="5" speed="40" x="380" y="310">
+      
+      
+      
+      
+      
+      
+      <node x="380" y="490"/>
+      
+      
+      
+    
+    
+    
+    </level1_specialBlock>
+    
+    
+    
+    
+    
+    
+    <level1_specialBlock animated="0" movementType="5" speed="60" x="460" y="310">
+      
+      
+      
+      
+      
+      
+      <node x="630" y="310"/>
+      
+      
+      
+    
+    
+    
+    </level1_specialBlock>
+    
+    
+    
+    
+    
+    
+    <level1_specialPlatform animated="0" movementType="5" speed="40" x="490" y="170">
+      
+      
+      
+      
+      
+      
+      <node x="570" y="170"/>
+      
+      
+      
+    
+    
+    
+    </level1_specialPlatform>
+    
+    
+    
+    
+    
+    
+    <level1_specialBlock animated="0" movementType="5" speed="120" x="670" y="150">
+      
+      
+      
+      
+      
+      
+      <node x="670" y="310"/>
+      
+      
+      
+    
+    
+    
+    </level1_specialBlock>
+    
+    
+    
+  
+  
+  
+  </movingPlatforms>
+  
+  
+  
+  
+  
+  
+  <BGLayer1>
+    
+    
+    
+    
+    
+    
+    <level1_windows height="54" scrollFactor="0.1" width="540" x="50" y="70"/>
+    
+    
+    
+    
+    
+    
+    <level1_shelfTile height="640" scrollFactor="0.2" width="240" x="10" y="0"/>
+    
+    
+    
+    
+    
+    
+    <level1_shelfTile height="640" scrollFactor="0.3" width="320" x="360" y="0"/>
+    
+    
+    
+  
+  
+  
+  </BGLayer1>
+  
+  
+  
+  
+  
+  
+  <BGLayer2>
+    
+    
+    
+    
+    
+    
+    <sugarBagsAndCrates scrollFactor="0.6" x="600" y="440"/>
+    
+    
+    
+    
+    
+    
+    <cratesBox scrollFactor="0.7" x="170" y="390"/>
+    
+    
+    
+  
+  
+  
+  </BGLayer2>
+  
+  
+  
+  
+  
+  
+  <BGLayer3>
+    
+    
+    
+    
+    
+    
+    <sodaPack scrollFactor="0.2" x="670" y="550"/>
+    
+    
+    
+    
+    
+    
+    <sugarBags scrollFactor="0.2" x="550" y="430"/>
+    
+    
+    
+  
+  
+  
+  </BGLayer3>
+  
+  
+  
+  
+  
+  
+  <objects>
+    
+    
+    
+    
+    
+    
+    <exit nextLevel="2" x="288" y="100"/>
+    
+    
+    
+    
+    
+    
+    <Bottle width="12" x="919" y="104"/>
+    
+    
+    
+    
+    
+    
+    <andreCheckPoint player="1" x="353" y="132"/>
+    
+    
+    
+  
+  
+  
+  </objects>
+  
+  
+  
+  
+  
+  
+  <characters>
+    
+    
+    
+    
+    
+    
+    <player andreInitialFlip="0" followHeight="0" followWidth="0" levelName="Up And Over" liselotInitialFlip="1" movementType="1" speed="40" startsFirst="1" talkString="I am off to my meeting with the Governor General." x="110" y="520">
+      
+      
+      
+      
+      
+      
+      <node x="140" y="520"/>
+      
+      
+      
+    
+    
+    
+    </player>
+    
+    
+    
+    
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="560" y="520">
+      
+      
+      
+      
+      
+      
+      <node x="600" y="520"/>
+      
+      
+      
+    
+    
+    
+    </liselot>
+    
+    
+    
+    
+    
+    
+    <worker movementType="1" speed="40" talkString="I want this Super Lemonade Factory to be a non-hierarchical, non-bureaucratic business without private property in the means of production." x="460" y="430">
+      
+      
+      
+      
+      
+      
+      <node x="690" y="430"/>
+      
+      
+      
+    
+    
+    
+    </worker>
+    
+    
+    
+  
+  
+  
+  </characters>
+  
+  
+  
+
+
+
+</level>

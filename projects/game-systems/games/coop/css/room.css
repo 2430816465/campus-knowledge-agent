@@ -1,0 +1,119 @@
+/* Room layout owns its grid; shared button skins must not change placement. */
+/* Full viewport playfield; keep the complete 16:9 world visible on wider phones. */
+html[data-game-ui="coop"] body.in-game{overflow:hidden;background:#0b1725}
+html[data-game-ui="coop"] body.in-game>.topbar{display:none}
+html[data-game-ui="coop"] body.in-game #game{width:100vw;height:100dvh;margin:0}
+html[data-game-ui="coop"] body.in-game .stage{inset:0;width:100%;height:100%;transform:none}
+html[data-game-ui="coop"] body.in-game #board{width:100%;height:100%;object-fit:contain}
+html[data-game-ui="coop"] .corner-menu{position:absolute;z-index:12;top:max(6px,env(safe-area-inset-top));right:max(8px,env(safe-area-inset-right));width:44px;min-width:44px;height:44px;min-height:44px;padding:0;border:1px solid #ebd7b47a;border-radius:12px;background:#172838a8;color:#fff2d6;font:22px/1 sans-serif;box-shadow:none;cursor:pointer}
+html[data-game-ui="coop"] body.in-game .game-topline{position:absolute;inset:max(56px,calc(env(safe-area-inset-top) + 50px)) max(8px,env(safe-area-inset-right)) auto auto;z-index:11;display:flex;flex-direction:column;align-items:stretch;gap:8px;width:min(300px,calc(100vw - 24px));max-height:calc(100dvh - 72px);overflow:auto;padding:12px;border:1px solid #bba379;border-radius:14px;background:#fff1d9f5;pointer-events:auto;box-shadow:0 8px 24px #0006}
+html[data-game-ui="coop"] body.in-game .game-topline[hidden]{display:none}
+html[data-game-ui="coop"] body.in-game .game-topline .icon-button{display:block;min-height:44px;color:#554735;background:#edd9b5;font-size:14px}
+html[data-game-ui="coop"] body.in-game .game-topline [hidden]{display:none}
+html[data-game-ui="coop"] body.in-game .game-topline .stage-hint{position:static;transform:none;width:auto;max-width:none;padding:8px;font-size:12px;white-space:normal}
+html[data-game-ui="coop"] body.in-game .game-topline .game-brand{max-width:100%;width:auto}
+html[data-game-ui="coop"] body.in-game .game-help{top:max(56px,env(safe-area-inset-top));right:max(8px,env(safe-area-inset-right));left:auto;width:min(380px,calc(100% - 24px));max-height:calc(100dvh - 76px);overflow:auto;z-index:13}
+html[data-game-ui="coop"] body.in-game .touch-controls{padding:0 max(10px,env(safe-area-inset-right)) max(8px,env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left))}
+html[data-game-ui="coop"] body.in-game .touch-controls button{width:clamp(44px,7vw,56px);height:clamp(44px,7vw,56px);min-width:44px;min-height:44px;background:#203a5099;color:#fff1d6;border:1px solid #eddbb580;box-shadow:none;font-size:23px}
+html[data-game-ui="coop"] body.in-game .touch-controls .touch-interact{font-size:12px}
+html[data-game-ui="coop"] body.in-game .touch-controls .touch-jump{background:#b88947a8}
+html[data-game-ui="coop"] body.in-game .touch-controls button.pressed{background:#d2ab70e8;color:#172838}
+html[data-game-ui="coop"] body:not(.in-game) .portrait{display:none}
+html[data-game-ui="coop"] body:not(.in-game) .screen{opacity:1;pointer-events:auto}
+html[data-game-ui="coop"] .lobby-screen{width:calc(100% - 24px);max-width:680px;margin:12px auto 24px}
+html[data-game-ui="coop"] .lobby-panel{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;padding:18px;min-width:0}
+html[data-game-ui="coop"] .lobby-panel>*{min-width:0;grid-column:auto;grid-row:auto;margin:0}
+html[data-game-ui="coop"] .back-link{position:static;justify-self:start;min-height:44px;padding:8px 12px;color:#705334;font-size:14px}
+html[data-game-ui="coop"] .lobby-title{align-self:center}
+html[data-game-ui="coop"] .lobby-title h1{font-size:26px;margin:0 0 8px}
+html[data-game-ui="coop"] .lobby-title p{font-size:13px;line-height:1.6}
+html[data-game-ui="coop"] .invite-code{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;width:100%;height:auto;padding:12px 16px;text-align:center}
+html[data-game-ui="coop"] .invite-code>span{font-size:12px}
+html[data-game-ui="coop"] .invite-code strong{grid-column:1;font-family:monospace;font-size:28px;letter-spacing:.16em;margin:0;user-select:all}
+html[data-game-ui="coop"] .copy-button{position:static;grid-column:2;grid-row:1/3;min-height:44px;padding:8px 12px;font-size:13px}
+html[data-game-ui="coop"] .lobby-players{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+html[data-game-ui="coop"] .player-slot{min-width:0;min-height:64px;padding:10px;gap:10px}
+html[data-game-ui="coop"] .player-slot>div{min-width:0}
+html[data-game-ui="coop"] .player-slot b{overflow-wrap:anywhere;font-size:14px}
+html[data-game-ui="coop"] .player-slot small{font-size:12px;line-height:1.5}
+html[data-game-ui="coop"] :is(.slot-avatar,.ready-dot){flex-shrink:0}
+html[data-game-ui="coop"] .slot-blue{color:#397f82;background:#d3e3d9}
+html[data-game-ui="coop"] .slot-gold{color:#976b29;background:#efdab0}
+html[data-game-ui="coop"] .ready-dot{font-size:12px;color:#78664e}
+html[data-game-ui="coop"] .ready-dot.ready{color:#42603b;background:#dce6c8}
+html[data-game-ui="coop"] .room-level-select{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;padding:8px 10px;font-size:13px}
+html[data-game-ui="coop"] .room-level-select select{width:100%;min-width:0;font-size:13px}
+html[data-game-ui="coop"] .lobby-actions{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+html[data-game-ui="coop"] .lobby-actions button{white-space:normal;line-height:1.4;min-height:48px;padding:8px;font-size:13px}
+html[data-game-ui="coop"] .lobby-foot{flex-wrap:wrap;gap:8px;font-size:12px;line-height:1.5;padding-top:12px}
+.lan-info{font-size:13px;line-height:1.6;color:#705334;border-top:1px dashed #c7b391;padding-top:10px}
+.lan-info code{display:block;overflow-wrap:anywhere;user-select:all;color:#446848;font-size:14px}
+.lan-info button{margin-top:8px;width:auto;font-size:13px}
+#androidServerSetup{overflow:auto}
+#androidServerSetup .server-setup-card{max-height:100%;overflow:auto}
+#phoneLanSetup .server-setup-card{box-sizing:border-box;width:min(100%,440px);max-height:100%;overflow:auto;padding:20px;background:#fff3db;border:2px solid #bd9b6d;border-radius:18px;box-shadow:0 12px 40px #20170a70;color:#554735;display:grid;gap:10px}
+#phoneLanSetup h2,#phoneLanSetup p{margin:0;line-height:1.5}
+#phoneLanSetup p{font-size:13px}
+#phoneLanSetup label{display:grid;gap:5px;font-size:14px}
+#phoneLanSetup input{box-sizing:border-box;width:100%;min-height:44px;padding:10px;background:#fffaf0;color:#302820;border:1px solid #bd9b6d;border-radius:8px;font-size:16px}
+#phoneLanSetup button{min-height:44px;padding:10px;border:1px solid #bd9b6d;border-radius:8px;background:#eed6a5;color:#302820;font-size:15px}
+#phoneLanSetup [data-error]{color:#9b3022}
+@media(min-width:700px){html[data-game-ui="coop"] .lobby-players{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(orientation:landscape) and (max-height:520px){
+ html[data-game-ui="coop"] .lobby-screen{max-width:960px;margin-top:8px}
+ html[data-game-ui="coop"] .lobby-panel{grid-template-columns:repeat(2,minmax(0,1fr));padding:12px 16px;gap:10px 16px}
+ html[data-game-ui="coop"] .back-link{grid-column:1/-1;min-height:36px}
+ html[data-game-ui="coop"] .lobby-title h1{font-size:21px}
+ html[data-game-ui="coop"] .lobby-players{grid-column:1/-1;grid-template-columns:repeat(2,minmax(0,1fr))}
+ html[data-game-ui="coop"] :is(.lobby-foot,.lan-info){grid-column:1/-1}
+}
+@media(max-width:620px) and (orientation:portrait){
+ html[data-game-ui="coop"] .home-hero{height:auto;display:block}
+ html[data-game-ui="coop"] .hero-copy{padding:24px}
+ html[data-game-ui="coop"] .hero-art{display:none}
+ html[data-game-ui="coop"] .home-columns{display:flex;flex-direction:column}
+ html[data-game-ui="coop"] .room-panel{order:-1}
+}
+
+.contract-choices{margin-top:16px;padding:12px;border:1px solid #b8a47c;border-radius:12px}.contract-choices h3{margin:0}.contract-choices p{font-size:12px;line-height:1.5}.contract-choices button{display:block;width:100%;padding:10px;margin:7px 0;text-align:left;white-space:normal;line-height:1.5;min-height:44px}.contract-choices button.selected{outline:2px solid #9b7535;background:#eee0bb;color:#263337}#contractResult{padding:12px;color:#705325;background:#f7e9c8;border-radius:8px}
+/* Settlement must remain reachable on short landscape phones. */
+html[data-game-ui="coop"] :is(.result-layer,.modal-layer){display:flex;flex-direction:column;align-items:center;justify-content:flex-start;overflow-y:auto;overscroll-behavior:contain;padding:max(12px,env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left))}
+html[data-game-ui="coop"] :is(.result-card,.modal-card){flex:none;margin:auto 0;width:min(540px,100%);padding:20px}
+html[data-game-ui="coop"] :is(#resultNext,#resultHome,.modal-card .button){min-height:44px;font-size:14px}
+html[data-game-ui="coop"] #nextStatus{font-size:13px;line-height:1.6;color:#70543c;margin:10px 0}
+html[data-game-ui="coop"] #contractResult:empty{display:none}
+html[data-game-ui="coop"] :is(.result-mark,.campaign-chapter,.reward-line){background:#f5e6d0;color:#73563e;border-color:#dfbea0}
+html[data-game-ui="coop"] .campaign-chapter{font-size:14px;padding:12px}
+html[data-game-ui="coop"] .result-card>p{font-size:13px}
+@media(orientation:landscape) and (max-height:450px){html[data-game-ui="coop"] .result-card{padding:14px 20px}html[data-game-ui="coop"] .treasure-stamp{display:none}html[data-game-ui="coop"] .result-card h2{font-size:21px}html[data-game-ui="coop"] .result-card>p{margin-bottom:8px}html[data-game-ui="coop"] .reward-line{margin:8px 0}}
+
+/* Fixed corner controls preserve the full authored map, including wide phones. */
+html[data-game-ui="coop"] .play-mode-picker{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;max-width:1180px;margin:16px auto;padding:0 12px}
+html[data-game-ui="coop"] .play-mode-picker button{min-width:0;min-height:64px;padding:12px;background:#f9efdc;border:2px solid #d7b992;color:#745334;border-radius:10px;font-size:17px;line-height:1.4}
+html[data-game-ui="coop"] .play-mode-picker button[aria-pressed="true"]{background:#efd6a7;border-color:#a9753c;box-shadow:inset 0 -4px #d8b780}
+html[data-game-ui="coop"] .play-mode-picker small{display:block;font-size:11px;font-weight:normal;margin-top:3px}
+html[data-game-ui="coop"] .solo-departure{max-width:1160px;margin:16px auto;padding:16px;border:1px solid #cdb18d;background:#fbf1df;border-radius:12px;color:#745334}
+html[data-game-ui="coop"] .solo-departure p{font-size:13px;line-height:1.6;margin-top:0}
+html[data-game-ui="coop"] .solo-departure button{min-height:48px;margin:4px;white-space:normal}
+html[data-game-ui="coop"] .solo-departure[hidden],html[data-game-ui="coop"] #resumeSolo[hidden]{display:none}
+html[data-game-ui="coop"] .solo-mode .home-columns{grid-template-columns:minmax(0,1fr)}
+html[data-game-ui="coop"] body.in-game #switchPlayer{position:absolute;z-index:10;top:max(8px,env(safe-area-inset-top));left:max(10px,env(safe-area-inset-left));width:126px;min-width:0;height:48px;min-height:48px;padding:5px 10px;display:flex;flex-direction:column;justify-content:center;gap:3px;border:1px solid #b5e1df99;border-radius:10px;background:#1c414bd9;color:#e2f8ed;font-size:12px;line-height:1.3;box-shadow:none;touch-action:manipulation}
+html[data-game-ui="coop"] body.in-game #switchPlayer span{font-size:11px;font-weight:normal}
+html[data-game-ui="coop"] body.in-game #switchPlayer[data-slot="1"]{background:#62472bd9;color:#fff0c9;border-color:#edc786a0}
+html[data-game-ui="coop"] body.in-game #switchPlayer[data-element="sun"]{background:#62472bd9;color:#fff0c9;border-color:#edc786a0}
+html[data-game-ui="coop"] body.in-game #switchPlayer[data-element="moon"]{background:#1c414bd9;color:#e2f8ed;border-color:#b5e1df99}
+html[data-game-ui="coop"] body.in-game #switchPlayer[hidden]{display:none}
+html[data-game-ui="coop"] body.in-game .touch-controls{align-items:flex-end;inset:0;height:100%;padding:0;z-index:8}
+html[data-game-ui="coop"] body.in-game #moveZone{position:absolute;left:0;top:max(64px,24%);bottom:0;width:48%;pointer-events:auto;touch-action:none;user-select:none;-webkit-user-select:none}
+html[data-game-ui="coop"] body.in-game .touch-actions{position:absolute;right:max(10px,env(safe-area-inset-right));bottom:max(8px,env(safe-area-inset-bottom))}
+html[data-game-ui="coop"] body.in-game #moveJoystick{position:absolute;left:70px;top:calc(100% - max(62px,env(safe-area-inset-bottom)));transform:translate(-50%,-50%);display:block;width:clamp(88px,14vh,108px);height:clamp(88px,14vh,108px);flex:none;border:2px solid #f4d89b80;border-radius:50%;background:#23435770;box-shadow:inset 0 0 0 7px #162a3526;opacity:.5;pointer-events:none;touch-action:none;user-select:none;-webkit-user-select:none}
+html[data-game-ui="coop"] body.in-game #moveJoystick.pressed{opacity:1}
+html[data-game-ui="coop"] #moveJoystick .joystick-arrows{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#ffedc6a0;font:26px sans-serif;letter-spacing:10px;pointer-events:none}
+html[data-game-ui="coop"] #moveJoystick .joystick-knob{position:absolute;left:calc(50% - 21px);top:calc(50% - 21px);width:42px;height:42px;border-radius:50%;border:2px solid #f5dba9;background:#be925aee;box-shadow:0 3px 5px #0004;pointer-events:none;will-change:transform}
+html[data-game-ui="coop"] #moveJoystick.pressed .joystick-knob{background:#e9c07e}
+@media(pointer:coarse){html[data-game-ui="coop"] body.in-game .touch-controls{display:flex}}
+@media(max-width:620px){html[data-game-ui="coop"] .solo-departure{margin:12px}html[data-game-ui="coop"] .play-mode-picker button{font-size:15px}}
+
+/* Empty status containers must not look like stray clickable controls. */
+#mechanismHud:empty{display:none!important}
+html[data-game-ui="coop"] body.in-game{background:#0b1725!important}

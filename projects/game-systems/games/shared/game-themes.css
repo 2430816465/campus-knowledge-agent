@@ -1,0 +1,231 @@
+/* Per-game palettes: readable surfaces, independent of the enclosing camp. */
+html[data-game-theme="tower"]{--game-bg:#07111f;--game-panel:#10243b;--game-raised:#1b3550;--game-text:#edf5ff;--game-muted:#bdcee0;--game-line:#6083a2;--game-accent:#ffd08a;--game-on-accent:#24180c;--game-good:#a8e8bb;--game-bad:#ffadb2;color-scheme:dark}
+html[data-game-theme="marble"]{--game-bg:#16121e;--game-panel:#292237;--game-raised:#3b3049;--game-text:#f7f0ff;--game-muted:#d2c2db;--game-line:#9278a3;--game-accent:#ffcd86;--game-on-accent:#302014;--game-good:#b1eac8;--game-bad:#ffb5c3;color-scheme:dark}
+html[data-game-theme="coop"]{--game-bg:#161d22;--game-panel:#253139;--game-raised:#34464d;--game-text:#f2f4e9;--game-muted:#c1d2ce;--game-line:#859b94;--game-accent:#eac486;--game-on-accent:#2c2417;--game-good:#a9e5bb;--game-bad:#ffb1a3;color-scheme:dark}
+html[data-game-theme="mine"]{--game-bg:#202c29;--game-panel:#e5e8df;--game-raised:#c4d0c6;--game-text:#253932;--game-muted:#45574e;--game-line:#748778;--game-accent:#d8ad58;--game-on-accent:#30210c;--game-good:#366342;--game-bad:#963d36;color-scheme:light}
+html[data-game-theme="workshop"]{--game-panel:#fff0d2;--game-raised:#f8e5bd;--game-text:#402b22;--game-muted:#62452e;--game-line:#997347;--game-accent:#efb750;--game-on-accent:#422b1b;--game-good:#355b26;--game-bad:#96372c;color-scheme:light}
+html[data-game-theme="evolve"]{--game-panel:#f6fae9;--game-raised:#e1ebd2;--game-text:#233f32;--game-muted:#456149;--game-line:#839c6d;--game-accent:#cde69f;--game-on-accent:#233e2c;--game-good:#315b28;--game-bad:#963d37;color-scheme:light}
+html[data-game-theme="liars"]{--game-panel:#192f2d;--game-raised:#2b4540;--game-text:#fff2d7;--game-muted:#d4c4a4;--game-line:#9b895e;--game-accent:#dfbd73;--game-on-accent:#302413;--game-good:#ade0b3;--game-bad:#ffb0a5;color-scheme:dark}
+html[data-game-theme="chess"]{--game-panel:#163b35;--game-raised:#254b42;--game-text:#f5f5df;--game-muted:#cad8bf;--game-line:#799886;--game-accent:#edc779;--game-on-accent:#2c2814;--game-good:#ace1b4;--game-bad:#ffb4a5;color-scheme:dark}
+html[data-game-theme="nightwatch"]{--game-panel:#1b302c;--game-raised:#2a443a;--game-text:#f8eed4;--game-muted:#cbd4b8;--game-line:#8b9970;--game-accent:#e3c280;--game-on-accent:#302713;--game-good:#bae3ab;--game-bad:#ffb5a8;color-scheme:dark}
+html[data-game-theme="rush"]{--game-panel:#f2f0df;--game-raised:#e3e5d3;--game-text:#293c34;--game-muted:#4e6153;--game-line:#91a089;--game-accent:#365f50;--game-on-accent:#fff7dc;--game-good:#325c3c;--game-bad:#983d30;color-scheme:light}
+
+/* The four legacy shared layouts now obtain their colors from their own palette. */
+html[data-game-ui]{--camp-paper:var(--game-panel);--camp-wood:var(--game-raised);--camp-ink:var(--game-text);--camp-muted:var(--game-muted);--camp-line:var(--game-line);--camp-primary:var(--game-accent);--text:var(--game-text);--muted:var(--game-muted);--dim:var(--game-muted);--bg:var(--game-bg);--panel:var(--game-panel);--panel-light:var(--game-raised);--panel-2:var(--game-raised);--line:var(--game-line);--gold:var(--game-accent);--ui-text:var(--game-text);--ui-gold:var(--game-accent)}
+html[data-game-ui] body{background:radial-gradient(ellipse at 10% 0,#ffffff08,transparent 65%),var(--game-bg);color:var(--game-text)}
+html[data-game-ui] :is(.panel,.dialog,.result-card,.portrait-card,.story,.arena-sidebar,.arena-level,.arena-support,.owned-power,.inline-card,.contract-panel,.contract-card,.server-setup-card,.mine-draft,.mine-report){background:var(--game-panel);color:var(--game-text);border-color:var(--game-line)}
+html[data-game-ui] :is(button,.button,.m-btn,.iconbtn,.icon-button,.copy-button,.buy-button,input,select){background:var(--game-raised);color:var(--game-text);border-color:var(--game-line);text-shadow:none;box-shadow:none}
+html[data-game-ui] :is(button.primary,.button-primary,.m-btn.gold,.m-btn.primary){background:var(--game-accent);color:var(--game-on-accent);border-color:var(--game-accent)}
+html[data-game-ui] :is(.dialog,.result,.result-panel,.story,.contract-panel,.contract-card,.inline-card,.mine-draft,.mine-report) :is(h1,h2,h3,b,strong){color:var(--game-text);text-shadow:none}
+html[data-game-ui] :is(.dialog,.result,.result-panel,.story,.contract-panel,.contract-card,.inline-card,.mine-draft,.mine-report) :is(p,small,label,li){color:var(--game-muted)}
+html[data-game-ui] :is(.shade,.result-layer){background:#03070dcc}
+html[data-game-ui] :is(.footnote,.section-label,.rarity-rules,.codex-entry small,.selected-relic h2,.arena-panel-note,.empty-powers){color:var(--game-muted)}
+
+/* Tower: blue stone surfaces, warm headings, clear monster attributes. */
+html[data-game-theme="tower"] :is(.info-sheet,.manual-sheet,#modal:not(.dialogue-modal) .sheet,.tutorial-card){background:var(--game-panel);color:var(--game-text);border-color:var(--game-line)}
+html[data-game-theme="tower"] :is(.brand,.info-heading,.info-heading h2,.manual-head h2,#modal:not(.dialogue-modal) h2,.tutorial-kicker){color:var(--game-accent);text-shadow:none}
+html[data-game-theme="tower"] :is(#floorNote,.manual-sheet .small,.manual-sheet .dim,.tutorial-step-count){color:var(--game-muted)}
+html[data-game-theme="tower"] :is(#modal:not(.dialogue-modal) .mbody,#modal:not(.dialogue-modal) .mbody b,.tutorial-card p,.tutorial-card h2){color:var(--game-text)}
+html[data-game-theme="tower"] .panel.left .stat.hp .v{color:var(--game-bad)}
+html[data-game-theme="tower"] .panel.left .stat.def .v,html[data-game-theme="tower"] .panel.left .keybox.b .n{color:#acdafa}
+html[data-game-theme="tower"] .panel.left .keybox.r .n{color:var(--game-bad)}
+html[data-game-theme="tower"] .boardwrap #log{background:var(--game-panel);color:var(--game-muted);border-color:var(--game-line)}
+html[data-game-theme="tower"] :is(.touchpad button,.log-tabs button,.app header .nav-icon,.manual-head button,#modal:not(.dialogue-modal) button,.tutorial-card button,.settings-row,.test-option,.note-entry){background:var(--game-raised)!important;color:var(--game-text)!important;border-color:var(--game-line)!important}
+html[data-game-theme="tower"] :is(.log-tabs button.active,#modal:not(.dialogue-modal) button.primary){background:#684a28!important;color:#fff0cf!important;border-color:#d5ac67!important}
+html[data-game-theme="tower"] #infoOverlay :is(.info-card,.ad-reward-row,.ad-reward-row button,em){background:var(--game-raised);color:var(--game-text);border-color:var(--game-line)}
+html[data-game-theme="tower"] #infoOverlay :is(b,small,em,strong,.ad-reward-copy){color:var(--game-text)}
+html[data-game-theme="tower"] :is(.monster-preview-stats span,.monster-preview-stats b){color:#edf5ff!important}
+html[data-game-theme="tower"] .monster-preview-result.safe{color:#a8e8bb}
+html[data-game-theme="tower"] .monster-preview-result.warn{color:#ffe0a0}
+html[data-game-theme="tower"] .monster-preview-result.danger{color:#ffadb2}
+html[data-game-theme="tower"] :is(.manual-sheet .monster,.manual-sheet .row,.manual-sheet .book-row){background:var(--game-raised);color:var(--game-text);border-color:var(--game-line)}
+
+/* Marble: arcane violet with gold energy, cyan/rose rarity distinctions. */
+html[data-game-theme="marble"] :is(.room-ribbon,.energy-panel,.hintline,.upgrades span,.relic-strip span,.path span,.upgrade-card,.tier-ad){background:var(--game-panel);color:var(--game-text);border-color:var(--game-line)}
+html[data-game-theme="marble"] :is(.top,.battle-top strong,.battle-top small,.energy-panel span,.upgrade-card small,.upgrade-card strong,.upgrade-card i,.reward-head p,.result-panel b,.result-panel small){color:var(--game-text)}
+html[data-game-theme="marble"] :is(.heart,.battle .heart){color:var(--game-bad)}
+html[data-game-theme="marble"] .energy-track,html[data-game-theme="marble"] .arena-xp{background:#100c1b}
+html[data-game-theme="marble"] .tier-rare{background:#203a48;border-color:#86d9ef}
+html[data-game-theme="marble"] .tier-epic{background:#4a2850;border-color:#efb0ff}
+html[data-game-theme="marble"] .hero-copy :is(h1,h2,p){color:#fff3d9;text-shadow:0 2px 4px #160e08}
+html[data-game-theme="marble"] :is(.result-mark,.pick-label){color:var(--game-accent)}
+html[data-game-theme="marble"] .inline-card :is(p,small,b,strong,.card-title){color:var(--game-text)}
+html[data-game-theme="marble"] :is(.orientation-prompt,.rotate-overlay,#orientation-prompt){background:var(--game-bg);color:var(--game-text)}
+html[data-game-theme="marble"] #marble-rotate{background:var(--game-bg)!important;color:var(--game-text)!important}
+
+/* Cooperative dungeon: bronze controls, slate cards, cool cooperative highlights. */
+html[data-game-theme="coop"] :is(.home-hero,.lobby-panel,.room-panel,.result-card,.invite-code,.player-slot,.room-level-select,.level-card,.shop-card,.currency,.campaign-card,.campaign-button,.tags span,.portrait-card){background:var(--game-panel);color:var(--game-text);border-color:var(--game-line)}
+html[data-game-theme="coop"] :is(.hero-copy h1,.hero-copy h1 em,.portrait-card h1,.invite-code strong,.game-brand strong){color:var(--game-accent)}
+html[data-game-theme="coop"] :is(.hero-copy p,.lobby-title p,.lobby-foot,.level-info small,.room-help,.note,.brand small,.section-kicker,.connection-tag,.invite-code>span,.player-slot small,.result-card p,.tags span,.lan-info,.lan-address,.lan-phone-card){color:var(--game-muted)}
+html[data-game-theme="coop"] #home .play-mode-picker button[aria-pressed="true"]{background:#5a4831;color:#fff0d0;border-color:#d3ae72}
+html[data-game-theme="coop"] #home .play-mode-picker button[aria-pressed="false"]{background:var(--game-raised);color:var(--game-text);border-color:var(--game-line);box-shadow:none}
+html[data-game-theme="coop"] #home .solo-departure{background:var(--game-panel);border-color:var(--game-line);padding:10px!important}
+html[data-game-theme="coop"] :is(.game-topline,.game-brand,.network-pill,.stage-hint,.game-help,.pause-banner){background:var(--game-panel)!important;color:var(--game-text)!important;border-color:var(--game-line)}
+html[data-game-theme="coop"] :is(.game-help b,.game-help button,.game-brand small,.game-brand span){color:var(--game-text)}
+html[data-game-theme="coop"] :is(.ready-dot,.player-slot b){color:var(--game-good);background:transparent}
+html[data-game-theme="coop"] #home .tags span{color:var(--game-muted)!important}
+html[data-game-theme="coop"] :is(.portrait,.lan-info,.lan-address,.lan-phone-card){background:var(--game-panel)}
+html[data-game-ui="coop"][data-game-theme="coop"] :is(#nextStatus,#contractResult){color:var(--game-muted);background:var(--game-panel)}
+html[data-game-ui="coop"][data-game-theme="coop"] :is(.reward-line,.result-mark){background:var(--game-raised);color:var(--game-text);border-color:var(--game-line)}
+html[data-game-ui="coop"][data-game-theme="coop"] .reward-line strong{color:var(--game-accent)}
+html[data-game-ui="coop"][data-game-theme="coop"] .reward-line small{color:var(--game-muted);font-size:11px}
+html[data-game-ui="coop"][data-game-theme="coop"] :is(.back-link,.lan-info code){color:var(--game-text)}
+
+/* Games with their own visual language keep it; repair secondary text and surfaces. */
+html[data-game-theme="workshop"] :is(.machine-card p,.recipe p,.machine-title b,.requirement small,.section-note,.ad-section small,.inventory,.hint,footer,.text-button){color:var(--game-muted)}
+html[data-game-theme="workshop"] :is(.management,.guide,dialog){color:var(--game-text)}
+html[data-game-theme="workshop"] .machine-card.locked{opacity:1;border-style:dashed}
+html[data-game-theme="workshop"] .scene-bottom small{opacity:1}
+html[data-game-theme="workshop"] .scene-label span:first-child{background:#fff0d2;padding:3px 6px;border-radius:3px;text-shadow:none}
+html[data-game-theme="evolve"] :is(.panel p,.panel small,.panel label,.caption,.hint,.note){color:var(--game-muted)}
+html[data-game-theme="evolve"] :is(.panel,dialog){background:var(--game-panel);color:var(--game-text);border-color:var(--game-line)}
+html[data-game-theme="evolve"] .eyebrow,html[data-game-theme="rush"] .eyebrow{color:var(--game-muted)}
+html[data-game-theme="liars"] :is(dialog,.panel){background:var(--game-panel);color:var(--game-text);border-color:var(--game-line)}
+html[data-game-theme="liars"] :is(dialog p,dialog small,.panel p,.panel small,.wordmark small){color:var(--game-muted)}
+html[data-game-theme="chess"] :is(.profile,.profile-card,.player-profile){background:var(--game-raised);color:var(--game-text)}
+html[data-game-theme="chess"] :is(.mode small,.mode-card small,.profile small,.profile-card small,.player-profile small,.subtitle,.muted){color:var(--game-muted)}
+html[data-game-theme="chess"] :is(.game-choice small,[data-action="profile"] small){color:var(--game-muted)}
+html[data-game-theme="chess"] :is([data-action="profile"],[data-do="profile"]){background:var(--game-raised);color:var(--game-text)}
+html[data-game-theme="chess"] [data-do="profile"] :is(b,small){color:var(--game-text)}
+html[data-game-theme="nightwatch"] :is(.panel,.dialog,dialog){background:var(--game-panel);color:var(--game-text);border-color:var(--game-line)}
+html[data-game-theme="nightwatch"] :is(.panel p,.panel small,.panel h1,.panel h2,.panel h3,.dialog p,dialog p,.dialog small,dialog small){color:var(--game-text)}
+html[data-game-theme="nightwatch"] :is(.launch-card,.item,.note){background:var(--game-panel);color:var(--game-text);border-color:var(--game-line)}
+html[data-game-theme="nightwatch"] :is(.launch-card .story,.launch-card .muted,.chapter-line,.item p,.panel .muted,.panel .note){color:var(--game-muted)}
+html[data-game-theme="nightwatch"] .title-plate .eyebrow{color:var(--game-accent)}
+html[data-game-theme="nightwatch"] .guide-card{background:var(--game-panel);color:var(--game-text);border-color:var(--game-line)}
+html[data-game-theme="nightwatch"] .guide-card :is(h2,li,p,.guide-footnote){color:var(--game-text)}
+html[data-game-theme="nightwatch"] .guide-card .eyebrow{color:var(--game-accent)}
+html[data-game-theme="nightwatch"] :is(.panel,.guide-card,.launch-card) button{background:var(--game-raised);color:var(--game-text);border-color:var(--game-line)}
+html[data-game-theme="nightwatch"] :is(.panel,.guide-card,.launch-card) button:is(.gold,.selected){background:var(--game-accent);color:var(--game-on-accent)}
+html[data-game-theme="nightwatch"] .panel button.selected :is(small,span){color:var(--game-on-accent)}
+/* Settlement uses one dark palette, including rewards and the action footer. */
+html[data-game-theme="nightwatch"] .reward-list span{background:var(--game-raised);color:var(--game-text);border-color:var(--game-line);font-weight:600}
+html[data-game-theme="nightwatch"] .panel-foot{background:var(--game-raised);color:var(--game-text);border-color:var(--game-line)}
+html[data-game-theme="nightwatch"] .result-banner :is(.eyebrow,.stars){color:var(--game-accent)}
+html[data-game-theme="nightwatch"] .damage-row{color:var(--game-text);font-size:13px}
+html[data-game-theme="nightwatch"] .damage-row>div{gap:12px;flex-wrap:wrap}
+html[data-game-theme="nightwatch"] .damage-row i{background:var(--game-good)}
+html[data-game-theme="rush"] :is(.panel p,.panel small,.caption,.quiet,.stage-note,.training small,.stat-grid span,.stages button){color:var(--game-muted)}
+html[data-game-theme="rush"] :is(.stages button.selected,.btn.primary){color:var(--game-on-accent)}
+html[data-game-theme="rush"] .stages button.selected :is(small,strong){color:var(--game-on-accent)}
+html[data-game-theme="rush"] .guide b{background:var(--game-accent);color:var(--game-on-accent)}
+
+/* State styling must remain legible, including unavailable purchases. */
+html[data-game-theme] button:disabled{opacity:1!important;filter:none!important;color:var(--game-muted)!important;background:var(--game-raised)!important;border-color:var(--game-line)!important;border-style:dashed;box-shadow:none!important;cursor:not-allowed}
+html[data-game-theme] :is(button,input,select):focus-visible{outline:3px solid var(--game-accent);outline-offset:3px}
+html[data-game-theme] input::placeholder{color:var(--game-muted);opacity:1}
+html[data-game-theme] .camp-important-action{background:var(--game-raised)!important;color:var(--game-text)!important;border-color:var(--game-line)!important;box-shadow:none!important}
+
+body[data-page="preview"][data-mode="tower"]{--game-bg:#07111f;--game-panel:#10243b;--game-raised:#1b3550;--game-text:#edf5ff;--game-muted:#bdcee0;--game-line:#6083a2;--game-accent:#ffd08a;--game-on-accent:#24180c;--game-good:#a8e8bb;--game-bad:#ffadb2;color-scheme:dark}
+body[data-page="preview"][data-mode="marble"]{--game-bg:#16121e;--game-panel:#292237;--game-raised:#3b3049;--game-text:#f7f0ff;--game-muted:#d2c2db;--game-line:#9278a3;--game-accent:#ffcd86;--game-on-accent:#302014;--game-good:#b1eac8;--game-bad:#ffb5c3;color-scheme:dark}
+body[data-page="preview"][data-mode="coop"]{--game-bg:#161d22;--game-panel:#253139;--game-raised:#34464d;--game-text:#f2f4e9;--game-muted:#c1d2ce;--game-line:#859b94;--game-accent:#eac486;--game-on-accent:#2c2417;--game-good:#a9e5bb;--game-bad:#ffb1a3;color-scheme:dark}
+body[data-page="preview"][data-mode="mine"]{--game-bg:#202c29;--game-panel:#e5e8df;--game-raised:#c4d0c6;--game-text:#253932;--game-muted:#45574e;--game-line:#748778;--game-accent:#d8ad58;--game-on-accent:#30210c;--game-good:#366342;--game-bad:#963d36;color-scheme:light}
+body[data-page="preview"][data-mode="workshop"]{--game-panel:#fff0d2;--game-raised:#f8e5bd;--game-text:#402b22;--game-muted:#62452e;--game-line:#997347;--game-accent:#efb750;--game-on-accent:#422b1b;--game-good:#355b26;--game-bad:#96372c;color-scheme:light}
+body[data-page="preview"][data-mode="evolve"]{--game-panel:#f6fae9;--game-raised:#e1ebd2;--game-text:#233f32;--game-muted:#456149;--game-line:#839c6d;--game-accent:#cde69f;--game-on-accent:#233e2c;--game-good:#315b28;--game-bad:#963d37;color-scheme:light}
+body[data-page="preview"][data-mode="liars"]{--game-panel:#192f2d;--game-raised:#2b4540;--game-text:#fff2d7;--game-muted:#d4c4a4;--game-line:#9b895e;--game-accent:#dfbd73;--game-on-accent:#302413;--game-good:#ade0b3;--game-bad:#ffb0a5;color-scheme:dark}
+body[data-page="preview"][data-mode="chess"]{--game-panel:#163b35;--game-raised:#254b42;--game-text:#f5f5df;--game-muted:#cad8bf;--game-line:#799886;--game-accent:#edc779;--game-on-accent:#2c2814;--game-good:#ace1b4;--game-bad:#ffb4a5;color-scheme:dark}
+body[data-page="preview"][data-mode="nightwatch"]{--game-panel:#1b302c;--game-raised:#2a443a;--game-text:#f8eed4;--game-muted:#cbd4b8;--game-line:#8b9970;--game-accent:#e3c280;--game-on-accent:#302713;--game-good:#bae3ab;--game-bad:#ffb5a8;color-scheme:dark}
+body[data-page="preview"][data-mode="rush"]{--game-panel:#f2f0df;--game-raised:#e3e5d3;--game-text:#293c34;--game-muted:#4e6153;--game-line:#91a089;--game-accent:#365f50;--game-on-accent:#fff7dc;--game-good:#325c3c;--game-bad:#983d30;color-scheme:light}
+/* Only the active game's chrome inherits its palette; the camp stays unchanged. */
+body[data-page="preview"] .game-toolbar,body[data-page="preview"] #modal{
+ background:var(--game-panel);background-image:none;color:var(--game-text);border-color:var(--game-line);text-shadow:none;
+}
+body[data-page="preview"] :is(.game-toolbar,#modal) :is(button,.button,input,select){background:var(--game-raised);color:var(--game-text);border-color:var(--game-line);box-shadow:none;text-shadow:none}
+body[data-page="preview"] #modal :is(h2,b,strong){color:var(--game-text)}
+body[data-page="preview"] .game-toolbar :is(strong,svg,.tag){color:var(--game-text)}
+body[data-page="preview"] #modal :is(p,small,label,.eyebrow,.wood-save-note,.wood-settings-copy p){color:var(--game-muted)}
+body[data-page="preview"] #modal .primary{background:var(--game-accent);color:var(--game-on-accent);border-color:var(--game-accent)}
+body[data-page="preview"] #modal button:disabled{opacity:1;color:var(--game-muted);border-style:dashed}
+
+/* Dense labels use regular text faces; decorative titles retain the pixel style. */
+html[data-game-theme="chess"] .game-choice small{font:12px/1.5 system-ui,'Microsoft YaHei',sans-serif}
+html[data-game-theme="chess"] .profile-entry small{font-size:12px}
+@media(orientation:landscape) and (max-height:400px){html[data-game-theme="chess"] .game-choice small{font-size:11px}}
+html[data-game-ui="coop"] body.in-game #stage,html[data-game-ui="coop"] body.in-game #board{background:#0b1725!important}
+
+/* Tower play layout: content-sized rows, no stretchable empty map track. */
+html[data-game-theme="tower"][data-game-ui="tower"]{--tower-chrome:354px;--tower-hp:#ffadba;--tower-gold:#ffdc80;--tower-atk:#ffbc8a;--tower-def:#9ed5ff;--tower-key-red:#ffa6b3}
+html[data-game-theme="tower"][data-game-ui="tower"][data-embedded]{--tower-chrome:294px}
+html[data-game-theme="tower"][data-game-ui="tower"] body{height:auto;min-height:100dvh;overflow-y:auto;background:linear-gradient(#07111fee,#07111f88),url('../tower/assets/ui/lower-scene.png') center bottom/auto 50vh no-repeat fixed,var(--game-bg)}
+html[data-game-theme="tower"][data-game-ui="tower"] .app{height:auto;min-height:100dvh;max-width:640px;padding:6px max(6px,env(safe-area-inset-right)) max(6px,env(safe-area-inset-bottom)) max(6px,env(safe-area-inset-left));gap:6px;background:transparent;font-family:system-ui,'Microsoft YaHei',sans-serif}
+html[data-game-theme="tower"][data-game-ui="tower"] .app>header{grid-template-columns:repeat(6,minmax(0,1fr));height:auto;min-height:0;gap:4px;padding:5px;flex:none;background:var(--game-panel);border-radius:12px}
+html[data-game-theme="tower"][data-game-ui="tower"] .app>header .brand{display:none}
+html[data-game-theme="tower"][data-game-ui="tower"] .app>header .nav-icon{grid-row:auto;grid-column:auto;align-self:stretch;width:auto;min-width:0;min-height:44px;height:44px;padding:3px 1px;color:var(--game-text)!important;font:600 12px/1.3 system-ui,'Microsoft YaHei',sans-serif!important;background:var(--game-raised)!important;border:1px solid var(--game-line);border-radius:8px;white-space:normal}
+html[data-game-theme="tower"][data-game-ui="tower"] main{display:flex;flex-direction:column;align-items:stretch;flex:none;min-height:0;gap:6px}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left{display:grid!important;width:100%;height:auto;min-height:0;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:minmax(36px,auto) minmax(36px,auto) 42px;gap:4px;padding:5px!important;border:1px solid #476582;border-radius:12px;background:#0b1c2e;box-shadow:none;flex:none}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .stat{grid-area:auto;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:5px;min-width:0;min-height:0;padding:4px 7px!important;border:1px solid #3f5d77;border-radius:7px;background:#152b40;box-shadow:none;text-align:left}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .stat.hp{grid-area:1/1/2/3}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .stat.gold{grid-area:1/3/2/5}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .stat.atk{grid-area:2/1/3/3}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .stat.def{grid-area:2/3/3/5}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .stat .k{display:flex;align-items:center;align-self:center;gap:3px;font:12px/1.25 system-ui,'Microsoft YaHei',sans-serif;white-space:nowrap;color:#d8e5f1}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .stat .v{display:block;align-self:center;min-width:0;margin:0;font:750 21px/1.2 system-ui,'Microsoft YaHei',sans-serif;font-variant-numeric:tabular-nums;white-space:normal;overflow:visible;overflow-wrap:anywhere;text-overflow:clip}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .stat .stat-icon{position:static;display:none;transform:none}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .floor-stat{grid-area:3/1/4/2;padding:3px 5px!important;flex-direction:column;justify-content:center;gap:1px}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .floor-stat .v{font-size:16px;color:#edf5ff}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .keybox{grid-area:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-width:0;min-height:0;padding:3px 4px;border:1px solid #3f5d77;border-radius:7px;background:#102438;box-shadow:none}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .keybox.y{grid-area:3/2/4/3}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .keybox.b{grid-area:3/3/4/4}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .keybox.r{grid-area:3/4/4/5}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .keybox .t{display:block;font:11px/1.2 system-ui,'Microsoft YaHei',sans-serif;color:#d8e5f1;white-space:nowrap}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .keybox .n{font:700 16px/1.15 system-ui,'Microsoft YaHei',sans-serif;overflow-wrap:anywhere;word-break:break-all;max-width:100%;font-variant-numeric:tabular-nums}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .stat.hp .v{color:var(--tower-hp)}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left :is(.stat.gold .v,.keybox.y .n){color:var(--tower-gold)}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .stat.atk .v{color:var(--tower-atk)}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left :is(.stat.def .v,.keybox.b .n){color:var(--tower-def)}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .keybox.r .n{color:var(--tower-key-red)}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .stat.long-value{flex-direction:column;align-items:flex-start;gap:0}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .stat.long-value .v{font-size:17px;align-self:flex-start}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .keybox.long-value .n{font-size:12px}
+html[data-game-theme="tower"][data-game-ui="tower"] #debugStatus:not(:empty){top:-3px;right:8px;padding:2px 5px;border-radius:3px;background:#423019;color:#ffe5ad;font-size:10px}
+html[data-game-theme="tower"][data-game-ui="tower"] .panel.boardwrap{display:flex;flex-direction:column;align-items:stretch;height:auto;min-height:0;gap:6px;flex:none;background:transparent}
+html[data-game-theme="tower"][data-game-ui="tower"] .playrow{display:flex;flex-direction:row;align-items:flex-start;justify-content:center;flex:none;width:100%;height:auto;min-height:0;gap:0;background:transparent}
+html[data-game-theme="tower"][data-game-ui="tower"] .boardbox{flex:none;width:min(100%,var(--tower-map-size,100%))!important;height:auto;min-width:0;min-height:0;max-height:none;aspect-ratio:1;padding:3px;border:2px solid #6f8ba3;border-radius:10px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px #0005}
+html[data-game-theme="tower"][data-game-ui="tower"] #floorNote{flex:none;font:12px/1.35 system-ui,'Microsoft YaHei',sans-serif;padding:2px 6px}
+html[data-game-theme="tower"][data-game-ui="tower"] .lower-scene{display:grid;grid-template-columns:142px minmax(0,1fr);width:100%;height:132px;min-height:0;padding:6px;gap:7px;align-items:center;align-content:stretch;flex:none;border:1px solid #496985;border-radius:12px;background:linear-gradient(120deg,#17324a,#102337)}
+html[data-game-theme="tower"][data-game-ui="tower"] .boardwrap .touchpad{display:grid!important;grid-template-columns:repeat(3,44px)!important;grid-template-rows:repeat(2,48px)!important;gap:4px;width:140px;height:100px;margin:0!important}
+html[data-game-theme="tower"][data-game-ui="tower"] .touchpad button{min-width:44px;min-height:48px;padding:0;border:1px solid #82a8c8!important;border-radius:10px;font:700 23px/1 system-ui,sans-serif;box-shadow:inset 0 1px #c0ddf438,0 2px #06121d!important}
+html[data-game-theme="tower"][data-game-ui="tower"] .touchpad button[data-move="up"]{grid-area:1/2}
+html[data-game-theme="tower"][data-game-ui="tower"] .touchpad button[data-move="left"]{grid-area:2/1}
+html[data-game-theme="tower"][data-game-ui="tower"] .touchpad button[data-move="down"]{grid-area:2/2}
+html[data-game-theme="tower"][data-game-ui="tower"] .touchpad button[data-move="right"]{grid-area:2/3}
+html[data-game-theme="tower"][data-game-ui="tower"] .log-area{display:flex;flex-direction:column;align-self:stretch;width:100%;height:118px;min-height:0;min-width:0;margin:0;background:transparent;box-shadow:none;flex:none}
+html[data-game-theme="tower"][data-game-ui="tower"] .log-tabs{height:44px;min-height:44px;display:flex;gap:3px;padding:0}
+html[data-game-theme="tower"][data-game-ui="tower"] .log-tabs button{flex:1;min-width:0;min-height:44px;padding:3px;font:600 12px/1.3 system-ui,'Microsoft YaHei',sans-serif;border:1px solid #4b6b86;white-space:normal;clip-path:none}
+html[data-game-theme="tower"][data-game-ui="tower"] .boardwrap #log{flex:1;min-height:0;height:auto;max-height:none;padding:6px;border:1px solid #527691;border-radius:0 0 7px 7px;overflow-y:auto;overscroll-behavior:contain;font:12px/1.55 system-ui,'Microsoft YaHei',sans-serif;color:#dbe9f5;background:#0a1c2c;clip-path:none}
+html[data-game-theme="tower"][data-game-ui="tower"] .tower-route-hint{display:flex;align-items:center;gap:10px;margin:0;padding:10px 12px;min-height:56px;border:1px solid #4c698655;border-radius:10px;background:#102438d9;color:#c5d6e7;font:12px/1.55 system-ui,'Microsoft YaHei',sans-serif}
+html[data-game-theme="tower"][data-game-ui="tower"] .tower-route-hint strong{flex:none;display:flex;flex-direction:column;gap:3px;color:#ffdc80;font-size:13px}
+html[data-game-theme="tower"][data-game-ui="tower"] .tower-route-hint small{color:#a9c3d8;font:11px/1.3 system-ui,'Microsoft YaHei',sans-serif}
+@media(orientation:portrait) and (max-height:700px){html[data-game-theme="tower"][data-game-ui="tower"] .tower-route-hint{display:none}}
+@media(orientation:landscape){
+ html[data-game-theme="tower"][data-game-ui="tower"]{--tower-chrome:74px}
+ html[data-game-theme="tower"][data-game-ui="tower"][data-embedded]{--tower-chrome:14px}
+ html[data-game-theme="tower"][data-game-ui="tower"] body{height:100dvh;overflow:hidden}
+ html[data-game-theme="tower"][data-game-ui="tower"] .app{max-width:1200px;height:100dvh;min-height:0}
+ html[data-game-theme="tower"][data-game-ui="tower"] main{display:grid;grid-template-columns:174px minmax(0,1fr);flex:1;min-height:0;gap:6px}
+ html[data-game-theme="tower"][data-game-ui="tower"] .panel.left{height:100%;grid-template-columns:minmax(0,1fr);grid-template-rows:repeat(8,minmax(0,1fr));gap:3px;padding:4px!important}
+ html[data-game-theme="tower"][data-game-ui="tower"] .panel.left :is(.stat.hp,.stat.gold,.stat.atk,.stat.def,.floor-stat,.keybox.y,.keybox.b,.keybox.r){grid-area:auto;flex-direction:row;align-items:center;justify-content:space-between;gap:4px;padding:2px 6px!important}
+ html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .stat .v{font-size:19px}
+ html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .stat.long-value .v{font-size:16px;align-self:center}
+ html[data-game-theme="tower"][data-game-ui="tower"] .panel.left .keybox .n{font-size:16px}
+ html[data-game-theme="tower"][data-game-ui="tower"] .panel.boardwrap{display:grid;grid-template-columns:minmax(0,1fr) 170px;grid-template-rows:minmax(0,1fr);height:100%;min-height:0;gap:6px;align-items:start}
+ html[data-game-theme="tower"][data-game-ui="tower"] .playrow{height:100%;align-items:flex-start}
+ html[data-game-theme="tower"][data-game-ui="tower"] .boardbox{width:min(100%,var(--tower-map-size,100%))!important;max-height:100%}
+ html[data-game-theme="tower"][data-game-ui="tower"] .lower-scene{display:flex;flex-direction:column;height:100%;padding:5px;gap:8px;align-items:center;justify-content:flex-start}
+ html[data-game-theme="tower"][data-game-ui="tower"] .log-area{height:auto;flex:1;width:100%;min-height:88px}
+ html[data-game-theme="tower"][data-game-ui="tower"] #floorNote,html[data-game-theme="tower"][data-game-ui="tower"] .tower-route-hint{display:none}
+}
+@media(orientation:landscape) and (max-width:680px){
+ html[data-game-theme="tower"][data-game-ui="tower"] .panel.boardwrap{grid-template-columns:minmax(0,1fr) 150px}
+ html[data-game-theme="tower"][data-game-ui="tower"] .lower-scene{padding:4px;gap:6px}
+ html[data-game-theme="tower"][data-game-ui="tower"] .log-tabs button{font-size:11px}
+}
+
+html[data-game-theme="tower"] .tower-orientation-actions{display:flex;gap:6px}html[data-game-theme="tower"] .tower-orientation-actions button{min-width:54px;min-height:44px}
+
+html[data-game-theme="tower"][data-game-ui="tower"] #modal .sheet.tower-settings{display:flex;flex-direction:column;overflow:hidden;max-height:calc(100dvh - 24px);padding:14px}
+html[data-game-theme="tower"] #modal .tower-settings h2{flex:none;font-size:21px;padding:4px 0 10px;margin:0 0 10px}
+html[data-game-theme="tower"] #modal .tower-settings .mbody{min-height:0;overflow:auto}
+html[data-game-theme="tower"] #modal .tower-settings .mfoot{flex:none;margin-top:10px}
+html[data-game-theme="tower"] #modal .tower-settings .settings-row{padding:8px;gap:8px}
+@media(orientation:landscape){html[data-game-theme="tower"] .tower-settings .settings-list{display:grid;grid-template-columns:1fr 1fr}}

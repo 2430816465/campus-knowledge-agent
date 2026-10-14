@@ -1,0 +1,291 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    1000
+  </width>
+  
+  
+  <height>
+    1000
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="10" w="1000" x="0" y="0"/>
+    
+    
+    <rect h="990" w="10" x="0" y="10"/>
+    
+    
+    <rect h="70" w="560" x="10" y="390"/>
+    
+    
+    <rect h="80" w="90" x="10" y="670"/>
+    
+    
+    <rect h="100" w="990" x="10" y="900"/>
+    
+    
+    <rect h="30" w="120" x="90" y="580"/>
+    
+    
+    <rect h="60" w="110" x="100" y="750"/>
+    
+    
+    <rect h="20" w="50" x="260" y="810"/>
+    
+    
+    <rect h="30" w="100" x="270" y="610"/>
+    
+    
+    <rect h="300" w="100" x="440" y="600"/>
+    
+    
+    <rect h="20" w="40" x="460" y="180"/>
+    
+    
+    <rect h="80" w="90" x="460" y="460"/>
+    
+    
+    <rect h="20" w="20" x="540" y="250"/>
+    
+    
+    <rect h="20" w="40" x="630" y="350"/>
+    
+    
+    <rect h="20" w="20" x="650" y="540"/>
+    
+    
+    <rect h="20" w="20" x="650" y="670"/>
+    
+    
+    <rect h="20" w="20" x="700" y="140"/>
+    
+    
+    <rect h="20" w="20" x="710" y="740"/>
+    
+    
+    <rect h="20" w="20" x="740" y="520"/>
+    
+    
+    <rect h="20" w="40" x="770" y="350"/>
+    
+    
+    <rect h="20" w="20" x="770" y="800"/>
+    
+    
+    <rect h="20" w="50" x="820" y="500"/>
+    
+    
+    <rect h="60" w="80" x="920" y="590"/>
+    
+    
+    <rect h="580" w="10" x="990" y="10"/>
+    
+    
+    <rect h="250" w="10" x="990" y="650"/>
+    
+  
+  </solids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <LargeCrate x="450" y="540"/>
+    
+    
+    <level2_spike1 height="210" width="10" x="10" y="460"/>
+    
+    
+    <level2_specialPlatform animated="0" movementType="1" speed="40" x="540" y="600"/>
+    
+    
+    <level2_specialBlock animated="0" movementType="1" speed="40" x="950" y="440"/>
+    
+    
+    <level2_specialBlock animated="0" movementType="1" speed="40" x="860" y="350"/>
+    
+    
+    <level2_spike1 height="30" width="10" x="210" y="580"/>
+    
+    
+    <level2_spike1 height="60" width="10" x="210" y="750"/>
+    
+    
+    <level2_spike1 height="20" width="10" x="310" y="810"/>
+    
+    
+    <level2_spike1 height="30" width="10" x="370" y="610"/>
+    
+    
+    <level2_spike3 height="30" width="10" x="80" y="580"/>
+    
+    
+    <level2_spike3 height="20" width="10" x="250" y="810"/>
+    
+    
+    <level2_spike3 height="30" width="10" x="260" y="610"/>
+    
+    
+    <level2_spike0 height="10" width="180" x="630" y="890"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level2_FMG3 scrollFactor="0.3" x="100" y="670"/>
+    
+    
+    <level2_greenPipe height="1000" scrollFactor="0.3" width="20" x="150" y="0"/>
+    
+    
+    <level2_MG2 scrollFactor="0.1" x="0" y="740"/>
+    
+    
+    <level2_MG2 scrollFactor="0.1" x="0" y="230"/>
+    
+    
+    <level2_tank scrollFactor="0.3" x="110" y="180"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer2>
+    
+    
+    <level2_metalPipe height="1000" scrollFactor="0.9" width="30" x="330" y="0"/>
+    
+    
+    <level2_pipe1 height="70" scrollFactor="0.5" width="1000" x="0" y="490"/>
+    
+    
+    <cratesBox scrollFactor="0.8" x="240" y="720"/>
+    
+    
+    <level2_greenPipe height="1000" scrollFactor="0.5" width="20" x="390" y="0"/>
+    
+    
+    <level2_tank scrollFactor="0.5" x="350" y="590"/>
+    
+    
+    <level2_greenPipe height="1000" scrollFactor="0.7" width="20" x="500" y="0"/>
+    
+    
+    <level2_tank scrollFactor="0.7" x="460" y="140"/>
+    
+    
+    <level2_braceLeft x="10" y="460"/>
+    
+    
+    <level2_braceRight x="970" y="650"/>
+    
+  
+  </BGLayer2>
+  
+  
+  <BGLayer3>
+    
+    
+    <sodaPack scrollFactor="0.2" x="940" y="570"/>
+    
+    
+    <palettes scrollFactor="0.2" x="30" y="630"/>
+    
+    
+    <sugarBags scrollFactor="0.2" x="110" y="860"/>
+    
+    
+    <sodaPack scrollFactor="0.2" x="230" y="370"/>
+    
+    
+    <level2_braceLeft x="540" y="620"/>
+    
+    
+    <level2_braceLeft x="550" y="460"/>
+    
+    
+    <level2_braceRight x="440" y="460"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <exit nextLevel="2" x="25" y="301"/>
+    
+    
+    <smallSugarBag width="22" x="28" y="582"/>
+    
+    
+    <Bottle width="12" x="705" y="27"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="20" y="850">
+      
+      
+      <node x="50" y="850"/>
+      
+    
+    </liselot>
+    
+    
+    <player andreInitialFlip="1" followHeight="0" followWidth="0" levelName="The Longest Kiss" liselotInitialFlip="0" movementType="1" speed="40" startsFirst="1" talkString="I will never forget that ill-fated morning when I rode the bus to Malang." x="940" y="850">
+      
+      
+      <node x="970" y="850"/>
+      
+    
+    </player>
+    
+    
+    <chef movementType="1" speed="40" talkString="Show the world what we've got and that we do it the best. If you can beat our flavor, the you have earned your market share." x="250" y="850">
+      
+      
+      <node x="400" y="850"/>
+      
+    
+    </chef>
+    
+    
+    <inspector movementType="1" speed="70" talkString="There's this local fellow that is rather large, so we call him Biggest. He told me it was all a dream." x="110" y="350">
+      
+      
+      <node x="530" y="350"/>
+      
+    
+    </inspector>
+    
+  
+  </characters>
+  
+  
+  <FGLayer1>
+    
+    
+    <level2_chainTile height="999" scrollFactor="1.5" width="12" x="245" y="1"/>
+    
+    
+    <level2_greenPipe height="993" scrollFactor="2" width="20" x="752" y="7"/>
+    
+  
+  </FGLayer1>
+  
+
+</level>

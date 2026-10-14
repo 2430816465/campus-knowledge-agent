@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Theme" path="res://assets/ui-foundation/foundation.tres" id="theme"]
+
+[ext_resource type="Script" path="res://scripts/ui/status.gd" id="script"]
+[node name="Status" type="VBoxContainer"]
+theme = ExtResource("theme")
+metadata/ui_foundation = true
+script = ExtResource("script")
+custom_minimum_size = Vector2(300,80)
+
+
+[node name="Message" type="Label" parent="."]
+horizontal_alignment = 1
+text = "暂无奖励"
+theme_override_font_sizes/font_size = 24
+mouse_filter = 2
+
+
+[node name="Progress" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(0,22)
+value = 60.0
+show_percentage = false
+mouse_filter = 2
+
+
+[node name="Countdown" type="Label" parent="."]
+horizontal_alignment = 1
+text = "00:30"
+theme_override_font_sizes/font_size = 22
+mouse_filter = 2
+

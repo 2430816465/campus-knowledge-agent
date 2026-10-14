@@ -1,0 +1,204 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    1200
+  </width>
+  
+  
+  <height>
+    640
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="10" w="1200" x="0" y="0"/>
+    
+    
+    <rect h="630" w="10" x="0" y="10"/>
+    
+    
+    <rect h="400" w="80" x="10" y="240"/>
+    
+    
+    <rect h="180" w="110" x="90" y="270"/>
+    
+    
+    <rect h="100" w="1110" x="90" y="540"/>
+    
+    
+    <rect h="20" w="20" x="310" y="260"/>
+    
+    
+    <rect h="20" w="20" x="570" y="260"/>
+    
+    
+    <rect h="220" w="60" x="840" y="260"/>
+    
+    
+    <rect h="30" w="210" x="940" y="200"/>
+    
+    
+    <rect h="530" w="10" x="1190" y="10"/>
+    
+  
+  </solids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <LargeCrate x="830" y="480"/>
+    
+    
+    <level3_spike0 height="10" width="470" x="280" y="530"/>
+    
+    
+    <level3_spike3 height="20" width="10" x="300" y="260"/>
+    
+    
+    <level3_spike3 height="20" width="10" x="560" y="260"/>
+    
+    
+    <level3_spike1 height="20" width="10" x="330" y="260"/>
+    
+    
+    <level3_spike1 height="20" width="10" x="590" y="260"/>
+    
+    
+    <level3_spike3 height="220" width="10" x="830" y="260"/>
+    
+    
+    <level3_spike1 height="220" width="10" x="900" y="260"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <movingPlatforms>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="120" x="280" y="460">
+      
+      
+      <node x="710" y="460"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="100" x="200" y="300">
+      
+      
+      <node x="700" y="300"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="100" x="740" y="190">
+      
+      
+      <node x="740" y="400"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+  
+  </movingPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level3_window height="320" scrollFactor="0.2" width="1200" x="0" y="220"/>
+    
+    
+    <level3_painting1 scrollFactor="0.2" x="140" y="40"/>
+    
+    
+    <level3_painting2 scrollFactor="0.2" x="230" y="50"/>
+    
+    
+    <level3_painting3 scrollFactor="0.2" x="320" y="60"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer2>
+    
+    
+    <filingCab2 scrollFactor="0.7" x="160" y="480"/>
+    
+    
+    <filingCab2 scrollFactor="0.9" x="110" y="210"/>
+    
+  
+  </BGLayer2>
+  
+  
+  <BGLayer3>
+    
+    
+    <level3_desk3 x="960" y="510"/>
+    
+    
+    <plant2 scrollFactor="0.2" x="160" y="170"/>
+    
+    
+    <sodaPack scrollFactor="0.2" x="120" y="520"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <exit nextLevel="2" x="17" y="150"/>
+    
+    
+    <Bottle width="12" x="451" y="94"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="1150" y="490">
+      
+      
+      <node x="1170" y="490"/>
+      
+    
+    </liselot>
+    
+    
+    <player andreInitialFlip="0" followHeight="0" followWidth="0" levelName="Night Fright" liselotInitialFlip="1" movementType="1" speed="40" startsFirst="1" talkString="I became a permanent public servant in the Dutch Department of Finance, but most of my colleagues left the customs and got positions in the private business sector." x="220" y="490">
+      
+      
+      <node x="250" y="490"/>
+      
+    
+    </player>
+    
+    
+    <army movementType="1" speed="50" talkString="Your desk is here. Your pens are here. The contract is here. Sign it or there will be trouble!" x="940" y="150">
+      
+      
+      <node x="1130" y="150"/>
+      
+    
+    </army>
+    
+  
+  </characters>
+  
+
+</level>

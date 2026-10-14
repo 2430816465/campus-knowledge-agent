@@ -1,0 +1,89 @@
+<level>
+  <width>850</width>
+  <height>1200</height>
+  <solids>
+    <rect x="0" y="0" w="850" h="10"/>
+    <rect x="0" y="10" w="10" h="1190"/>
+    <rect x="10" y="130" w="210" h="220"/>
+    <rect x="10" y="730" w="150" h="170"/>
+    <rect x="10" y="1080" w="840" h="120"/>
+    <rect x="90" y="460" w="760" h="10"/>
+    <rect x="90" y="470" w="470" h="120"/>
+    <rect x="120" y="10" w="510" h="60"/>
+    <rect x="160" y="790" w="220" h="110"/>
+    <rect x="180" y="410" w="670" h="50"/>
+    <rect x="180" y="590" w="380" h="50"/>
+    <rect x="220" y="170" w="210" h="130"/>
+    <rect x="220" y="300" w="60" h="50"/>
+    <rect x="330" y="70" w="300" h="40"/>
+    <rect x="380" y="360" w="470" h="50"/>
+    <rect x="380" y="640" w="180" h="50"/>
+    <rect x="380" y="850" w="120" h="170"/>
+    <rect x="430" y="210" w="150" h="40"/>
+    <rect x="430" y="250" w="50" h="50"/>
+    <rect x="480" y="110" w="150" h="40"/>
+    <rect x="500" y="900" w="130" h="120"/>
+    <rect x="630" y="130" w="60" h="20"/>
+    <rect x="630" y="240" w="220" h="120"/>
+    <rect x="630" y="730" w="220" h="40"/>
+    <rect x="630" y="960" w="120" h="40"/>
+    <rect x="840" y="10" w="10" h="230"/>
+    <rect x="840" y="470" w="10" h="260"/>
+    <rect x="840" y="770" w="10" h="310"/>
+  </solids>
+  <extraPlatforms>
+    <LargeCrate x="130" y="70"/>
+    <LargeCrate x="490" y="150"/>
+    <LargeCrate x="190" y="350"/>
+    <spike2 x="630" y="10" width="210" height="10"/>
+    <spike3 x="620" y="300" width="10" height="60"/>
+    <LargeCrate x="380" y="1020"/>
+    <spike1 x="10" y="460" width="10" height="130"/>
+    <spike3 x="80" y="460" width="10" height="130"/>
+    <spike1 x="560" y="470" width="10" height="220"/>
+    <spike1 x="380" y="800" width="10" height="50"/>
+  </extraPlatforms>
+  <movingPlatforms>
+    <level1_specialPlatformSmall x="30" y="460" speed="100" movementType="5" animated="1">
+      <node x="30" y="670"/>
+    </level1_specialPlatformSmall>
+  </movingPlatforms>
+  <BGLayer1>
+    <L1_Shelf x="100" y="140" scrollFactor="0.2"/>
+    <level1_windows x="210" y="60" width="640" height="54" scrollFactor="0.1"/>
+    <L1_Shelf x="410" y="40" scrollFactor="0.2"/>
+    <level1_shelfTile x="0" y="600" width="640" height="480" scrollFactor="0.2"/>
+  </BGLayer1>
+  <BGLayer2>
+    <cratesBox x="200" y="230" scrollFactor="0.6"/>
+    <palettes x="220" y="130" scrollFactor="0.9"/>
+    <palettes x="110" y="420" scrollFactor="0.6"/>
+    <noticeBoard x="50" y="40" scrollFactor="0.1"/>
+    <sugarBagsAndCrates x="690" y="600" scrollFactor="0.9"/>
+    <cratesBox x="100" y="900" scrollFactor="0.55"/>
+    <palettes x="650" y="1040" scrollFactor="0.66"/>
+    <palettes x="720" y="1040" scrollFactor="0.66"/>
+  </BGLayer2>
+  <BGLayer3>
+    <sodaPack x="790" y="220" scrollFactor="0.2"/>
+    <palettes x="60" y="90" scrollFactor="0.2"/>
+    <sodaPack x="650" y="710" scrollFactor="0.2"/>
+  </BGLayer3>
+  <objects>
+    <exit x="720" y="150" nextLevel="2"/>
+    <L1_SmallCrate x="655" y="107" width="32"/>
+    <L1_SmallCrate x="554" y="876" width="32"/>
+    <Bottle x="713" y="540" width="12"/>
+  </objects>
+  <characters>
+    <player x="20" y="80" speed="40" movementType="1" startsFirst="1" levelName="Labrynth" andreInitialFlip="0" liselotInitialFlip="0" followWidth="0" followHeight="0" talkString="Liselot was riding her bike during the war, and was hit in the jaw with the butt of a rifle.">
+      <node x="60" y="80"/>
+    </player>
+    <liselot x="10" y="1030" speed="40" movementType="1" talkString="Just say yes.">
+      <node x="60" y="1030"/>
+    </liselot>
+    <worker x="160" y="750" speed="120" movementType="1" talkString="I trust that people are beings with good intentions, but you cant expect to harvest a crop in a sewer.">
+      <node x="350" y="750"/>
+    </worker>
+  </characters>
+</level>

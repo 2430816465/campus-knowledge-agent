@@ -1,0 +1,36 @@
+{
+  "dualSkillCloudTestAuthorized": false,
+  "sampleCapMicroRmb": 2000000,
+  "knownPreviousPhoneEstimateMicroRmb": 0,
+  "settings": {
+    "profiles": [
+      {
+        "id": "sample-generator",
+        "name": "Explicit synthetic dual-Skill sample only",
+        "kind": "CHAT_COMPLETIONS",
+        "endpoint": "https://api.deepseek.com/chat/completions",
+        "model": "",
+        "apiKey": "",
+        "contextTokens": 1000000,
+        "outputTokens": 16384,
+        "inputRmbPerMillion": "",
+        "outputRmbPerMillion": "",
+        "cachedRmbPerMillion": "",
+        "pricingVerified": false,
+        "pricingSource": "Verify official provider documentation before use",
+        "stream": false,
+        "jsonMode": true,
+        "maxTokensField": "max_tokens"
+      }
+    ],
+    "modelId": "sample-generator",
+    "jevId": "",
+    "jevEnabled": false,
+    "goutouEnabled": true,
+    "lianaiEnabled": true,
+    "cloudConsent": false,
+    "componentNoticeAccepted": false,
+    "styleNotes": "",
+    "jevMode": "BALANCED"
+  }
+}

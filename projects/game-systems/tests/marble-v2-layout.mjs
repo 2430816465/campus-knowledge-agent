@@ -1,0 +1,6 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {mkdir} from 'node:fs/promises';
+const require=createRequire(import.meta.url),{chromium}=require('C:/Users/24308/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright-core');
+const browser=await chromium.launch({headless:true}),sizes=[[360,800],[390,844],[844,390]];await mkdir('artifacts/marble-v2/layout',{recursive:true});
+try{for(const [width,height] of sizes){const page=await browser.newPage({viewport:{width,height},deviceScaleFactor:1});await page.goto('http://127.0.0.1:4173/games/marble/index.html');await page.locator('[data-action="new"]').click();const info=await page.evaluate(()=>({width:document.documentElement.scrollWidth,board:document.querySelector('#board').getBoundingClientRect().width,button:document.querySelector('[data-action="strong"]').getBoundingClientRect().width}));assert(info.width<=width+1,`${width}x${height} horizontal overflow ${info.width}`);assert(info.board>=150,`${width}x${height} board too narrow`);assert(info.button>=150);await page.screenshot({path:`artifacts/marble-v2/layout/${width}x${height}.png`,fullPage:true});await page.close()}console.log('marble v2 layout passed')}finally{await browser.close()}

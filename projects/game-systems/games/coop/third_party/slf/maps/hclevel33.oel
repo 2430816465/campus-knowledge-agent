@@ -1,0 +1,270 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    960
+  </width>
+  
+  
+  <height>
+    960
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="10" w="960" x="0" y="0"/>
+    
+    
+    <rect h="950" w="10" x="0" y="10"/>
+    
+    
+    <rect h="130" w="950" x="10" y="830"/>
+    
+    
+    <rect h="20" w="100" x="70" y="710"/>
+    
+    
+    <rect h="20" w="90" x="110" y="150"/>
+    
+    
+    <rect h="20" w="20" x="120" y="600"/>
+    
+    
+    <rect h="20" w="20" x="220" y="340"/>
+    
+    
+    <rect h="20" w="20" x="280" y="280"/>
+    
+    
+    <rect h="70" w="90" x="460" y="10"/>
+    
+    
+    <rect h="640" w="90" x="460" y="190"/>
+    
+    
+    <rect h="20" w="10" x="500" y="80"/>
+    
+    
+    <rect h="20" w="10" x="500" y="170"/>
+    
+    
+    <rect h="40" w="170" x="790" y="550"/>
+    
+    
+    <rect h="180" w="30" x="790" y="590"/>
+    
+    
+    <rect h="130" w="20" x="840" y="360"/>
+    
+    
+    <rect h="20" w="60" x="900" y="360"/>
+    
+    
+    <rect h="350" w="10" x="950" y="10"/>
+    
+    
+    <rect h="170" w="10" x="950" y="380"/>
+    
+    
+    <rect h="240" w="10" x="950" y="590"/>
+    
+  
+  </solids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <LargeCrate x="810" y="490"/>
+    
+    
+    <level3_specialPlatform animated="0" movementType="1" speed="40" x="220" y="670"/>
+    
+    
+    <level3_specialBlock animated="0" movementType="1" speed="40" x="420" y="600"/>
+    
+    
+    <level3_specialBlock animated="0" movementType="1" speed="40" x="10" y="440"/>
+    
+    
+    <level3_specialPlatform animated="0" movementType="1" speed="40" x="100" y="410"/>
+    
+    
+    <level3_specialPlatform animated="0" movementType="1" speed="40" x="360" y="240"/>
+    
+    
+    <level3_spike2 height="10" width="40" x="460" y="80"/>
+    
+    
+    <level3_specialBlock animated="0" movementType="1" speed="40" x="860" y="360"/>
+    
+    
+    <LargeCrate x="770" y="770"/>
+    
+    
+    <level3_specialBlock animated="0" movementType="1" speed="40" x="590" y="790"/>
+    
+    
+    <level3_specialPlatform animated="0" movementType="1" speed="40" x="10" y="150"/>
+    
+    
+    <level3_spike1 height="100" width="10" x="550" y="640"/>
+    
+    
+    <level3_spike2 height="10" width="10" x="500" y="100"/>
+    
+    
+    <level3_spike2 height="10" width="40" x="510" y="80"/>
+    
+    
+    <level3_spike0 height="10" width="10" x="500" y="160"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <movingPlatforms>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="70" x="560" y="720">
+      
+      
+      <node x="660" y="720"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="80" x="640" y="640">
+      
+      
+      <node x="740" y="640"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="100" x="760" y="210">
+      
+      
+      <node x="760" y="460"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="80" x="550" y="210">
+      
+      
+      <node x="720" y="210"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="140" x="50" y="530">
+      
+      
+      <node x="380" y="530"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+  
+  </movingPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level3_window height="320" scrollFactor="0.2" width="960" x="0" y="510"/>
+    
+    
+    <level3_painting1 scrollFactor="0.2" x="230" y="390"/>
+    
+    
+    <level3_painting2 scrollFactor="0.2" x="560" y="400"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer2>
+    
+    
+    <filingCab2 scrollFactor="1" x="380" y="180"/>
+    
+    
+    <plant2 scrollFactor="0.95" x="150" y="310"/>
+    
+    
+    <bookCase scrollFactor="0.4" x="100" y="740"/>
+    
+    
+    <filingCab2 scrollFactor="0.8" x="610" y="770"/>
+    
+  
+  </BGLayer2>
+  
+  
+  <BGLayer3>
+    
+    
+    <level3_desk1 x="850" y="290"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <exit nextLevel="2" x="904" y="460"/>
+    
+    
+    <L1_SmallCrate width="32" x="105" y="687"/>
+    
+    
+    <Bottle width="12" x="880" y="615"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <player andreInitialFlip="0" followHeight="0" followWidth="0" levelName="Up and Upper" liselotInitialFlip="1" movementType="1" speed="40" startsFirst="0" talkString="I never let my business get in the way of my family." x="240" y="780">
+      
+      
+      <node x="290" y="780"/>
+      
+    
+    </player>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="660" y="780">
+      
+      
+      <node x="730" y="780"/>
+      
+    
+    </liselot>
+    
+    
+    <worker movementType="1" speed="70" talkString="Everything I earn goes to my family." x="20" y="110">
+      
+      
+      <node x="170" y="110"/>
+      
+    
+    </worker>
+    
+  
+  </characters>
+  
+
+</level>

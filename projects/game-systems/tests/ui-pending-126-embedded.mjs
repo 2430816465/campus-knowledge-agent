@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {writeFile} from 'node:fs/promises';
+import {chromium} from 'file:///C:/Users/24308/.codex/skills/develop-web-game/node_modules/playwright/index.mjs';
+const browser=await chromium.launch(),base=process.env.BASE_URL||'http://127.0.0.1:4232',out='C:/Users/24308/Desktop/总/当前最新修改-待整合/1.26.0-守夜与闯关修复/验收',report={checks:[],errors:[]};
+try{for(const [width,height] of [[320,568],[390,844],[412,915],[568,320],[844,390]]){
+ const c=await browser.newContext({viewport:{width,height},hasTouch:true,isMobile:true}),p=await c.newPage();p.on('pageerror',e=>report.errors.push(e.message));await p.addInitScript(()=>localStorage.setItem('zcyg_mechanism_guides_v1',JSON.stringify(['movement','dash','doubleJump','push','lift','patrol','spikes','checkpoint','pickup','sharedExit'])));
+ await p.goto(base);await p.locator('[data-action="mode:coop"]').click();await p.locator('[data-action="choice:1"]').click();await p.locator('[data-action=create-room]').click();await p.waitForFunction(()=>document.querySelector('iframe')&&!document.querySelector('.game-loading'));const f=p.frames().find(f=>f.url().includes('/games/coop/'));await f.locator('#startSolo').click();await p.bringToFront();await f.locator('#cornerMenu').click();
+ const bad=await f.locator('#cornerPanel').evaluate(root=>[...root.querySelectorAll('button')].filter(b=>b.getClientRects().length).map(b=>b.getBoundingClientRect().toJSON()).filter(r=>r.left<0||r.top<0||r.right>innerWidth+1||r.bottom>innerHeight+1));assert.deepEqual(bad,[]);await p.screenshot({path:out+'/coop-embedded-menu-'+width+'.png'});
+ await f.locator('#campMenuButton').click();await p.locator('dialog[open] .wood-continue').click();await f.waitForFunction(()=>JSON.parse(render_game_to_text()).soloPaused===false,{timeout:5000});
+ await f.locator('#cornerMenu').click();await f.locator('#helpButton').click();await f.locator('#closeHelp').click();await f.waitForFunction(()=>JSON.parse(render_game_to_text()).soloPaused===false,{timeout:5000});
+ const inner=await f.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth,frame:document.querySelector('#board').getBoundingClientRect().toJSON(),height:innerHeight,width:innerWidth}));assert.equal(inner.overflow,false);assert(inner.frame.bottom<=inner.height+1);report.checks.push({width,height,...inner});await c.close();
+}assert.deepEqual(report.errors,[]);console.log(JSON.stringify(report));}finally{await writeFile(out+'/embedded-report.json',JSON.stringify(report,null,2));await browser.close();}

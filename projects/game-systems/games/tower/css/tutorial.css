@@ -1,0 +1,203 @@
+/* Tutorial overlay shares the tower HUD's blue-steel and warm-brass language. */
+#tutorialOverlay[hidden] { display: none; }
+#tutorialOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  pointer-events: none;
+  --tutorial-dim: rgba(2, 6, 16, .74);
+}
+.tutorial-shade {
+  position: fixed;
+  background: var(--tutorial-dim);
+  pointer-events: auto;
+  touch-action: none;
+}
+#tutorialSpotlight, #tutorialFocus {
+  position: fixed;
+  pointer-events: none;
+  border-radius: 3px;
+}
+#tutorialSpotlight {
+  z-index: 1;
+  border: 2px solid #e3a85f;
+  box-shadow: 0 0 0 2px #081426, 0 0 0 4px #7290aa, 0 0 18px #ef9d43a6;
+}
+#tutorialFocus {
+  z-index: 2;
+  border: 2px solid #ffe3a0;
+  background: #ffc75b16;
+  box-shadow: inset 0 0 0 2px #061224bd, 0 0 0 2px #101a29, 0 0 14px #ffc55bc9;
+  animation: tutorial-pulse 1.1s steps(2, end) infinite alternate;
+}
+.tutorial-card {
+  position: fixed;
+  z-index: 4;
+  left: 50%;
+  width: min(560px, calc(100vw - 30px));
+  max-height: min(38dvh, 310px);
+  overflow: auto;
+  transform: translateX(-50%);
+  padding: 15px 19px 16px;
+  border: 2px solid #c28749;
+  border-radius: 5px;
+  outline: 1px solid #56718d;
+  outline-offset: 3px;
+  color: #e4efff;
+  background:
+    linear-gradient(135deg, #ffffff08 0 1px, transparent 1px 14px),
+    linear-gradient(145deg, #122744f7 0%, #0a1a31f8 48%, #061226fa 100%);
+  background-size: 14px 14px, auto;
+  box-shadow: 0 0 0 5px #030a17ed, 0 14px 40px #000d,
+    inset 0 1px #ffe0a24d, inset 0 0 0 4px #172d48b8, inset 0 -12px 26px #0208138c;
+  pointer-events: auto;
+  text-align: left;
+  overscroll-behavior: contain;
+  scrollbar-color: #9c7045 #08162a;
+}
+.tutorial-card::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 12px;
+  right: 12px;
+  height: 3px;
+  border-top: 1px solid #e2ad68a6;
+  border-bottom: 1px solid #58718d91;
+  pointer-events: none;
+}
+.tutorial-card.at-top { top: max(15px, env(safe-area-inset-top)); }
+.tutorial-card.at-bottom { bottom: max(15px, env(safe-area-inset-bottom)); }
+.tutorial-head {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 11px;
+  margin: 2px 0 11px;
+}
+.tutorial-emblem {
+  display: block;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #927149;
+  border-radius: 5px;
+  background-color: #09182c;
+  background-image: url('../assets/ui/nav-icons.png');
+  background-repeat: no-repeat;
+  background-size: 200% 300%;
+  background-position: 0 0;
+  image-rendering: pixelated;
+  box-shadow: inset 0 0 0 2px #273c55, 0 2px #030914;
+}
+.tutorial-heading { min-width: 0; }
+.tutorial-kicker {
+  margin-bottom: 7px;
+  overflow: hidden;
+  color: #ffcf7c;
+  font-size: clamp(12px, 2.8vw, 15px);
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px #492c19, 0 0 8px #e4973852;
+  white-space: nowrap;
+}
+.tutorial-progress {
+  height: 5px;
+  overflow: hidden;
+  border: 1px solid #3d5b79;
+  border-radius: 1px;
+  background: #030d1c;
+  box-shadow: inset 0 1px 2px #000b;
+}
+.tutorial-progress span {
+  display: block;
+  width: 10%;
+  height: 100%;
+  background: linear-gradient(90deg, #c27b3d, #ffd982 70%, #fff0b5);
+  box-shadow: 0 0 8px #ffbf60;
+  transition: width .2s ease-out;
+}
+.tutorial-step-count {
+  color: #9fb4cd;
+  font: 800 12px/1.1 "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.tutorial-card h2 {
+  margin: 0 0 8px;
+  padding: 0 0 8px;
+  border-bottom: 1px solid #98704480;
+  color: #ffe1a0;
+  font-size: clamp(18px, 4vw, 23px);
+  font-weight: 900;
+  line-height: 1.3;
+  text-shadow: 0 2px #422918, 0 0 10px #d8762740;
+}
+.tutorial-card p {
+  margin: 0;
+  color: #d7e4f6;
+  font-size: clamp(14px, 3.2vw, 17px);
+  line-height: 1.58;
+  text-shadow: 0 1px #020916;
+}
+.tutorial-card button {
+  display: block;
+  min-width: 116px;
+  min-height: 44px;
+  margin: 13px 0 0 auto;
+  padding: 8px 22px;
+  border: 2px solid #e5ad5b;
+  border-radius: 4px;
+  color: #ffe5aa;
+  background: linear-gradient(#674829, #30231d);
+  box-shadow: inset 0 1px #ffe3a980, inset 0 -2px #160f0d, 0 2px #030914;
+  font: 800 15px/1.2 "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+  text-shadow: 0 1px #27170f;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.tutorial-card button:hover { filter: brightness(1.12); }
+.tutorial-card button:focus-visible {
+  outline: 2px solid #fff2bd;
+  outline-offset: 3px;
+}
+.tutorial-card button[hidden] { display: none; }
+body.tutorial-active #btnTouchpad { display: block !important; }
+body.tutorial-active .boardwrap { position: relative; }
+body.tutorial-active #modal.tutorial-inspection {
+  z-index: 110;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+@keyframes tutorial-pulse {
+  from { background-color: #ffc75b08; }
+  to { background-color: #ffc75b25; }
+}
+@media (max-width: 620px) {
+  .tutorial-card {
+    width: calc(100vw - 24px);
+    max-height: min(42dvh, 300px);
+    padding: 12px 13px 13px;
+    border-radius: 4px;
+  }
+  .tutorial-head { grid-template-columns: 34px minmax(0, 1fr) auto; gap: 8px; margin-bottom: 9px; }
+  .tutorial-emblem { width: 34px; height: 34px; }
+  .tutorial-kicker { margin-bottom: 5px; font-size: 12px; }
+  .tutorial-step-count { font-size: 10px; }
+  .tutorial-card h2 { font-size: clamp(17px, 4.6vw, 21px); }
+  .tutorial-card p { font-size: clamp(13px, 3.65vw, 16px); line-height: 1.52; }
+  .tutorial-card button { min-height: 42px; min-width: 105px; margin-top: 10px; font-size: 14px; }
+}
+@media (max-height: 480px) {
+  .tutorial-card { max-height: calc(100dvh - 24px); padding-top: 10px; padding-bottom: 10px; }
+  .tutorial-card.at-top { top: max(8px, env(safe-area-inset-top)); }
+  .tutorial-card.at-bottom { bottom: max(8px, env(safe-area-inset-bottom)); }
+  .tutorial-head { margin-bottom: 6px; }
+  .tutorial-emblem { width: 30px; height: 30px; }
+  .tutorial-card h2 { margin-bottom: 5px; padding-bottom: 5px; }
+  .tutorial-card button { min-height: 38px; margin-top: 7px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #tutorialFocus { animation: none; }
+  .tutorial-progress span { transition: none; }
+}

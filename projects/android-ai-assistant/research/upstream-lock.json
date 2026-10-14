@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-10-12",
+  "scope": "read-only source and license research; no upstream application source copied into probe",
+  "repositories": [
+    {"name":"goutoujunshi-jev-chat","url":"https://github.com/shengjidaguai-china/goutoujunshi-jev-chat","commit":"31618bd654d813f065f65f0289615c656b3d2d58","commit_date":"2026-10-06T21:35:14+08:00","license":"MIT; nested Android MIT + NOTICE","preview":"0.1.8-preview"},
+    {"name":"goutoujunshi","url":"https://github.com/shengjidaguai-china/goutoujunshi","commit":"6db7354a4002dc7c448a9c87ffdad8132570c9d3","commit_date":"2026-09-15T13:49:39+08:00","license":"MIT"},
+    {"name":"lian-ai","url":"https://github.com/xxzzzzy/lian-ai","commit":"3dc8f7334fb75f7d46c52b927b68f537326bea1d","commit_date":"2026-09-07T07:14:11+08:00","license":"MIT"}
+  ],
+  "official_references": [
+    "https://docs.typesafe.ai/api",
+    "https://developer.android.com/reference/android/accessibilityservice/AccessibilityService",
+    "https://developer.android.com/reference/android/service/notification/NotificationListenerService",
+    "https://developer.android.com/media/grow/media-projection",
+    "https://source.android.com/docs/security/app-sandbox",
+    "https://developers.google.com/ml-kit/vision/text-recognition/v2/android",
+    "https://developers.google.com/ml-kit/terms"
+  ]
+}

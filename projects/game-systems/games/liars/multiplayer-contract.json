@@ -1,0 +1,199 @@
+{
+  "contract_version": 1,
+  "game": {
+    "name": "再骗一杯",
+    "genre": "turn-based bluffing cards",
+    "target_platforms": [
+      "desktop LAN browser",
+      "Android LAN WebView"
+    ]
+  },
+  "session": {
+    "pace": "turn-based",
+    "fairness": "casual friends, no ranked stakes",
+    "players_min": 2,
+    "players_max": 4,
+    "join_model": "private invite lobby plus shared-authority public FIFO matchmaking; empty seats filled by random-ID bots after an 8-second wait; no bot identity label per explicit user request",
+    "late_join": "Reject mid-match joins; original members resume within 30 seconds"
+  },
+  "topology": {
+    "model": "dedicated-authoritative",
+    "authority_owner": "PC Node server; same rules in phone host worker",
+    "trust_assumptions": [
+      "Trusted LAN friends; phone host can inspect its own authority runtime",
+      "No production identity or cloud currency service exists"
+    ],
+    "host_migration": "None: host loss cancels unfinished game",
+    "risk_acceptance": [
+      "Phone host owns private state; local save balances are editable. Public Internet service is not deployed; configured shared endpoint supports matchmaking, and public ranked play remains disabled."
+    ]
+  },
+  "authority": [
+    {
+      "domain": "lobby",
+      "owner": "Room authority",
+      "client_can_request": [
+        "create",
+        "join",
+        "ready",
+        "start",
+        "match",
+        "cancelMatch",
+        "quickChat"
+      ],
+      "authority_validation": [
+        "Protocol version 1",
+        "2 to 4 connected ready members; host alone starts private matches",
+        "Matchmaker alone forms four-seat automatic matches, removing canceled or disconnected peers",
+        "Bots choose using their own hand plus public information; no hidden opponent cards or cursed positions are passed to bot policy"
+      ]
+    },
+    {
+      "domain": "hidden cards",
+      "owner": "Room authority",
+      "client_can_request": [
+        "play own card ids",
+        "challenge last play"
+      ],
+      "authority_validation": [
+        "Active turn and current revision",
+        "Own hand only; 1 to 3 distinct cards",
+        "Immutable immediately previous claim records actor, round, table target and manual/timeout source; target ordinary cards and thief wildcard are truthful; only accused for a lie or caller for all-truth is punished"
+      ]
+    },
+    {
+      "domain": "potion and winner",
+      "owner": "Room authority",
+      "client_can_request": [
+        "drink"
+      ],
+      "authority_validation": [
+        "Authority shuffles one cursed position among six",
+        "Loser alone drinks; last survivor wins"
+      ]
+    },
+    {
+      "domain": "reward",
+      "owner": "Room authority",
+      "client_can_request": [
+        "record finished match"
+      ],
+      "authority_validation": [
+        "Canonical finished-match id",
+        "Local camp credits winner 30 once; losers 0"
+      ]
+    }
+  ],
+  "simulation": {
+    "clock": "Discrete authority revisions with serverTime, phaseAt and fixed roundAt; 6s reveal, 8s potion preparation, 4.8s outcome including 1.8s sipping; reconnect pause shifts presentation clock and preserves remaining deadline. Mobile portrait prompt does not pause or reset multiplayer timers.",
+    "tick_rate_hz": null,
+    "tick_rate_basis": "This game resolves discrete commands and does not require a continuous simulation tick.",
+    "prediction": "Client may preview legal targets but never applies an outcome as final.",
+    "reconciliation": "Every accepted action broadcasts an authorized snapshot; stale revision rejects requests.",
+    "measurement_plan": "Capture join, active-turn, reveal, drink, reconnect and completion in Node and native LAN harness tests."
+  },
+  "replication": {
+    "model": "reliable commands plus canonical state snapshots",
+    "reliability_classes": {
+      "game commands": "reliable ordered and idempotent",
+      "presence": "replaceable latest state",
+      "private hand": "reliable authorized snapshot"
+    },
+    "interest_management": "All public match state reaches members; private hand state reaches only its owner.",
+    "hidden_state": "Only own hand reaches a member. Per-round plays expose owner/count/table/time/source only, allowing per-seat piles to survive reconnect. Only the challenged newest batch reveals card kinds via the event. Older piles remain face-down. Cursed bottle positions never appear in snapshots."
+  },
+  "transport": {
+    "primary": "WebSocket on trusted LAN; WSS endpoint configuration for future public service; local worker fallback for unconfigured Android matching",
+    "rationale": "Reliable ordered commands fit the card game and existing Android LAN socket bridge.",
+    "fallback": "Without serverUrl browsers use same-origin authority and Android uses local bot table. Public DNS, TLS and server deployment are not provisioned.",
+    "backpressure": "PC sockets close when outbound queue exceeds 128 KiB; incoming frames capped at 16 KiB; 30 requests per second per member."
+  },
+  "lifecycle": {
+    "states": [
+      "invited",
+      "queued",
+      "allocated",
+      "joining",
+      "ready",
+      "playing",
+      "reconnecting",
+      "finished",
+      "persisted",
+      "closed"
+    ],
+    "reconnect": "Opaque random resume token bound to client id and seat; 30 second grace, fresh own-hand snapshot.",
+    "disconnect": "Pause a live unfinished match; cancel without rewards when a player leaves or grace expires. Phone host background stops native room. 30-second turn timer pauses during reconnect; on expiry the authority plays one random owned card.",
+    "version_policy": "Reject messages other than protocol v1; validate websocket v1 endpoint."
+  },
+  "security": {
+    "identity": "Random per-tab client id and random per-seat resume token, no cloud account.",
+    "authorization": "Validate room, member, host, phase, hand ownership, action id and revision.",
+    "validation": [
+      "validate every message against the protocol schema",
+      "reject duplicate or stale action identifiers",
+      "calculate movement, combat, inventory, and rewards on the server"
+    ],
+    "abuse_controls": [
+      "explicit origin allowlist",
+      "message size limit",
+      "per-user command rate limit",
+      "idle timeout and bounded queues"
+    ],
+    "logging": "Client-visible public event history; never log resume tokens, cursed positions or hidden hands."
+  },
+  "observability": {
+    "metrics": [
+      "Test join count and completion rounds",
+      "Snapshot revision and reward count",
+      "Queue wait and actual human/bot counts; solo-vs-bot outcome history separate from mixed-human matches"
+    ],
+    "traces": [
+      "Room and match ids",
+      "Current revision and public event history"
+    ],
+    "alerts": [
+      "Visible connection status and malformed/stale command error; no operational cloud alerting"
+    ]
+  },
+  "verification": {
+    "network_conditions": [
+      {
+        "name": "clean control",
+        "latency_ms": 0,
+        "jitter_ms": 0,
+        "loss_percent": 0,
+        "reorder_percent": 0
+      },
+      {
+        "name": "illustrative mobile impairment",
+        "latency_ms": 150,
+        "jitter_ms": 40,
+        "loss_percent": 2,
+        "reorder_percent": 1
+      }
+    ],
+    "scenarios": [
+      "Out-of-turn and stale commands",
+      "Private snapshot capture for four clients",
+      "Forced last-hand challenge and wildcard truth",
+      "Disconnect/reconnect and host departure",
+      "Duplicate completion receipt and rematch",
+      "One queued human receives three bots; four queued humans receive none",
+      "Queue cancellation, disconnect cleanup, duplicate queue request and no public join into private rooms",
+      "Bot actions remain legal and private-information isolation is maintained"
+    ],
+    "acceptance": [
+      "Private cards never leak through the public snapshot",
+      "Rejected commands do not mutate canonical revision",
+      "Winner 30 and loser 0 recorded once per match",
+      "All original modes remain loadable"
+    ]
+  },
+  "decisions": [
+    {
+      "decision": "Share deterministic pure rules between PC authority and phone worker",
+      "reason": "Same rules and bot behavior on LAN authority and local worker; future serverUrl routes matching to shared independent authority",
+      "evidence": "games/liars/rules.js and rooms.js used by both server.mjs and phone-worker.js"
+    }
+  ]
+}

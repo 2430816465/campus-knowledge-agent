@@ -1,0 +1,70 @@
+<level>
+  <width>750</width>
+  <height>640</height>
+  <solids>
+    <rect x="0" y="0" w="750" h="10"/>
+    <rect x="0" y="10" w="10" h="630"/>
+    <rect x="10" y="550" w="740" h="90"/>
+    <rect x="70" y="20" w="20" h="20"/>
+    <rect x="90" y="240" w="50" h="60"/>
+    <rect x="140" y="260" w="390" h="40"/>
+    <rect x="180" y="20" w="20" h="20"/>
+    <rect x="290" y="140" w="80" h="120"/>
+    <rect x="290" y="300" w="80" h="160"/>
+    <rect x="470" y="20" w="20" h="20"/>
+    <rect x="560" y="20" w="20" h="20"/>
+    <rect x="630" y="10" w="60" h="110"/>
+    <rect x="630" y="180" w="120" h="370"/>
+    <rect x="740" y="10" w="10" h="170"/>
+  </solids>
+  <extraPlatforms>
+    <level3_spike1 x="370" y="300" width="10" height="160"/>
+    <level3_spike3 x="280" y="300" width="10" height="160"/>
+    <level3_spike2 x="290" y="460" width="80" height="10"/>
+    <level3_spike2 x="70" y="40" width="20" height="10"/>
+    <level3_spike2 x="180" y="40" width="20" height="10"/>
+    <level3_spike2 x="470" y="40" width="20" height="10"/>
+    <level3_spike2 x="560" y="40" width="20" height="10"/>
+    <LargeCrate x="650" y="120"/>
+  </extraPlatforms>
+  <movingPlatforms>
+    <level3_specialPlatform x="530" y="260" speed="70" movementType="5" animated="0">
+      <node x="530" y="440"/>
+    </level3_specialPlatform>
+  </movingPlatforms>
+  <BGLayer1>
+    <level3_window x="0" y="70" width="320" height="320" scrollFactor="0.2"/>
+    <level3_salesChart x="380" y="70" width="67" height="67" scrollFactor="0.2"/>
+    <level3_painting2 x="400" y="310" scrollFactor="0.2"/>
+    <level3_painting2 x="40" y="410" scrollFactor="0.2"/>
+    <level3_painting3 x="130" y="430" scrollFactor="0.2"/>
+    <bookCase x="220" y="460" scrollFactor="0.2"/>
+  </BGLayer1>
+  <BGLayer2>
+    <filingCab2 x="190" y="490" scrollFactor="0.2"/>
+    <filingCab1 x="420" y="460" scrollFactor="0.6"/>
+  </BGLayer2>
+  <BGLayer3>
+    <plant1 x="130" y="440" scrollFactor="0.2"/>
+    <plant1 x="370" y="150" scrollFactor="0.2"/>
+    <plant2 x="270" y="160" scrollFactor="0.2"/>
+    <plant2 x="610" y="450" scrollFactor="0.2"/>
+  </BGLayer3>
+  <objects>
+    <exit x="165" y="171" nextLevel="2"/>
+    <L1_SmallCrate x="90" y="217" width="32"/>
+    <L1_SmallCrate x="315" y="117" width="32"/>
+    <Bottle x="709" y="24" width="12"/>
+  </objects>
+  <characters>
+    <liselot x="10" y="500" speed="40" movementType="1" talkString="Just say yes.">
+      <node x="90" y="500"/>
+    </liselot>
+    <player x="540" y="500" speed="40" movementType="1" startsFirst="1" levelName="Action And Action" andreInitialFlip="1" liselotInitialFlip="0" followWidth="690" followHeight="640" talkString="My future mother-in-law wanted us to live with the family after we were married.">
+      <node x="580" y="500"/>
+    </player>
+    <chef x="50" y="500" speed="70" movementType="1" talkString="Having these glass bottles made is very expensive.">
+      <node x="560" y="500"/>
+    </chef>
+  </characters>
+</level>

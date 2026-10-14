@@ -1,0 +1,173 @@
+/* Shared geometry only. Game colors live in game-themes.css. */
+@font-face{font-family:CampTitle;src:url('../../assets/fonts/camp-display.woff') format('woff');font-display:swap}
+:root{}
+html[data-game-ui]{}
+html[data-game-ui] body{font-family:'Microsoft YaHei','PingFang SC',sans-serif}
+html[data-game-ui] button{font-family:inherit;touch-action:manipulation;cursor:pointer}
+html[data-game-ui] button:focus-visible,html[data-game-ui] input:focus-visible,html[data-game-ui] select:focus-visible{outline:3px solid var(--game-line);outline-offset:3px}
+html[data-game-ui] button:disabled{cursor:not-allowed;opacity:.55;filter:saturate(.35)}
+html[data-game-ui] button:active:not(:disabled){transform:translateY(2px)}
+html[data-game-ui] :is(h1,h2,.battle-top strong){font-family:CampTitle,'Microsoft YaHei',sans-serif}
+html[data-game-ui] :is(button,input,select){border-radius:12px}
+html[data-game-ui] :is(.panel,.dialog,.result-card,.portrait-card){border:1px solid var(--camp-line);border-radius:18px}
+html[data-game-ui] :is(.button,.m-btn,.iconbtn,.icon-button,.copy-button,.buy-button){border:1px solid var(--camp-line);min-height:44px}
+html[data-game-ui] :is(.button-primary,.m-btn.gold,.m-btn.primary){border-color:var(--game-line)}
+html[data-game-ui] :is(input,select){border:1px solid var(--camp-line);padding:10px;min-height:44px}
+html[data-game-ui] :is(.shade,.result-layer){}
+html[data-game-ui] :is(.dialog p,.dialog label,.result p,.result-panel small,.result-panel b,.result .panel h2,.result .panel p,.story p,.story small,.section-label,.section-label span,.footnote,.reward-head p,.rarity-rules,.codex-entry small,.selected-relic h2,.controls>p){}
+html[data-game-ui] :is(.dialog h2,.result h1,.reward-head h1,.battle-top strong){}
+/* Tower: real panels replace the screenshot-shaped click map. */
+html[data-game-ui="tower"] .app{max-width:640px;margin:auto;padding:8px;gap:8px;height:auto;min-height:100svh}
+html[data-game-ui="tower"][data-embedded] .app>header{display:none}
+html[data-game-ui="tower"] .app>header{border:1px solid var(--camp-line);border-radius:14px;min-height:0;height:auto;padding:10px;grid-template-columns:repeat(6,1fr)}
+html[data-game-ui="tower"] .brand{grid-column:1/-1;font:28px CampTitle}
+html[data-game-ui="tower"] .app header .nav-icon{height:48px;min-height:44px;font-size:12px;border:1px solid var(--camp-line)}
+html[data-game-ui="tower"] .nav-icon:before{display:none}
+html[data-game-ui="tower"] main{gap:8px}
+html[data-game-ui="tower"] .panel.left{grid-template-rows:58px 40px;min-height:0;padding:8px!important;gap:5px;border:1px solid var(--camp-line);border-radius:16px}
+html[data-game-ui="tower"] .panel.left .stat{border:0;border-radius:10px;display:flex;flex-direction:column;justify-content:center;padding:3px!important}
+html[data-game-ui="tower"] .panel.left .stat .stat-icon{display:none}
+html[data-game-ui="tower"] .panel.left .stat .k{font-size:12px;line-height:1.4;align-self:center}
+html[data-game-ui="tower"] .panel.left .stat .v{font-size:19px;margin:0;align-self:center;line-height:1.2}
+html[data-game-ui="tower"] .panel.left .stat.hp .v{}
+html[data-game-ui="tower"] .panel.left .stat.def .v{}
+html[data-game-ui="tower"] .panel.left .keybox{border:1px solid var(--game-line);display:flex;padding:0 7px;gap:5px;border-radius:9px}
+html[data-game-ui="tower"] .panel.left .keybox .t{display:block;font-size:12px}
+html[data-game-ui="tower"] .panel.left .keybox .t:before{display:none}
+html[data-game-ui="tower"] .panel.left .keybox .n{font-size:18px}
+html[data-game-ui="tower"] .panel.left .keybox.b .n{}
+html[data-game-ui="tower"] .panel.left .keybox.r .n{}
+html[data-game-ui="tower"] :is(.panel.boardwrap,.playrow,.lower-scene){}
+html[data-game-ui="tower"] .boardbox{width:100%!important;padding:3px;border:3px solid var(--game-line);border-radius:14px}
+html[data-game-ui="tower"] #floorNote{font-size:13px}
+html[data-game-ui="tower"] .lower-scene{display:grid;grid-template-columns:158px 1fr;gap:10px;align-items:center;padding:12px 2px}
+html[data-game-ui="tower"] .boardwrap .touchpad{grid-template-columns:repeat(3,48px)!important;grid-template-rows:repeat(3,44px)!important;gap:3px;width:150px;height:138px;margin:0!important}
+html[data-game-ui="tower"] .touchpad button{border:1px solid var(--game-line);font-size:22px;border-radius:13px}
+html[data-game-ui="tower"] .log-area{width:100%;height:104px;min-height:0;margin:0;display:block;align-self:center}
+html[data-game-ui="tower"] .log-tabs{height:34px;gap:3px}
+html[data-game-ui="tower"] .log-tabs button{clip-path:none;border-radius:8px 8px 0 0;border:0;font-size:12px;min-height:32px;padding:3px 7px}
+html[data-game-ui="tower"] .log-tabs button.active{}
+html[data-game-ui="tower"] .boardwrap #log{clip-path:none;border:1px solid var(--game-line);border-radius:0 9px 9px;height:70px;min-height:0;max-height:70px;padding:7px;font-size:12px;overflow:auto}
+html[data-game-ui="tower"] :is(.info-sheet,.manual-sheet,#modal:not(.dialogue-modal) .sheet,.tutorial-card){width:min(94vw,620px);max-height:88svh;overflow:auto;aspect-ratio:auto;padding:18px;border:1px solid var(--camp-line);border-radius:18px}
+html[data-game-ui="tower"] .info-visual{display:none}
+html[data-game-ui="tower"] .info-heading{position:relative;inset:auto;pointer-events:auto;height:48px;border:0;display:flex;justify-content:space-between;margin-bottom:12px}
+html[data-game-ui="tower"] .info-heading h2{position:static;width:auto;height:auto;clip-path:none;overflow:visible;font-size:26px;letter-spacing:0}
+html[data-game-ui="tower"] .info-heading>span{display:none}
+html[data-game-ui="tower"] .info-heading #btnInfoClose{position:static;min-width:44px;min-height:44px;font-size:26px;border-radius:12px}
+html[data-game-ui="tower"] .info-grid{position:static;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:10px}
+html[data-game-ui="tower"] #infoOverlay .info-grid .info-card{position:static;display:flex;flex-direction:column;gap:8px;min-height:135px;height:auto;padding:12px;border:1px solid var(--game-line);border-radius:12px;font-size:14px}
+html[data-game-ui="tower"] .info-grid .info-card :is(b,small,em){position:static;width:auto;height:auto;opacity:1;overflow:visible;padding:0;pointer-events:auto;font-size:14px;min-height:0}
+html[data-game-ui="tower"] .info-grid .info-card b{font-family:CampTitle;font-size:20px}
+html[data-game-ui="tower"] .info-grid .info-card .card-art{display:none}
+html[data-game-ui="tower"] .info-grid .info-card em{font-style:normal}
+html[data-game-ui="tower"] .info-grid .supply-card{grid-column:1/-1}
+html[data-game-ui="tower"] .ad-reward-row{display:flex;align-items:center;gap:8px;min-height:48px}
+html[data-game-ui="tower"] .ad-reward-row button{min-height:44px;border:0;font-size:14px}
+html[data-game-ui="tower"] #modal:not(.dialogue-modal) :is(h2,.mbody,.mbody b),html[data-game-ui="tower"] .manual-head h2{}
+html[data-game-ui="tower"] #modal:not(.dialogue-modal) :is(.sheet::before),html[data-game-ui="tower"] .manual-sheet::before{display:none}
+html[data-game-ui="tower"] :is(.manual-head button,#modal:not(.dialogue-modal) button,.settings-row,.test-option,.note-entry){border-color:var(--game-line)!important}
+/* Marble: one instruction line and a board sized to the actual remaining viewport. */
+html[data-game-ui="marble"] #app{padding:8px max(8px,env(safe-area-inset-left)) max(8px,env(safe-area-inset-bottom))}
+html[data-game-ui="marble"] :is(.top,.battle-top small,.heart,.room-ribbon b,.energy-panel span,.upgrade-card small,.upgrade-card strong,.upgrade-card i){}
+html[data-game-ui="marble"] .heart{}
+html[data-game-ui="marble"] :is(.room-ribbon,.energy-panel,.hintline,.upgrades span,.relic-strip span,.path span){border:1px solid var(--game-line);border-radius:10px}
+html[data-game-ui="marble"] .board-wrap{border:3px solid var(--game-line);border-radius:14px;padding:3px;overflow:hidden}
+html[data-game-ui="marble"] .battle{max-width:560px}
+html[data-game-ui="marble"] .battle-top{padding:0 2px 6px;min-height:42px}
+html[data-game-ui="marble"] .room-ribbon{display:none}
+html[data-game-ui="marble"][data-embedded] .battle [data-action="pause"]{display:none}
+html[data-game-ui="marble"] .energy-panel{margin:0 0 7px;padding:7px 9px;display:grid;grid-template-columns:1fr 142px;gap:5px 10px;align-items:center}
+html[data-game-ui="marble"] .energy-panel>div:first-child{display:block;font-size:12px}
+html[data-game-ui="marble"] .energy-panel span{display:block;font-size:11px;margin-top:3px}
+html[data-game-ui="marble"] .energy-track{grid-column:1;margin:0;height:8px;border:0;border-radius:8px;overflow:hidden}
+html[data-game-ui="marble"] .energy-panel .m-btn{grid-column:2;grid-row:1/3;min-height:44px;font-size:12px;padding:6px}
+html[data-game-ui="marble"] #board{width:min(100%,440px);max-height:none;height:auto;aspect-ratio:360/560;image-rendering:pixelated}
+html[data-game-ui="marble"] .hintline{margin-top:7px;min-height:32px;padding:6px 9px;font-size:12px}
+html[data-game-ui="marble"] .controls{padding-top:5px}
+html[data-game-ui="marble"] .controls>p{display:none}
+html[data-game-ui="marble"] .upgrades{min-height:26px;max-height:29px}
+html[data-game-ui="marble"] .upgrades span{padding:4px 6px;font-size:11px}
+html[data-game-ui="marble"] .control-row{margin-top:6px;grid-template-columns:1fr}
+html[data-game-ui="marble"] .relic-strip{max-height:32px;padding-top:4px}
+html[data-game-ui="marble"] .upgrade-card{border:1px solid var(--game-line);border-radius:14px;min-height:104px}
+html[data-game-ui="marble"] .tier-rare{border-color:var(--game-line)}
+html[data-game-ui="marble"] .tier-epic{border-color:var(--game-line)}
+html[data-game-ui="marble"] .hero{border-radius:20px;border:2px solid var(--game-line)}
+html[data-game-ui="marble"] .hero-copy h1{font-family:CampTitle}
+html[data-game-ui="marble"] .result-mark{}
+html[data-game-ui="marble"] .result-panel>div{border-color:var(--game-line)}
+/* Co-op retains its complete field and left / right thumb zones. */
+html[data-game-ui="coop"] :is(.lobby-panel,.room-panel,.result-card){}
+html[data-game-ui="coop"] :is(.lobby-title p,.lobby-foot,.level-info small,.room-help,.note,.brand small,.section-kicker,.connection-tag,.invite-code>span,.player-slot small,.result-card p){}
+html[data-game-ui="coop"] :is(.invite-code,.player-slot,.room-level-select,.level-card,.shop-card,.currency){border:1px solid var(--game-line);border-radius:14px}
+html[data-game-ui="coop"] .invite-code strong{}
+html[data-game-ui="coop"] .ready-dot{}
+html[data-game-ui="coop"][data-embedded] :is(body>.topbar,#helpButton,#leaveGame,#resetButton){display:none}
+html[data-game-ui="coop"][data-embedded] body.in-game .game-topline{grid-template-columns:1fr auto}
+html[data-game-ui="coop"] :is(.game-brand,.network-pill,.stage-hint,.game-help,.pause-banner){border-radius:12px;border:1px solid var(--game-line)}
+html[data-game-ui="coop"] .game-brand{padding:5px 9px;width:max-content;max-width:100%}
+html[data-game-ui="coop"] :is(.game-brand strong,.game-help b,.game-help button){}
+html[data-game-ui="coop"] body.in-game .touch-controls button{border:2px solid var(--game-line)}
+html[data-game-ui="coop"] body.in-game .touch-controls .touch-jump{}
+html[data-game-ui="coop"] .portrait{}
+html[data-game-ui="coop"] .portrait-card h1{}
+@media(orientation:landscape) and (max-height:600px){
+ html[data-game-ui="tower"] .app{max-width:980px;padding:6px}
+ html[data-game-ui="tower"] main{display:grid;grid-template-columns:210px 1fr;align-items:start}
+ html[data-game-ui="tower"] .panel.left{grid-template-rows:58px 40px;margin-top:12px}
+ html[data-game-ui="tower"] .panel.left .stat .v{font-size:15px}
+ html[data-game-ui="tower"] .panel.left .keybox .t{font-size:10px}
+ html[data-game-ui="tower"] .panel.boardwrap{display:grid;grid-template-columns:minmax(0,1fr) 160px;gap:10px}
+ html[data-game-ui="tower"] .boardbox{max-width:calc(100svh - 28px)}
+ html[data-game-ui="tower"] .lower-scene{display:flex;flex-direction:column;padding:3px 0}
+ html[data-game-ui="marble"] .battle{max-width:850px;display:grid;grid-template-columns:minmax(160px,1fr) minmax(240px,1fr);grid-template-rows:auto auto auto 1fr;gap:7px 14px}
+ html[data-game-ui="marble"] .battle-top{grid-column:2;grid-row:1}
+ html[data-game-ui="marble"] .board-wrap{grid-column:1;grid-row:1/5;justify-self:end;width:max-content}
+ html[data-game-ui="marble"] #board{width:calc((100svh - 28px)*.642857);max-width:100%}
+ html[data-game-ui="marble"] .energy-panel{grid-column:2;grid-row:2;margin:0}
+ html[data-game-ui="marble"] .hintline{grid-column:2;grid-row:3;margin:0}
+ html[data-game-ui="marble"] .controls{grid-column:2;grid-row:4;padding:0}
+}
+@media(prefers-reduced-motion:reduce){html[data-game-ui] *,html[data-game-ui] *::before,html[data-game-ui] *::after{animation-duration:.001ms!important;transition:none!important;scroll-behavior:auto!important}}
+html[data-game-ui="tower"] .panel.boardwrap{border:0;border-radius:0}
+html[data-game-ui="tower"] .lower-scene{flex:0 0 auto;min-height:0;align-content:start}
+html[data-game-ui="tower"] .tutorial-card :is(h2,p,.tutorial-kicker,.tutorial-step-count){}
+html[data-game-ui="tower"] .tutorial-card button{border:1px solid var(--game-line);min-height:44px}
+html[data-game-ui="tower"] .tutorial-card::before{display:none}
+html[data-game-ui="tower"] .tutorial-progress{border:0;border-radius:6px}
+html[data-game-ui="tower"] .tutorial-progress span{}
+html[data-game-ui="tower"] :is(.manual-sheet .monster,.manual-sheet .row,.manual-sheet .book-row){border-color:var(--game-line)}
+html[data-game-ui="tower"] .manual-sheet :is(.small,.dim){}
+html[data-game-ui="mine"] .mine-report{width:min(94vw,540px);max-height:85svh;margin:auto;padding:22px;font-size:15px;line-height:1.7}
+html[data-game-ui="mine"] .mine-report::backdrop{}
+html[data-game-ui="mine"] .mine-report h2{}
+html[data-game-ui="marble"] .battle .heart{}
+@media(orientation:portrait),(min-height:601px){html[data-game-ui="marble"] #board{width:min(100%,440px)}}
+
+html[data-game-ui="tower"] #infoOverlay .supply-card .ad-reward-copy{position:static;width:auto;height:auto;overflow:visible;opacity:1;pointer-events:auto;display:block}
+html[data-game-ui="tower"] #infoOverlay .supply-card .ad-reward-row{display:flex;align-items:center;gap:12px;padding:10px;min-height:60px}
+html[data-game-ui="tower"] #infoOverlay .supply-card .ad-reward-row button{position:static;width:auto;height:auto;min-height:44px;min-width:92px;padding:8px 12px;font-size:14px;opacity:1;animation:none;border:1px solid var(--game-line);border-radius:12px}
+html[data-game-ui="tower"] #infoOverlay .supply-card .ad-reward-row button:disabled{opacity:.55;pointer-events:none}
+html[data-game-ui="tower"] #infoOverlay em{font-style:normal}
+html[data-game-ui="coop"] .game-brand :is(strong,small,span){}
+
+html[data-game-ui="tower"] #infoOverlay .ad-reward-copy strong{display:block;font-size:15px;line-height:1.6}
+html[data-game-ui="tower"] #infoOverlay .ad-reward-copy small{font-size:12px}
+html[data-game-ui="tower"]:not([data-dev]) #infoOverlay [data-target="btnInfinite"]{display:none}
+
+/* Canvas mixes text with sprites; avoid nearest-neighbour crushing of small Chinese glyphs. */
+html[data-game-ui="mine"] canvas{image-rendering:auto}
+#androidServerSetup{position:fixed;z-index:9999;inset:0;display:grid;place-items:center;padding:16px}
+#androidServerSetup[hidden]{display:none}
+#androidServerSetup .server-setup-card{width:min(100%,420px);padding:22px;border:2px solid var(--game-line);border-radius:18px;display:grid;gap:12px}
+#androidServerSetup h2,#androidServerSetup p{margin:0}
+#androidServerSetup p{line-height:1.55;font-size:14px}
+#androidServerSetup label{font-weight:bold}
+#androidServerSetup input{width:100%;font-size:16px}
+#androidServerSetup small{}
+#androidServerSetup .server-setup-card>div{display:flex;gap:10px}
+#androidServerSetup button,.server-settings-button{border:1px solid var(--game-line);border-radius:12px;padding:10px 14px;min-height:44px}
+#androidServerSetup button[type=submit]{flex:1}
+.server-settings-button{width:100%;margin:10px 0;text-align:center}
+
+.mine-draft{position:fixed;inset:8% 8%;z-index:999;border:2px solid var(--game-line);border-radius:18px;padding:18px;overflow:auto;font-family:system-ui}.mine-draft h2{font-size:22px;margin:0 0 8px}.mine-draft p{font-size:13px}.mine-draft button{display:block;width:100%;text-align:left;border:1px solid var(--game-line);border-radius:10px;padding:14px;margin:10px 0;cursor:pointer;min-height:64px}.mine-draft button:focus-visible{outline:3px solid var(--game-line)}.mine-draft strong,.mine-draft span{display:block}.mine-draft span{font-size:13px;line-height:1.5;margin-top:4px}

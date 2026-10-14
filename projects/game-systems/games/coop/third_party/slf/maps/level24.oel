@@ -1,0 +1,76 @@
+<level>
+  <width>1600</width>
+  <height>1500</height>
+  <solids>
+    <rect x="0" y="0" w="10" h="1500"/>
+    <rect x="10" y="690" w="1500" h="110"/>
+    <rect x="10" y="1160" w="110" h="80"/>
+    <rect x="10" y="1340" w="570" h="160"/>
+    <rect x="120" y="1200" w="40" h="80"/>
+    <rect x="160" y="1240" w="60" h="40"/>
+    <rect x="550" y="1220" w="90" h="120"/>
+    <rect x="610" y="1340" w="400" h="160"/>
+    <rect x="840" y="1260" w="30" h="50"/>
+    <rect x="970" y="1220" w="100" h="120"/>
+    <rect x="1030" y="1340" w="570" h="160"/>
+    <rect x="1350" y="1210" w="250" h="70"/>
+    <rect x="1450" y="1180" w="150" h="30"/>
+    <rect x="1590" y="0" w="10" h="1180"/>
+    <rect x="1590" y="1280" w="10" h="60"/>
+  </solids>
+  <extraPlatforms>
+    <LargeCrate x="1360" y="1280"/>
+    <LargeCrate x="130" y="1280"/>
+  </extraPlatforms>
+  <movingPlatforms>
+    <level2_specialPlatformSmall x="10" y="1010" speed="90" movementType="5" animated="1">
+      <node x="270" y="1010"/>
+    </level2_specialPlatformSmall>
+  </movingPlatforms>
+  <BGLayer1>
+    <level2_greenPipe x="360" y="760" width="20" height="660" scrollFactor="0.3"/>
+    <level2_pipe1 x="10" y="1200" width="1590" height="70" scrollFactor="0.2"/>
+    <level2_tank x="320" y="1090" scrollFactor="0.3"/>
+    <level2_window x="90" y="1140" width="100" height="50" scrollFactor="0.1"/>
+    <level2_window x="450" y="1160" width="50" height="50" scrollFactor="0.1"/>
+    <level2_window x="410" y="550" width="150" height="90" scrollFactor="0.1"/>
+    <level2_FMG3 x="630" y="560" scrollFactor="0.1"/>
+  </BGLayer1>
+  <BGLayer2>
+    <level2_greenPipe x="790" y="760" width="20" height="710" scrollFactor="0.7"/>
+    <level2_tank x="750" y="1020" scrollFactor="0.7"/>
+    <level2_MG2 x="0" y="1080" scrollFactor="0.2"/>
+    <level2_greenPipe x="210" y="790" width="20" height="600" scrollFactor="0.2"/>
+    <level2_greenPipe x="530" y="790" width="20" height="710" scrollFactor="0.44"/>
+    <level2_tank x="490" y="1140" scrollFactor="0.44"/>
+    <level2_FMG3 x="920" y="1210" scrollFactor="0.8"/>
+    <level2_pipe1 x="560" y="1150" width="1040" height="70" scrollFactor="0.44"/>
+    <level2_pipe1 x="0" y="600" width="1600" height="70" scrollFactor="0.2"/>
+  </BGLayer2>
+  <BGLayer3>
+    <sodaPack x="260" y="1320" scrollFactor="0.2"/>
+    <sugarBags x="1200" y="1300" scrollFactor="0.2"/>
+  </BGLayer3>
+  <objects>
+    <exit x="21" y="1070" nextLevel="2"/>
+    <L1_SmallCrate x="1004" y="1198" width="32"/>
+    <L1_SmallCrate x="52" y="1317" width="32"/>
+    <Bottle x="363" y="902" width="12"/>
+  </objects>
+  <characters>
+    <player x="340" y="1290" speed="40" movementType="1" startsFirst="1" levelName="It's Not Enough Just On Sundays" andreInitialFlip="0" liselotInitialFlip="1" followWidth="0" followHeight="0" talkString="After two months on the training ship, most of us were transferred to the Abel Tasman, a 5,500 tonne hospital ship.">
+      <node x="400" y="1290"/>
+    </player>
+    <liselot x="1490" y="1290" speed="40" movementType="1" talkString="Just say yes.">
+      <node x="1530" y="1290"/>
+    </liselot>
+    <worker x="1450" y="1140" speed="120" movementType="1" talkString="Small business is an important part of the modern day capitalist society. You won't break us. We won't fade away.">
+      <node x="1550" y="1140"/>
+    </worker>
+  </characters>
+  <FGLayer1>
+    <level2_metalPipe x="281" y="0" width="30" height="1500" scrollFactor="1.4"/>
+    <level2_chainTile x="960" y="0" width="12" height="1500" scrollFactor="1.7"/>
+    <level2_greenPipe x="1121" y="0" width="20" height="1500" scrollFactor="1.9"/>
+  </FGLayer1>
+</level>

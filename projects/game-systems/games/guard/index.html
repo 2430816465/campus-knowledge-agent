@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>守塔战线 V0.3 · 再守一波</title>
+<link rel="stylesheet" href="css/style.css">
+<script type="module" src="../shared/legibility.js"></script>
+</head>
+<body>
+<div class="app">
+  <canvas id="board" width="720" height="1280"></canvas>
+</div>
+
+<!-- 按顺序加载：底层 → 配置（数据驱动）→ 存档 → 守塔战线模块 → 场景 → 启动 -->
+<script src="src/core/namespace.js"></script>
+<script src="src/core/utils.js"></script>
+<script src="src/core/input.js"></script>
+<script src="src/core/ads.js"></script>
+
+<script src="src/config/balance.js"></script>
+<script src="src/config/economy.js"></script>
+<script src="src/config/layout.js"></script>
+<script src="src/config/heroes.js"></script>
+<script src="src/config/evolutions.js"></script>
+<script src="src/config/monsters.js"></script>
+<script src="src/config/waves.js"></script>
+<script src="src/config/maps.js"></script>
+<script src="src/config/recruiting.js"></script>
+<script src="src/config/assets.js"></script>
+<script src="src/config/ops.js"></script>
+
+<script src="src/core/save.js"></script>
+<script src="src/core/meta.js"></script>
+<script src="src/core/analytics.js"></script>
+<script src="src/core/achievements.js"></script>
+<script src="src/core/daily.js"></script>
+<script src="src/core/board.js"></script>
+<script src="src/core/cloud.js"></script>
+
+<!-- 表现层（阶段四）：图片资源 / 像素英雄 / 音效 -->
+<script src="src/ui/assets.js"></script>
+<script src="src/ui/artStyle.js"></script>
+<script src="src/ui/heroSprites.js"></script>
+<script src="src/ui/heroRig.js"></script>
+<script src="src/ui/layeredHeroRig.js"></script>
+<script src="src/ui/layeredHeroConfig.js"></script>
+<script src="src/ui/audio.js"></script>
+<script src="src/ui/tutorial.js"></script>
+<script src="src/ui/shareCard.js"></script>
+
+<script src="src/modes/towerdefense/TowerDefenseState.js"></script>
+<script src="src/modes/towerdefense/TowerDefenseMap.js"></script>
+<script src="src/modes/towerdefense/HeroManager.js"></script>
+<script src="src/modes/towerdefense/MergeManager.js"></script>
+<script src="src/modes/towerdefense/EvolutionManager.js"></script>
+<script src="src/modes/towerdefense/RecruitManager.js"></script>
+<script src="src/modes/towerdefense/WaveManager.js"></script>
+<script src="src/modes/towerdefense/EnemyManager.js"></script>
+<script src="src/modes/towerdefense/ProjectileManager.js"></script>
+<script src="src/modes/towerdefense/EffectManager.js"></script>
+<script src="src/modes/towerdefense/RewardManager.js"></script>
+<script src="src/modes/towerdefense/TowerDefenseUI.js"></script>
+<script src="src/modes/towerdefense/DebugPanel.js"></script>
+<script src="src/modes/towerdefense/TowerDefenseMode.js"></script>
+
+<script src="src/scenes/TitleScene.js"></script>
+<script src="src/scenes/MapSelectScene.js"></script>
+<script src="src/scenes/MainPlaceholderScene.js"></script>
+<script src="src/scenes/VaultScene.js"></script>
+<script src="src/scenes/OpsScene.js"></script>
+
+<script src="src/app.js"></script>
+<script src="../camp-bridge.js"></script>
+</body>
+</html>

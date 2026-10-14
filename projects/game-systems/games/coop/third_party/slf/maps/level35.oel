@@ -1,0 +1,285 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    1000
+  </width>
+  
+  
+  <height>
+    1100
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="1100" w="10" x="0" y="0"/>
+    
+    
+    <rect h="60" w="270" x="10" y="470"/>
+    
+    
+    <rect h="160" w="990" x="10" y="940"/>
+    
+    
+    <rect h="60" w="600" x="50" y="670"/>
+    
+    
+    <rect h="120" w="460" x="70" y="200"/>
+    
+    
+    <rect h="50" w="320" x="350" y="610"/>
+    
+    
+    <rect h="110" w="80" x="470" y="830"/>
+    
+    
+    <rect h="70" w="320" x="480" y="430"/>
+    
+    
+    <rect h="40" w="170" x="540" y="310"/>
+    
+    
+    <rect h="70" w="40" x="630" y="510"/>
+    
+    
+    <rect h="60" w="60" x="710" y="250"/>
+    
+    
+    <rect h="100" w="80" x="720" y="600"/>
+    
+    
+    <rect h="450" w="80" x="810" y="250"/>
+    
+    
+    <rect h="20" w="110" x="890" y="830"/>
+    
+    
+    <rect h="10" w="20" x="900" y="250"/>
+    
+    
+    <rect h="10" w="20" x="900" y="690"/>
+    
+    
+    <rect h="10" w="20" x="960" y="450"/>
+    
+    
+    <rect h="830" w="10" x="990" y="0"/>
+    
+    
+    <rect h="90" w="10" x="990" y="850"/>
+    
+  
+  </solids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <level3_spike2 height="10" width="20" x="900" y="260"/>
+    
+    
+    <level3_spike2 height="10" width="20" x="960" y="460"/>
+    
+    
+    <level3_spike2 height="10" width="20" x="900" y="700"/>
+    
+    
+    <level3_spike0 height="10" width="20" x="900" y="240"/>
+    
+    
+    <level3_spike0 height="10" width="20" x="960" y="440"/>
+    
+    
+    <level3_spike0 height="10" width="20" x="900" y="680"/>
+    
+    
+    <level3_spike1 height="110" width="10" x="530" y="200"/>
+    
+    
+    <level3_spike3 height="40" width="10" x="530" y="310"/>
+    
+    
+    <level3_spike0 height="10" width="460" x="70" y="190"/>
+    
+    
+    <level3_spike0 height="10" width="20" x="570" y="420"/>
+    
+    
+    <level3_spike0 height="10" width="20" x="670" y="420"/>
+    
+    
+    <level3_specialBlock animated="0" movementType="1" speed="40" x="430" y="900"/>
+    
+    
+    <level3_specialBlock animated="0" movementType="1" speed="40" x="310" y="630"/>
+    
+    
+    <level3_specialBlock animated="0" movementType="1" speed="40" x="770" y="250"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <movingPlatforms>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="120" x="70" y="120">
+      
+      
+      <node x="500" y="120"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="100" x="540" y="120">
+      
+      
+      <node x="540" y="290"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="120" x="940" y="230">
+      
+      
+      <node x="940" y="610"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="120" x="900" y="440">
+      
+      
+      <node x="900" y="790"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+  
+  </movingPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level3_salesChart height="67" scrollFactor="0.2" width="67" x="190" y="120"/>
+    
+    
+    <level3_painting1 scrollFactor="0.2" x="80" y="90"/>
+    
+    
+    <level3_painting1 scrollFactor="0.2" x="320" y="360"/>
+    
+    
+    <level3_painting2 scrollFactor="0.2" x="170" y="540"/>
+    
+    
+    <level3_painting1 scrollFactor="0.2" x="80" y="560"/>
+    
+    
+    <level3_painting3 scrollFactor="0.2" x="530" y="30"/>
+    
+    
+    <level3_painting3 scrollFactor="0.2" x="610" y="190"/>
+    
+    
+    <level3_painting3 scrollFactor="0.2" x="270" y="520"/>
+    
+    
+    <level3_window height="320" scrollFactor="0.2" width="990" x="10" y="620"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer3>
+    
+    
+    <sodaPack scrollFactor="0.2" x="360" y="920"/>
+    
+    
+    <sugarBags scrollFactor="0.2" x="760" y="210"/>
+    
+    
+    <sugarBags scrollFactor="0.2" x="200" y="430"/>
+    
+    
+    <level3_desk1 x="190" y="600"/>
+    
+    
+    <level3_desk1 x="120" y="870"/>
+    
+    
+    <level3_desk1 x="560" y="240"/>
+    
+    
+    <palettes scrollFactor="0.2" x="350" y="570"/>
+    
+    
+    <sugarBags scrollFactor="0.2" x="470" y="790"/>
+    
+    
+    <palettes scrollFactor="0.2" x="720" y="560"/>
+    
+    
+    <level3_desk2 x="820" y="870"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <exit nextLevel="2" x="124" y="580"/>
+    
+    
+    <L1_SmallCrate width="32" x="549" y="584"/>
+    
+    
+    <Bottle width="12" x="773" y="404"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="40" y="420">
+      
+      
+      <node x="70" y="420"/>
+      
+    
+    </liselot>
+    
+    
+    <player andreInitialFlip="0" followHeight="0" followWidth="0" levelName="Where To" liselotInitialFlip="0" movementType="1" speed="40" startsFirst="1" talkString="I raced to the bus stop where I usually met Liselot to catch the bus together. When she saw my big smile, she knew." x="30" y="890">
+      
+      
+      <node x="30" y="890"/>
+      
+    
+    </player>
+    
+    
+    <army movementType="1" speed="40" talkString="Join the army reserve." x="550" y="890">
+      
+      
+      <node x="960" y="890"/>
+      
+    
+    </army>
+    
+  
+  </characters>
+  
+
+</level>

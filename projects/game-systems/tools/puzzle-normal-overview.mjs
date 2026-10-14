@@ -1,0 +1,8 @@
+import {chromium} from 'file:///C:/Users/24308/.codex/skills/develop-web-game/node_modules/playwright/index.mjs';
+import fs from 'node:fs/promises';import assert from 'node:assert/strict';
+const browser=await chromium.launch({headless:true});const page=await browser.newPage({viewport:{width:1440,height:3000}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
+try{await page.goto('http://127.0.0.1:4173/output/puzzle-normal-v2/'+encodeURIComponent('地图总览.html'));await page.waitForFunction(()=>window.overviewReady);assert.equal(await page.locator('.card').count(),50);await fs.mkdir('output/puzzle-normal-v2/browser',{recursive:true});await page.screenshot({path:'output/puzzle-normal-v2/browser/50关总览.png',fullPage:true});
+for(const [first,last] of [[0,19],[20,39],[40,49]]){const a=await page.locator('.card').nth(first).boundingBox(),b=await page.locator('.card').nth(last).boundingBox();await page.screenshot({path:`output/puzzle-normal-v2/browser/地图-${first+1}-${last+1}.png`,clip:{x:0,y:Math.max(0,a.y-6),width:1440,height:b.y+b.height-a.y+12}})}
+await page.locator('.card').nth(24).click();await page.waitForFunction(()=>window.Puzzle);assert.equal(await page.evaluate(()=>Puzzle.game.index),24);assert.deepEqual(errors,[]);console.log('50 maps overview and direct room link PASS');
+await page.goto('http://127.0.0.1:4180/'+encodeURIComponent('50关地图总览.html'));await page.waitForFunction(()=>window.overviewReady);assert.equal(await page.locator('.card').count(),50);await page.locator('.card').nth(49).click();await page.waitForFunction(()=>window.Puzzle);assert.equal(await page.evaluate(()=>Puzzle.game.index),49);assert.deepEqual(errors,[]);console.log('Standalone overview and room 50 direct link PASS');
+}finally{await browser.close()}

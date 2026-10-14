@@ -1,0 +1,67 @@
+<level>
+  <width>1400</width>
+  <height>700</height>
+  <solids>
+    <rect x="0" y="0" w="1400" h="10"/>
+    <rect x="0" y="10" w="10" h="690"/>
+    <rect x="10" y="260" w="160" h="20"/>
+    <rect x="10" y="500" w="270" h="200"/>
+    <rect x="130" y="380" w="190" h="90"/>
+    <rect x="150" y="470" w="130" h="30"/>
+    <rect x="280" y="550" w="1120" h="150"/>
+    <rect x="370" y="200" w="100" h="80"/>
+    <rect x="420" y="460" w="270" h="90"/>
+    <rect x="600" y="340" w="90" h="120"/>
+    <rect x="690" y="500" w="710" h="50"/>
+    <rect x="730" y="340" w="60" h="20"/>
+    <rect x="830" y="340" w="570" h="160"/>
+    <rect x="1390" y="10" w="10" h="330"/>
+  </solids>
+  <extraPlatforms>
+    <spike0 x="280" y="540" width="140" height="10"/>
+    <spike0 x="690" y="490" width="140" height="10"/>
+    <helpBox x="830" y="280" type="0" helpString="To get to the exit quicker, you can control both characters at once."/>
+    <helpBox x="960" y="280" type="0" helpString="To piggyback, make sure Andre and Liselot are touching, and press '_Piggy'."/>
+    <helpBox x="200" y="320" type="0" helpString="To talk to co-workers or Andre, press '_Action' when facing them."/>
+    <helpBox x="1090" y="280" type="0" helpString="To stop piggybacking, press '_Piggy' to play with Andre..."/>
+    <helpBox x="1220" y="280" type="0" helpString="Or press '_Switch' to play with Liselot."/>
+    <spike2 x="280" y="470" width="40" height="10"/>
+    <spike1 x="320" y="440" width="10" height="30"/>
+  </extraPlatforms>
+  <movingPlatforms>
+    <level1_specialPlatformSmall x="280" y="480" speed="40" movementType="5" animated="1">
+      <node x="330" y="480"/>
+      <node x="330" y="460"/>
+      <node x="380" y="460"/>
+    </level1_specialPlatformSmall>
+  </movingPlatforms>
+  <BGLayer1>
+    <level1_windows x="450" y="260" width="290" height="54" scrollFactor="0.1"/>
+    <L1_Shelf x="10" y="180" scrollFactor="0.2"/>
+    <level1_shelfTile x="280" y="190" width="160" height="360" scrollFactor="0.3"/>
+    <level1_shelfTile x="530" y="170" width="320" height="360" scrollFactor="0.25"/>
+  </BGLayer1>
+  <BGLayer2>
+    <sugarBagsAndCrates x="80" y="370" scrollFactor="0.6"/>
+  </BGLayer2>
+  <BGLayer3>
+    <sodaPack x="90" y="480" scrollFactor="0.2"/>
+  </BGLayer3>
+  <objects>
+    <L1_SmallCrate x="629" y="315" width="32"/>
+    <exit x="1351" y="250" nextLevel="2"/>
+    <Bottle x="559" y="35" width="12"/>
+    <L1_SmallCrate x="141" y="357" width="32"/>
+  </objects>
+  <characters>
+    <army x="20" y="210" speed="40" movementType="1" talkString="We're looking to use your soft drinks to pad out our rations to our soliders.">
+      <node x="150" y="210"/>
+    </army>
+    <liselot x="670" y="290" speed="40" movementType="1" talkString="Just say yes.">
+      <node x="700" y="290"/>
+    </liselot>
+    <player x="40" y="450" speed="40" movementType="1" startsFirst="1" levelName="new level" andreInitialFlip="0" liselotInitialFlip="0" followWidth="0" followHeight="0" talkString="Family is all.">
+      <node x="90" y="450"/>
+    </player>
+  </characters>
+</level>

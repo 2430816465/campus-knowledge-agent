@@ -1,0 +1,18 @@
+/* One screen per decision. Navigation stays visible; lists and long documents are paginated. */
+:is(#main,#modal,#management,.fit-screen).fit-screen .fit-page-hidden.fit-page-hidden.fit-page-hidden.fit-page-hidden.fit-page-hidden,:is(#main,#modal,#management,.fit-screen).fit-screen .fit-empty.fit-empty.fit-empty.fit-empty.fit-empty{display:none!important}
+.fit-page-hidden,.fit-empty{display:none!important}
+.fit-screen{box-sizing:border-box!important;min-height:0!important;max-height:var(--fit-limit)!important;overflow:visible!important;display:flex!important;flex-direction:column!important;gap:8px!important}
+.fit-screen>*{flex-shrink:0;min-width:0}
+.fit-screen .fit-pager{display:grid!important;grid-template-columns:44px minmax(0,1fr) 44px;gap:6px;align-items:center;margin:8px 0 0!important;padding:0!important;flex:none;width:100%}
+.fit-screen .fit-pager[hidden]{display:none!important}
+.fit-pager select{width:100%;min-width:0;height:44px;font:14px Microsoft YaHei,sans-serif;color:#392312;background:#f7e8ce;border:1px solid #997249;border-radius:3px;padding:0 6px}
+html[data-wood-ui] .fit-pager button{width:44px;min-width:44px;min-height:44px;height:44px;padding:0!important;border-width:6px!important;font-size:24px!important;line-height:1}
+.fit-paragraph{display:block;margin:0 0 10px;line-height:1.65;font-size:14px}
+.fit-screen .panel-body,.fit-screen .panel-body>.tab-panel{overflow:visible!important;max-height:none!important;min-height:0!important}
+.fit-screen :is(.actions,.profile-shortcuts,.game-menu-actions,.settings-actions){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.fit-screen :is(.help-art,.hero-sprites,.hero-row){max-height:64px;overflow:hidden}
+.fit-screen :is(h1,h2,h3,p){margin-top:0;margin-bottom:6px}
+.fit-screen :is(h1,h2){font-size:22px;line-height:1.25}
+.fit-screen p{font-size:14px;line-height:1.55}
+
+dialog.fit-screen:not([open]),.fit-screen[hidden],.fit-screen.hidden{display:none!important}

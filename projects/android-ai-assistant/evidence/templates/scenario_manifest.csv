@@ -1,0 +1,1 @@
+run_id,scenario,variant,started_at_ms,cutoff_at_ms,receiver_notifications,conversation_previously_opened,screen_state,network_state,independent_sender_log,delivery_confirmation_evidence,operator_notes

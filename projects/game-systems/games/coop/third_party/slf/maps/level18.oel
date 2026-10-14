@@ -1,0 +1,111 @@
+<level>
+  <width>1100</width>
+  <height>640</height>
+  <solids>
+    <rect x="0" y="0" w="1100" h="10"/>
+    <rect x="0" y="10" w="130" h="30"/>
+    <rect x="0" y="40" w="10" h="600"/>
+    <rect x="10" y="240" w="120" h="120"/>
+    <rect x="10" y="360" w="80" h="40"/>
+    <rect x="10" y="400" w="40" h="40"/>
+    <rect x="10" y="520" w="80" h="120"/>
+    <rect x="50" y="120" w="80" h="40"/>
+    <rect x="90" y="480" w="40" h="40"/>
+    <rect x="90" y="560" w="1010" h="80"/>
+    <rect x="130" y="40" w="40" h="80"/>
+    <rect x="130" y="440" w="40" h="40"/>
+    <rect x="170" y="400" w="40" h="40"/>
+    <rect x="210" y="120" w="40" h="40"/>
+    <rect x="210" y="360" w="40" h="40"/>
+    <rect x="250" y="320" w="40" h="40"/>
+    <rect x="290" y="280" w="40" h="40"/>
+    <rect x="320" y="440" w="210" h="50"/>
+    <rect x="330" y="240" w="40" h="40"/>
+    <rect x="350" y="290" w="40" h="90"/>
+    <rect x="370" y="10" w="120" h="130"/>
+    <rect x="370" y="200" w="160" h="40"/>
+    <rect x="530" y="240" w="40" h="200"/>
+    <rect x="610" y="10" w="40" h="370"/>
+    <rect x="650" y="200" w="160" h="40"/>
+    <rect x="650" y="450" w="80" h="40"/>
+    <rect x="670" y="490" w="40" h="40"/>
+    <rect x="810" y="450" w="290" h="40"/>
+    <rect x="950" y="210" w="150" h="240"/>
+    <rect x="950" y="490" w="150" h="70"/>
+    <rect x="1060" y="10" w="40" h="200"/>
+  </solids>
+  <extraPlatforms>
+    <LargeCrate x="390" y="140"/>
+    <level2_spike2 x="50" y="400" width="40" height="10"/>
+    <level2_spike2 x="90" y="360" width="40" height="10"/>
+    <level2_spike2 x="10" y="440" width="40" height="10"/>
+    <LargeCrate x="330" y="380"/>
+    <level2_spike2 x="130" y="480" width="40" height="10"/>
+    <level2_spike2 x="170" y="440" width="40" height="10"/>
+    <level2_spike2 x="210" y="400" width="40" height="10"/>
+    <level2_spike2 x="250" y="360" width="40" height="10"/>
+    <level2_specialPlatform x="900" y="140" speed="40" movementType="1" animated="0"/>
+    <helpBox x="410" y="500" type="0" helpString="If you can't reach an area, consider finding a step up."/>
+    <level2_spike0 x="950" y="200" width="110" height="10"/>
+  </extraPlatforms>
+  <movingPlatforms>
+    <level2_specialBlock x="810" y="160" speed="40" movementType="5" animated="0">
+      <node x="810" y="370"/>
+    </level2_specialBlock>
+  </movingPlatforms>
+  <BGLayer1>
+    <level2_FMG3 x="130" y="210" scrollFactor="0.4"/>
+    <level2_FMG3 x="410" y="380" scrollFactor="0.5"/>
+    <level2_FMG3 x="480" y="40" scrollFactor="0.45"/>
+    <level2_pipe1 x="0" y="60" width="960" height="70" scrollFactor="0.2"/>
+  </BGLayer1>
+  <BGLayer2>
+    <level2_MG2 x="0" y="130" scrollFactor="0.1"/>
+    <level2_metalPipe x="250" y="0" width="30" height="640" scrollFactor="0.2"/>
+    <level2_greenPipe x="480" y="0" width="20" height="640" scrollFactor="0.8"/>
+    <level2_greenPipe x="180" y="0" width="20" height="640" scrollFactor="0.6"/>
+    <level2_tank x="140" y="330" scrollFactor="0.6"/>
+    <level2_tank x="440" y="180" scrollFactor="0.8"/>
+    <level2_pipe1 x="200" y="360" width="760" height="70" scrollFactor="0.6"/>
+    <level2_pipe1 x="490" y="210" width="470" height="70" scrollFactor="0.8"/>
+  </BGLayer2>
+  <BGLayer3>
+    <palettes x="360" y="520" scrollFactor="0.2"/>
+    <sodaPack x="870" y="430" scrollFactor="0.2"/>
+    <sodaPack x="670" y="430" scrollFactor="0.2"/>
+    <sodaPack x="180" y="540" scrollFactor="0.2"/>
+    <sugarBags x="860" y="520" scrollFactor="0.2"/>
+    <level2_braceLeft x="290" y="320"/>
+    <level2_braceLeft x="330" y="280"/>
+    <level2_braceLeft x="10" y="40"/>
+    <level2_braceRight x="110" y="40"/>
+    <level2_braceLeft x="90" y="520"/>
+    <level2_braceLeft x="710" y="490"/>
+    <level2_braceRight x="930" y="490"/>
+    <level2_braceLeft x="370" y="240"/>
+    <level2_braceLeft x="130" y="120"/>
+  </BGLayer3>
+  <objects>
+    <smallSugarBag x="143" y="517" width="22"/>
+    <L1_SmallCrate x="832" y="427" width="32"/>
+    <exit x="454" y="350" nextLevel="2"/>
+    <andreCheckPoint x="542" y="504" player="1"/>
+    <Bottle x="1019" y="51" width="12"/>
+  </objects>
+  <characters>
+    <liselot x="840" y="510" speed="40" movementType="1" talkString="Just say yes.">
+      <node x="890" y="510"/>
+    </liselot>
+    <player x="60" y="70" speed="40" movementType="1" startsFirst="1" levelName="The Music of the Broken Windows" andreInitialFlip="0" liselotInitialFlip="1" followWidth="0" followHeight="0" talkString="While the coconut oil heats over a fire, we roll the dough into small balls and put a bit of brown sugar in the centre of each ball, and then deep fried it to a golden brown.">
+      <node x="90" y="70"/>
+    </player>
+    <chef x="650" y="150" speed="40" movementType="1" talkString="We bought our initial empty bottles from Holland from a well known beer company.">
+      <node x="780" y="150"/>
+    </chef>
+  </characters>
+  <FGLayer1>
+    <level2_chainTile x="293" y="3" width="12" height="637" scrollFactor="1.5"/>
+    <level2_chainTile x="592" y="0" width="12" height="640" scrollFactor="1.6"/>
+    <level2_chainTile x="917" y="0" width="12" height="640" scrollFactor="1.7"/>
+  </FGLayer1>
+</level>

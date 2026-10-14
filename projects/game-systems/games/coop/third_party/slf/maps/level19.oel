@@ -1,0 +1,82 @@
+<level>
+  <width>600</width>
+  <height>1050</height>
+  <solids>
+    <rect x="0" y="0" w="600" h="10"/>
+    <rect x="0" y="10" w="10" h="1040"/>
+    <rect x="10" y="940" w="590" h="110"/>
+    <rect x="30" y="760" w="30" h="30"/>
+    <rect x="70" y="110" w="220" h="50"/>
+    <rect x="80" y="820" w="220" h="30"/>
+    <rect x="90" y="300" w="250" h="40"/>
+    <rect x="160" y="700" w="240" h="20"/>
+    <rect x="250" y="160" w="40" h="80"/>
+    <rect x="330" y="410" w="140" h="20"/>
+    <rect x="590" y="10" w="10" h="930"/>
+  </solids>
+  <extraPlatforms>
+    <level2_spike0 x="330" y="400" width="140" height="10"/>
+    <level2_spike3 x="320" y="410" width="10" height="20"/>
+    <level2_spike2 x="330" y="430" width="140" height="10"/>
+    <LargeCrate x="260" y="240"/>
+  </extraPlatforms>
+  <movingPlatforms>
+    <level2_specialPlatformSmall x="50" y="300" speed="80" movementType="5" animated="1">
+      <node x="50" y="500"/>
+    </level2_specialPlatformSmall>
+    <level2_specialPlatformSmall x="90" y="500" speed="100" movementType="5" animated="1">
+      <node x="240" y="500"/>
+    </level2_specialPlatformSmall>
+    <level2_specialPlatformSmall x="280" y="500" speed="90" movementType="5" animated="1">
+      <node x="280" y="620"/>
+    </level2_specialPlatformSmall>
+    <level2_specialPlatformSmall x="290" y="110" speed="80" movementType="5" animated="1">
+      <node x="390" y="110"/>
+    </level2_specialPlatformSmall>
+    <level2_specialPlatformSmall x="430" y="110" speed="80" movementType="5" animated="1">
+      <node x="430" y="300"/>
+    </level2_specialPlatformSmall>
+  </movingPlatforms>
+  <BGLayer1>
+    <level2_greenPipe x="150" y="0" width="20" height="1050" scrollFactor="0.2"/>
+    <level2_tank x="110" y="160" scrollFactor="0.2"/>
+    <level2_tank x="110" y="650" scrollFactor="0.2"/>
+    <level2_pipe1 x="180" y="670" width="420" height="70" scrollFactor="0.2"/>
+    <level2_pipe1 x="180" y="180" width="420" height="70" scrollFactor="0.2"/>
+    <level2_MG2 x="0" y="110" scrollFactor="0.2"/>
+    <level2_MG2 x="0" y="440" scrollFactor="0.2"/>
+    <level2_MG2 x="0" y="790" scrollFactor="0.2"/>
+  </BGLayer1>
+  <BGLayer2>
+    <level2_metalPipe x="40" y="0" width="30" height="1050" scrollFactor="0.6"/>
+    <level2_metalPipe x="420" y="0" width="30" height="1050" scrollFactor="0.6"/>
+    <level2_greenPipe x="480" y="0" width="20" height="320" scrollFactor="0.8"/>
+    <level2_tank x="440" y="300" scrollFactor="0.2"/>
+    <level2_pipe1 x="510" y="330" width="90" height="70" scrollFactor="0.2"/>
+  </BGLayer2>
+  <BGLayer3>
+    <palettes x="210" y="660" scrollFactor="0.2"/>
+    <sodaPack x="160" y="90" scrollFactor="0.2"/>
+    <palettes x="170" y="260" scrollFactor="0.2"/>
+    <sugarBags x="120" y="900" scrollFactor="0.2"/>
+  </BGLayer3>
+  <objects>
+    <L1_SmallCrate x="352" y="675" width="32"/>
+    <exit x="80" y="20" nextLevel="2"/>
+    <Bottle x="27" y="134" width="12"/>
+  </objects>
+  <characters>
+    <player x="360" y="890" speed="40" movementType="1" startsFirst="1" levelName="Elevator, Take Me Home" andreInitialFlip="1" liselotInitialFlip="0" followWidth="0" followHeight="0" talkString="On one occasion during WWII, I traded two eggs for one handkerchief.">
+      <node x="400" y="890"/>
+    </player>
+    <army x="80" y="770" speed="40" movementType="1" talkString="Unlike your usual customers the military will not be bringing back the empty bottles, and we will not pay extra because of it.">
+      <node x="280" y="770"/>
+    </army>
+    <liselot x="290" y="650" speed="40" movementType="1" talkString="Just say yes.">
+      <node x="330" y="650"/>
+    </liselot>
+    <chef x="90" y="250" speed="40" movementType="1" talkString="Caffeine citrate and citric acid. Every time we get a delivery the army is here checking that we're not making bombs!">
+      <node x="220" y="250"/>
+    </chef>
+  </characters>
+</level>

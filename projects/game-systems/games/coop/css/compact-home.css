@@ -1,0 +1,100 @@
+/* Task-based home. The 72-level library is a separate, bounded surface. */
+#home.home-screen{box-sizing:border-box;max-width:1000px;width:calc(100% - 24px);margin:auto;padding:12px 0!important;display:flex;flex-direction:column;gap:12px;min-height:0!important}
+#home.hidden{display:none!important}
+#home .home-hero{margin:0!important;padding:0!important;min-height:0!important;height:auto!important;display:flex!important;flex-direction:column;flex:none}
+#home .hero-copy{padding:16px!important;order:2}
+#home .hero-glow,#home .eyebrow,#home .home-foot,#home .shop-card,#home .section-kicker{display:none!important}
+#home .hero-copy h1{font-size:clamp(21px,5.5vw,28px)!important;line-height:1.2!important;margin:0!important}
+#home .hero-copy h1 br{display:none}
+#home .hero-copy .tags{margin:4px 0 0!important;font-size:11px}
+#home .play-mode-picker{margin:0!important;gap:8px!important;display:grid!important;grid-template-columns:1fr 1fr}
+#home button{min-height:44px!important;touch-action:manipulation}
+#home .play-mode-picker button{padding:6px 12px!important;font-size:15px!important}
+#home .play-mode-picker small{font:11px/1.2 sans-serif!important;display:block!important}
+#home #chooseLevel{align-self:flex-start;padding:5px 16px!important;min-height:40px!important}
+#home .home-columns{display:block!important;margin:0!important;min-width:0}
+#home .level-panel{display:none!important}
+#home .room-panel{margin:0!important;padding:14px!important;min-height:0!important;display:grid!important;grid-template-columns:minmax(0,1fr);gap:12px!important}
+#home .room-panel.hidden{display:none!important}
+#home .room-panel .panel-heading{grid-column:1/-1;margin:0!important}
+#home .room-panel h2{font-size:17px!important;margin:0!important}
+#home .room-panel .room-help{grid-column:1/-1;margin:0!important;font-size:11px!important}
+#home .room-panel .join-row{margin:0!important;display:flex;flex-direction:column;justify-content:center}
+#home .join-row label{font:11px/1.2 sans-serif!important}
+#home .join-row>div{display:flex!important;gap:6px}
+#home .join-row input{min-width:0;width:100%;padding:6px!important;font:16px sans-serif}
+#home .solo-departure{display:flex!important;gap:8px;flex-wrap:wrap;align-items:center;margin:0!important;padding:0!important}
+#home .solo-departure[hidden]{display:none!important}
+#home .solo-departure p{flex:1 0 100%;font:12px/1.4 sans-serif!important;margin:0!important}
+#home .solo-departure button{flex:1}
+#home.level-library-open .level-panel{position:fixed;inset:max(12px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));z-index:1600;display:flex!important;flex-direction:column;gap:8px;padding:14px!important;margin:0!important;background:var(--game-panel)!important;box-shadow:0 0 0 100vmax #080d14d9}
+#home .level-panel .panel-heading,#home .campaign-modes,#home .level-panel .note{flex:none;margin:0!important}
+#home .level-panel h2{font-size:20px!important;margin:0!important}
+#home .level-list{flex:1;overflow:auto!important;min-height:0;max-height:none!important;margin:0!important;overscroll-behavior:contain}
+#home .campaign-list{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px!important}
+#home .level-card{min-width:0;padding:8px!important;min-height:55px!important}
+#home #closeLevelLibrary{margin-left:auto;min-height:44px}
+@media(max-height:430px) and (orientation:landscape){#home .hero-copy h1{font-size:19px!important}#home .tags{display:none!important}#home.home-screen{gap:6px!important;padding:6px 16px!important}#home .room-help{display:none!important}#home .room-panel .panel-heading{display:none!important}#home .solo-departure p{font-size:11px!important}}
+@media(max-width:500px){#home .campaign-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+html[data-game-ui="coop"] body.in-game #cornerPanel:not([hidden]){display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:calc(100dvh - 72px);overflow:visible;padding:10px}#cornerPanel .game-brand,#cornerPanel .network-pill{grid-column:1/-1;font-size:11px}#cornerPanel button{min-height:44px;margin:0;padding:6px}
+
+/* The illustration carries the long-screen space; controls retain normal touch sizes. */
+#home .hero-art{display:block!important;order:1;flex:none;width:100%;height:clamp(150px,calc(100dvh - 645px),420px);margin:0!important;border-radius:0!important;image-rendering:pixelated}
+@media(orientation:portrait){#home:has(#soloMode[aria-pressed="true"]) .hero-art{height:clamp(150px,calc(100dvh - 470px),520px)}}
+#home~.home-foot{color:var(--game-muted)}
+html[data-game-ui="coop"] body:not(.in-game) .topbar{opacity:1;pointer-events:auto}
+html[data-game-ui="coop"] .topbar :is(.brand,.brand small,.currency,.currency small,.coin-gem){color:var(--game-muted)}
+html[data-game-ui="coop"] .brand-mark{color:var(--game-muted);border-color:var(--game-line)}
+#home .hero-copy>p{display:block!important;margin:8px 0 0!important;font-size:13px!important;line-height:1.6!important;color:var(--game-muted)!important}
+#home .tags{flex-wrap:wrap;gap:5px!important}
+#home .tags span{font-size:10px!important;padding:4px 6px!important;color:var(--game-muted)!important}
+#home .room-panel :is(label,.room-help,.connection-tag),#home .solo-departure p{color:var(--game-muted)!important}
+#home .room-panel .panel-heading{gap:8px;flex-wrap:wrap}
+#home .join-row>div{display:grid!important;grid-template-columns:minmax(0,1fr) 72px;align-items:stretch}
+#home .join-row label{margin-bottom:6px;font-size:12px!important}
+#home .join-row input{height:48px;min-height:48px}
+#home .join-row input::placeholder{color:var(--game-muted);opacity:1}
+#home #joinRoom{white-space:nowrap;padding:8px!important;width:72px}
+#home #createRoom{min-height:52px!important;padding:12px 16px!important}
+#home .server-settings-button{width:100%;margin:0!important;min-height:44px!important;font-size:14px!important;padding:8px!important}
+#home #chooseLevel{align-self:stretch;text-align:center}
+#home .room-help{line-height:1.5!important}
+#home .play-mode-picker button{min-width:0;line-height:1.4}
+#home .play-mode-picker small{margin-top:4px;color:var(--game-muted)!important;line-height:1.4!important}
+@media(min-width:700px){
+ #home .home-hero{display:grid!important;grid-template-columns:1fr 1fr;align-items:center}
+ #home .hero-copy{order:1}#home .hero-art{order:2;height:clamp(180px,35dvh,350px)}
+ #home .room-panel{grid-template-columns:1fr 1fr}
+ #home .server-settings-button{grid-column:1/-1}
+}
+@media(max-height:500px) and (orientation:landscape){
+ #home.home-screen{width:calc(100% - 24px);padding:8px 0!important}
+ #home .home-hero{display:grid!important;grid-template-columns:1fr 180px}
+ #home .hero-copy{order:1;padding:12px!important}#home .hero-art{order:2;height:116px}
+ #home .hero-copy>p{font-size:12px!important}
+ #home .room-panel{grid-template-columns:1fr 1fr}
+}
+
+/* Short landscape entry: scene and controls share the screen horizontally. */
+@media(orientation:landscape) and (max-height:500px){
+ html[data-game-ui="coop"] body:not(.in-game)>.topbar{min-height:44px;height:44px;padding:5px 20px;margin:0}
+ html[data-game-ui="coop"] #home.home-screen:not(.hidden){display:grid!important;grid-template-columns:minmax(0,.85fr) minmax(0,1.2fr);grid-template-rows:auto auto auto;align-items:start;gap:6px 12px!important;padding:6px 0 10px!important}
+ html[data-game-ui="coop"] #home .home-hero{grid-column:1;grid-row:1/5;display:flex!important;align-self:stretch}
+ html[data-game-ui="coop"] #home .hero-art{order:0;height:auto;min-height:120px;flex:1}
+ html[data-game-ui="coop"] #home .hero-copy{order:1;padding:12px!important}
+ html[data-game-ui="coop"] #home .hero-copy h1{font-size:20px!important}
+ html[data-game-ui="coop"] #home .hero-copy>p{font-size:12px!important;line-height:1.5!important;margin-top:6px!important}
+ html[data-game-ui="coop"] #home .play-mode-picker{grid-column:2;grid-row:1;gap:6px!important}
+ html[data-game-ui="coop"] #home .play-mode-picker button{padding:5px 6px!important;font-size:14px!important}
+ html[data-game-ui="coop"] #home .play-mode-picker small{font-size:11px!important;margin-top:2px}
+ html[data-game-ui="coop"] #home #chooseLevel{grid-column:2;grid-row:2;min-height:44px!important;margin:0!important}
+ html[data-game-ui="coop"] #home .home-columns{grid-column:2;grid-row:3}
+ html[data-game-ui="coop"] #home .room-panel{grid-template-columns:1fr!important;padding:10px!important;gap:6px!important}
+ html[data-game-ui="coop"] #home #createRoom{min-height:44px!important;padding:6px 10px!important}
+ html[data-game-ui="coop"] #home .join-row label{font-size:12px!important;margin-bottom:4px}
+ html[data-game-ui="coop"] #home .join-row input{height:44px;min-height:44px}
+ html[data-game-ui="coop"] #home .server-settings-button{min-height:44px!important;padding:6px!important}
+ html[data-game-ui="coop"] #home .solo-departure{grid-column:2;grid-row:3;align-self:start}
+ html[data-game-ui="coop"] #home .solo-departure p{font-size:12px!important;line-height:1.6!important;padding:8px!important;border:1px solid var(--game-line);border-radius:8px;background:var(--game-panel)}
+}

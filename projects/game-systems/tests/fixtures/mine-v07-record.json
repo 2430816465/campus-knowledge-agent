@@ -1,0 +1,23 @@
+{
+  "_说明": "V0.7 存档样本：含探索档案 archive 与 V0.6 legacy/v2 纪录。V0.6 及更早存档没有 archive 字段时，读取会按空档案兼容（见 tools/headless-test.js ㉑ 节）。",
+  "miningSaveKey": "forgotten-tower.mining.save.v1",
+  "miningSave": {
+    "v": "0.7.0",
+    "miningSave": {
+      "scoreVersion": 2,
+      "v2": { "bestDepth": 41, "bestValue": 512, "totalDigs": 260 },
+      "legacy": { "scoreVersion": 1, "bestDepth": 44, "bestValue": 612, "totalDigs": 138 },
+      "treasureFirstClear": true,
+      "treasureReachCount": 3,
+      "archive": {
+        "rooms": ["spring", "supply", "goldenVein"],
+        "minerals": ["copper", "silver", "gold"],
+        "maxDepth": 41,
+        "treasureReachCount": 3,
+        "runs": 5
+      }
+    }
+  },
+  "metaKey": "forgotten-tower.meta.v1",
+  "meta": { "v": "0.7.0", "metaProgress": { "currency": 27 } }
+}

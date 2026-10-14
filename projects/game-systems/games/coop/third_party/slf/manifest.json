@@ -1,0 +1,588 @@
+{
+  "source": "https://github.com/initials/SuperLemonadeFactoryOUYA",
+  "branch": "master",
+  "date": "2026-10-02",
+  "license": "GPL-3.0",
+  "sourceDirectory": "data/SLF_levelEditor/PC",
+  "scale": 1.4,
+  "normal": 36,
+  "hard": 36,
+  "maps": [
+    {
+      "mode": "normal",
+      "number": 1,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level1.oel",
+      "sha256": "0574f9942bbb1786a39aa1f8a19322a3fb0ba2ae56760a2407e3b8dccd2e9e1c",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 2,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level2.oel",
+      "sha256": "8accf268af8de852722d9d9e562f3cea9c8c3616d12865200571e19c18db9fa2",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 3,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level3.oel",
+      "sha256": "dcd2ed055abce913d9b2ed21e799a9add8cbe0eae2b1a1d2ae8aa6fbeb20d758",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 4,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level4.oel",
+      "sha256": "36aed3d8f56f1b2635175ee73b1e8e4e5a6410652adeef4b0749dcd278bb7444",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 5,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level5.oel",
+      "sha256": "740b066f9c0955421c52ae69d2105ea9b754739cf6117cfddcb73ab365ad4877",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 6,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level6.oel",
+      "sha256": "1aa8567e602eec2bde395cfdea8eddc1adb9e28fd9ce895b520b095c4a573159",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 7,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level7.oel",
+      "sha256": "0ad7ba4d83863f4b5c8ab774796ed1b713834e6d442d1b9b6377dbcce54677e0",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 8,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level8.oel",
+      "sha256": "535e0fc7579ba7f0d81ed4da46d14dc1c4a185562ea32610e6d5d33afcb2fdfb",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 9,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level9.oel",
+      "sha256": "dc64850416e51e291b24087ebc126c14d9303b7dd09bcf573da6c3c9ff0909e0",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 10,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level10.oel",
+      "sha256": "0761f8307e62090311f63af0e31dceb8b44756e119575cdd5dfa23380d9f8667",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 11,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level11.oel",
+      "sha256": "402ec6a43b4ca6f19061864277d0bdbfcb12ab4d673bc3f3efefcdf2d75c0ebb",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 12,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level12.oel",
+      "sha256": "80d2ab9e62b90ec5d104b4f3adf7d72ba0d057f0e0aec7d78a029026081210ac",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 13,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level13.oel",
+      "sha256": "4620d04b1cd76516f63e3fcbe32707041bd1b43c5a435efda879f8340c2c83e3",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 14,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level14.oel",
+      "sha256": "c501ffa4e3dbec10e10e34b3a7ab7cc5d0e2e0e0c35c200ce962384a76e7a1c6",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 15,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level15.oel",
+      "sha256": "5cf6d9983301397605cacc49105a9e39cf39992c7129126dfddbf87a0bd81b56",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 16,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level16.oel",
+      "sha256": "d149828999775b41a534f0d9330f5a8122eaca262937cc58c335d2d090bc4b0f",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 17,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level17.oel",
+      "sha256": "c0d55cfa9930f03e03a454f9a3bf4a7cb1ab817ebd274884938fdb5494e428f8",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 18,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level18.oel",
+      "sha256": "bdf6ac5c7fbb350519ffb8361f0afbbca5494d46f4ced7b335ed3d0e6a13f069",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 19,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level19.oel",
+      "sha256": "417c0e59f5387357605d6f254deeab1037699712d2b5b30d098e7313240d8481",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 20,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level20.oel",
+      "sha256": "029878c5b4fc9fef1decbdaaa51cc4ec6380e8e01304611e5df7f2a7ed26328f",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 21,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level21.oel",
+      "sha256": "9369052d872bb9ca773404afbfbf5b6f79a25d6bd2f8de3ac35575593952e78e",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 22,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level22.oel",
+      "sha256": "924e815b1770a5e3a95577b81c04b5c1e5290fc173fa86255b2d275219f31a01",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 23,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level23.oel",
+      "sha256": "d60a3a88746dc9e32778e5d217650c99b553ef56e75c222bd8259061dde278aa",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 24,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level24.oel",
+      "sha256": "baa88592db745ee9743d959c9385a18dde8f29ea1f49e70c430ce4dbecedcc06",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 25,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level25.oel",
+      "sha256": "e16dfc8edc4c7fb82c9d1169f67c581a7bd4ce00de4e0eb10cc7804ebb8e47b4",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 26,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level26.oel",
+      "sha256": "138c62c07a537b3276ffa9318daeb24f6d4971e85c66408d688de1b088ef15a3",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 27,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level27.oel",
+      "sha256": "4046cd7384670b3c089c0f265877488e3ff7b4970035e1dc4305677b2775a7d8",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 28,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level28.oel",
+      "sha256": "8267e63fa28449646dc297c03088235f4a3fc9db6563de18a3aa498f1218b993",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 29,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level29.oel",
+      "sha256": "f482b56c94f224275b048dffe24456145564f57db74d05302cb1ccb51b045e66",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 30,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level30.oel",
+      "sha256": "b19356cf37dfc90cb7ac5c230ac9b267b21f1a2b6c6f831de3a4a0651fdd12b2",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 31,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level31.oel",
+      "sha256": "9359f48428d4459811336a22dccf793c1c9897576d49f23933495f5797365753",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 32,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level32.oel",
+      "sha256": "953b74a8e41b11ed99c80b17a77432ab6ada5dacce1b9f4dd4ee2a60fcedc102",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 33,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level33.oel",
+      "sha256": "8c9131c57a91435261011d100bf9bbf7122fd194ce61f8375cf4754b6cd51dce",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 34,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level34.oel",
+      "sha256": "05937ac90d301019f86639558e023095c68251bd67286496874a14c8de5ad8ec",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 35,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level35.oel",
+      "sha256": "de3f752973dd430ee0af57df0f25e6603a59ba5bbe5f6e9f378add003e32a63b",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "normal",
+      "number": 36,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "level36.oel",
+      "sha256": "97b14b7f47387c7140ad85d2790a633f339fa233737256a995d6c04160e33d26",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 1,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel1.oel",
+      "sha256": "a6a35307c42bde77770d330f01c1f880b7d4bfa553449564cec2afd4e6c9f5a3",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 2,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel2.oel",
+      "sha256": "3fda10ecc2afb1e7aa72e6f94001779bc576e493eef594e78b037b7583459d87",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 3,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel3.oel",
+      "sha256": "77d6eb2f4ad3ac57ef56a73077ab23c6d165aebd2cc6dd24ab02581a9dabaf71",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 4,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel4.oel",
+      "sha256": "22579d584d5be68032c9b0703831c787641ed16066fbe3c3c8a165aa4c918aa2",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 5,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel5.oel",
+      "sha256": "c606d34fd896e85fa2489a796a6c0da875ec446ed5582aaca48cb58056021a3c",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 6,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel6.oel",
+      "sha256": "b31dbbaceb7b2f8208960b712cbafc893e66a5cb6b09d1039449ce71f6ebc60e",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 7,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel7.oel",
+      "sha256": "9645233125376b1d56be7bf3eb767a5f40e0567445010a17b002574677a1d016",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 8,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel8.oel",
+      "sha256": "3a10f2bad8cdd7dd70607a60775a915593dd3b013c26f692a7f36ff82270bd1b",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 9,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel9.oel",
+      "sha256": "fc77abd1ef0319ccba198e7e28d9c367c4cfb4ecf8d24f08858dd6a0c811d4e5",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 10,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel10.oel",
+      "sha256": "836cde194faa48f6d5dc11344ec2d74345b7e4e04d66aec6b7b5661cc34c0de2",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 11,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel11.oel",
+      "sha256": "45ddfe443d7a2865dbf8dab27dfa49126feb4c5f348612caa67317c7384ccb74",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 12,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel12.oel",
+      "sha256": "f27886c87d664cccf34331fc77449ac63f5af36496022b08c6546315e1acc6f0",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 13,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel13.oel",
+      "sha256": "1a7fc7d14dcde4413857bdbac642ca26f1525bd399f90785a7756ddba02f3dc4",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 14,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel14.oel",
+      "sha256": "5ad569cf08926b6d2c2cf236f361300f550058749985d3e13f9af6ef6124cae7",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 15,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel15.oel",
+      "sha256": "f8d6bf799a75a69fce0f1b8a90cd6afda9dd7e7c9961f1ce4bc26d74bd41d06f",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 16,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel16.oel",
+      "sha256": "e274cbb9ca8ff07dda8e3060916f0a99a50b8fbb758ba9497324f4b0fa0fc20a",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 17,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel17.oel",
+      "sha256": "4f89bb8006916e84ff490f192b5882ea14d946c2d430dde7594008b7e28d8a47",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 18,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel18.oel",
+      "sha256": "62a4adcdbee4481a2894dce754ca87125d9c0c3f8913d95c1b3c34a788a3bb6b",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 19,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel19.oel",
+      "sha256": "6af984da68f639798aacfe087ea23fad4012fa668c4290c834fbd6938bfbb0ef",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 20,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel20.oel",
+      "sha256": "86bdcf818a9d667cd481415ba5f17a8cec0317a0523c8ce87da432818e330bda",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 21,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel21.oel",
+      "sha256": "33d87bd433ac235b2171d13e1a759dfc802bceef41ff889053e6c74aee5b00f0",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 22,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel22.oel",
+      "sha256": "2c5eff15e48ae6d89502dffd70668a58dbe6cbd084f662fbb493cacbbd5636b9",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 23,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel23.oel",
+      "sha256": "6ea0f910e569c1854bad03c1c92051aa185e8cec98c8cadf5348f25a604172b8",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 24,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel24.oel",
+      "sha256": "c741c3503961069d3eb35f83f31d815c36d97670dc1ce174150540dea15ce672",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 25,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel25.oel",
+      "sha256": "378824f5cb4fe7aa731d49d865115751cc14b7d5700675a27d778822cc555266",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 26,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel26.oel",
+      "sha256": "d1324f022cd5a72670a8bd16b7d6357784d5610e7f8c98fc2d2ab5c4bb26d048",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 27,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel27.oel",
+      "sha256": "a3fc0ab58b4bfbe2453c51f9d41417389961a48369ad13e21466897c561e7bcf",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 28,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel28.oel",
+      "sha256": "60156e6aecc683a42deff72a460ec1a61ad480f4d6444b2434a907c7b67a2a18",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 29,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel29.oel",
+      "sha256": "f5d06307c53aae834c25d32a50f46ea4e889bac0d8cc7ed8946f93af8ff6fc49",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 30,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel30.oel",
+      "sha256": "9f0567ca372032efd0072675a66652fd7f120efa65308f51f94ef542711c38fd",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 31,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel31.oel",
+      "sha256": "cd5d1897f50cb5c2456237ae8b15c81dda5242deed248b0574ced48325700c9e",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 32,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel32.oel",
+      "sha256": "da2259a41be6ccdb71e1c02887e11a9f514b265f8048d53962871bab0005f14b",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 33,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel33.oel",
+      "sha256": "516b1c8cd9b87a68aaae979e9565e4fc368d7e1d2045f871d9259f0f10d1d37b",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 34,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel34.oel",
+      "sha256": "c3e43eab39236b824d49838026347ae7e28756b0891b014d31ecc21cfaf5b812",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 35,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel35.oel",
+      "sha256": "7811affa51a457bbd4c5b020af448a0f84d878e5d27530c0069941ca56e8d1a8",
+      "license": "GPL-3.0"
+    },
+    {
+      "mode": "hard",
+      "number": 36,
+      "repo": "initials/SuperLemonadeFactoryOUYA",
+      "path": "hclevel36.oel",
+      "sha256": "dc238c13976dc90dbc9fd47541c205a198b1daa83f6a9df84d7b47204c61fdbc",
+      "license": "GPL-3.0"
+    }
+  ]
+}

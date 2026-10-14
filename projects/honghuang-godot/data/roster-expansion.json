@@ -1,0 +1,3673 @@
+{
+  "version": "v0.4.0",
+  "description": "原创洪荒封神群像扩展，36位角色均有真实原生神通、被动、双分支与法宝效果。",
+  "characters": [
+    {
+      "id": "yuanshi",
+      "name": "元始天尊",
+      "faction": "阐教",
+      "background": "玉虚掌教，以清气统摄万法。",
+      "skillName": "玉清镇岳",
+      "treasure": "三宝玉如意",
+      "color": "#e9dcad",
+      "stars": 5,
+      "rarity": "divine",
+      "hp": 452,
+      "atk": 97,
+      "def": 26,
+      "speed": 90,
+      "attackName": "元始天尊·镇法",
+      "skillDescription": "全敌受到90%攻击伤害；全敌获得破防25%（2回合）；削减全敌3点定力。",
+      "passiveDescription": "轮开始：最低生命比例友方获得6%最大生命护盾。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：移除全敌1项普通增益。",
+        "专精B：全队获得10%最大生命护盾。"
+      ],
+      "treasureEffect": "一段：神通额外削减全敌1层蓄势。",
+      "fx": "expansion-yuanshi",
+      "portraitIndex": 14,
+      "portraitPath": "res://assets/portraits/yuanshi-premium.webp",
+      "avatarPath": "res://assets/avatars/yuanshi-premium.webp",
+      "visualBrief": "白金玉冠、白袍、玉如意、太极清光",
+      "combatRole": "control",
+      "skill": {
+        "target": "allEnemies",
+        "multiplier": 0.9,
+        "cooldown": 3,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:yuanshi",
+        "fx": "expansion-yuanshi",
+        "shape": "玉清镇岳独立法形",
+        "trajectory": "白金玉冠、白袍、玉如意、太极清光",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "damage",
+            "power": 0.9,
+            "target": "enemies"
+          },
+          {
+            "op": "status",
+            "status": "defDown",
+            "power": 0.25,
+            "target": "enemies",
+            "turns": 2
+          },
+          {
+            "op": "reduceWill",
+            "power": 3,
+            "target": "enemies"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "stripBuff",
+            "power": 1,
+            "target": "enemies"
+          }
+        ],
+        "branchB": [
+          {
+            "op": "shield",
+            "power": 0.1,
+            "target": "allies",
+            "scale": "maxHp"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "reduceCharge",
+            "power": 1,
+            "target": "enemies"
+          }
+        ],
+        "passive": {
+          "trigger": "roundStart",
+          "effects": [
+            {
+              "op": "shield",
+              "power": 0.06,
+              "target": "allyLowest",
+              "scale": "maxHp"
+            }
+          ],
+          "condition": "",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "taishang",
+      "name": "太上老君",
+      "faction": "人教",
+      "background": "炼丹养性，将阴阳调息化作护生之道。",
+      "skillName": "太清返元",
+      "treasure": "紫金八卦炉",
+      "color": "#a5bac4",
+      "stars": 5,
+      "rarity": "divine",
+      "hp": 487,
+      "atk": 87,
+      "def": 26,
+      "speed": 91,
+      "attackName": "太上老君·清击",
+      "skillDescription": "为全队恢复120%攻击生命；净化全队1项减益；全队获得持续恢复30%（2回合），数值以施法者攻击计算。",
+      "passiveDescription": "正常行动结束且本次使用神通：自身获得战令15%（2回合）。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：全队获得持续恢复60%（2回合），数值以施法者攻击计算。",
+        "专精B：全敌获得灼烧25%（2回合），数值以施法者攻击计算。"
+      ],
+      "treasureEffect": "一段：神通额外全队获得8%最大生命护盾。",
+      "fx": "expansion-taishang",
+      "portraitIndex": 15,
+      "portraitPath": "res://assets/portraits/taishang-premium.webp",
+      "avatarPath": "res://assets/avatars/taishang-premium.webp",
+      "visualBrief": "白发青袍、拂尘、小型丹炉、紫气",
+      "combatRole": "healer",
+      "skill": {
+        "target": "allAllies",
+        "multiplier": 1,
+        "cooldown": 3,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:taishang",
+        "fx": "expansion-taishang",
+        "shape": "太清返元独立法形",
+        "trajectory": "白发青袍、拂尘、小型丹炉、紫气",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "heal",
+            "power": 1.2,
+            "target": "allies",
+            "scale": "atk"
+          },
+          {
+            "op": "cleanse",
+            "power": 1,
+            "target": "allies"
+          },
+          {
+            "op": "status",
+            "status": "regen",
+            "power": 0.3,
+            "target": "allies",
+            "turns": 2,
+            "scale": "atk"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "status",
+            "status": "regen",
+            "power": 0.6,
+            "target": "allies",
+            "turns": 2,
+            "scale": "atk"
+          }
+        ],
+        "branchB": [
+          {
+            "op": "status",
+            "status": "burn",
+            "power": 0.25,
+            "target": "enemies",
+            "turns": 2,
+            "scale": "atk"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "shield",
+            "power": 0.08,
+            "target": "allies",
+            "scale": "maxHp"
+          }
+        ],
+        "passive": {
+          "trigger": "onActionEnd",
+          "effects": [
+            {
+              "op": "status",
+              "status": "atkUp",
+              "power": 0.15,
+              "target": "self",
+              "turns": 2
+            }
+          ],
+          "condition": "skillOnly",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "nvwa",
+      "name": "女娲",
+      "faction": "上古",
+      "background": "以五色补天之意修复众生伤痕。",
+      "skillName": "五彩补天",
+      "treasure": "补天石",
+      "color": "#b2d5b8",
+      "stars": 5,
+      "rarity": "divine",
+      "hp": 487,
+      "atk": 87,
+      "def": 26,
+      "speed": 92,
+      "attackName": "女娲·清击",
+      "skillDescription": "为全队恢复160%攻击生命；全队获得12%最大生命护盾。",
+      "passiveDescription": "友方受到直接伤害后且有存活友方低于半血：最低生命比例友方获得8%最大生命护盾。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：净化全队2项减益。",
+        "专精B：全队获得减伤18%（2回合）。"
+      ],
+      "treasureEffect": "一段：神通额外全队获得持续恢复25%（2回合），数值以施法者攻击计算。",
+      "fx": "expansion-nvwa",
+      "portraitIndex": 16,
+      "portraitPath": "res://assets/portraits/nvwa-premium.webp",
+      "avatarPath": "res://assets/avatars/nvwa-premium.webp",
+      "visualBrief": "碧金仙衣、五彩灵石、慈和庄严",
+      "combatRole": "healer",
+      "skill": {
+        "target": "allAllies",
+        "multiplier": 1,
+        "cooldown": 3,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:nvwa",
+        "fx": "expansion-nvwa",
+        "shape": "五彩补天独立法形",
+        "trajectory": "碧金仙衣、五彩灵石、慈和庄严",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "heal",
+            "power": 1.6,
+            "target": "allies",
+            "scale": "atk"
+          },
+          {
+            "op": "shield",
+            "power": 0.12,
+            "target": "allies",
+            "scale": "maxHp"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "cleanse",
+            "power": 2,
+            "target": "allies"
+          }
+        ],
+        "branchB": [
+          {
+            "op": "status",
+            "status": "guard",
+            "power": 0.18,
+            "target": "allies",
+            "turns": 2
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "status",
+            "status": "regen",
+            "power": 0.25,
+            "target": "allies",
+            "turns": 2,
+            "scale": "atk"
+          }
+        ],
+        "passive": {
+          "trigger": "onAllyDamaged",
+          "effects": [
+            {
+              "op": "shield",
+              "power": 0.08,
+              "target": "allyLowest",
+              "scale": "maxHp"
+            }
+          ],
+          "condition": "allyLow",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "jieyin",
+      "name": "接引道人",
+      "faction": "西方",
+      "background": "于金莲清光中收束纷争，护持同道。",
+      "skillName": "莲台接引",
+      "treasure": "接引宝幢",
+      "color": "#e4ca8b",
+      "stars": 5,
+      "rarity": "divine",
+      "hp": 487,
+      "atk": 87,
+      "def": 26,
+      "speed": 93,
+      "attackName": "接引道人·灵击",
+      "skillDescription": "全队获得减伤22%（2回合）；全队获得持续恢复40%（2回合），数值以施法者攻击计算。",
+      "passiveDescription": "正常行动结束且本次使用神通：为最低生命比例友方恢复45%攻击生命。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：全队获得12%最大生命护盾。",
+        "专精B：全敌获得攻击削弱15%（2回合）。"
+      ],
+      "treasureEffect": "一段：神通额外净化全队1项减益。",
+      "fx": "expansion-jieyin",
+      "portraitIndex": 17,
+      "portraitPath": "res://assets/portraits/jieyin-premium.webp",
+      "avatarPath": "res://assets/avatars/jieyin-premium.webp",
+      "visualBrief": "金莲素袍、宝幢、莲台清光",
+      "combatRole": "support",
+      "skill": {
+        "target": "allAllies",
+        "multiplier": 1,
+        "cooldown": 3,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:jieyin",
+        "fx": "expansion-jieyin",
+        "shape": "莲台接引独立法形",
+        "trajectory": "金莲素袍、宝幢、莲台清光",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "status",
+            "status": "guard",
+            "power": 0.22,
+            "target": "allies",
+            "turns": 2
+          },
+          {
+            "op": "status",
+            "status": "regen",
+            "power": 0.4,
+            "target": "allies",
+            "turns": 2,
+            "scale": "atk"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "shield",
+            "power": 0.12,
+            "target": "allies",
+            "scale": "maxHp"
+          }
+        ],
+        "branchB": [
+          {
+            "op": "status",
+            "status": "weakened",
+            "power": 0.15,
+            "target": "enemies",
+            "turns": 2
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "cleanse",
+            "power": 1,
+            "target": "allies"
+          }
+        ],
+        "passive": {
+          "trigger": "onActionEnd",
+          "effects": [
+            {
+              "op": "heal",
+              "power": 0.45,
+              "target": "allyLowest",
+              "scale": "atk"
+            }
+          ],
+          "condition": "skillOnly",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "zhunti",
+      "name": "准提道人",
+      "faction": "西方",
+      "background": "七宝妙树拂去杂念与法障。",
+      "skillName": "七宝拂尘",
+      "treasure": "七宝妙树",
+      "color": "#adc388",
+      "stars": 5,
+      "rarity": "divine",
+      "hp": 452,
+      "atk": 97,
+      "def": 26,
+      "speed": 94,
+      "attackName": "准提道人·镇法",
+      "skillDescription": "移除全敌1项普通增益；全敌受到95%攻击伤害。",
+      "passiveDescription": "正常直接命中后：自身获得5%最大生命护盾。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：最低生命比例敌人受到牵制1次行动（首领免疫）。",
+        "专精B：全敌获得破防20%（2回合）。"
+      ],
+      "treasureEffect": "一段：神通额外削去全敌30%当前护盾。",
+      "fx": "expansion-zhunti",
+      "portraitIndex": 18,
+      "portraitPath": "res://assets/portraits/zhunti-premium.webp",
+      "avatarPath": "res://assets/avatars/zhunti-premium.webp",
+      "visualBrief": "绿金法袍、七宝妙树、圆形佛光",
+      "combatRole": "control",
+      "skill": {
+        "target": "allEnemies",
+        "multiplier": 0.95,
+        "cooldown": 3,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:zhunti",
+        "fx": "expansion-zhunti",
+        "shape": "七宝拂尘独立法形",
+        "trajectory": "绿金法袍、七宝妙树、圆形佛光",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "stripBuff",
+            "power": 1,
+            "target": "enemies"
+          },
+          {
+            "op": "damage",
+            "power": 0.95,
+            "target": "enemies"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "status",
+            "status": "stun",
+            "power": 1,
+            "turns": 1,
+            "target": "enemyLowest",
+            "nonBossOnly": true
+          }
+        ],
+        "branchB": [
+          {
+            "op": "status",
+            "status": "defDown",
+            "power": 0.2,
+            "target": "enemies",
+            "turns": 2
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "removeShield",
+            "power": 0.3,
+            "target": "enemies"
+          }
+        ],
+        "passive": {
+          "trigger": "onHit",
+          "effects": [
+            {
+              "op": "shield",
+              "power": 0.05,
+              "target": "self",
+              "scale": "maxHp"
+            }
+          ],
+          "condition": "",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "kongxuan",
+      "name": "孔宣",
+      "faction": "人间",
+      "background": "朝歌（商庭） · 五色神光映照阵前，破除法宝重护。",
+      "skillName": "五色归光",
+      "treasure": "孔雀翎",
+      "color": "#77bca8",
+      "stars": 5,
+      "rarity": "divine",
+      "hp": 452,
+      "atk": 114,
+      "def": 26,
+      "speed": 96,
+      "attackName": "孔宣·断锋",
+      "skillDescription": "削去全敌25%当前护盾；全敌受到120%攻击伤害。",
+      "passiveDescription": "正常行动击倒后：全队获得疾行10%（2回合）。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：全敌获得攻击削弱20%（2回合）。",
+        "专精B：敌方后排受到50%攻击伤害。"
+      ],
+      "treasureEffect": "一段：神通额外全敌获得破防18%（2回合）。",
+      "fx": "expansion-kongxuan",
+      "portraitIndex": 19,
+      "portraitPath": "res://assets/portraits/kongxuan-premium.webp",
+      "avatarPath": "res://assets/avatars/kongxuan-premium.webp",
+      "visualBrief": "孔雀羽披、五色神光、长枪",
+      "combatRole": "striker",
+      "skill": {
+        "target": "allEnemies",
+        "multiplier": 1.2,
+        "cooldown": 3,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:kongxuan",
+        "fx": "expansion-kongxuan",
+        "shape": "五色归光独立法形",
+        "trajectory": "孔雀羽披、五色神光、长枪",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "removeShield",
+            "power": 0.25,
+            "target": "enemies"
+          },
+          {
+            "op": "damage",
+            "power": 1.2,
+            "target": "enemies"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "status",
+            "status": "weakened",
+            "power": 0.2,
+            "target": "enemies",
+            "turns": 2
+          }
+        ],
+        "branchB": [
+          {
+            "op": "damage",
+            "power": 0.5,
+            "target": "enemyBack"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "status",
+            "status": "defDown",
+            "power": 0.18,
+            "target": "enemies",
+            "turns": 2
+          }
+        ],
+        "passive": {
+          "trigger": "onKill",
+          "effects": [
+            {
+              "op": "status",
+              "status": "haste",
+              "power": 0.1,
+              "target": "allies",
+              "turns": 2
+            }
+          ],
+          "condition": "",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "randeng",
+      "name": "燃灯道人",
+      "faction": "阐教",
+      "background": "灵鹫灯火照见生灭，借残焰续战。",
+      "skillName": "琉璃引魂",
+      "treasure": "琉璃灯",
+      "color": "#91a7d4",
+      "stars": 5,
+      "rarity": "divine",
+      "hp": 452,
+      "atk": 97,
+      "def": 26,
+      "speed": 91,
+      "attackName": "燃灯道人·焰击",
+      "skillDescription": "选定目标受到150%攻击伤害；选定目标获得灼烧30%（2回合），数值以施法者攻击计算；为最低生命比例友方恢复50%攻击生命。",
+      "passiveDescription": "正常行动击倒后：为自身恢复50%攻击生命。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：选定目标获得攻击削弱20%（2回合）。",
+        "专精B：为全队恢复60%攻击生命。"
+      ],
+      "treasureEffect": "一段：神通额外削去选定目标35%当前护盾。",
+      "fx": "expansion-randeng",
+      "portraitIndex": 20,
+      "portraitPath": "res://assets/portraits/randeng-premium.webp",
+      "avatarPath": "res://assets/avatars/randeng-premium.webp",
+      "visualBrief": "玄金道袍、琉璃灯、幽蓝灵火",
+      "combatRole": "sustain",
+      "skill": {
+        "target": "enemyAny",
+        "multiplier": 1.5,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:randeng",
+        "fx": "expansion-randeng",
+        "shape": "琉璃引魂独立法形",
+        "trajectory": "玄金道袍、琉璃灯、幽蓝灵火",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "damage",
+            "power": 1.5,
+            "target": "selected"
+          },
+          {
+            "op": "status",
+            "status": "burn",
+            "power": 0.3,
+            "target": "selected",
+            "turns": 2,
+            "scale": "atk"
+          },
+          {
+            "op": "heal",
+            "power": 0.5,
+            "target": "allyLowest",
+            "scale": "atk"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "status",
+            "status": "weakened",
+            "power": 0.2,
+            "target": "selected",
+            "turns": 2
+          }
+        ],
+        "branchB": [
+          {
+            "op": "heal",
+            "power": 0.6,
+            "target": "allies",
+            "scale": "atk"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "removeShield",
+            "power": 0.35,
+            "target": "selected"
+          }
+        ],
+        "passive": {
+          "trigger": "onKill",
+          "effects": [
+            {
+              "op": "heal",
+              "power": 0.5,
+              "target": "self",
+              "scale": "atk"
+            }
+          ],
+          "condition": "",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "luya",
+      "name": "陆压",
+      "faction": "散仙",
+      "background": "离火飞虹来去无踪，葫芦中藏凌厉锋芒。",
+      "skillName": "离火飞刀",
+      "treasure": "斩仙葫芦",
+      "color": "#e7b675",
+      "stars": 5,
+      "rarity": "divine",
+      "hp": 452,
+      "atk": 114,
+      "def": 26,
+      "speed": 98,
+      "attackName": "陆压·断锋",
+      "skillDescription": "选定目标获得锁定15%（2回合）；选定目标受到230%攻击伤害。",
+      "passiveDescription": "正常直接命中后且目标被锁定：自身获得疾行12%（2回合）。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：目标生命低于一半时，选定目标受到65%攻击伤害。",
+        "专精B：选定目标获得灼烧45%（2回合），数值以施法者攻击计算。"
+      ],
+      "treasureEffect": "一段：神通额外削去选定目标50%当前护盾。",
+      "fx": "expansion-luya",
+      "portraitIndex": 21,
+      "portraitPath": "res://assets/portraits/luya-premium.webp",
+      "avatarPath": "res://assets/avatars/luya-premium.webp",
+      "visualBrief": "赤金羽冠、葫芦、白色刃焰",
+      "combatRole": "striker",
+      "skill": {
+        "target": "enemyAny",
+        "multiplier": 2.3,
+        "cooldown": 3,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:luya",
+        "fx": "expansion-luya",
+        "shape": "离火飞刀独立法形",
+        "trajectory": "赤金羽冠、葫芦、白色刃焰",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "status",
+            "status": "mark",
+            "power": 0.15,
+            "target": "selected",
+            "turns": 2
+          },
+          {
+            "op": "damage",
+            "power": 2.3,
+            "target": "selected"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "damage",
+            "power": 0.65,
+            "target": "selected",
+            "condition": "targetLow"
+          }
+        ],
+        "branchB": [
+          {
+            "op": "status",
+            "status": "burn",
+            "power": 0.45,
+            "target": "selected",
+            "turns": 2,
+            "scale": "atk"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "removeShield",
+            "power": 0.5,
+            "target": "selected"
+          }
+        ],
+        "passive": {
+          "trigger": "onHit",
+          "effects": [
+            {
+              "op": "status",
+              "status": "haste",
+              "power": 0.12,
+              "target": "self",
+              "turns": 2
+            }
+          ],
+          "condition": "targetMarked",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "duobao",
+      "name": "多宝道人",
+      "faction": "截教",
+      "background": "随身百宝各尽其用，以攻守交替支援同门。",
+      "skillName": "百宝轮转",
+      "treasure": "多宝匣",
+      "color": "#b1a1d4",
+      "stars": 5,
+      "rarity": "divine",
+      "hp": 487,
+      "atk": 87,
+      "def": 26,
+      "speed": 93,
+      "attackName": "多宝道人·灵击",
+      "skillDescription": "选定目标受到125%攻击伤害；全队获得14%最大生命护盾；自身获得战令10%（2回合）。",
+      "passiveDescription": "正常行动结束且本次为普攻：最低生命比例友方获得5%最大生命护盾。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：削去选定目标45%当前护盾。",
+        "专精B：净化全队1项减益。"
+      ],
+      "treasureEffect": "一段：神通额外最低生命比例友方获得8%最大生命护盾。",
+      "fx": "expansion-duobao",
+      "portraitIndex": 22,
+      "portraitPath": "res://assets/portraits/duobao-premium.webp",
+      "avatarPath": "res://assets/avatars/duobao-premium.webp",
+      "visualBrief": "紫金法衣、浮空法宝环、宝匣",
+      "combatRole": "support",
+      "skill": {
+        "target": "enemyAny",
+        "multiplier": 1.25,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:duobao",
+        "fx": "expansion-duobao",
+        "shape": "百宝轮转独立法形",
+        "trajectory": "紫金法衣、浮空法宝环、宝匣",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "damage",
+            "power": 1.25,
+            "target": "selected"
+          },
+          {
+            "op": "shield",
+            "power": 0.14,
+            "target": "allies",
+            "scale": "maxHp"
+          },
+          {
+            "op": "status",
+            "status": "atkUp",
+            "power": 0.1,
+            "target": "self",
+            "turns": 2
+          }
+        ],
+        "branchA": [
+          {
+            "op": "removeShield",
+            "power": 0.45,
+            "target": "selected"
+          }
+        ],
+        "branchB": [
+          {
+            "op": "cleanse",
+            "power": 1,
+            "target": "allies"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "shield",
+            "power": 0.08,
+            "target": "allyLowest",
+            "scale": "maxHp"
+          }
+        ],
+        "passive": {
+          "trigger": "onActionEnd",
+          "effects": [
+            {
+              "op": "shield",
+              "power": 0.05,
+              "target": "allyLowest",
+              "scale": "maxHp"
+            }
+          ],
+          "condition": "attackOnly",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "jinling",
+      "name": "金灵圣母",
+      "faction": "截教",
+      "background": "斗府清辉凝于双刃，以刚锐剑意断敌攻势。",
+      "skillName": "龙虎星裁",
+      "treasure": "龙虎如意",
+      "color": "#e4d3a3",
+      "stars": 5,
+      "rarity": "divine",
+      "hp": 452,
+      "atk": 114,
+      "def": 26,
+      "speed": 100,
+      "attackName": "金灵圣母·断锋",
+      "skillDescription": "选定目标受到190%攻击伤害；削减选定目标2点定力。",
+      "passiveDescription": "正常直接命中后且目标有减益：选定目标受到35%攻击伤害。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：选定目标获得破防30%（2回合）。",
+        "专精B：敌方后排受到65%攻击伤害。"
+      ],
+      "treasureEffect": "一段：神通额外削减选定目标1层蓄势。",
+      "fx": "expansion-jinling",
+      "portraitIndex": 23,
+      "portraitPath": "res://assets/portraits/jinling-premium.webp",
+      "avatarPath": "res://assets/avatars/jinling-premium.webp",
+      "visualBrief": "金白冠饰、龙虎如意、星芒剑气",
+      "combatRole": "striker",
+      "skill": {
+        "target": "enemyAny",
+        "multiplier": 1.9,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:jinling",
+        "fx": "expansion-jinling",
+        "shape": "龙虎星裁独立法形",
+        "trajectory": "金白冠饰、龙虎如意、星芒剑气",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "damage",
+            "power": 1.9,
+            "target": "selected"
+          },
+          {
+            "op": "reduceWill",
+            "power": 2,
+            "target": "selected"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "status",
+            "status": "defDown",
+            "power": 0.3,
+            "target": "selected",
+            "turns": 2
+          }
+        ],
+        "branchB": [
+          {
+            "op": "damage",
+            "power": 0.65,
+            "target": "enemyBack"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "reduceCharge",
+            "power": 1,
+            "target": "selected"
+          }
+        ],
+        "passive": {
+          "trigger": "onHit",
+          "effects": [
+            {
+              "op": "damage",
+              "power": 0.35,
+              "target": "selected"
+            }
+          ],
+          "condition": "targetDebuffed",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "guangchengzi",
+      "name": "广成子",
+      "faction": "阐教",
+      "background": "崆峒修道，翻天一印可破前阵重甲。",
+      "skillName": "番天覆岳",
+      "treasure": "番天印",
+      "color": "#d6a178",
+      "stars": 4,
+      "rarity": "immortal",
+      "hp": 421,
+      "atk": 106,
+      "def": 24,
+      "speed": 90,
+      "attackName": "广成子·碎甲",
+      "skillDescription": "削去选定目标50%当前护盾；选定目标受到180%攻击伤害；削减选定目标2点定力。",
+      "passiveDescription": "正常行动结束且本次使用神通：自身获得7%最大生命护盾。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：选定目标受到牵制1次行动（首领免疫）。",
+        "专精B：敌方前排获得破防25%（2回合）。"
+      ],
+      "treasureEffect": "一段：神通额外选定目标受到35%攻击伤害。",
+      "fx": "expansion-guangchengzi",
+      "portraitIndex": 24,
+      "portraitPath": "res://assets/portraits/guangchengzi-premium.webp",
+      "avatarPath": "res://assets/avatars/guangchengzi-premium.webp",
+      "visualBrief": "赤白道袍、巨大方印、山纹",
+      "combatRole": "breaker",
+      "skill": {
+        "target": "enemyFront",
+        "multiplier": 1.8,
+        "cooldown": 3,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:guangchengzi",
+        "fx": "expansion-guangchengzi",
+        "shape": "番天覆岳独立法形",
+        "trajectory": "赤白道袍、巨大方印、山纹",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "removeShield",
+            "power": 0.5,
+            "target": "selected"
+          },
+          {
+            "op": "damage",
+            "power": 1.8,
+            "target": "selected"
+          },
+          {
+            "op": "reduceWill",
+            "power": 2,
+            "target": "selected"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "status",
+            "status": "stun",
+            "power": 1,
+            "turns": 1,
+            "target": "selected",
+            "nonBossOnly": true
+          }
+        ],
+        "branchB": [
+          {
+            "op": "status",
+            "status": "defDown",
+            "power": 0.25,
+            "target": "enemyFront",
+            "turns": 2
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "damage",
+            "power": 0.35,
+            "target": "selected"
+          }
+        ],
+        "passive": {
+          "trigger": "onActionEnd",
+          "effects": [
+            {
+              "op": "shield",
+              "power": 0.07,
+              "target": "self",
+              "scale": "maxHp"
+            }
+          ],
+          "condition": "skillOnly",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "chijingzi",
+      "name": "赤精子",
+      "faction": "阐教",
+      "background": "阴阳镜照分明，既克敌法亦保同道。",
+      "skillName": "阴阳照鉴",
+      "treasure": "阴阳镜",
+      "color": "#bd8075",
+      "stars": 4,
+      "rarity": "immortal",
+      "hp": 421,
+      "atk": 91,
+      "def": 24,
+      "speed": 91,
+      "attackName": "赤精子·镇法",
+      "skillDescription": "移除选定目标1项普通增益；选定目标受到145%攻击伤害；选定目标获得攻击削弱20%（2回合）。",
+      "passiveDescription": "受到直接伤害后：选定目标获得攻击削弱10%（2回合）。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：选定目标获得破防20%（2回合）。",
+        "专精B：为最低生命比例友方恢复80%攻击生命。"
+      ],
+      "treasureEffect": "一段：神通额外削减选定目标1层蓄势。",
+      "fx": "expansion-chijingzi",
+      "portraitIndex": 25,
+      "portraitPath": "res://assets/portraits/chijingzi-premium.webp",
+      "avatarPath": "res://assets/avatars/chijingzi-premium.webp",
+      "visualBrief": "赭红长袍、黑白阴阳镜、铜光",
+      "combatRole": "control",
+      "skill": {
+        "target": "enemyAny",
+        "multiplier": 1.45,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:chijingzi",
+        "fx": "expansion-chijingzi",
+        "shape": "阴阳照鉴独立法形",
+        "trajectory": "赭红长袍、黑白阴阳镜、铜光",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "stripBuff",
+            "power": 1,
+            "target": "selected"
+          },
+          {
+            "op": "damage",
+            "power": 1.45,
+            "target": "selected"
+          },
+          {
+            "op": "status",
+            "status": "weakened",
+            "power": 0.2,
+            "target": "selected",
+            "turns": 2
+          }
+        ],
+        "branchA": [
+          {
+            "op": "status",
+            "status": "defDown",
+            "power": 0.2,
+            "target": "selected",
+            "turns": 2
+          }
+        ],
+        "branchB": [
+          {
+            "op": "heal",
+            "power": 0.8,
+            "target": "allyLowest",
+            "scale": "atk"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "reduceCharge",
+            "power": 1,
+            "target": "selected"
+          }
+        ],
+        "passive": {
+          "trigger": "onDamaged",
+          "effects": [
+            {
+              "op": "status",
+              "status": "weakened",
+              "power": 0.1,
+              "target": "selected",
+              "turns": 2
+            }
+          ],
+          "condition": "",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "yuding",
+      "name": "玉鼎真人",
+      "faction": "阐教",
+      "background": "专注剑道传承，一剑先破虚妄再斩坚甲。",
+      "skillName": "玉鼎问剑",
+      "treasure": "斩仙剑",
+      "color": "#9bc1b1",
+      "stars": 4,
+      "rarity": "immortal",
+      "hp": 421,
+      "atk": 106,
+      "def": 24,
+      "speed": 98,
+      "attackName": "玉鼎真人·断锋",
+      "skillDescription": "选定目标获得锁定15%（2回合）；选定目标受到165%攻击伤害。",
+      "passiveDescription": "正常直接命中后且目标被锁定：最低生命比例友方获得4%最大生命护盾。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：选定目标受到50%攻击伤害。",
+        "专精B：敌方后排获得破防22%（2回合）。"
+      ],
+      "treasureEffect": "一段：神通额外自身获得战令18%（2回合）。",
+      "fx": "expansion-yuding",
+      "portraitIndex": 26,
+      "portraitPath": "res://assets/portraits/yuding-premium.webp",
+      "avatarPath": "res://assets/avatars/yuding-premium.webp",
+      "visualBrief": "青玉道衣、长剑、清光玉环",
+      "combatRole": "striker",
+      "skill": {
+        "target": "enemyAny",
+        "multiplier": 1.65,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:yuding",
+        "fx": "expansion-yuding",
+        "shape": "玉鼎问剑独立法形",
+        "trajectory": "青玉道衣、长剑、清光玉环",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "status",
+            "status": "mark",
+            "power": 0.15,
+            "target": "selected",
+            "turns": 2
+          },
+          {
+            "op": "damage",
+            "power": 1.65,
+            "target": "selected"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "damage",
+            "power": 0.5,
+            "target": "selected"
+          }
+        ],
+        "branchB": [
+          {
+            "op": "status",
+            "status": "defDown",
+            "power": 0.22,
+            "target": "enemyBack",
+            "turns": 2
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "status",
+            "status": "atkUp",
+            "power": 0.18,
+            "target": "self",
+            "turns": 2
+          }
+        ],
+        "passive": {
+          "trigger": "onHit",
+          "effects": [
+            {
+              "op": "shield",
+              "power": 0.04,
+              "target": "allyLowest",
+              "scale": "maxHp"
+            }
+          ],
+          "condition": "targetMarked",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "wenshu",
+      "name": "文殊广法天尊",
+      "faction": "阐教",
+      "background": "阵桩成圈，善以困敌换取全队调整之机。",
+      "skillName": "遁龙锁阵",
+      "treasure": "遁龙桩",
+      "color": "#909abf",
+      "stars": 4,
+      "rarity": "immortal",
+      "hp": 421,
+      "atk": 91,
+      "def": 24,
+      "speed": 93,
+      "attackName": "文殊广法天尊·镇法",
+      "skillDescription": "选定目标受到115%攻击伤害；选定目标受到牵制1次行动（首领免疫）；削减选定目标3点定力。",
+      "passiveDescription": "轮开始：最低生命比例友方获得减伤12%（1回合）。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：削减全敌1层蓄势。",
+        "专精B：全敌获得攻击削弱18%（2回合）。"
+      ],
+      "treasureEffect": "一段：神通额外全队获得10%最大生命护盾。",
+      "fx": "expansion-wenshu",
+      "portraitIndex": 27,
+      "portraitPath": "res://assets/portraits/wenshu-premium.webp",
+      "avatarPath": "res://assets/avatars/wenshu-premium.webp",
+      "visualBrief": "靛金道袍、三环遁龙桩、金绳",
+      "combatRole": "control",
+      "skill": {
+        "target": "enemyAny",
+        "multiplier": 1.15,
+        "cooldown": 3,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:wenshu",
+        "fx": "expansion-wenshu",
+        "shape": "遁龙锁阵独立法形",
+        "trajectory": "靛金道袍、三环遁龙桩、金绳",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "damage",
+            "power": 1.15,
+            "target": "selected"
+          },
+          {
+            "op": "status",
+            "status": "stun",
+            "power": 1,
+            "turns": 1,
+            "target": "selected",
+            "nonBossOnly": true
+          },
+          {
+            "op": "reduceWill",
+            "power": 3,
+            "target": "selected"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "reduceCharge",
+            "power": 1,
+            "target": "enemies"
+          }
+        ],
+        "branchB": [
+          {
+            "op": "status",
+            "status": "weakened",
+            "power": 0.18,
+            "target": "enemies",
+            "turns": 2
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "shield",
+            "power": 0.1,
+            "target": "allies",
+            "scale": "maxHp"
+          }
+        ],
+        "passive": {
+          "trigger": "roundStart",
+          "effects": [
+            {
+              "op": "status",
+              "status": "guard",
+              "power": 0.12,
+              "target": "allyLowest",
+              "turns": 1
+            }
+          ],
+          "condition": "",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "puxian",
+      "name": "普贤真人",
+      "faction": "阐教",
+      "background": "吴钩双剑相随，切断敌阵后排的支援。",
+      "skillName": "吴钩分影",
+      "treasure": "吴钩双剑",
+      "color": "#b8add1",
+      "stars": 4,
+      "rarity": "immortal",
+      "hp": 421,
+      "atk": 106,
+      "def": 24,
+      "speed": 100,
+      "attackName": "普贤真人·断锋",
+      "skillDescription": "选定目标受到110%攻击伤害；敌方后排受到55%攻击伤害。",
+      "passiveDescription": "正常行动击倒后：全队获得战令15%（2回合）。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：选定目标获得破防24%（2回合）。",
+        "专精B：敌方前排受到40%攻击伤害。"
+      ],
+      "treasureEffect": "一段：神通额外削去敌方后排30%当前护盾。",
+      "fx": "expansion-puxian",
+      "portraitIndex": 28,
+      "portraitPath": "res://assets/portraits/puxian-premium.webp",
+      "avatarPath": "res://assets/avatars/puxian-premium.webp",
+      "visualBrief": "白紫仙衣、吴钩双剑、交错剑弧",
+      "combatRole": "striker",
+      "skill": {
+        "target": "enemyAny",
+        "multiplier": 1.1,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:puxian",
+        "fx": "expansion-puxian",
+        "shape": "吴钩分影独立法形",
+        "trajectory": "白紫仙衣、吴钩双剑、交错剑弧",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "damage",
+            "power": 1.1,
+            "target": "selected"
+          },
+          {
+            "op": "damage",
+            "power": 0.55,
+            "target": "enemyBack"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "status",
+            "status": "defDown",
+            "power": 0.24,
+            "target": "selected",
+            "turns": 2
+          }
+        ],
+        "branchB": [
+          {
+            "op": "damage",
+            "power": 0.4,
+            "target": "enemyFront"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "removeShield",
+            "power": 0.3,
+            "target": "enemyBack"
+          }
+        ],
+        "passive": {
+          "trigger": "onKill",
+          "effects": [
+            {
+              "op": "status",
+              "status": "atkUp",
+              "power": 0.15,
+              "target": "allies",
+              "turns": 2
+            }
+          ],
+          "condition": "",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "cihang",
+      "name": "慈航道人",
+      "faction": "阐教",
+      "background": "净瓶杨柳拂去灼痛，以甘露护持前行。",
+      "skillName": "甘露净尘",
+      "treasure": "清净琉璃瓶",
+      "color": "#b5d5cf",
+      "stars": 4,
+      "rarity": "immortal",
+      "hp": 454,
+      "atk": 81,
+      "def": 24,
+      "speed": 90,
+      "attackName": "慈航道人·清击",
+      "skillDescription": "净化全队2项减益；为全队恢复105%攻击生命。",
+      "passiveDescription": "友方受到直接伤害后且有友方减益：为最低生命比例友方恢复25%攻击生命。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：最低生命比例友方获得12%最大生命护盾。",
+        "专精B：全队获得持续恢复35%（2回合），数值以施法者攻击计算。"
+      ],
+      "treasureEffect": "一段：神通额外全队获得减伤12%（2回合）。",
+      "fx": "expansion-cihang",
+      "portraitIndex": 29,
+      "portraitPath": "res://assets/portraits/cihang-premium.webp",
+      "avatarPath": "res://assets/avatars/cihang-premium.webp",
+      "visualBrief": "白青纱衣、净瓶、柳枝、水珠",
+      "combatRole": "healer",
+      "skill": {
+        "target": "allAllies",
+        "multiplier": 1,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:cihang",
+        "fx": "expansion-cihang",
+        "shape": "甘露净尘独立法形",
+        "trajectory": "白青纱衣、净瓶、柳枝、水珠",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "cleanse",
+            "power": 2,
+            "target": "allies"
+          },
+          {
+            "op": "heal",
+            "power": 1.05,
+            "target": "allies",
+            "scale": "atk"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "shield",
+            "power": 0.12,
+            "target": "allyLowest",
+            "scale": "maxHp"
+          }
+        ],
+        "branchB": [
+          {
+            "op": "status",
+            "status": "regen",
+            "power": 0.35,
+            "target": "allies",
+            "turns": 2,
+            "scale": "atk"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "status",
+            "status": "guard",
+            "power": 0.12,
+            "target": "allies",
+            "turns": 2
+          }
+        ],
+        "passive": {
+          "trigger": "onAllyDamaged",
+          "effects": [
+            {
+              "op": "heal",
+              "power": 0.25,
+              "target": "allyLowest",
+              "scale": "atk"
+            }
+          ],
+          "condition": "allyDebuffed",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "daoxing",
+      "name": "道行天尊",
+      "faction": "阐教",
+      "background": "山间苦修沉稳，降魔杵直取蓄势中的破绽。",
+      "skillName": "降魔折锋",
+      "treasure": "降魔杵",
+      "color": "#99aca0",
+      "stars": 4,
+      "rarity": "immortal",
+      "hp": 421,
+      "atk": 106,
+      "def": 24,
+      "speed": 91,
+      "attackName": "道行天尊·碎甲",
+      "skillDescription": "削减选定目标2层蓄势；选定目标受到155%攻击伤害；选定目标获得攻击削弱15%（2回合）。",
+      "passiveDescription": "正常直接命中后且目标有减益：自身获得6%最大生命护盾。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：削减选定目标3点定力。",
+        "专精B：己方前排获得12%最大生命护盾。"
+      ],
+      "treasureEffect": "一段：神通额外选定目标获得破防20%（2回合）。",
+      "fx": "expansion-daoxing",
+      "portraitIndex": 30,
+      "portraitPath": "res://assets/portraits/daoxing-premium.webp",
+      "avatarPath": "res://assets/avatars/daoxing-premium.webp",
+      "visualBrief": "浅灰青袍、长柄降魔杵、山石纹",
+      "combatRole": "breaker",
+      "skill": {
+        "target": "enemyFront",
+        "multiplier": 1.55,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:daoxing",
+        "fx": "expansion-daoxing",
+        "shape": "降魔折锋独立法形",
+        "trajectory": "浅灰青袍、长柄降魔杵、山石纹",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "reduceCharge",
+            "power": 2,
+            "target": "selected"
+          },
+          {
+            "op": "damage",
+            "power": 1.55,
+            "target": "selected"
+          },
+          {
+            "op": "status",
+            "status": "weakened",
+            "power": 0.15,
+            "target": "selected",
+            "turns": 2
+          }
+        ],
+        "branchA": [
+          {
+            "op": "reduceWill",
+            "power": 3,
+            "target": "selected"
+          }
+        ],
+        "branchB": [
+          {
+            "op": "shield",
+            "power": 0.12,
+            "target": "allyFront",
+            "scale": "maxHp"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "status",
+            "status": "defDown",
+            "power": 0.2,
+            "target": "selected",
+            "turns": 2
+          }
+        ],
+        "passive": {
+          "trigger": "onHit",
+          "effects": [
+            {
+              "op": "shield",
+              "power": 0.06,
+              "target": "self",
+              "scale": "maxHp"
+            }
+          ],
+          "condition": "targetDebuffed",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "qingxu",
+      "name": "清虚道德真君",
+      "faction": "阐教",
+      "background": "五火七禽之风席卷敌阵，火势可攻亦可驱邪。",
+      "skillName": "七禽焚阵",
+      "treasure": "五火七禽扇",
+      "color": "#a5bcc4",
+      "stars": 4,
+      "rarity": "immortal",
+      "hp": 421,
+      "atk": 106,
+      "def": 24,
+      "speed": 92,
+      "attackName": "清虚道德真君·破阵",
+      "skillDescription": "全敌受到90%攻击伤害；全敌获得灼烧30%（2回合），数值以施法者攻击计算。",
+      "passiveDescription": "正常行动结束且本次使用神通：自身获得疾行15%（2回合）。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：敌方后排受到40%攻击伤害。",
+        "专精B：净化全队1项减益。"
+      ],
+      "treasureEffect": "一段：神通额外全敌获得攻击削弱12%（2回合）。",
+      "fx": "expansion-qingxu",
+      "portraitIndex": 31,
+      "portraitPath": "res://assets/portraits/qingxu-premium.webp",
+      "avatarPath": "res://assets/avatars/qingxu-premium.webp",
+      "visualBrief": "苍青羽衣、七色羽扇、细碎火羽",
+      "combatRole": "area",
+      "skill": {
+        "target": "allEnemies",
+        "multiplier": 0.9,
+        "cooldown": 3,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:qingxu",
+        "fx": "expansion-qingxu",
+        "shape": "七禽焚阵独立法形",
+        "trajectory": "苍青羽衣、七色羽扇、细碎火羽",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "damage",
+            "power": 0.9,
+            "target": "enemies"
+          },
+          {
+            "op": "status",
+            "status": "burn",
+            "power": 0.3,
+            "target": "enemies",
+            "turns": 2,
+            "scale": "atk"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "damage",
+            "power": 0.4,
+            "target": "enemyBack"
+          }
+        ],
+        "branchB": [
+          {
+            "op": "cleanse",
+            "power": 1,
+            "target": "allies"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "status",
+            "status": "weakened",
+            "power": 0.12,
+            "target": "enemies",
+            "turns": 2
+          }
+        ],
+        "passive": {
+          "trigger": "onActionEnd",
+          "effects": [
+            {
+              "op": "status",
+              "status": "haste",
+              "power": 0.15,
+              "target": "self",
+              "turns": 2
+            }
+          ],
+          "condition": "skillOnly",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "huanglong",
+      "name": "黄龙真人",
+      "faction": "阐教",
+      "background": "以坚韧守阵，龙气环身为同门承受冲击。",
+      "skillName": "黄龙护脉",
+      "treasure": "龙纹玉佩",
+      "color": "#c5b071",
+      "stars": 4,
+      "rarity": "immortal",
+      "hp": 497,
+      "atk": 81,
+      "def": 35,
+      "speed": 85,
+      "attackName": "黄龙真人·守击",
+      "skillDescription": "全队获得13%最大生命护盾；自身获得减伤15%（2回合）。",
+      "passiveDescription": "受到直接伤害后：自身获得5%最大生命护盾。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：为其他友方分担40%单体伤害（2回合）。",
+        "专精B：为最低生命比例友方恢复70%攻击生命。"
+      ],
+      "treasureEffect": "一段：神通额外己方前排获得战令15%（2回合）。",
+      "fx": "expansion-huanglong",
+      "portraitIndex": 32,
+      "portraitPath": "res://assets/portraits/huanglong-premium.webp",
+      "avatarPath": "res://assets/avatars/huanglong-premium.webp",
+      "visualBrief": "土金道袍、龙纹玉佩、岩金鳞纹",
+      "combatRole": "tank",
+      "skill": {
+        "target": "allAllies",
+        "multiplier": 1,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:huanglong",
+        "fx": "expansion-huanglong",
+        "shape": "黄龙护脉独立法形",
+        "trajectory": "土金道袍、龙纹玉佩、岩金鳞纹",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "shield",
+            "power": 0.13,
+            "target": "allies",
+            "scale": "maxHp"
+          },
+          {
+            "op": "status",
+            "status": "guard",
+            "power": 0.15,
+            "target": "self",
+            "turns": 2
+          }
+        ],
+        "branchA": [
+          {
+            "op": "status",
+            "status": "protect",
+            "power": 0.4,
+            "target": "allyOthers",
+            "turns": 2
+          }
+        ],
+        "branchB": [
+          {
+            "op": "heal",
+            "power": 0.7,
+            "target": "allyLowest",
+            "scale": "atk"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "status",
+            "status": "atkUp",
+            "power": 0.15,
+            "target": "allyFront",
+            "turns": 2
+          }
+        ],
+        "passive": {
+          "trigger": "onDamaged",
+          "effects": [
+            {
+              "op": "shield",
+              "power": 0.05,
+              "target": "self",
+              "scale": "maxHp"
+            }
+          ],
+          "condition": "",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "juliusun",
+      "name": "惧留孙",
+      "faction": "阐教",
+      "background": "捆仙绳不争锋芒，先束敌手再护己阵。",
+      "skillName": "缚仙收势",
+      "treasure": "捆仙绳",
+      "color": "#b5a082",
+      "stars": 4,
+      "rarity": "immortal",
+      "hp": 421,
+      "atk": 91,
+      "def": 24,
+      "speed": 94,
+      "attackName": "惧留孙·镇法",
+      "skillDescription": "选定目标受到牵制1次行动（首领免疫）；削减选定目标2层蓄势；选定目标受到110%攻击伤害。",
+      "passiveDescription": "正常行动结束且本次使用神通：自身获得减伤18%（2回合）。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：削减选定目标4点定力。",
+        "专精B：全队获得12%最大生命护盾。"
+      ],
+      "treasureEffect": "一段：神通额外选定目标获得攻击削弱25%（2回合）。",
+      "fx": "expansion-juliusun",
+      "portraitIndex": 33,
+      "portraitPath": "res://assets/portraits/juliusun-premium.webp",
+      "avatarPath": "res://assets/avatars/juliusun-premium.webp",
+      "visualBrief": "黄褐道袍、金色捆仙绳、结阵光环",
+      "combatRole": "control",
+      "skill": {
+        "target": "enemyAny",
+        "multiplier": 1.1,
+        "cooldown": 3,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:juliusun",
+        "fx": "expansion-juliusun",
+        "shape": "缚仙收势独立法形",
+        "trajectory": "黄褐道袍、金色捆仙绳、结阵光环",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "status",
+            "status": "stun",
+            "power": 1,
+            "turns": 1,
+            "target": "selected",
+            "nonBossOnly": true
+          },
+          {
+            "op": "reduceCharge",
+            "power": 2,
+            "target": "selected"
+          },
+          {
+            "op": "damage",
+            "power": 1.1,
+            "target": "selected"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "reduceWill",
+            "power": 4,
+            "target": "selected"
+          }
+        ],
+        "branchB": [
+          {
+            "op": "shield",
+            "power": 0.12,
+            "target": "allies",
+            "scale": "maxHp"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "status",
+            "status": "weakened",
+            "power": 0.25,
+            "target": "selected",
+            "turns": 2
+          }
+        ],
+        "passive": {
+          "trigger": "onActionEnd",
+          "effects": [
+            {
+              "op": "status",
+              "status": "guard",
+              "power": 0.18,
+              "target": "self",
+              "turns": 2
+            }
+          ],
+          "condition": "skillOnly",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "wudang",
+      "name": "无当圣母",
+      "faction": "截教",
+      "background": "剑光如星，立阵时留一分余地护同门。",
+      "skillName": "无当星阵",
+      "treasure": "青萍副剑",
+      "color": "#91adae",
+      "stars": 4,
+      "rarity": "immortal",
+      "hp": 421,
+      "atk": 106,
+      "def": 24,
+      "speed": 90,
+      "attackName": "无当圣母·破阵",
+      "skillDescription": "全敌受到100%攻击伤害；全敌获得破防12%（2回合）。",
+      "passiveDescription": "轮开始：己方后排获得4%最大生命护盾。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：全队获得10%最大生命护盾。",
+        "专精B：最低生命比例敌人受到45%攻击伤害。"
+      ],
+      "treasureEffect": "一段：神通额外全队获得疾行10%（2回合）。",
+      "fx": "expansion-wudang",
+      "portraitIndex": 34,
+      "portraitPath": "res://assets/portraits/wudang-premium.webp",
+      "avatarPath": "res://assets/avatars/wudang-premium.webp",
+      "visualBrief": "墨青法衣、星芒剑阵、清冷银冠",
+      "combatRole": "area",
+      "skill": {
+        "target": "allEnemies",
+        "multiplier": 1.0,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:wudang",
+        "fx": "expansion-wudang",
+        "shape": "无当星阵独立法形",
+        "trajectory": "墨青法衣、星芒剑阵、清冷银冠",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "damage",
+            "power": 1.0,
+            "target": "enemies"
+          },
+          {
+            "op": "status",
+            "status": "defDown",
+            "power": 0.12,
+            "target": "enemies",
+            "turns": 2
+          }
+        ],
+        "branchA": [
+          {
+            "op": "shield",
+            "power": 0.1,
+            "target": "allies",
+            "scale": "maxHp"
+          }
+        ],
+        "branchB": [
+          {
+            "op": "damage",
+            "power": 0.45,
+            "target": "enemyLowest"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "status",
+            "status": "haste",
+            "power": 0.1,
+            "target": "allies",
+            "turns": 2
+          }
+        ],
+        "passive": {
+          "trigger": "roundStart",
+          "effects": [
+            {
+              "op": "shield",
+              "power": 0.04,
+              "target": "allyBack",
+              "scale": "maxHp"
+            }
+          ],
+          "condition": "",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "guiling",
+      "name": "龟灵圣母",
+      "faction": "截教",
+      "background": "日月珠照耀玄水，厚重守御中暗藏反击。",
+      "skillName": "玄水日月",
+      "treasure": "日月珠",
+      "color": "#7ca6a7",
+      "stars": 4,
+      "rarity": "immortal",
+      "hp": 497,
+      "atk": 81,
+      "def": 35,
+      "speed": 83,
+      "attackName": "龟灵圣母·守击",
+      "skillDescription": "全队获得20%最大生命护盾；己方前排获得减伤18%（2回合）。",
+      "passiveDescription": "受到直接伤害后：选定目标受到45%攻击伤害。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：净化全队1项减益。",
+        "专精B：全敌受到70%攻击伤害。"
+      ],
+      "treasureEffect": "一段：神通额外自身获得持续恢复25%（2回合），数值以施法者攻击计算。",
+      "fx": "expansion-guiling",
+      "portraitIndex": 35,
+      "portraitPath": "res://assets/portraits/guiling-premium.webp",
+      "avatarPath": "res://assets/avatars/guiling-premium.webp",
+      "visualBrief": "玄碧重衣、日月双珠、水纹盾",
+      "combatRole": "tank",
+      "skill": {
+        "target": "allAllies",
+        "multiplier": 1,
+        "cooldown": 3,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:guiling",
+        "fx": "expansion-guiling",
+        "shape": "玄水日月独立法形",
+        "trajectory": "玄碧重衣、日月双珠、水纹盾",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "shield",
+            "power": 0.2,
+            "target": "allies",
+            "scale": "maxHp"
+          },
+          {
+            "op": "status",
+            "status": "guard",
+            "power": 0.18,
+            "target": "allyFront",
+            "turns": 2
+          }
+        ],
+        "branchA": [
+          {
+            "op": "cleanse",
+            "power": 1,
+            "target": "allies"
+          }
+        ],
+        "branchB": [
+          {
+            "op": "damage",
+            "power": 0.7,
+            "target": "enemies"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "status",
+            "status": "regen",
+            "power": 0.25,
+            "target": "self",
+            "turns": 2,
+            "scale": "atk"
+          }
+        ],
+        "passive": {
+          "trigger": "onDamaged",
+          "effects": [
+            {
+              "op": "damage",
+              "power": 0.45,
+              "target": "selected"
+            }
+          ],
+          "condition": "",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "shiji",
+      "name": "石矶娘娘",
+      "faction": "截教",
+      "background": "顽石凝真，不轻言退让，以云帕守住阵脚。",
+      "skillName": "石云护阵",
+      "treasure": "八卦云光帕",
+      "color": "#a2aaa3",
+      "stars": 4,
+      "rarity": "immortal",
+      "hp": 497,
+      "atk": 81,
+      "def": 35,
+      "speed": 84,
+      "attackName": "石矶娘娘·守击",
+      "skillDescription": "全队获得15%最大生命护盾；全队获得减伤12%（2回合）。",
+      "passiveDescription": "友方受到直接伤害后且有存活友方低于半血：最低生命比例友方获得4%最大生命护盾。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：为己方后排分担40%单体伤害（2回合）。",
+        "专精B：敌方前排受到90%攻击伤害。"
+      ],
+      "treasureEffect": "一段：神通额外净化最低生命比例友方1项减益。",
+      "fx": "expansion-shiji",
+      "portraitIndex": 36,
+      "portraitPath": "res://assets/portraits/shiji-premium.webp",
+      "avatarPath": "res://assets/avatars/shiji-premium.webp",
+      "visualBrief": "青灰石纹衣、八卦云光帕、石晶",
+      "combatRole": "tank",
+      "skill": {
+        "target": "allAllies",
+        "multiplier": 1,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:shiji",
+        "fx": "expansion-shiji",
+        "shape": "石云护阵独立法形",
+        "trajectory": "青灰石纹衣、八卦云光帕、石晶",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "shield",
+            "power": 0.15,
+            "target": "allies",
+            "scale": "maxHp"
+          },
+          {
+            "op": "status",
+            "status": "guard",
+            "power": 0.12,
+            "target": "allies",
+            "turns": 2
+          }
+        ],
+        "branchA": [
+          {
+            "op": "status",
+            "status": "protect",
+            "power": 0.4,
+            "target": "allyBack",
+            "turns": 2
+          }
+        ],
+        "branchB": [
+          {
+            "op": "damage",
+            "power": 0.9,
+            "target": "enemyFront"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "cleanse",
+            "power": 1,
+            "target": "allyLowest"
+          }
+        ],
+        "passive": {
+          "trigger": "onAllyDamaged",
+          "effects": [
+            {
+              "op": "shield",
+              "power": 0.04,
+              "target": "allyLowest",
+              "scale": "maxHp"
+            }
+          ],
+          "condition": "allyLow",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "wenzhong",
+      "name": "闻仲",
+      "faction": "人间",
+      "background": "朝歌（商庭） · 太师忠烈统军，双鞭雷声振奋前线。",
+      "skillName": "雌雄雷鞭",
+      "treasure": "雌雄双鞭",
+      "color": "#9ba9bd",
+      "stars": 4,
+      "rarity": "immortal",
+      "hp": 454,
+      "atk": 91,
+      "def": 24,
+      "speed": 93,
+      "attackName": "闻仲·令击",
+      "skillDescription": "选定目标受到135%攻击伤害；全队获得战令16%（2回合）；削减选定目标1层蓄势。",
+      "passiveDescription": "友方受到直接伤害后：最低生命比例友方获得战令12%（2回合）。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：选定目标获得锁定15%（2回合）。",
+        "专精B：己方前排获得10%最大生命护盾。"
+      ],
+      "treasureEffect": "一段：神通额外削减选定目标2点定力。",
+      "fx": "expansion-wenzhong",
+      "portraitIndex": 37,
+      "portraitPath": "res://assets/portraits/wenzhong-premium.webp",
+      "avatarPath": "res://assets/avatars/wenzhong-premium.webp",
+      "visualBrief": "墨甲银发、额心神目、雌雄双鞭",
+      "combatRole": "commander",
+      "skill": {
+        "target": "enemyAny",
+        "multiplier": 1.35,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:wenzhong",
+        "fx": "expansion-wenzhong",
+        "shape": "雌雄雷鞭独立法形",
+        "trajectory": "墨甲银发、额心神目、雌雄双鞭",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "damage",
+            "power": 1.35,
+            "target": "selected"
+          },
+          {
+            "op": "status",
+            "status": "atkUp",
+            "power": 0.16,
+            "target": "allies",
+            "turns": 2
+          },
+          {
+            "op": "reduceCharge",
+            "power": 1,
+            "target": "selected"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "status",
+            "status": "mark",
+            "power": 0.15,
+            "target": "selected",
+            "turns": 2
+          }
+        ],
+        "branchB": [
+          {
+            "op": "shield",
+            "power": 0.1,
+            "target": "allyFront",
+            "scale": "maxHp"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "reduceWill",
+            "power": 2,
+            "target": "selected"
+          }
+        ],
+        "passive": {
+          "trigger": "onAllyDamaged",
+          "effects": [
+            {
+              "op": "status",
+              "status": "atkUp",
+              "power": 0.12,
+              "target": "allyLowest",
+              "turns": 2
+            }
+          ],
+          "condition": "",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "jiangziya",
+      "name": "姜子牙",
+      "faction": "人间",
+      "background": "西岐 · 持旗调兵，把法术与军阵合为破局之策。",
+      "skillName": "杏黄封阵",
+      "treasure": "打神鞭",
+      "color": "#d4c6aa",
+      "stars": 4,
+      "rarity": "immortal",
+      "hp": 454,
+      "atk": 91,
+      "def": 24,
+      "speed": 94,
+      "attackName": "姜子牙·令击",
+      "skillDescription": "选定目标受到120%攻击伤害；选定目标获得锁定15%（2回合）；全队获得10%最大生命护盾。",
+      "passiveDescription": "轮开始：己方前排获得战令10%（1回合）。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：全队获得疾行15%（2回合）。",
+        "专精B：净化全队2项减益。"
+      ],
+      "treasureEffect": "一段：神通额外选定目标获得破防20%（2回合）。",
+      "fx": "expansion-jiangziya",
+      "portraitIndex": 38,
+      "portraitPath": "res://assets/portraits/jiangziya-premium.webp",
+      "avatarPath": "res://assets/avatars/jiangziya-premium.webp",
+      "visualBrief": "鹤发白袍、打神鞭、杏黄旗",
+      "combatRole": "commander",
+      "skill": {
+        "target": "enemyAny",
+        "multiplier": 1.2,
+        "cooldown": 3,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:jiangziya",
+        "fx": "expansion-jiangziya",
+        "shape": "杏黄封阵独立法形",
+        "trajectory": "鹤发白袍、打神鞭、杏黄旗",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "damage",
+            "power": 1.2,
+            "target": "selected"
+          },
+          {
+            "op": "status",
+            "status": "mark",
+            "power": 0.15,
+            "target": "selected",
+            "turns": 2
+          },
+          {
+            "op": "shield",
+            "power": 0.1,
+            "target": "allies",
+            "scale": "maxHp"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "status",
+            "status": "haste",
+            "power": 0.15,
+            "target": "allies",
+            "turns": 2
+          }
+        ],
+        "branchB": [
+          {
+            "op": "cleanse",
+            "power": 2,
+            "target": "allies"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "status",
+            "status": "defDown",
+            "power": 0.2,
+            "target": "selected",
+            "turns": 2
+          }
+        ],
+        "passive": {
+          "trigger": "roundStart",
+          "effects": [
+            {
+              "op": "status",
+              "status": "atkUp",
+              "power": 0.1,
+              "target": "allyFront",
+              "turns": 1
+            }
+          ],
+          "condition": "",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "shengongbao",
+      "name": "申公豹",
+      "faction": "散仙",
+      "background": "擅借雷符扰乱阵势，行险时亦为同伴留后路。",
+      "skillName": "玄雷借势",
+      "treasure": "玄雷符",
+      "color": "#849a91",
+      "stars": 4,
+      "rarity": "immortal",
+      "hp": 421,
+      "atk": 91,
+      "def": 24,
+      "speed": 90,
+      "attackName": "申公豹·镇法",
+      "skillDescription": "全敌受到85%攻击伤害；全敌获得攻击削弱20%（2回合）。",
+      "passiveDescription": "正常行动结束且本次使用神通：自身获得8%最大生命护盾。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：移除全敌1项普通增益。",
+        "专精B：削减全敌1层蓄势。"
+      ],
+      "treasureEffect": "一段：神通额外最低生命比例敌人受到45%攻击伤害。",
+      "fx": "expansion-shengongbao",
+      "portraitIndex": 39,
+      "portraitPath": "res://assets/portraits/shengongbao-premium.webp",
+      "avatarPath": "res://assets/avatars/shengongbao-premium.webp",
+      "visualBrief": "黑绿道袍、虎纹、飘浮雷符",
+      "combatRole": "control",
+      "skill": {
+        "target": "allEnemies",
+        "multiplier": 0.85,
+        "cooldown": 3,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:shengongbao",
+        "fx": "expansion-shengongbao",
+        "shape": "玄雷借势独立法形",
+        "trajectory": "黑绿道袍、虎纹、飘浮雷符",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "damage",
+            "power": 0.85,
+            "target": "enemies"
+          },
+          {
+            "op": "status",
+            "status": "weakened",
+            "power": 0.2,
+            "target": "enemies",
+            "turns": 2
+          }
+        ],
+        "branchA": [
+          {
+            "op": "stripBuff",
+            "power": 1,
+            "target": "enemies"
+          }
+        ],
+        "branchB": [
+          {
+            "op": "reduceCharge",
+            "power": 1,
+            "target": "enemies"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "damage",
+            "power": 0.45,
+            "target": "enemyLowest"
+          }
+        ],
+        "passive": {
+          "trigger": "onActionEnd",
+          "effects": [
+            {
+              "op": "shield",
+              "power": 0.08,
+              "target": "self",
+              "scale": "maxHp"
+            }
+          ],
+          "condition": "skillOnly",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "sudaji",
+      "name": "苏妲己",
+      "faction": "人间",
+      "background": "朝歌（商庭） · 九尾幻术为锋，迷乱视线后显露敌阵破绽。",
+      "skillName": "狐影迷心",
+      "treasure": "九尾绫",
+      "color": "#c18cac",
+      "stars": 4,
+      "rarity": "immortal",
+      "hp": 421,
+      "atk": 91,
+      "def": 24,
+      "speed": 91,
+      "attackName": "苏妲己·镇法",
+      "skillDescription": "选定目标受到120%攻击伤害；选定目标获得攻击削弱25%（2回合）；选定目标获得破防15%（2回合）。",
+      "passiveDescription": "正常直接命中后且目标有减益：为自身恢复25%攻击生命。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：选定目标受到牵制1次行动（首领免疫）。",
+        "专精B：敌方后排获得灼烧25%（2回合），数值以施法者攻击计算。"
+      ],
+      "treasureEffect": "一段：神通额外削去选定目标30%当前护盾。",
+      "fx": "expansion-sudaji",
+      "portraitIndex": 40,
+      "portraitPath": "res://assets/portraits/sudaji-premium.webp",
+      "avatarPath": "res://assets/avatars/sudaji-premium.webp",
+      "visualBrief": "紫红宫衣、白狐纹、轻羽扇",
+      "combatRole": "control",
+      "skill": {
+        "target": "enemyAny",
+        "multiplier": 1.2,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:sudaji",
+        "fx": "expansion-sudaji",
+        "shape": "狐影迷心独立法形",
+        "trajectory": "紫红宫衣、白狐纹、轻羽扇",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "damage",
+            "power": 1.2,
+            "target": "selected"
+          },
+          {
+            "op": "status",
+            "status": "weakened",
+            "power": 0.25,
+            "target": "selected",
+            "turns": 2
+          },
+          {
+            "op": "status",
+            "status": "defDown",
+            "power": 0.15,
+            "target": "selected",
+            "turns": 2
+          }
+        ],
+        "branchA": [
+          {
+            "op": "status",
+            "status": "stun",
+            "power": 1,
+            "turns": 1,
+            "target": "selected",
+            "nonBossOnly": true
+          }
+        ],
+        "branchB": [
+          {
+            "op": "status",
+            "status": "burn",
+            "power": 0.25,
+            "target": "enemyBack",
+            "turns": 2,
+            "scale": "atk"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "removeShield",
+            "power": 0.3,
+            "target": "selected"
+          }
+        ],
+        "passive": {
+          "trigger": "onHit",
+          "effects": [
+            {
+              "op": "heal",
+              "power": 0.25,
+              "target": "self",
+              "scale": "atk"
+            }
+          ],
+          "condition": "targetDebuffed",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "longji",
+      "name": "龙吉公主",
+      "faction": "天庭",
+      "background": "雾露收火，清波与鸾声护送同道渡险。",
+      "skillName": "雾露清波",
+      "treasure": "雾露乾坤网",
+      "color": "#a6cbd6",
+      "stars": 4,
+      "rarity": "immortal",
+      "hp": 454,
+      "atk": 81,
+      "def": 24,
+      "speed": 92,
+      "attackName": "龙吉公主·清击",
+      "skillDescription": "净化全队1项减益；为全队恢复90%攻击生命；全队获得减伤12%（2回合）。",
+      "passiveDescription": "友方受到直接伤害后且有存活友方低于半血：为最低生命比例友方恢复30%攻击生命。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：己方后排获得12%最大生命护盾。",
+        "专精B：全敌获得攻击削弱18%（2回合）。"
+      ],
+      "treasureEffect": "一段：神通额外全队获得疾行12%（2回合）。",
+      "fx": "expansion-longji",
+      "portraitIndex": 41,
+      "portraitPath": "res://assets/portraits/longji-premium.webp",
+      "avatarPath": "res://assets/avatars/longji-premium.webp",
+      "visualBrief": "水蓝银衣、鸾凤冠、雾露光网",
+      "combatRole": "healer",
+      "skill": {
+        "target": "allAllies",
+        "multiplier": 1,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:longji",
+        "fx": "expansion-longji",
+        "shape": "雾露清波独立法形",
+        "trajectory": "水蓝银衣、鸾凤冠、雾露光网",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "cleanse",
+            "power": 1,
+            "target": "allies"
+          },
+          {
+            "op": "heal",
+            "power": 0.9,
+            "target": "allies",
+            "scale": "atk"
+          },
+          {
+            "op": "status",
+            "status": "guard",
+            "power": 0.12,
+            "target": "allies",
+            "turns": 2
+          }
+        ],
+        "branchA": [
+          {
+            "op": "shield",
+            "power": 0.12,
+            "target": "allyBack",
+            "scale": "maxHp"
+          }
+        ],
+        "branchB": [
+          {
+            "op": "status",
+            "status": "weakened",
+            "power": 0.18,
+            "target": "enemies",
+            "turns": 2
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "status",
+            "status": "haste",
+            "power": 0.12,
+            "target": "allies",
+            "turns": 2
+          }
+        ],
+        "passive": {
+          "trigger": "onAllyDamaged",
+          "effects": [
+            {
+              "op": "heal",
+              "power": 0.3,
+              "target": "allyLowest",
+              "scale": "atk"
+            }
+          ],
+          "condition": "allyLow",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "tuxingsun",
+      "name": "土行孙",
+      "faction": "人间",
+      "background": "西岐 · 身形灵巧，借地行绕过重盾袭击后阵。",
+      "skillName": "地行突袭",
+      "treasure": "地行棍",
+      "color": "#ba9a75",
+      "stars": 3,
+      "rarity": "mortal",
+      "hp": 390,
+      "atk": 98,
+      "def": 22,
+      "speed": 99,
+      "attackName": "土行孙·飞袭",
+      "skillDescription": "选定目标受到150%攻击伤害；削去选定目标20%当前护盾。",
+      "passiveDescription": "正常行动结束且本次为普攻：自身获得4%最大生命护盾。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：选定目标获得破防20%（2回合）。",
+        "专精B：自身获得12%最大生命护盾。"
+      ],
+      "treasureEffect": "一段：神通额外自身获得疾行18%（2回合）。",
+      "fx": "expansion-tuxingsun",
+      "portraitIndex": 42,
+      "portraitPath": "res://assets/portraits/tuxingsun-premium.webp",
+      "avatarPath": "res://assets/avatars/tuxingsun-premium.webp",
+      "visualBrief": "赭衣矮壮、地行棍、土石飞尘",
+      "combatRole": "skirmisher",
+      "skill": {
+        "target": "enemyAny",
+        "multiplier": 1.5,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:tuxingsun",
+        "fx": "expansion-tuxingsun",
+        "shape": "地行突袭独立法形",
+        "trajectory": "赭衣矮壮、地行棍、土石飞尘",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "damage",
+            "power": 1.5,
+            "target": "selected"
+          },
+          {
+            "op": "removeShield",
+            "power": 0.2,
+            "target": "selected"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "status",
+            "status": "defDown",
+            "power": 0.2,
+            "target": "selected",
+            "turns": 2
+          }
+        ],
+        "branchB": [
+          {
+            "op": "shield",
+            "power": 0.12,
+            "target": "self",
+            "scale": "maxHp"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "status",
+            "status": "haste",
+            "power": 0.18,
+            "target": "self",
+            "turns": 2
+          }
+        ],
+        "passive": {
+          "trigger": "onActionEnd",
+          "effects": [
+            {
+              "op": "shield",
+              "power": 0.04,
+              "target": "self",
+              "scale": "maxHp"
+            }
+          ],
+          "condition": "attackOnly",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "dengchanyu",
+      "name": "邓婵玉",
+      "faction": "人间",
+      "background": "西岐 · 五色飞石取巧，以精准援护弥补阵中缺口。",
+      "skillName": "五光飞石",
+      "treasure": "五色石",
+      "color": "#d4a69c",
+      "stars": 3,
+      "rarity": "mortal",
+      "hp": 390,
+      "atk": 98,
+      "def": 22,
+      "speed": 100,
+      "attackName": "邓婵玉·飞袭",
+      "skillDescription": "选定目标获得锁定15%（2回合）；选定目标受到135%攻击伤害。",
+      "passiveDescription": "正常直接命中后且目标被锁定：最低生命比例友方获得疾行8%（2回合）。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：选定目标获得攻击削弱15%（2回合）。",
+        "专精B：敌方后排受到45%攻击伤害。"
+      ],
+      "treasureEffect": "一段：神通额外削去选定目标25%当前护盾。",
+      "fx": "expansion-dengchanyu",
+      "portraitIndex": 43,
+      "portraitPath": "res://assets/portraits/dengchanyu-premium.webp",
+      "avatarPath": "res://assets/avatars/dengchanyu-premium.webp",
+      "visualBrief": "朱红轻甲、五色飞石、飘带",
+      "combatRole": "skirmisher",
+      "skill": {
+        "target": "enemyAny",
+        "multiplier": 1.35,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:dengchanyu",
+        "fx": "expansion-dengchanyu",
+        "shape": "五光飞石独立法形",
+        "trajectory": "朱红轻甲、五色飞石、飘带",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "status",
+            "status": "mark",
+            "power": 0.15,
+            "target": "selected",
+            "turns": 2
+          },
+          {
+            "op": "damage",
+            "power": 1.35,
+            "target": "selected"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "status",
+            "status": "weakened",
+            "power": 0.15,
+            "target": "selected",
+            "turns": 2
+          }
+        ],
+        "branchB": [
+          {
+            "op": "damage",
+            "power": 0.45,
+            "target": "enemyBack"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "removeShield",
+            "power": 0.25,
+            "target": "selected"
+          }
+        ],
+        "passive": {
+          "trigger": "onHit",
+          "effects": [
+            {
+              "op": "status",
+              "status": "haste",
+              "power": 0.08,
+              "target": "allyLowest",
+              "turns": 2
+            }
+          ],
+          "condition": "targetMarked",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "huangtianhua",
+      "name": "黄天化",
+      "faction": "人间",
+      "background": "西岐 · 少年双锤冲阵，遇强盾更显锐气。",
+      "skillName": "双锤破垒",
+      "treasure": "攒心钉",
+      "color": "#91aab5",
+      "stars": 3,
+      "rarity": "mortal",
+      "hp": 390,
+      "atk": 98,
+      "def": 22,
+      "speed": 90,
+      "attackName": "黄天化·碎甲",
+      "skillDescription": "削去选定目标35%当前护盾；选定目标受到150%攻击伤害。",
+      "passiveDescription": "正常行动击倒后：自身获得8%最大生命护盾。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：选定目标获得破防20%（2回合）。",
+        "专精B：敌方前排受到40%攻击伤害。"
+      ],
+      "treasureEffect": "一段：神通额外削减选定目标2点定力。",
+      "fx": "expansion-huangtianhua",
+      "portraitIndex": 44,
+      "portraitPath": "res://assets/portraits/huangtianhua-premium.webp",
+      "avatarPath": "res://assets/avatars/huangtianhua-premium.webp",
+      "visualBrief": "青黑少年战甲、双锤、金色钉光",
+      "combatRole": "breaker",
+      "skill": {
+        "target": "enemyFront",
+        "multiplier": 1.5,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:huangtianhua",
+        "fx": "expansion-huangtianhua",
+        "shape": "双锤破垒独立法形",
+        "trajectory": "青黑少年战甲、双锤、金色钉光",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "removeShield",
+            "power": 0.35,
+            "target": "selected"
+          },
+          {
+            "op": "damage",
+            "power": 1.5,
+            "target": "selected"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "status",
+            "status": "defDown",
+            "power": 0.2,
+            "target": "selected",
+            "turns": 2
+          }
+        ],
+        "branchB": [
+          {
+            "op": "damage",
+            "power": 0.4,
+            "target": "enemyFront"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "reduceWill",
+            "power": 2,
+            "target": "selected"
+          }
+        ],
+        "passive": {
+          "trigger": "onKill",
+          "effects": [
+            {
+              "op": "shield",
+              "power": 0.08,
+              "target": "self",
+              "scale": "maxHp"
+            }
+          ],
+          "condition": "",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "yangren",
+      "name": "杨任",
+      "faction": "人间",
+      "background": "西岐 · 掌中慧眼照见伏势，羽扇善解围阵之困。",
+      "skillName": "神目巡阵",
+      "treasure": "五火神焰扇",
+      "color": "#a8b69c",
+      "stars": 3,
+      "rarity": "mortal",
+      "hp": 420,
+      "atk": 75,
+      "def": 22,
+      "speed": 91,
+      "attackName": "杨任·灵击",
+      "skillDescription": "全敌受到75%攻击伤害；全敌获得锁定10%（2回合）。",
+      "passiveDescription": "轮开始：为最低生命比例友方恢复20%攻击生命。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：削减全敌1层蓄势。",
+        "专精B：净化全队1项减益。"
+      ],
+      "treasureEffect": "一段：神通额外全敌获得灼烧18%（2回合），数值以施法者攻击计算。",
+      "fx": "expansion-yangren",
+      "portraitIndex": 45,
+      "portraitPath": "res://assets/portraits/yangren-premium.webp",
+      "avatarPath": "res://assets/avatars/yangren-premium.webp",
+      "visualBrief": "青绿儒将袍、手眼纹金扇、清亮目光",
+      "combatRole": "support",
+      "skill": {
+        "target": "allEnemies",
+        "multiplier": 0.75,
+        "cooldown": 3,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:yangren",
+        "fx": "expansion-yangren",
+        "shape": "神目巡阵独立法形",
+        "trajectory": "青绿儒将袍、手眼纹金扇、清亮目光",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "damage",
+            "power": 0.75,
+            "target": "enemies"
+          },
+          {
+            "op": "status",
+            "status": "mark",
+            "power": 0.1,
+            "target": "enemies",
+            "turns": 2
+          }
+        ],
+        "branchA": [
+          {
+            "op": "reduceCharge",
+            "power": 1,
+            "target": "enemies"
+          }
+        ],
+        "branchB": [
+          {
+            "op": "cleanse",
+            "power": 1,
+            "target": "allies"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "status",
+            "status": "burn",
+            "power": 0.18,
+            "target": "enemies",
+            "turns": 2,
+            "scale": "atk"
+          }
+        ],
+        "passive": {
+          "trigger": "roundStart",
+          "effects": [
+            {
+              "op": "heal",
+              "power": 0.2,
+              "target": "allyLowest",
+              "scale": "atk"
+            }
+          ],
+          "condition": "",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "zhenglun",
+      "name": "郑伦",
+      "faction": "人间",
+      "background": "朝歌（商庭） · 哼声震阵，重甲先锋以镇定抵住正面攻势。",
+      "skillName": "白气震魂",
+      "treasure": "降魔杵",
+      "color": "#bda777",
+      "stars": 3,
+      "rarity": "mortal",
+      "hp": 460,
+      "atk": 75,
+      "def": 32,
+      "speed": 84,
+      "attackName": "郑伦·守击",
+      "skillDescription": "选定目标受到110%攻击伤害；选定目标获得攻击削弱18%（2回合）；自身获得18%最大生命护盾。",
+      "passiveDescription": "受到直接伤害后：选定目标受到25%攻击伤害。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：削减选定目标1层蓄势。",
+        "专精B：为最低生命比例友方分担40%单体伤害（2回合）。"
+      ],
+      "treasureEffect": "一段：神通额外自身获得减伤20%（2回合）。",
+      "fx": "expansion-zhenglun",
+      "portraitIndex": 46,
+      "portraitPath": "res://assets/portraits/zhenglun-premium.webp",
+      "avatarPath": "res://assets/avatars/zhenglun-premium.webp",
+      "visualBrief": "铜金重甲、白色气流、降魔杵",
+      "combatRole": "tank",
+      "skill": {
+        "target": "enemyFront",
+        "multiplier": 1.1,
+        "cooldown": 3,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:zhenglun",
+        "fx": "expansion-zhenglun",
+        "shape": "白气震魂独立法形",
+        "trajectory": "铜金重甲、白色气流、降魔杵",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "damage",
+            "power": 1.1,
+            "target": "selected"
+          },
+          {
+            "op": "status",
+            "status": "weakened",
+            "power": 0.18,
+            "target": "selected",
+            "turns": 2
+          },
+          {
+            "op": "shield",
+            "power": 0.18,
+            "target": "self",
+            "scale": "maxHp"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "reduceCharge",
+            "power": 1,
+            "target": "selected"
+          }
+        ],
+        "branchB": [
+          {
+            "op": "status",
+            "status": "protect",
+            "power": 0.4,
+            "target": "allyLowest",
+            "turns": 2
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "status",
+            "status": "guard",
+            "power": 0.2,
+            "target": "self",
+            "turns": 2
+          }
+        ],
+        "passive": {
+          "trigger": "onDamaged",
+          "effects": [
+            {
+              "op": "damage",
+              "power": 0.25,
+              "target": "selected"
+            }
+          ],
+          "condition": "",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "chenqi",
+      "name": "陈奇",
+      "faction": "人间",
+      "background": "朝歌（商庭） · 哈气荡魔，善将守势化为压迫敌阵的反攻。",
+      "skillName": "黄气荡阵",
+      "treasure": "荡魔杵",
+      "color": "#b98b77",
+      "stars": 3,
+      "rarity": "mortal",
+      "hp": 460,
+      "atk": 75,
+      "def": 32,
+      "speed": 85,
+      "attackName": "陈奇·守击",
+      "skillDescription": "全敌受到80%攻击伤害；全敌获得攻击削弱12%（2回合）；自身获得10%最大生命护盾。",
+      "passiveDescription": "正常行动结束且本次为护持：自身获得战令12%（2回合）。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：敌方前排获得破防15%（2回合）。",
+        "专精B：己方前排获得8%最大生命护盾。"
+      ],
+      "treasureEffect": "一段：神通额外削减全敌1点定力。",
+      "fx": "expansion-chenqi",
+      "portraitIndex": 47,
+      "portraitPath": "res://assets/portraits/chenqi-premium.webp",
+      "avatarPath": "res://assets/avatars/chenqi-premium.webp",
+      "visualBrief": "暗红重甲、黄色气流、荡魔杵",
+      "combatRole": "tank",
+      "skill": {
+        "target": "allEnemies",
+        "multiplier": 0.8,
+        "cooldown": 3,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:chenqi",
+        "fx": "expansion-chenqi",
+        "shape": "黄气荡阵独立法形",
+        "trajectory": "暗红重甲、黄色气流、荡魔杵",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "damage",
+            "power": 0.8,
+            "target": "enemies"
+          },
+          {
+            "op": "status",
+            "status": "weakened",
+            "power": 0.12,
+            "target": "enemies",
+            "turns": 2
+          },
+          {
+            "op": "shield",
+            "power": 0.1,
+            "target": "self",
+            "scale": "maxHp"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "status",
+            "status": "defDown",
+            "power": 0.15,
+            "target": "enemyFront",
+            "turns": 2
+          }
+        ],
+        "branchB": [
+          {
+            "op": "shield",
+            "power": 0.08,
+            "target": "allyFront",
+            "scale": "maxHp"
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "reduceWill",
+            "power": 1,
+            "target": "enemies"
+          }
+        ],
+        "passive": {
+          "trigger": "onActionEnd",
+          "effects": [
+            {
+              "op": "status",
+              "status": "atkUp",
+              "power": 0.12,
+              "target": "self",
+              "turns": 2
+            }
+          ],
+          "condition": "guardOnly",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "weihu",
+      "name": "韦护",
+      "faction": "阐教",
+      "background": "行者持杵守道，援护低血同伴从不迟疑。",
+      "skillName": "金杵护行",
+      "treasure": "韦护降魔杵",
+      "color": "#a2afbe",
+      "stars": 3,
+      "rarity": "mortal",
+      "hp": 420,
+      "atk": 75,
+      "def": 22,
+      "speed": 94,
+      "attackName": "韦护·灵击",
+      "skillDescription": "选定目标受到120%攻击伤害；最低生命比例友方获得12%最大生命护盾。",
+      "passiveDescription": "友方受到直接伤害后且有存活友方低于半血：为最低生命比例友方恢复18%攻击生命。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：净化最低生命比例友方1项减益。",
+        "专精B：最低生命比例友方获得战令15%（2回合）。"
+      ],
+      "treasureEffect": "一段：神通额外削减选定目标1层蓄势。",
+      "fx": "expansion-weihu",
+      "portraitIndex": 48,
+      "portraitPath": "res://assets/portraits/weihu-premium.webp",
+      "avatarPath": "res://assets/avatars/weihu-premium.webp",
+      "visualBrief": "灰蓝行者装、金降魔杵、素色绳结",
+      "combatRole": "support",
+      "skill": {
+        "target": "enemyFront",
+        "multiplier": 1.2,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:weihu",
+        "fx": "expansion-weihu",
+        "shape": "金杵护行独立法形",
+        "trajectory": "灰蓝行者装、金降魔杵、素色绳结",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "damage",
+            "power": 1.2,
+            "target": "selected"
+          },
+          {
+            "op": "shield",
+            "power": 0.12,
+            "target": "allyLowest",
+            "scale": "maxHp"
+          }
+        ],
+        "branchA": [
+          {
+            "op": "cleanse",
+            "power": 1,
+            "target": "allyLowest"
+          }
+        ],
+        "branchB": [
+          {
+            "op": "status",
+            "status": "atkUp",
+            "power": 0.15,
+            "target": "allyLowest",
+            "turns": 2
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "reduceCharge",
+            "power": 1,
+            "target": "selected"
+          }
+        ],
+        "passive": {
+          "trigger": "onAllyDamaged",
+          "effects": [
+            {
+              "op": "heal",
+              "power": 0.18,
+              "target": "allyLowest",
+              "scale": "atk"
+            }
+          ],
+          "condition": "allyLow",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    },
+    {
+      "id": "wuji",
+      "name": "武吉",
+      "faction": "人间",
+      "background": "西岐 · 樵夫出身的勇士，以最朴实的坚守护住身后人。",
+      "skillName": "樵斧奋勇",
+      "treasure": "青木护盾",
+      "color": "#9bad90",
+      "stars": 3,
+      "rarity": "mortal",
+      "hp": 460,
+      "atk": 75,
+      "def": 32,
+      "speed": 82,
+      "attackName": "武吉·斧击",
+      "skillDescription": "选定目标受到120%攻击伤害；自身获得减伤18%（2回合）。",
+      "passiveDescription": "受到直接伤害后：自身获得战令10%（2回合）。每轮最多一次；追加不递归。",
+      "branches": [
+        "专精A：最低生命比例友方获得10%最大生命护盾。",
+        "专精B：选定目标获得破防15%（2回合）。"
+      ],
+      "treasureEffect": "一段：神通额外为自身恢复35%攻击生命。",
+      "fx": "expansion-wuji",
+      "portraitIndex": 49,
+      "portraitPath": "res://assets/portraits/wuji-premium.webp",
+      "avatarPath": "res://assets/avatars/wuji-premium.webp",
+      "visualBrief": "粗布青袍、短斧、护民木盾",
+      "combatRole": "guard",
+      "skill": {
+        "target": "enemyFront",
+        "multiplier": 1.2,
+        "cooldown": 2,
+        "turns": 2,
+        "triggerLimit": 1,
+        "effect": "native-config:wuji",
+        "fx": "expansion-wuji",
+        "shape": "樵斧奋勇独立法形",
+        "trajectory": "粗布青袍、短斧、护民木盾",
+        "beats": [
+          0,
+          160,
+          330
+        ]
+      },
+      "combat": {
+        "skillEffects": [
+          {
+            "op": "damage",
+            "power": 1.2,
+            "target": "selected"
+          },
+          {
+            "op": "status",
+            "status": "guard",
+            "power": 0.18,
+            "target": "self",
+            "turns": 2
+          }
+        ],
+        "branchA": [
+          {
+            "op": "shield",
+            "power": 0.1,
+            "target": "allyLowest",
+            "scale": "maxHp"
+          }
+        ],
+        "branchB": [
+          {
+            "op": "status",
+            "status": "defDown",
+            "power": 0.15,
+            "target": "selected",
+            "turns": 2
+          }
+        ],
+        "treasureEffects": [
+          {
+            "op": "heal",
+            "power": 0.35,
+            "target": "self",
+            "scale": "atk"
+          }
+        ],
+        "passive": {
+          "trigger": "onDamaged",
+          "effects": [
+            {
+              "op": "status",
+              "status": "atkUp",
+              "power": 0.1,
+              "target": "self",
+              "turns": 2
+            }
+          ],
+          "condition": "",
+          "limit": 1,
+          "scope": "round"
+        }
+      }
+    }
+  ]
+}

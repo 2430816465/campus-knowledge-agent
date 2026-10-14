@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Theme" path="res://assets/ui-foundation/foundation.tres" id="theme"]
+
+[node name="Button" type="Button"]
+theme = ExtResource("theme")
+metadata/ui_foundation = true
+custom_minimum_size = Vector2(90, 68)
+theme_type_variation = &"IconEntry"
+text = "＋"
+

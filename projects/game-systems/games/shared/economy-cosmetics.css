@@ -1,0 +1,4 @@
+html[data-camp-theme="bamboo"] body{background:linear-gradient(135deg,#233d31,#3c6150)!important}html[data-camp-theme="bamboo"] .table-view{background:repeating-linear-gradient(90deg,#375d4b 0px,#375d4b 36px,#426955 37px,#426955 39px)!important;border-color:#b8bc83!important}
+
+html[data-camp-theme="bamboo"] .table-view{position:relative}html[data-camp-theme="bamboo"] .table-view::before{content:"❧　❧　❧";position:absolute;right:18px;top:12px;pointer-events:none;color:#bfd5a2;opacity:.3;font-size:25px}
+html[data-camp-theme="bamboo"] .felt{background:linear-gradient(135deg,#315e46,#466a4c)!important;border-color:#b5bd83!important}html[data-camp-theme="bamboo"] .felt::after{content:"❧　❧　❧";position:absolute;left:50%;top:20px;transform:translateX(-50%);color:#b7ca92;font-size:30px;opacity:.35;pointer-events:none}

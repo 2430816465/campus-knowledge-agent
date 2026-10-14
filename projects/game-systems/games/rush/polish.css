@@ -1,0 +1,63 @@
+/* Local gameplay palette: forest ink, parchment, gold energy, coral warnings. */
+body{background:radial-gradient(ellipse at top,#48695d,#223e39 70%)}
+.panel{background:#f5efdf;color:#253c33;border-color:#ac9867}
+.panel p,.quiet,.training small,.chapter-head small,.caption,.stat-grid span{color:#42574b}
+.btn{color:#2f4c3e;border-color:#ab9a76}.btn.primary,.btn.selected{color:#fff6dc}
+.chapter-preview{height:108px;position:relative;overflow:hidden;border:2px solid #ad9560;border-radius:10px;margin-top:12px;background-image:url('assets/environments-v7/atlas.png');background-size:300% auto;background-position-x:calc(var(--chapter) * 50%);image-rendering:pixelated}
+.chapter-preview:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#21372ee8,#21372e90 64%,transparent)}
+.chapter-preview>div{position:absolute;z-index:1;left:14px;top:22px;max-width:75%;color:#fff3cc;text-shadow:0 2px #172c24}
+.chapter-preview strong,.chapter-preview span{display:block}.chapter-preview strong{font-size:22px}.chapter-preview span{font-size:12px;margin-top:8px;line-height:1.5}
+.chapter-preview img{height:89px;position:absolute;right:9px;bottom:3px;image-rendering:pixelated}
+.stage-note{border-color:#b39150;color:#30463a}.stage-note p{color:#3b5345}
+#ability-bar{position:absolute;bottom:0;left:0;right:0;min-height:70px;padding:8px 12px max(8px,env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px;background:#203c34;border-top:2px solid #bca266;color:#f6ecd2}
+#ability-bar[hidden]{display:none}#ability-hint{flex:1;line-height:1.5;font-size:12px}
+#burst{position:relative;isolation:isolate;overflow:hidden;width:47%;min-height:48px;color:#fff5d6;background:#304d45;border:2px solid #b99f66;border-radius:9px;font-size:15px;font-weight:bold}
+#burst:before{content:'';position:absolute;inset:0;z-index:-1;width:var(--charge,0%);background:#75612e}
+#burst:disabled{opacity:1;cursor:default}#burst.ready{background:#ecd08a;color:#253c34;border-color:#fff0b7;box-shadow:0 0 8px #ecd08a55}#burst.ready:before{background:#ecd08a}
+#game[data-screen=playing][data-ability=true] canvas{height:calc(100% - 74px - env(safe-area-inset-bottom))}
+#game[data-screen=playing][data-ability=true] #announcement{bottom:calc(82px + env(safe-area-inset-bottom));font-size:12px}
+#game[data-screen=playing][data-ability=true] #announcement{display:none}
+.run-detail{padding:8px;border:1px solid #c6b886;border-radius:6px;background:#eee3c8;text-align:center}
+@media(max-width:360px){.chapter-preview{height:90px;margin-top:8px}.chapter-preview>div{left:10px;top:12px}.chapter-preview strong{font-size:18px}.chapter-preview span{font-size:11px;max-width:170px}.chapter-preview img{height:76px}.stage-note{padding:8px}.stage-note p{line-height:1.5}#ability-hint{font-size:11px}#burst{font-size:13px}}
+@media(orientation:landscape) and (max-height:500px){
+ #game[data-screen=home] .chapter-preview{grid-column:1/-1;margin:0;height:69px}
+ #game[data-screen=home] .chapter-preview>div{top:10px;left:14px}
+ #game[data-screen=home] .chapter-preview strong{font-size:19px}
+ #game[data-screen=home] .chapter-preview span{font-size:11px;margin-top:3px}
+ #game[data-screen=home] .chapter-preview img{height:64px}
+ #game[data-screen=home] .panel{gap:4px}
+ #game[data-screen=home] .stage-note p{line-height:1.2;font-size:11px}
+ #game[data-screen=home] h1{font-size:20px}
+ #game[data-screen=home] .panel{grid-template-columns:repeat(6,minmax(0,1fr));overflow:auto}
+ #game[data-screen=home] .eyebrow{grid-column:1/4;grid-row:1;align-self:center}
+ #game[data-screen=home] h1{grid-column:4/7;grid-row:1}
+ #game[data-screen=home] .wallet{grid-column:1/4;grid-row:2}
+ #game[data-screen=home] .chapter-preview{grid-column:4/7;grid-row:2/5;height:auto;min-height:100px}
+ #game[data-screen=home] .chapter-preview>div{max-width:72%;top:14px;left:10px}
+ #game[data-screen=home] .chapter-preview strong{font-size:18px}
+ #game[data-screen=home] .chapter-preview span{max-width:130px;line-height:1.5}
+ #game[data-screen=home] .chapter-preview img{height:95px;right:4px;bottom:8px}
+ #game[data-screen=home] .stage-note{grid-column:1/4;grid-row:3;padding:6px}
+ #game[data-screen=home] .panel>.primary.full{grid-column:1/4;grid-row:4}
+ #game[data-screen=home] .actions{grid-column:1/-1;grid-row:5}
+ #game[data-screen=home] [data-action=switch-mode]{grid-column:1/3;grid-row:6}
+ #game[data-screen=home] [data-action=abandon]{grid-column:3/5;grid-row:6}
+ #game[data-screen=home] [data-action=exit]{grid-column:5/7;grid-row:6}
+ #game[data-screen=home] .panel:not(:has([data-action=abandon])) [data-action=switch-mode]{grid-column:1/5}
+ #game[data-screen=home] .panel:not(:has([data-action=exit])):not(:has([data-action=abandon])) [data-action=switch-mode]{grid-column:1/-1}
+ #game[data-screen=training] .eyebrow{display:none}
+ #game[data-screen=training] h2{font-size:19px;line-height:24px;margin:0 0 4px}
+ #game[data-screen=training] .wallet{padding:5px 8px;font-size:12px}
+ #game[data-screen=training] .training{gap:8px;margin:6px 0}
+ #game[data-screen=training] .training article{padding:8px;gap:3px}
+ #game[data-screen=training] .training .btn{padding:6px;font-size:12px}
+ #game[data-screen=training] .panel>p{font-size:11px;line-height:1.4;margin:3px 0}
+ #game[data-screen=training] .panel>.full{margin-top:6px}
+}
+html[data-game-theme=rush] #burst:disabled{background:#304d45!important;color:#fff5d6!important;border-color:#b99f66!important;border-style:solid;cursor:default}
+@media(orientation:landscape) and (max-height:500px) and (min-width:520px){
+ #game[data-screen=playing][data-ability=true] canvas{height:100%}
+ #ability-bar{left:auto;right:-144px;bottom:12px;width:132px;min-height:115px;border:1px solid #bca266;border-radius:9px;flex-direction:column;gap:6px;padding:9px}
+ #ability-hint{font-size:11px;text-align:center}#burst{width:100%;font-size:13px}
+ #game[data-screen=playing][data-ability=true] #announcement{bottom:12px}
+}

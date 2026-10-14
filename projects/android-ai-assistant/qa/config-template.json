@@ -1,0 +1,53 @@
+{
+  "billingReviewed": false,
+  "architecture": "DUAL_SKILL_V1",
+  "previousMonthMicroRmb": 0,
+  "settings": {
+    "profiles": [
+      {
+        "id": "generator",
+        "name": "填写生成模型名称",
+        "endpoint": "https://api.deepseek.com/chat/completions",
+        "model": "",
+        "apiKey": "",
+        "kind": "CHAT_COMPLETIONS",
+        "contextTokens": 131072,
+        "outputTokens": 8192,
+        "inputRmbPerMillion": "",
+        "outputRmbPerMillion": "",
+        "cachedRmbPerMillion": "",
+        "pricingVerified": false,
+        "pricingSource": "填写真实价格链接、核对日期及人民币换算依据；容量也须核验",
+        "stream": false,
+        "jsonMode": true,
+        "maxTokensField": "max_tokens"
+      },
+      {
+        "id": "jev",
+        "name": "Jev",
+        "endpoint": "https://api.typesafe.ai/v1/systemone",
+        "model": "jev-latest",
+        "apiKey": "",
+        "kind": "JEV",
+        "contextTokens": 32768,
+        "outputTokens": 2048,
+        "inputRmbPerMillion": "",
+        "outputRmbPerMillion": "",
+        "cachedRmbPerMillion": "",
+        "pricingVerified": false,
+        "pricingSource": "填写Jev实际计价及经核验的容量；模板数字不是已证实规格",
+        "stream": false,
+        "jsonMode": true,
+        "maxTokensField": "max_tokens"
+      }
+    ],
+    "modelId": "generator",
+    "jevId": "jev",
+    "jevEnabled": false,
+    "goutouEnabled": true,
+    "lianaiEnabled": true,
+    "cloudConsent": false,
+    "componentNoticeAccepted": false,
+    "styleNotes": ""
+  }
+}

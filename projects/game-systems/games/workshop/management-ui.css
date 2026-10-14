@@ -1,0 +1,98 @@
+/* Management uses the available screen; one device or decision per view. */
+.management{inset:12px;width:min(680px,calc(100% - 24px));height:auto;max-height:none;margin:auto;left:auto;right:12px;animation:none}
+.management .panel-header{padding:8px 14px;min-height:48px;box-sizing:border-box}.panel-header .eyebrow{display:none}.panel-header h2{margin:0;font-size:20px}
+.management .tabs{gap:4px;margin:0 12px}.management .tabs button{flex:1;min-height:44px;padding:4px;font-size:13px}
+.management .panel-body{padding:10px 12px;overflow:auto;display:flex;flex-direction:column}.management .tab-panel{min-height:0;flex:1;margin:0}
+.management [hidden]{display:none!important}.management-time-note{margin:0;padding:4px 12px 6px;font-size:11px;text-align:center;flex:none}
+.management-subtabs{display:flex;gap:4px;margin:0 0 8px}.management-subtabs button{flex:1;min-height:44px;padding:6px 4px;font-size:12px;min-width:0;white-space:normal;line-height:1.3}
+.management-subtabs button.active{background:#965629;color:#fff7e3;border-color:#613720;font-weight:700}
+.device-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.device-list button{display:flex;align-items:center;gap:10px;min-height:80px;padding:8px;text-align:left}
+.device-list img{width:48px;height:56px;object-fit:contain;image-rendering:pixelated}.device-list b{font-size:16px}.device-list small{display:block;font-size:12px;margin-top:3px}.device-list button>span:last-child{margin-left:auto}
+.device-pager{display:flex;justify-content:center;align-items:center;gap:18px;margin-top:8px}.device-pager button{min-width:48px;min-height:44px;padding:4px;font-size:22px}
+.device-back{min-height:44px;margin-bottom:8px;padding:4px 12px}.device-detail .machine-card{grid-template-columns:80px minmax(0,1fr);padding:12px;gap:8px;max-width:500px;margin:auto}
+.device-detail .machine-icon{grid-row:1/4;width:80px;height:90px;object-fit:contain}.device-detail .machine-title{font-size:18px}.device-detail .machine-title b{font-size:13px}.device-detail .machine-card p{font-size:13px;line-height:1.5;margin:0;grid-column:2}.device-detail .machine-card button{min-height:48px;font-size:15px;margin:0;grid-column:2}.device-detail .reward-button{font-size:12px!important;min-height:44px!important}
+.quick-device{width:min(450px,calc(100% - 24px));height:auto;inset:12px 12px 12px auto}.quick-device>.tabs{display:none}.quick-device .device-back{display:block}
+.quick-device{bottom:auto;max-height:calc(100dvh - 24px)}.quick-device .panel-body{flex:0 1 auto}
+.inventory-page{display:flex;flex-direction:column;align-items:stretch!important;gap:12px!important;padding:16px!important;font-size:15px!important}.inventory-page #dust{display:flex;justify-content:space-around;font-size:15px}.inventory-page button{font-size:15px!important}
+.management .recipes{display:block}.management .recipe{grid-template-columns:68px minmax(0,1fr);padding:12px}.management .recipe .bread-icon{grid-row:1/4;grid-column:1;width:68px;height:80px;object-fit:contain}.management .recipe h3{grid-column:2;font-size:18px}.management .recipe p{grid-column:2;grid-row:2;font-size:13px;line-height:1.6}.management .recipe button{grid-column:2;grid-row:3;max-width:none;min-height:44px;width:100%;font-size:13px}
+.management .section-note{padding:0;margin:8px 0;display:block}.management .section-note button{width:100%;font-size:13px}.management #polish-status{margin:4px 0;font-size:12px}
+.management #business .business-stats{margin:8px 0;grid-template-columns:1fr 1fr;font-size:14px}.management #business .business-goal{padding:14px;margin:0}.management #business .business-goal p{font-size:15px;line-height:1.8}.management #business .distribution{margin:8px 0}.management #business .distribution button{min-height:52px;font-size:14px}.management #business .shelf-row{padding:14px;min-height:80px;font-size:14px}.management #business .shelf-row button{min-height:48px;font-size:13px}.management #business .shelf-row small{font-size:12px}.management #return-carry{min-height:44px;margin:6px 0;width:100%}.management #business-tip,.management #distribution-note{font-size:13px;line-height:1.6;margin:6px 0}
+.management .order-panel{display:grid;grid-template-columns:1fr 1fr;padding:12px;gap:10px}.management .order-title{width:auto}.management .order-title h2{font-size:20px;margin:4px 0}.management #order-story{display:none}.management .order-needs{width:auto;align-items:center;flex-wrap:wrap;gap:8px}.management .order-panel>button{grid-column:1/-1;margin:0;min-height:48px}.management #orders>.hint{font-size:12px;margin:8px 0}.management .requirement .bread-icon{width:40px;height:40px}.management .order-title p{font-size:12px;margin:6px 0}
+.management .resonances{grid-template-columns:1fr 1fr}.management .sky-heading h2{display:none}.management .sky-heading p{font-size:13px;margin:4px 0}.management .resonances button{min-height:80px}.management .ad-section{margin:0;padding:12px;gap:8px}.management .settings-actions{margin:4px 0;gap:10px}.management .settings-actions button{min-height:48px;font-size:14px}.management #exit{background:#7b3f22;color:#fff7e3;border:2px solid #522a18;font-weight:700}.management #save-status{margin:8px 0;font-size:12px}
+@media(orientation:portrait){.management{inset:12px;width:calc(100% - 24px);height:auto;max-height:none;border-radius:18px}.quick-device{inset:auto 12px 12px;height:auto;max-height:calc(100dvh - 24px)}.management .order-panel{grid-template-columns:1fr}.management .order-panel>button{grid-column:1}.management .order-needs{min-height:80px}.management .tabs button{font-size:12px}}
+@media(max-height:450px){.management{inset:8px 12px;width:min(680px,calc(100% - 24px))}.quick-device{width:min(450px,calc(100% - 24px))}.management .panel-body{padding:6px 12px}.management-subtabs{margin-bottom:6px}.device-list button{min-height:68px}.device-list img{height:44px;width:44px}.device-detail .machine-card{padding:8px;gap:6px}.device-detail .machine-title{font-size:17px}.management .recipe{padding:8px;gap:4px}.management .recipe p{line-height:1.35;margin:0}.management .section-note{margin:6px 0}.management .order-panel{padding:8px;gap:6px}.management .settings-actions{gap:8px}.management .settings-actions button{min-height:44px}.management .sky-heading p{font-size:12px}.management .sky-heading strong{font-size:18px}.management .resonances button{padding:8px;min-height:70px}.management .hint{margin:4px 0}.management #polish-status{font-size:11px}}
+/* Two columns put the recipe summary beside its action on short landscape screens. */
+@media(max-height:450px) and (orientation:landscape){.management .tabs{margin-bottom:0}.management .recipe{grid-template-columns:60px minmax(0,1fr) minmax(120px,.6fr);min-height:95px}.management .recipe .bread-icon{grid-row:1/3;width:60px;height:64px}.management .recipe h3{grid-column:2;grid-row:1}.management .recipe p{grid-column:2;grid-row:2}.management .recipe button{grid-column:3;grid-row:1/3}.management #polish-status{line-height:1.4}.management .order-title h2{font-size:18px;line-height:1.2}.management #orders>.hint{line-height:1.4;margin:4px 0}.management #order-progress{margin:6px 0 3px}.management .order-panel{margin:0}.management .sky-heading p{line-height:1.4}.management .resonances{margin:6px 0}.management-time-note{line-height:14px;padding:2px 12px 4px}}
+@media(max-height:450px) and (orientation:landscape){.management .recipe{min-height:88px}.management .resonances button{min-height:68px}.management .sky-heading{margin-bottom:4px}}
+@media(max-height:450px) and (orientation:landscape){.management #business .business-stats{margin:4px 0;font-size:13px}.management #business .business-stats span{padding:6px;line-height:18px}.management #business-tip{font-size:12px;line-height:1.4}}
+@media(orientation:landscape){.management.quick-device{left:auto;bottom:auto}}
+
+/* Content-sized sheets and direct actions keep the shop visible behind management. */
+#management.management{top:12px;bottom:auto;height:auto;max-height:calc(100dvh - 24px);background:#fff0d2;}
+#management .panel-body{flex:0 1 auto;overflow:auto;scrollbar-gutter:stable;}
+#management .tab-panel{flex:none;}
+#management .device-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;align-items:stretch;}
+#management .device-grid .machine-card{display:grid;grid-template-columns:46px minmax(0,1fr);grid-template-rows:auto 1fr auto auto;gap:7px;padding:10px;min-width:0;margin:0;align-items:start;}
+#management .device-grid .machine-icon{width:44px;height:50px;grid-column:1;grid-row:1;object-fit:contain;}
+#management .device-grid .machine-title{grid-column:2;display:block;font-size:15px;line-height:1.35;align-self:center;}
+#management .device-grid .machine-title b{display:block;font-size:11px;line-height:1.5;margin-top:3px;}
+#management .device-grid .machine-card p{grid-column:1/-1;grid-row:2;font-size:12px;line-height:1.5;margin:0;min-height:36px;}
+#management .device-grid .machine-card button{grid-column:1/-1;font-size:12px;line-height:1.35;min-height:44px;width:100%;margin:0;padding:6px;}
+#management .device-grid .machine-card .reward-button{font-size:11px;}
+#management .device-grid .machine-card:only-child{grid-column:1/-1;grid-template-columns:70px minmax(0,1fr) minmax(145px,.5fr);}
+#management .device-grid .machine-card:only-child .machine-icon{width:65px;height:72px;grid-row:1/3;}
+#management .device-grid .machine-card:only-child .machine-title{grid-column:2;}
+#management .device-grid .machine-card:only-child p{grid-column:2;}
+#management .device-grid .machine-card:only-child button{grid-column:3;grid-row:1/3;align-self:center;}
+#management .device-grid .machine-card:only-child .reward-button{grid-row:3;}
+#management .recipes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}
+#management .recipe{grid-template-columns:44px minmax(0,1fr);grid-template-rows:auto auto auto;gap:4px;padding:9px;min-height:0;}
+#management .recipe .bread-icon{width:42px;height:52px;grid-row:1/3;}
+#management .recipe h3{font-size:15px;grid-row:1;}
+#management .recipe p{font-size:11px;line-height:1.45;grid-row:2;}
+#management .recipe button{grid-column:1/-1;grid-row:3;min-height:44px;font-size:12px;}
+#management #shelf-stock{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}
+#management #shelf-stock .shelf-row{display:grid;grid-template-columns:36px 1fr;gap:6px;padding:10px;min-height:0;}
+#management #shelf-stock button{grid-column:1/-1;}
+#management .management-time-note{padding:5px 12px;font-size:11px;color:#66462f;background:#f4dfb8;border-top:1px solid #c6a575;}
+#management .device-detail .machine-title b{display:block;}
+@media(orientation:portrait){
+ #management.management{inset:auto 12px 12px;max-height:calc(100dvh - 120px);border-radius:14px;}
+ #management .device-grid{grid-template-columns:1fr;}
+ #management .device-grid .machine-card{grid-template-columns:44px minmax(0,1fr) minmax(106px,.62fr);grid-template-rows:auto auto;gap:4px 8px;}
+ #management .device-grid .machine-icon{grid-row:1/3;align-self:center;}
+ #management .device-grid .machine-card p{grid-column:2;font-size:11px;min-height:0;}
+ #management .device-grid .machine-card button{grid-column:3;grid-row:1/3;align-self:center;}
+ #management .device-grid .machine-card .reward-button{grid-column:2/-1;grid-row:3;}
+ #management .device-grid .machine-card:only-child{grid-template-columns:48px 1fr;}
+ #management .device-grid .machine-card:only-child .machine-icon{width:44px;height:58px;}
+ #management .device-grid .machine-card:only-child button{grid-column:1/-1;grid-row:3;}
+ #management .recipes{grid-template-columns:1fr;}
+ #management .recipe{grid-template-columns:42px minmax(0,1fr) minmax(100px,.55fr);}
+ #management .recipe button{grid-column:3;grid-row:1/3;}
+}
+@media(orientation:landscape) and (max-height:450px){
+ #management.management{top:8px;bottom:auto;max-height:calc(100dvh - 16px);}
+ #management .device-grid .machine-card{padding:8px;gap:5px;}
+ #management .device-grid .machine-card p{font-size:11px;}
+ #management .recipes{grid-template-columns:repeat(2,minmax(0,1fr));}
+ #management .recipe{grid-template-columns:34px minmax(0,1fr) 100px;min-height:84px;padding:7px;}
+ #management .recipe .bread-icon{width:32px;height:44px;}
+ #management .recipe h3{font-size:13px;}
+ #management .recipe button{grid-column:3;grid-row:1/3;font-size:11px;}
+}
+@media(max-width:360px){#management .device-grid .machine-card{grid-template-columns:36px minmax(0,1fr) 98px;}#management .device-grid .machine-icon{width:34px;}#management .device-grid .machine-title{font-size:13px;}#management .device-grid .machine-card button{font-size:11px;}#management .recipe{grid-template-columns:32px minmax(0,1fr) 90px;}#management .recipe .bread-icon{width:30px;}}
+/* Small landscape phones share the title row with the main tabs. */
+@media(orientation:landscape) and (max-height:360px){
+ #management .panel-header{position:absolute;top:4px;right:8px;padding:0;min-height:44px;z-index:2;}
+ #management .panel-header h2{display:none;}
+ #management>.tabs{margin:6px 62px 2px 12px;}
+ #management>.tabs button{min-width:0;min-height:44px;}
+ #management .panel-body{padding-top:4px;}
+ #management .device-grid .machine-icon{height:42px;width:40px;}
+ #management .device-grid .machine-title{font-size:14px;}
+ #management .device-grid .machine-card{grid-template-rows:auto 1fr auto auto;}
+ #management .device-grid .machine-card p{min-height:33px;}
+}
+#management #shelf-stock .shelf-row{margin:0;background:#f8e5bd;border:1px solid #c6a575;border-radius:6px;}
+@media(orientation:portrait){#management>.tabs{overflow-x:visible;}#management>.tabs button{min-width:0;padding:4px 2px;}}

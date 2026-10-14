@@ -1,0 +1,208 @@
+{
+  "contract_version": 1,
+  "game": {
+    "name": "勇者棋牌",
+    "genre": "hidden-information turn-based cards and Nanjing mahjong",
+    "target_platforms": [
+      "desktop browsers",
+      "mobile browsers",
+      "Android WebView with CampLan"
+    ]
+  },
+  "session": {
+    "pace": "turn-based",
+    "fairness": "casual competitive; no real money or persistent currency",
+    "players_min": 1,
+    "players_max": 4,
+    "join_model": "six-digit invite rooms or per-game server matchmaking; bots fill vacant seats",
+    "late_join": "only token-bound original members during a match"
+  },
+  "topology": {
+    "model": "dedicated-authoritative",
+    "authority_owner": "match server",
+    "trust_assumptions": [
+      "Internet and desktop LAN use an independent server; clients never author cards or scores",
+      "Android LAN phone host and local practice worker are trusted; host can inspect authority state"
+    ],
+    "host_migration": "server room owner transfers to another human; Android authority cannot migrate if host exits",
+    "risk_acceptance": [
+      "Phone-hosted LAN is for trusted friends; use independent public backend for hidden-hand integrity",
+      "Public Internet play requires a deployed TLS server; no public service is bundled"
+    ]
+  },
+  "authority": [
+    {
+      "domain": "turn order",
+      "owner": "match server (trusted worker for phone LAN/practice)",
+      "client_can_request": [
+        "bid",
+        "play",
+        "discard",
+        "claim",
+        "pass"
+      ],
+      "authority_validation": [
+        "caller is active player or eligible claimant",
+        "server revision is current",
+        "request identifier has not already applied"
+      ]
+    },
+    {
+      "domain": "hidden hands",
+      "owner": "match server (trusted worker for phone LAN/practice)",
+      "client_can_request": [
+        "select owned physical card ids"
+      ],
+      "authority_validation": [
+        "distinct identifiers belong to caller",
+        "only own hand appears in snapshots",
+        "bots consume the same private/public snapshot as human clients"
+      ]
+    },
+    {
+      "domain": "match result",
+      "owner": "match server (trusted worker for phone LAN/practice)",
+      "client_can_request": [
+        "next round"
+      ],
+      "authority_validation": [
+        "only room owner after settlement",
+        "rules calculate zero-sum scores and upgrades on authority"
+      ]
+    },
+    {
+      "domain": "room options",
+      "owner": "match server (trusted worker for phone LAN/practice)",
+      "client_can_request": [
+        "create",
+        "configure",
+        "ready",
+        "start"
+      ],
+      "authority_validation": [
+        "options restricted to documented values",
+        "only room owner configures or starts",
+        "all connected humans ready before start"
+      ]
+    }
+  ],
+  "simulation": {
+    "clock": "monotonic server revision and authority deadlines",
+    "tick_rate_hz": null,
+    "tick_rate_basis": "This game resolves discrete commands and does not require a continuous simulation tick.",
+    "prediction": "Client may preview legal targets but never applies an outcome as final.",
+    "reconciliation": "Server command result replaces pending client preview state by action identifier.",
+    "measurement_plan": "Record command/reconnect timings in integration test output; test separate sockets under clean and delayed/duplicate conditions"
+  },
+  "replication": {
+    "model": "reliable commands plus canonical state snapshots",
+    "reliability_classes": {
+      "game commands": "reliable ordered and idempotent",
+      "presence": "replaceable latest state",
+      "private hand": "reliable authorized snapshot"
+    },
+    "interest_management": "All public match state reaches members; private hand state reaches only its owner.",
+    "hidden_state": "The server never sends another player's private hand to a client."
+  },
+  "transport": {
+    "primary": "WebSocket over TLS",
+    "rationale": "Broad target-browser support and reliable ordered turn commands fit this discrete simulation.",
+    "fallback": "Android LAN uses CampLan WebSocket bridge; explicit solo practice uses the identical Rooms service in a worker. No silent fallback for public matches.",
+    "backpressure": "Reuse bounded WebSocket framing: 16KiB messages, 32KiB receive buffer, 128KiB queued writes; overflow disconnects then authorized resnapshot"
+  },
+  "lifecycle": {
+    "states": [
+      "joining",
+      "queued",
+      "lobby",
+      "playing",
+      "reconnecting",
+      "roundEnd",
+      "finished",
+      "closed"
+    ],
+    "reconnect": "Cryptographically random room-and-seat-bound token plus client id; reject takeover while connected; canonical private snapshot on resume",
+    "disconnect": "Absent seats are controlled by bots; token reconnect within 30 seconds resumes the same seat. After grace the bot keeps the seat. Rooms without humans expire.",
+    "version_policy": "Reject incompatible protocol versions before match membership or state mutation."
+  },
+  "security": {
+    "identity": "Opaque crypto-random resume token, bound to room/seat/client id; guest display names are not identities",
+    "authorization": "Check match membership, phase, ownership, and action permission for every message.",
+    "validation": [
+      "schema/type and option bounds",
+      "physical ownership, legal combinations, phase and current revision",
+      "deduplicate successfully applied request identifiers"
+    ],
+    "abuse_controls": [
+      "explicit origin allowlist",
+      "message size limit",
+      "per-user command rate limit",
+      "idle timeout and bounded queues"
+    ],
+    "logging": "Only aggregate room/peer counts and rejected command categories; never log tokens or hands"
+  },
+  "observability": {
+    "metrics": [
+      "joins",
+      "resumes",
+      "rejections",
+      "applied commands",
+      "active rooms",
+      "queued players"
+    ],
+    "traces": [
+      "room code",
+      "revision",
+      "request id"
+    ],
+    "alerts": [
+      "bounded-room/peer limits reject new joins",
+      "worker or socket failures shown to user"
+    ]
+  },
+  "verification": {
+    "network_conditions": [
+      {
+        "name": "clean control",
+        "latency_ms": 0,
+        "jitter_ms": 0,
+        "loss_percent": 0,
+        "reorder_percent": 0
+      },
+      {
+        "name": "application delayed and duplicated delivery",
+        "latency_ms": 150,
+        "jitter_ms": 40,
+        "loss_percent": 0,
+        "reorder_percent": 0
+      }
+    ],
+    "scenarios": [
+      "independent clients see different private hands",
+      "duplicate and stale commands",
+      "bot replacement and token reconnect",
+      "invalid card ownership and claim priority",
+      "complete bot matches across four modes",
+      "landscape mobile viewport including maximum 33-card landlord hand"
+    ],
+    "acceptance": [
+      "No unauthorized private hand in captures",
+      "Duplicate or stale commands do not mutate cards/scores",
+      "Reconnect resumes original seat with current hand",
+      "Scores sum to zero and each physical card appears exactly once",
+      "Every mode reaches a legal round settlement"
+    ]
+  },
+  "decisions": [
+    {
+      "decision": "Reuse current camp WebSocket and phone bridge with a distinct /chess-ws endpoint",
+      "reason": "Preserves existing games and provides the same deployment for LAN and Internet",
+      "evidence": "Existing games/liars/server.mjs and Android CampLan bridge"
+    },
+    {
+      "decision": "Document Nanjing variant rather than claim exact Tencent parity",
+      "reason": "Operator sources disagree on bases and bonuses; screenshot supplies toggles, not their definitions",
+      "evidence": "User accepts common rules; gametea.com/news/201905/8708.html and static.laiyouxi.com/games/44.html"
+    }
+  ]
+}

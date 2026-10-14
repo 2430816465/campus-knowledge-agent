@@ -1,0 +1,84 @@
+/* Secondary screens share the tower HUD's dark stone, blue steel and amber light. */
+:root{--ui-night:#061326;--ui-stone:#0b1c32;--ui-line:#557998;--ui-gold:#f5c47a;--ui-text:#e4efff}
+#modal:not(.dialogue-modal),#manualOverlay{background:#010715d9;backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);padding:max(12px,env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left));align-items:center;justify-content:center}
+#modal:not(.dialogue-modal) .sheet,.manual-sheet{position:relative;width:min(92vw,620px);max-height:min(84dvh,840px);padding:22px;border:3px solid #ba7d42;border-radius:16px;background:linear-gradient(145deg,#12233f 0%,#071429 35%,#061122 100%);box-shadow:0 0 0 4px #030a17,0 0 0 6px #3e5873,0 20px 55px #000d,inset 0 1px #ffd28c8c,inset 0 0 36px #03070f;overflow-y:auto;overscroll-behavior:contain;color:var(--ui-text);animation:sheet-rise .16s ease-out both}
+#modal:not(.dialogue-modal) .sheet::before,.manual-sheet::before{content:'';position:absolute;top:7px;left:10px;right:10px;height:5px;border-top:1px solid #d99a55;border-bottom:1px solid #405d7e;pointer-events:none;background:none}
+#modal:not(.dialogue-modal) .sheet h2,.manual-head h2{margin:0 0 16px;padding:3px 5px 12px;border-bottom:1px solid #89623b;color:#ffce7f;font-size:clamp(19px,4.5vw,28px);font-weight:900;letter-spacing:.08em;line-height:1.25;text-shadow:0 2px #422918,0 0 10px #d8762750}
+#modal:not(.dialogue-modal) .mbody{color:#d6e4f6;font-size:clamp(14px,3.3vw,17px);line-height:1.55}
+#modal:not(.dialogue-modal) .mbody p{margin:6px 0 12px}
+#modal:not(.dialogue-modal) .mbody b{color:#ffdc91}
+#modal:not(.dialogue-modal) .mfoot{display:flex;flex-wrap:wrap;gap:9px;justify-content:flex-end;margin-top:18px}
+#modal:not(.dialogue-modal) .mfoot button,.manual-head button,#modal:not(.dialogue-modal) .mbody button{min-height:44px;border:2px solid #54799b;border-radius:8px;background:linear-gradient(#153050,#081a33);color:#e7f1ff;font-weight:700;box-shadow:inset 0 1px #92b1ce60,inset 0 -2px #020815;touch-action:manipulation}
+#modal:not(.dialogue-modal) button.primary{border-color:#edaa56;background:linear-gradient(#76502d,#33261f);color:#ffe1a1;box-shadow:inset 0 1px #ffe2a581,0 0 10px #a35c284a}
+#modal:not(.dialogue-modal) button.danger{border-color:#d77670;background:linear-gradient(#703030,#321c27);color:#ffe1dc}
+#modal:not(.dialogue-modal) button:disabled{opacity:.42;box-shadow:none}
+#modal:not(.dialogue-modal) button:focus-visible,.manual-sheet button:focus-visible{outline:2px solid #ffe1a1;outline-offset:2px}
+#modal:not(.dialogue-modal) .shoplist{gap:8px;margin-top:12px}
+#modal:not(.dialogue-modal) .shoprow{min-height:58px;padding:10px 13px;gap:12px;text-align:left}
+#modal:not(.dialogue-modal) .shoprow span:first-child{min-width:0;overflow-wrap:anywhere}
+#modal:not(.dialogue-modal) .shoprow .cost{flex:none;color:#ffd078;font-size:.88em}
+#modal:not(.dialogue-modal) .notes-section{border-color:#617b9960}
+#modal:not(.dialogue-modal) .note-entry{background:#10213b;border-left:3px solid #d59858}
+#modal:not(.dialogue-modal) .test-option{background:#0b1d35;border-color:#4a6b8d;border-radius:9px}
+#modal:not(.dialogue-modal) .test-option small{font-size:12px;color:#bdcde2}
+.settings-list{display:flex;flex-direction:column;gap:9px}
+.settings-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px;border:1px solid #4e7191;border-radius:9px;background:#0a1b33}
+.settings-row>span{display:flex;flex-direction:column;gap:4px;min-width:0}
+.settings-row b{color:#ffe0a1!important;font-size:15px}
+.settings-row small{color:#b8cae1;font-size:12px;line-height:1.45}
+.settings-row button{flex:none;font-size:12px}
+#modal:not(.dialogue-modal) select,#modal:not(.dialogue-modal) input:not([type=checkbox]){background:#07172d;color:#f2e8d6;border:2px solid #6384a1;border-radius:7px;min-height:42px}
+#modal:not(.dialogue-modal) .dpad button{min-width:54px}
+#modal:not(.dialogue-modal) .monster-preview{display:flex;align-items:center;gap:18px;padding:14px;border:1px solid #5b7b9a;border-radius:10px;background:linear-gradient(130deg,#122b49,#08172e)}
+#modal:not(.dialogue-modal) .monster-preview-art{width:82px;height:82px;flex:0 0 82px;image-rendering:pixelated;background:#071225;border:2px solid #8a6d4c;border-radius:8px}
+#modal:not(.dialogue-modal) .monster-preview-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;flex:1;min-width:0}
+#modal:not(.dialogue-modal) .monster-preview-stats span{display:flex;justify-content:space-between;gap:6px;padding:7px 8px;background:#07162b;border:1px solid #385a79;border-radius:6px;font-size:13px;white-space:nowrap}
+#modal:not(.dialogue-modal) .monster-preview-result{margin-top:12px;padding:12px 14px;border-radius:8px;border:1px solid #577796;background:#0a1c33;font-weight:800}
+#modal:not(.dialogue-modal) .monster-preview-result.safe{border-color:#5f9e7a;color:#a5e7b4}
+#modal:not(.dialogue-modal) .monster-preview-result.warn{border-color:#bd9558;color:#ffdb8d}
+#modal:not(.dialogue-modal) .monster-preview-result.danger{border-color:#b55a64;color:#ff9daa}
+.manual-sheet{display:flex;flex-direction:column;gap:0;width:min(94vw,720px);max-height:min(84dvh,840px);overflow:hidden;animation:sheet-rise .16s ease-out both}
+/* NPC speech is one stone-and-brass panel, not a bordered panel nested in another. */
+#modal.dialogue-modal .sheet{padding:0;border:2px solid #b98548;border-radius:8px;background:linear-gradient(145deg,#132a47,#08182f 72%);box-shadow:0 8px 24px #000c,inset 0 0 0 1px #f7c67955,inset 0 -10px 22px #030914}
+#modal.dialogue-modal .mbody{max-height:inherit}
+#modal.dialogue-modal .dialogue-layout{border:0;border-radius:6px;background:transparent;padding:14px;align-items:start}
+#modal.dialogue-modal .dialogue-face{border:1px solid #bc8b50;border-radius:5px;background:#07182c;box-shadow:inset 0 0 0 1px #e5bf7970}
+#modal.dialogue-modal .dialogue-tail{position:fixed;z-index:41;width:auto;height:auto;background:none;clip-path:none;overflow:visible;pointer-events:none}
+#modal.dialogue-modal .dialogue-tail::after{content:none}
+#modal.dialogue-modal .dialogue-copy{color:#eaf3ff;font-size:clamp(20px,2.4vw,27px);font-weight:650;line-height:1.42}
+#modal.dialogue-modal .dialogue-speaker{color:#ffd58c;font-size:clamp(21px,2.5vw,28px);text-shadow:0 1px #2f1b0b}
+#modal.dialogue-modal .dialogue-page{color:#a9bed5}
+#modal.dialogue-modal .dialogue-choice{border:1px solid #ba884d;border-radius:4px;background:#1b3553;color:#ffe4a8}
+@media(max-width:480px){#modal.dialogue-modal .sheet{border-width:2px;border-radius:6px}#modal.dialogue-modal .dialogue-layout{padding:6px}#modal.dialogue-modal .dialogue-copy{font-size:14px}#modal.dialogue-modal .dialogue-speaker{font-size:15px}}
+.manual-head{gap:10px;flex:none}
+.manual-head h2{flex:1;margin-bottom:10px}
+.manual-head button{min-height:40px;padding:7px 13px;white-space:nowrap}
+.manual-head #btnBookAll[hidden]{display:none}
+#manualOverlay #book{display:flex;flex-direction:column;gap:8px;max-height:none;padding:2px 3px 4px;scrollbar-color:#8e6546 #09182c}
+#manualOverlay #book>.dim{padding:28px 8px;text-align:center;font-size:15px}
+#manualOverlay .monrow{display:grid;grid-template-columns:68px minmax(0,1fr);gap:12px;min-height:86px;padding:10px;border:1px solid #587996;border-radius:10px;background:linear-gradient(125deg,#172e4a,#09182f);box-shadow:inset 0 1px #afc4d338}
+#manualOverlay .monicon{width:62px;height:62px;image-rendering:pixelated;border:1px solid #94744e;border-radius:6px;background:#071327}
+#manualOverlay .moninfo{min-width:0}
+#manualOverlay .monname{margin-bottom:5px;color:#ffe0a1;font-size:17px;font-weight:800}
+#manualOverlay .monstat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;white-space:normal;color:#b9cee5;font-size:11px}
+#manualOverlay .monstat span{padding:4px;background:#07172d;border-radius:4px;text-align:center;white-space:nowrap}
+#manualOverlay .monstat b{display:block;color:#f1f6ff;font-size:13px}
+#manualOverlay .monforecast{margin-top:6px;font-size:12px;line-height:1.35;color:#c6d6e8}
+#manualOverlay .monforecast .small{font-size:11px}
+@media(max-width:620px){
+  #modal:not(.dialogue-modal) .sheet,.manual-sheet{width:min(94vw,560px);max-height:calc(100dvh - 32px);padding:17px 13px;border-width:2px;border-radius:12px}
+  #modal:not(.dialogue-modal) .sheet h2,.manual-head h2{font-size:20px;margin-bottom:10px}
+  #modal:not(.dialogue-modal) .mfoot button{flex:1 1 auto;min-width:30%}
+  #modal:not(.dialogue-modal) .monster-preview{gap:9px;padding:9px}
+  #modal:not(.dialogue-modal) .monster-preview-art{width:64px;height:64px;flex-basis:64px}
+  #modal:not(.dialogue-modal) .monster-preview-stats{gap:4px}
+  #modal:not(.dialogue-modal) .monster-preview-stats span{padding:5px 4px;font-size:11px}
+  .manual-head button{font-size:12px;padding:6px 8px}
+  #manualOverlay .monrow{grid-template-columns:54px minmax(0,1fr);gap:8px;padding:7px;min-height:72px}
+  #manualOverlay .monicon{width:50px;height:50px}
+  #manualOverlay .monname{font-size:14px}
+  #manualOverlay .monstat{gap:2px;font-size:9px}
+  #manualOverlay .monstat span{padding:3px 1px}
+  #manualOverlay .monstat b{font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){#modal:not(.dialogue-modal) .sheet,.manual-sheet{animation:none}}

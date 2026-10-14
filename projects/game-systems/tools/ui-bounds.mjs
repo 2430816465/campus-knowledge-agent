@@ -1,0 +1,5 @@
+import {chromium} from 'file:///C:/Users/24308/.codex/skills/develop-web-game/node_modules/playwright/index.mjs';
+const b=await chromium.launch(),p=await b.newPage({viewport:{width:390,height:844}});await p.goto('http://localhost:4210');await p.locator('.nav [data-action="nav:collection"]').click();await p.waitForTimeout(400);
+console.log(await p.evaluate(()=>['body','.shell','.topbar','#main','.nav','.camp-dashboard','.catalog-heading'].map(s=>{const e=document.querySelector(s),c=getComputedStyle(e),r=e.getBoundingClientRect();return {s,h:r.height,y:r.y,scroll:e.scrollTop,position:c.position,margin:c.margin,padding:c.padding,display:c.display,overflow:c.overflow}})));
+await p.screenshot({path:'artifacts/ui-redesign/collection-check.png'});
+await p.setViewportSize({width:640,height:360});await p.waitForTimeout(300);console.log(await p.evaluate(()=>['body','.shell','.topbar','#main','.nav'].map(s=>{const e=document.querySelector(s),c=getComputedStyle(e),r=e.getBoundingClientRect();return {s,h:r.height,y:r.y,position:c.position,margin:c.margin,padding:c.padding,display:c.display}})));await b.close();

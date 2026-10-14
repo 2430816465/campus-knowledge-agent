@@ -1,0 +1,339 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Theme" path="res://assets/ui-foundation/foundation.tres" id="theme"]
+[ext_resource type="Script" path="res://scripts/ui/forge_home.gd" id="script"]
+[ext_resource type="Texture2D" path="res://assets/ui-foundation/background.png" id="bg"]
+[ext_resource type="Texture2D" path="res://assets/ui-foundation/forge-subject.png" id="subject"]
+[ext_resource type="Texture2D" path="res://assets/avatars/yangjian-premium.webp" id="avatar"]
+[ext_resource type="PackedScene" path="res://scenes/ui/components/function_entry.tscn" id="entry"]
+[ext_resource type="PackedScene" path="res://scenes/ui/components/resource_bar.tscn" id="resource"]
+[ext_resource type="PackedScene" path="res://scenes/ui/components/equipment_card.tscn" id="card"]
+
+[ext_resource type="PackedScene" path="res://scenes/ui/components/bottom_navigation.tscn" id="navigation"]
+
+[node name="ForgeHome" type="Control"]
+theme = ExtResource("theme")
+metadata/ui_foundation = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("script")
+
+
+[node name="Backdrop" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 6
+texture = ExtResource("bg")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+
+[node name="Design" type="Control" parent="."]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 941.0
+offset_bottom = 1672.0
+mouse_filter = 2
+
+
+[node name="SceneBackground" type="TextureRect" parent="Design"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 941.0
+offset_bottom = 1672.0
+texture = ExtResource("bg")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+
+[node name="Subject" type="TextureRect" parent="Design"]
+offset_left = 95.0
+offset_top = 124.0
+offset_right = 795.0
+offset_bottom = 714.0
+texture = ExtResource("subject")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+
+[node name="FurnaceLabel" type="Label" parent="Design"]
+offset_left = 502.0
+offset_top = 644.0
+offset_right = 652.0
+offset_bottom = 692.0
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(1,0.93,0.63,1)
+theme_override_colors/font_outline_color = Color(0.1,0.2,0.15,1)
+theme_override_constants/outline_size = 5
+text = "炼器台"
+theme_override_font_sizes/font_size = 30
+mouse_filter = 2
+
+
+[node name="Profile" type="PanelContainer" parent="Design"]
+offset_left = 20.0
+offset_top = 65.0
+offset_right = 375.0
+offset_bottom = 183.0
+
+
+[node name="Info" type="HBoxContainer" parent="Design/Profile"]
+
+
+[node name="Avatar" type="TextureRect" parent="Design/Profile/Info"]
+custom_minimum_size = Vector2(94,94)
+texture = ExtResource("avatar")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+
+[node name="Words" type="VBoxContainer" parent="Design/Profile/Info"]
+
+
+[node name="Title" type="Label" parent="Design/Profile/Info/Words"]
+text = "洪荒众仙府"
+theme_override_font_sizes/font_size = 30
+mouse_filter = 2
+
+
+[node name="Realm" type="Label" parent="Design/Profile/Info/Words"]
+offset_top = 55.0
+text = "未入道"
+theme_override_font_sizes/font_size = 25
+mouse_filter = 2
+
+
+[node name="ResourceShade" type="PanelContainer" parent="Design"]
+offset_left = 391.0
+offset_top = 85.0
+offset_right = 924.0
+offset_bottom = 139.0
+theme_type_variation = &"Nav"
+mouse_filter = 2
+
+
+[node name="Resources" type="HBoxContainer" parent="Design"]
+offset_left = 395.0
+offset_top = 86.0
+offset_right = 920.0
+offset_bottom = 138.0
+theme_override_constants/separation = 8
+
+
+[node name="Stone" parent="Design/Resources" instance=ExtResource("resource")]
+size_flags_horizontal = 3
+
+
+[node name="XP" parent="Design/Resources" instance=ExtResource("resource")]
+size_flags_horizontal = 3
+resource_id = "xp"
+caption = "修为"
+amount = 64000
+
+
+[node name="Entries" type="Control" parent="Design"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 941.0
+offset_bottom = 714.0
+mouse_filter = 2
+
+
+[node name="Tasks" parent="Design/Entries" instance=ExtResource("entry")]
+offset_left = 20.0
+offset_top = 268.0
+offset_right = 140.0
+offset_bottom = 393.0
+caption = "任务"
+icon_key = "scroll"
+metadata/route = "046"
+
+
+[node name="Events" parent="Design/Entries" instance=ExtResource("entry")]
+offset_left = 20.0
+offset_top = 405.0
+offset_right = 140.0
+offset_bottom = 530.0
+caption = "活动"
+icon_key = "events"
+metadata/route = "083"
+
+
+[node name="Summon" parent="Design/Entries" instance=ExtResource("entry")]
+offset_left = 20.0
+offset_top = 538.0
+offset_right = 140.0
+offset_bottom = 663.0
+caption = "召唤"
+icon_key = "summon"
+metadata/route = "summon"
+
+
+[node name="Guild" parent="Design/Entries" instance=ExtResource("entry")]
+offset_left = 802.0
+offset_top = 146.0
+offset_right = 922.0
+offset_bottom = 271.0
+caption = "仙盟"
+icon_key = "guild"
+metadata/route = "guild"
+
+
+[node name="Gear" parent="Design/Entries" instance=ExtResource("entry")]
+offset_left = 802.0
+offset_top = 278.0
+offset_right = 922.0
+offset_bottom = 403.0
+caption = "装备"
+icon_key = "battle"
+metadata/route = "003"
+
+
+[node name="Beast" parent="Design/Entries" instance=ExtResource("entry")]
+offset_left = 802.0
+offset_top = 410.0
+offset_right = 922.0
+offset_bottom = 535.0
+caption = "灵兽"
+icon_key = "beast"
+metadata/route = "012"
+
+
+[node name="Spirit" parent="Design/Entries" instance=ExtResource("entry")]
+offset_left = 802.0
+offset_top = 541.0
+offset_right = 922.0
+offset_bottom = 666.0
+caption = "精怪"
+icon_key = "taiji"
+metadata/route = "015"
+
+
+[node name="Power" type="PanelContainer" parent="Design"]
+offset_left = 9.0
+offset_top = 718.0
+offset_right = 932.0
+offset_bottom = 790.0
+
+
+[node name="Row" type="HBoxContainer" parent="Design/Power"]
+
+
+[node name="Value" type="Label" parent="Design/Power/Row"]
+size_flags_horizontal = 3
+text = "战力 0"
+theme_override_font_sizes/font_size = 42
+mouse_filter = 2
+
+
+[node name="Hint" type="Label" parent="Design/Power/Row"]
+vertical_alignment = 1
+text = "继续炼器，提升实力"
+theme_override_font_sizes/font_size = 28
+mouse_filter = 2
+
+
+[node name="Comparison" type="PanelContainer" parent="Design"]
+offset_left = 20.0
+offset_top = 802.0
+offset_right = 921.0
+offset_bottom = 1335.0
+
+
+[node name="Content" type="VBoxContainer" parent="Design/Comparison"]
+
+
+[node name="Title" type="Label" parent="Design/Comparison/Content"]
+horizontal_alignment = 1
+text = "本次炼器"
+theme_override_font_sizes/font_size = 46
+mouse_filter = 2
+
+
+[node name="CardMargins" type="MarginContainer" parent="Design/Comparison/Content"]
+size_flags_vertical = 3
+theme_override_constants/margin_left = 56
+theme_override_constants/margin_right = 56
+[node name="Cards" type="HBoxContainer" parent="Design/Comparison/Content/CardMargins"]
+size_flags_vertical = 3
+theme_override_constants/separation = 85
+
+
+[node name="Current" parent="Design/Comparison/Content/CardMargins/Cards" instance=ExtResource("card")]
+size_flags_horizontal = 3
+
+
+[node name="New" parent="Design/Comparison/Content/CardMargins/Cards" instance=ExtResource("card")]
+size_flags_horizontal = 3
+
+
+[node name="ButtonMargins" type="MarginContainer" parent="Design/Comparison/Content"]
+theme_override_constants/margin_left = 138
+theme_override_constants/margin_right = 138
+[node name="Actions" type="HBoxContainer" parent="Design/Comparison/Content/ButtonMargins"]
+theme_override_constants/separation = 90
+
+
+[node name="Salvage" type="Button" parent="Design/Comparison/Content/ButtonMargins/Actions"]
+text = "分解"
+custom_minimum_size = Vector2(0,76)
+size_flags_horizontal = 3
+
+
+[node name="Equip" type="Button" parent="Design/Comparison/Content/ButtonMargins/Actions"]
+text = "装备"
+custom_minimum_size = Vector2(0,76)
+size_flags_horizontal = 3
+theme_type_variation = &"Gold"
+
+
+[node name="Forge" type="Button" parent="Design"]
+offset_left = 164.0
+offset_top = 1315.0
+offset_right = 778.0
+offset_bottom = 1450.0
+text = "炼 器"
+theme_type_variation = &"Primary"
+
+
+[node name="Cost" type="Label" parent="Design"]
+offset_left = 164.0
+offset_top = 1462.0
+offset_right = 778.0
+offset_bottom = 1504.0
+horizontal_alignment = 1
+text = "—  基础炼器 · 免费  —"
+theme_override_font_sizes/font_size = 27
+mouse_filter = 2
+
+
+[node name="TestLabel" type="Label" parent="Design"]
+offset_left = 15.0
+offset_top = 8.0
+offset_right = 415.0
+offset_bottom = 36.0
+text = ""
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(1,1,0.9,1)
+theme_override_colors/font_outline_color = Color(0.1,0.2,0.15,1)
+theme_override_constants/outline_size = 3
+mouse_filter = 2
+
+
+[node name="Navigation" parent="Design" instance=ExtResource("navigation")]
+offset_left = 0.0
+offset_top = 1508.0
+offset_right = 941.0
+offset_bottom = 1672.0

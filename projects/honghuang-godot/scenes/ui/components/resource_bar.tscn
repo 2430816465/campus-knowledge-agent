@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Theme" path="res://assets/ui-foundation/foundation.tres" id="theme"]
+[ext_resource type="Script" path="res://scripts/ui/resource_bar.gd" id="script"]
+
+[node name="ResourceBar" type="HBoxContainer"]
+theme = ExtResource("theme")
+metadata/ui_foundation = true
+script = ExtResource("script")
+theme_override_constants/separation = 3
+custom_minimum_size = Vector2(0,50)
+
+
+[node name="Icon" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(40,40)
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+
+[node name="Value" type="Label" parent="."]
+size_flags_horizontal = 3
+vertical_alignment = 1
+text_overrun_behavior = 3
+theme_override_colors/font_color = Color(1,0.98,0.89,1)
+text = "灵石 12.8万"
+theme_override_font_sizes/font_size = 24
+mouse_filter = 2
+
+
+[node name="Add" type="Button" parent="."]
+text = "+"
+theme_override_colors/font_color = Color(1,0.84,0.43,1)
+theme_override_colors/font_hover_color = Color(1,1,0.8,1)
+theme_override_font_sizes/font_size = 25
+theme_type_variation = &"IconEntry"
+custom_minimum_size = Vector2(44,44)
+
+

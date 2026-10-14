@@ -1,0 +1,53 @@
+<level>
+  <width>1000</width>
+  <height>640</height>
+  <solids>
+    <rect x="0" y="0" w="1000" h="10"/>
+    <rect x="0" y="10" w="10" h="630"/>
+    <rect x="10" y="130" w="210" h="220"/>
+    <rect x="10" y="460" w="990" h="180"/>
+    <rect x="120" y="10" w="110" h="60"/>
+    <rect x="180" y="410" w="820" h="50"/>
+    <rect x="220" y="210" w="240" h="90"/>
+    <rect x="220" y="300" w="60" h="50"/>
+    <rect x="380" y="360" w="620" h="50"/>
+    <rect x="530" y="10" w="40" h="180"/>
+    <rect x="630" y="240" w="370" h="120"/>
+    <rect x="990" y="10" w="10" h="230"/>
+  </solids>
+  <extraPlatforms>
+    <LargeCrate x="130" y="70"/>
+    <LargeCrate x="190" y="350"/>
+  </extraPlatforms>
+  <BGLayer1>
+    <L1_Shelf x="40" y="140" scrollFactor="0.2"/>
+    <level1_windows x="210" y="60" width="640" height="54" scrollFactor="0.1"/>
+    <L1_Shelf x="410" y="40" scrollFactor="0.2"/>
+  </BGLayer1>
+  <BGLayer2>
+    <cratesBox x="200" y="230" scrollFactor="0.6"/>
+    <palettes x="290" y="170" scrollFactor="0.9"/>
+    <palettes x="110" y="420" scrollFactor="0.6"/>
+    <noticeBoard x="50" y="40" scrollFactor="0.1"/>
+  </BGLayer2>
+  <BGLayer3>
+    <sodaPack x="880" y="220" scrollFactor="0.2"/>
+    <palettes x="60" y="90" scrollFactor="0.2"/>
+  </BGLayer3>
+  <objects>
+    <exit x="940" y="150" nextLevel="2"/>
+    <L1_SmallCrate x="736" y="216" width="32"/>
+    <Bottle x="890" y="141" width="12"/>
+  </objects>
+  <characters>
+    <player x="10" y="80" speed="40" movementType="1" startsFirst="1" levelName="Claustrophobiatic" andreInitialFlip="0" liselotInitialFlip="0" followWidth="0" followHeight="0" talkString="During the World War II, I tried to explain to my younger sisters what chocolate is. Can you imagine, trying to describe chocolate to someone that has never tasted it?">
+      <node x="60" y="90"/>
+    </player>
+    <liselot x="20" y="410" speed="40" movementType="1" talkString="Just say yes.">
+      <node x="70" y="410"/>
+    </liselot>
+    <worker x="220" y="170" speed="40" movementType="1" talkString="Your heart is a muscle the size of your fist. Keep loving. Keep fighting.">
+      <node x="420" y="170"/>
+    </worker>
+  </characters>
+</level>

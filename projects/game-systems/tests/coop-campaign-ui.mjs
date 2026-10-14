@@ -1,0 +1,48 @@
+import {createRequire} from 'node:module';
+import assert from 'node:assert/strict';
+import {mkdir} from 'node:fs/promises';
+const require=createRequire(import.meta.url);
+const {chromium}=require('C:/Users/24308/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright-core');
+const browser=await chromium.launch({headless:true});
+const base=process.env.BASE_URL||'http://127.0.0.1:4190';
+const errors=[];
+await mkdir('artifacts/coop-campaign',{recursive:true});
+try{
+ const a=await browser.newContext({viewport:{width:390,height:844}}),b=await browser.newContext({viewport:{width:1280,height:800}});
+ const p=await a.newPage(),q=await b.newPage();
+ for(const page of [p,q]){page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url())});}
+ await p.goto(base+'/games/coop/index.html');
+ await p.locator('.level-card').first().waitFor();
+ assert.equal(await p.locator('.level-card').count(),50);
+ await p.locator('#playtestToggle').waitFor({state:'visible'});
+ await p.locator('[data-level="49"]').click();
+ assert((await p.locator('[data-level="49"]').getAttribute('class')).includes('selected'));
+ await p.screenshot({path:'artifacts/coop-campaign/mobile-select.png',fullPage:true});
+ await p.locator('#createRoom').click();
+ await p.locator('#lobby:not(.hidden)').waitFor();
+ assert.equal(await p.locator('#roomLevel').inputValue(),'49');
+ assert.equal(await p.locator('#roomLevel option').count(),50);
+ await p.screenshot({path:'artifacts/coop-campaign/mobile-room50.png',fullPage:true});
+ const code=(await p.locator('#inviteCode').textContent()).trim();
+ await q.goto(base+'/games/coop/index.html');
+ await q.locator('#roomCode').fill(code);await q.locator('#joinRoom').click();
+ await q.locator('#lobby:not(.hidden)').waitFor();
+ await p.locator('#readyButton').click();await q.locator('#readyButton').click();
+ await p.locator('#startButton').click();
+ await p.locator('#game:not(.hidden)').waitFor();await q.locator('#game:not(.hidden)').waitFor();
+ await p.waitForTimeout(400);
+ const world=await p.evaluate(()=>JSON.parse(window.render_game_to_text()));
+ assert.equal(world.level,50);
+ assert.equal(await p.locator('#levelCount').textContent(),'第 50 关 · 1/3 段');
+ const art=await p.evaluate(()=>window.RushArt.inspect());
+ assert.equal(art.failed.length,0);
+ await p.screenshot({path:'artifacts/coop-campaign/mobile-level50.png',fullPage:true});
+ await q.screenshot({path:'artifacts/coop-campaign/desktop-level50.png',fullPage:true});
+ const host=await browser.newPage({viewport:{width:390,height:844}});host.on('pageerror',e=>errors.push(e.message));
+ await host.goto(base+'/');await host.locator('[data-action="mode:coop"]').click();await host.locator('[data-action="create-room"]').click();
+ const frame=host.frameLocator('.game-frame');await frame.locator('#lobby:not(.hidden)').waitFor();assert.equal(await frame.locator('#roomLevel option').count(),50);
+ await host.screenshot({path:'artifacts/coop-campaign/host-mobile.png',fullPage:true});
+ assert.deepEqual(errors,[]);
+ console.log(JSON.stringify({cards:50,selectedLevel:50,room:world.level,scene:art.stamp,assets:art.assets.length,host:true,errors},null,2));
+ await a.close();await b.close();await host.close();
+}finally{await browser.close();}

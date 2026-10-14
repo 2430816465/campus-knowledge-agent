@@ -1,0 +1,102 @@
+/* B reference: real nine-slice wood, iron corners and live parchment controls. */
+html[data-wood-ui]{--wood-ink:#392312;--wood-muted:#765a3e;--wood-paper:#f7e8ce;--wood-gold:#ffb644;--wood-line:#987246;--camp-paper:#f7ead4;--camp-ink:#392312;--camp-primary:#efaa43}
+html[data-wood-ui] :is(.button,.m-btn,.iconbtn,.icon-button,.square,.server-settings-button,button:where(:not(.card):not(.tile):not(.character-choice):not(.hand-card)),.touchpad button){border:10px solid transparent!important;border-image:url('../../assets/ui/wood/secondary.png') 34 fill stretch!important;border-radius:0!important;background:transparent!important;background-clip:padding-box!important;box-shadow:none!important;color:var(--wood-ink)!important;text-shadow:none!important;padding:5px 9px;min-height:48px;line-height:1.4;transition:filter .08s,translate .08s}
+html[data-wood-ui] :is(.button,.m-btn,button)[class~="primary"],html[data-wood-ui] :is(.button,.m-btn,button)[class~="gold"],html[data-wood-ui] :is(.button-primary,.button.selected,.stages .selected,.settings-tab[aria-selected="true"]){border-image-source:url('../../assets/ui/wood/primary.png')!important;font-weight:700!important;color:#392312!important}
+html[data-wood-ui] :is(.button,.m-btn,button)[class~="danger"]{border-image-source:url('../../assets/ui/wood/plaque.png')!important;color:#fff1d7!important}
+html[data-wood-ui] :is(.button,.m-btn,button)[class~="quiet"]{border:0!important;border-image:none!important;background:none!important;color:#775131!important;box-shadow:none!important;min-height:44px}
+html[data-wood-ui] :is(.button,.m-btn,.iconbtn,.square,button:where(:not(.card):not(.tile):not(.character-choice):not(.hand-card))):hover:not(:disabled){filter:brightness(1.045)}
+html[data-wood-ui] :is(.button,.m-btn,.iconbtn,.square,button:where(:not(.card):not(.tile):not(.character-choice):not(.hand-card))):active:not(:disabled){translate:0 3px;filter:brightness(.83);transform:none!important}
+html[data-wood-ui] :is(.button,.m-btn,.iconbtn,.square,button:where(:not(.card):not(.tile):not(.character-choice):not(.hand-card))):disabled{filter:grayscale(1);opacity:.52!important;cursor:default}
+html[data-wood-ui] :is(button,input,select):focus-visible{outline:3px solid #51765e!important;outline-offset:3px}
+html[data-wood-ui] :is(dialog,.dialog,.info-sheet,.manual-sheet,.tutorial-card,.server-setup-card,.mine-draft,.mine-report,.lobby-panel,.room-panel,.settings,.panel:not(.left):not(.boardbox):not(.item-card):not(.codex-card):not(.portrait-card):not(.result-panel):not(.result-build)){
+ border:30px solid transparent!important;border-image:url('../../assets/ui/wood/panel.png') 92 fill stretch!important;border-radius:0!important;background:transparent!important;background-clip:padding-box!important;box-shadow:0 9px 24px #28180c38!important;color:var(--wood-ink)!important;padding:12px}
+html[data-wood-ui] :is(dialog,.dialog,.info-sheet,.manual-sheet,.tutorial-card,.mine-draft,.mine-report,.server-setup-card) :is(h1,h2,h3,p,small,label,li){color:var(--wood-ink)!important;text-shadow:none!important}
+html[data-wood-ui] :is(.panel,.dialog,dialog) :is(h2,h3){font-family:CampTitle,Camp,'Microsoft YaHei',sans-serif}
+html[data-wood-ui] :is(.panel,.dialog,dialog) p{line-height:1.6}
+html[data-wood-ui] dialog::backdrop{background:#20170dd1;backdrop-filter:blur(2px)}
+html[data-wood-ui] :is(input:not([type=checkbox]):not([type=range]),select){border:2px solid #a47b50;border-radius:2px!important;background:#fff3db!important;color:#392312!important;min-height:44px}
+html[data-wood-ui] .panel.settings{padding:18px;overflow:visible}
+html[data-wood-ui] .settings label{border-color:#d5b98e}
+html[data-wood-ui] .switch{border-radius:3px!important;background:#a9a49a!important;border:2px solid #70695e!important;width:62px;height:32px;appearance:none;position:relative;cursor:pointer}
+html[data-wood-ui] .switch:checked{background:#55826c!important;border-color:#365b49!important}
+html[data-wood-ui] .switch:before{border-radius:2px!important;left:2px!important;top:2px!important;width:24px!important;height:24px!important;background:#fff4dd!important;box-shadow:1px 1px 0 #5b4631}
+html[data-wood-ui] .switch:checked:before{left:32px!important}
+html[data-wood-ui] .square{width:48px;padding:0!important;flex-shrink:0}
+html[data-wood-ui] .game-toolbar button{padding:3px 8px}
+html[data-wood-ui] .camp-settings-entry{margin-left:auto;min-width:48px}
+html[data-wood-ui] .topbar{gap:10px}
+html[data-wood-ui] .wallet{margin-left:0}
+html[data-wood-ui] .wood-title{border:10px solid transparent;border-image:url('../../assets/ui/wood/plaque.png') 34 fill stretch;color:#fff2d9!important;text-align:center;min-height:58px;display:flex;align-items:center;justify-content:center;gap:12px;padding:5px 18px;margin:0 30px 18px;font-size:25px;text-shadow:0 2px #58331f!important}
+html[data-wood-ui] .wood-title .icon{width:24px;height:24px}
+html[data-wood-ui] dialog[data-kind="settings"]{width:min(440px,calc(100vw - 20px));max-height:calc(100dvh - 24px);overflow:auto;padding:14px 12px 12px}
+html[data-wood-ui] dialog[data-kind="settings"] .modal-top,html[data-wood-ui] dialog[data-kind="menu"] .modal-top{position:absolute;right:10px;top:8px;z-index:1}
+html[data-wood-ui] dialog[data-kind="settings"] .modal-top .eyebrow,html[data-wood-ui] dialog[data-kind="menu"] .modal-top .eyebrow{display:none}
+html[data-wood-ui] dialog[data-kind="settings"]>.wood-title{border:0;border-image:none;background:none;color:#392312!important;text-shadow:none!important;margin:0 38px 14px;font-size:29px}
+html[data-wood-ui] .wood-tabs{display:flex;gap:4px;margin-bottom:16px}
+html[data-wood-ui] .wood-tabs button{flex:1;min-width:0;padding:1px 3px;font-weight:700}
+html[data-wood-ui] .wood-settings-row{display:flex;gap:12px;align-items:center;min-height:66px;margin:2px 0;color:#392312}
+html[data-wood-ui] .wood-settings-row>.icon{width:24px;height:24px}
+html[data-wood-ui] .wood-settings-row>b{font-size:17px;white-space:nowrap;min-width:40px}
+html[data-wood-ui] .wood-settings-row input[type=range]{min-width:40px;flex:1;accent-color:#c8872f;appearance:none;height:10px!important;min-height:0!important;padding:0!important;background:linear-gradient(90deg,#e8a841 var(--range),#cfbe9f var(--range));border:2px solid #a47b50;border-radius:0}
+html[data-wood-ui] input[type=range]::-webkit-slider-thumb{appearance:none;width:20px;height:28px;background:#f8dfad;border:3px solid #694628;box-shadow:inset 2px 2px #ffefcb;cursor:ew-resize;border-radius:0}
+html[data-wood-ui] .wood-settings-row output{font-weight:700;font-size:16px;width:30px;text-align:right}
+html[data-wood-ui] .wood-settings-row .switch-wrap{position:relative;margin-left:auto;display:flex;align-items:center;width:68px;height:48px}
+html[data-wood-ui] .switch-wrap input{margin:0}
+html[data-wood-ui] .switch-wrap em{pointer-events:none;position:absolute;font:700 13px/1 'Microsoft YaHei',sans-serif;color:#fff8e6;left:38px}
+html[data-wood-ui] .switch-wrap input:checked+em{left:10px}
+html[data-wood-ui] .wood-save-note{display:flex;align-items:center;gap:14px;font-size:12px;color:#876343;margin:16px 0}
+html[data-wood-ui] .wood-save-note:before,html[data-wood-ui] .wood-save-note:after{content:'';height:2px;background:#ccad82;flex:1}
+html[data-wood-ui] .wood-settings-footer{display:flex;gap:12px}
+html[data-wood-ui] .wood-settings-footer button{flex:1;font-size:17px;font-weight:700;min-height:54px}
+html[data-wood-ui] .wood-settings-copy{padding:8px 4px;min-height:208px}
+html[data-wood-ui] .wood-settings-copy p{font-size:14px}
+html[data-wood-ui] dialog[data-kind="menu"]{width:min(450px,calc(100vw - 20px));padding:12px;max-height:calc(100dvh - 20px)}
+html[data-wood-ui] dialog[data-kind="menu"] .menu-mode{display:none}
+html[data-wood-ui] .wood-menu-note{text-align:center;font-size:12px!important;margin:0 0 12px!important}
+html[data-wood-ui] dialog[data-kind="menu"]>.wood-title{margin:0 34px 14px;font-size:25px;padding:4px 3px}
+html[data-wood-ui] dialog[data-kind="menu"]>.wood-title:before,html[data-wood-ui] dialog[data-kind="menu"]>.wood-title:after{content:'';position:absolute;top:-14px;width:24px;height:62px;background:url('../../assets/ui/wood/lantern.svg') center/contain no-repeat;image-rendering:pixelated}
+html[data-wood-ui] dialog[data-kind="menu"]>.wood-title:before{left:-34px}
+html[data-wood-ui] dialog[data-kind="menu"]>.wood-title:after{right:-34px}
+html[data-wood-ui] .identity,html[data-wood-ui] .nav button{border:0!important;border-image:none!important;background:none!important;box-shadow:none!important;padding:0!important}
+html[data-wood-ui] .nav{background:#f5e7cd;border-top:3px solid #8d613d;border-radius:0}
+html[data-wood-ui] .nav button[aria-current="page"]{background:#e8c897!important;color:#392312!important}
+html[data-wood-ui] .wood-continue{font-size:22px!important;min-height:62px!important;margin:8px 0 12px!important;font-weight:700}
+html[data-wood-ui] .wood-menu-tools{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0}
+html[data-wood-ui] .wood-menu-tools button{font-size:16px;padding:5px 2px;min-height:58px}
+html[data-wood-ui] .wood-menu-more{margin-top:12px;border-top:2px solid #cfad7c;padding-top:10px}
+html[data-wood-ui] .wood-menu-more summary{color:#755033;font-size:13px;cursor:pointer;min-height:36px;line-height:36px}
+html[data-wood-ui] .wood-exit{border-top:2px solid #cfad7c!important;width:100%;margin-top:10px!important;font-size:14px;min-height:48px!important}
+html[data-wood-ui] .arena-sidebar{border:18px solid transparent!important;border-image:url('../../assets/ui/wood/panel.png') 92 fill stretch!important;border-radius:0!important;background:none!important;color:#392312!important;padding:10px!important}
+html[data-wood-ui] .arena-sidebar :is(b,small,p){color:#694627!important}
+html[data-wood-ui] .arena-sidebar button{border:8px solid transparent!important;border-image:url('../../assets/ui/wood/secondary.png') 34 fill stretch!important;color:#392312!important;border-radius:0!important;background:none!important;min-height:44px}
+html[data-wood-ui] .arena-sidebar :is(.arena-level,.owned-power,.arena-pushback-help,.arena-support){background:#ecd8b4!important;border-color:#c3a172!important}
+html[data-wood-ui] .mine-draft button{border:12px solid transparent!important;border-image:url('../../assets/ui/wood/secondary.png') 34 fill stretch!important;border-radius:0!important;background:none!important;color:#392312!important}
+html[data-wood-ui] .mine-draft :is(strong,span){color:#392312!important}
+html[data-wood-ui] .mine-draft{inset:8% 5%;box-shadow:0 0 0 100vmax #20170dce!important}
+html[data-wood-ui] .actions>.button{min-width:0}
+html[data-wood-ui] .game-menu-actions{margin:4px 0;gap:8px}
+html[data-wood-ui] .panel :is(.muted,small){color:#765a3e}
+html[data-wood-ui] :is(.touch-pad,.touch-joystick) button{min-height:44px}
+html[data-wood-ui][data-reduce-motion="true"] :is(.button,button:where(:not(.card):not(.tile):not(.character-choice):not(.hand-card)),.switch){transition:none!important;animation:none!important}
+@media(max-width:380px){html[data-wood-ui] dialog{border-width:18px!important;padding:9px!important}html[data-wood-ui] .wood-title{font-size:22px;margin-left:24px;margin-right:24px}html[data-wood-ui] .wood-settings-row{gap:9px}html[data-wood-ui] .wood-menu-tools button{font-size:14px}}
+@media(orientation:landscape) and (max-height:520px){html[data-wood-ui] dialog[data-kind="settings"]{width:min(700px,calc(100vw - 24px));padding:8px 16px}html[data-wood-ui] dialog[data-kind="settings"]>.wood-title{font-size:22px;min-height:36px;margin-bottom:5px}html[data-wood-ui] .wood-tabs{margin-bottom:5px}html[data-wood-ui] .wood-tabs button{min-height:42px}html[data-wood-ui] .wood-settings-body{display:grid;grid-template-columns:1fr 1fr;gap:2px 24px}html[data-wood-ui] .wood-settings-row{min-height:50px;margin:0}html[data-wood-ui] .wood-save-note{margin:8px 0}html[data-wood-ui] .wood-settings-footer button{min-height:46px}html[data-wood-ui] dialog[data-kind="menu"]{width:min(600px,calc(100vw - 24px))}html[data-wood-ui] dialog[data-kind="menu"]>.wood-title{font-size:22px;min-height:45px;margin-bottom:8px}html[data-wood-ui] .wood-continue{min-height:52px!important;font-size:19px!important}html[data-wood-ui] .wood-menu-note{font-size:11px!important;margin-bottom:6px!important}html[data-wood-ui] .wood-menu-tools button{min-height:48px}html[data-wood-ui] .wood-exit{margin-top:5px!important;min-height:38px!important}}
+/* Titles retain the light lettering on the wooden plaque. Close target stays 48px. */
+html[data-wood-ui] dialog[data-kind="menu"]>.wood-title{color:#fff1d5!important;font-weight:400;text-shadow:0 2px #56311c!important}
+html[data-wood-ui] dialog[data-kind="menu"] .modal-top{top:0;right:0}
+html[data-wood-ui] dialog[data-kind="menu"] .modal-top button{border:0!important;border-image:none!important;background:none!important}
+/* Battle skill slots and real playing cards keep their compact functional shapes. */
+html[data-wood-ui] #dock :is(.skill-cell,.summon-button){border:2px solid #b38b53!important;border-image:none!important;background:#e4b763!important;border-radius:3px!important;padding:4px!important;min-height:0!important;color:#392312!important}
+html[data-wood-ui] #dock .summon-button{min-width:76px;font-size:12px}
+html[data-wood-ui] :is(.scene-dock,.top-right) button{border-width:6px!important;padding:2px 5px!important;min-height:44px}
+html[data-wood-ui] :is(.topbar,.panel-head,.dialog-top,.panel-header) .icon-btn{width:48px;height:48px;padding:0!important}
+html[data-wood-ui] #management{border:24px solid transparent!important;border-image:url('../../assets/ui/wood/panel.png') 92 fill stretch!important;border-radius:0!important;background:none!important;color:#392312!important;padding:10px}
+html[data-wood-ui] #management :is(h2,h3,p,label,small){color:#5c3b21!important}
+html[data-wood-ui][data-wood-game="chess"] :is(.game-picker,.profile-box){border:20px solid transparent!important;border-image:url('../../assets/ui/wood/panel.png') 92 fill stretch!important;border-radius:0!important;background:none!important;padding:12px;color:#392312!important}
+html[data-wood-ui][data-wood-game="chess"] .game-picker :is(h1,p,small,b),html[data-wood-ui][data-wood-game="chess"] .profile-box :is(p,small,label){color:#674323!important}
+html[data-wood-ui][data-wood-game="chess"] .game-choice.active{border-image-source:url('../../assets/ui/wood/primary.png')!important}
+html[data-wood-ui][data-wood-game="chess"] .game-choice{gap:8px;min-height:66px}
+html[data-wood-ui][data-wood-game="chess"] .top-actions .quiet{color:#ead7b3!important}
+html[data-wood-ui][data-wood-game="liars"] header button{border-width:6px!important;padding:2px 6px!important;min-height:44px;color:#392312!important}
+html[data-wood-ui] dialog :is(.dialog-top,.panel-head){margin-bottom:14px}
+html[data-wood-ui] dialog :is(.dialog-top,.panel-head)>h2{color:#392312!important}
+html[data-wood-ui] .stages button{border-width:6px!important;min-height:44px;padding:3px!important}

@@ -1,0 +1,374 @@
+{
+  "schema_version": 1,
+  "project": "洪荒众仙府 0.4 Godot",
+  "generation_date_utc": "2026-10-06",
+  "generator": "Built-in image_gen tool, one generation call per facility",
+  "mode": "Original generation, transparent_background=true",
+  "style_references_inspected": [
+    "assets/buildings/alchemy-idle-v02.webp",
+    "assets/buildings/library-premium.webp",
+    "assets/buildings/wanxian-premium.webp"
+  ],
+  "source_policy": "Original generated artwork. No external paid service, account, or third-party image download. Exact generation prompts and unmodified originals retained.",
+  "runtime_pipeline": "Uniform Lanczos resize from 1254×1254 to 640×640 RGBA; lossless WebP with exact alpha. No post-generation painting, background replacement, alpha thresholding, or floor fabrication.",
+  "measurement_method": "Left/right/front are measured source-pixel outer stone-foundation contact corners. The rear corner, occluded by the building, is reconstructed as left + right - front; the center is the midpoint of left and right. Corners are ordered left, top/rear, right, bottom/front. Source paintings are approximately 2:1, and native BuildingView.foundation_project maps the measured four-sector floor exactly onto the authoritative 3×3 2:1 grid.",
+  "facilities": [
+    {
+      "id": "warehouse",
+      "name": "仓库",
+      "runtime_path": "assets/terrain/generated-facilities/warehouse-premium-v04.webp",
+      "width": 640,
+      "height": 640,
+      "foundation": {
+        "center": {
+          "x": 319.744817,
+          "y": 406.76236
+        },
+        "corners": [
+          {
+            "x": 9.186603,
+            "y": 406.76236
+          },
+          {
+            "x": 318.979266,
+            "y": 255.69378
+          },
+          {
+            "x": 630.30303,
+            "y": 406.76236
+          },
+          {
+            "x": 320.510367,
+            "y": 557.830941
+          }
+        ]
+      },
+      "original": {
+        "path": "art-source/godot-facilities/warehouse-original.png",
+        "width": 1254,
+        "height": 1254,
+        "foundation": {
+          "center": {
+            "x": 626.5,
+            "y": 797.0
+          },
+          "corners": [
+            {
+              "x": 18.0,
+              "y": 797.0
+            },
+            {
+              "x": 625.0,
+              "y": 501.0
+            },
+            {
+              "x": 1235.0,
+              "y": 797.0
+            },
+            {
+              "x": 628.0,
+              "y": 1093.0
+            }
+          ]
+        },
+        "sha256": "4c5803d6e4eb44e55bad3aaf2cad02244555bad0c6e2c08259d7aa953d898e45",
+        "generated_filename": "exec-3b00933e-95db-4973-8a38-522a9f30def2.png"
+      },
+      "prompt_path": "art-source/godot-facilities/warehouse-prompt.txt",
+      "runtime_sha256": "ddffa947fd6ccae3b3e14504cd4999723394d6c4b49309fa0e9e224baf0a12bf",
+      "source_floor_width_depth_ratio": 2.055743,
+      "native_target_floor_ratio": 2.0,
+      "native_target_footprint_cells": [
+        3,
+        3
+      ],
+      "alpha_audit_original": {
+        "examined_pixels": 1572516,
+        "mode": "RGBA",
+        "transparent_pixels": 911781,
+        "nonzero_alpha_pixels": 660735,
+        "alpha_above_128_pixels": 639505,
+        "alpha_above_240_pixels": 634323,
+        "alpha_value_count": 256,
+        "visible_bbox_alpha_gt_8": [
+          17,
+          233,
+          1237,
+          1094
+        ],
+        "canvas_border_max_alpha": 1,
+        "canvas_border_pixels_alpha_gt_8": 0,
+        "components_alpha_gt_8": 11,
+        "minor_component_pixels_alpha_gt_8": 13,
+        "largest_minor_component_pixels_alpha_gt_8": 2,
+        "saturated_red_fringe_max_alpha": 2,
+        "result": "Pass: genuine RGBA transparency; no opaque rectangular backdrop; no visible border clipping. Inspected on pale and dark composites."
+      },
+      "alpha_audit_runtime": {
+        "examined_pixels": 409600,
+        "mode": "RGBA",
+        "transparent_pixels": 237584,
+        "nonzero_alpha_pixels": 172016,
+        "alpha_above_128_pixels": 166551,
+        "alpha_above_240_pixels": 165058,
+        "alpha_value_count": 256,
+        "visible_bbox_alpha_gt_8": [
+          9,
+          119,
+          631,
+          559
+        ],
+        "canvas_border_max_alpha": 0,
+        "canvas_border_pixels_alpha_gt_8": 0,
+        "components_alpha_gt_8": 3,
+        "minor_component_pixels_alpha_gt_8": 4,
+        "largest_minor_component_pixels_alpha_gt_8": 3,
+        "saturated_red_fringe_max_alpha": 2,
+        "result": "Pass: genuine RGBA transparency; no opaque rectangular backdrop; no visible border clipping. Inspected on pale and dark composites."
+      },
+      "visual_review": "Distinct facility purpose and silhouette; premium teal/gold/pale-stone style; independent building cutout; no people, UI, text, external landscape, or geometric placeholder."
+    },
+    {
+      "id": "mine",
+      "name": "灵石矿",
+      "runtime_path": "assets/terrain/generated-facilities/mine-premium-v04.webp",
+      "width": 640,
+      "height": 640,
+      "foundation": {
+        "center": {
+          "x": 320.0,
+          "y": 420.031898
+        },
+        "corners": [
+          {
+            "x": 11.738437,
+            "y": 420.031898
+          },
+          {
+            "x": 320.0,
+            "y": 267.942584
+          },
+          {
+            "x": 628.261563,
+            "y": 420.031898
+          },
+          {
+            "x": 320.0,
+            "y": 572.121212
+          }
+        ]
+      },
+      "original": {
+        "path": "art-source/godot-facilities/mine-original.png",
+        "width": 1254,
+        "height": 1254,
+        "foundation": {
+          "center": {
+            "x": 627.0,
+            "y": 823.0
+          },
+          "corners": [
+            {
+              "x": 23.0,
+              "y": 823.0
+            },
+            {
+              "x": 627.0,
+              "y": 525.0
+            },
+            {
+              "x": 1231.0,
+              "y": 823.0
+            },
+            {
+              "x": 627.0,
+              "y": 1121.0
+            }
+          ]
+        },
+        "sha256": "418d745ae6f9f0eb552774c17dd4c159e977e49d53373b4ae03a2c17949a486b",
+        "generated_filename": "exec-3bf915e9-0977-4227-93cb-15498489c95f.png"
+      },
+      "prompt_path": "art-source/godot-facilities/mine-prompt.txt",
+      "runtime_sha256": "c8a30401704da857f99712f17437c738626aedf84d42c317e0ac3adc6b516975",
+      "source_floor_width_depth_ratio": 2.026846,
+      "native_target_floor_ratio": 2.0,
+      "native_target_footprint_cells": [
+        3,
+        3
+      ],
+      "alpha_audit_original": {
+        "examined_pixels": 1572516,
+        "mode": "RGBA",
+        "transparent_pixels": 887675,
+        "nonzero_alpha_pixels": 684841,
+        "alpha_above_128_pixels": 663834,
+        "alpha_above_240_pixels": 658445,
+        "alpha_value_count": 256,
+        "visible_bbox_alpha_gt_8": [
+          24,
+          116,
+          1232,
+          1123
+        ],
+        "canvas_border_max_alpha": 1,
+        "canvas_border_pixels_alpha_gt_8": 0,
+        "components_alpha_gt_8": 30,
+        "minor_component_pixels_alpha_gt_8": 40,
+        "largest_minor_component_pixels_alpha_gt_8": 8,
+        "saturated_red_fringe_max_alpha": 2,
+        "result": "Pass: genuine RGBA transparency; no opaque rectangular backdrop; no visible border clipping. Inspected on pale and dark composites."
+      },
+      "alpha_audit_runtime": {
+        "examined_pixels": 409600,
+        "mode": "RGBA",
+        "transparent_pixels": 231102,
+        "nonzero_alpha_pixels": 178498,
+        "alpha_above_128_pixels": 172964,
+        "alpha_above_240_pixels": 171122,
+        "alpha_value_count": 256,
+        "visible_bbox_alpha_gt_8": [
+          12,
+          59,
+          629,
+          573
+        ],
+        "canvas_border_max_alpha": 0,
+        "canvas_border_pixels_alpha_gt_8": 0,
+        "components_alpha_gt_8": 6,
+        "minor_component_pixels_alpha_gt_8": 5,
+        "largest_minor_component_pixels_alpha_gt_8": 1,
+        "saturated_red_fringe_max_alpha": 4,
+        "result": "Pass: genuine RGBA transparency; no opaque rectangular backdrop; no visible border clipping. Inspected on pale and dark composites."
+      },
+      "visual_review": "Distinct facility purpose and silhouette; premium teal/gold/pale-stone style; independent building cutout; no people, UI, text, external landscape, or geometric placeholder."
+    },
+    {
+      "id": "relicworkshop",
+      "name": "炼宝台",
+      "runtime_path": "assets/terrain/generated-facilities/relicworkshop-premium-v04.webp",
+      "width": 640,
+      "height": 640,
+      "foundation": {
+        "center": {
+          "x": 320.255183,
+          "y": 436.363636
+        },
+        "corners": [
+          {
+            "x": 13.779904,
+            "y": 436.363636
+          },
+          {
+            "x": 320.510367,
+            "y": 272.025518
+          },
+          {
+            "x": 626.730463,
+            "y": 436.363636
+          },
+          {
+            "x": 320.0,
+            "y": 600.701754
+          }
+        ]
+      },
+      "original": {
+        "path": "art-source/godot-facilities/relicworkshop-original.png",
+        "width": 1254,
+        "height": 1254,
+        "foundation": {
+          "center": {
+            "x": 627.5,
+            "y": 855.0
+          },
+          "corners": [
+            {
+              "x": 27.0,
+              "y": 855.0
+            },
+            {
+              "x": 628.0,
+              "y": 533.0
+            },
+            {
+              "x": 1228.0,
+              "y": 855.0
+            },
+            {
+              "x": 627.0,
+              "y": 1177.0
+            }
+          ]
+        },
+        "sha256": "bbdd6149a5584e000c14327a3ccf44bf3ea9bae8baf6eee120c74e540eb4feb8",
+        "generated_filename": "exec-63a3255d-0e24-4432-8d4b-e083bd418cf2.png"
+      },
+      "prompt_path": "art-source/godot-facilities/relicworkshop-prompt.txt",
+      "runtime_sha256": "7fc8797763da65cfe87755afb2f45f4357a5753cb3db4cd1f20253822ec9d695",
+      "source_floor_width_depth_ratio": 1.864907,
+      "native_target_floor_ratio": 2.0,
+      "native_target_footprint_cells": [
+        3,
+        3
+      ],
+      "alpha_audit_original": {
+        "examined_pixels": 1572516,
+        "mode": "RGBA",
+        "transparent_pixels": 836057,
+        "nonzero_alpha_pixels": 736459,
+        "alpha_above_128_pixels": 684078,
+        "alpha_above_240_pixels": 668712,
+        "alpha_value_count": 256,
+        "visible_bbox_alpha_gt_8": [
+          26,
+          30,
+          1228,
+          1178
+        ],
+        "canvas_border_max_alpha": 0,
+        "canvas_border_pixels_alpha_gt_8": 0,
+        "components_alpha_gt_8": 82,
+        "minor_component_pixels_alpha_gt_8": 118,
+        "largest_minor_component_pixels_alpha_gt_8": 5,
+        "saturated_red_fringe_max_alpha": 4,
+        "result": "Pass: genuine RGBA transparency; no opaque rectangular backdrop; no visible border clipping. Inspected on pale and dark composites."
+      },
+      "alpha_audit_runtime": {
+        "examined_pixels": 409600,
+        "mode": "RGBA",
+        "transparent_pixels": 218385,
+        "nonzero_alpha_pixels": 191215,
+        "alpha_above_128_pixels": 178191,
+        "alpha_above_240_pixels": 173893,
+        "alpha_value_count": 256,
+        "visible_bbox_alpha_gt_8": [
+          13,
+          15,
+          627,
+          602
+        ],
+        "canvas_border_max_alpha": 0,
+        "canvas_border_pixels_alpha_gt_8": 0,
+        "components_alpha_gt_8": 33,
+        "minor_component_pixels_alpha_gt_8": 53,
+        "largest_minor_component_pixels_alpha_gt_8": 13,
+        "saturated_red_fringe_max_alpha": 5,
+        "result": "Pass: genuine RGBA transparency; no opaque rectangular backdrop; no visible border clipping. Inspected on pale and dark composites."
+      },
+      "visual_review": "Distinct facility purpose and silhouette; premium teal/gold/pale-stone style; independent building cutout; no people, UI, text, external landscape, or geometric placeholder."
+    }
+  ],
+  "native_validation": {
+    "engine": "Godot 4.6.3.stable.official.7d41c59c4",
+    "check": "Headless native Texture2D import, 640×640 dimensions, alpha present, and BuildingView.foundation_project mapping all four corners",
+    "result": "passed",
+    "maximum_floor_corner_error": 0.0,
+    "facilities": [
+      "warehouse",
+      "mine",
+      "relicworkshop"
+    ],
+    "script": "art-source/godot-facilities/verify_facility_art.gd"
+  }
+}

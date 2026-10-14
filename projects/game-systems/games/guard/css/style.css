@@ -1,0 +1,32 @@
+/* 再守一波 · 守塔战线 V0.1 —— 页面外壳样式
+ * 画布内部的一切（地图 / 按钮 / 面板）全部由 Canvas 绘制，
+ * CSS 只负责页面背景与画布自适应（和《再上一层》一样：纯前端、零依赖、零构建）。
+ */
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #0b0e15;
+  overflow: hidden;
+}
+
+.app {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#board {
+  display: block;
+  background: #0f1420;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  image-rendering: pixelated;
+}

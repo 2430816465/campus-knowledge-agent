@@ -1,0 +1,861 @@
+:root {
+  /* 第51层：古塔石材 + 深渊红光 + 圣金高光 */
+  --bg: #080a11;
+  --panel: #111521;
+  --panel-2: #191e2c;
+  --line: #354058;
+  --text: #eee8d7;
+  --dim: #9a9eb4;
+  --gold: #f2c76a;
+  --good: #7ee08a;
+  --ok: #ffd76a;
+  --bad: #ff7272;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+  min-height: 100%;
+}
+
+body {
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 铺满视口：宽度不再居中限宽，整页按列拉伸 */
+.app {
+  width: 100%;
+  min-height: 100%;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 10px 14px;
+  background: #171d2b;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 5px 0 #070910, inset 0 1px 0 rgba(255,255,255,.06);
+  flex: 0 0 auto;
+}
+
+.brand { font-size: 20px; font-weight: 800; letter-spacing: 3px; color: #fff0c3; text-shadow: 2px 2px 0 #5d2830; }
+.brand-sub { color: var(--gold); font-size: .7em; letter-spacing: 1px; }
+.spacer { flex: 1; }
+
+button {
+  font: inherit;
+  color: var(--text);
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 7px 12px;
+  cursor: pointer;
+  transition: background .12s, transform .06s;
+}
+button:hover:not(:disabled) { background: #263046; }
+button:active:not(:disabled) { transform: translateY(1px); }
+button:disabled { opacity: .38; cursor: not-allowed; }
+button:focus-visible, canvas:focus-visible { outline: 2px solid #f2c76a; outline-offset: 2px; }
+button.primary { background: #2f6fd0; border-color: #4b8ae6; }
+button.primary:hover { background: #3b7fe0; }
+button.danger { background: #a02c2c; border-color: #d05252; }
+button.adbtn {
+  background: #2b5a37;
+  border-color: #57a06a;
+  color: #e3ffe9;
+}
+button.adbtn:hover:not(:disabled) { background: #346a41; }
+button.focus-toggle { border-color: #8e6b36; color: #ffe6a3; background: #2a2419; }
+button.focus-toggle[aria-pressed="true"] { background: #6f5126; color: #fff3c4; }
+button.test-toggle { border-color: #a64a58; color: #ffd5c8; background: #39202a; }
+button.test-toggle[aria-pressed="true"] { background: #8a2634; color: #fff; box-shadow: 0 0 0 2px rgba(255,114,114,.22); }
+
+main {
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(180px, 0.95fr) minmax(0, 3.65fr);
+  gap: 12px;
+  align-items: stretch;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 5px 0 #070910, inset 0 1px 0 rgba(255,255,255,.035);
+}
+.panel h3 {
+  margin: 0 0 10px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--dim);
+  font-weight: 600;
+}
+
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.stat {
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 7px 9px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.035);
+}
+.stat .k { font-size: 11px; color: var(--dim); }
+.stat .v { font-size: 17px; font-weight: 700; }
+.stat.wide { grid-column: span 2; }
+.stat.hp .v { color: #ff8f8f; }
+.stat.atk .v { color: #ffb07a; }
+.stat.def .v { color: #86b8ff; }
+.stat.gold .v { color: var(--gold); }
+.stat.hp { border-color: rgba(218,88,88,.45); }
+.stat.atk { border-color: rgba(217,127,72,.38); }
+.stat.def { border-color: rgba(91,139,220,.42); }
+.stat.gold { border-color: rgba(218,177,74,.38); }
+.meter { height: 3px; margin-top: 5px; border-radius: 99px; overflow: hidden; background: #090c14; }
+.meter i { display: block; width: 0; height: 100%; border-radius: inherit; background: #d85b58; transition: width .18s ease-out; }
+.expmeter i { background: #d8b34f; }
+
+.keys { display: flex; gap: 8px; margin-top: 8px; }
+.keybox { flex: 1; text-align: center; background: var(--panel-2); border: 1px solid var(--line); border-radius: 10px; padding: 6px 4px; }
+.keybox .n { font-size: 16px; font-weight: 700; }
+.keybox .t { font-size: 11px; color: var(--dim); }
+.keybox::before { content: ""; display: block; width: 9px; height: 9px; margin: 0 auto 3px; border-radius: 2px; transform: rotate(45deg); box-shadow: 0 0 8px currentColor; }
+.keybox.y { color: #e8c73a; border-color: rgba(232,199,58,.42); }
+.keybox.b { color: #6f9cff; border-color: rgba(111,156,255,.42); }
+.keybox.r { color: #ff7b6a; border-color: rgba(255,123,106,.42); }
+.keybox.y .n, .keybox.b .n, .keybox.r .n { color: currentColor; }
+
+.boardwrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  min-height: 0;
+}
+#floorNote:empty { display: none; }
+.boardwrap::after {
+  content: "";
+  width: min(92%, 820px);
+  height: 1px;
+  background: #354058;
+  flex: 0 0 auto;
+}
+.playrow {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+}
+.boardbox {
+  flex: 1 1 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+}
+#battleSpeed {
+  position: absolute;
+  z-index: 5;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 7px;
+  border: 1px solid rgba(154, 174, 216, .55);
+  border-radius: 9px;
+  background: rgba(12, 16, 27, .92);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .45);
+  color: #dfe6f2;
+  font-size: 12px;
+  white-space: nowrap;
+}
+#battleSpeed[hidden] { display: none; }
+#battleSpeed button {
+  min-width: 38px;
+  min-height: 32px;
+  padding: 3px 7px;
+  border: 1px solid #596783;
+  border-radius: 6px;
+  background: #222b3d;
+  color: #e7ecf5;
+  font-size: 12px;
+  touch-action: manipulation;
+}
+#battleSpeed button[aria-pressed="true"] {
+  border-color: #f2c76a;
+  background: #5b4820;
+  color: #ffe29a;
+}
+#board {
+  display: block;
+  /* 实际尺寸由 game.js 的 fitBoard() 按可用空间精确计算（正方、随屏幕放大） */
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  max-width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: #0c0f18;
+  box-shadow: 0 0 0 3px #080a11, 0 0 0 4px #48536c, 0 12px 28px rgba(0,0,0,.38);
+  image-rendering: pixelated;
+  touch-action: none;
+}
+
+.floortag { display: flex; align-items: baseline; gap: 10px; }
+.floortag .n { font-size: 22px; font-weight: 700; color: var(--gold); }
+.floortag .nm { font-size: 14px; color: var(--dim); }
+.floortag {
+  width: 100%;
+  justify-content: center;
+  padding: 4px 10px;
+  border: 1px solid rgba(242,199,106,.28);
+  border-radius: 8px;
+  background: #222431;
+}
+
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.chip {
+  font-size: 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 9px;
+  background: rgba(255,255,255,.025);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
+}
+.chip.dim { color: var(--dim); border-style: dashed; background: transparent; }
+
+/* 右栏与外框铺满：手册 / 日志在栏内自适应滚动，而不是把页面撑高 */
+.panel.left, .panel.book { min-width: 0; min-height: 0; }
+.panel.book { display: flex; flex-direction: column; }
+.ui-focus .optional-action,
+.ui-focus .optional-panel,
+.ui-focus .left-extra { display: none !important; }
+.ui-focus main { grid-template-columns: minmax(180px, .72fr) minmax(0, 3fr); }
+.ui-focus .panel.left { display: block; }
+.ui-focus .boardwrap { width: 100%; }
+
+#book { flex: 1 1 auto; max-height: 300px; overflow-y: auto; display: flex; flex-direction: column; gap: 6px; }
+.monrow { display: flex; gap: 9px; align-items: center; background: var(--panel-2); border: 1px solid var(--line); border-radius: 10px; padding: 6px; }
+.monicon { width: 34px; height: 34px; flex: 0 0 34px; }
+.moninfo { min-width: 0; }
+.monname { font-size: 13px; font-weight: 600; }
+.monstat { font-size: 11px; color: var(--dim); white-space: nowrap; }
+.good { color: var(--good); font-weight: 700; }
+.ok { color: var(--ok); font-weight: 700; }
+.bad { color: var(--bad); font-weight: 700; }
+.small { font-size: 11px; }
+.dim { color: var(--dim); }
+
+#log {
+  flex: 0 1 auto;
+  margin-top: 10px;
+  max-height: 160px;
+  overflow-y: auto;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #c3cbdb;
+}
+.logline { padding: 2px 0; border-bottom: 1px dashed rgba(255,255,255,.05); }
+
+#floorNote {
+  width: min(92%, 760px);
+  min-height: 1.4em;
+  padding: 5px 10px;
+  border: 1px solid rgba(126,140,170,.26);
+  border-radius: 7px;
+  background: rgba(20,26,40,.72);
+  color: #b9c1d5;
+  text-align: center;
+  text-shadow: 1px 1px 0 #080a11;
+}
+
+.dpad { display: grid; grid-template-columns: repeat(3, 56px); grid-template-rows: repeat(2, 50px); gap: 8px; justify-content: center; }
+.dpad button[data-d="up"], .dpad button[data-move="up"] { grid-column: 2; grid-row: 1; }
+.dpad button[data-d="left"] { grid-column: 1; grid-row: 2; }
+.dpad button[data-d="down"] { grid-column: 2; grid-row: 2; }
+.dpad button[data-d="right"] { grid-column: 3; grid-row: 2; }
+
+.touchpad {
+  display: grid;
+  flex: 0 0 auto;
+  align-self: center;
+  grid-template-columns: repeat(3, 46px);
+  grid-template-rows: repeat(2, 42px);
+  gap: 6px;
+  justify-content: center;
+  user-select: none;
+}
+.touchpad button { font-size: 18px; touch-action: manipulation; }
+.touchpad button {
+  min-width: 44px;
+  min-height: 40px;
+  border-radius: 10px;
+  border-color: #56617b;
+  background: #222b3d;
+  box-shadow: 0 3px 0 #080b12, inset 0 1px 0 rgba(255,255,255,.08);
+  font-weight: 800;
+  color: #e7edff;
+}
+.touchpad button:active:not(:disabled) { box-shadow: 0 1px 0 #080b12; }
+.touchpad button[data-move="up"] { grid-column: 2; grid-row: 1; }
+.touchpad button[data-move="left"] { grid-column: 1; grid-row: 2; }
+.touchpad button[data-move="down"] { grid-column: 2; grid-row: 2; }
+.touchpad button[data-move="right"] { grid-column: 3; grid-row: 2; }
+#btnTouchpad { display: none; }
+
+#modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 8, 14, .72);
+  backdrop-filter: blur(3px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  z-index: 40;
+}
+#modal.show { display: flex; }
+#modal.dialogue-modal {
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+#modal.dialogue-modal .sheet {
+  position: absolute;
+  width: min(540px, calc(100vw - 16px));
+  max-height: min(82dvh, calc(100dvh - 16px));
+  margin: 0;
+  padding: 6px;
+  border: 2px solid #aeb2bc;
+  border-radius: 2px;
+  background: #3b3b41;
+  box-shadow: 0 5px 20px rgba(0,0,0,.72), inset 0 0 0 1px rgba(255,255,255,.08);
+  image-rendering: pixelated;
+  animation: none;
+}
+#modal.dialogue-modal .sheet h2 { display: none; }
+#modal.dialogue-modal .mbody { color: #fff; font-size: 28px; line-height: 1.4; overflow-y: auto; max-height: calc(min(82dvh, 100dvh - 16px) - 16px); }
+#modal.dialogue-modal .mfoot { display: none; }
+.dialogue-tail {
+  position: absolute;
+  z-index: 41;
+  width: 66px;
+  height: 54px;
+  background: #aeb2bc;
+  clip-path: polygon(0 100%, 24px 0, 66px 0);
+  pointer-events: none;
+}
+.dialogue-tail::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 0;
+  width: 55px;
+  height: 45px;
+  background: #3b3b41;
+  clip-path: polygon(0 100%, 19px 0, 55px 0);
+}
+@keyframes sheet-rise { from { transform: translateY(18px); opacity: .6; } to { transform: translateY(0); opacity: 1; } }
+
+.sheet {
+  width: min(520px, 100%);
+  background: #171d2b;
+  border: 1px solid #35405a;
+  border-radius: 8px;
+  padding: 18px 20px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.7), 0 0 0 3px #080a11, 0 0 0 4px #4a536b;
+  max-height: 86vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+#modal.story-modal .sheet {
+  width: min(720px, 100%);
+  padding: 8px;
+  border: 4px solid #d77718;
+  border-radius: 2px;
+  background: #38383d;
+  box-shadow: 0 0 0 3px #15151a, inset 0 0 0 2px rgba(255, 195, 95, .18), 0 18px 50px rgba(0,0,0,.78);
+  image-rendering: pixelated;
+}
+#modal.story-modal .sheet h2 { display: none; }
+#modal.story-modal .mbody { color: #fff; font-size: 24px; line-height: 1.62; }
+#modal.story-modal .mfoot { justify-content: flex-end; margin: 8px 4px 2px; }
+#modal.story-modal .mfoot button { min-height: 48px; padding: 8px 18px; font-size: 17px; font-weight: 800; }
+.sheet h2 { margin: 0 0 12px; font-size: 18px; letter-spacing: 1px; color: var(--gold); }
+.mbody { font-size: 14px; line-height: 1.75; color: #d6dde9; }
+.mbody .warn { color: var(--bad); font-weight: 700; }
+.mfoot { display: flex; gap: 10px; justify-content: flex-end; margin-top: 16px; }
+.mfoot button { min-height: 40px; }
+
+.dialogue-layout {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  column-gap: 15px;
+  align-items: start;
+  min-height: 144px;
+  padding: 16px;
+  border: 2px solid #6b6b72;
+  border-radius: 0;
+  background: #3b3b41;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.dialogue-face {
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  border: 2px solid #77777e;
+  border-radius: 2px;
+  background: #303036;
+  box-shadow: inset 0 0 0 2px rgba(9, 12, 19, .55);
+}
+.dialogue-portrait { width: 63px; height: 63px; image-rendering: pixelated; }
+.dialogue-initial { display: grid; place-items: center; color: #ffe19a; font-size: 40px; font-weight: 900; }
+.dialogue-copy { min-height: 108px; align-self: stretch; display: flex; flex-direction: column; justify-content: center; font-size: 31px; font-weight: 700; line-height: 1.42; overflow-wrap: anywhere; }
+.dialogue-speaker { color: #fff; font-size: 31px; font-weight: 900; line-height: 1.3; }
+.dialogue-copy p { margin: 0; }
+.dialogue-copy p + p { margin-top: 9px; }
+.dialogue-page { margin-top: 9px; color: #ccc; font-size: 22px; text-align: right; }
+.dialogue-choices { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+.dialogue-choice { padding: 7px 12px; border: 1px solid #aeb2bc; background: #272a31; cursor: pointer; }
+.notes-section + .notes-section { margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(182, 153, 96, .24); }
+.notes-section h3 { margin: 0 0 9px; color: #e5ca87; font-size: 13px; letter-spacing: .08em; }
+.note-entry { margin: 8px 0; padding: 10px 12px; border-left: 2px solid #85714b; border-radius: 0 8px 8px 0; background: rgba(8, 12, 21, .42); }
+.note-entry b { color: #d8c18c; font-size: 12px; }
+.note-entry p { margin: 6px 0 0; white-space: normal; }
+.note-talk { border-left-color: #667d9a; }
+.note-talk b { color: #b7c9df; }
+
+@media (max-width: 480px) {
+  #modal.dialogue-modal .sheet { width: min(52vw, calc(100vw - 16px)); max-height: min(44dvh, calc(100dvh - 16px)); padding: 3px; }
+  #modal.dialogue-modal .mbody { max-height: calc(min(44dvh, 100dvh - 16px) - 10px); }
+  .dialogue-layout { grid-template-columns: 28px minmax(0, 1fr); column-gap: 6px; min-height: 62px; padding: 6px; }
+  .dialogue-face { width: 28px; height: 28px; }
+  .dialogue-portrait { width: 24px; height: 24px; }
+  .dialogue-initial { font-size: 16px; }
+  .dialogue-copy { min-height: 48px; font-size: 14px; line-height: 1.35; }
+  .dialogue-speaker { font-size: 14px; }
+  .dialogue-page { font-size: 10px; }
+  .dialogue-tail { width: 30px; height: 25px; clip-path: polygon(0 100%, 11px 0, 30px 0); }
+  .dialogue-tail::after { left: 3px; width: 25px; height: 21px; clip-path: polygon(0 100%, 9px 0, 25px 0); }
+}
+
+.shoplist { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+.test-options { display: flex; flex-direction: column; gap: 10px; }
+.test-option {
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  padding: 11px 12px; border: 1px solid #303a50; border-radius: 8px;
+  background: rgba(8, 12, 21, .42);
+}
+.test-option span, .test-teleport > label { display: flex; flex-direction: column; gap: 3px; }
+.test-option b { color: #e5ca87; font-size: 13px; }
+.test-option small { color: #9ca8bb; font-size: 11px; line-height: 1.5; }
+.test-option input[type="checkbox"] { width: 20px; height: 20px; accent-color: #d6b66f; flex: 0 0 auto; }
+.test-action > button, .test-teleport button { min-height: 38px; flex: 0 0 auto; }
+.test-teleport { align-items: stretch; flex-direction: column; }
+.test-teleport > div { display: flex; gap: 8px; }
+.test-teleport select {
+  min-width: 0; flex: 1; color: #e3e9f3; background: #101624;
+  border: 1px solid #3a465e; border-radius: 6px; padding: 8px;
+}
+.shoprow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+}
+.shoprow .cost { color: var(--gold); font-size: 12px; }
+
+.codewrap { margin-top: 12px; display: flex; justify-content: center; }
+.codeinput {
+  font: inherit;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 10px;
+  text-align: center;
+  width: 190px;
+  padding: 10px 8px 10px 18px;
+  color: var(--gold);
+  background: #121725;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  outline: none;
+}
+.codeinput:focus { border-color: #4b8ae6; box-shadow: 0 0 0 2px rgba(75,138,230,.25); }
+
+#toast {
+  position: fixed;
+  left: 50%;
+  bottom: 34px;
+  transform: translate(-50%, 20px);
+  background: rgba(20,25,38,.95);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 9px 20px;
+  font-size: 13px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s, transform .18s;
+  z-index: 60;
+}
+#toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+/* ── 大屏：三栏铺满整屏，页面不滚动，栏内各自滚动 ─────────────── */
+@media (min-width: 1081px) and (min-height: 520px) {
+  html, body { height: 100%; overflow: hidden; }
+  .app { height: 100vh; height: 100dvh; min-height: 0; }
+  .panel.left { overflow-y: auto; }
+  .panel.book { overflow: hidden; }
+  #book { flex: 1 1 60%; min-height: 56px; max-height: none; }
+  #log { flex: 1 1 40%; min-height: 56px; max-height: none; }
+}
+
+/* 专注地图：桌面也给棋盘完整宽度，状态与控制仍保留在地图周围。 */
+@media (min-width: 621px) {
+  .ui-focus .boardwrap { max-width: 1200px; margin: 0 auto; }
+}
+
+/* ── 平板 / 窄桌面：单列，棋盘仍尽量大 ─────────────────────── */
+@media (max-width: 1080px) {
+  main { grid-template-columns: 1fr; }
+  .panel.left .stats { grid-template-columns: repeat(4, 1fr); }
+  .panel.left .stat.wide { grid-column: span 2; }
+  #book { max-height: 260px; }
+  .boardbox { width: 100%; aspect-ratio: 1 / 1; max-height: 68vh; }
+}
+
+/* ── 手机 / 窄屏：所有控件整体缩小，不浪费纵向空间 ─────────────
+ *
+ * 这一层只管「变紧凑」以及矮屏时的可滚动兜底；真正把整页锁成一屏的是
+ * 下面那层带 min-height 条件的规则。
+ */
+@media (max-width: 620px) {
+  .app {
+    gap: 6px;
+    padding: 6px;
+    padding-top: max(6px, env(safe-area-inset-top));
+    padding-bottom: max(6px, env(safe-area-inset-bottom));
+    padding-left: max(6px, env(safe-area-inset-left));
+    padding-right: max(6px, env(safe-area-inset-right));
+  }
+  main { gap: 6px; }
+
+  /* 顶栏：按钮缩小到最多折成两行，方便单手点（标题的「· 50 层」在手机上省掉） */
+  header { gap: 4px; padding: 4px 6px; border-radius: 10px; }
+  .brand { font-size: 13px; letter-spacing: 0; }
+  .brand-sub { display: none; }
+  header button { padding: 3px 6px; font-size: 11px; border-radius: 7px; }
+
+  .panel { padding: 6px; border-radius: 10px; }
+
+  /* 状态区：第一行显示生命/金币/攻击/防御/楼层，第二行显示钥匙与特殊道具 */
+  .panel.left { display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 4px; }
+  .panel.left h3 { display: none; }
+  /* 状态卡片在窄屏下按可用宽度均匀排布 */
+  .panel.left .stats { flex: 1 1 100%; display: grid; grid-template-columns: repeat(8, 1fr); gap: 3px; }
+  .panel.left .stat { padding: 3px 2px; border-radius: 7px; text-align: center; min-width: 0; }
+  .panel.left .stat .k { font-size: 9px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  /* 小屏状态标签不换行，避免挤压楼层卡片 */
+  .panel.left .stat .k .knote { display: none; }
+  .panel.left .stat .v { font-size: 13px; line-height: 1.25; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .meter { margin-top: 3px; height: 2px; }
+  .panel.left .stat.wide { grid-column: span 2; }
+  .panel.left .stat.wide .v { font-size: 11.5px; }
+
+  .panel.left .keys { flex: 1 1 auto; margin-top: 0; gap: 4px; }
+  .keybox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 2px 3px;
+    border-radius: 7px;
+  }
+  .keybox::before { width: 7px; height: 7px; margin-bottom: 1px; }
+  .keybox .n { font-size: 13px; }
+  .keybox .t { font-size: 10px; }
+
+  .panel.left .chips { flex: 0 1 auto; margin-top: 0; gap: 4px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip { padding: 1px 7px; font-size: 10px; white-space: nowrap; }
+
+  .panel.boardwrap { gap: 4px; }
+  .boardwrap::after { width: 82%; }
+  .floortag { flex: 0 0 auto; gap: 8px; }
+  .floortag .n { font-size: 16px; }
+  .floortag .nm { font-size: 12px; }
+  .playrow { flex-direction: column; align-items: center; gap: 5px; }
+  /* 兜底布局：棋盘按屏宽铺满，整页可以上下滚 */
+  .boardbox { width: 100%; aspect-ratio: 1 / 1; max-height: 70vh; }
+  .hint { display: none; }
+  #floorNote { flex: 0 0 auto; width: 96%; font-size: 10.5px; line-height: 1.3; padding: 4px 7px; }
+
+  /* 方向键：拇指够得着，又不占太多纵向空间 */
+  .touchpad {
+    flex: 0 0 auto;
+    grid-template-columns: repeat(3, 58px);
+    grid-template-rows: repeat(2, 46px);
+    gap: 6px;
+  }
+  .touchpad button { font-size: 20px; padding: 0; }
+
+  /* 手册 / 日志：栏内滚动，不再把页面撑高 */
+  .panel.book { min-height: 46px; overflow: hidden; }
+  /* 这两条要压掉 index.html 上的行内 margin，否则白白多占十几像素 */
+  .panel.book h3 { font-size: 11px; margin-bottom: 4px; margin-top: 6px !important; }
+  .panel.book > div:first-child { margin-bottom: 4px !important; }
+  .panel.book button { padding: 3px 8px; font-size: 11px; border-radius: 7px; }
+  #book { flex: 1 1 55%; min-height: 0; max-height: 46vh; gap: 4px; }
+  .monrow { padding: 4px; border-radius: 8px; gap: 6px; }
+  .monicon { width: 26px; height: 26px; flex: 0 0 26px; }
+  .monname { font-size: 12px; }
+  .monstat { font-size: 10px; }
+  /* 行高压到 1.15：怪物卡片正好塞满「手册」那块高度，第三行不会被切掉半行 */
+  .panel.book .monname, .panel.book .monstat { line-height: 1.15; }
+  #log { flex: 1 1 45%; min-height: 0; max-height: 30vh; margin-top: 5px; font-size: 11px; line-height: 1.45; }
+
+  /* 非核心界面统一为底部抽屉，地图仍保持可辨识的背景上下文。 */
+  #modal { align-items: flex-end; padding: 0; background: rgba(5, 8, 14, .58); }
+  .sheet {
+    width: 100%;
+    max-height: min(82dvh, 620px);
+    border-radius: 16px 16px 0 0;
+    border-bottom: 0;
+    padding: 16px max(16px, env(safe-area-inset-left)) calc(16px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-right));
+    box-shadow: 0 -12px 40px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.07);
+    animation: sheet-rise .16s ease-out both;
+  }
+  .sheet::before {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 4px;
+    margin: -5px auto 12px;
+    border-radius: 99px;
+    background: #66718b;
+  }
+  .sheet h2 { font-size: 17px; margin-bottom: 10px; }
+  .mbody { font-size: 14px; line-height: 1.65; }
+  .mfoot { gap: 8px; margin-top: 12px; }
+  .mfoot button { flex: 1 1 0; min-height: 44px; }
+  .shoprow { min-height: 44px; padding: 8px 10px; }
+}
+
+/* ── 手机竖屏且屏够高（≥620px）：整页锁成一屏，不出滚动条 ──────
+ *
+ * main 变成「定高 + 弹性」的纵向列：
+ *   状态区   flex: 0 0 auto —— 固定几行，不参与伸缩
+ *   棋盘区   flex: 1 1 0    —— 吃掉剩余高度，画布再取能放下的最大正方形
+ *   手册日志 flex: 1 3 auto —— 有富余就长高，地方紧张就优先缩，内部滚动
+ * 棋盘格子尺寸只由棋盘区的可用空间决定（flex-basis 0，不受画布反推），
+ * 所以不会出现「画布变大 → 布局变大 → 画布更大」的来回抖动。
+ * 矮屏（分屏 / 小屏机）不锁屏，退回上一层可滚动布局，棋盘按宽度铺满。
+ */
+@media (max-width: 620px) and (min-height: 620px) {
+  html, body { height: 100%; overflow: hidden; overscroll-behavior: none; }
+  .app { height: 100vh; height: 100dvh; min-height: 0; gap: 5px; }
+
+  main {
+    flex: 1 1 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .panel.left { flex: 0 0 auto; }
+  .panel.boardwrap { flex: 1 1 0; min-height: 0; }
+  .playrow { flex: 1 1 0; min-height: 0; }
+  .boardbox {
+    flex: 1 1 0;
+    min-height: 0;
+    width: 100%;
+    aspect-ratio: auto;
+    max-height: none;
+  }
+  .panel.book { flex: 1 3 auto; max-height: 19vh; }
+  #book { max-height: none; }
+  #log { max-height: none; }
+}
+
+/* ── 手机横屏（矮屏）：改成左右两栏，同样一屏装下 ───────────── */
+@media (min-width: 621px) and (max-height: 560px) {
+  html, body { height: 100%; overflow: hidden; overscroll-behavior: none; }
+  .app {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    gap: 6px;
+    padding: 6px;
+    padding-left: max(6px, env(safe-area-inset-left));
+    padding-right: max(6px, env(safe-area-inset-right));
+  }
+  header { gap: 5px; padding: 4px 8px; border-radius: 10px; }
+  .brand { font-size: 14px; letter-spacing: 0; }
+  header button { padding: 3px 8px; font-size: 11.5px; border-radius: 7px; }
+
+  main {
+    flex: 1 1 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+  }
+  .panel { padding: 6px; border-radius: 10px; }
+
+  .panel.left { flex: 0 0 168px; overflow-y: auto; }
+  .panel.left .stats { grid-template-columns: 1fr 1fr; gap: 5px; }
+  .panel.left .stat { padding: 3px 6px; }
+  .panel.left .stat .k { font-size: 10px; }
+  .panel.left .stat .v { font-size: 14px; }
+  .panel.left .stat.wide .v { font-size: 12px; }
+  .keys { margin-top: 5px; gap: 5px; }
+  .keybox { padding: 3px; }
+  .keybox .n { font-size: 13px; }
+  .keybox .t { font-size: 9.5px; }
+
+  .panel.boardwrap { flex: 1 1 0; min-width: 0; min-height: 0; gap: 4px; }
+  .floortag .n { font-size: 16px; }
+  .floortag .nm { font-size: 12px; }
+  .playrow { flex: 1 1 0; min-height: 0; flex-direction: row; gap: 8px; }
+  .boardbox { flex: 1 1 0; min-width: 0; min-height: 0; }
+  .hint { display: none; }
+  #floorNote { flex: 0 0 auto; width: 96%; font-size: 10.5px; padding: 3px 8px; }
+  .touchpad {
+    flex: 0 0 auto;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(2, 44px);
+    gap: 6px;
+  }
+  .touchpad button { font-size: 18px; padding: 0; }
+  .touchpad { margin-right: max(2px, env(safe-area-inset-right)); }
+  .ui-focus .touchpad { grid-template-columns: repeat(3, 56px); grid-template-rows: repeat(2, 48px); }
+  .ui-focus .touchpad button { font-size: 20px; }
+
+  .panel.book { flex: 0 0 236px; overflow: hidden; }
+  #book { flex: 1 1 55%; min-height: 0; max-height: none; }
+  #log { flex: 1 1 45%; min-height: 0; max-height: none; margin-top: 6px; font-size: 11px; }
+}
+
+/* 手机横屏是主要目标：地图占主体，控制键贴近右手拇指区。 */
+@media (min-width: 621px) and (max-height: 560px) {
+  .ui-focus .panel.left { display: block; flex: 0 0 190px; }
+  .ui-focus .panel.boardwrap { flex: 1 1 0; }
+  .ui-focus .panel.book { display: none; }
+  .ui-focus .panel.left .left-extra { display: none !important; }
+  .ui-focus .panel.left .stats { grid-template-columns: 1fr 1fr; }
+}
+
+/* 窄屏上切换按钮始终可见，其余操作按需展开。 */
+@media (max-width: 620px) {
+  .ui-focus .optional-action { display: none !important; }
+  .ui-focus .optional-panel { display: none !important; }
+  .ui-focus .left-extra { display: none !important; }
+  #btnTouchpad {
+    display: block;
+    flex: 0 0 auto;
+    align-self: center;
+    min-height: 44px;
+    padding: 6px 18px;
+  }
+.boardwrap:not(.touchpad-open) .touchpad { display: none; }
+}
+
+/* 手册移入顶部按钮；地图下方只留滚动日志。 */
+.boardwrap::after { display: none; }
+.boardwrap #log {
+  flex: 0 0 auto;
+  align-self: stretch;
+  width: 100%;
+  min-height: 42px;
+  max-height: 120px;
+  margin: 0;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #0d111b;
+  overflow-y: auto;
+}
+#manualOverlay[hidden] { display: none; }
+#manualOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background: rgba(3, 6, 13, .72);
+}
+.manual-sheet {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: min(580px, 100%);
+  max-height: min(80dvh, 750px);
+  padding: 14px;
+  border: 1px solid #66738c;
+  border-radius: 10px;
+  background: #151a27;
+  box-shadow: 0 18px 50px rgba(0,0,0,.6);
+}
+.manual-head { display: flex; align-items: center; gap: 8px; }
+.manual-head h2 { flex: 1; margin: 0; font-size: 18px; }
+#manualOverlay #book { max-height: none; min-height: 0; overflow-y: auto; }
+@media (max-width: 620px) {
+  .boardwrap #log { min-height: 34px; max-height: 12dvh; font-size: 11px; line-height: 1.3; }
+  .manual-sheet { max-height: 82dvh; padding: 10px; }
+  .manual-head h2 { font-size: 15px; }
+  .manual-head button { padding: 5px 8px; font-size: 12px; }
+}
+
+/* 人物和石碑的文字在地图中央阅读；功能菜单仍沿用底部抽屉。 */
+@media (max-width: 620px), (max-height: 560px) {
+  #modal.story-modal {
+    align-items: center;
+    justify-content: center;
+    padding: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+  }
+  #modal.story-modal .sheet {
+    width: min(720px, 100%);
+    max-height: calc(100dvh - 24px);
+    border: 4px solid #d77718;
+    border-radius: 2px;
+    padding: 8px;
+    box-shadow: 0 0 0 3px #15151a, 0 18px 50px rgba(0,0,0,.75);
+    animation: none;
+  }
+  #modal.story-modal .sheet::before { display: none; }
+}

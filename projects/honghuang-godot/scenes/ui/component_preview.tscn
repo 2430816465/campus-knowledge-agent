@@ -1,0 +1,80 @@
+[gd_scene format=3]
+[ext_resource type="Theme" path="res://assets/ui-foundation/foundation.tres" id="theme"]
+[ext_resource type="Script" path="res://scripts/ui/component_preview.gd" id="script"]
+[ext_resource type="PackedScene" path="res://scenes/ui/components/primary_button.tscn" id="primary"]
+[ext_resource type="PackedScene" path="res://scenes/ui/components/secondary_button.tscn" id="secondary"]
+[ext_resource type="PackedScene" path="res://scenes/ui/components/tab.tscn" id="tab"]
+[ext_resource type="PackedScene" path="res://scenes/ui/components/resource_bar.tscn" id="resource"]
+[ext_resource type="PackedScene" path="res://scenes/ui/components/function_entry.tscn" id="entry"]
+[ext_resource type="PackedScene" path="res://scenes/ui/components/equipment_card.tscn" id="card"]
+[ext_resource type="PackedScene" path="res://scenes/ui/components/product_card.tscn" id="product"]
+[ext_resource type="PackedScene" path="res://scenes/ui/components/status.tscn" id="status"]
+[ext_resource type="PackedScene" path="res://scenes/ui/components/bottom_navigation.tscn" id="navigation"]
+[node name="ComponentPreview" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource("theme")
+metadata/ui_foundation = true
+script = ExtResource("script")
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.13,0.24,0.25,1)
+mouse_filter = 2
+[node name="Scroll" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
+horizontal_scroll_mode = 0
+[node name="Content" type="VBoxContainer" parent="Scroll"]
+size_flags_horizontal = 3
+theme_override_constants/separation = 14
+[node name="Title" type="Label" parent="Scroll/Content"]
+text = "UI 组件预览 · 开发样例"
+theme_override_colors/font_color = Color(1,0.95,0.8,1)
+theme_override_font_sizes/font_size = 22
+[node name="Buttons" type="HBoxContainer" parent="Scroll/Content"]
+[node name="Normal" parent="Scroll/Content/Buttons" instance=ExtResource("secondary")]
+size_flags_horizontal = 3
+text = "正常"
+theme_override_font_sizes/font_size = 24
+[node name="Pressed" parent="Scroll/Content/Buttons" instance=ExtResource("tab")]
+size_flags_horizontal = 3
+text = "选中"
+theme_override_font_sizes/font_size = 24
+button_pressed = true
+[node name="Disabled" parent="Scroll/Content/Buttons" instance=ExtResource("secondary")]
+size_flags_horizontal = 3
+text = "禁用"
+theme_override_font_sizes/font_size = 24
+disabled = true
+[node name="Resources" parent="Scroll/Content" instance=ExtResource("resource")]
+amount = 999999999999
+[node name="Entries" type="HBoxContainer" parent="Scroll/Content"]
+[node name="RedDot" parent="Scroll/Content/Entries" instance=ExtResource("entry")]
+size_flags_horizontal = 3
+notice = true
+caption = "红点"
+[node name="Locked" parent="Scroll/Content/Entries" instance=ExtResource("entry")]
+size_flags_horizontal = 3
+locked = true
+caption = "未解锁"
+[node name="Long" parent="Scroll/Content/Entries" instance=ExtResource("entry")]
+size_flags_horizontal = 3
+caption = "较长中文入口"
+[node name="Cards" type="HBoxContainer" parent="Scroll/Content"]
+[node name="Old" parent="Scroll/Content/Cards" instance=ExtResource("card")]
+size_flags_horizontal = 3
+[node name="New" parent="Scroll/Content/Cards" instance=ExtResource("card")]
+size_flags_horizontal = 3
+[node name="Reward" parent="Scroll/Content" instance=ExtResource("card")]
+[node name="Product" parent="Scroll/Content" instance=ExtResource("product")]
+[node name="Status" parent="Scroll/Content" instance=ExtResource("status")]
+[node name="Navigation" parent="Scroll/Content" instance=ExtResource("navigation")]
+[node name="OpenModal" parent="Scroll/Content" instance=ExtResource("secondary")]
+text = "打开通用弹窗"

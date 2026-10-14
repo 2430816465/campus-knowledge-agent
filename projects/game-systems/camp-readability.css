@@ -1,0 +1,213 @@
+/* Host pages only: game iframe styles and artwork remain independent. */
+:root{--ink:#35271f;--text:var(--ink);--muted:#59483a}
+.portal-copy small,.eyebrow,.button.quiet,.tag,.status,.text-link,.price,
+.catalog-heading p,.catalog-item small,.catalog-record small,.catalog-game small,
+.catalog-pager small,.quest-description span,.catalog-note,.field-label,.choice-number,
+.mode-emblem,.feature-tags span,.prepare .journey-note,.prepare .journey-note small,
+.notice,.notice span,.wood-settings-copy p,.wood-save-note,.wallet-hero>span,
+.record-summary,.product-permanent,.journal-note,.preview-tools-entry,
+.quest-reward,.room-code strong{color:#59483a}
+.income{color:#35582a}.expense{color:#854029}
+.button:disabled{opacity:1;color:#66574a;background:#e9e0d4;border-color:#b8aa99;box-shadow:none}
+.feature-tags span,.tag,.status{background:#f1e5d1}
+.status.success{color:#35582a;background:#e6eddc}.status.error{color:#872c22;background:#f9e1d9}
+.catalog-heading,.catalog-profile,.catalog-quest,.catalog-record,.catalog-item{background:#fffbf4}
+.catalog-pager[hidden]{display:none}
+.catalog-grid{flex:0 0 auto;grid-template-rows:repeat(var(--catalog-rows),auto);align-content:start}
+.catalog-quest{justify-content:flex-start;padding:12px;gap:8px}
+.catalog-quest .quest-description{align-items:center;justify-content:space-between}
+.catalog-quest .quest-description{display:grid;grid-template-columns:56px 1fr auto;grid-template-rows:auto auto;gap:2px 10px;width:100%}
+.quest-description .quest-badge{grid-column:1;grid-row:1/3}
+.quest-description b{grid-column:2;grid-row:1;line-height:1.35}
+.quest-description .quest-state{grid-column:2;grid-row:2;justify-self:start}
+.quest-description .quest-more{grid-column:3;grid-row:1/3}
+.quest-badge{position:relative;display:inline-grid;place-items:center;width:56px;height:62px;flex:none}
+.badge-ribbon{position:absolute;bottom:0;width:34px;height:30px;background:#8b705b;clip-path:polygon(0 0,100% 0,100% 100%,50% 78%,0 100%)}
+.badge-face{display:grid;place-items:center;position:relative;align-self:start;width:50px;height:50px;margin-top:2px;background:#e8d8bb;border:4px solid #96764e;box-shadow:inset 0 0 0 3px #fff0d2;clip-path:polygon(16% 0,84% 0,84% 8%,100% 8%,100% 84%,92% 84%,92% 100%,8% 100%,8% 92%,0 92%,0 16%,16% 16%);color:#624328}
+.badge-face .icon{width:26px;height:26px}
+.quest-badge.ready .badge-face{background:#f3cb6c;border-color:#9b5b1f;color:#61350c}
+.quest-badge.ready .badge-ribbon{background:#ac5432}
+.quest-badge.claimed .badge-face{background:#d4e3bc;border-color:#537340;color:#35552b}
+.quest-badge.claimed .badge-ribbon{background:#537340}
+.badge-check{position:absolute;right:0;bottom:6px;background:#35552b;color:#fffbe8;border:2px solid #fff3d9;width:20px;height:20px;display:grid;place-items:center}
+.badge-check .icon{width:12px;height:12px}
+.quest-description .quest-state,.quest-detail-badge .quest-state{padding:1px 5px;font-size:11px;color:#59483a;background:#eee3d2;border-radius:4px}
+.quest-description .quest-state.ready{color:#743b12;background:#fce7b4}
+.quest-description .quest-state.claimed{color:#35552b;background:#e2edd6}
+.quest-ready{border-color:#a57129}.quest-claimed{border-color:#8eaa7a}
+.quest-detail-badge{display:flex;align-items:center;gap:12px;margin:8px 0 14px}
+.catalog-single .quest-badge{width:64px;height:70px}
+.catalog-single .badge-face{width:58px;height:58px}
+.catalog-single .badge-face .icon{width:32px;height:32px}
+.catalog-single .quest-description{grid-template-columns:64px 1fr auto}
+.quest-summary{font-size:13px;line-height:1.55;margin:0;min-height:40px}
+.catalog-quest>.button{margin-top:auto}
+.catalog-single{grid-template-columns:1fr}
+.catalog-record{min-height:116px!important}
+.catalog-item{min-height:150px!important}
+.catalog-item>.item-art,.catalog-item>.reference-art{height:110px;flex:none}
+body:is([data-page=tasks],[data-page=profile],[data-page=shop]) #main{overflow:auto;overscroll-behavior:contain}
+.camp-dashboard{height:auto;align-self:flex-start}
+.exploration-list{padding:12px;background:#fffbf4;border:1px solid var(--line);border-radius:14px}
+.exploration-list h2{font-size:17px;margin:0 0 8px}
+.exploration-list>div{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.exploration-list .button{display:flex;flex-direction:column;align-items:flex-start;gap:1px;padding:6px 10px;min-height:48px;font-size:14px}
+.exploration-list small{color:var(--muted);font-size:11px}
+.profile-stats{display:grid;grid-template-columns:repeat(3,1fr);padding:14px 8px;background:#fffbf4;border:1px solid var(--line);border-radius:14px;text-align:center;color:var(--muted);font-size:12px}
+.profile-stats span+span{border-left:1px solid var(--line)}
+.profile-stats b{display:block;font-size:25px;color:var(--ink)}
+body[data-page=profile] .camp-dashboard{margin-block:auto}
+body[data-page=profile] .catalog-note{margin:0;background:#fffbf4}
+/* Keep the primary action in the first screen; secondary information expands on demand. */
+body[data-page=prepare] .shell{max-width:1000px}
+body[data-page=prepare] .topbar{min-height:60px;padding:8px 0}
+body[data-page=prepare] #main{padding:0 0 8px;min-height:0}
+body[data-page=prepare] .page-heading{margin:0 0 8px;min-height:44px}
+body[data-page=prepare] .shell>footer{display:none}
+.prepare-art{height:156px}
+.prepare-art>div:last-child{left:14px;right:14px;bottom:10px;max-width:max-content;padding:6px 10px;background:#30241df5;border-radius:8px}
+.prepare-art h1{font-size:28px;line-height:1.2;margin:0 0 4px;color:#fff8ec}
+.prepare-art p{font-size:13px;line-height:1.5;color:#fff4df}
+.prepare-art .eyebrow{display:none}
+.prepare-art>.tag{top:10px;right:10px;color:#493425;background:#fff3df}
+.prepare-body{display:flex;flex-direction:column;gap:12px;padding:14px}
+.prepare-info{display:contents}
+.prepare .mode-emblem{display:none}
+.prepare .feature-tags{order:0;margin:0;gap:5px}
+.prepare .feature-tags span{padding:3px 7px}
+.prepare .departure{order:1}
+.prepare .field-label{margin:0 0 6px}
+.prepare .choices{gap:6px}
+.prepare .choices .button{min-height:44px;padding:8px 10px}
+.prepare .actions{margin:10px 0 0;gap:8px;display:grid;grid-template-columns:1fr 1.3fr}
+.prepare .actions>.button{min-width:0;min-height:46px;padding:8px 4px;font-size:14px}
+.prepare .departure .primary{background:#824226;color:#fff9ed;border-color:#66341e}
+.prepare .journey-note{order:2;margin:0;gap:6px;font-size:12px}
+.prepare .journey-note>.icon{width:16px;height:16px}
+.prepare-details{order:3;border-top:1px solid var(--line);color:var(--muted)}
+.prepare-details summary{min-height:44px;padding:10px 0;cursor:pointer;font-size:13px;font-weight:700;color:var(--ink)}
+.prepare-details p{line-height:1.65;margin:0}
+.prepare .prepare-details .notice{margin:8px 0 0}
+#modal .wood-save-note,#modal .wood-settings-copy p{color:var(--muted)}
+#modal .fit-pager button:disabled{opacity:1;color:#66574a;background:#e9e0d4}
+@media(max-width:440px){
+ .catalog-quest:not(:only-child) .quest-description{grid-template-columns:44px 1fr;gap:2px 6px}
+ .catalog-quest:not(:only-child) .quest-more{display:none}
+ .catalog-quest:not(:only-child) .quest-badge{width:44px;height:52px}
+ .catalog-quest:not(:only-child) .badge-face{width:42px;height:42px}
+ .catalog-quest:not(:only-child) .badge-face .icon{width:22px;height:22px}
+ .catalog-quest:not(:only-child) .quest-description b{font-size:14px}
+}
+@media(orientation:portrait) and (max-height:700px){
+ .catalog-quest:not(:only-child) .quest-summary{display:none}
+ body[data-page=profile] .camp-dashboard{gap:6px}
+ body[data-page=profile] .catalog-heading p{display:none}
+ body[data-page=profile] .catalog-profile{padding:6px 10px;min-height:64px}
+ body[data-page=profile] .catalog-profile h2{font-size:20px}
+ body[data-page=profile] .catalog-profile p{font-size:12px}
+ body[data-page=profile] .profile-menu{gap:8px}
+ body[data-page=profile] .profile-menu button{height:54px;flex-direction:row;font-size:14px}
+ body[data-page=profile] .profile-stats{padding:6px}
+ body[data-page=profile] .profile-stats b{font-size:20px;line-height:24px}
+ body[data-page=profile] .catalog-note{display:none}
+ .prepare-art{height:110px}
+ .prepare-art h1{font-size:25px}
+ .prepare-body{padding:10px;gap:8px}
+ .prepare .feature-tags{display:none}
+}
+@media(orientation:landscape) and (max-height:500px){
+ body[data-page=prepare] .topbar{min-height:44px;height:44px;padding:2px 0}
+ body[data-page=prepare] .page-heading{position:absolute;top:0;left:50%;transform:translateX(-50%);margin:0}
+ body[data-page=prepare] .page-heading>.eyebrow{display:none}
+ body[data-page=prepare] .prepare{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr);align-items:start}
+ .prepare-art{height:calc(100dvh - 62px);min-height:230px;max-height:340px}
+ .prepare-art h1{font-size:24px}.prepare-art>div:last-child{left:8px;right:8px}
+ .prepare-body{padding:10px;gap:6px}
+ .prepare .feature-tags{display:none}
+ .prepare .choices{gap:4px}.prepare .actions{margin-top:6px}
+ .prepare .departure>.full{margin-top:6px;min-height:44px;padding:7px}
+ .prepare .journey-note{font-size:11px}
+ .prepare-details summary{padding:6px 0;min-height:32px}
+ body[data-page=tasks] .camp-dashboard{grid-template-rows:44px auto auto}
+ .quest-summary{display:none}
+ .catalog-quest{gap:4px;padding:6px 10px}
+ .catalog-quest .quest-description{min-height:38px}
+ .catalog-record{min-height:106px!important}
+ .exploration-list{grid-column:1/-1}.exploration-list>div{grid-template-columns:repeat(5,1fr)}
+ .exploration-list .button{font-size:12px;padding:5px}
+ .profile-stats{padding:6px}.profile-stats b{font-size:20px;line-height:22px}
+ body[data-page=profile] .camp-dashboard{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-content:center}
+ body[data-page=profile] .catalog-heading{grid-column:1/-1}
+ body[data-page=profile] .profile-menu,body[data-page=profile] .catalog-note{grid-column:1/-1}
+ body[data-page=profile] .catalog-grid,body[data-page=profile] .catalog-pager{grid-column:1/-1}
+}
+
+/* Quiet paper texture for exposed menu space; no overlay or hit target. */
+body,.catalog-page,.prepare{
+ background-color:#fcf7ef;
+ background-image:radial-gradient(ellipse at 0 0,#dec39133,transparent 60%),radial-gradient(ellipse at 100% 100%,#bdc5a329,transparent 55%),linear-gradient(90deg,#a5804b0d 1px,transparent 1px),linear-gradient(#a5804b0d 1px,transparent 1px);
+ background-size:100% 100%,100% 100%,32px 32px,32px 32px;
+}
+
+/* Departure screens use the available height for their scene, not empty paper.
+   Intrinsic content remains scrollable when expanded or on a compact viewport. */
+body[data-page=prepare] .shell{min-height:100dvh;display:flex;flex-direction:column;padding-bottom:max(10px,env(safe-area-inset-bottom))}
+body[data-page=prepare] .topbar{flex:none;min-height:60px}
+body[data-page=prepare] #main{flex:1;display:flex;flex-direction:column;padding:0;min-height:0}
+body[data-page=prepare] .page-heading{flex:none;position:static;transform:none;min-height:44px;margin:0 0 8px}
+body[data-page=prepare] .prepare{flex:1;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(160px,1fr) auto;align-items:stretch;min-width:0}
+body[data-page=prepare] .prepare-art{height:auto;min-height:160px;max-height:none;container-type:size}
+body[data-page=prepare] .prepare-art>.scene{position:absolute;inset:0;overflow:hidden}
+/* Preserve the reference atlas window's aspect ratio as the scene grows. */
+body[data-page=prepare] .prepare-art .reference-art{position:absolute!important;left:50%;top:50%;right:auto;bottom:auto;width:max(100cqw,calc(100cqh * var(--art-ratio)));height:auto;aspect-ratio:var(--art-ratio);transform:translate(-50%,-50%)}
+/* Layered characters keep their own composition instead of inheriting atlas cover scaling. */
+body[data-page=prepare]:is([data-mode=rush],[data-mode=nightwatch],[data-mode=workshop],[data-mode=chess]) .prepare-art .reference-art{left:0;top:0;width:100%;height:100%;aspect-ratio:auto;transform:none}
+body[data-page=prepare][data-mode=rush] .prepare-art .reference-art>img:first-child{height:72%!important;max-height:240px;bottom:12%!important}
+body[data-page=prepare][data-mode=rush] .prepare-art .reference-art>img:nth-child(2){height:22%!important;max-height:76px}
+body[data-page=prepare][data-mode=nightwatch] .prepare-art .reference-art>img{height:82%!important;max-height:340px;bottom:10%!important}
+body[data-page=prepare][data-mode=workshop] .prepare-art .reference-art>img{height:60%!important;max-height:280px;bottom:12%!important}
+body[data-page=prepare][data-mode=chess] .prepare-art .chess-art>img{height:78%;max-height:300px;bottom:14%;left:-2%}
+body[data-page=prepare][data-mode=chess] .prepare-art .chess-art>img:nth-child(2){height:70%;max-height:280px;right:-3%;left:auto;bottom:14%}
+body[data-page=prepare][data-mode=chess] .prepare-art .chess-art-cards{bottom:24%;font-size:22px}
+body[data-page=prepare] .prepare-art>div:last-child{max-width:calc(100% - 28px)}
+body[data-page=prepare] .prepare-art>.tag{max-width:calc(100% - 20px)}
+body[data-page=prepare] .prepare-body{gap:10px;padding:14px;min-width:0}
+body[data-page=prepare] .prepare .feature-tags{display:flex;gap:5px}
+body[data-page=prepare] .prepare .feature-tags span{font-size:12px;line-height:1.5}
+body[data-page=prepare] .prepare .choices .button{min-height:44px;font-size:14px;line-height:1.4}
+body[data-page=prepare] .prepare .choices .button>span:nth-child(2){flex:1}
+body[data-page=prepare] .prepare .choices .button.selected{color:#55321e;border-color:#a9662f;background:#f5dfbc;box-shadow:inset 3px 0 #a9662f}
+body[data-page=prepare] .prepare .choice-number{color:#6b4a30}
+body[data-page=prepare] .prepare .departure>.full{min-height:44px;margin-top:8px}
+body[data-page=prepare] .prepare .journey-note{font-size:12px;line-height:1.5}
+body[data-page=prepare] .prepare-details summary{font-size:13px;min-height:44px;padding:10px 0}
+@media(orientation:portrait) and (max-height:700px){
+ body[data-page=prepare] .prepare{grid-template-rows:minmax(116px,1fr) auto}
+ body[data-page=prepare] .prepare-art{min-height:116px}
+ body[data-page=prepare] .prepare-body{padding:10px;gap:6px}
+ body[data-page=prepare] .prepare .feature-tags{display:none}
+ body[data-page=prepare] .prepare .actions{margin-top:8px}
+ body[data-page=prepare] .prepare-details summary{padding:8px 0}
+}
+@media(orientation:landscape){
+ body[data-page=prepare] .topbar{height:48px;min-height:48px;padding:2px 0}
+ body[data-page=prepare] .topbar>.brand{display:none}
+ body[data-page=prepare] .page-heading{position:absolute;top:env(safe-area-inset-top);left:50%;transform:translateX(-50%);margin:0}
+ body[data-page=prepare] .page-heading>.eyebrow{display:none}
+ body[data-page=prepare] .prepare{grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr);grid-template-rows:minmax(0,1fr)}
+ body[data-page=prepare] .prepare-art{min-height:250px;height:max(250px,calc(100dvh - 64px));align-self:start}
+ body[data-page=prepare] .prepare-body{align-self:center;padding:12px;gap:8px}
+ body[data-page=prepare] .prepare-art>div:last-child{left:10px;right:10px;max-width:none}
+ body[data-page=prepare] .prepare-art h1{font-size:26px}
+}
+@media(orientation:landscape) and (max-height:430px){
+ body[data-page=prepare] .shell{padding-bottom:max(6px,env(safe-area-inset-bottom))}
+ body[data-page=prepare] .prepare-body{padding:8px 10px;gap:5px}
+ body[data-page=prepare] .prepare .feature-tags{display:none}
+ body[data-page=prepare] .prepare .field-label{margin-bottom:4px;font-size:12px}
+ body[data-page=prepare] .prepare .choices{gap:4px}
+ body[data-page=prepare] .prepare .choices .button{padding:6px 8px;font-size:13px}
+ body[data-page=prepare] .prepare .actions{margin-top:6px}
+ body[data-page=prepare] .prepare .actions>.button{min-height:44px;font-size:13px}
+ body[data-page=prepare] .prepare-details summary{padding:8px 0;font-size:12px}
+}

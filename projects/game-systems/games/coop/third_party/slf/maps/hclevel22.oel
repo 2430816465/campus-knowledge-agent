@@ -1,0 +1,300 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    1200
+  </width>
+  
+  
+  <height>
+    1000
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="10" w="1200" x="0" y="0"/>
+    
+    
+    <rect h="990" w="10" x="0" y="10"/>
+    
+    
+    <rect h="200" w="100" x="10" y="500"/>
+    
+    
+    <rect h="120" w="1190" x="10" y="880"/>
+    
+    
+    <rect h="110" w="110" x="480" y="170"/>
+    
+    
+    <rect h="40" w="30" x="520" y="280"/>
+    
+    
+    <rect h="500" w="30" x="520" y="380"/>
+    
+    
+    <rect h="20" w="20" x="770" y="690"/>
+    
+    
+    <rect h="360" w="210" x="990" y="520"/>
+    
+    
+    <rect h="20" w="20" x="1020" y="190"/>
+    
+    
+    <rect h="20" w="20" x="1050" y="450"/>
+    
+    
+    <rect h="20" w="20" x="1080" y="140"/>
+    
+    
+    <rect h="20" w="20" x="1100" y="390"/>
+    
+    
+    <rect h="20" w="20" x="1120" y="230"/>
+    
+    
+    <rect h="20" w="20" x="1150" y="320"/>
+    
+    
+    <rect h="510" w="10" x="1190" y="10"/>
+    
+  
+  </solids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <level2_specialPlatform animated="0" movementType="1" speed="40" x="550" y="380"/>
+    
+    
+    <level2_specialPlatform animated="0" movementType="1" speed="40" x="420" y="380"/>
+    
+    
+    <level2_specialBlock animated="0" movementType="1" speed="40" x="550" y="790"/>
+    
+    
+    <level2_specialBlock animated="0" movementType="1" speed="40" x="700" y="430"/>
+    
+    
+    <level2_specialBlock animated="0" movementType="1" speed="40" x="770" y="500"/>
+    
+    
+    <level2_specialBlock animated="0" movementType="1" speed="40" x="950" y="620"/>
+    
+    
+    <LargeCrate x="490" y="320"/>
+    
+    
+    <level2_specialBlock animated="0" movementType="1" speed="40" x="480" y="680"/>
+    
+    
+    <level2_specialBlock animated="0" movementType="1" speed="40" x="350" y="630"/>
+    
+    
+    <level2_specialBlock animated="0" movementType="1" speed="40" x="210" y="570"/>
+    
+    
+    <level2_specialPlatform animated="0" movementType="1" speed="40" x="700" y="310"/>
+    
+    
+    <level2_specialBlock animated="0" movementType="1" speed="40" x="590" y="230"/>
+    
+    
+    <level2_specialBlock animated="0" movementType="1" speed="40" x="840" y="560"/>
+    
+    
+    <level2_spike1 height="20" width="10" x="790" y="690"/>
+    
+    
+    <level2_spike3 height="20" width="10" x="760" y="690"/>
+    
+    
+    <level2_spike0 height="10" width="160" x="1030" y="510"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <movingPlatforms>
+    
+    
+    <level2_specialPlatformSmall animated="1" movementType="5" speed="120" x="630" y="720">
+      
+      
+      <node x="910" y="720"/>
+      
+    
+    </level2_specialPlatformSmall>
+    
+    
+    <level2_specialPlatformSmall animated="1" movementType="5" speed="80" x="120" y="780">
+      
+      
+      <node x="430" y="780"/>
+      
+    
+    </level2_specialPlatformSmall>
+    
+    
+    <level2_specialPlatformSmall animated="1" movementType="5" speed="90" x="160" y="420">
+      
+      
+      <node x="330" y="420"/>
+      
+    
+    </level2_specialPlatformSmall>
+    
+  
+  </movingPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level2_MG2 scrollFactor="0.2" x="0" y="420"/>
+    
+    
+    <level2_pipe1 height="70" scrollFactor="0.2" width="980" x="20" y="520"/>
+    
+    
+    <level2_metalPipe height="1000" scrollFactor="0.2" width="30" x="440" y="0"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer2>
+    
+    
+    <level2_FMG3 scrollFactor="0.6" x="190" y="330"/>
+    
+    
+    <level2_FMG3 scrollFactor="0.7" x="470" y="580"/>
+    
+    
+    <level2_FMG3 scrollFactor="0.9" x="780" y="190"/>
+    
+    
+    <level2_tank scrollFactor="0.65" x="570" y="300"/>
+    
+    
+    <level2_greenPipe height="300" scrollFactor="0.65" width="20" x="610" y="0"/>
+    
+    
+    <level2_pipe1 height="70" scrollFactor="0.65" width="370" x="630" y="330"/>
+    
+    
+    <level2_tank scrollFactor="0.55" x="140" y="660"/>
+    
+    
+    <level2_greenPipe height="660" scrollFactor="0.55" width="20" x="180" y="0"/>
+    
+    
+    <level2_pipe1 height="70" scrollFactor="0.55" width="790" x="200" y="700"/>
+    
+  
+  </BGLayer2>
+  
+  
+  <BGLayer3>
+    
+    
+    <sodaPack scrollFactor="0.2" x="590" y="860"/>
+    
+    
+    <palettes scrollFactor="0.2" x="830" y="840"/>
+    
+    
+    <level2_braceLeft x="10" y="700"/>
+    
+    
+    <level2_braceLeft x="550" y="830"/>
+    
+    
+    <level2_braceLeft x="550" y="400"/>
+    
+    
+    <level2_braceRight x="500" y="400"/>
+    
+    
+    <level2_braceRight x="970" y="660"/>
+    
+    
+    <level2_braceLeft x="550" y="280"/>
+    
+    
+    <level2_braceRight x="500" y="280"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <exit nextLevel="2" x="514" y="80"/>
+    
+    
+    <Bottle width="12" x="1083" y="64"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="500" y="830">
+      
+      
+      <node x="540" y="830"/>
+      
+    
+    </liselot>
+    
+    
+    <player andreInitialFlip="0" followHeight="0" followWidth="0" levelName="If It Moves Kiss It" liselotInitialFlip="1" movementType="1" speed="40" startsFirst="1" talkString="We might need to think about an exchange incentive to have people return their empty bottles." x="630" y="830">
+      
+      
+      <node x="660" y="830"/>
+      
+    
+    </player>
+    
+    
+    <inspector movementType="1" speed="40" talkString="Not sure how magnets work, but they may help sterilize food." x="710" y="840">
+      
+      
+      <node x="960" y="840"/>
+      
+    
+    </inspector>
+    
+    
+    <worker movementType="1" speed="40" talkString="I always root for the underdog." x="10" y="840">
+      
+      
+      <node x="490" y="840"/>
+      
+    
+    </worker>
+    
+  
+  </characters>
+  
+  
+  <FGLayer1>
+    
+    
+    <level2_chainTile height="1000" scrollFactor="2" width="12" x="341" y="0"/>
+    
+  
+  </FGLayer1>
+  
+
+</level>

@@ -1,0 +1,10 @@
+import {chromium} from 'file:///C:/Users/24308/.codex/skills/develop-web-game/node_modules/playwright/index.mjs';
+import {mkdir,writeFile} from 'node:fs/promises';
+const out='artifacts/release-1.19.0';await mkdir(out,{recursive:true});
+const b=await chromium.launch({headless:true});const errors=[];const p=await b.newPage({viewport:{width:390,height:844},hasTouch:true});p.on('pageerror',e=>errors.push(e.stack));p.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url())});
+await p.goto('http://127.0.0.1:4210');await p.waitForTimeout(400);await p.screenshot({path:out+'/camp.png',fullPage:true});
+await p.locator('[data-action="mode:coop"]').click();await p.locator('[data-action="choice:1"]').click();await p.locator('[data-action="create-room"]').click();await p.waitForTimeout(1500);console.log('before',await p.locator('#toast').textContent(),await p.locator('#main').getAttribute('class'),p.frames().map(f=>f.url()),errors);const f=p.frames().find(f=>f.url().includes('/coop/'));
+console.log('coop',await f.evaluate(()=>({game:!!window.RushGame,levels:window.RushGame?.LEVELS.length,buttons:!!document.querySelector('#normalMode'),state:window.render_game_to_text?.()})));
+await f.locator('#startSolo').click();await p.waitForTimeout(700);await p.screenshot({path:out+'/coop.png'});
+await p.goto('http://127.0.0.1:4210/games/marble/index.html');await p.waitForTimeout(600);await p.locator('[data-action="new"]').first().click();await p.waitForTimeout(500);await p.screenshot({path:out+'/marble.png'});await p.locator('[data-action="togglePanel"]').first().click();await p.waitForTimeout(250);await p.screenshot({path:out+'/marble-settings.png'});
+console.log('errors',errors);await writeFile(out+'/smoke.json',JSON.stringify(errors,null,2));await b.close();

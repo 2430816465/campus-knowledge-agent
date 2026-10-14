@@ -1,0 +1,26 @@
+再来亿把 1.21.0 — 来源、许可与开发版边界
+
+1. 再闯一关合作地图与改编
+原项目：Super Lemonade Factory OUYA
+原作者：Initials Video Games 及原贡献者
+来源：https://github.com/initials/SuperLemonadeFactoryOUYA
+许可：GNU GPL version 3，完整条款见 licenses/GPL-3.0.txt。
+保留72份原始可编辑地图、转换脚本、改编规则与版权声明，位置 games/coop/third_party/slf、games/coop/tools、games/coop/src。
+本版修改：困难模式名称、紧凑首页、独立选关、72关奖励元数据、广告频控与界面调整。地图坐标布局保持既有改编。
+GPL涵盖的改编及相应组合作品按其要求提供对应可修改源码。其他第三方作品保留各自许可；不声称拥有原作者的版权，不表示原作者背书。
+
+2. 勇者棋牌规则参考
+CardRoomPro 的 MIT 许可保留于 games/chess/vendor/CardRoomPro-LICENSE.txt。项目改编与规则实现见 games/chess。
+
+3. 字体
+站酷快乐体：SIL Open Font License，保留 assets/fonts/OFL-ZCOOLKuaiLe.txt。
+
+4. 源码获取与构建
+随本APK交付 再来亿把-1.21.0-完整源码.zip，为本二进制对应完整可修改源码，包含原始地图、许可证、转换工具、Android/局域网宿主及构建脚本。
+本地构建说明：先 node android/pack-assets.mjs；使用JDK17、Android SDK36、Gradle8.13，gradle --offline -p android assembleDebug。必须以APK和源码压缩包一起提供给接收者；如后续公开下载，必须同时提供对应源码的可用下载，不仅提供这段说明。
+不把用户存档、签名私钥或构建缓存放入源码包。
+
+5. 尚未完成的商业发行条件
+当前仅为Android开发体验版，不代表抖音已审核通过。模拟广告不产生真实商业展示或收入。
+魔塔原始地图授权链、部分美术/音频来源证据、合集GPL结合范围及平台条款兼容性仍待核实；不能用更名、删除来源或混淆代码代替授权。
+正式发行前补齐授权台账、主体/备案等适用材料、真实平台SDK、隐私与真机验收；许可不明内容需获得授权或更换。

@@ -1,0 +1,240 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    640
+  </width>
+  
+  
+  <height>
+    840
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="840" w="10" x="0" y="0"/>
+    
+    
+    <rect h="20" w="230" x="10" y="350"/>
+    
+    
+    <rect h="320" w="80" x="10" y="520"/>
+    
+    
+    <rect h="160" w="130" x="20" y="0"/>
+    
+    
+    <rect h="170" w="550" x="90" y="670"/>
+    
+    
+    <rect h="10" w="480" x="160" y="0"/>
+    
+    
+    <rect h="280" w="80" x="160" y="10"/>
+    
+    
+    <rect h="30" w="120" x="300" y="190"/>
+    
+    
+    <rect h="20" w="90" x="300" y="350"/>
+    
+    
+    <rect h="40" w="140" x="300" y="550"/>
+    
+    
+    <rect h="130" w="60" x="330" y="220"/>
+    
+    
+    <rect h="80" w="80" x="330" y="590"/>
+    
+    
+    <rect h="20" w="150" x="440" y="350"/>
+    
+    
+    <rect h="220" w="20" x="570" y="130"/>
+    
+    
+    <rect h="100" w="20" x="570" y="370"/>
+    
+    
+    <rect h="660" w="10" x="630" y="10"/>
+    
+  
+  </solids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <level2_spike2 height="10" width="80" x="160" y="370"/>
+    
+    
+    <LargeCrate x="140" y="290"/>
+    
+    
+    <level2_specialBlock animated="0" movementType="1" speed="40" x="530" y="220"/>
+    
+    
+    <level2_spike2 height="10" width="130" x="20" y="160"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <movingPlatforms>
+    
+    
+    <level2_specialPlatformSmall animated="1" movementType="5" speed="120" x="590" y="130">
+      
+      
+      <node x="590" y="590"/>
+      
+    
+    </level2_specialPlatformSmall>
+    
+  
+  </movingPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level2_FMG3 scrollFactor="0.4" x="180" y="540"/>
+    
+    
+    <level2_FMG3 scrollFactor="0.3" x="460" y="280"/>
+    
+    
+    <level2_FMG3 scrollFactor="0.2" x="300" y="120"/>
+    
+    
+    <level2_MG2 scrollFactor="0.05" x="230" y="110"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer2>
+    
+    
+    <level2_tank scrollFactor="0.6" x="200" y="470"/>
+    
+    
+    <level2_MG2 scrollFactor="0.2" x="0" y="330"/>
+    
+    
+    <level2_metalPipe height="840" scrollFactor="0.7" width="30" x="350" y="0"/>
+    
+    
+    <level2_greenPipe height="840" scrollFactor="0.8" width="20" x="450" y="0"/>
+    
+    
+    <level2_pipe1 height="70" scrollFactor="0.8" width="180" x="460" y="550"/>
+    
+    
+    <level2_greenPipe height="470" scrollFactor="0.6" width="20" x="240" y="0"/>
+    
+    
+    <level2_pipe1 height="70" scrollFactor="0.6" width="370" x="270" y="490"/>
+    
+  
+  </BGLayer2>
+  
+  
+  <BGLayer3>
+    
+    
+    <sugarBags scrollFactor="0.2" x="410" y="630"/>
+    
+    
+    <sodaPack scrollFactor="0.2" x="390" y="530"/>
+    
+    
+    <palettes scrollFactor="0.2" x="90" y="630"/>
+    
+    
+    <level2_braceRight x="310" y="220"/>
+    
+    
+    <level2_braceLeft x="390" y="220"/>
+    
+    
+    <level2_braceRight x="550" y="370"/>
+    
+    
+    <level2_braceRight x="310" y="590"/>
+    
+    
+    <level2_braceLeft x="410" y="590"/>
+    
+    
+    <level2_braceLeft x="240" y="10"/>
+    
+    
+    <level2_braceRight x="610" y="10"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <L1_SmallCrate width="32" x="302" y="166"/>
+    
+    
+    <exit nextLevel="2" x="13" y="260"/>
+    
+    
+    <Bottle width="12" x="267" y="348"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <player andreInitialFlip="0" followHeight="0" followWidth="0" levelName="All Hope, All Love, No Hope, All Love" liselotInitialFlip="0" movementType="1" speed="40" startsFirst="0" talkString="The guerillas are becoming more and more brazen. Our copper pots are the target of theft." x="160" y="620">
+      
+      
+      <node x="190" y="620"/>
+      
+    
+    </player>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="10" y="470">
+      
+      
+      <node x="50" y="470"/>
+      
+    
+    </liselot>
+    
+    
+    <army movementType="1" speed="40" talkString="A French navy ship docked at the harbor. They are having a judo contest with locals later today." x="440" y="300">
+      
+      
+      <node x="540" y="300"/>
+      
+    
+    </army>
+    
+  
+  </characters>
+  
+  
+  <FGLayer1>
+    
+    
+    <level2_chainTile height="838" scrollFactor="1.4" width="12" x="409" y="0"/>
+    
+  
+  </FGLayer1>
+  
+
+</level>

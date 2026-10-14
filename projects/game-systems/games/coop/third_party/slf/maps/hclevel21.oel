@@ -1,0 +1,107 @@
+<level>
+  <width>960</width>
+  <height>700</height>
+  <solids>
+    <rect x="0" y="0" w="960" h="10"/>
+    <rect x="0" y="10" w="10" h="690"/>
+    <rect x="10" y="280" w="250" h="30"/>
+    <rect x="10" y="470" w="240" h="30"/>
+    <rect x="10" y="590" w="950" h="110"/>
+    <rect x="90" y="370" w="300" h="30"/>
+    <rect x="120" y="130" w="270" h="30"/>
+    <rect x="350" y="160" w="40" h="210"/>
+    <rect x="350" y="400" w="40" h="190"/>
+    <rect x="450" y="130" w="60" h="310"/>
+    <rect x="470" y="10" w="20" h="120"/>
+    <rect x="570" y="130" w="300" h="20"/>
+    <rect x="570" y="150" w="40" h="440"/>
+    <rect x="700" y="270" w="90" h="20"/>
+    <rect x="700" y="290" w="20" h="240"/>
+    <rect x="720" y="510" w="150" h="20"/>
+    <rect x="850" y="150" w="20" h="360"/>
+    <rect x="870" y="230" w="30" h="20"/>
+    <rect x="920" y="470" w="40" h="20"/>
+    <rect x="950" y="10" w="10" h="460"/>
+    <rect x="950" y="490" w="10" h="100"/>
+  </solids>
+  <extraPlatforms>
+    <LargeCrate x="180" y="310"/>
+    <LargeCrate x="740" y="530"/>
+    <level2_spike3 x="690" y="290" width="10" height="220"/>
+    <level2_spike3 x="110" y="130" width="10" height="30"/>
+    <level2_spike1 x="250" y="470" width="10" height="30"/>
+    <level2_spike1 x="790" y="270" width="10" height="20"/>
+    <level2_spike1 x="390" y="130" width="10" height="460"/>
+    <level2_spike1 x="510" y="130" width="10" height="310"/>
+    <level2_spike3 x="440" y="130" width="10" height="310"/>
+    <level2_spike3 x="560" y="130" width="10" height="460"/>
+  </extraPlatforms>
+  <movingPlatforms>
+    <level2_specialBlock x="40" y="120" speed="40" movementType="5" animated="0">
+      <node x="40" y="210"/>
+    </level2_specialBlock>
+    <level2_specialBlock x="610" y="270" speed="120" movementType="5" animated="0">
+      <node x="610" y="530"/>
+    </level2_specialBlock>
+    <level2_specialPlatformSmall x="400" y="130" speed="100" movementType="5" animated="1">
+      <node x="400" y="540"/>
+    </level2_specialPlatformSmall>
+    <level2_specialPlatformSmall x="520" y="130" speed="120" movementType="5" animated="1">
+      <node x="520" y="540"/>
+    </level2_specialPlatformSmall>
+  </movingPlatforms>
+  <BGLayer1>
+    <level2_FMG3 x="300" y="300" scrollFactor="0.2"/>
+    <level2_FMG3 x="490" y="340" scrollFactor="0.3"/>
+    <level2_MG2 x="0" y="300" scrollFactor="0.1"/>
+    <level2_metalPipe x="430" y="0" width="30" height="700" scrollFactor="0.4"/>
+    <level2_window x="200" y="190" width="150" height="50" scrollFactor="0.2"/>
+    <level2_window x="590" y="50" width="150" height="50" scrollFactor="0.2"/>
+  </BGLayer1>
+  <BGLayer2>
+    <level2_greenPipe x="200" y="0" width="20" height="700" scrollFactor="0.6"/>
+    <level2_greenPipe x="110" y="0" width="20" height="700" scrollFactor="0.4"/>
+    <level2_tank x="160" y="340" scrollFactor="0.6"/>
+    <level2_pipe1 x="220" y="370" width="740" height="70" scrollFactor="0.6"/>
+    <level2_greenPipe x="620" y="0" width="20" height="700" scrollFactor="0.8"/>
+    <level2_tank x="580" y="170" scrollFactor="0.8"/>
+  </BGLayer2>
+  <BGLayer3>
+    <level2_braceLeft x="610" y="150"/>
+    <level2_braceRight x="830" y="150"/>
+    <level2_braceRight x="330" y="400"/>
+    <level2_braceRight x="330" y="160"/>
+    <sugarBags x="190" y="550" scrollFactor="0.2"/>
+    <level2_braceLeft x="10" y="500"/>
+    <level2_braceLeft x="10" y="310"/>
+    <level2_braceLeft x="720" y="290"/>
+    <sodaPack x="80" y="450" scrollFactor="0.2"/>
+    <sodaPack x="270" y="110" scrollFactor="0.2"/>
+    <palettes x="720" y="90" scrollFactor="0.2"/>
+    <level2_braceLeft x="870" y="250"/>
+    <level2_braceRight x="930" y="490"/>
+  </BGLayer3>
+  <objects>
+    <exit x="726" y="420" nextLevel="2"/>
+    <L1_SmallCrate x="172" y="444" width="32"/>
+    <Bottle x="475" y="513" width="12"/>
+  </objects>
+  <characters>
+    <player x="20" y="540" speed="40" movementType="1" startsFirst="1" levelName="Curly Wurly" andreInitialFlip="0" liselotInitialFlip="0" followWidth="0" followHeight="0" talkString="The new punch card machine is working well. Clock in, clock out.">
+      <node x="50" y="540"/>
+    </player>
+    <liselot x="50" y="420" speed="40" movementType="1" talkString="Just say yes.">
+      <node x="90" y="420"/>
+    </liselot>
+    <chef x="130" y="80" speed="40" movementType="1" talkString="We pranked an apprentice by asking him to find skyhooks and ice solution.">
+      <node x="320" y="80"/>
+    </chef>
+    <inspector x="590" y="90" speed="40" movementType="1" talkString="At the inception of a food or drink business, I must enter the premises.">
+      <node x="840" y="90"/>
+    </inspector>
+  </characters>
+  <FGLayer1>
+    <level2_chainTile x="331" y="0" width="12" height="700" scrollFactor="1.5"/>
+    <level2_chainTile x="698" y="3" width="12" height="697" scrollFactor="1.7"/>
+  </FGLayer1>
+</level>

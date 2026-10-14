@@ -1,0 +1,92 @@
+{
+  "warehouse": {
+    "path": "res://assets/terrain/generated-facilities/warehouse-premium-v04.webp",
+    "width": 640,
+    "height": 640,
+    "foundation": {
+      "center": {
+        "x": 319.744817,
+        "y": 406.76236
+      },
+      "corners": [
+        {
+          "x": 9.186603,
+          "y": 406.76236
+        },
+        {
+          "x": 318.979266,
+          "y": 255.69378
+        },
+        {
+          "x": 630.30303,
+          "y": 406.76236
+        },
+        {
+          "x": 320.510367,
+          "y": 557.830941
+        }
+      ]
+    },
+    "source": "Original built-in image_gen premium facility. Unmodified source and exact prompt: art-source/godot-facilities/. Measured stone floor mapped to authoritative 3×3 cells by native Godot mesh."
+  },
+  "mine": {
+    "path": "res://assets/terrain/generated-facilities/mine-premium-v04.webp",
+    "width": 640,
+    "height": 640,
+    "foundation": {
+      "center": {
+        "x": 320.0,
+        "y": 420.031898
+      },
+      "corners": [
+        {
+          "x": 11.738437,
+          "y": 420.031898
+        },
+        {
+          "x": 320.0,
+          "y": 267.942584
+        },
+        {
+          "x": 628.261563,
+          "y": 420.031898
+        },
+        {
+          "x": 320.0,
+          "y": 572.121212
+        }
+      ]
+    },
+    "source": "Original built-in image_gen premium facility. Unmodified source and exact prompt: art-source/godot-facilities/. Measured stone floor mapped to authoritative 3×3 cells by native Godot mesh."
+  },
+  "relicworkshop": {
+    "path": "res://assets/terrain/generated-facilities/relicworkshop-premium-v04.webp",
+    "width": 640,
+    "height": 640,
+    "foundation": {
+      "center": {
+        "x": 320.255183,
+        "y": 436.363636
+      },
+      "corners": [
+        {
+          "x": 13.779904,
+          "y": 436.363636
+        },
+        {
+          "x": 320.510367,
+          "y": 272.025518
+        },
+        {
+          "x": 626.730463,
+          "y": 436.363636
+        },
+        {
+          "x": 320.0,
+          "y": 600.701754
+        }
+      ]
+    },
+    "source": "Original built-in image_gen premium facility. Unmodified source and exact prompt: art-source/godot-facilities/. Measured stone floor mapped to authoritative 3×3 cells by native Godot mesh."
+  }
+}

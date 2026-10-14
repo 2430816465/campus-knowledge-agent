@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {MarbleGame} from '../games/marble/state.js';
+import {pressure,stats} from '../games/marble/endless-data.js';
+const data=new Map();globalThis.localStorage={getItem:k=>data.get(k)||null,setItem:(k,v)=>data.set(k,v)};
+const make=()=>{const g=new MarbleGame();g.newRun(125);g.persist=()=>{};return g};
+const g=make();g.makeOffer('upgrade');assert.ok(g.run.offer.some(p=>p.id==='extra'));
+assert.equal(pressure(44).target,457);assert.ok(pressure(60).target>pressure(44).target);assert.ok(pressure(15).bossHp>300);
+const b=make();b.run.shot=15;b.spawnBoss();const boss=b.run.room.enemies.find(e=>e.type==='boss');b.run.room.enemies=[boss];b.run.room.obstacles=[];boss.rushIn=1;b.shoot(0);const y=boss.y;b.earlyRecall();assert.equal(boss.rushIn,3);assert.ok(boss.toY-y>pressure(16).drop*1.25);assert.match(b.notice,/推进/);
+const freeze=make();freeze.run.shot=15;freeze.spawnBoss();const frozenBoss=freeze.run.room.enemies.find(e=>e.type==='boss');frozenBoss.rushIn=1;freeze.run.freezeNext=true;freeze.shoot(0);freeze.earlyRecall();assert.equal(frozenBoss.rushIn,1);assert.equal(frozenBoss.toY,frozenBoss.fromY);
+const d=make();d.run.shot=15;d.spawnBoss();const target=d.run.room.enemies.find(e=>e.type==='boss');d.shoot(0);const hp=target.hp;d.damage(target,'direct',{child:true});assert.equal(hp-target.hp,Math.round(stats('core',0)*.45));const before=target.hp;d.damage(target,'blast');assert.equal(before-target.hp,2);
+d.run.powers.pierce=12;const child=d.spawnBall(0,true,100,100),spirit={id:9000,type:'spirit',kind:'normal',x:100,y:90,r:4};assert.equal(d.hit(spirit,child),false);assert.equal(child.limit,8);
+console.log('PASS density ramp, opening choice, Boss countdown/charge, freeze, child damage and piercing bounds');

@@ -1,0 +1,5 @@
+{
+  "excludedPrefixes": ["assets/source/", "games/evolve/assets/source/", "games/nightwatch/assets/source/"],
+  "excludedFiles": ["games/workshop/assets/machines-source.png", "games/workshop/assets/observatory-source.png"],
+  "reason": "Unused art source sheets; retained in corresponding source archive. Live CSS references, character sheets and third-party licenses stay packaged."
+}

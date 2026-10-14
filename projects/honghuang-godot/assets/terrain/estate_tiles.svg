@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="64" viewBox="0 0 320 64">
+<defs><clipPath id="tile"><path d="M0 32L32 16L64 32L32 48Z"/></clipPath></defs>
+<g><path d="M0 32L32 16L64 32L32 48Z" fill="#8fa77d"/><g fill="none" stroke="#bcc699" stroke-opacity=".28" stroke-width=".6"><path d="M13 31l2 -2 3 1M42 28l2 -1 2 1M30 41l2 -2 3 1"/></g></g>
+<g transform="translate(64)"><path d="M0 32L32 16L64 32L32 48Z" fill="#9ca78a"/><path d="M9 32L32 20L55 32L32 44Z" fill="#a9b094" fill-opacity=".25"/></g>
+<g transform="translate(128)"><path d="M0 32L32 16L64 32L32 48Z" fill="#89b49b"/><g fill="none" stroke="#b7d0a9" stroke-opacity=".24" stroke-width=".6"><path d="M14 33l3 -2 2 1M41 29l2 -2 3 1"/></g></g>
+<g transform="translate(192)"><path d="M0 32L32 16L64 32L32 48Z" fill="#80977e"/></g>
+<g transform="translate(256)" clip-path="url(#tile)"><path d="M0 32L32 16L64 32L32 48Z" fill="#a6ad8c"/><path d="M1 32L32 17L63 32L32 47Z" fill="#bcc0a0"/><path d="M3 32L32 18L61 32" fill="none" stroke="#d7d5b5" stroke-opacity=".62" stroke-width="1"/><path d="M5 33L31 46L59 33" fill="none" stroke="#939f81" stroke-opacity=".5" stroke-width=".8"/><path d="M17 25L47 40M47 25L17 40" fill="none" stroke="#a4ad8d" stroke-opacity=".46" stroke-width=".65"/></g>
+</svg>

@@ -1,0 +1,186 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    1400
+  </width>
+  
+  
+  <height>
+    700
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="10" w="1400" x="0" y="0"/>
+    
+    
+    <rect h="690" w="10" x="0" y="10"/>
+    
+    
+    <rect h="200" w="270" x="10" y="500"/>
+    
+    
+    <rect h="120" w="190" x="130" y="380"/>
+    
+    
+    <rect h="150" w="1120" x="280" y="550"/>
+    
+    
+    <rect h="80" w="100" x="370" y="200"/>
+    
+    
+    <rect h="90" w="180" x="510" y="460"/>
+    
+    
+    <rect h="120" w="90" x="600" y="340"/>
+    
+    
+    <rect h="50" w="710" x="690" y="500"/>
+    
+    
+    <rect h="20" w="60" x="730" y="340"/>
+    
+    
+    <rect h="160" w="570" x="830" y="340"/>
+    
+    
+    <rect h="330" w="10" x="1390" y="10"/>
+    
+  
+  </solids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <spike0 height="10" width="180" x="280" y="540"/>
+    
+    
+    <spike0 height="10" width="140" x="690" y="490"/>
+    
+    
+    <helpBox helpString="You won't get much help in the hardcore levels." type="0" x="830" y="280"/>
+    
+    
+    <spike1 height="60" width="10" x="470" y="210"/>
+    
+    
+    <spike0 height="10" width="40" x="370" y="190"/>
+    
+    
+    <spike1 height="50" width="10" x="320" y="380"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <movingPlatforms>
+    
+    
+    <level1_specialPlatformSmall animated="1" movementType="5" speed="100" x="320" y="430">
+      
+      
+      <node x="470" y="430"/>
+      
+    
+    </level1_specialPlatformSmall>
+    
+  
+  </movingPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level1_windows height="54" scrollFactor="0.1" width="290" x="450" y="260"/>
+    
+    
+    <L1_Shelf scrollFactor="0.2" x="10" y="180"/>
+    
+    
+    <level1_shelfTile height="360" scrollFactor="0.3" width="160" x="280" y="190"/>
+    
+    
+    <level1_shelfTile height="360" scrollFactor="0.25" width="320" x="530" y="170"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer2>
+    
+    
+    <sugarBagsAndCrates scrollFactor="0.6" x="80" y="370"/>
+    
+    
+    <cratesBox scrollFactor="0.6" x="830" y="160"/>
+    
+  
+  </BGLayer2>
+  
+  
+  <BGLayer3>
+    
+    
+    <sodaPack scrollFactor="0.2" x="90" y="480"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <L1_SmallCrate width="32" x="629" y="315"/>
+    
+    
+    <exit nextLevel="2" x="1351" y="250"/>
+    
+    
+    <Bottle width="12" x="559" y="35"/>
+    
+    
+    <L1_SmallCrate width="32" x="141" y="357"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <player andreInitialFlip="0" followHeight="0" followWidth="0" levelName="Easy Does It" liselotInitialFlip="1" movementType="1" speed="40" startsFirst="0" talkString="And so the bicycle repair business cemented us as pillars of the community." x="20" y="450">
+      
+      
+      <node x="100" y="450"/>
+      
+    
+    </player>
+    
+    
+    <army movementType="1" speed="70" talkString="With the streets signs disappearing, we raided the factory that makes them." x="830" y="290">
+      
+      
+      <node x="1320" y="290"/>
+      
+    
+    </army>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="670" y="290">
+      
+      
+      <node x="650" y="310"/>
+      
+    
+    </liselot>
+    
+  
+  </characters>
+  
+
+</level>

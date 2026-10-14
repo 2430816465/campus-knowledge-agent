@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="../shared/rewarded-ads.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>再上一层</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/ui-reference.css?v=20260927-lower-scene-fix-5">
+<link rel="stylesheet" href="css/overlay-ui.css">
+<link rel="stylesheet" href="css/tutorial.css">
+<script src="../shared/camp-ui.js"></script><script type="module" src="../shared/legibility.js"></script>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="brand">再上一层</div>
+    <div class="spacer"></div>
+    <button id="btnInfo" class="nav-icon" data-icon="📜">显示信息</button>
+    <button id="btnManual" type="button" class="nav-icon" data-icon="👾" aria-controls="manualOverlay" aria-expanded="false">怪物手册</button>
+    <button id="btnSave" class="nav-icon" data-icon="▣" title="免费保存独立检查点，自动进度仍继续">存档</button>
+    <button id="btnLoad" class="nav-icon" data-icon="📖" title="恢复手动保存的检查点">读档</button>
+    <button id="btnRestart" class="nav-icon" data-icon="⟳">重开</button>
+    <button id="btnSettings" class="nav-icon" data-icon="⚙">设置</button>
+    <div class="legacy-actions">
+    <button id="btnShop" class="optional-action">商店</button>
+    <button id="btnAd" class="adbtn optional-action">广告补给</button>
+    <button id="btnNotes" class="optional-action">笔记</button>
+    <button id="btnTeleport" class="optional-action">传送</button>
+    <button id="btnTools" class="optional-action">道具</button>
+    <button id="btnInfinite" class="optional-action test-toggle" title="打开测试面板：独立切换测试能力">测试</button>
+    <button id="btnPickaxe" class="optional-action">破墙镐</button>
+    <button id="btnBomb" class="optional-action">破坏之玉</button>
+    <button id="btnGem" class="optional-action">宝石魔镐</button>
+    <button id="btnUiFocus" class="focus-toggle" aria-pressed="false">专注地图</button>
+    <button id="btnMute">🔊</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel left">
+      <h3>勇者</h3>
+      <div class="stats">
+        <div class="stat hp"><div class="k"><span class="stat-icon" aria-hidden="true">♥</span>生命</div><div class="v" id="hp">1000</div></div>
+        <div id="debugStatus" aria-live="polite"></div>
+        <div class="stat gold"><div class="k"><span class="stat-icon" aria-hidden="true">●</span>金币</div><div class="v" id="gold">0</div></div>
+        <div class="stat atk"><div class="k"><span class="stat-icon" aria-hidden="true">⚔</span>攻击</div><div class="v" id="atk">10</div></div>
+        <div class="stat def"><div class="k"><span class="stat-icon" aria-hidden="true">🛡</span>防御</div><div class="v" id="def">10</div></div>
+      </div>
+      <div class="stat floor-stat"><div class="k"><span class="stat-icon" aria-hidden="true">♜</span>楼层</div><div class="v"><span id="floorNo">1</span>F</div></div>
+      <div class="keys">
+        <div class="keybox y"><div class="t">黄钥匙</div><div class="n" id="ky">1</div></div>
+        <div class="keybox b"><div class="t">蓝钥匙</div><div class="n" id="kb">0</div></div>
+        <div class="keybox r"><div class="t">红钥匙</div><div class="n" id="kr">0</div></div>
+      </div>
+      <div class="left-extra">
+        <h3 style="margin-top:14px">特殊道具</h3>
+        <div class="chips" id="items"></div>
+      </div>
+    </section>
+
+    <section class="panel boardwrap">
+      <div class="floortag">
+        <span class="n" ><span id="floorNo2">1</span>F</span>
+      </div>
+      <div class="mbody small dim" id="floorNote" role="status"></div>
+      <div class="playrow">
+        <div class="boardbox">
+          <canvas id="board" width="484" height="484"></canvas>
+          <div id="battleSpeed" class="battle-speed" role="group" aria-label="战斗速度" hidden>
+            <span>战斗速度</span>
+            <button type="button" data-battle-speed="1" aria-pressed="true">1×</button>
+            <button type="button" data-battle-speed="1.5" aria-pressed="false">1.5×</button>
+            <button type="button" data-battle-speed="2" aria-pressed="false">2×</button>
+            <button type="button" data-battle-speed="3" aria-pressed="false">3×</button>
+          </div>
+        </div>
+      </div>
+      <div class="lower-scene">
+        <button type="button" id="btnTouchpad" aria-controls="touchpad" aria-expanded="false">方向键</button>
+        <div class="touchpad" id="touchpad">
+          <button data-move="up" aria-label="向上移动">▲</button>
+          <button data-move="left" aria-label="向左移动">◀</button>
+          <button data-move="down" aria-label="向下移动">▼</button>
+          <button data-move="right" aria-label="向右移动">▶</button>
+        </div>
+        <div class="log-area"><div class="log-tabs" role="tablist" aria-label="消息类型"><button type="button" id="systemLogTab" data-log-tab="system" role="tab" aria-controls="log" aria-selected="true" class="active">系统消息</button><button type="button" id="battleLogTab" data-log-tab="battle" role="tab" aria-controls="log" aria-selected="false">战斗日志</button></div><div id="log" role="log" tabindex="0" aria-labelledby="systemLogTab"></div></div>
+      </div>
+      <aside class="tower-route-hint"><strong>向塔顶前进<small id="towerJourney">已到达 1 层</small></strong><span>点地面预览路线，再点一次行走。<br>先看战损，保留钥匙，寻找楼梯。</span></aside>
+    </section>
+  </main>
+</div>
+
+<div id="infoOverlay" hidden>
+  <section class="info-sheet" role="dialog" aria-modal="true" aria-labelledby="infoTitle">
+    <div class="info-visual" aria-hidden="true"></div>
+    <div class="info-heading"><span>🔥</span><h2 id="infoTitle">显示信息</h2><span>🔥</span><button id="btnInfoClose" type="button" aria-label="关闭">×</button></div>
+    <div class="info-grid">
+      <button type="button" class="info-card" data-target="btnShop"><span class="card-art">🏪</span><b>快速商店</b><small>打开临时商店，购买道具与装备。</small><em>打开</em></button>
+      <button type="button" class="info-card" data-target="btnNotes"><span class="card-art">📖</span><b>笔记</b><small>查看已发现的线索、怪物、道具与提示。</small><em>打开</em></button>
+      <button type="button" class="info-card" data-target="btnTeleport"><span class="card-art">🌀</span><b>传送</b><small>传送到已解锁的楼层或特殊房间。</small><em>打开</em></button>
+      <button type="button" class="info-card" data-target="btnTools"><span class="card-art">⚔️</span><b>道具</b><small>查看当前已获得的所有道具及效果。</small><em>打开</em></button>
+      <button type="button" class="info-card" data-target="btnInfinite"><span class="card-art">📜</span><b>测试</b><small>用于测试关卡、道具、怪物等游戏内容。</small><em>打开</em></button>
+      <div class="info-card supply-card">
+        <div class="ad-reward-row"><span class="ad-reward-icon" aria-hidden="true">🧱</span><span class="ad-reward-copy"><small>本地模拟补给</small><strong>破墙镐</strong></span><button type="button" data-ad-reward="pickaxe" aria-label="领取破墙镐">▶ 领取</button></div>
+        <div class="ad-reward-row"><span class="ad-reward-icon" aria-hidden="true">🌀</span><span class="ad-reward-copy"><small>本地模拟补给</small><strong>传送石</strong></span><button type="button" data-ad-reward="teleport" aria-label="领取传送石">▶ 领取</button></div>
+        <div class="ad-reward-row"><span class="ad-reward-icon heart" aria-hidden="true">♥</span><span class="ad-reward-copy"><small>本地模拟补给</small><strong>30%生命值</strong></span><button type="button" data-ad-reward="hp" aria-label="领取30%生命值">▶ 领取</button></div>
+      </div>
+    </div>
+    <div class="info-items"><strong>特殊道具</strong><div id="infoItems"></div></div>
+  </section>
+</div>
+
+<div id="manualOverlay" hidden>
+  <section class="manual-sheet" role="dialog" aria-modal="true" aria-labelledby="manualTitle">
+    <div class="manual-head"><h2 id="manualTitle">怪物手册</h2><button id="btnBookAll" type="button">全部怪物</button><button id="btnManualClose" type="button" aria-label="关闭怪物手册">关闭</button></div>
+    <div id="book"></div>
+  </section>
+</div>
+<div id="tutorialOverlay" hidden aria-live="polite">
+  <div class="tutorial-shade" data-tutorial-shade="top" aria-hidden="true"></div>
+  <div class="tutorial-shade" data-tutorial-shade="bottom" aria-hidden="true"></div>
+  <div class="tutorial-shade" data-tutorial-shade="left" aria-hidden="true"></div>
+  <div class="tutorial-shade" data-tutorial-shade="right" aria-hidden="true"></div>
+  <div id="tutorialSpotlight" aria-hidden="true"></div>
+  <div id="tutorialFocus" aria-hidden="true"></div>
+  <section class="tutorial-card" role="status">
+    <div class="tutorial-head">
+      <span class="tutorial-emblem" aria-hidden="true"></span>
+      <div class="tutorial-heading">
+        <div class="tutorial-kicker" id="tutorialKicker">新手引导</div>
+        <div class="tutorial-progress" role="progressbar" aria-label="教程进度" aria-valuemin="1" aria-valuemax="10" aria-valuenow="1">
+          <span id="tutorialProgressFill"></span>
+        </div>
+      </div>
+      <span class="tutorial-step-count" id="tutorialStepCount">01 / 10</span>
+    </div>
+    <h2 id="tutorialTitle"></h2>
+    <p id="tutorialText"></p>
+    <button type="button" id="tutorialNext" hidden>继续</button>
+    <button type="button" id="tutorialFinish" hidden>开始登塔</button>
+  </section>
+</div>
+<div id="modal"></div>
+<div id="toast"></div>
+<div id="diag" hidden aria-hidden="true"></div>
+
+<!-- 按顺序加载：数据 → 规则 → 图形 → 音效 → 剧情 → 主程序 -->
+<script src="src/data/tiles.js"></script>
+<script src="src/data/monsters.js"></script>
+<script src="src/data/gen.js"></script>
+<script src="src/data/floors_a.js"></script>
+<script src="src/data/floors_b.js"></script>
+<script src="src/data/floors_c.js"></script>
+<script src="src/core/rules.js"></script>
+<script src="src/core/hero.js"></script>
+<script src="src/core/puzzle.js"></script>
+<script src="src/core/events.js"></script>
+<script src="src/data/floors-v2-slice.js"></script>
+<script src="src/data/floors-v3-first3.js"></script>
+<script src="src/data/original-50-maps.js"></script>
+<script src="src/data/original-50-adapter.js"></script>
+<script src="src/core/ads.js"></script>
+<script src="src/ui/art-runtime.js"></script>
+<script src="src/ui/sprites.js"></script>
+<script src="src/ui/audio.js"></script>
+<script src="src/data/story.js"></script>
+<script src="src/data/dialogues.js"></script>
+<script src="src/game.js"></script>
+<script src="../camp-bridge.js"></script>
+<link rel="stylesheet" href="../shared/camp-ui.css"><script type="module" src="../shared/camp-wallet.js"></script></body>
+</html>

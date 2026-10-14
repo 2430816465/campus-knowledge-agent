@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Theme" path="res://assets/ui-foundation/foundation.tres" id="theme"]
+[ext_resource type="Script" path="res://scripts/ui/ui_entry.gd" id="script"]
+
+[node name="Entry" type="Button"]
+theme = ExtResource("theme")
+metadata/ui_foundation = true
+script = ExtResource("script")
+theme_type_variation = &"IconEntry"
+custom_minimum_size = Vector2(100,120)
+
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_bottom = -35.0
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+
+[node name="Caption" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(1,0.96,0.82,1)
+theme_override_colors/font_outline_color = Color(0.16,0.18,0.13,1)
+theme_override_constants/outline_size = 7
+text = "功能"
+text_overrun_behavior = 3
+theme_override_font_sizes/font_size = 35
+mouse_filter = 2
+
+
+[node name="Notice" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -24.0
+theme_override_colors/font_color = Color(0.9,0.18,0.07,1)
+text = "●"
+theme_override_font_sizes/font_size = 25
+mouse_filter = 2
+
+
+[node name="Lock" type="Label" parent="."]
+offset_left = 28.0
+offset_top = 30.0
+offset_right = 83.0
+offset_bottom = 68.0
+text = "锁"
+theme_override_font_sizes/font_size = 24
+mouse_filter = 2
+

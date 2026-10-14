@@ -1,0 +1,87 @@
+<level>
+  <width>960</width>
+  <height>1050</height>
+  <solids>
+    <rect x="0" y="0" w="960" h="20"/>
+    <rect x="0" y="20" w="10" h="1030"/>
+    <rect x="10" y="660" w="820" h="20"/>
+    <rect x="10" y="760" w="900" h="20"/>
+    <rect x="10" y="860" w="900" h="190"/>
+    <rect x="80" y="130" w="830" h="20"/>
+    <rect x="80" y="150" w="20" h="450"/>
+    <rect x="200" y="270" w="150" h="40"/>
+    <rect x="200" y="540" w="710" h="30"/>
+    <rect x="320" y="110" w="20" h="20"/>
+    <rect x="370" y="680" w="120" h="20"/>
+    <rect x="670" y="110" w="20" h="20"/>
+    <rect x="690" y="570" w="60" h="30"/>
+    <rect x="890" y="150" w="20" h="390"/>
+    <rect x="890" y="570" w="20" h="190"/>
+    <rect x="910" y="940" w="50" h="110"/>
+    <rect x="950" y="20" w="10" h="920"/>
+  </solids>
+  <extraPlatforms>
+    <level3_spike0 x="910" y="930" width="40" height="10"/>
+    <LargeCrate x="680" y="600"/>
+    <LargeCrate x="70" y="600"/>
+    <level3_spike1 x="350" y="270" width="10" height="40"/>
+    <level3_spike0 x="320" y="100" width="20" height="10"/>
+    <level3_spike0 x="670" y="100" width="20" height="10"/>
+    <LargeCrate x="390" y="700"/>
+  </extraPlatforms>
+  <movingPlatforms>
+    <level3_specialBlock x="910" y="130" speed="120" movementType="5" animated="0">
+      <node x="910" y="890"/>
+    </level3_specialBlock>
+    <level3_specialPlatformSmall x="350" y="310" speed="100" movementType="5" animated="1">
+      <node x="630" y="310"/>
+    </level3_specialPlatformSmall>
+    <level3_specialPlatformSmall x="670" y="310" speed="100" movementType="5" animated="1">
+      <node x="670" y="460"/>
+    </level3_specialPlatformSmall>
+  </movingPlatforms>
+  <BGLayer1>
+    <level3_painting3 x="110" y="280" scrollFactor="0.2"/>
+    <level3_painting2 x="190" y="310" scrollFactor="0.2"/>
+    <level3_painting1 x="280" y="350" scrollFactor="0.2"/>
+    <level3_window x="0" y="540" width="960" height="320" scrollFactor="0.2"/>
+    <level3_salesChart x="160" y="40" width="67" height="67" scrollFactor="0.1"/>
+    <level3_salesChart x="560" y="290" width="67" height="67" scrollFactor="0.2"/>
+  </BGLayer1>
+  <BGLayer2>
+    <bookCase x="250" y="40" scrollFactor="0.9"/>
+    <filingCab2 x="580" y="70" scrollFactor="0.98"/>
+    <filingCab2 x="300" y="210" scrollFactor="1"/>
+    <filingCab1 x="450" y="450" scrollFactor="0.8"/>
+    <filingCab1 x="250" y="570" scrollFactor="0.8"/>
+    <filingCab2 x="310" y="700" scrollFactor="0.8"/>
+  </BGLayer2>
+  <BGLayer3>
+    <level3_desk1 x="100" y="60"/>
+    <level3_desk1 x="720" y="470"/>
+    <level3_desk2 x="540" y="690"/>
+    <level3_desk2 x="390" y="790"/>
+    <palettes x="370" y="620" scrollFactor="0.2"/>
+    <sodaPack x="620" y="640" scrollFactor="0.2"/>
+    <sodaPack x="160" y="740" scrollFactor="0.2"/>
+    <sugarBags x="730" y="90" scrollFactor="0.2"/>
+  </BGLayer3>
+  <objects>
+    <L1_SmallCrate x="379" y="517" width="32"/>
+    <exit x="233" y="181" nextLevel="2"/>
+    <andreCheckPoint x="157" y="602" player="1"/>
+    <liselotCheckPoint x="217" y="482" player="1"/>
+    <Bottle x="25" y="712" width="12"/>
+  </objects>
+  <characters>
+    <player x="20" y="810" speed="40" movementType="1" startsFirst="1" levelName="Brand Disloyalty" andreInitialFlip="0" liselotInitialFlip="0" followWidth="0" followHeight="0" talkString="We left for Dutch New Guinea with the SS van Riemselijk, a ship from the KPM fleet.">
+      <node x="100" y="810"/>
+    </player>
+    <liselot x="490" y="710" speed="40" movementType="1" talkString="Just say yes.">
+      <node x="590" y="710"/>
+    </liselot>
+    <worker x="480" y="500" speed="60" movementType="1" talkString="The inspector is always busting my chops. I let it slide. I won't solve my problems with violence.">
+      <node x="860" y="500"/>
+    </worker>
+  </characters>
+</level>

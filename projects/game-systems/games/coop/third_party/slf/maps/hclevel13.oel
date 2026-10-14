@@ -1,0 +1,201 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    1600
+  </width>
+  
+  
+  <height>
+    1100
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="1100" w="10" x="0" y="0"/>
+    
+    
+    <rect h="300" w="80" x="10" y="800"/>
+    
+    
+    <rect h="260" w="80" x="90" y="840"/>
+    
+    
+    <rect h="160" w="1430" x="170" y="940"/>
+    
+    
+    <rect h="20" w="20" x="260" y="840"/>
+    
+    
+    <rect h="20" w="20" x="440" y="840"/>
+    
+    
+    <rect h="100" w="210" x="560" y="840"/>
+    
+    
+    <rect h="20" w="20" x="880" y="840"/>
+    
+    
+    <rect h="100" w="190" x="1020" y="840"/>
+    
+    
+    <rect h="40" w="390" x="1210" y="900"/>
+    
+    
+    <rect h="900" w="10" x="1590" y="0"/>
+    
+  
+  </solids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <level2_spike0 height="10" width="390" x="170" y="930"/>
+    
+    
+    <level2_spike0 height="10" width="250" x="770" y="930"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level2_window height="50" scrollFactor="0.1" width="200" x="340" y="720"/>
+    
+    
+    <level2_FMG3 scrollFactor="0.2" x="90" y="770"/>
+    
+    
+    <level2_greenPipe height="690" scrollFactor="0.3" width="20" x="290" y="30"/>
+    
+    
+    <level2_tank scrollFactor="0.3" x="250" y="690"/>
+    
+    
+    <level2_window height="50" scrollFactor="0.1" width="100" x="670" y="660"/>
+    
+    
+    <level2_FMG3 scrollFactor="0.55" x="820" y="660"/>
+    
+    
+    <level2_FMG3 scrollFactor="0.5" x="550" y="660"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer2>
+    
+    
+    <level2_metalPipe height="910" scrollFactor="0.4" width="30" x="360" y="90"/>
+    
+    
+    <level2_MG2 scrollFactor="0.2" x="0" y="620"/>
+    
+    
+    <level2_greenPipe height="880" scrollFactor="0.5" width="20" x="440" y="120"/>
+    
+    
+    <level2_tank scrollFactor="0.5" x="400" y="480"/>
+    
+    
+    <level2_pipe1 height="70" scrollFactor="0.5" width="1130" x="470" y="500"/>
+    
+    
+    <level2_metalPipe height="970" scrollFactor="0.9" width="30" x="750" y="30"/>
+    
+    
+    <level2_metalPipe height="940" scrollFactor="0.2" width="30" x="1050" y="60"/>
+    
+  
+  </BGLayer2>
+  
+  
+  <BGLayer3>
+    
+    
+    <palettes scrollFactor="0.2" x="650" y="800"/>
+    
+    
+    <sugarBags scrollFactor="0.2" x="1110" y="800"/>
+    
+    
+    <palettes scrollFactor="0.2" x="1320" y="860"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <exit nextLevel="2" x="1480" y="810"/>
+    
+    
+    <Bottle width="12" x="947" y="715"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="620" y="790">
+      
+      
+      <node x="660" y="790"/>
+      
+    
+    </liselot>
+    
+    
+    <player andreInitialFlip="0" followHeight="0" followWidth="0" levelName="Locomotion, Our Hearts Intertwined" liselotInitialFlip="0" movementType="1" speed="40" startsFirst="1" talkString="The junk yards don't ask questions when receiving scrap metal. Some of our copper tubing has gone missing." x="30" y="750">
+      
+      
+      <node x="60" y="750"/>
+      
+    
+    </player>
+    
+    
+    <worker movementType="1" speed="120" talkString="I'd hit the road but I've got a family. I'm tied down. The wife, the house, the kids." x="1210" y="860">
+      
+      
+      <node x="1550" y="860"/>
+      
+    
+    </worker>
+    
+  
+  </characters>
+  
+  
+  <FGLayer1>
+    
+    
+    <level2_chainTile height="826" scrollFactor="1.7" width="12" x="403" y="174"/>
+    
+    
+    <level2_chainTile height="895" scrollFactor="2" width="12" x="1100" y="104"/>
+    
+    
+    <level2_metalPipe height="947" scrollFactor="1.4" width="30" x="577" y="53"/>
+    
+    
+    <level2_greenPipe height="995" scrollFactor="2.2" width="20" x="1184" y="5"/>
+    
+    
+    <level2_tank scrollFactor="2.2" x="1146" y="533"/>
+    
+  
+  </FGLayer1>
+  
+
+</level>

@@ -1,0 +1,26 @@
+{
+  "generator": "Built-in image_gen",
+  "date": "2026-10-01",
+  "prompts": {
+    "background": "Use case: stylized-concept. Production environment asset for an original 2D pixel art fantasy mobile game, portrait canvas 1024x1536. Beautiful crisp handcrafted pixel clusters, cohesive premium cozy medieval RPG visual style: moss green, warm amber lanterns, weathered cream sandstone, dusk blue sky. Fixed near-top-down orthographic perspective, playable battle ground, NOT an illustration seen from the side. Broad straight cobblestone approach road centered, about 70 percent width, extends vertically from the top to y=1200. Leave the entire central road EMPTY and low detail for many moving enemies and magical projectiles. Quiet twilight woodland and ruins along left and right edges only, small grass tufts and stone debris. At y=1220 a straight horizontal medieval city rampart spans the full width, seen from overhead with stone parapet and two amber lamps on its left and right. Behind the wall at the bottom, a safe small courtyard for a standing hero, no character painted in the image. Subtle village rooftops along bottom corners. Clean readable road and defense line are priority. No people, no monsters, no text, no letters, no logo, no UI, no watermark. Full bleed. The mood is brave and magical, softly lit, readable even on a phone. Do not use 3D render, smooth vector art, modern machinery, realistic photography.",
+    "heroIdle": "Generate an original premium pixel art RPG HERO IDLE animation sheet for a fantasy city defense game. Exact 2 columns x 2 rows, 4 frames row-major, on completely solid pure #FF00FF magenta background, NO grid lines, no labels, no text. Same cute brave young male hero in all four frames: tousled chestnut brown hair, expressive eyes, blue short scarf and cape, dark navy leather armor with small steel shoulder plates, brown boots, copper-gold belt. Redesign his weapon as a compact beautiful wooden RUNIC CROSSBOW with steel limbs and small cyan rune inset, held close across his chest and aimed toward the UPPER RIGHT of screen. Three-quarter side/back view with face profile partly visible, suitable for being at bottom of battlefield shooting upwards. Full body, visibly crisp pixel clusters, rich handcrafted 16-bit style, no smooth illustration. Four subtle breathing idle frames, feet fixed, small scarf flutter, no walking. Equal camera distance and identical anatomical scale. Subject centered in each cell, whole body and crossbow inside the central 65 percent of the cell with ample magenta margins, feet baseline 80 percent height. No detached effects, no arrows, no flashes, no shadows/ground plates, no effects extending beyond body, no cell edge contact. Output landscape square 1024x1024.",
+    "heroShoot": "Edit the reference hero idle animation into a SHOOT animation sheet for the EXACT SAME hero and runic crossbow. Preserve chestnut hair, blue cape, navy armor, copper belt, steel shoulders, boots, pixel cluster style and upper-right aiming camera. NEW layout: EXACTLY 2 columns by 3 rows, six frames row-major, solid pure #FF00FF magenta background. Six phases of ONE continuous crossbow shot: frame1 relaxed raised ready crossbow, frame2 lift and aim with focused shoulders, frame3 squeeze trigger and slight forward lean, frame4 visible small backward recoil of hands and upper torso, frame5 lower slightly and mechanical lever recock near the crossbow, frame6 return to frame1. Feet remain planted at same position every frame, anatomical standing body height and scale identical to reference, body centered in each equal square cell, only central 65% area, feet baseline80%. NO walking, no projectiles, no muzzle flashes, no detached effects, no ground/shadow, no text, no gridlines. Crossbow always attached to hands and not replaced by bow or gun. Entire cape and weapon inside every cell with ample margin. Target portrait 1024x1536. This is body-only animation; spell and arrow effects layered separately in engine."
+  },
+  "processing": {
+    "tool": "generate2dsprite",
+    "frames": {
+      "idle": 4,
+      "shoot": 6
+    },
+    "alignment": "feet",
+    "cell": 128,
+    "sharedProfile": "assets/hero-profile.json",
+    "QC": "No empty frames, no edge contact, no clipped paste; shooting scale drift within 10% of idle profile"
+  },
+  "sources": {
+    "background": "exec-67ab612c-8d2a-4ac6-818e-94f6f9844c8b.png",
+    "idle": "exec-2742e797-aa36-499d-8b57-86cc05f1d49e.png",
+    "shoot": "exec-e4eaf419-1b2d-45ec-85f6-1ee37edb695b.png"
+  },
+  "reused": "Existing local monster and partner assets; see assets/manifest.json"
+}

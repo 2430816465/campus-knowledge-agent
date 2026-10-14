@@ -1,0 +1,619 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  
+  
+  
+  
+  <width>
+    
+    
+    960
+  
+  
+  </width>
+  
+  
+  
+  
+  
+  
+  <height>
+    
+    
+    640
+  
+  
+  </height>
+  
+  
+  
+  
+  
+  
+  <solids>
+    
+    
+    
+    
+    
+    
+    <rect h="10" w="960" x="0" y="0"/>
+    
+    
+    
+    
+    
+    
+    <rect h="630" w="10" x="0" y="10"/>
+    
+    
+    
+    
+    
+    
+    <rect h="20" w="270" x="10" y="270"/>
+    
+    
+    
+    
+    
+    
+    <rect h="70" w="950" x="10" y="570"/>
+    
+    
+    
+    
+    
+    
+    <rect h="120" w="150" x="130" y="290"/>
+    
+    
+    
+    
+    
+    
+    <rect h="140" w="20" x="260" y="130"/>
+    
+    
+    
+    
+    
+    
+    <rect h="20" w="70" x="380" y="130"/>
+    
+    
+    
+    
+    
+    
+    <rect h="310" w="50" x="390" y="260"/>
+    
+    
+    
+    
+    
+    
+    <rect h="60" w="420" x="540" y="510"/>
+    
+    
+    
+    
+    
+    
+    <rect h="320" w="20" x="550" y="130"/>
+    
+    
+    
+    
+    
+    
+    <rect h="220" w="60" x="570" y="230"/>
+    
+    
+    
+    
+    
+    
+    <rect h="40" w="190" x="770" y="230"/>
+    
+    
+    
+    
+    
+    
+    <rect h="220" w="10" x="950" y="10"/>
+    
+    
+    
+    
+    
+    
+    <rect h="240" w="10" x="950" y="270"/>
+    
+    
+    
+  
+  
+  
+  </solids>
+  
+  
+  
+  
+  
+  
+  <extraPlatforms>
+    
+    
+    
+    
+    
+    
+    <spike3 height="120" width="10" x="120" y="290"/>
+    
+    
+    
+    
+    
+    
+    <level1_specialBlock animated="0" movementType="1" speed="40" x="10" y="380"/>
+    
+    
+    
+    
+    
+    
+    <spike1 height="250" width="10" x="280" y="160"/>
+    
+    
+    
+    
+    
+    
+    <spike3 height="200" width="10" x="540" y="160"/>
+    
+    
+    
+    
+    
+    
+    <LargeCrate x="550" y="450"/>
+    
+    
+    
+    
+    
+    
+    <level1_specialPlatform animated="0" movementType="1" speed="40" x="790" y="390"/>
+    
+    
+    
+    
+    
+    
+    <level1_specialPlatform animated="0" movementType="1" speed="70" x="280" y="130"/>
+    
+    
+    
+    
+    
+    
+    <level1_specialPlatform animated="0" movementType="1" speed="40" x="450" y="130"/>
+    
+    
+    
+    
+    
+    
+    <spike2 height="10" width="150" x="130" y="410"/>
+    
+    
+    
+    
+    
+    
+    <spike3 height="220" width="10" x="940" y="10"/>
+    
+    
+    
+    
+    
+    
+    <level1_specialBlock animated="0" movementType="1" speed="40" x="800" y="20"/>
+    
+    
+    
+    
+    
+    
+    <level1_specialBlock animated="0" movementType="1" speed="40" x="800" y="190"/>
+    
+    
+    
+    
+    
+    
+    <level1_specialPlatform animated="0" movementType="1" speed="40" x="610" y="210"/>
+    
+    
+    
+    
+    
+    
+    <spike0 height="10" width="30" x="400" y="250"/>
+    
+    
+    
+    
+    
+    
+    <spike2 height="10" width="40" x="800" y="60"/>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        
+    
+    
+    
+    
+    
+    <level1_specialBlock animated="0" movementType="1" speed="40" x="670" y="330"/>
+    
+    
+    
+    
+    
+    
+    <helpBox helpString="Talk to Andre by pressing '_Action' while facing him." type="0" x="140" y="210"/>
+    
+    
+    
+  
+  
+  
+  </extraPlatforms>
+  
+  
+  
+  
+  
+  
+  <movingPlatforms>
+    
+    
+    
+    
+    
+    
+    <level1_specialPlatform animated="0" movementType="5" speed="70" x="290" y="260">
+      
+      
+      
+      
+      
+      
+      <node x="290" y="510"/>
+      
+      
+      
+    
+    
+    
+    </level1_specialPlatform>
+    
+    
+    
+    
+    
+    
+    <level1_specialPlatform animated="0" movementType="5" speed="70" x="440" y="260">
+      
+      
+      
+      
+      
+      
+      <node x="440" y="550"/>
+      
+      
+      
+    
+    
+    
+    </level1_specialPlatform>
+    
+    
+    
+  
+  
+  
+  </movingPlatforms>
+  
+  
+  
+  
+  
+  
+  <BGLayer1>
+    
+    
+    
+    
+    
+    
+    <level1_shelfTile height="320" scrollFactor="0.2" width="400" x="550" y="190"/>
+    
+    
+    
+    
+    
+    
+    <level1_windows height="54" scrollFactor="0.1" width="180" x="600" y="110"/>
+    
+    
+    
+    
+    
+    
+    <level1_windows height="54" scrollFactor="0.1" width="420" x="60" y="350"/>
+    
+    
+    
+    
+    
+    
+    <level1_windows height="54" scrollFactor="0.1" width="120" x="90" y="110"/>
+    
+    
+    
+    
+    
+    
+    <level1_windows height="54" scrollFactor="0.1" width="240" x="300" y="20"/>
+    
+    
+    
+    
+    
+    
+    <level1_shelfTile height="640" scrollFactor="0.2" width="480" x="0" y="0"/>
+    
+    
+    
+  
+  
+  
+  </BGLayer1>
+  
+  
+  
+  
+  
+  
+  <BGLayer2>
+    
+    
+    
+    
+    
+    
+    <sugarBags scrollFactor="0.2" x="180" y="530"/>
+    
+    
+    
+    
+    
+    
+    <sugarBags scrollFactor="0.75" x="720" y="470"/>
+    
+    
+    
+    
+    
+    
+    <cratesBox scrollFactor="0.65" x="310" y="390"/>
+    
+    
+    
+    
+    
+    
+    <cratesBox scrollFactor="0.6" x="540" y="330"/>
+    
+    
+    
+    
+    
+    
+    <sugarBagsAndCrates scrollFactor="0.6" x="30" y="440"/>
+    
+    
+    
+  
+  
+  
+  </BGLayer2>
+  
+  
+  
+  
+  
+  
+  <BGLayer3>
+    
+    
+    
+    
+    
+    
+    <palettes scrollFactor="0.2" x="80" y="230"/>
+    
+    
+    
+    
+    
+    
+    <palettes scrollFactor="0.2" x="280" y="90"/>
+    
+    
+    
+    
+    
+    
+    <sodaPack scrollFactor="0.2" x="830" y="490"/>
+    
+    
+    
+    
+    
+    
+    <sodaPack scrollFactor="0.2" x="250" y="550"/>
+    
+    
+    
+    
+    
+    
+    <sodaPack scrollFactor="0.2" x="890" y="490"/>
+    
+    
+    
+  
+  
+  
+  </BGLayer3>
+  
+  
+  
+  
+  
+  
+  <objects>
+    
+    
+    
+    
+    
+    
+    <L1_SmallCrate width="32" x="500" y="107"/>
+    
+    
+    
+    
+    
+    
+    <exit nextLevel="2" x="841" y="300"/>
+    
+    
+    
+    
+    
+    
+    <liselotCheckPoint player="1" x="870" y="173"/>
+    
+    
+    
+    
+    
+    
+    <Bottle width="12" x="911" y="38"/>
+    
+    
+    
+  
+  
+  
+  </objects>
+  
+  
+  
+  
+  
+  
+  <characters>
+    
+    
+    
+    
+    
+    
+    <player andreInitialFlip="0" followHeight="0" followWidth="0" levelName="Edge of the Ledge" liselotInitialFlip="0" movementType="1" speed="40" startsFirst="1" talkString="A military contract to supply soda to the military landed on my desk today. Choosing sides in the turbulent time is risky, but the rewards are great." x="10" y="330">
+      
+      
+      
+      
+      
+      
+      <node x="30" y="330"/>
+      
+      
+      
+    
+    
+    
+    </player>
+    
+    
+    
+    
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="10" y="220">
+      
+      
+      
+      
+      
+      
+      <node x="50" y="220"/>
+      
+      
+      
+    
+    
+    
+    </liselot>
+    
+    
+    
+    
+    
+    
+    <inspector movementType="1" speed="40" talkString="Paperwork." x="630" y="470">
+      
+      
+      
+      
+      
+      
+      <node x="920" y="470"/>
+      
+      
+      
+    
+    
+    
+    </inspector>
+    
+    
+    
+  
+  
+  
+  </characters>
+  
+  
+  
+
+
+
+</level>

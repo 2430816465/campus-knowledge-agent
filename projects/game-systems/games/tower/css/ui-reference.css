@@ -1,0 +1,252 @@
+/* Portrait HUD inspired by the supplied reference; game map and rules stay unchanged. */
+html,body{min-height:100%;background:#050b19}
+body{background:radial-gradient(ellipse at 50% -10%,#252052 0,#0b1730 42%,#040913 100%);overflow-x:hidden}
+.app{width:100%;min-height:100dvh;padding:max(6px,env(safe-area-inset-top)) max(8px,env(safe-area-inset-right)) max(8px,env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left));gap:7px;background:radial-gradient(circle at 96% 88%,#3b1d34 0,transparent 21%),radial-gradient(circle at 8% 4%,#39275e 0,transparent 20%)}
+.app header{display:grid;grid-template-columns:minmax(150px,1fr) repeat(6,minmax(62px,88px));gap:6px;min-height:90px;padding:8px 10px;border:0;border-bottom:3px solid #b16d35;border-radius:0;background:linear-gradient(90deg,#201435d9,#0c1434ee 58%,#080e22);box-shadow:0 4px 0 #030712}
+.brand{font-family:Georgia,'Microsoft YaHei',serif;font-size:clamp(26px,5vw,64px);line-height:1;font-weight:900;letter-spacing:.08em;color:#f9c66d;text-shadow:2px 3px #6c251e,4px 5px #170911,0 0 14px #ed6c3b;white-space:nowrap}
+.brand-sub,.app header .spacer,.legacy-actions{display:none!important}
+.app header .nav-icon{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-width:0;height:72px;padding:3px 2px;border:1px solid #597195;border-radius:9px;background:linear-gradient(#142441,#070f20);box-shadow:inset 0 1px #8597ac55,0 3px #03060e;color:#dce9ff;font-size:clamp(10px,1.5vw,16px);font-weight:700;white-space:nowrap}
+.nav-icon:before{content:attr(data-icon);display:block;font-size:clamp(22px,3vw,31px);line-height:1.15;color:#b7d5ff;text-shadow:0 2px 2px #000}
+#btnInfo{border-color:#f3b55c;color:#ffe2a2;background:linear-gradient(#57341e,#2b1719);box-shadow:inset 0 0 8px #f4ae55,0 0 8px #bc662e}
+main,.ui-focus main{display:flex;flex-direction:column;align-items:stretch;gap:6px;min-height:0}
+.panel,.panel.left,.panel.boardwrap{width:100%;max-width:none;margin:0;padding:0;background:none;border:0;border-radius:0;box-shadow:none}
+.panel.left{display:grid!important;grid-template-columns:2fr repeat(5,1fr);gap:5px;flex:none;position:relative}
+.panel.left>h3,.left-extra,.ui-focus .left-extra,.floortag{display:none!important}
+.stats,.ui-focus .panel.left .stats{display:contents!important}
+.stat{position:relative;min-width:0;min-height:70px;padding:8px 7px 5px 45px;border:2px solid #324c71;border-radius:10px;background:linear-gradient(145deg,#101c36,#06101f);box-shadow:inset 0 1px #91abc244,0 2px #030713}
+.stat:before{content:attr(data-icon);position:absolute;left:9px;top:50%;transform:translateY(-50%);font-size:29px;color:#ffc56d;text-shadow:1px 2px #07101e}
+.stat .k{color:#c1d5ee;font-size:13px;white-space:nowrap}.stat .v{color:#ffd27c;font-size:21px;font-weight:700;white-space:nowrap}.stat.hp .v{color:#ff6573}.stat.def .v{color:#8dccff}
+#hpMax{font-size:.8em}#hpMax:before{content:' / '}
+.stat .meter{height:7px;margin-top:3px;border:1px solid #466286;border-radius:8px;background:#040c18;overflow:hidden}.stat .meter i{display:block;height:100%;background:linear-gradient(#ff7c8c,#e43551)}.stat .expmeter i{background:linear-gradient(#6facff,#316fb3)}
+.stat.wide,.ui-focus .panel.left .stat.wide{grid-column:1/2!important;grid-row:2;min-height:49px}.stat.wide:before{font-size:23px}.stat.wide .v{font-size:14px!important}.stat.wide .meter{position:absolute;left:45%;right:6px;top:19px;margin:0}
+.keys{display:contents}.keybox{grid-row:2;min-height:49px;display:flex;align-items:center;justify-content:space-between;gap:4px;padding:5px 9px;border:2px solid #324c71;border-radius:10px;background:linear-gradient(#101d38,#06101f)}.keybox.y{grid-column:2/4}.keybox.b{grid-column:4/6}.keybox.r{grid-column:6/7}.keybox .t{font-size:13px;color:#c5d9f6;white-space:nowrap}.keybox .n{font-size:21px;font-weight:700;color:#ffd27c}.keybox.b .n{color:#8dc8ff}.keybox.r .n{color:#ff7585}
+#debugStatus{position:absolute;z-index:2;right:12px;top:5px;color:#ffca74;font-size:11px;pointer-events:none}
+.panel.boardwrap{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1 1 auto;min-height:0}
+#floorNote{width:100%;max-width:none;margin:0;padding:1px 8px;text-align:center;color:#efd49b;background:transparent;border:0}
+#floorNote:empty{display:none}
+.playrow{width:100%;display:flex;flex-direction:column;align-items:center;gap:6px;min-height:0}
+.boardbox{width:100%;max-width:100%;max-height:none;aspect-ratio:1;flex:none;padding:6px;border:6px ridge #a56b46;border-radius:7px;background:#0a1425;box-shadow:0 0 0 2px #221827,inset 0 0 0 2px #e2a366,0 7px 20px #000b}
+#board{display:block;width:100%;height:100%;image-rendering:pixelated}
+.boardwrap:not(.touchpad-open) .touchpad,.touchpad{display:grid!important;grid-template-columns:repeat(3,clamp(54px,9vw,84px));grid-template-rows:repeat(2,clamp(48px,7vw,70px));gap:5px;margin:0!important}
+.touchpad button{display:block!important;border:2px solid #617b9e;border-radius:12px;background:linear-gradient(#223956,#071428);color:#d8eaff;font-size:25px;box-shadow:inset 0 1px #8eafce88,0 4px #040a12}
+#btnTouchpad{display:none}
+.log-area{width:100%;margin-top:1px}.log-tabs{display:flex;gap:5px;padding-left:8px}.log-tabs button{padding:5px 18px;border:1px solid #395777;border-bottom:0;border-radius:8px 8px 0 0;background:#0c1c36;color:#b7cce5;font-size:13px}.log-tabs button.active{border-color:#d2954c;background:#67401e;color:#ffe0a0;font-weight:bold}
+.boardwrap #log{width:100%;min-height:72px;max-height:110px;margin:0;padding:7px 10px;border:2px solid #385576;border-radius:8px;background:#06101eea;color:#d2def0;font-size:13px;line-height:1.5;overflow:auto}.logline{border-bottom:1px solid #44577444}
+#infoOverlay{position:fixed;z-index:150;inset:0;display:grid;place-items:center;padding:calc(10px + env(safe-area-inset-top)) 10px calc(10px + env(safe-area-inset-bottom));background:#020813cc}#infoOverlay[hidden]{display:none}
+.info-sheet{position:relative;width:min(92vw,900px);max-height:95dvh;overflow-x:hidden;overflow-y:auto;padding:50px 18px 18px;border:5px double #c27c3f;border-radius:20px;background:linear-gradient(#121c39,#071026);box-shadow:0 0 0 5px #091023,0 20px 60px #000}
+.info-heading{position:absolute;top:0;left:12%;right:12%;height:46px;display:flex;align-items:center;justify-content:center;gap:20px;border:3px ridge #cd8846;border-radius:0 0 16px 16px;background:#1b1931;color:#ffd183;text-shadow:0 2px #5b2b1d}.info-heading h2{margin:0;font-size:25px;letter-spacing:4px}.info-heading #btnInfoClose{position:absolute;left:calc(100% + 8px);top:5px;width:40px;height:38px;padding:0;background:#822c2b;border:2px solid #e8a777;color:#ffe1b0;font-size:30px;line-height:1}
+@media(max-width:700px){.info-heading{left:9px;right:50px}.info-heading #btnInfoClose{left:auto;right:-44px}}
+.info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.info-card{display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:7px;min-height:220px;padding:14px 10px;border:3px ridge #4a658b;border-radius:12px;background:linear-gradient(#182240,#080f22);color:#ffdc92;text-align:center;box-shadow:inset 0 0 0 2px #152d50}.info-card .card-art{font-size:52px;line-height:1.3;filter:drop-shadow(2px 3px 2px #000)}.info-card b{font-size:20px}.info-card small{min-height:40px;color:#d2e0f3;font-size:12px;line-height:1.45}.info-card em,.supply-card button{display:block;width:90%;padding:8px;border:2px solid #d5984e;border-radius:7px;background:linear-gradient(#5e3e26,#2f241f);color:#ffe4aa;font-style:normal;font-size:18px;font-weight:bold}.info-card:disabled{opacity:.48}.info-items{margin-top:12px;color:#d6e2f6;font-size:13px}.info-items strong{color:#ffd58d}
+@media(max-width:700px){.app{gap:4px;padding-left:4px;padding-right:4px}.app header{grid-template-columns:repeat(6,minmax(0,1fr));min-height:95px;gap:3px;padding:5px 2px}.brand{grid-column:1/-1;text-align:left;font-size:clamp(23px,8vw,38px);padding:0 7px}.app header .nav-icon{height:49px;font-size:9px;border-radius:6px}.nav-icon:before{font-size:19px}.stats{grid-template-columns:2fr repeat(5,1fr);gap:3px}.stat{min-height:48px;padding:3px 2px 2px 20px;border-width:1px;border-radius:5px}.stat:before{left:3px;font-size:15px}.stat .k{font-size:9px}.stat .v{font-size:13px}.stat .meter{height:5px;margin-top:1px}.stat.wide{min-height:34px;padding-left:20px}.stat.wide:before{font-size:14px}.stat.wide .v{font-size:10px!important}.stat.wide .meter{left:52%;top:16px;right:3px}.keybox{min-height:34px;padding:2px 3px;border-width:1px;border-radius:5px}.keybox .t{font-size:10px}.keybox .n{font-size:14px}.boardbox{width:100%;padding:3px;border-width:4px}.boardwrap:not(.touchpad-open) .touchpad,.touchpad{grid-template-columns:repeat(3,54px);grid-template-rows:repeat(2,40px);gap:3px}.touchpad button{font-size:18px;border-radius:8px}.boardwrap #log{min-height:60px;max-height:100px;font-size:11px}.log-tabs button{font-size:11px;padding:4px 11px}.info-sheet{width:96vw;padding:47px 9px 10px}.info-grid{gap:5px}.info-card{min-height:170px;padding:7px 4px;gap:3px;border-width:2px}.info-card .card-art{font-size:31px}.info-card b{font-size:13px}.info-card small{font-size:10px;min-height:54px}.info-card em,.supply-card button{font-size:12px;padding:5px}.info-heading h2{font-size:19px}}
+@media(max-width:360px){.stat:before{display:none}.stat{padding-left:3px}.stat.wide .meter{left:60%}.keybox .t{font-size:9px}.keybox .n{font-size:12px}}
+@media(min-width:701px) and (orientation:landscape){.boardbox{width:min(100%,calc(100dvh - 245px))}}
+/* On phones the map is always viewport-wide; short screens scroll vertically. */
+@media(max-width:700px) and (orientation:portrait){
+  .app{width:100vw;padding-left:0;padding-right:0;min-height:100dvh}
+  main,.panel.boardwrap,.playrow{width:100vw;max-width:100vw}
+  .boardbox{width:100vw!important;max-width:100vw!important;min-width:100vw;margin:0;padding:0;border:2px ridge #a56b46;aspect-ratio:1/1;max-height:none!important;flex:none!important}
+  #board{width:100%;height:100%}
+  .panel.left{padding:0 3px}
+  .boardwrap #log{border-radius:0}
+}
+
+/* Reference-faithful menu art: the screenshot is used only for the menu face;
+   live map, stats, and controls remain the real game beneath the overlay. */
+.app{background:#040b1c}
+.app header{grid-template-columns:repeat(6,minmax(0,1fr));background:transparent;border-bottom:3px solid #b16d35}
+.brand{grid-column:1/-1;text-align:center;padding:0 4px}
+.app header .nav-icon{height:68px}
+.app header .nav-icon::before{content:'';display:block;width:34px;height:34px;flex:none;background-image:url('../assets/ui/nav-icons.png');background-size:200% 300%;background-repeat:no-repeat;image-rendering:pixelated;mix-blend-mode:screen}
+#btnInfo::before{background-position:0 0}
+#btnManual::before{background-position:100% 0}
+#btnSave::before{background-position:0 50%}
+#btnLoad::before{background-position:100% 50%}
+#btnRestart::before{background-position:0 100%}
+#btnSettings::before{background-position:100% 100%}
+.log-area{width:82%;align-self:flex-start;margin-right:auto}
+.boardwrap #log{border-radius:6px}
+
+#infoOverlay{background:#020714c7;backdrop-filter:blur(2px)}
+.info-sheet{position:relative;display:block;width:min(96vw,95dvh,896px);height:auto;aspect-ratio:896/894;max-height:none;overflow:visible;padding:0;border:0;border-radius:0;background:none;box-shadow:none}
+.info-visual{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.info-visual::before{content:'';position:absolute;width:114.285714%;height:171.81208%;left:-7.142857%;top:-35.2349%;background:url('../assets/ui/info-reference.png') left top/100% 100% no-repeat;image-rendering:auto}
+.info-heading{position:absolute;inset:0;z-index:2;width:auto;height:auto;border:0;background:none;box-shadow:none;pointer-events:none}
+.info-heading>span,.info-heading h2{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.info-heading #btnInfoClose{position:absolute;left:auto;right:.7%;top:5.6%;width:7.5%;height:7.3%;min-width:0;min-height:0;padding:0;border:0;border-radius:0;background:transparent;color:transparent;font-size:0;pointer-events:auto;cursor:pointer}
+.info-heading #btnInfoClose:focus-visible,.info-card:focus-visible,.supply-card button:focus-visible{outline:3px solid #fff1b5;outline-offset:-3px}
+.info-grid{position:absolute;z-index:1;left:6.2%;right:5.9%;top:13.9%;bottom:3.5%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));column-gap:1.75%;row-gap:2%;min-height:0}
+.info-grid .info-card,.info-grid .supply-card{display:block;position:relative;width:100%;height:100%;min-height:0;margin:0;padding:0;border:0;border-radius:0;background:none;box-shadow:none;color:transparent;font-size:0;text-align:left;cursor:pointer}
+.info-grid .info-card:hover{background:#d7a55c13}
+.info-grid .info-card .card-art,.info-grid .info-card b,.info-grid .info-card small,.info-grid .info-card em{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;opacity:0;pointer-events:none}
+.info-grid .supply-card{display:flex;flex-direction:column;align-items:stretch;cursor:default}
+.supply-card .ad-reward-row{position:relative;display:block;flex:1 1 0;min-height:0;margin:0;padding:0;border:0;background:none}
+.supply-card .ad-reward-icon,.supply-card .ad-reward-copy{position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none}
+.supply-card .ad-reward-row button{position:absolute;right:4%;top:29%;width:43%;height:43%;min-width:0;margin:0;padding:0;border:0;border-radius:0;background:transparent;color:transparent;font-size:0;cursor:pointer}
+.supply-card .ad-reward-row button:hover{background:#ffd37618}
+.supply-card .ad-reward-row button:disabled{background:#08152edb;color:#f6d795;font-size:clamp(9px,1.5vw,16px);border:1px solid #d2964a;border-radius:4px;cursor:default}
+.info-items{display:none}
+@media(max-width:700px){
+  .app header{min-height:95px}
+  .brand{text-align:center;padding:0;font-size:clamp(23px,8vw,38px)}
+  .app header .nav-icon{height:49px}
+  .app header .nav-icon::before{width:22px;height:22px}
+  .info-heading #btnInfoClose{left:auto;right:.7%;top:5.6%;width:7.5%;height:7.3%}
+}
+
+/* Four uncluttered combat values, then floor and keys. No fake HP cap. */
+.panel.left{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:auto auto;gap:5px}
+.panel.left .stat{display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:3px;min-width:0;min-height:62px;padding:7px 9px!important;text-align:left}
+.panel.left .stat::before{display:none!important}
+.panel.left .stat .k{display:flex;align-items:center;gap:5px;min-width:0;font-size:clamp(10px,2.8vw,14px);line-height:1.15;white-space:nowrap;overflow:visible;text-overflow:clip}
+.panel.left .stat .stat-icon{display:inline-flex;align-items:center;justify-content:center;flex:0 0 18px;width:18px;height:18px;font-size:16px;line-height:1;color:#ffd079;text-shadow:0 1px 2px #000}
+.panel.left .stat.hp .stat-icon{color:#ff6377}
+.panel.left .stat.def .stat-icon{color:#88c9ff}
+.panel.left .stat .v{display:block;min-width:0;font-size:clamp(14px,3.5vw,21px);line-height:1.1;white-space:normal;overflow:visible;overflow-wrap:anywhere;text-overflow:clip;font-variant-numeric:tabular-nums}
+.panel.left .floor-stat{grid-column:1;grid-row:2;min-height:54px}
+.panel.left .keybox{grid-row:2;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:1px;min-width:0;min-height:54px;padding:5px 8px;text-align:left}
+.panel.left .keybox::before{display:none}
+.panel.left .keybox.y{grid-column:2}.panel.left .keybox.b{grid-column:3}.panel.left .keybox.r{grid-column:4}
+.panel.left .keybox .t{font-size:clamp(9px,2.55vw,13px);line-height:1.1;white-space:nowrap}.panel.left .keybox .n{font-size:clamp(13px,3.4vw,20px);line-height:1.1}
+@media(max-width:360px){
+  .panel.left{gap:3px}
+  .panel.left .stat{min-height:52px;padding:4px 5px!important}
+  .panel.left .stat .k{gap:2px;font-size:10px}
+  .panel.left .stat .stat-icon{flex-basis:14px;width:14px;height:14px;font-size:13px}
+  .panel.left .stat .v{font-size:14px}
+  .panel.left .floor-stat,.panel.left .keybox{min-height:45px}
+  .panel.left .keybox{padding:4px 5px}
+}
+
+/* Reward buttons use the existing instant-grant ad fallback until a video provider is integrated. */
+.info-grid .supply-card{display:flex;flex-direction:column;align-items:stretch;justify-content:stretch;gap:0;padding:8px 10px;text-align:left}
+.ad-reward-row{flex:1;display:grid;grid-template-columns:35px minmax(0,1fr) auto;align-items:center;gap:7px;min-height:64px;border-bottom:1px solid #41577888;color:#e9edff}
+.ad-reward-row:last-child{border-bottom:0}
+.ad-reward-icon{display:block;font-size:27px;line-height:1;text-align:center;color:#7bcaff;text-shadow:0 2px 3px #000}
+.ad-reward-icon.heart{color:#ff506e;font-size:31px}
+.ad-reward-copy{display:flex;flex-direction:column;gap:2px;min-width:0}
+.ad-reward-copy small{display:block;min-height:0;color:#a9bad2;font-size:10px;line-height:1.1;white-space:nowrap}
+.ad-reward-copy strong{display:block;color:#ffd581;font-size:15px;line-height:1.15;white-space:nowrap}
+.supply-card .ad-reward-row button{width:auto;min-width:72px;margin:0;padding:5px 7px;border:2px solid #d99b50;border-radius:6px;background:linear-gradient(#704624,#3e2a23);color:#ffe2a1;font-size:12px;white-space:nowrap;cursor:pointer}
+.supply-card .ad-reward-row button:hover{background:#7d512d}
+@media(max-width:700px){
+  .info-grid .supply-card{padding:5px}
+  .ad-reward-row{grid-template-columns:22px minmax(0,1fr);gap:2px;min-height:92px;padding:3px 0}
+  .ad-reward-icon{font-size:18px}.ad-reward-icon.heart{font-size:22px}
+  .ad-reward-copy small{font-size:8px}.ad-reward-copy strong{font-size:11px}
+  .supply-card .ad-reward-row button{grid-column:1/-1;width:100%;min-width:0;padding:3px 1px;font-size:10px}
+}
+
+/* Portrait: keep the two HUD rows at their full height. Extra log lines scroll
+   inside the log instead of squeezing the HUD in the legacy one-screen layout. */
+@media(max-width:700px) and (orientation:portrait){
+  html,body{height:auto;min-height:100%;overflow-x:hidden;overflow-y:auto}
+  .app{height:auto;min-height:100dvh;overflow:visible}
+  main,.ui-focus main{flex:none;min-height:auto;overflow:visible}
+  .panel.left{flex:none;min-height:max-content;overflow:visible}
+  .panel.boardwrap,.playrow{flex:none;min-height:auto}
+  .log-area{flex:none;min-height:0}
+  .boardwrap #log{height:72px;min-height:72px;max-height:72px;overflow-y:auto;overscroll-behavior:contain}
+}
+
+/* Keep the live hit targets aligned with the baked reference art. */
+#infoOverlay .info-grid .info-card{display:block;min-height:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;color:transparent;font-size:0}
+#infoOverlay .info-grid .supply-card{display:flex;min-height:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+#infoOverlay .supply-card .ad-reward-row{display:block;min-height:0;padding:0;border:0;background:transparent}
+#infoOverlay .supply-card .ad-reward-row button{position:absolute;right:4%;top:29%;width:43%;height:43%;min-width:0;margin:0;padding:0;border:0;border-radius:0;background:transparent;color:transparent;font-size:0}
+#infoOverlay .supply-card .ad-reward-row button:disabled{opacity:0;pointer-events:none}
+#infoOverlay .supply-card .ad-reward-row button.claim-fading{background:#08152edb;color:#f6d795;font-size:clamp(9px,1.5vw,16px);border:1px solid #d2964a;border-radius:4px;animation:reward-claimed-fade 1.4s ease-out forwards}
+@keyframes reward-claimed-fade{0%,20%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-6px)}}
+@media(prefers-reduced-motion:reduce){#infoOverlay .supply-card .ad-reward-row button.claim-fading{animation-duration:.15s}}
+
+body.info-open{overflow:hidden!important}
+html:has(body.info-open){overflow:hidden!important}
+.panel.left .stat .stat-icon,.panel.left .keybox .t::before{display:inline-block;flex:none;width:22px;height:22px;background-image:url('../assets/ui/hud-icons.png');background-repeat:no-repeat;background-size:400% 200%;image-rendering:pixelated;font-size:0;color:transparent;mix-blend-mode:screen}
+.panel.left .stat.hp .stat-icon{background-position:0 0}
+.panel.left .stat.gold .stat-icon{background-position:33.333% 0}
+.panel.left .stat.atk .stat-icon{background-position:66.666% 0}
+.panel.left .stat.def .stat-icon{background-position:100% 0}
+.panel.left .floor-stat .stat-icon{background-position:0 100%}
+.panel.left .keybox .t{display:flex;align-items:center;gap:3px}
+.panel.left .keybox .t::before{content:'';width:18px;height:18px}
+.panel.left .keybox.y .t::before{background-position:33.333% 100%}
+.panel.left .keybox.b .t::before{background-position:66.666% 100%}
+.panel.left .keybox.r .t::before{background-position:100% 100%}
+@media(max-width:700px){
+  .panel.left .stat .stat-icon{flex-basis:17px;width:17px;height:17px}
+  .panel.left .keybox .t::before{width:15px;height:15px}
+}
+@media(max-width:360px){
+  .panel.left .stat .stat-icon{flex-basis:14px;width:14px;height:14px}
+  .panel.left .keybox .t::before{width:12px;height:12px}
+  .panel.left .keybox .t{gap:1px}
+}
+
+/* Main portrait chrome follows the supplied 942x1668 reference. The screenshot
+   supplies scenery only; buttons, HUD values, map and logs remain live. */
+.app{padding:0;gap:0;background:#040b1c}
+main,.ui-focus main{gap:0}
+.app header{display:grid;grid-template-columns:42% repeat(6,minmax(0,1fr));gap:0;width:100%;height:18.5vw;min-height:0;padding:0 1%;border:0;border-radius:0;box-shadow:none;background:url('../assets/ui/main-reference-no-dot.png') center top/100% auto no-repeat}
+.brand{grid-column:1;grid-row:1;visibility:hidden}
+.app header .nav-icon{grid-row:1;align-self:end;width:100%;height:10.7vw;min-height:0;padding:0;border:0;border-radius:0;background:transparent!important;box-shadow:none!important;color:transparent!important;font-size:0!important}
+.app header .nav-icon::before{display:none}
+.app header .nav-icon:hover{background:#ffd8871c!important}
+.app header .nav-icon:focus-visible{outline:2px solid #ffe19b;outline-offset:-3px}
+#btnManual{position:relative;overflow:visible}
+#btnManual::after{display:none}
+#btnManual.has-new-entry::after{content:'';display:block;position:absolute;z-index:2;right:0;top:0;width:2.1vw;height:2.1vw;border:1px solid #8e1125;border-radius:50%;background:#fa3349;box-shadow:0 0 3px #ff7181}
+
+.panel.left{display:grid!important;grid-template-columns:repeat(30,minmax(0,1fr));grid-template-rows:12.8vw 9.8vw;gap:1.2vw;width:100%;min-height:28vw;padding:2vw 2.3vw 2.4vw!important;border:0;background:linear-gradient(#061222,#030b19);box-shadow:inset 0 2px #9d6034,inset 0 -2px #955623}
+.panel.left .stat{grid-row:1;display:grid;grid-template-columns:34% 1fr;grid-template-rows:1fr 1fr;align-items:center;gap:0;min-height:0;padding:0 .45vw!important;border:2px solid transparent;border-radius:clamp(7px,1.15vw,13px);background:linear-gradient(135deg,#10243e,#020d1d) padding-box,linear-gradient(145deg,#82a4bb,#3c678b 45%,#203b5a 80%,#805b38) border-box;box-shadow:inset 0 1px #a1b5c055,inset 0 -2px #0008}
+.panel.left .stat.hp{grid-column:1/8}.panel.left .stat.gold{grid-column:8/13}.panel.left .stat.atk{grid-column:13/19}.panel.left .stat.def{grid-column:19/25}.panel.left .floor-stat{grid-column:25/31;grid-row:1;min-height:0}
+.panel.left .stat .k{grid-column:2;grid-row:1;align-self:end;display:block;min-width:0;font-size:clamp(10px,1.9vw,19px);line-height:1.1;color:#dce8f6}
+.panel.left .stat .v{grid-column:2;grid-row:2;align-self:start;margin-top:.35vw;font-size:clamp(14px,2.85vw,28px);line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.panel.left .stat .stat-icon{position:absolute;left:7%;top:50%;transform:translateY(-50%);width:26%;height:70%;max-width:none;max-height:none;background-size:400% 200%;mix-blend-mode:normal}
+.panel.left .stat.hp .v{color:#ff5368}.panel.left .stat.gold .v,.panel.left .stat.atk .v,.panel.left .floor-stat .v{color:#ffd077}.panel.left .stat.def .v{color:#79c5ff}
+.panel.left .keybox{grid-row:2;display:grid;grid-template-columns:28% minmax(0,1fr) auto;align-items:center;gap:0;min-height:0;padding:0 1.4vw;border:2px solid transparent;border-radius:clamp(7px,1.15vw,13px);background:linear-gradient(130deg,#0b203b,#020d1d) padding-box,linear-gradient(145deg,#7299b3,#325c80 50%,#1c3c5e 80%,#79573a) border-box;box-shadow:inset 0 1px #8ba9ba44,inset 0 -2px #0008}
+.panel.left .keybox.y{grid-column:1/11}.panel.left .keybox.b{grid-column:11/21}.panel.left .keybox.r{grid-column:21/31}
+.panel.left .keybox .t{display:contents;font-size:clamp(9px,1.8vw,18px);color:#dfebf8;white-space:nowrap}
+.panel.left .keybox .t::before{grid-column:1;justify-self:center;width:6.6vw;height:6.6vw;min-width:25px;min-height:25px;mix-blend-mode:normal}
+.panel.left .keybox .n{grid-column:3;justify-self:end;font-size:clamp(14px,2.8vw,28px);line-height:1}
+.panel.left .keybox.y .n{color:#ffcc66}.panel.left .keybox.b .n{color:#65c0ff}.panel.left .keybox.r .n{color:#ff5872}
+.panel.boardwrap{gap:0;background:#04101d}
+.playrow{gap:0;background:#04101d}
+.lower-scene{display:flex;flex-direction:column;align-items:center;width:100%;min-height:0;background:#06101e url('../assets/ui/lower-scene.png') center center/cover no-repeat}
+.boardbox{isolation:isolate;overflow:hidden;padding:3.2%;border:6px solid #986137;border-radius:4px;box-shadow:inset 0 0 0 2px #d09354,0 0 0 2px #37231b;background:#0a1425}
+.boardbox::before,.boardbox::after{content:none}
+.boardwrap:not(.touchpad-open) .touchpad,.touchpad{display:grid!important;grid-template-columns:repeat(3,10vw);grid-template-rows:repeat(3,7.8vw);gap:0;width:30vw;height:23.4vw;margin:0 auto!important}
+.touchpad button{min-width:0;min-height:0;padding:0;border:2px solid #dba45a;border-radius:8px;background:linear-gradient(145deg,#152d4b,#061529)!important;box-shadow:inset 0 1px #9bb8d566,0 3px #020812!important;color:#e9f5ff;font-size:clamp(20px,4.8vw,56px);font-weight:800;text-shadow:0 2px #19324d}
+.touchpad button[data-move="up"]{grid-column:2;grid-row:1}.touchpad button[data-move="left"]{grid-column:1;grid-row:2}.touchpad button[data-move="right"]{grid-column:3;grid-row:2}.touchpad button[data-move="down"]{grid-column:2;grid-row:3}
+.touchpad button:focus-visible{outline:2px solid #ffe3a2;outline-offset:-2px}
+.log-area{position:relative;width:78%;height:20vw;min-height:90px;margin:0 auto 1.5vw 2%;align-self:flex-start;background:#04101d;box-shadow:-2vw 0 #04101d}
+.log-area::after{content:none}
+.log-tabs{height:5vw;min-height:24px;gap:0;padding-left:0}
+.log-tabs button{min-width:19%;padding:0 1.5vw;border:1px solid #467092;border-radius:0;background:#061a30;color:#c6d9f4;font-size:clamp(11px,2.1vw,20px);clip-path:polygon(5px 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%,0 5px)}
+.log-tabs button.active{border-color:#ffc265;background:#513113;box-shadow:inset 0 0 8px #eaa04f;color:#ffe2a1}
+.boardwrap #log{width:100%;height:14.5vw;min-height:65px;max-height:none;margin:0;padding:1.5vw 3vw;border:2px solid #c37a3b;border-radius:0;background:#031326;color:#d1def1;font-size:clamp(11px,1.9vw,18px);clip-path:polygon(8px 0,calc(100% - 8px) 0,100% 8px,100% calc(100% - 8px),calc(100% - 8px) 100%,8px 100%,0 calc(100% - 8px),0 8px)}
+/* The desktop view must flow vertically. The old fixed-height desktop shell
+   let the square map overflow upward across the HUD. */
+@media(min-width:701px){
+  html,body{height:auto;overflow-x:hidden;overflow-y:auto}
+  .app{height:auto;min-height:100dvh}
+  main,.ui-focus main{flex:none;overflow:visible}
+  .panel.left,.panel.boardwrap,.playrow{flex:none;min-height:0;overflow:visible}
+  .boardbox{flex:none}
+}
+@media(max-width:700px) and (orientation:portrait){
+  .app,.panel.boardwrap,.playrow,main{width:100%;max-width:100%}
+  .app{min-height:100dvh}
+  main,.ui-focus main{flex:1 0 auto}
+  .panel.boardwrap{flex:1 0 auto}
+  .playrow{flex:none}
+  .lower-scene{flex:1 0 auto}
+  .app header{height:18.5vw;min-height:0;padding:0 1%}
+  .app header .nav-icon{height:10.7vw;min-height:0}
+  .panel.left{grid-template-rows:12.8vw 9.8vw;min-height:28vw;padding:2vw 2.3vw 2.4vw!important}
+  .panel.left .stat{min-height:0;padding:0 .45vw!important}
+  .panel.left .floor-stat,.panel.left .keybox{min-height:0}
+  .panel.left .keybox{padding:0 1.4vw}
+  .boardbox{width:100%!important;min-width:0;border-width:4px;padding:3.2%}
+  .boardwrap:not(.touchpad-open) .touchpad,.touchpad{grid-template-columns:repeat(3,10vw);grid-template-rows:repeat(3,7.8vw)}
+  .log-area{display:flex;flex-direction:column;flex:1 0 20vw;height:auto;min-height:90px}
+  .boardwrap #log{flex:1 0 14.5vw;height:auto;min-height:65px;max-height:none}
+}

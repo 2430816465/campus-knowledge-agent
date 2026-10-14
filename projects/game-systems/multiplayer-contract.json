@@ -1,0 +1,19 @@
+{
+ "contract_version":1,
+ "game":{"name":"再闯一关 · 手机局域网","genre":"实时双人合作平台跳跃","target_platforms":["Android APK 1.7.0, API 23+, updated system WebView"]},
+ "session":{"pace":"real-time","fairness":"casual cooperative","players_min":2,"players_max":2,"join_model":"同一 Wi-Fi，房主 IPv4 加六位房间码","late_join":"大厅加入；游戏中只允许原位置凭令牌重连"},
+ "topology":{"model":"listen-server","authority_owner":"房主手机 Web Worker","trust_assumptions":["合作好友信任房主；房主可以修改本地游戏及奖励","局域网传输为明文，房间码不是强身份认证","客户端只能请求输入，模拟和结算由房主执行"],"host_migration":"不迁移；房主切后台、退出或进程结束即关闭房间","risk_acceptance":["适用于本地好友合作，不作为排行榜或付费资产的可信结算"]},
+ "authority":[
+  {"domain":"角色移动与关卡机关","owner":"房主 worker","client_can_request":["方向、跳跃、交互"],"authority_validation":["校验房间成员与状态","复用 game-shared.js 的碰撞、速度与机关判定"]},
+  {"domain":"契约与开局","owner":"房主 worker","client_can_request":["选契约、准备、开局"],"authority_validation":["双方选择相同契约并准备","只有房主可开局和选关"]},
+  {"domain":"结算与协作币","owner":"房主 worker 与房主本地存档","client_can_request":["领取奖励、购买外观"],"authority_validation":["通关状态与结算 ID 去重","余额和已拥有状态校验"]}
+ ],
+ "simulation":{"clock":"房主固定步长定时器","tick_rate_hz":60,"tick_rate_basis":"沿用现有平台跳跃物理的 1/60 秒步长，移动和碰撞规则与原服务器一致；此值不是实机性能测量结果。","prediction":"客户端显示权威快照，不预测碰撞结果。","reconciliation":"每次快照替换客户端状态；重连恢复完整快照。","measurement_plan":"实机待测：记录低配安卓房主帧时间、双端输入响应和连续十分钟游戏耗电；桌面仅验证功能，不宣称达到手机性能指标。"},
+ "replication":{"model":"可靠输入消息与完整快照，每 50ms 广播","reliability_classes":{"input":"WebSocket reliable ordered","snapshot":"完整权威状态；队列溢出断线后重连","wallet":"本玩家快照"},"interest_management":"仅向房间内两位玩家发送游戏快照","hidden_state":"没有隐藏手牌；重连令牌只发给所属连接"},
+ "transport":{"primary":"LAN WebSocket protocol v1","rationale":"原客户端已使用 WebSocket，Android 原生监听 Wi-Fi IPv4，WebView 与 worker 通过本地桥接复用游戏规则。","fallback":"无互联网中继、无自动公网回退；Wi-Fi 隔离或无 IPv4 时提示连接失败。","backpressure":"最多 4 条连接；每连接出站队列 32 项；桥接队列 512 项；每消息 16KiB，每秒 180 条；握手 5 秒，读空闲 15 秒，5 秒心跳。慢连接队列满则关闭，桥接满则结束房间。"},
+ "lifecycle":{"states":["setup","lobby","playing","paused","intermission","ended","closed"],"reconnect":"客机断线保留 30 秒，凭原令牌回到原位置；超时房间结束。","disconnect":"清空按键并暂停游戏；房主离开前台直接关闭原生监听，不提供后台续玩。","version_policy":"握手只接受 /ws?v=1；房主额外持有随机 host secret；不同协议在加入前关闭。"},
+ "security":{"identity":"本地账户 ID、随机重连令牌；无云账号，奖励存于房主手机。","authorization":"每条请求检查成员、当前阶段与房主身份；创建房间还需原生 host secret。","validation":["拒绝不兼容协议、非掩码帧、大消息和二进制帧","只允许 Wi-Fi 私有 IPv4 监听与私有来源地址","worker 复用服务端权威逻辑，不接收客户端坐标或结算结果"],"abuse_controls":["Origin 仅 http://127.0.0.1:38473","有界队列、连接数、握手超时和频率限制","不提供公网服务、资产文件服务或目录浏览"],"logging":"原生不记录消息正文与令牌；测试报告仅记录场景、结果和设备是否实测。"},
+ "observability":{"metrics":["自动化加入成功","重连恢复","两端位置差","构建和资源校验"],"traces":["测试场景名称","房间 ID","连接 ID"],"alerts":["worker 异常结束显示重新开房提示","网络异常与加入超时显示客户端提示"]},
+ "verification":{"network_conditions":[{"name":"clean desktop Java socket control","latency_ms":0,"jitter_ms":0,"loss_percent":0,"reorder_percent":0},{"name":"bridge delay plus explicit disconnect","latency_ms":120,"jitter_ms":0,"loss_percent":0,"reorder_percent":0}],"scenarios":["两个独立浏览器上下文连接真实 Java WebSocket 和实际 worker","客机越权创建房间、协议版本错误","契约、准备、开局、移动","120ms 桥接延迟、客机断线与令牌重连","模拟房主切后台后清理","待实机：两部安卓手机、路由器隔离、锁屏、Wi-Fi 切换、低配持续运行"],"acceptance":["双端同房间且位置差小于 40 像素","客机越权开房不改变房间","断线先暂停，再重连恢复 playing","房主停止时清理 worker 与界面状态","不把桥接模拟测试声称为双手机实机测试"]},
+ "decisions":[{"decision":"手机作为 listen server","reason":"无需电脑且禁止依赖公网服务；原生监听配合 worker 复用规则。","evidence":"tests/phone-lan.mjs 连接真实 LanSocketServer，模拟桥接；Android 编译通过，实机未连接。"},{"decision":"房主前台运行，后台关闭","reason":"避免在 WebView 被系统挂起时继续发送过期状态，不增加常驻服务和额外电池开销。","evidence":"MainActivity.onPause 关闭监听；Android WebView bridge 文档 https://developer.android.com/reference/android/webkit/WebView"}]
+}

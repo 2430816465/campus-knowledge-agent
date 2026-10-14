@@ -1,0 +1,79 @@
+<level>
+  <width>1000</width>
+  <height>640</height>
+  <solids>
+    <rect x="0" y="0" w="1000" h="10"/>
+    <rect x="0" y="10" w="10" h="630"/>
+    <rect x="10" y="540" w="990" h="100"/>
+    <rect x="60" y="280" w="200" h="60"/>
+    <rect x="110" y="150" w="140" h="60"/>
+    <rect x="200" y="120" w="50" h="30"/>
+    <rect x="240" y="450" w="190" h="90"/>
+    <rect x="390" y="340" w="30" h="20"/>
+    <rect x="430" y="320" w="200" h="20"/>
+    <rect x="440" y="280" w="40" h="20"/>
+    <rect x="530" y="10" w="40" h="150"/>
+    <rect x="530" y="280" w="40" h="20"/>
+    <rect x="570" y="120" w="190" h="40"/>
+    <rect x="610" y="240" w="390" h="20"/>
+    <rect x="610" y="260" w="110" h="20"/>
+    <rect x="720" y="220" w="280" h="20"/>
+    <rect x="990" y="10" w="10" h="210"/>
+    <rect x="990" y="260" w="10" h="280"/>
+  </solids>
+  <extraPlatforms>
+    <LargeCrate x="750" y="160"/>
+    <level2_spike0 x="440" y="310" width="190" height="10"/>
+    <level2_spike0 x="540" y="530" width="220" height="10"/>
+    <level2_spike1 x="10" y="210" width="10" height="130"/>
+    <helpBox x="130" y="480" type="0" helpString="Think carefully about the order you move things."/>
+  </extraPlatforms>
+  <movingPlatforms>
+    <level2_specialPlatformSmall x="540" y="470" speed="120" movementType="5" animated="1">
+      <node x="720" y="470"/>
+    </level2_specialPlatformSmall>
+    <level2_specialPlatformSmall x="300" y="90" speed="80" movementType="5" animated="1">
+      <node x="300" y="260"/>
+    </level2_specialPlatformSmall>
+  </movingPlatforms>
+  <BGLayer1>
+    <level2_MG2 x="0" y="330" scrollFactor="0.1"/>
+    <level2_MG2 x="0" y="20" scrollFactor="0.1"/>
+    <level2_greenPipe x="120" y="0" width="20" height="640" scrollFactor="0.2"/>
+    <level2_metalPipe x="290" y="0" width="30" height="640" scrollFactor="0.3"/>
+  </BGLayer1>
+  <BGLayer2>
+    <level2_tank x="430" y="360" scrollFactor="0.9"/>
+    <level2_FMG3 x="360" y="130" scrollFactor="0.2"/>
+    <level2_greenPipe x="470" y="0" width="20" height="360" scrollFactor="0.9"/>
+    <level2_greenPipe x="200" y="0" width="20" height="640" scrollFactor="0.8"/>
+    <level2_tank x="160" y="180" scrollFactor="0.8"/>
+    <level2_pipe1 x="220" y="210" width="780" height="70" scrollFactor="0.8"/>
+  </BGLayer2>
+  <BGLayer3>
+    <palettes x="80" y="500" scrollFactor="0.2"/>
+    <level2_braceLeft x="720" y="260"/>
+  </BGLayer3>
+  <objects>
+    <L1_SmallCrate x="122" y="126" width="32"/>
+    <smallSugarBag x="22" y="237" width="22"/>
+    <exit x="586" y="30" nextLevel="2"/>
+    <Bottle x="658" y="312" width="12"/>
+    <andreCheckPoint x="371" y="394" player="1"/>
+  </objects>
+  <characters>
+    <player x="790" y="490" speed="40" movementType="1" startsFirst="0" levelName="Power Pellets" andreInitialFlip="1" liselotInitialFlip="0" followWidth="0" followHeight="0" talkString="Our main ingredients are water and sugar. Both of which were quite rare during the war, but now we have established great relationships with suppliers.">
+      <node x="800" y="490"/>
+    </player>
+    <liselot x="50" y="490" speed="40" movementType="1" talkString="Just say yes.">
+      <node x="100" y="500"/>
+    </liselot>
+    <worker x="830" y="180" speed="40" movementType="1" talkString="When I succeed, no one remembers. When I fail, they won't let me forget.">
+      <node x="950" y="180"/>
+    </worker>
+  </characters>
+  <FGLayer1>
+    <level2_chainTile x="219" y="0" width="12" height="640" scrollFactor="1.6"/>
+    <level2_chainTile x="899" y="0" width="12" height="640" scrollFactor="1.6"/>
+  </FGLayer1>
+</level>

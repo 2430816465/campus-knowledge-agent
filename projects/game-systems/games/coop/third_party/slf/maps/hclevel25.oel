@@ -1,0 +1,111 @@
+<level>
+  <width>1600</width>
+  <height>710</height>
+  <solids>
+    <rect x="0" y="0" w="1600" h="20"/>
+    <rect x="0" y="20" w="10" h="690"/>
+    <rect x="10" y="170" w="630" h="20"/>
+    <rect x="10" y="290" w="80" h="50"/>
+    <rect x="10" y="660" w="1590" h="30"/>
+    <rect x="10" y="690" w="400" h="20"/>
+    <rect x="150" y="300" w="740" h="40"/>
+    <rect x="160" y="340" w="60" h="260"/>
+    <rect x="300" y="20" w="60" h="90"/>
+    <rect x="410" y="540" w="1190" h="120"/>
+    <rect x="450" y="500" w="20" h="40"/>
+    <rect x="540" y="340" w="60" h="140"/>
+    <rect x="700" y="170" w="190" h="20"/>
+    <rect x="870" y="190" w="20" h="100"/>
+    <rect x="870" y="340" w="20" h="130"/>
+    <rect x="940" y="420" w="230" h="20"/>
+    <rect x="950" y="20" w="60" h="320"/>
+    <rect x="1010" y="130" w="100" h="20"/>
+    <rect x="1010" y="160" w="430" h="20"/>
+    <rect x="1180" y="130" w="140" h="20"/>
+    <rect x="1190" y="210" w="40" h="120"/>
+    <rect x="1220" y="20" w="60" h="50"/>
+    <rect x="1380" y="130" w="60" h="20"/>
+    <rect x="1430" y="420" w="40" h="20"/>
+    <rect x="1490" y="360" w="40" h="20"/>
+    <rect x="1510" y="190" w="20" h="20"/>
+    <rect x="1550" y="290" w="50" h="20"/>
+    <rect x="1590" y="20" w="10" h="270"/>
+    <rect x="1590" y="310" w="10" h="230"/>
+  </solids>
+  <extraPlatforms>
+    <LargeCrate x="290" y="110"/>
+    <level3_spike1 x="890" y="170" width="10" height="300"/>
+    <level3_spike3 x="940" y="170" width="10" height="170"/>
+    <LargeCrate x="530" y="480"/>
+    <level3_spike2 x="370" y="20" width="570" height="10"/>
+    <level3_spike0 x="1010" y="150" width="430" height="10"/>
+    <LargeCrate x="1210" y="70"/>
+    <level3_spike0 x="1440" y="530" width="150" height="10"/>
+    <level3_spike3 x="1500" y="190" width="10" height="20"/>
+    <level3_spike1 x="1530" y="190" width="10" height="20"/>
+    <heightChart x="430" y="480"/>
+    <LargeCrate x="150" y="600"/>
+    <helpBox x="570" y="480" type="0" helpString="Don't fall down anywhere unless you have a plan to get out."/>
+  </extraPlatforms>
+  <movingPlatforms>
+    <level3_specialBlock x="900" y="130" speed="100" movementType="5" animated="0">
+      <node x="900" y="440"/>
+    </level3_specialBlock>
+  </movingPlatforms>
+  <BGLayer1>
+    <level3_painting2 x="380" y="390" scrollFactor="0.2"/>
+    <level3_painting3 x="380" y="50" scrollFactor="0.2"/>
+    <level3_salesChart x="170" y="70" width="67" height="67" scrollFactor="0.2"/>
+    <level3_window x="0" y="270" width="1200" height="320" scrollFactor="0.2"/>
+    <level3_painting1 x="680" y="50" scrollFactor="0.2"/>
+  </BGLayer1>
+  <BGLayer2>
+    <bookCase x="899" y="450" scrollFactor="0.8"/>
+    <filingCab1 x="820" y="450" scrollFactor="0.7"/>
+    <filingCab2 x="100" y="600" scrollFactor="0.75"/>
+    <filingCab2 x="550" y="110" scrollFactor="0.95"/>
+    <filingCab2 x="1140" y="480" scrollFactor="0.8"/>
+  </BGLayer2>
+  <BGLayer3>
+    <level3_desk2 x="290" y="590"/>
+    <level3_desk1 x="1000" y="470"/>
+    <level3_desk3 x="310" y="270"/>
+    <level3_desk3 x="100" y="140"/>
+    <sugarBags x="780" y="260" scrollFactor="0.2"/>
+    <sodaPack x="790" y="150" scrollFactor="0.2"/>
+    <palettes x="20" y="250" scrollFactor="0.2"/>
+    <plant1 x="570" y="190" scrollFactor="0.2"/>
+    <plant1 x="520" y="60" scrollFactor="0.2"/>
+    <plant1 x="50" y="550" scrollFactor="0.2"/>
+    <plant2 x="490" y="440" scrollFactor="0.2"/>
+    <plant2 x="590" y="200" scrollFactor="0.2"/>
+    <plant2 x="1060" y="320" scrollFactor="0.2"/>
+    <plant2 x="1450" y="320" scrollFactor="0.2"/>
+    <plant1 x="1400" y="20" scrollFactor="0.2"/>
+    <plant1 x="1360" y="430" scrollFactor="0.2"/>
+  </BGLayer3>
+  <objects>
+    <exit x="20" y="80" nextLevel="2"/>
+    <smallSugarBag x="659" y="241" width="22"/>
+    <Bottle x="28" y="537" width="12"/>
+    <L1_SmallCrate x="1088" y="397" width="32"/>
+    <L1_SmallCrate x="599" y="147" width="32"/>
+  </objects>
+  <characters>
+    <chef x="700" y="120" speed="40" movementType="1" talkString="Cloudy lemonade, fizzy lemonade, citronade... Every country has a different idea of lemonade.">
+      <node x="860" y="120"/>
+    </chef>
+    <inspector x="700" y="260" speed="40" movementType="1" talkString="No need for an inspection today. You're with us now.">
+      <node x="830" y="260"/>
+    </inspector>
+    <liselot x="450" y="450" speed="40" movementType="1" talkString="Just say yes.">
+      <node x="580" y="460"/>
+    </liselot>
+    <player x="1020" y="80" speed="40" movementType="1" startsFirst="1" levelName="TPS Reports" andreInitialFlip="1" liselotInitialFlip="0" followWidth="0" followHeight="0" talkString="Keeping those pipes clean is important.">
+      <node x="1050" y="80"/>
+    </player>
+    <worker x="620" y="500" speed="40" movementType="1" talkString="These new imported spanners are just a dream to work with.">
+      <node x="1410" y="500"/>
+    </worker>
+  </characters>
+</level>

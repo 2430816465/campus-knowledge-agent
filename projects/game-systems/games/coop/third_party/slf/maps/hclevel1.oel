@@ -1,0 +1,75 @@
+<level>
+  <width>1800</width>
+  <height>640</height>
+  <solids>
+    <rect x="0" y="0" w="10" h="640"/>
+    <rect x="10" y="290" w="560" h="110"/>
+    <rect x="10" y="540" w="1010" h="100"/>
+    <rect x="220" y="400" w="60" h="80"/>
+    <rect x="260" y="160" w="50" h="130"/>
+    <rect x="570" y="340" w="230" h="110"/>
+    <rect x="770" y="250" w="30" h="60"/>
+    <rect x="950" y="420" w="850" h="120"/>
+    <rect x="1790" y="0" w="10" h="420"/>
+  </solids>
+  <extraPlatforms>
+    <LargeCrate x="210" y="480"/>
+    <level1_specialBlock x="450" y="500" speed="40" movementType="1" animated="0"/>
+    <spike0 x="1250" y="410" width="60" height="10"/>
+    <spike2 x="10" y="400" width="210" height="10"/>
+    <spike2 x="280" y="400" width="280" height="10"/>
+    <spike2 x="570" y="450" width="230" height="10"/>
+    <spike0 x="280" y="150" width="10" height="10"/>
+    <spike0 x="790" y="240" width="10" height="10"/>
+    <spike0 x="1000" y="410" width="70" height="10"/>
+    <spike0 x="530" y="280" width="40" height="10"/>
+    <spike1 x="570" y="290" width="10" height="50"/>
+    <spike1 x="280" y="410" width="10" height="70"/>
+    <spike1 x="800" y="340" width="10" height="110"/>
+    <spike1 x="10" y="410" width="10" height="60"/>
+    <spike1 x="310" y="180" width="10" height="110"/>
+    <spike3 x="940" y="430" width="10" height="110"/>
+    <spike3 x="440" y="500" width="10" height="40"/>
+    <spike1 x="490" y="500" width="10" height="40"/>
+    <helpBox x="120" y="480" type="0" helpString="Welcome to the hardcore levels."/>
+  </extraPlatforms>
+  <movingPlatforms>
+    <level1_specialPlatformSmall x="810" y="290" speed="40" movementType="5" animated="1">
+      <node x="910" y="290"/>
+    </level1_specialPlatformSmall>
+  </movingPlatforms>
+  <BGLayer1>
+    <level1_windows x="20" y="190" width="240" height="54" scrollFactor="0.1"/>
+    <level1_windows x="310" y="270" width="300" height="54" scrollFactor="0.1"/>
+    <level1_shelfTile x="0" y="0" width="480" height="640" scrollFactor="0.2"/>
+    <level1_shelfTile x="560" y="0" width="480" height="630" scrollFactor="0.3"/>
+  </BGLayer1>
+  <BGLayer2>
+    <sugarBagsAndCrates x="590" y="410" scrollFactor="0.6"/>
+    <cratesBox x="1060" y="240" scrollFactor="0.95"/>
+    <sugarBags x="190" y="250" scrollFactor="0.8"/>
+  </BGLayer2>
+  <BGLayer3>
+    <sugarBags x="330" y="250" scrollFactor="0.2"/>
+    <palettes x="1450" y="380" scrollFactor="0.2"/>
+    <sugarBags x="320" y="500" scrollFactor="0.2"/>
+    <sodaPack x="650" y="320" scrollFactor="0.2"/>
+  </BGLayer3>
+  <objects>
+    <L1_SmallCrate x="702" y="317" width="32"/>
+    <exit x="1717" y="330" nextLevel="2"/>
+    <smallSugarBag x="1269" y="330" width="22"/>
+    <Bottle x="979" y="164" width="12"/>
+  </objects>
+  <characters>
+    <liselot x="20" y="240" speed="40" movementType="1" talkString="Just say yes.">
+      <node x="70" y="250"/>
+    </liselot>
+    <player x="20" y="490" speed="40" movementType="1" startsFirst="1" levelName="Tutorial" andreInitialFlip="0" liselotInitialFlip="0" followWidth="0" followHeight="0" talkString="The bicycle store and repair shop we owned in Malang was wonderful.">
+      <node x="60" y="490"/>
+    </player>
+    <worker x="1310" y="380" speed="160" movementType="1" talkString="I would work thanklessly to end human misery, but that doesn't make any money.">
+      <node x="1680" y="380"/>
+    </worker>
+  </characters>
+</level>

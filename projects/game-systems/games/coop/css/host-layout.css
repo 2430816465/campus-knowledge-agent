@@ -1,0 +1,52 @@
+/* Host dialogs shown over 再闯一关: keep every pause action inside the screen. */
+body[data-coop-playing="true"] #modal {
+  box-sizing:border-box;
+  max-width:calc(100vw - 24px);
+  max-height:calc(100dvh - 24px);
+  overflow:auto;
+}
+@media (orientation:landscape) and (max-height:520px) {
+  body[data-coop-playing="true"] #modal[data-kind="settings"] {padding:10px 12px}
+  body[data-coop-playing="true"] #modal[data-kind="settings"] h2 {margin:0 48px 6px 0;line-height:28px}
+  body[data-coop-playing="true"] #modal[data-kind="settings"] .wood-tabs {margin:0 0 6px}
+  body[data-coop-playing="true"] #modal[data-kind="settings"] .wood-settings-copy {
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;align-items:center;
+  }
+  body[data-coop-playing="true"] #modal[data-kind="settings"] .wood-settings-copy p {
+    grid-column:auto;margin:0;font-size:12px;line-height:1.4;
+  }
+  body[data-coop-playing="true"] #modal[data-kind="settings"] .wood-settings-row {min-height:44px;gap:6px}
+  body[data-coop-playing="true"] #modal[data-kind="settings"] .wood-save-note {margin:4px 0;font-size:11px;line-height:14px}
+  body[data-coop-playing="true"] #modal[data-kind="settings"] .wood-settings-footer {margin:6px 0 0}
+  body[data-coop-playing="true"] #modal[data-kind="settings"] .button {box-sizing:border-box;min-height:44px;padding:6px 8px;font-size:14px;line-height:1.3}
+  body[data-coop-playing="true"] #modal[data-kind="menu"][open] {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px;
+    width:min(560px,calc(100vw - 24px));
+    padding:12px;
+  }
+  body[data-coop-playing="true"] #modal[data-kind="menu"] .modal-top {
+    position:absolute;right:8px;top:8px;width:44px;
+  }
+  body[data-coop-playing="true"] #modal[data-kind="menu"] .modal-top .eyebrow {display:none}
+  body[data-coop-playing="true"] #modal[data-kind="menu"] h2 {
+    grid-column:1/-1;margin:0 48px 0 0;font-size:21px;line-height:28px;
+  }
+  body[data-coop-playing="true"] #modal[data-kind="menu"] :is(.wood-menu-note,.wood-menu-receipt) {
+    margin:0;font-size:12px;line-height:1.4;align-self:center;
+  }
+  body[data-coop-playing="true"] #modal[data-kind="menu"] .wood-menu-tools {
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;
+    margin:0;clear:none;min-width:0;
+  }
+  body[data-coop-playing="true"] #modal[data-kind="menu"] :is(.wood-continue,.wood-exit,[data-action="menu-options"],.wood-menu-tools button) {
+    float:none;width:100%;margin:0!important;min-width:0;min-height:44px;
+    padding:6px 8px;box-sizing:border-box;font-size:14px;line-height:1.3;white-space:normal;
+  }
+  body[data-coop-playing="true"] #modal[data-kind="menu"] .modal-top button {
+    display:flex;align-items:center;justify-content:center;
+    width:44px;height:44px;min-height:44px;padding:0;
+  }
+  body[data-coop-playing="true"] #modal[data-kind="menu"]::after {display:none}
+}

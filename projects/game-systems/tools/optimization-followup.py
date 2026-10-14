@@ -1,0 +1,27 @@
+from pathlib import Path
+import json
+p=Path(__file__).resolve().parents[1]
+def edit(name,a,b):
+ f=p/name;s=f.read_text(encoding='utf-8');assert a in s,name+': '+a[:65];f.write_text(s.replace(a,b),encoding='utf-8')
+edit('tests/rush-balance.test.mjs','b.cursor=999;b.passed=STAGES','b.layoutVersion=4;b.cursor=999;b.passed=STAGES')
+edit('tests/rush-mechanics.test.mjs','assert.equal(createBattle(2).layoutVersion,4)','assert.equal(createBattle(2).layoutVersion,5)')
+edit('games/rush/profile.js','mistakeLimit:b.layoutVersion>=4?STAGES[b.stage-1].mistakeLimit:null','ruleVersion:b.layoutVersion,mistakeLimit:b.layoutVersion===4?STAGES[b.stage-1].mistakeLimit:null')
+edit('games/nightwatch/game.js',"p.bag?.length>0","p.runs>0||p.weapon>1||p.gear.some(g=>g.level>0||g.quality>0)")
+edit('games/nightwatch/battle.js','s.wall=Math.max(0,s.wall-amount);','s.wallDamageByType??={};s.wallDamageByType[e.type]=(s.wallDamageByType[e.type]||0)+amount;s.wall=Math.max(0,s.wall-amount);')
+edit('games/nightwatch/profile.js','p.result={runId:b.runId','p.result={wallDamageByType:{...b.wallDamageByType},damage:{...b.damage},runId:b.runId')
+edit('games/nightwatch/game.js','const damage=b()?.damage||{}','const damage=r.damage||b()?.damage||{}')
+edit('games/nightwatch/game.js','<h3 class="subhead">伤害贡献</h3>','${!r.win&&Object.keys(r.wallDamageByType||{}).length?`<p class="note">主要城门损伤：${MONSTERS.find(m=>m.id===Object.entries(r.wallDamageByType).sort((a,b)=>b[1]-a[1])[0][0])?.name||\'魔物\'}。优先瞄准接近城门的敌人，再补范围伤害或控制技能。</p>`:\'\'}<h3 class="subhead">伤害贡献</h3>')
+edit('games/workshop/game.js','const start=performance.now();adTimer=setInterval(()=>{const seconds=(performance.now()-start)/1000;','let watched=0,last=performance.now();adTimer=setInterval(()=>{const now=performance.now();if(!document.hidden)watched+=Math.min(250,now-last);last=now;const seconds=watched/1000;')
+edit('games/tower/src/game.js',"() => toast('暂时没有可用的广告'));","reason => toast(reason||'暂时没有可用的广告'),G.campRunId);")
+edit('app.js',"platform.ad(adOutcome,()=>{})","platform.ad(adOutcome,()=>{},id)")
+edit('app.js',"platform.ad(adOutcome,s=>{document.querySelector('#ad-state').textContent=s})","platform.ad(adOutcome,s=>{const el=document.querySelector('#ad-state');if(el)el.textContent=s},run.id)")
+edit('app.js',"case 'settings':menuReturn=false;openSettings();break;","case 'licenses':show('来源与许可',`<p>合作关卡改编自 Super Lemonade Factory OUYA，按 GPLv3 提供许可与对应可修改源码；棋牌规则及字体许可同时保留。</p><p><a href=\"legal.html\" target=\"_blank\" rel=\"noopener\">查看完整来源、许可与源码获取说明</a></p><p>这是 Android 开发体验版，模拟广告不产生商业收入。未完成素材授权核实的内容不应进入正式商业发布包。</p>`);break;\n case 'settings':menuReturn=false;openSettings();break;")
+edit('wood-settings.js',"${btn('切换全屏','wood-fullscreen','secondary full')}","${btn('切换全屏','wood-fullscreen','secondary full')}${btn('来源与许可','licenses','secondary full')}")
+edit('games/liars/game.js',"busy?'连接中…':'快速匹配'","busy?'连接中…':'快速入桌 · 可补机器人'")
+edit('games/chess/app.js',"btn('快速匹配','match','secondary')","btn('同网匹配','match','secondary')")
+edit('app.js','${btn(icon(\'play\')+\' 继续冒险\'',"<p class=\"wood-menu-receipt\">${money(api.get().coins)} 冒险币 · 本局已到账 ${Number(document.querySelector('iframe.game-frame')?.contentWindow?.CampWalletReceipt?.earned||0)}</p>${btn(icon('play')+' 继续冒险'")
+f=p/'games/coop/css/compact-home.css';f.write_text(f.read_text(encoding='utf-8')+'\nhtml[data-game-ui="coop"] body.in-game #cornerPanel:not([hidden]){display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:calc(100dvh - 72px);overflow:visible;padding:10px}#cornerPanel .game-brand,#cornerPanel .network-pill{grid-column:1/-1;font-size:11px}#cornerPanel button{min-height:44px;margin:0;padding:6px}\n',encoding='utf-8')
+f=p/'package.json';s=json.loads(f.read_text(encoding='utf-8'));s['version']='1.21.0';s['scripts']['test']+=' tests/coop-rewards-v72.test.mjs tests/rewarded-policy.test.mjs tests/rush-recovery.test.mjs tests/production-insight.test.mjs';f.write_text(json.dumps(s,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+edit('app.js','1.20.0 · 像素营地','1.21.0 · 像素营地')
+edit('android/app/build.gradle','versionCode 25','versionCode 26')
+edit('android/app/build.gradle','versionName "1.20.0"','versionName "1.21.0"')

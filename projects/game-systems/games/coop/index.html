@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><script src="../shared/rewarded-ads.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111820">
+  <title>再闯一关 · 单人接力 / 双人同行</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/compact-home.css">
+<script src="../shared/camp-ui.js"></script><script type="module" src="../shared/legibility.js"></script>
+</head>
+<body>
+  <div id="portrait" class="portrait" aria-live="polite">
+    <div class="portrait-card">
+      <span class="portrait-icon" aria-hidden="true">▱</span>
+      <h1>把手机横过来</h1>
+      <p>两个人的地牢，需要更宽的视野。</p>
+      <span class="portrait-note">旋转设备后即可继续</span>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#" id="brandHome" aria-label="再闯一关首页">
+      <span class="brand-mark" aria-hidden="true">Ⅱ</span>
+      <span><strong>再闯一关</strong><small>双人协作 · 像素地牢</small></span>
+    </a>
+    <div class="currency"><span class="coin-gem" aria-hidden="true">✦</span><span id="coinCount">0</span><small>协作币</small></div>
+  </header>
+
+  <main id="home" class="screen home-screen" data-fit-native>
+    <section class="home-hero panel">
+      <div class="hero-glow"></div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> 两位勇者 · 同一间地牢</div>
+        <h1>一人接力，<br><em>两位勇者同行。</em></h1>
+        <p>踩住机关、搭起石桥、推开升降台。<br>独自切换双角色，也能踏上同一段旅程。</p>
+        <div class="tags"><span>实时联机</span><span>普通 36 关 · 困难 36 关</span><span>单人 / 局域网</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="arch arch-back"></div><div class="arch arch-front"></div>
+        <div class="platform platform-top"></div><div class="platform platform-low"></div>
+        <div class="sprite sprite-one"><i>◆</i></div><div class="sprite sprite-two"><i>☾</i></div>
+        <div class="rune rune-one">☾</div><div class="rune rune-two">◆</div>
+        <span class="art-caption">NO. 01 — 共守一条路</span>
+      </div>
+    </section>
+
+    <div class="play-mode-picker" role="group" aria-label="游玩人数"><button id="duoMode" type="button" aria-pressed="true">双人联机<small>同一 Wi-Fi · 各控制一人</small></button><button id="soloMode" type="button" aria-pressed="false">单人双角色<small>离线游玩 · 自由切换 1P / 2P</small></button></div>
+    <div class="solo-departure" hidden><p>沿用全部 72 关原地图。待命角色会停下移动，仍可踩住机关、乘坐升降台。两人抵达出口后通关。</p><button id="startSolo" class="button button-primary">开始所选关卡</button><button id="resumeSolo" class="button button-secondary" hidden>继续单人旅程</button></div>
+    <button id="chooseLevel" class="button button-secondary" type="button" aria-expanded="false">选择关卡 ▾</button><div class="home-columns">
+      <section class="panel level-panel">
+        <div class="panel-heading campaign-heading"><div><span class="section-kicker">选择挑战</span><h2>从哪一层开始？</h2></div><button id="playtestToggle" class="playtest-toggle" type="button" aria-pressed="false" hidden><span>开发试玩</span><b>开放全部 72 关</b></button></div>
+        <div class="campaign-modes" role="group" aria-label="关卡难度"><button id="normalMode" type="button" class="button button-secondary" aria-pressed="true">普通 · 36关</button><button id="hardMode" type="button" class="button button-secondary" aria-pressed="false">困难 · 36关</button></div><div class="level-list" id="levelList"><div class="campaign-list" id="campaignList" aria-label="普通36关与困难36关"></div></div>
+        <p class="note" id="campaignNote">通关会解锁下一关；与好友同行时按房主进度开始。</p>
+      </section>
+
+      <section class="panel room-panel">
+        <div class="panel-heading"><div><span class="section-kicker">和朋友一起</span><h2>创建或加入房间</h2></div><span class="connection-tag"><span class="status-dot"></span>在线房间</span></div>
+        <button id="createRoom" class="button button-primary"><span>创建好友房</span><span class="button-arrow">↗</span></button>
+        <div class="join-row"><label for="roomCode">好友给你的 6 位房间码</label><div><input id="roomCode" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="例如 482 193"><button id="joinRoom" class="button button-secondary">加入</button></div></div>
+        <div class="room-help"><span class="help-icon">i</span><span>在同一网络下，好友也能打开本页并输入房间码。</span></div>
+        <div class="shop-card">
+          <div class="cosmetic-mark">✧</div><div class="cosmetic-copy"><b>余烬围巾</b><small>外观标记 · 不改变跑跳能力</small></div>
+          <button id="buyCosmetic" class="buy-button">45 ✦ <span>购买</span></button>
+        </div>
+      </section>
+    </div>
+    <footer class="home-foot"><span>开发测试账户 · 模拟钱包 · 不与旧模式同步</span><span>移动端横屏推荐 · 桌面支持键盘</span></footer>
+  </main>
+
+  <main id="lobby" class="screen lobby-screen hidden">
+    <section class="panel lobby-panel" data-fit-native>
+      <button id="leaveLobby" class="back-link">← 返回首页</button>
+      <div class="lobby-content">
+      <div class="lobby-title"><span class="section-kicker">好友房 · 实时同步</span><h1>等队友到齐</h1><p>房间码发给另一位玩家，两个人都准备后即可开始。</p></div>
+      <div class="invite-code"><span>房间码</span><strong id="inviteCode">------</strong><button id="copyCode" class="copy-button">复制</button></div>
+      <div class="lobby-players">
+        <div class="player-slot"><span class="slot-avatar slot-blue">◆</span><div><b id="slotName0">房主</b><small id="slotStatus0">连接中…</small></div><span id="readyDot0" class="ready-dot">等待</span></div>
+        <div class="player-slot"><span class="slot-avatar slot-gold">☾</span><div><b id="slotName1">等待伙伴</b><small id="slotStatus1">把房间码发给朋友</small></div><span id="readyDot1" class="ready-dot">等待</span></div>
+      </div>
+      <div class="room-level-select" id="roomLevelSelect"><span>本局挑战</span><select id="roomLevel"></select></div>
+      <div class="lobby-foot"><span class="connection-tag"><span class="status-dot"></span><span id="lobbyNetwork">已连接</span></span><span>桌面：方向键 / AD 移动 · Space 跳跃 · E 互动</span></div>
+      </div>
+      <div class="lobby-actions"><button id="readyButton" class="button button-secondary">我准备好了</button><button id="startButton" class="button button-primary" disabled>等待两位玩家准备</button></div>
+    </section>
+  </main>
+
+  <main id="game" class="screen game-screen hidden">
+    <div id="stage" class="stage">
+      <canvas id="board" width="1280" height="720" tabindex="-1" aria-label="双人横版合作地牢"></canvas>
+      <button id="cornerMenu" class="corner-menu" aria-label="展开游戏菜单" aria-expanded="false" aria-controls="cornerPanel">☰</button>
+      <button id="switchPlayer" class="switch-player" type="button" hidden><b>正在控制 1P</b><span>切换至 2P ⇄</span></button>
+      <div id="mechanismHud" aria-label="本段进度"></div>
+      <div id="rotateHint">横屏后机关更清楚 · 旋转手机继续</div>
+      <div class="game-topline" id="cornerPanel" hidden>
+        <div class="game-brand"><span class="brand-mark">Ⅱ</span><span><small id="levelCount">第 1 关</small><strong id="levelTitle">你开门，我接应</strong></span></div>
+        <div class="network-pill"><span class="status-dot"></span><span id="networkStatus">联机中</span><span class="network-separator">·</span><span id="partnerStatus">队友在线</span></div>
+        <button id="helpButton" class="icon-button" title="展开操作与合作说明"><span class="control-symbol" aria-hidden="true">?</span><span>帮助</span></button>
+        <button id="mapButton" class="icon-button" type="button">地图</button><button id="mechanismHelp" class="icon-button" type="button"><span class="control-symbol" aria-hidden="true">◇</span><span>机关图鉴</span></button>
+        <button id="leaveGame" class="icon-button" title="离开房间"><span class="control-symbol" aria-hidden="true">↩</span><span>离开</span></button>
+        <button id="resetButton" class="icon-button" title="重置本关（R）"><span class="control-symbol" aria-hidden="true">↻</span><span>重置</span></button>
+        <button id="campMenuButton" class="icon-button" hidden title="营地设置与退出">营地菜单</button>
+      </div>
+      <aside id="gameHelp" class="game-help hidden"><b>同行指南</b><button id="closeHelp" aria-label="收起帮助">×</button><p id="gameHelpText"></p></aside>
+      <aside id="mechanismGuide" data-fit-native hidden aria-labelledby="guideTitle">
+        <small id="guideMode"></small><button id="guideClose" data-action="close" aria-label="本次收起引导">×</button>
+        <div class="guide-content"><img id="guideImage" alt=""><div><h2 id="guideTitle"></h2><p id="guideBody"></p></div></div>
+        <div class="guide-actions"><button id="guideSkip" type="button">已了解，略过</button><button id="guideConfirm" type="button">我来试试</button></div>
+      </aside>
+      <aside id="guideLibrary" data-fit-native hidden role="dialog" aria-modal="true" aria-labelledby="guideLibraryTitle"><div class="panel-head"><h2 id="guideLibraryTitle">机关图鉴</h2><button id="closeGuideLibrary" aria-label="关闭机关图鉴">×</button></div><p>点选查看操作说明。勾号表示已看过。</p><div id="guideList"></div><button id="resetGuides" type="button">重新开启初遇引导</button></aside>
+      <div id="stageHint" class="stage-hint">A / D 或 ← / → 移动　·　Space 跳跃　·　E 互动　·　R 重置</div>
+      <div id="pauseBanner" class="pause-banner hidden"><b>同行者掉线了</b><span id="pauseText">正在等待队友重连…</span><small>本关暂停；对方可在 30 秒内返回。</small></div>
+      <div class="touch-controls" id="touchControls" aria-label="触控操作">
+        <div class="touch-move" id="moveZone" role="group" aria-label="按住战场空白处唤出移动轮盘，左右拖动移动"><div id="moveJoystick" class="move-joystick"><span class="joystick-arrows" aria-hidden="true">‹　›</span><span id="joystickKnob" class="joystick-knob" aria-hidden="true"></span></div></div>
+        <div class="touch-actions">
+          <button data-control="interact" class="touch-interact" aria-label="互动"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2h4v4h4v4h4v4h-4v4h-4v4h-4v-4H6v-4H2v-4h4V6h4zM10 10v4h4v-4z" fill-rule="evenodd"/></svg><span>互动</span></button>
+          <button data-control="jump" class="touch-jump" aria-label="跳跃"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2h4v4h4v4h4v4h-6v8H8v-8H2v-4h4V6h4z"/></svg><span>跳跃</span></button>
+        </div>
+      </div>
+    </div>
+    <div id="toast" class="toast hidden" role="status"></div>
+  </main>
+
+  <section id="result" class="result-layer hidden" role="dialog" aria-modal="true" aria-labelledby="resultTitle">
+    <div class="result-card panel">
+      <div class="treasure-stamp">✦</div><span id="resultKicker" class="section-kicker">两个人都抵达了</span><h2 id="resultTitle">默契，刚刚好。</h2>
+      <p id="resultDescription">共同结算 · 奖励已经入账</p>
+      <div id="resultMarks" class="result-marks" aria-live="polite"></div>
+      <button id="resultNext" class="button button-primary">进入下一关</button>
+      <div class="reward-line"><span>基础通关奖励</span><strong id="baseReward">+60 <small>协作币</small></strong></div>
+      <button id="showAdChoices" class="button button-primary ad-choice">领取额外奖励 <span id="adRewardAmount">+30 协作币</span></button>
+      <p class="dev-ad-label"><span>开发模拟</span> 不是真实广告；可分别模拟完成、取消或加载失败。</p>
+      <button id="resultHome" class="button button-secondary">回到首页</button>
+      <div id="adOutcome" class="ad-outcome hidden" role="status"></div>
+    </div>
+  </section>
+
+  <section id="adModal" class="modal-layer hidden" role="dialog" aria-modal="true" aria-labelledby="adTitle">
+    <div class="modal-card panel">
+      <span class="section-kicker">开发工具 · 广告接口模拟</span><h2 id="adTitle">模拟一次激励视频</h2>
+      <p>正式发布时需要接入平台广告 SDK。现在的操作只验证奖励流程，不会播放真实广告。</p>
+      <button data-ad-status="completed" class="button button-primary">模拟看完并领奖</button>
+      <button data-ad-status="cancelled" class="button button-secondary">模拟中途取消</button>
+      <button data-ad-status="failed" class="button button-secondary">模拟加载失败</button>
+      <button id="closeAdModal" class="plain-button">暂不观看</button>
+    </div>
+  </section>
+
+  <div id="toastGlobal" class="global-toast hidden" role="status"></div>
+  <link rel="stylesheet" href="css/art.css">
+  <script src="src/imported-maps.js"></script><script src="src/imported-engine.js"></script>
+  
+  <script src="src/game-shared.js"></script>
+  <script src="src/solo.js"></script>
+  <script src="src/ads.js"></script>
+  <script src="src/art-config.js"></script>
+  <script src="src/imported-renderer.js"></script><script src="src/art-renderer.js"></script>
+  <script src="src/phone-lan.js"></script>
+  <script src="src/mechanism-guide.js"></script>
+  <script src="src/client.js"></script><script src="src/compact-home.js"></script>
+<script src="../camp-bridge.js"></script>
+<link rel="stylesheet" href="../shared/camp-ui.css"><link rel="stylesheet" href="css/room.css"><link rel="stylesheet" href="css/pixel.css"><link rel="stylesheet" href="css/play-layout.css"><script type="module" src="../shared/camp-wallet.js"></script></body>
+</html>
+

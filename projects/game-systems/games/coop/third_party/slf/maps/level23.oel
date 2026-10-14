@@ -1,0 +1,87 @@
+<level>
+  <width>1000</width>
+  <height>730</height>
+  <solids>
+    <rect x="0" y="0" w="1000" h="30"/>
+    <rect x="0" y="30" w="10" h="700"/>
+    <rect x="10" y="460" w="300" h="30"/>
+    <rect x="10" y="640" w="940" h="90"/>
+    <rect x="110" y="260" w="440" h="80"/>
+    <rect x="280" y="30" w="130" h="230"/>
+    <rect x="360" y="400" w="140" h="180"/>
+    <rect x="500" y="510" w="160" h="70"/>
+    <rect x="540" y="30" w="30" h="150"/>
+    <rect x="570" y="140" w="190" h="40"/>
+    <rect x="600" y="260" w="60" h="250"/>
+    <rect x="670" y="190" w="130" h="60"/>
+    <rect x="700" y="400" w="230" h="150"/>
+    <rect x="800" y="30" w="70" h="20"/>
+    <rect x="840" y="230" w="90" h="60"/>
+    <rect x="950" y="700" w="50" h="30"/>
+    <rect x="990" y="30" w="10" h="670"/>
+  </solids>
+  <extraPlatforms>
+    <LargeCrate x="400" y="340"/>
+    <level2_spike2 x="110" y="340" width="50" height="10"/>
+    <level2_spike0 x="600" y="250" width="60" height="10"/>
+    <level2_spike2 x="690" y="30" width="110" height="10"/>
+    <level2_spike2 x="870" y="30" width="120" height="10"/>
+    <level2_spike2 x="800" y="50" width="70" height="10"/>
+    <LargeCrate x="380" y="580"/>
+  </extraPlatforms>
+  <movingPlatforms>
+    <level2_specialBlock x="950" y="140" speed="120" movementType="5" animated="0">
+      <node x="950" y="660"/>
+    </level2_specialBlock>
+  </movingPlatforms>
+  <BGLayer1>
+    <level2_FMG3 x="20" y="520" scrollFactor="0.2"/>
+    <level2_FMG3 x="10" y="20" scrollFactor="0.2"/>
+    <level2_MG2 x="0" y="170" scrollFactor="0.2"/>
+    <level2_MG2 x="0" y="670" scrollFactor="0.2"/>
+    <level2_metalPipe x="160" y="0" width="30" height="1000" scrollFactor="0.3"/>
+    <level2_metalPipe x="440" y="0" width="30" height="1000" scrollFactor="0.4"/>
+  </BGLayer1>
+  <BGLayer2>
+    <level2_greenPipe x="250" y="0" width="20" height="600" scrollFactor="0.5"/>
+    <level2_greenPipe x="500" y="0" width="20" height="1000" scrollFactor="0.7"/>
+    <level2_tank x="210" y="600" scrollFactor="0.5"/>
+    <level2_tank x="460" y="460" scrollFactor="0.7"/>
+    <level2_pipe1 x="280" y="630" width="720" height="70" scrollFactor="0.5"/>
+    <level2_pipe1 x="520" y="490" width="470" height="70" scrollFactor="0.7"/>
+    <level2_tank x="460" y="170" scrollFactor="0.7"/>
+    <level2_tank x="210" y="50" scrollFactor="0.5"/>
+  </BGLayer2>
+  <BGLayer3>
+    <level2_braceLeft x="10" y="30"/>
+    <level2_braceRight x="260" y="30"/>
+    <level2_braceRight x="520" y="30"/>
+    <level2_braceLeft x="410" y="30"/>
+    <sugarBags x="780" y="360" scrollFactor="0.2"/>
+    <sugarBags x="720" y="600" scrollFactor="0.2"/>
+    <sodaPack x="100" y="620" scrollFactor="0.2"/>
+    <sodaPack x="30" y="440" scrollFactor="0.2"/>
+    <sodaPack x="130" y="240" scrollFactor="0.2"/>
+    <palettes x="850" y="190" scrollFactor="0.2"/>
+    <palettes x="530" y="600" scrollFactor="0.2"/>
+  </BGLayer3>
+  <objects>
+    <exit x="585" y="51" nextLevel="2"/>
+    <smallSugarBag x="808" y="241" width="22"/>
+    <Bottle x="672" y="429" width="12"/>
+  </objects>
+  <characters>
+    <liselot x="420" y="210" speed="40" movementType="1" talkString="Just say yes.">
+      <node x="420" y="210"/>
+    </liselot>
+    <player x="250" y="210" speed="40" movementType="1" startsFirst="1" levelName="Son, You're Still Young" andreInitialFlip="1" liselotInitialFlip="0" followWidth="0" followHeight="0" talkString="Years ago I was in Batavia and met a group of seven other men trying to get work on the Steamship Plancius.">
+      <node x="250" y="210"/>
+    </player>
+    <army x="20" y="590" speed="80" movementType="1" talkString="An active military base gives back to the economy.">
+      <node x="340" y="590"/>
+    </army>
+  </characters>
+  <FGLayer1>
+    <level2_chainTile x="350" y="0" width="12" height="1000" scrollFactor="1.5"/>
+  </FGLayer1>
+</level>

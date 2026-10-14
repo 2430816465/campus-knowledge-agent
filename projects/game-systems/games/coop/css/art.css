@@ -1,0 +1,37 @@
+/* Moonlit mechanism ruins. Canvas retains its complete 1280 × 720 field. */
+#board { object-fit:contain; }
+.stage { background:#0b1725; }
+body.in-game .game-topline { top:max(10px,env(safe-area-inset-top)); left:max(16px,env(safe-area-inset-left)); right:max(16px,env(safe-area-inset-right)); display:grid; grid-template-columns:minmax(160px,1fr) auto auto auto auto; gap:8px; }
+body.in-game .game-brand strong { font-size:16px; }
+body.in-game .game-brand small { font-size:10px; }
+.game-topline .icon-button { min-height:36px; min-width:42px; border-color:#89744d80; background:#0b192de8; }
+.game-topline .icon-button span { font-size:12px; }
+.game-topline .network-pill { font-size:11px; background:#0b192de8; }
+body.in-game .stage-hint { top:64px; left:20px; transform:none; width:auto; max-width:calc(100% - 40px); text-align:left; font-size:14px; opacity:1; background:#0b192dbb; padding:6px 10px; border-left:2px solid #aa8956; white-space:normal; line-height:1.4; }
+.game-help { position:absolute; top:104px; left:20px; z-index:6; width:min(440px,calc(100% - 40px)); padding:16px; border:1px solid #aa8956; background:#101e30f5; color:#e9ddc3; box-shadow:0 8px 22px #0008; border-radius:8px; }
+.game-help b { color:#efc77b; }.game-help p { font-size:14px; line-height:1.7; margin-bottom:0; }.game-help button { float:right; background:none; border:0; color:#efc77b; font-size:22px; cursor:pointer; }
+.pause-banner { z-index:8; }.pause-banner span { font-size:14px; }
+.game-screen > .toast { top:106px; bottom:auto; max-width:65%; text-align:center; white-space:normal; font-size:12px; pointer-events:none; }
+.global-toast { pointer-events:none; }
+.icon-button:focus-visible,.touch-controls button:focus-visible { outline:2px solid #efc77b; outline-offset:3px; }
+@media (pointer:coarse), (orientation:landscape) and (max-height:520px) {
+  body.in-game .touch-controls { display:flex; height:auto; padding:0 16px max(8px,env(safe-area-inset-bottom)); }
+  body.in-game .touch-move,body.in-game .touch-actions { gap:12px; }
+  body.in-game .touch-controls button { width:60px; height:60px; border:2px solid #9daeba99; background:#13283ad9; box-shadow:0 3px 0 #06111c; backdrop-filter:none; }
+  body.in-game .touch-controls .touch-jump { width:70px; height:70px; background:#d6ad69e8; color:#162131; border-color:#f0d19b; font-size:20px; }
+  body.in-game .touch-controls .touch-interact { width:60px; height:54px; border-radius:14px; font-size:14px; color:#bdccd0; }
+  body.in-game .touch-controls .touch-interact.ready { color:#d5fffa; background:#25606ae8; border-color:#86e0d9; box-shadow:0 3px 0 #06111c; }
+  body.in-game .touch-controls button.pressed { background:#38677b; border-color:#e2fffc; transform:translateY(2px); box-shadow:none; }
+  body.in-game .touch-controls .touch-jump.pressed { background:#ffdc97; }
+  body.in-game .game-topline { gap:6px; top:6px; grid-template-columns:minmax(130px,1fr) auto auto auto auto; }
+  body.in-game .game-brand strong { font-size:13px; }
+  body.in-game .game-brand .brand-mark { width:25px; height:25px; }
+  body.in-game .stage-hint { top:49px; font-size:12px; padding:3px 8px; }
+  .game-help { top:80px; }.game-help p { font-size:12px; }
+  .game-screen > .toast { top:80px; font-size:11px; }
+}
+@media (max-width:760px) and (orientation:landscape) {
+  .game-topline .network-separator,.game-topline #partnerStatus { display:none; }
+  .game-topline .icon-button { padding:4px 6px; }
+  body.in-game .stage-hint { font-size:11px; }
+}

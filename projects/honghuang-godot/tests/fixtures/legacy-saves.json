@@ -1,0 +1,1413 @@
+[
+  {
+    "id": "new-v3",
+    "encoded": "{\"format\":\"honghuang-xianfu\",\"version\":3,\"checksum\":\"d6d52909\",\"data\":{\"version\":3,\"schemaRevision\":1,\"randomStreams\":{\"summon\":2433219416,\"battle\":2329626762,\"expedition\":3447860436},\"branchUnlocks\":[],\"daily\":{\"day\":\"2026-10-06\",\"progress\":{\"estate\":0,\"battle\":0,\"cultivation\":0},\"claimed\":[]},\"materialSweep\":null,\"mainBattle\":null,\"demo\":null,\"revision\":0,\"createdAt\":1791256200000,\"lastTime\":1791256200000,\"clockWarnings\":0,\"resources\":{\"stone\":1200,\"xp\":700,\"material\":120,\"herb\":25,\"ticket\":12,\"fate\":0},\"owned\":{\"nezha\":{\"level\":1,\"branch\":\"A\",\"treasure\":0,\"spent\":{\"stone\":0,\"xp\":0}},\"huangfeihu\":{\"level\":1,\"branch\":\"A\",\"treasure\":0,\"spent\":{\"stone\":0,\"xp\":0}},\"bigan\":{\"level\":1,\"branch\":\"A\",\"treasure\":0,\"spent\":{\"stone\":0,\"xp\":0}}},\"team\":[\"nezha\",\"huangfeihu\",\"bigan\"],\"slots\":3,\"cleared\":[],\"pity\":0,\"drawHistory\":[],\"buildings\":[{\"id\":\"hall\",\"type\":\"hall\",\"plot\":\"p0\",\"level\":1,\"readyAt\":0,\"queue\":[],\"assigned\":null,\"progress\":0},{\"id\":\"spring\",\"type\":\"spring\",\"plot\":\"p1\",\"level\":1,\"readyAt\":0,\"queue\":[],\"assigned\":null,\"progress\":0}],\"warehouse\":{\"resources\":{\"stone\":0,\"xp\":0,\"material\":0,\"herb\":0,\"ticket\":0,\"fate\":0},\"items\":{},\"repairs\":[],\"sources\":{}},\"items\":{},\"methods\":[],\"chosenMethod\":null,\"chosenPill\":null,\"choicePending\":false,\"giftChosen\":null,\"cores\":[],\"integratedCores\":[],\"unlockedRegions\":[0],\"settledBattles\":[],\"transactions\":[],\"stats\":{\"builds\":0,\"battles\":0,\"harvests\":0,\"upgrades\":0},\"claimedTasks\":[],\"wishlist\":null,\"teamPresets\":[null,null,null],\"thunderProject\":{\"id\":\"thunder-project\",\"stage\":\"unstarted\",\"direction\":null,\"completedStages\":[],\"invested\":{}},\"expeditions\":{\"active\":null,\"settled\":[],\"firstCleared\":[],\"bossClears\":[],\"closed\":[]},\"settings\":{\"sound\":true,\"music\":false,\"speed\":1,\"simplified\":false,\"tutorialSkipped\":false}}}",
+    "state": {
+      "version": 3,
+      "schemaRevision": 1,
+      "randomStreams": {
+        "summon": 2433219416,
+        "battle": 2329626762,
+        "expedition": 3447860436
+      },
+      "branchUnlocks": [],
+      "daily": {
+        "day": "2026-10-06",
+        "progress": {
+          "estate": 0,
+          "battle": 0,
+          "cultivation": 0
+        },
+        "claimed": []
+      },
+      "materialSweep": null,
+      "mainBattle": null,
+      "demo": null,
+      "revision": 0,
+      "createdAt": 1791256200000,
+      "lastTime": 1791256200000,
+      "clockWarnings": 0,
+      "resources": {
+        "stone": 1200,
+        "xp": 700,
+        "material": 120,
+        "herb": 25,
+        "ticket": 12,
+        "fate": 0
+      },
+      "owned": {
+        "nezha": {
+          "level": 1,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 0,
+            "xp": 0
+          }
+        },
+        "huangfeihu": {
+          "level": 1,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 0,
+            "xp": 0
+          }
+        },
+        "bigan": {
+          "level": 1,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 0,
+            "xp": 0
+          }
+        }
+      },
+      "team": [
+        "nezha",
+        "huangfeihu",
+        "bigan"
+      ],
+      "slots": 3,
+      "cleared": [],
+      "pity": 0,
+      "drawHistory": [],
+      "buildings": [
+        {
+          "id": "hall",
+          "type": "hall",
+          "plot": "p0",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "spring",
+          "type": "spring",
+          "plot": "p1",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        }
+      ],
+      "warehouse": {
+        "resources": {
+          "stone": 0,
+          "xp": 0,
+          "material": 0,
+          "herb": 0,
+          "ticket": 0,
+          "fate": 0
+        },
+        "items": {},
+        "repairs": [],
+        "sources": {}
+      },
+      "items": {},
+      "methods": [],
+      "chosenMethod": null,
+      "chosenPill": null,
+      "choicePending": false,
+      "giftChosen": null,
+      "cores": [],
+      "integratedCores": [],
+      "unlockedRegions": [
+        0
+      ],
+      "settledBattles": [],
+      "transactions": [],
+      "stats": {
+        "builds": 0,
+        "battles": 0,
+        "harvests": 0,
+        "upgrades": 0
+      },
+      "claimedTasks": [],
+      "wishlist": null,
+      "teamPresets": [
+        null,
+        null,
+        null
+      ],
+      "thunderProject": {
+        "id": "thunder-project",
+        "stage": "unstarted",
+        "direction": null,
+        "completedStages": [],
+        "invested": {}
+      },
+      "expeditions": {
+        "active": null,
+        "settled": [],
+        "firstCleared": [],
+        "bossClears": [],
+        "closed": []
+      },
+      "settings": {
+        "sound": true,
+        "music": false,
+        "speed": 1,
+        "simplified": false,
+        "tutorialSkipped": false
+      }
+    }
+  },
+  {
+    "id": "fractional-production",
+    "encoded": "{\"format\":\"honghuang-xianfu\",\"version\":3,\"checksum\":\"92982a2f\",\"data\":{\"version\":3,\"schemaRevision\":1,\"randomStreams\":{\"summon\":2433219416,\"battle\":2329626762,\"expedition\":3447860436},\"branchUnlocks\":[\"nezha\"],\"daily\":{\"day\":\"2026-10-06\",\"progress\":{\"estate\":1,\"battle\":0,\"cultivation\":0},\"claimed\":[]},\"materialSweep\":null,\"mainBattle\":null,\"demo\":null,\"revision\":0,\"createdAt\":1791256200000,\"lastTime\":1791256231555,\"clockWarnings\":0,\"resources\":{\"stone\":1140,\"xp\":700,\"material\":108,\"herb\":25,\"ticket\":12,\"fate\":0},\"owned\":{\"nezha\":{\"level\":3,\"branch\":\"A\",\"treasure\":0,\"spent\":{\"stone\":110,\"xp\":85}},\"huangfeihu\":{\"level\":1,\"branch\":\"A\",\"treasure\":0,\"spent\":{\"stone\":0,\"xp\":0}},\"bigan\":{\"level\":1,\"branch\":\"A\",\"treasure\":0,\"spent\":{\"stone\":0,\"xp\":0}}},\"team\":[\"nezha\",\"huangfeihu\",\"bigan\"],\"slots\":3,\"cleared\":[],\"pity\":19,\"drawHistory\":[],\"buildings\":[{\"id\":\"hall\",\"type\":\"hall\",\"plot\":\"p0\",\"level\":1,\"readyAt\":0,\"queue\":[],\"assigned\":null,\"progress\":0},{\"id\":\"spring\",\"type\":\"spring\",\"plot\":\"p1\",\"level\":1,\"readyAt\":0,\"queue\":[],\"assigned\":null,\"progress\":0.5183333333333344},{\"id\":\"farm-1\",\"type\":\"farm\",\"plot\":\"p2\",\"level\":1,\"readyAt\":0,\"queue\":[],\"assigned\":null,\"progress\":0.0622}],\"warehouse\":{\"resources\":{\"stone\":0,\"xp\":10,\"material\":0,\"herb\":0,\"ticket\":0,\"fate\":0},\"items\":{},\"repairs\":[],\"sources\":{\"spring\":{\"resources\":{\"stone\":0,\"xp\":10,\"material\":0,\"herb\":0,\"ticket\":0,\"fate\":0},\"items\":{},\"repairs\":[]},\"farm-1\":{\"resources\":{\"stone\":0,\"xp\":0,\"material\":0,\"herb\":0,\"ticket\":0,\"fate\":0},\"items\":{},\"repairs\":[]}}},\"items\":{},\"methods\":[],\"chosenMethod\":null,\"chosenPill\":null,\"choicePending\":false,\"giftChosen\":null,\"cores\":[],\"integratedCores\":[],\"unlockedRegions\":[0],\"settledBattles\":[],\"transactions\":[],\"stats\":{\"builds\":1,\"battles\":0,\"harvests\":0,\"upgrades\":0},\"claimedTasks\":[],\"wishlist\":\"tongtian\",\"teamPresets\":[null,null,null],\"thunderProject\":{\"id\":\"thunder-project\",\"stage\":\"unstarted\",\"direction\":null,\"completedStages\":[],\"invested\":{}},\"expeditions\":{\"active\":null,\"settled\":[],\"firstCleared\":[],\"bossClears\":[],\"closed\":[]},\"settings\":{\"sound\":true,\"music\":false,\"speed\":1,\"simplified\":false,\"tutorialSkipped\":false}}}",
+    "state": {
+      "version": 3,
+      "schemaRevision": 1,
+      "randomStreams": {
+        "summon": 2433219416,
+        "battle": 2329626762,
+        "expedition": 3447860436
+      },
+      "branchUnlocks": [
+        "nezha"
+      ],
+      "daily": {
+        "day": "2026-10-06",
+        "progress": {
+          "estate": 1,
+          "battle": 0,
+          "cultivation": 0
+        },
+        "claimed": []
+      },
+      "materialSweep": null,
+      "mainBattle": null,
+      "demo": null,
+      "revision": 0,
+      "createdAt": 1791256200000,
+      "lastTime": 1791256231555,
+      "clockWarnings": 0,
+      "resources": {
+        "stone": 1140,
+        "xp": 700,
+        "material": 108,
+        "herb": 25,
+        "ticket": 12,
+        "fate": 0
+      },
+      "owned": {
+        "nezha": {
+          "level": 3,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 110,
+            "xp": 85
+          }
+        },
+        "huangfeihu": {
+          "level": 1,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 0,
+            "xp": 0
+          }
+        },
+        "bigan": {
+          "level": 1,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 0,
+            "xp": 0
+          }
+        }
+      },
+      "team": [
+        "nezha",
+        "huangfeihu",
+        "bigan"
+      ],
+      "slots": 3,
+      "cleared": [],
+      "pity": 19,
+      "drawHistory": [],
+      "buildings": [
+        {
+          "id": "hall",
+          "type": "hall",
+          "plot": "p0",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "spring",
+          "type": "spring",
+          "plot": "p1",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0.5183333333333344
+        },
+        {
+          "id": "farm-1",
+          "type": "farm",
+          "plot": "p2",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0.0622
+        }
+      ],
+      "warehouse": {
+        "resources": {
+          "stone": 0,
+          "xp": 10,
+          "material": 0,
+          "herb": 0,
+          "ticket": 0,
+          "fate": 0
+        },
+        "items": {},
+        "repairs": [],
+        "sources": {
+          "spring": {
+            "resources": {
+              "stone": 0,
+              "xp": 10,
+              "material": 0,
+              "herb": 0,
+              "ticket": 0,
+              "fate": 0
+            },
+            "items": {},
+            "repairs": []
+          },
+          "farm-1": {
+            "resources": {
+              "stone": 0,
+              "xp": 0,
+              "material": 0,
+              "herb": 0,
+              "ticket": 0,
+              "fate": 0
+            },
+            "items": {},
+            "repairs": []
+          }
+        }
+      },
+      "items": {},
+      "methods": [],
+      "chosenMethod": null,
+      "chosenPill": null,
+      "choicePending": false,
+      "giftChosen": null,
+      "cores": [],
+      "integratedCores": [],
+      "unlockedRegions": [
+        0
+      ],
+      "settledBattles": [],
+      "transactions": [],
+      "stats": {
+        "builds": 1,
+        "battles": 0,
+        "harvests": 0,
+        "upgrades": 0
+      },
+      "claimedTasks": [],
+      "wishlist": "tongtian",
+      "teamPresets": [
+        null,
+        null,
+        null
+      ],
+      "thunderProject": {
+        "id": "thunder-project",
+        "stage": "unstarted",
+        "direction": null,
+        "completedStages": [],
+        "invested": {}
+      },
+      "expeditions": {
+        "active": null,
+        "settled": [],
+        "firstCleared": [],
+        "bossClears": [],
+        "closed": []
+      },
+      "settings": {
+        "sound": true,
+        "music": false,
+        "speed": 1,
+        "simplified": false,
+        "tutorialSkipped": false
+      }
+    }
+  },
+  {
+    "id": "active-expedition-and-cores",
+    "encoded": "{\"format\":\"honghuang-xianfu\",\"version\":3,\"checksum\":\"e405d350\",\"data\":{\"version\":3,\"schemaRevision\":1,\"randomStreams\":{\"summon\":2433219416,\"battle\":2329626762,\"expedition\":3447860436},\"branchUnlocks\":[\"nezha\",\"huangfeihu\",\"bigan\",\"leizhenzi\",\"yangjian\",\"taiyi\",\"tongtian\",\"zhaogongming\",\"yunxiao\",\"qiongxiao\",\"bixiao\",\"zhouwang\",\"jifa\",\"xuandu\"],\"daily\":{\"day\":\"2026-10-06\",\"progress\":{\"estate\":0,\"battle\":0,\"cultivation\":0},\"claimed\":[]},\"materialSweep\":null,\"mainBattle\":null,\"demo\":null,\"revision\":0,\"createdAt\":1791256200000,\"lastTime\":1791256200000,\"clockWarnings\":0,\"resources\":{\"stone\":17540,\"xp\":16000,\"material\":1121,\"herb\":400,\"ticket\":36,\"fate\":200},\"owned\":{\"nezha\":{\"level\":11,\"branch\":\"A\",\"treasure\":1,\"spent\":{\"stone\":1350,\"xp\":1025}},\"huangfeihu\":{\"level\":11,\"branch\":\"A\",\"treasure\":1,\"spent\":{\"stone\":1350,\"xp\":1025}},\"bigan\":{\"level\":11,\"branch\":\"A\",\"treasure\":1,\"spent\":{\"stone\":1350,\"xp\":1025}},\"leizhenzi\":{\"level\":11,\"branch\":\"A\",\"treasure\":1,\"spent\":{\"stone\":1350,\"xp\":1025}},\"yangjian\":{\"level\":11,\"branch\":\"A\",\"treasure\":1,\"spent\":{\"stone\":1350,\"xp\":1025}},\"taiyi\":{\"level\":11,\"branch\":\"A\",\"treasure\":1,\"spent\":{\"stone\":1350,\"xp\":1025}},\"tongtian\":{\"level\":11,\"branch\":\"A\",\"treasure\":1,\"spent\":{\"stone\":1350,\"xp\":1025}},\"zhaogongming\":{\"level\":11,\"branch\":\"A\",\"treasure\":1,\"spent\":{\"stone\":1350,\"xp\":1025}},\"yunxiao\":{\"level\":11,\"branch\":\"A\",\"treasure\":1,\"spent\":{\"stone\":1350,\"xp\":1025}},\"qiongxiao\":{\"level\":11,\"branch\":\"A\",\"treasure\":1,\"spent\":{\"stone\":1350,\"xp\":1025}},\"bixiao\":{\"level\":11,\"branch\":\"A\",\"treasure\":1,\"spent\":{\"stone\":1350,\"xp\":1025}},\"zhouwang\":{\"level\":11,\"branch\":\"A\",\"treasure\":1,\"spent\":{\"stone\":1350,\"xp\":1025}},\"jifa\":{\"level\":11,\"branch\":\"A\",\"treasure\":1,\"spent\":{\"stone\":1350,\"xp\":1025}},\"xuandu\":{\"level\":11,\"branch\":\"A\",\"treasure\":1,\"spent\":{\"stone\":1350,\"xp\":1025}}},\"team\":[\"nezha\",\"huangfeihu\",\"bigan\",\"leizhenzi\",\"yangjian\"],\"slots\":5,\"cleared\":[1,2,3,4,5,6,7,8,9,10,11,12],\"pity\":0,\"drawHistory\":[],\"buildings\":[{\"id\":\"hall\",\"type\":\"hall\",\"plot\":\"p0\",\"level\":4,\"readyAt\":0,\"queue\":[],\"assigned\":null,\"progress\":0},{\"id\":\"spring\",\"type\":\"spring\",\"plot\":\"p1\",\"level\":2,\"readyAt\":0,\"queue\":[],\"assigned\":null,\"progress\":0},{\"id\":\"farm-1\",\"type\":\"farm\",\"plot\":\"p2\",\"level\":1,\"readyAt\":0,\"queue\":[],\"assigned\":null,\"progress\":0},{\"id\":\"library-2\",\"type\":\"library\",\"plot\":\"p3\",\"level\":1,\"readyAt\":0,\"queue\":[],\"assigned\":null,\"progress\":0},{\"id\":\"arena-3\",\"type\":\"arena\",\"plot\":\"p4\",\"level\":1,\"readyAt\":0,\"queue\":[],\"assigned\":null,\"progress\":0},{\"id\":\"forge-4\",\"type\":\"forge\",\"plot\":\"p5\",\"level\":1,\"readyAt\":0,\"queue\":[],\"assigned\":null,\"progress\":0},{\"id\":\"alchemy-5\",\"type\":\"alchemy\",\"plot\":\"p6\",\"level\":1,\"readyAt\":0,\"queue\":[],\"assigned\":null,\"progress\":0}],\"warehouse\":{\"resources\":{\"stone\":0,\"xp\":0,\"material\":0,\"herb\":0,\"ticket\":0,\"fate\":0},\"items\":{},\"repairs\":[],\"sources\":{\"spring\":{\"resources\":{\"stone\":0,\"xp\":0,\"material\":0,\"herb\":0,\"ticket\":0,\"fate\":0},\"items\":{},\"repairs\":[]},\"farm-1\":{\"resources\":{\"stone\":0,\"xp\":0,\"material\":0,\"herb\":0,\"ticket\":0,\"fate\":0},\"items\":{},\"repairs\":[]}}},\"items\":{\"training\":9,\"ward\":9,\"heal\":9,\"cleanse\":9},\"methods\":[\"break\",\"ward\",\"cleanse\"],\"chosenMethod\":\"ward\",\"chosenPill\":null,\"choicePending\":false,\"giftChosen\":\"yangjian\",\"cores\":[],\"integratedCores\":[\"spring\",\"furnace\",\"thunder\"],\"unlockedRegions\":[0,1,2],\"settledBattles\":[\"demo-seed-1\",\"demo-seed-2\",\"demo-seed-3\",\"demo-seed-4\",\"demo-seed-5\",\"demo-seed-6\",\"demo-seed-7\",\"demo-seed-8\",\"demo-seed-9\",\"demo-seed-10\",\"demo-seed-11\",\"demo-seed-12\"],\"transactions\":[],\"stats\":{\"builds\":5,\"battles\":12,\"harvests\":0,\"upgrades\":0},\"claimedTasks\":[],\"wishlist\":null,\"teamPresets\":[null,null,null],\"thunderProject\":{\"id\":\"thunder-project\",\"stage\":\"unstarted\",\"direction\":null,\"completedStages\":[],\"invested\":{}},\"expeditions\":{\"active\":{\"id\":\"migration-active\",\"routeId\":\"danfire\",\"createdAt\":1791256200000,\"ruleVersion\":\"v0.3.0\",\"snapshot\":{\"team\":[{\"id\":\"nezha\",\"level\":11,\"branch\":\"A\",\"treasure\":1,\"branchUnlocked\":true},{\"id\":\"huangfeihu\",\"level\":11,\"branch\":\"A\",\"treasure\":1,\"branchUnlocked\":true},{\"id\":\"bigan\",\"level\":11,\"branch\":\"A\",\"treasure\":1,\"branchUnlocked\":true},{\"id\":\"leizhenzi\",\"level\":11,\"branch\":\"A\",\"treasure\":1,\"branchUnlocked\":true},{\"id\":\"yangjian\",\"level\":11,\"branch\":\"A\",\"treasure\":1,\"branchUnlocked\":true}],\"method\":\"ward\",\"pill\":null},\"encounters\":{\"1\":{\"name\":\"丹火入口\",\"description\":\"炉灵灼烧，守卫无初始盾。\",\"stageId\":8,\"enemies\":[{\"id\":\"df_soldier\",\"name\":\"遗境炉卫\",\"role\":\"soldier\",\"row\":\"front\",\"hp\":560,\"atk\":82,\"def\":25,\"speed\":72,\"shield\":0,\"will\":0},{\"id\":\"df_burner\",\"name\":\"遗境火灵\",\"role\":\"burner\",\"row\":\"back\",\"hp\":440,\"atk\":80,\"def\":18,\"speed\":86,\"shield\":0,\"will\":0},{\"id\":\"df_healer\",\"name\":\"丹息药灵\",\"role\":\"healer\",\"row\":\"back\",\"hp\":400,\"atk\":65,\"def\":20,\"speed\":79,\"shield\":0,\"will\":0}]},\"3\":{\"name\":\"凝火护阵\",\"description\":\"开场护盾与连续灼烧；破障、澄明或防护均可。\",\"stageId\":8,\"enemies\":[{\"id\":\"df_shield\",\"name\":\"凝火甲卫\",\"role\":\"shield\",\"row\":\"front\",\"hp\":900,\"atk\":96,\"def\":32,\"speed\":73,\"shield\":260,\"will\":0},{\"id\":\"df_charge\",\"name\":\"炉前重卫\",\"role\":\"charger\",\"row\":\"front\",\"hp\":900,\"atk\":112,\"def\":30,\"speed\":78,\"shield\":0,\"will\":0},{\"id\":\"df_elite_fire\",\"name\":\"凝火炉灵\",\"role\":\"burner\",\"row\":\"back\",\"hp\":650,\"atk\":92,\"def\":24,\"speed\":90,\"shield\":0,\"will\":0}]},\"5\":{\"name\":\"遗境炉心\",\"description\":\"炉心蓄势重击，药灵维持；削势与护持净化有不同收益。\",\"stageId\":8,\"enemies\":[{\"id\":\"df_boss\",\"name\":\"遗境炉君\",\"role\":\"furnace\",\"row\":\"front\",\"hp\":3000,\"atk\":132,\"def\":37,\"speed\":82,\"shield\":180,\"will\":10},{\"id\":\"df_boss_fire\",\"name\":\"遗境丹火\",\"role\":\"burner\",\"row\":\"back\",\"hp\":600,\"atk\":95,\"def\":22,\"speed\":90,\"shield\":0,\"will\":0},{\"id\":\"df_boss_heal\",\"name\":\"炉心药侍\",\"role\":\"healer\",\"row\":\"back\",\"hp\":540,\"atk\":78,\"def\":23,\"speed\":80,\"shield\":0,\"will\":0}]}},\"seeds\":{\"1\":3973446341,\"3\":572724067,\"5\":1235565508},\"candidates\":{\"first\":[\"solidarity\",\"shade\",\"clarity\"],\"secondByFirst\":{\"solidarity\":[\"initiative\",\"clarity\",\"victory\"],\"shade\":[\"solidarity\",\"barrier\",\"victory\"],\"clarity\":[\"barrier\",\"shade\",\"solidarity\"]}},\"selectedBoons\":[],\"node\":1,\"status\":\"battle\",\"startedBattles\":[\"migration-active:node-1\"],\"completedBattles\":[],\"rewards\":[],\"nodeRewards\":{\"1\":{\"stone\":25,\"xp\":20,\"material\":2,\"herb\":1,\"ticket\":0,\"fate\":0},\"3\":{\"stone\":45,\"xp\":35,\"material\":4,\"herb\":1,\"ticket\":0,\"fate\":0},\"5\":{\"stone\":80,\"xp\":60,\"material\":6,\"herb\":2,\"ticket\":0,\"fate\":0}},\"completionReward\":{\"stone\":160,\"xp\":120,\"material\":12,\"herb\":4,\"ticket\":0,\"fate\":0},\"firstReward\":{\"stone\":80,\"xp\":80,\"material\":5,\"herb\":10,\"ticket\":0,\"fate\":0}},\"settled\":[],\"firstCleared\":[],\"bossClears\":[],\"closed\":[]},\"settings\":{\"sound\":true,\"music\":false,\"speed\":1,\"simplified\":false,\"tutorialSkipped\":true}}}",
+    "state": {
+      "version": 3,
+      "schemaRevision": 1,
+      "randomStreams": {
+        "summon": 2433219416,
+        "battle": 2329626762,
+        "expedition": 3447860436
+      },
+      "branchUnlocks": [
+        "nezha",
+        "huangfeihu",
+        "bigan",
+        "leizhenzi",
+        "yangjian",
+        "taiyi",
+        "tongtian",
+        "zhaogongming",
+        "yunxiao",
+        "qiongxiao",
+        "bixiao",
+        "zhouwang",
+        "jifa",
+        "xuandu"
+      ],
+      "daily": {
+        "day": "2026-10-06",
+        "progress": {
+          "estate": 0,
+          "battle": 0,
+          "cultivation": 0
+        },
+        "claimed": []
+      },
+      "materialSweep": null,
+      "mainBattle": null,
+      "demo": null,
+      "revision": 0,
+      "createdAt": 1791256200000,
+      "lastTime": 1791256200000,
+      "clockWarnings": 0,
+      "resources": {
+        "stone": 17540,
+        "xp": 16000,
+        "material": 1121,
+        "herb": 400,
+        "ticket": 36,
+        "fate": 200
+      },
+      "owned": {
+        "nezha": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "huangfeihu": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "bigan": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "leizhenzi": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "yangjian": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "taiyi": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "tongtian": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "zhaogongming": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "yunxiao": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "qiongxiao": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "bixiao": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "zhouwang": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "jifa": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "xuandu": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        }
+      },
+      "team": [
+        "nezha",
+        "huangfeihu",
+        "bigan",
+        "leizhenzi",
+        "yangjian"
+      ],
+      "slots": 5,
+      "cleared": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "pity": 0,
+      "drawHistory": [],
+      "buildings": [
+        {
+          "id": "hall",
+          "type": "hall",
+          "plot": "p0",
+          "level": 4,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "spring",
+          "type": "spring",
+          "plot": "p1",
+          "level": 2,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "farm-1",
+          "type": "farm",
+          "plot": "p2",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "library-2",
+          "type": "library",
+          "plot": "p3",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "arena-3",
+          "type": "arena",
+          "plot": "p4",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "forge-4",
+          "type": "forge",
+          "plot": "p5",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "alchemy-5",
+          "type": "alchemy",
+          "plot": "p6",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        }
+      ],
+      "warehouse": {
+        "resources": {
+          "stone": 0,
+          "xp": 0,
+          "material": 0,
+          "herb": 0,
+          "ticket": 0,
+          "fate": 0
+        },
+        "items": {},
+        "repairs": [],
+        "sources": {
+          "spring": {
+            "resources": {
+              "stone": 0,
+              "xp": 0,
+              "material": 0,
+              "herb": 0,
+              "ticket": 0,
+              "fate": 0
+            },
+            "items": {},
+            "repairs": []
+          },
+          "farm-1": {
+            "resources": {
+              "stone": 0,
+              "xp": 0,
+              "material": 0,
+              "herb": 0,
+              "ticket": 0,
+              "fate": 0
+            },
+            "items": {},
+            "repairs": []
+          }
+        }
+      },
+      "items": {
+        "training": 9,
+        "ward": 9,
+        "heal": 9,
+        "cleanse": 9
+      },
+      "methods": [
+        "break",
+        "ward",
+        "cleanse"
+      ],
+      "chosenMethod": "ward",
+      "chosenPill": null,
+      "choicePending": false,
+      "giftChosen": "yangjian",
+      "cores": [],
+      "integratedCores": [
+        "spring",
+        "furnace",
+        "thunder"
+      ],
+      "unlockedRegions": [
+        0,
+        1,
+        2
+      ],
+      "settledBattles": [
+        "demo-seed-1",
+        "demo-seed-2",
+        "demo-seed-3",
+        "demo-seed-4",
+        "demo-seed-5",
+        "demo-seed-6",
+        "demo-seed-7",
+        "demo-seed-8",
+        "demo-seed-9",
+        "demo-seed-10",
+        "demo-seed-11",
+        "demo-seed-12"
+      ],
+      "transactions": [],
+      "stats": {
+        "builds": 5,
+        "battles": 12,
+        "harvests": 0,
+        "upgrades": 0
+      },
+      "claimedTasks": [],
+      "wishlist": null,
+      "teamPresets": [
+        null,
+        null,
+        null
+      ],
+      "thunderProject": {
+        "id": "thunder-project",
+        "stage": "unstarted",
+        "direction": null,
+        "completedStages": [],
+        "invested": {}
+      },
+      "expeditions": {
+        "active": {
+          "id": "migration-active",
+          "routeId": "danfire",
+          "createdAt": 1791256200000,
+          "ruleVersion": "v0.3.0",
+          "snapshot": {
+            "team": [
+              {
+                "id": "nezha",
+                "level": 11,
+                "branch": "A",
+                "treasure": 1,
+                "branchUnlocked": true
+              },
+              {
+                "id": "huangfeihu",
+                "level": 11,
+                "branch": "A",
+                "treasure": 1,
+                "branchUnlocked": true
+              },
+              {
+                "id": "bigan",
+                "level": 11,
+                "branch": "A",
+                "treasure": 1,
+                "branchUnlocked": true
+              },
+              {
+                "id": "leizhenzi",
+                "level": 11,
+                "branch": "A",
+                "treasure": 1,
+                "branchUnlocked": true
+              },
+              {
+                "id": "yangjian",
+                "level": 11,
+                "branch": "A",
+                "treasure": 1,
+                "branchUnlocked": true
+              }
+            ],
+            "method": "ward",
+            "pill": null
+          },
+          "encounters": {
+            "1": {
+              "name": "丹火入口",
+              "description": "炉灵灼烧，守卫无初始盾。",
+              "stageId": 8,
+              "enemies": [
+                {
+                  "id": "df_soldier",
+                  "name": "遗境炉卫",
+                  "role": "soldier",
+                  "row": "front",
+                  "hp": 560,
+                  "atk": 82,
+                  "def": 25,
+                  "speed": 72,
+                  "shield": 0,
+                  "will": 0
+                },
+                {
+                  "id": "df_burner",
+                  "name": "遗境火灵",
+                  "role": "burner",
+                  "row": "back",
+                  "hp": 440,
+                  "atk": 80,
+                  "def": 18,
+                  "speed": 86,
+                  "shield": 0,
+                  "will": 0
+                },
+                {
+                  "id": "df_healer",
+                  "name": "丹息药灵",
+                  "role": "healer",
+                  "row": "back",
+                  "hp": 400,
+                  "atk": 65,
+                  "def": 20,
+                  "speed": 79,
+                  "shield": 0,
+                  "will": 0
+                }
+              ]
+            },
+            "3": {
+              "name": "凝火护阵",
+              "description": "开场护盾与连续灼烧；破障、澄明或防护均可。",
+              "stageId": 8,
+              "enemies": [
+                {
+                  "id": "df_shield",
+                  "name": "凝火甲卫",
+                  "role": "shield",
+                  "row": "front",
+                  "hp": 900,
+                  "atk": 96,
+                  "def": 32,
+                  "speed": 73,
+                  "shield": 260,
+                  "will": 0
+                },
+                {
+                  "id": "df_charge",
+                  "name": "炉前重卫",
+                  "role": "charger",
+                  "row": "front",
+                  "hp": 900,
+                  "atk": 112,
+                  "def": 30,
+                  "speed": 78,
+                  "shield": 0,
+                  "will": 0
+                },
+                {
+                  "id": "df_elite_fire",
+                  "name": "凝火炉灵",
+                  "role": "burner",
+                  "row": "back",
+                  "hp": 650,
+                  "atk": 92,
+                  "def": 24,
+                  "speed": 90,
+                  "shield": 0,
+                  "will": 0
+                }
+              ]
+            },
+            "5": {
+              "name": "遗境炉心",
+              "description": "炉心蓄势重击，药灵维持；削势与护持净化有不同收益。",
+              "stageId": 8,
+              "enemies": [
+                {
+                  "id": "df_boss",
+                  "name": "遗境炉君",
+                  "role": "furnace",
+                  "row": "front",
+                  "hp": 3000,
+                  "atk": 132,
+                  "def": 37,
+                  "speed": 82,
+                  "shield": 180,
+                  "will": 10
+                },
+                {
+                  "id": "df_boss_fire",
+                  "name": "遗境丹火",
+                  "role": "burner",
+                  "row": "back",
+                  "hp": 600,
+                  "atk": 95,
+                  "def": 22,
+                  "speed": 90,
+                  "shield": 0,
+                  "will": 0
+                },
+                {
+                  "id": "df_boss_heal",
+                  "name": "炉心药侍",
+                  "role": "healer",
+                  "row": "back",
+                  "hp": 540,
+                  "atk": 78,
+                  "def": 23,
+                  "speed": 80,
+                  "shield": 0,
+                  "will": 0
+                }
+              ]
+            }
+          },
+          "seeds": {
+            "1": 3973446341,
+            "3": 572724067,
+            "5": 1235565508
+          },
+          "candidates": {
+            "first": [
+              "solidarity",
+              "shade",
+              "clarity"
+            ],
+            "secondByFirst": {
+              "solidarity": [
+                "initiative",
+                "clarity",
+                "victory"
+              ],
+              "shade": [
+                "solidarity",
+                "barrier",
+                "victory"
+              ],
+              "clarity": [
+                "barrier",
+                "shade",
+                "solidarity"
+              ]
+            }
+          },
+          "selectedBoons": [],
+          "node": 1,
+          "status": "battle",
+          "startedBattles": [
+            "migration-active:node-1"
+          ],
+          "completedBattles": [],
+          "rewards": [],
+          "nodeRewards": {
+            "1": {
+              "stone": 25,
+              "xp": 20,
+              "material": 2,
+              "herb": 1,
+              "ticket": 0,
+              "fate": 0
+            },
+            "3": {
+              "stone": 45,
+              "xp": 35,
+              "material": 4,
+              "herb": 1,
+              "ticket": 0,
+              "fate": 0
+            },
+            "5": {
+              "stone": 80,
+              "xp": 60,
+              "material": 6,
+              "herb": 2,
+              "ticket": 0,
+              "fate": 0
+            }
+          },
+          "completionReward": {
+            "stone": 160,
+            "xp": 120,
+            "material": 12,
+            "herb": 4,
+            "ticket": 0,
+            "fate": 0
+          },
+          "firstReward": {
+            "stone": 80,
+            "xp": 80,
+            "material": 5,
+            "herb": 10,
+            "ticket": 0,
+            "fate": 0
+          }
+        },
+        "settled": [],
+        "firstCleared": [],
+        "bossClears": [],
+        "closed": []
+      },
+      "settings": {
+        "sound": true,
+        "music": false,
+        "speed": 1,
+        "simplified": false,
+        "tutorialSkipped": true
+      }
+    }
+  },
+  {
+    "id": "actual-supplied-v1",
+    "encoded": "{\"format\":\"honghuang-xianfu\",\"version\":2,\"checksum\":\"16473c36\",\"data\":{\"version\":2,\"revision\":100,\"createdAt\":1791245159596,\"lastTime\":1791245223191,\"clockWarnings\":0,\"resources\":{\"stone\":2600,\"xp\":3234,\"material\":439,\"herb\":47,\"ticket\":34,\"fate\":35},\"owned\":{\"nezha\":{\"level\":1,\"branch\":\"A\",\"treasure\":1,\"spent\":{\"stone\":0,\"xp\":0}},\"huangfeihu\":{\"level\":11,\"branch\":\"A\",\"treasure\":1,\"spent\":{\"stone\":1350,\"xp\":1025}},\"bigan\":{\"level\":11,\"branch\":\"A\",\"treasure\":1,\"spent\":{\"stone\":1350,\"xp\":1025}},\"bixiao\":{\"level\":1,\"branch\":\"A\",\"treasure\":0,\"spent\":{\"stone\":0,\"xp\":0}},\"jifa\":{\"level\":1,\"branch\":\"A\",\"treasure\":0,\"spent\":{\"stone\":0,\"xp\":0}},\"leizhenzi\":{\"level\":11,\"branch\":\"A\",\"treasure\":1,\"spent\":{\"stone\":1350,\"xp\":1025}},\"yangjian\":{\"level\":11,\"branch\":\"A\",\"treasure\":1,\"spent\":{\"stone\":1350,\"xp\":1025}}},\"team\":[\"nezha\",\"huangfeihu\",\"bigan\",\"leizhenzi\",\"yangjian\"],\"slots\":5,\"cleared\":[1,2,3,4,5,6,7,8,9,10,11,12],\"pity\":11,\"drawHistory\":[{\"id\":\"704e7ba4-47e2-434a-b1cb-708b267749a8\",\"results\":[{\"id\":\"nezha\",\"rarity\":\"immortal\",\"duplicate\":true,\"fate\":4}],\"at\":1791245161960},{\"id\":\"81c20d5c-9af9-431e-98b8-49a277dacecd\",\"results\":[{\"id\":\"bixiao\",\"rarity\":\"immortal\",\"duplicate\":false,\"fate\":1},{\"id\":\"jifa\",\"rarity\":\"immortal\",\"duplicate\":false,\"fate\":1},{\"id\":\"leizhenzi\",\"rarity\":\"immortal\",\"duplicate\":false,\"fate\":1},{\"id\":\"jifa\",\"rarity\":\"immortal\",\"duplicate\":true,\"fate\":4},{\"id\":\"jifa\",\"rarity\":\"immortal\",\"duplicate\":true,\"fate\":4},{\"id\":\"jifa\",\"rarity\":\"immortal\",\"duplicate\":true,\"fate\":4},{\"id\":\"nezha\",\"rarity\":\"immortal\",\"duplicate\":true,\"fate\":4},{\"id\":\"nezha\",\"rarity\":\"immortal\",\"duplicate\":true,\"fate\":4},{\"id\":\"bigan\",\"rarity\":\"immortal\",\"duplicate\":true,\"fate\":4},{\"id\":\"leizhenzi\",\"rarity\":\"immortal\",\"duplicate\":true,\"fate\":4}],\"at\":1791245161960}],\"buildings\":[{\"id\":\"hall\",\"type\":\"hall\",\"plot\":\"p0\",\"level\":4,\"readyAt\":0,\"queue\":[],\"assigned\":null,\"progress\":0},{\"id\":\"spring\",\"type\":\"spring\",\"plot\":\"p1\",\"level\":2,\"readyAt\":0,\"queue\":[],\"assigned\":null,\"progress\":0.6536666666666665},{\"id\":\"farm-1\",\"type\":\"farm\",\"plot\":\"p2\",\"level\":1,\"readyAt\":0,\"queue\":[],\"assigned\":null,\"progress\":0.48184000000000005},{\"id\":\"library-2\",\"type\":\"library\",\"plot\":\"p3\",\"level\":1,\"readyAt\":0,\"queue\":[],\"assigned\":null,\"progress\":0},{\"id\":\"forge-3\",\"type\":\"forge\",\"plot\":\"p5\",\"level\":1,\"readyAt\":0,\"queue\":[],\"assigned\":null,\"progress\":0},{\"id\":\"alchemy-4\",\"type\":\"alchemy\",\"plot\":\"p6\",\"level\":1,\"readyAt\":0,\"queue\":[],\"assigned\":null,\"progress\":0},{\"id\":\"arena-5\",\"type\":\"arena\",\"plot\":\"p4\",\"level\":1,\"readyAt\":0,\"queue\":[],\"assigned\":null,\"progress\":0}],\"warehouse\":{\"resources\":{\"stone\":0,\"xp\":0,\"material\":0,\"herb\":0,\"ticket\":0,\"fate\":0},\"items\":{\"ward\":0}},\"items\":{\"ward\":1},\"methods\":[\"ward\"],\"chosenMethod\":\"ward\",\"chosenPill\":null,\"choicePending\":false,\"giftChosen\":\"yangjian\",\"cores\":[],\"integratedCores\":[\"spring\",\"furnace\",\"thunder\"],\"unlockedRegions\":[0,1,2],\"settledBattles\":[\"battle-muvx4dk7-1-2090809128\",\"battle-muvx4eea-2-773092942\",\"battle-muvx4ft6-3-1601381929\",\"battle-muvx4h1l-4-1910842185\",\"battle-muvx4k3r-5-2706674759\",\"battle-muvx4kil-6-200133976\",\"battle-muvx4kwy-7-3811662766\",\"battle-muvx4o6z-8-3271482398\",\"battle-muvx4ptb-9-20010084\",\"battle-muvx4q8m-10-2198565110\",\"battle-muvx4qot-11-163549550\",\"battle-muvx4sc1-12-1332923368\"],\"transactions\":[\"build-473f30dd-99b1-4d2d-b150-56c8164d58dd\",\"accelerate-ffa4ad22-8c2a-46e5-92af-89e01acd8438\",\"build-8d8a4c7e-34f8-4313-ae50-8fa206d387d8\",\"accelerate-0c17ade5-ac43-4f52-9e2a-9c820dc89fee\",\"research-1f4d87dc-942c-451e-8e3c-2dd9479e8717\",\"summon-d7af9226-ce83-4734-ab3d-3b73bb0358e0\",\"summon-25b52f44-b6ae-4da5-8f26-c81137bdacf1\",\"reward-battle-muvx4dk7-1-2090809128\",\"reward-battle-muvx4eea-2-773092942\",\"upgrade-char-8a2c87e0-f176-489c-ac39-c93af6595326\",\"upgrade-char-e611adbf-4a7e-4b3a-ab2a-1a53976f1b03\",\"upgrade-char-2f26d5a1-bc5c-4fee-8cd7-d4297b6a4681\",\"upgrade-char-3324dc31-f267-4a92-b4d0-c8d1ae0ceca9\",\"upgrade-char-08d44d29-0cb1-4b23-b5aa-7704c32b15c4\",\"upgrade-char-4a92983a-f884-4c88-b358-891a8d9c4fcd\",\"upgrade-char-da14d862-cdbf-4287-ab9d-9f5d7a0bf583\",\"upgrade-char-63981a81-4e33-4acd-b816-251650469fc2\",\"reward-battle-muvx4ft6-3-1601381929\",\"gift-a1dd6668-c9d8-4e1d-83e3-eedcb13fdc4e\",\"upgrade-char-935f363f-71a1-4f88-a47c-dbbcc2fafd22\",\"upgrade-char-a2f7cf8c-da27-4328-881e-b93acec4549d\",\"reward-battle-muvx4h1l-4-1910842185\",\"core-db8bc8bb-f375-4f71-a6fb-d8778e109dac\",\"build-55f8628a-9712-4b05-bfe7-2be87a0f5f66\",\"accelerate-c3bd87fc-4793-4842-97a0-4f372558d5de\",\"build-f648fb1a-426f-4cb2-9e15-09661f9c6a05\",\"accelerate-f8d9bab3-b098-4b6d-8ef9-6f3eab3a89ec\",\"build-cc9fe4ca-6841-4ef1-92d9-cb755af6b47c\",\"accelerate-49716c43-6193-4b4a-8dd1-9954a4761519\",\"upgrade-char-3f7cc743-39cf-45ab-aca7-f59b72be1ecf\",\"upgrade-char-594cdd07-a6df-45c6-844c-2b4cd27b528a\",\"upgrade-char-232bf563-c720-4def-acd6-af031bfb6498\",\"upgrade-char-0a3f2ec5-5b1f-4e30-8877-35e60ef3e52e\",\"upgrade-char-32e25c15-dd00-4e3d-8b9c-edf8b6862994\",\"upgrade-char-aa1456ff-d980-4fd7-a805-172645a7c959\",\"upgrade-char-fcf3e6b1-8a0a-40ba-be8d-4e95f4f09342\",\"upgrade-char-08878a77-e03d-48cb-96f3-fbc9f2254307\",\"upgrade-char-cf9a6ce6-e52b-42a6-a636-06d52320cca4\",\"upgrade-char-7ac16aad-7922-43dc-8938-ebe4900b3eca\",\"reward-battle-muvx4k3r-5-2706674759\",\"reward-battle-muvx4kil-6-200133976\",\"reward-battle-muvx4kwy-7-3811662766\",\"upgrade-char-9f1f45d4-e448-460d-be18-a57e92ac3df9\",\"upgrade-char-18fc10be-0c81-469d-a31a-167c8a0ca784\",\"upgrade-char-7ee48fa3-5453-482b-bb92-3a71e11f1f2f\",\"upgrade-char-72792742-fd4e-44c5-9f05-d9ded57f74a6\",\"upgrade-char-a784c8b1-fccd-4fd1-9560-475d8c079b9e\",\"upgrade-char-8cdc1824-4d6d-4112-8282-83bd5f61f358\",\"upgrade-char-e80e5937-0b4f-4b37-b940-6a12ef0ba91b\",\"upgrade-char-78ab0b39-2ba6-4fc3-8be6-0a4b04bfd3d0\",\"upgrade-char-c6f174ed-07ee-436c-b02e-125bf71bae12\",\"upgrade-char-faa2a679-3ab6-42bf-b734-206b2b4b09e9\",\"repair-43501b88-ac03-471d-8d11-1691585423dc\",\"repair-2bee68c5-8f2e-4dc0-bc74-7006cd19b799\",\"repair-13388261-a877-4eb1-8ea8-b9abb0d209b7\",\"repair-2d219a54-ce66-4332-a92a-eb80d2894f29\",\"repair-1d7314d8-42c9-42a4-841b-4845e0529452\",\"branch-4e8032de-4688-47ad-b84c-f2767268dc4b\",\"branch-854b7c95-d4aa-46b8-adc1-b1b6152769cb\",\"queue-2ddf3a55-899d-4b5c-ad1a-edc34c934050\",\"reward-battle-muvx4o6z-8-3271482398\",\"core-640320ef-5ec1-494e-bbaf-1ee0d76f46d7\",\"upgrade-char-d49edcc1-fc11-4792-818d-3f0f87054c91\",\"upgrade-char-d26ac4e8-55f5-49bd-909c-27eb00961783\",\"upgrade-char-4a6fc492-580c-43d6-b697-b7cf5ac98633\",\"upgrade-char-f06eaada-1d7e-49e6-ab87-3af4844445a3\",\"upgrade-char-f592ede8-d265-4689-946f-c706759d9fc8\",\"upgrade-char-54815aa5-3e22-441f-b093-50ddbb6aa57f\",\"upgrade-char-c61ae3e9-41a7-473e-ae4f-48865930bbb2\",\"upgrade-char-f6d8abbb-7cc8-40e0-9594-c0124cdd033d\",\"upgrade-char-6d866158-2fa9-4cd5-9b52-b9ccecb7210b\",\"upgrade-char-961bec0c-c4d7-4012-b9a3-7bf4b5738468\",\"reward-battle-muvx4ptb-9-20010084\",\"reward-battle-muvx4q8m-10-2198565110\",\"reward-battle-muvx4qot-11-163549550\",\"upgrade-char-5dc0dad4-bcf4-410e-a18a-ddf6b13e3a27\",\"upgrade-char-8e43f331-95ef-4433-90cc-6660dd29c6b7\",\"upgrade-char-132eaec0-82ed-4093-9b83-60b2216c281b\",\"upgrade-char-efabed88-8d90-4f28-8c0f-f2d672b188eb\",\"upgrade-char-f63dc74d-0b60-484d-8aa8-a8abc3df71e7\",\"upgrade-char-29157408-bd4c-41b1-b7eb-04abbfa74f0f\",\"upgrade-char-ffd51b3e-f9bd-41fb-9c39-7ddfd1d42aea\",\"upgrade-char-f33c8ae6-2dc1-47f3-93f7-31e9201a9daa\",\"upgrade-char-eace1c3e-161d-4619-917d-cde20656d724\",\"upgrade-char-862cb0c7-e819-4045-b9ed-efecd61ee23f\",\"reward-battle-muvx4sc1-12-1332923368\",\"core-3a7773a6-5cde-48d0-afaf-cdd38b68fbce\",\"harvest-d7336577-3c3a-4e3a-b5eb-7080c724d6a3\",\"harvest-f6497cc1-c895-40f9-92f7-aad31edc0668\",\"reset-char-485f403b-a35c-44ca-ad9a-2af0d418cec6\"],\"stats\":{\"builds\":5,\"battles\":12,\"harvests\":1,\"upgrades\":50},\"claimedTasks\":[],\"settings\":{\"sound\":true,\"speed\":1,\"simplified\":false,\"tutorialSkipped\":false}}}",
+    "state": {
+      "version": 2,
+      "revision": 100,
+      "createdAt": 1791245159596,
+      "lastTime": 1791245223191,
+      "clockWarnings": 0,
+      "resources": {
+        "stone": 2600,
+        "xp": 3234,
+        "material": 439,
+        "herb": 47,
+        "ticket": 34,
+        "fate": 35
+      },
+      "owned": {
+        "nezha": {
+          "level": 1,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 0,
+            "xp": 0
+          }
+        },
+        "huangfeihu": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "bigan": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "bixiao": {
+          "level": 1,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 0,
+            "xp": 0
+          }
+        },
+        "jifa": {
+          "level": 1,
+          "branch": "A",
+          "treasure": 0,
+          "spent": {
+            "stone": 0,
+            "xp": 0
+          }
+        },
+        "leizhenzi": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        },
+        "yangjian": {
+          "level": 11,
+          "branch": "A",
+          "treasure": 1,
+          "spent": {
+            "stone": 1350,
+            "xp": 1025
+          }
+        }
+      },
+      "team": [
+        "nezha",
+        "huangfeihu",
+        "bigan",
+        "leizhenzi",
+        "yangjian"
+      ],
+      "slots": 5,
+      "cleared": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "pity": 11,
+      "drawHistory": [
+        {
+          "id": "704e7ba4-47e2-434a-b1cb-708b267749a8",
+          "results": [
+            {
+              "id": "nezha",
+              "rarity": "immortal",
+              "duplicate": true,
+              "fate": 4
+            }
+          ],
+          "at": 1791245161960
+        },
+        {
+          "id": "81c20d5c-9af9-431e-98b8-49a277dacecd",
+          "results": [
+            {
+              "id": "bixiao",
+              "rarity": "immortal",
+              "duplicate": false,
+              "fate": 1
+            },
+            {
+              "id": "jifa",
+              "rarity": "immortal",
+              "duplicate": false,
+              "fate": 1
+            },
+            {
+              "id": "leizhenzi",
+              "rarity": "immortal",
+              "duplicate": false,
+              "fate": 1
+            },
+            {
+              "id": "jifa",
+              "rarity": "immortal",
+              "duplicate": true,
+              "fate": 4
+            },
+            {
+              "id": "jifa",
+              "rarity": "immortal",
+              "duplicate": true,
+              "fate": 4
+            },
+            {
+              "id": "jifa",
+              "rarity": "immortal",
+              "duplicate": true,
+              "fate": 4
+            },
+            {
+              "id": "nezha",
+              "rarity": "immortal",
+              "duplicate": true,
+              "fate": 4
+            },
+            {
+              "id": "nezha",
+              "rarity": "immortal",
+              "duplicate": true,
+              "fate": 4
+            },
+            {
+              "id": "bigan",
+              "rarity": "immortal",
+              "duplicate": true,
+              "fate": 4
+            },
+            {
+              "id": "leizhenzi",
+              "rarity": "immortal",
+              "duplicate": true,
+              "fate": 4
+            }
+          ],
+          "at": 1791245161960
+        }
+      ],
+      "buildings": [
+        {
+          "id": "hall",
+          "type": "hall",
+          "plot": "p0",
+          "level": 4,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "spring",
+          "type": "spring",
+          "plot": "p1",
+          "level": 2,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0.6536666666666665
+        },
+        {
+          "id": "farm-1",
+          "type": "farm",
+          "plot": "p2",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0.48184000000000005
+        },
+        {
+          "id": "library-2",
+          "type": "library",
+          "plot": "p3",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "forge-3",
+          "type": "forge",
+          "plot": "p5",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "alchemy-4",
+          "type": "alchemy",
+          "plot": "p6",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        },
+        {
+          "id": "arena-5",
+          "type": "arena",
+          "plot": "p4",
+          "level": 1,
+          "readyAt": 0,
+          "queue": [],
+          "assigned": null,
+          "progress": 0
+        }
+      ],
+      "warehouse": {
+        "resources": {
+          "stone": 0,
+          "xp": 0,
+          "material": 0,
+          "herb": 0,
+          "ticket": 0,
+          "fate": 0
+        },
+        "items": {
+          "ward": 0
+        }
+      },
+      "items": {
+        "ward": 1
+      },
+      "methods": [
+        "ward"
+      ],
+      "chosenMethod": "ward",
+      "chosenPill": null,
+      "choicePending": false,
+      "giftChosen": "yangjian",
+      "cores": [],
+      "integratedCores": [
+        "spring",
+        "furnace",
+        "thunder"
+      ],
+      "unlockedRegions": [
+        0,
+        1,
+        2
+      ],
+      "settledBattles": [
+        "battle-muvx4dk7-1-2090809128",
+        "battle-muvx4eea-2-773092942",
+        "battle-muvx4ft6-3-1601381929",
+        "battle-muvx4h1l-4-1910842185",
+        "battle-muvx4k3r-5-2706674759",
+        "battle-muvx4kil-6-200133976",
+        "battle-muvx4kwy-7-3811662766",
+        "battle-muvx4o6z-8-3271482398",
+        "battle-muvx4ptb-9-20010084",
+        "battle-muvx4q8m-10-2198565110",
+        "battle-muvx4qot-11-163549550",
+        "battle-muvx4sc1-12-1332923368"
+      ],
+      "transactions": [
+        "build-473f30dd-99b1-4d2d-b150-56c8164d58dd",
+        "accelerate-ffa4ad22-8c2a-46e5-92af-89e01acd8438",
+        "build-8d8a4c7e-34f8-4313-ae50-8fa206d387d8",
+        "accelerate-0c17ade5-ac43-4f52-9e2a-9c820dc89fee",
+        "research-1f4d87dc-942c-451e-8e3c-2dd9479e8717",
+        "summon-d7af9226-ce83-4734-ab3d-3b73bb0358e0",
+        "summon-25b52f44-b6ae-4da5-8f26-c81137bdacf1",
+        "reward-battle-muvx4dk7-1-2090809128",
+        "reward-battle-muvx4eea-2-773092942",
+        "upgrade-char-8a2c87e0-f176-489c-ac39-c93af6595326",
+        "upgrade-char-e611adbf-4a7e-4b3a-ab2a-1a53976f1b03",
+        "upgrade-char-2f26d5a1-bc5c-4fee-8cd7-d4297b6a4681",
+        "upgrade-char-3324dc31-f267-4a92-b4d0-c8d1ae0ceca9",
+        "upgrade-char-08d44d29-0cb1-4b23-b5aa-7704c32b15c4",
+        "upgrade-char-4a92983a-f884-4c88-b358-891a8d9c4fcd",
+        "upgrade-char-da14d862-cdbf-4287-ab9d-9f5d7a0bf583",
+        "upgrade-char-63981a81-4e33-4acd-b816-251650469fc2",
+        "reward-battle-muvx4ft6-3-1601381929",
+        "gift-a1dd6668-c9d8-4e1d-83e3-eedcb13fdc4e",
+        "upgrade-char-935f363f-71a1-4f88-a47c-dbbcc2fafd22",
+        "upgrade-char-a2f7cf8c-da27-4328-881e-b93acec4549d",
+        "reward-battle-muvx4h1l-4-1910842185",
+        "core-db8bc8bb-f375-4f71-a6fb-d8778e109dac",
+        "build-55f8628a-9712-4b05-bfe7-2be87a0f5f66",
+        "accelerate-c3bd87fc-4793-4842-97a0-4f372558d5de",
+        "build-f648fb1a-426f-4cb2-9e15-09661f9c6a05",
+        "accelerate-f8d9bab3-b098-4b6d-8ef9-6f3eab3a89ec",
+        "build-cc9fe4ca-6841-4ef1-92d9-cb755af6b47c",
+        "accelerate-49716c43-6193-4b4a-8dd1-9954a4761519",
+        "upgrade-char-3f7cc743-39cf-45ab-aca7-f59b72be1ecf",
+        "upgrade-char-594cdd07-a6df-45c6-844c-2b4cd27b528a",
+        "upgrade-char-232bf563-c720-4def-acd6-af031bfb6498",
+        "upgrade-char-0a3f2ec5-5b1f-4e30-8877-35e60ef3e52e",
+        "upgrade-char-32e25c15-dd00-4e3d-8b9c-edf8b6862994",
+        "upgrade-char-aa1456ff-d980-4fd7-a805-172645a7c959",
+        "upgrade-char-fcf3e6b1-8a0a-40ba-be8d-4e95f4f09342",
+        "upgrade-char-08878a77-e03d-48cb-96f3-fbc9f2254307",
+        "upgrade-char-cf9a6ce6-e52b-42a6-a636-06d52320cca4",
+        "upgrade-char-7ac16aad-7922-43dc-8938-ebe4900b3eca",
+        "reward-battle-muvx4k3r-5-2706674759",
+        "reward-battle-muvx4kil-6-200133976",
+        "reward-battle-muvx4kwy-7-3811662766",
+        "upgrade-char-9f1f45d4-e448-460d-be18-a57e92ac3df9",
+        "upgrade-char-18fc10be-0c81-469d-a31a-167c8a0ca784",
+        "upgrade-char-7ee48fa3-5453-482b-bb92-3a71e11f1f2f",
+        "upgrade-char-72792742-fd4e-44c5-9f05-d9ded57f74a6",
+        "upgrade-char-a784c8b1-fccd-4fd1-9560-475d8c079b9e",
+        "upgrade-char-8cdc1824-4d6d-4112-8282-83bd5f61f358",
+        "upgrade-char-e80e5937-0b4f-4b37-b940-6a12ef0ba91b",
+        "upgrade-char-78ab0b39-2ba6-4fc3-8be6-0a4b04bfd3d0",
+        "upgrade-char-c6f174ed-07ee-436c-b02e-125bf71bae12",
+        "upgrade-char-faa2a679-3ab6-42bf-b734-206b2b4b09e9",
+        "repair-43501b88-ac03-471d-8d11-1691585423dc",
+        "repair-2bee68c5-8f2e-4dc0-bc74-7006cd19b799",
+        "repair-13388261-a877-4eb1-8ea8-b9abb0d209b7",
+        "repair-2d219a54-ce66-4332-a92a-eb80d2894f29",
+        "repair-1d7314d8-42c9-42a4-841b-4845e0529452",
+        "branch-4e8032de-4688-47ad-b84c-f2767268dc4b",
+        "branch-854b7c95-d4aa-46b8-adc1-b1b6152769cb",
+        "queue-2ddf3a55-899d-4b5c-ad1a-edc34c934050",
+        "reward-battle-muvx4o6z-8-3271482398",
+        "core-640320ef-5ec1-494e-bbaf-1ee0d76f46d7",
+        "upgrade-char-d49edcc1-fc11-4792-818d-3f0f87054c91",
+        "upgrade-char-d26ac4e8-55f5-49bd-909c-27eb00961783",
+        "upgrade-char-4a6fc492-580c-43d6-b697-b7cf5ac98633",
+        "upgrade-char-f06eaada-1d7e-49e6-ab87-3af4844445a3",
+        "upgrade-char-f592ede8-d265-4689-946f-c706759d9fc8",
+        "upgrade-char-54815aa5-3e22-441f-b093-50ddbb6aa57f",
+        "upgrade-char-c61ae3e9-41a7-473e-ae4f-48865930bbb2",
+        "upgrade-char-f6d8abbb-7cc8-40e0-9594-c0124cdd033d",
+        "upgrade-char-6d866158-2fa9-4cd5-9b52-b9ccecb7210b",
+        "upgrade-char-961bec0c-c4d7-4012-b9a3-7bf4b5738468",
+        "reward-battle-muvx4ptb-9-20010084",
+        "reward-battle-muvx4q8m-10-2198565110",
+        "reward-battle-muvx4qot-11-163549550",
+        "upgrade-char-5dc0dad4-bcf4-410e-a18a-ddf6b13e3a27",
+        "upgrade-char-8e43f331-95ef-4433-90cc-6660dd29c6b7",
+        "upgrade-char-132eaec0-82ed-4093-9b83-60b2216c281b",
+        "upgrade-char-efabed88-8d90-4f28-8c0f-f2d672b188eb",
+        "upgrade-char-f63dc74d-0b60-484d-8aa8-a8abc3df71e7",
+        "upgrade-char-29157408-bd4c-41b1-b7eb-04abbfa74f0f",
+        "upgrade-char-ffd51b3e-f9bd-41fb-9c39-7ddfd1d42aea",
+        "upgrade-char-f33c8ae6-2dc1-47f3-93f7-31e9201a9daa",
+        "upgrade-char-eace1c3e-161d-4619-917d-cde20656d724",
+        "upgrade-char-862cb0c7-e819-4045-b9ed-efecd61ee23f",
+        "reward-battle-muvx4sc1-12-1332923368",
+        "core-3a7773a6-5cde-48d0-afaf-cdd38b68fbce",
+        "harvest-d7336577-3c3a-4e3a-b5eb-7080c724d6a3",
+        "harvest-f6497cc1-c895-40f9-92f7-aad31edc0668",
+        "reset-char-485f403b-a35c-44ca-ad9a-2af0d418cec6"
+      ],
+      "stats": {
+        "builds": 5,
+        "battles": 12,
+        "harvests": 1,
+        "upgrades": 50
+      },
+      "claimedTasks": [],
+      "settings": {
+        "sound": true,
+        "speed": 1,
+        "simplified": false,
+        "tutorialSkipped": false
+      }
+    }
+  }
+]

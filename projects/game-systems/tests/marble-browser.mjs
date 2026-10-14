@@ -1,0 +1,22 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {mkdir} from 'node:fs/promises';
+const require=createRequire(import.meta.url),{chromium}=require('C:/Users/24308/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright-core');
+const out='artifacts/marble';await mkdir(out,{recursive:true});
+const browser=await chromium.launch({headless:true});const errors=[];
+try{
+ const context=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:1,hasTouch:true,isMobile:true});const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('http://127.0.0.1:4173');await page.locator('[data-action="mode:marble"]').click();await page.screenshot({path:out+'/prepare.png',fullPage:true});await page.locator('[data-action="preview"]').click();
+ const frame=page.frameLocator('iframe.game-frame');await frame.locator('[data-action="new"]').waitFor();await page.screenshot({path:out+'/title.png',fullPage:true});await frame.locator('[data-action="new"]').click();await page.frame({url:/games\/marble/}).evaluate(async()=>{const {MarbleGame:Old}=await import('./state-v2.js');Old.prototype.newRun.call(Marble,42);advanceTime(0)});await frame.locator('#board').waitFor();await page.screenshot({path:out+'/battle.png',fullPage:true});
+ const el=frame.locator('#board'),box=await el.boundingBox(),sx=box.width/360,sy=box.height/560;
+ await page.mouse.move(box.x+180*sx,box.y+416*sy);await page.mouse.down();await page.mouse.move(box.x+180*sx,box.y+224*sy,{steps:8});await page.mouse.up();
+ await frame.locator('.upgrade-card').first().waitFor({timeout:12000});assert.equal(await page.frame({url:/games\/marble/}).evaluate(()=>JSON.parse(render_game_to_text()).mode),'reward');await page.screenshot({path:out+'/reward.png',fullPage:true});
+ await frame.locator('.upgrade-card').first().click();assert.equal(await page.frame({url:/games\/marble/}).evaluate(()=>JSON.parse(render_game_to_text()).roomIndex),2);
+ await page.locator('[data-action=menu]').click();await page.locator('[data-action="game-option:pause"]').click();await frame.locator('[data-action="save"]').click();await page.locator('[data-action="mode:marble"]').click();await page.locator('[data-action="preview"]').click();const resumed=page.frameLocator('iframe.game-frame');await resumed.locator('[data-action="continue"]').click();assert.equal(await page.frame({url:/games\/marble/}).evaluate(()=>JSON.parse(render_game_to_text()).roomIndex),2);
+ await page.locator('[data-action=menu]').click();await page.locator('[data-action="game-option:pause"]').click();await resumed.locator('[data-action="end"]').click();await resumed.locator('[data-action="claim"]').click();await resumed.locator('[data-action="claim"]:has-text("返回大厅")').waitFor();const wallet=await page.evaluate(()=>JSON.parse(localStorage.getItem('adventure-camp-demo-v1')));assert(wallet.runs.some(r=>r.mode==='marble'&&r.reward===4));await page.screenshot({path:out+'/result.png',fullPage:true});
+ await resumed.locator('[data-action="bonus"]').click();await resumed.locator('#ad-result').selectOption('cancel');await resumed.locator('[data-action="adStart"]').click();await page.waitForTimeout(900);assert.equal((await page.evaluate(()=>JSON.parse(localStorage.getItem('adventure-camp-demo-v1')))).coins,164);
+ await resumed.locator('[data-action="bonus"]').click();await resumed.locator('#ad-result').selectOption('fail');await resumed.locator('[data-action="adStart"]').click();await page.waitForTimeout(900);const afterBonus=await page.evaluate(()=>JSON.parse(localStorage.getItem('adventure-camp-demo-v1')));assert.equal(afterBonus.coins,168);assert.equal(afterBonus.ledger.filter(x=>x.id.startsWith('ad-marble-')).length,1);assert.equal(await resumed.locator('[data-action="bonus"]').count(),0);
+ await page.reload();await page.locator('[data-action="mode:marble"]').last().click();await page.locator('[data-action="preview"]').click();const reloaded=page.frameLocator('iframe.game-frame');await reloaded.locator('[data-action="claim"]:has-text("返回大厅")').waitFor();assert.equal((await page.evaluate(()=>JSON.parse(localStorage.getItem('adventure-camp-demo-v1')))).coins,168);
+ assert.deepEqual(errors,[]);console.log(JSON.stringify({passed:true,wallet:afterBonus.coins,errors,screens:['prepare','title','battle','reward','result']}));
+ await context.close();
+}finally{await browser.close()}

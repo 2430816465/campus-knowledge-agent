@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Theme" path="res://assets/ui-foundation/foundation.tres" id="theme"]
+
+[node name="Panel" type="PanelContainer"]
+theme = ExtResource("theme")
+metadata/ui_foundation = true
+custom_minimum_size = Vector2(300,100)
+
+
+[node name="Content" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+
+[node name="Title" type="Label" parent="Content"]
+text = "通用面板"
+theme_override_font_sizes/font_size = 34
+mouse_filter = 2
+

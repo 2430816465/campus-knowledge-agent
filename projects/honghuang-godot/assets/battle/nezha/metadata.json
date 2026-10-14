@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "asset_kind": "2d_frame_animation",
+  "quality_state": "review sample, not final approved roster",
+  "art_source": "built-in image_gen; identity from previously accepted original Nezha art",
+  "frame_width": 512,
+  "frame_height": 512,
+  "pivot": [
+    0.5,
+    0.94140625
+  ],
+  "pivot_px": [
+    256,
+    482
+  ],
+  "processor_origin_px": [
+    256.0,
+    461
+  ],
+  "pivot_note": "Physical foot-sole baseline; processor uses a lower-body anchor at y461. Runtime pivot adds the measured 21px to land soles on the stage.",
+  "animations": {
+    "idle": {
+      "file": "idle.png",
+      "frames": 4,
+      "fps": 5.555555555555555,
+      "frame_ms": 180,
+      "loop": true,
+      "impact_frame": null,
+      "frame_files": [
+        "idle-00.png",
+        "idle-01.png",
+        "idle-02.png",
+        "idle-03.png"
+      ]
+    }
+  },
+  "paused_actions": [
+    "attack",
+    "cast",
+    "hurt"
+  ],
+  "pause_reason": "User asked to pause combat animation and complete all other UI first",
+  "runtime_fx_policy": "body only; wide flames/trails/rings belong to separate runtime layers",
+  "qc": {
+    "frame_count": 4,
+    "valid_frame_count": 4,
+    "empty_count": 0,
+    "edge_touch_count": 0,
+    "paste_clamped_count": 0,
+    "body_scale_mean": 0.5046972008373478,
+    "output_subject_height_mean": 336.0,
+    "body_scale_cv": 0.006787993763355098,
+    "anchor_x_std": 0.01642157277504651,
+    "anchor_y_std": 0.008461667712912714,
+    "anchor_y_mean": 0.8625992063492064,
+    "distinct_frame_hashes": [
+      "745821155b0e74834821e0b9d018bd09fa92fb865a6f5c05e89b7d841436c55a",
+      "0652226c644a64e6592e484b5c4c111beff9387cf16dc887c84fbdfdcc94e5d6",
+      "b297b2eb9d5fa6eff4ad3ad9d9e0f1770096fa0a6646b5a9f6f3f90a84f7d282",
+      "1fe4c9b0089695fe21a44bd6e46a97d25da866febb590d1c3d805fd0ea07e56d"
+    ],
+    "raw_grid": [
+      2,
+      2
+    ],
+    "runtime_strip": [
+      1,
+      4
+    ]
+  },
+  "three_dimensional_mesh_or_skeleton": false
+}

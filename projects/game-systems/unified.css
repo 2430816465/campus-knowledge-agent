@@ -1,0 +1,36 @@
+/* The same wood / paper materials frame camp and all four expeditions. */
+:root{--camp-paper:#fcf7ef;--camp-ink:#482e24;--camp-line:#dfbea0;--camp-primary:#df9a59}
+body[data-page="preview"]{background:#fcf7ef}
+body[data-page="preview"] .game-toolbar{height:54px;background:#fcf7ef;border-bottom:1px solid #c6af85;justify-content:flex-start;padding:4px max(8px,env(safe-area-inset-right)) 4px max(8px,env(safe-area-inset-left));gap:12px;box-shadow:0 2px 6px #5c472518}
+.game-toolbar strong{color:#795231;font-family:CampTitle,'Microsoft YaHei',sans-serif;font-size:21px;display:flex;align-items:center;gap:6px}
+.game-toolbar .tag{margin-left:auto;color:#78664e;background:none;border:0}
+.game-toolbar button{min-width:84px;min-height:44px;background:#f9eddb;border:1px solid #c4a87e;border-radius:13px;box-shadow:0 1px 0 #e7d1b4;color:#482e24}
+.game-toolbar .equipped-game-badge{margin-left:auto}
+.game-frame,.live-game{background:#fcf7ef}
+.game-loading,.game-error{background:radial-gradient(ellipse at top,#fff7dd,#fcf7ef);color:#482e24}
+.game-loading p{font-family:CampTitle;font-size:23px}
+.game-menu-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0}
+.game-menu-actions button{min-height:48px;font-size:14px}
+dialog[data-kind="menu"] .menu-mode{height:80px;min-height:0;border-radius:14px;overflow:hidden}
+dialog[data-kind="menu"] .menu-mode img{object-position:center 55%}
+dialog[data-kind="menu"] .menu-mode span{color:#fff5dc;text-shadow:0 2px 3px #392f22;background:#493d30a6;border-radius:10px;padding:5px 12px}
+dialog[data-kind="menu"]>p{font-size:14px;margin:12px 0}
+dialog[data-kind="menu"]{max-height:calc(100svh - 24px);overflow:auto}
+body:not([data-page="preview"]) .prepare{border-color:#c4b18b}
+body:not([data-page="preview"]) .prepare-art h1{font-family:CampTitle,'Microsoft YaHei',sans-serif}
+@media(orientation:landscape) and (max-height:520px){body[data-page="preview"] .game-toolbar{height:48px}.live-game{height:calc(100dvh - 48px)}.game-toolbar button{min-height:40px}.game-toolbar strong{font-size:19px}dialog[data-kind="menu"] .menu-mode{display:none}}
+@media(max-width:440px){.game-toolbar .tag{display:none}.game-toolbar strong{font-size:20px}.game-toolbar button{padding:6px 10px}}
+.brand .build-stamp{display:block;margin-top:3px;color:#6c785b;font:10px/1.2 system-ui,sans-serif;letter-spacing:0;font-style:normal;white-space:nowrap}
+
+body[data-page="preview"][data-mode="marble"] .live-game{height:100dvh;height:100svh}
+
+/* Co-op owns its in-game corner menu, so the camp never reserves a toolbar row. */
+body[data-page="preview"][data-mode="coop"] .live-game{height:100dvh;height:100svh}
+body[data-page="preview"][data-mode="coop"] .game-toolbar{position:fixed;top:max(6px,env(safe-area-inset-top));right:max(8px,env(safe-area-inset-right));z-index:20;width:auto;height:auto;padding:0;border:0;background:none;box-shadow:none}
+body[data-page="preview"][data-mode="coop"] .game-toolbar>:not(button){display:none}
+body[data-page="preview"][data-mode="coop"] .game-toolbar button{min-width:44px;width:44px;min-height:44px;height:44px;padding:0;overflow:hidden;font-size:0;background:#172838a8;color:#fff2d6;border:1px solid #ebd7b47a;box-shadow:none}
+body[data-page="preview"][data-mode="coop"] .game-toolbar button svg{width:20px;height:20px}
+body[data-page="preview"][data-mode="coop"][data-coop-playing="true"] .game-toolbar{display:none}
+/* Workshop owns its corner controls and uses all of the mobile viewport. */
+body[data-page="preview"][data-mode="workshop"] .game-toolbar{display:none}
+body[data-page="preview"][data-mode="workshop"] .live-game{height:100vh;height:100dvh}

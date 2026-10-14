@@ -1,0 +1,1007 @@
+{
+  "version": 1,
+  "materialCap": 999999,
+  "objectCap": 500,
+  "materials": {
+    "embryo": "宝胚",
+    "petfood": "灵兽口粮",
+    "petsoul": "灵兽魂晶",
+    "inheritstone": "传承石",
+    "coreessence": "内丹精华",
+    "dew": "玉露",
+    "collectionshard": "藏品碎片",
+    "lifecore": "本命精华",
+    "sealfragment": "符印碎片",
+    "monumentshard": "至宝碎片",
+    "clue": "遗迹线索",
+    "gemshard": "宝玉碎片",
+    "spiritessence": "器灵精华",
+    "lawpage": "法则残页",
+    "chaosdust": "混沌粉尘",
+    "sourcefragment": "本源碎片",
+    "bodypill": "炼体丹",
+    "manifestshard": "法相碎片",
+    "fishbait": "鱼饵",
+    "fishfood": "灵鱼饲料",
+    "fishscale": "灵鱼鳞片",
+    "friendgift": "仙友礼物",
+    "disciplescroll": "传道书",
+    "veinessence": "灵脉精华",
+    "abilitypage": "神通残页"
+  },
+  "families": {
+    "pets": {
+      "name": "灵兽",
+      "material": "petfood",
+      "starMaterial": "petsoul",
+      "choices": [
+        {
+          "id": "deer",
+          "name": "青角灵鹿",
+          "effect": {
+            "healBonus": 0.012
+          },
+          "skill": "spring",
+          "skillName": "回春",
+          "description": "配置后持续提高全队治疗效果，助战位置效果为主战的一半。",
+          "cost": {
+            "stone": 240,
+            "herb": 12
+          }
+        },
+        {
+          "id": "fox",
+          "name": "赤焰灵狐",
+          "effect": {
+            "atkPercent": 0.014
+          },
+          "skill": "flame",
+          "skillName": "灵焰",
+          "description": "配置后持续提高全队攻击，助战位置效果为主战的一半。",
+          "cost": {
+            "stone": 260,
+            "material": 12
+          }
+        },
+        {
+          "id": "turtle",
+          "name": "玄岩灵龟",
+          "effect": {
+            "defPercent": 0.018
+          },
+          "skill": "shell",
+          "skillName": "岩甲",
+          "description": "配置后持续提高全队防御，助战位置效果为主战的一半。",
+          "cost": {
+            "stone": 280,
+            "material": 14
+          }
+        }
+      ]
+    },
+    "spirits": {
+      "name": "精怪",
+      "material": "spiritessence",
+      "starMaterial": "spiritessence",
+      "choices": [
+        {
+          "id": "bamboo",
+          "name": "竹影精",
+          "effect": {
+            "comboRate": 0.01
+          },
+          "cost": {
+            "stone": 170,
+            "herb": 8
+          }
+        },
+        {
+          "id": "incense",
+          "name": "香火童",
+          "effect": {
+            "recoveryRate": 0.01
+          },
+          "cost": {
+            "stone": 190,
+            "herb": 8
+          }
+        },
+        {
+          "id": "bell",
+          "name": "檐铃灵",
+          "effect": {
+            "counterRate": 0.01
+          },
+          "cost": {
+            "stone": 190,
+            "material": 8
+          }
+        },
+        {
+          "id": "clay",
+          "name": "陶土灵",
+          "effect": {
+            "counterResist": 0.012
+          },
+          "cost": {
+            "stone": 170,
+            "material": 8
+          }
+        }
+      ]
+    },
+    "primordial": {
+      "name": "先天精怪",
+      "material": "spiritessence",
+      "starMaterial": "monumentshard",
+      "realm": 2,
+      "choices": [
+        {
+          "id": "dawn",
+          "name": "初曦之灵",
+          "effect": {
+            "critResist": 0.018
+          },
+          "cost": {
+            "stone": 900,
+            "material": 50
+          }
+        },
+        {
+          "id": "river",
+          "name": "河源之灵",
+          "effect": {
+            "recoveryRate": 0.016
+          },
+          "cost": {
+            "stone": 900,
+            "herb": 50
+          }
+        }
+      ]
+    },
+    "abilities": {
+      "name": "神通",
+      "material": "abilitypage",
+      "starMaterial": "abilitypage",
+      "choices": [
+        {
+          "id": "sword-rain",
+          "name": "流光剑意",
+          "category": "道法",
+          "effect": {
+            "damageBonus": 0.012
+          },
+          "cost": {
+            "stone": 180,
+            "xp": 100
+          }
+        },
+        {
+          "id": "flame-seal",
+          "name": "离火诀",
+          "category": "道法",
+          "effect": {
+            "critRate": 0.008
+          },
+          "cost": {
+            "stone": 180,
+            "xp": 100
+          }
+        },
+        {
+          "id": "clear-mind",
+          "name": "澄心诀",
+          "category": "神识",
+          "effect": {
+            "critResist": 0.01
+          },
+          "cost": {
+            "stone": 180,
+            "xp": 100
+          }
+        },
+        {
+          "id": "far-sight",
+          "name": "照影诀",
+          "category": "神识",
+          "effect": {
+            "comboResist": 0.01
+          },
+          "cost": {
+            "stone": 180,
+            "xp": 100
+          }
+        },
+        {
+          "id": "beast-heart",
+          "name": "同心契",
+          "category": "御兽",
+          "effect": {
+            "petBonus": 0.025
+          },
+          "cost": {
+            "stone": 180,
+            "xp": 100
+          }
+        },
+        {
+          "id": "beast-song",
+          "name": "归灵诀",
+          "category": "御兽",
+          "effect": {
+            "healBonus": 0.012
+          },
+          "cost": {
+            "stone": 180,
+            "xp": 100
+          }
+        },
+        {
+          "id": "jade-body",
+          "name": "玉身诀",
+          "category": "护体",
+          "effect": {
+            "defPercent": 0.015
+          },
+          "cost": {
+            "stone": 180,
+            "xp": 100
+          }
+        },
+        {
+          "id": "cloud-veil",
+          "name": "云衣诀",
+          "category": "护体",
+          "effect": {
+            "openingShield": 0.01
+          },
+          "cost": {
+            "stone": 180,
+            "xp": 100
+          }
+        }
+      ]
+    },
+    "collections": {
+      "name": "藏品",
+      "material": "collectionshard",
+      "starMaterial": "collectionshard",
+      "choices": [
+        {
+          "id": "cloud-pot",
+          "name": "采云壶",
+          "set": "云山",
+          "effect": {
+            "hpPercent": 0.008
+          },
+          "cost": {
+            "stone": 200,
+            "material": 15
+          }
+        },
+        {
+          "id": "rain-bell",
+          "name": "听雨铃",
+          "set": "云山",
+          "effect": {
+            "defPercent": 0.008
+          },
+          "cost": {
+            "stone": 200,
+            "herb": 15
+          }
+        },
+        {
+          "id": "star-lamp",
+          "name": "映星灯",
+          "set": "星河",
+          "effect": {
+            "atkPercent": 0.008
+          },
+          "cost": {
+            "stone": 220,
+            "material": 15
+          }
+        },
+        {
+          "id": "moon-comb",
+          "name": "照月梳",
+          "set": "星河",
+          "effect": {
+            "healBonus": 0.008
+          },
+          "cost": {
+            "stone": 220,
+            "herb": 15
+          }
+        }
+      ]
+    },
+    "mounts": {
+      "name": "座驾",
+      "material": "spiritessence",
+      "starMaterial": "spiritessence",
+      "choices": [
+        {
+          "id": "cloud",
+          "name": "祥云",
+          "effect": {
+            "comboResist": 0.015
+          },
+          "cost": {
+            "stone": 400,
+            "material": 25
+          }
+        },
+        {
+          "id": "lotus",
+          "name": "莲台",
+          "effect": {
+            "critResist": 0.015
+          },
+          "cost": {
+            "stone": 400,
+            "herb": 25
+          }
+        },
+        {
+          "id": "boat",
+          "name": "仙舟",
+          "effect": {
+            "counterResist": 0.015
+          },
+          "cost": {
+            "stone": 500,
+            "material": 30
+          }
+        }
+      ]
+    },
+    "manifestations": {
+      "name": "法相",
+      "material": "manifestshard",
+      "starMaterial": "manifestshard",
+      "choices": [
+        {
+          "id": "mountain",
+          "name": "山岳法相",
+          "effect": {
+            "openingShield": 0.025
+          },
+          "cost": {
+            "stone": 500,
+            "xp": 300
+          }
+        },
+        {
+          "id": "sun",
+          "name": "旭日法相",
+          "effect": {
+            "skillBonus": 0.025
+          },
+          "cost": {
+            "stone": 500,
+            "xp": 300
+          }
+        },
+        {
+          "id": "lotus",
+          "name": "青莲法相",
+          "effect": {
+            "healBonus": 0.025
+          },
+          "cost": {
+            "stone": 500,
+            "herb": 30
+          }
+        }
+      ]
+    },
+    "cosmetics": {
+      "name": "装扮",
+      "material": "collectionshard",
+      "choices": [
+        {
+          "id": "plain",
+          "name": "青衫",
+          "effect": {},
+          "cost": {
+            "stone": 0
+          }
+        },
+        {
+          "id": "cloud",
+          "name": "云纹法衣",
+          "effect": {},
+          "cost": {
+            "stone": 500
+          }
+        },
+        {
+          "id": "gold",
+          "name": "金霞冠",
+          "effect": {},
+          "cost": {
+            "stone": 800
+          }
+        }
+      ]
+    }
+  },
+  "directions": {
+    "sword": {
+      "name": "剑道",
+      "effect": {
+        "atkPercent": 0.02
+      }
+    },
+    "beast": {
+      "name": "御灵",
+      "effect": {
+        "petBonus": 0.035
+      }
+    },
+    "guard": {
+      "name": "护体",
+      "effect": {
+        "defPercent": 0.025
+      }
+    }
+  },
+  "veins": {
+    "wood": {
+      "name": "青木灵脉",
+      "stat": "recoveryRate"
+    },
+    "fire": {
+      "name": "离火灵脉",
+      "stat": "critRate"
+    },
+    "earth": {
+      "name": "厚土灵脉",
+      "stat": "counterResist"
+    },
+    "metal": {
+      "name": "庚金灵脉",
+      "stat": "comboRate"
+    },
+    "water": {
+      "name": "玄水灵脉",
+      "stat": "critResist"
+    }
+  },
+  "realms": [
+    "未入道",
+    "炼气",
+    "筑基",
+    "金丹",
+    "元婴",
+    "化神",
+    "返虚",
+    "合道",
+    "渡劫"
+  ],
+  "forgeWeights": [
+    {
+      "3": 100
+    },
+    {
+      "3": 90,
+      "4": 10
+    },
+    {
+      "3": 75,
+      "4": 24,
+      "5": 1
+    },
+    {
+      "3": 60,
+      "4": 35,
+      "5": 5
+    },
+    {
+      "3": 40,
+      "4": 48,
+      "5": 12
+    },
+    {
+      "3": 20,
+      "4": 55,
+      "5": 25
+    },
+    {
+      "3": 10,
+      "4": 55,
+      "5": 35
+    },
+    {
+      "3": 5,
+      "4": 45,
+      "5": 50
+    }
+  ],
+  "objectKinds": {
+    "petcore": {
+      "name": "内丹",
+      "material": "coreessence",
+      "stats": [
+        "atkPercent",
+        "healBonus",
+        "defPercent"
+      ]
+    },
+    "seal": {
+      "name": "符印",
+      "material": "sealfragment",
+      "stats": [
+        "atkPercent",
+        "hpPercent",
+        "defPercent"
+      ]
+    },
+    "gem": {
+      "name": "宝玉",
+      "material": "gemshard",
+      "stats": [
+        "critRate",
+        "counterResist",
+        "hpPercent"
+      ]
+    },
+    "lawcore": {
+      "name": "灵核",
+      "material": "lawpage",
+      "stats": [
+        "damageBonus",
+        "healBonus",
+        "defPercent"
+      ]
+    },
+    "chaos": {
+      "name": "混沌石",
+      "material": "chaosdust",
+      "stats": [
+        "atkPercent",
+        "hpPercent",
+        "defPercent"
+      ]
+    },
+    "source": {
+      "name": "本源碎片",
+      "material": "sourcefragment",
+      "stats": [
+        "atkPercent",
+        "hpPercent",
+        "defPercent"
+      ]
+    }
+  },
+  "laws": {
+    "attack": {
+      "name": "攻伐法则",
+      "effect": {
+        "damageBonus": 0.012
+      }
+    },
+    "protect": {
+      "name": "护持法则",
+      "effect": {
+        "defPercent": 0.016
+      }
+    },
+    "beast": {
+      "name": "御灵法则",
+      "effect": {
+        "petBonus": 0.03
+      }
+    }
+  },
+  "body": {
+    "bone": {
+      "name": "坚骨",
+      "effect": {
+        "defPercent": 0.014
+      }
+    },
+    "blood": {
+      "name": "气血",
+      "effect": {
+        "hpPercent": 0.016
+      }
+    },
+    "spirit": {
+      "name": "凝神",
+      "effect": {
+        "critResist": 0.012
+      }
+    }
+  },
+  "lifeBranches": {
+    "sword": {
+      "name": "剑形",
+      "effect": {
+        "damageBonus": 0.012
+      }
+    },
+    "bell": {
+      "name": "钟形",
+      "effect": {
+        "openingShield": 0.012
+      }
+    },
+    "lotus": {
+      "name": "莲形",
+      "effect": {
+        "healBonus": 0.014
+      }
+    }
+  },
+  "excavationSites": [
+    {"id":"mountain","name":"荒山石窟","preferred":"tablet","description":"古碑60%，古灯与古盏各20%"},
+    {"id":"ruins","name":"星灯遗殿","preferred":"lamp","description":"古灯60%，古碑与古盏各20%"},
+    {"id":"river","name":"寒溪旧渡","preferred":"urn","description":"古盏60%，古碑与古灯各20%"}
+  ],
+  "ancients": [
+    {
+      "id": "tablet",
+      "name": "山河古碑",
+      "stat": "defPercent"
+    },
+    {
+      "id": "lamp",
+      "name": "流光古灯",
+      "stat": "atkPercent"
+    },
+    {
+      "id": "urn",
+      "name": "甘霖古盏",
+      "stat": "healBonus"
+    }
+  ],
+  "fish": [
+    {
+      "id": "carp",
+      "name": "丹霞锦鲤",
+      "stat": "atkPercent"
+    },
+    {
+      "id": "perch",
+      "name": "青玉灵鲈",
+      "stat": "defPercent"
+    },
+    {
+      "id": "koi",
+      "name": "银月灵鲫",
+      "stat": "hpPercent"
+    }
+  ],
+  "sourceShapes": [
+    [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  ],
+  "shops": [
+    {
+      "id": "embryo",
+      "name": "宝胚",
+      "material": "embryo",
+      "amount": 1,
+      "cost": {
+        "material": 3,
+        "stone": 10
+      },
+      "limit": 200
+    },
+    {
+      "id": "petfood",
+      "material": "petfood",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    },
+    {
+      "id": "petsoul",
+      "material": "petsoul",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    },
+    {
+      "id": "inheritstone",
+      "material": "inheritstone",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    },
+    {
+      "id": "coreessence",
+      "material": "coreessence",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    },
+    {
+      "id": "dew",
+      "material": "dew",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    },
+    {
+      "id": "collectionshard",
+      "material": "collectionshard",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    },
+    {
+      "id": "lifecore",
+      "material": "lifecore",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    },
+    {
+      "id": "sealfragment",
+      "material": "sealfragment",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    },
+    {
+      "id": "monumentshard",
+      "material": "monumentshard",
+      "amount": 1,
+      "cost": {
+        "stone": 150,
+        "material": 2
+      },
+      "limit": 4
+    },
+    {
+      "id": "clue",
+      "material": "clue",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    },
+    {
+      "id": "gemshard",
+      "material": "gemshard",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    },
+    {
+      "id": "spiritessence",
+      "material": "spiritessence",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    },
+    {
+      "id": "lawpage",
+      "material": "lawpage",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    },
+    {
+      "id": "chaosdust",
+      "material": "chaosdust",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    },
+    {
+      "id": "sourcefragment",
+      "material": "sourcefragment",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    },
+    {
+      "id": "bodypill",
+      "material": "bodypill",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    },
+    {
+      "id": "manifestshard",
+      "material": "manifestshard",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    },
+    {
+      "id": "fishbait",
+      "material": "fishbait",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    },
+    {
+      "id": "fishfood",
+      "material": "fishfood",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    },
+    {
+      "id": "fishscale",
+      "material": "fishscale",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    },
+    {
+      "id": "friendgift",
+      "material": "friendgift",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    },
+    {
+      "id": "disciplescroll",
+      "material": "disciplescroll",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    },
+    {
+      "id": "veinessence",
+      "material": "veinessence",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    },
+    {
+      "id": "abilitypage",
+      "material": "abilitypage",
+      "amount": 1,
+      "cost": {
+        "stone": 30,
+        "material": 2
+      },
+      "limit": 30
+    }
+  ],
+  "stories": {
+    "nezha": [
+      {
+        "title": "莲塘访客",
+        "text": "哪吒在新莲旁收起火尖枪：真正的勇敢，是承认自己也会犯错。你与他一起扶正被风吹斜的幼苗。",
+        "gift": "cloud"
+      },
+      {
+        "title": "送还木鸢",
+        "text": "哪吒将修好的木鸢交还山下孩童。他没有留下姓名，只邀你明日再来试飞。"
+      }
+    ],
+    "bigan": [
+      {
+        "title": "一盏灯火",
+        "text": "比干展开发黄的田册，逐户记下缺粮的人家。你添亮灯火，与他把账核到深夜。",
+        "gift": "cloud"
+      },
+      {
+        "title": "桥头问答",
+        "text": "桥头的少年问何为公正。比干让众人先听完彼此的难处，再决定如何分配新修的水渠。"
+      }
+    ],
+    "yangjian": [
+      {
+        "title": "山道微雨",
+        "text": "杨戬拾起旅人散落的草药，哮天犬替你们守着湿滑的山道。他说，远行先看脚下。",
+        "gift": "cloud"
+      },
+      {
+        "title": "静夜归途",
+        "text": "巡山归来，他将最后一碗热汤留给值夜弟子。仙府的灯一盏接一盏亮起。"
+      }
+    ]
+  }
+}

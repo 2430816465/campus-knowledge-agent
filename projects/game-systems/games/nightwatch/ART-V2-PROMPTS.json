@@ -1,0 +1,164 @@
+{
+  "generator": "Built-in image_gen",
+  "date": "2026-10-01",
+  "version": 2,
+  "approvedChoices": {
+    "map": "Keep layout; simplify road detail and lower background contrast",
+    "hero": "Keep blue cape and rune crossbow; proportions and design may change",
+    "effects": "Readable pixel effects, restrained glow in dense combat"
+  },
+  "rawSourceDirectory": "C:/Users/24308/.codex/generated_images/01a0f688-5857-7d30-b40c-6f36d0709fcf",
+  "note": "Six exact prompts retained. Earlier eleven calls are recorded as brief summaries, not verbatim tool transcripts. Original generated rasters are retained for all seventeen outputs.",
+  "entries": {
+    "background": {
+      "source": "exec-b653c8d9-a113-4830-8752-e1f3a5f30816.png",
+      "references": [
+        "games/nightwatch/assets/battlefield.webp"
+      ],
+      "promptRecord": "brief_summary",
+      "prompt": "Archive brief summary, not verbatim. Edit the existing portrait pixel-art fantasy battlefield. Preserve road, woods, ruins, banners, lamps, city wall and courtyard positions. Simplify road surface detail and small repeated textures, lower background contrast and saturation, cool gray-blue central road and subdued green edges. Keep warm lights restrained. Empty road, no characters, text, UI, new terrain or collision changes."
+    },
+    "heroMaster": {
+      "source": "exec-f4ead7bb-6564-4ae8-88a4-f929cb0e0119.png",
+      "promptRecord": "brief_summary",
+      "prompt": "Archive brief summary, not verbatim. Redesign the original standing hero with chestnut hair, blue cape, navy/bronze armor and compact wooden cyan-rune crossbow. Compact readable approximately three-head proportion. Orthographic three-quarter upper-right aim, full-body pixel art, solid magenta background, no ground, shadow, projectile or UI."
+    },
+    "icons": {
+      "source": "exec-81de0c4a-eee0-441f-910c-7901794568f4.png",
+      "promptRecord": "brief_summary",
+      "prompt": "Archive brief summary, not verbatim. Matching crisp pixel-art fantasy skill icon atlas, 3 rows × 4 columns, row-major: crossbow/fire/ice/lightning; beam/rock/snow/wind; meteor/familiar/chain/flame. Bold small-size silhouettes, dark outlines, 3–5 tone groups, restrained bright cores, centered with generous solid #FF00FF margins, no frames, labels, text, grid or UI."
+    },
+    "hero-idle": {
+      "source": "exec-0696d1ba-e3fc-4a8a-a72d-631cd0688c24.png",
+      "promptRecord": "verbatim",
+      "prompt": "Image 1 is the exact accepted blue-caped hero identity and pixel art master. Image 2 is a scale-and-root template made from this same character. Produce EXACT 2 rows x 4 columns, eight frames, row-major. Preserve Image 2 cell locations, camera distance, anatomical scale, grounded body root, boot-contact baseline at 82% cell height and padding. Torso/head/limb thickness/costume/crossbow dimensions constant. Same three-quarter upper-right facing, chestnut hair, warm face, blue cape, dark navy armor and bronze trim, wooden cyan-rune crossbow. Both feet stay LOCKED to the exact same spots in every frame. Only posed joints and fabric may move, no entire body translation or rotation, no zoom, no mirrored frames. Body-only animation: no muzzle flash, no projectile, no detached FX. Whole silhouette stays central 70% of each cell and no part touches any cell edge. Background solid #FF00FF, no shadow no text no labels no UI no grid. Eight-frame subtle BREATHING IDLE loop. Same crossbow aim and both arms held stable; only 1-2 source pixels of chest breathing, soft blue cape fabric ripple through 8 evenly spaced phases. Head and pelvis fixed. Frames 1 and 8 connect smoothly. Avoid changing costume/cape length or hair shape. Not a walk and not a bobbing whole-body idle.",
+      "references": [
+        "artifacts/nightwatch/art-v2/hero-master.png",
+        "artifacts/nightwatch/art-v2/hero-anchor.png"
+      ]
+    },
+    "hero-shoot": {
+      "source": "exec-02b454d4-57b0-4354-b457-a2eb56052057.png",
+      "promptRecord": "verbatim",
+      "prompt": "Image 1 is the exact accepted blue-caped hero identity and pixel art master. Image 2 is a scale-and-root template made from this same character. Produce EXACT 2 rows x 4 columns, eight frames, row-major. Preserve Image 2 cell locations, camera distance, anatomical scale, grounded body root, boot-contact baseline at 82% cell height and padding. Torso/head/limb thickness/costume/crossbow dimensions constant. Same three-quarter upper-right facing, chestnut hair, warm face, blue cape, dark navy armor and bronze trim, wooden cyan-rune crossbow. Both feet stay LOCKED to the exact same spots in every frame. Only posed joints and fabric may move, no entire body translation or rotation, no zoom, no mirrored frames. Body-only animation: no muzzle flash, no projectile, no detached FX. Whole silhouette stays central 70% of each cell and no part touches any cell edge. Background solid #FF00FF, no shadow no text no labels no UI no grid. Eight-frame compact continuous CROSSBOW SHOOT AND RECOVER animation. Frame1 steady aim (exact master pose). Frame2 brace elbow subtly. Frame3 trigger finger release with almost unchanged bow position. Frame4 small recoil in shoulder and bow only, 2-3 source pixels, feet/head/pelvis fixed. Frame5 smoothly recover bow aim. Frame6 supporting hand briefly pulls the small cocking lever close to chest. Frame7 hand returns to stock. Frame8 exact steady aim smoothly matches Frame1. Weapon aim angle only varies 3 degrees, cape gentle delayed follow-through, never redesign the bow between frames. No exaggerated torso shaking or long wind-up. Full body always same scale.",
+      "references": [
+        "artifacts/nightwatch/art-v2/hero-master.png",
+        "artifacts/nightwatch/art-v2/hero-anchor.png"
+      ]
+    },
+    "projectiles": {
+      "source": "exec-892357bd-a1dc-4fab-ab50-6817cf5ba834.png",
+      "promptRecord": "verbatim",
+      "prompt": "One production sprite atlas of 8 fantasy projectile sprites, exact 2 rows x 4 columns equal square invisible cells, row-major. Crisp pixel art, clean distinct silhouettes, dark edge and bright colored core, no overblown glow. All traveling RIGHT, nose at right, short attached trail to left. Centered each inside central 65%, generous margin all four sides. Background pure solid #FF00FF, no text no labels no borders no UI no characters. Row1: bronze rune crossbow bolt with steel pointed tip and cyan small rune, elongated horizontal; orange cream-core fireball with short flame tail; cyan white-core ice lance horizontal diamond spearhead and shaft; gray-brown chunky rolling stone with 3 broad facets and tiny dust curl. Row2: curved silver teal spinning crescent wind blade, circular compact; orange-red cracked rocky meteor with short flaming tail pointing left; mint-green little flying spirit with leaf ears, two eyes and short tail, facing right; dark red-purple enemy magic orb with bright red core and small sparking outline. Consistent optical size suitable rendering 18-48px, restrained particle count, no background gradients."
+    },
+    "impacts": {
+      "source": "exec-11be6f02-b198-4888-94ed-bfed87ea2fbe.png",
+      "promptRecord": "verbatim",
+      "prompt": "One production pixel-art battle VFX animation atlas, EXACT 4 rows x 4 columns, 16 equal cells. Each row is ONE effect animated through four timed phases left-to-right: small onset, strongest compact contact, expanding airy fragments, fading sparse remnants. Row1 warm cream-gold weapon HIT SPARK, star contact into short shards. Row2 orange FIRE EXPLOSION, cream core into orange flame petals and embers. Row3 cyan ICE SHATTER, bright crystalline contact into sharp ice fragments. Row4 violet ELECTRIC IMPACT, white-violet star into forked purple lightning wisps. Keep center fixed in each cell; optical radius grows naturally by phase, all effect silhouettes contained central 70% with generous pure #FF00FF margin on every side, no effect overlaps adjacent cell. Crisp pixels, clear tone groups and transparent-to-be-cut spaces between sparks, NOT opaque giant discs, no fog/cloud cover, no heavy glow halos. No text no labels no borders no UI no characters. These will overlay monsters without hiding their bodies."
+    },
+    "grounds": {
+      "source": "exec-b9db47c9-a41b-4b9c-8373-ab729cef0326.png",
+      "promptRecord": "verbatim",
+      "prompt": "One production pixel-art ground magic VFX atlas, EXACT 2 rows x 4 columns equal square invisible cells. Row1 FOUR continuous loop phases of orange low ground flames, small flame tongues around a thin elliptical ember ring, center mostly open, ground scorch dark only in ring. Row2 FOUR continuous loop phases of cyan snow magic field, thin elliptical icy rune ring, small ice crystals and three delicate drifting snow specks, center mostly open. View from slightly above matches topdown fantasy road. Same ellipse size, fixed center per cell, only flame tongues/snow crystals/rune pulse animate; first/last join smoothly. Subdued transparent-to-be-cut empty centers and gaps, no opaque colorful blanket. All art fits central 70% of each cell with generous pure flat #FF00FF margin on all four sides. Pixel art crisp, no text no labels no UI no visible grid no characters no platforms."
+    },
+    "talents": {
+      "source": "exec-bf3d038d-a365-4ebe-961d-241f4a314e7e.png",
+      "promptRecord": "verbatim",
+      "prompt": "Use the twelve skill icon atlas just shown as the exact pixel-art STYLE reference, not layout. Create a matching supplemental icon atlas, EXACT 2 rows x 2 columns equal square cells. Four distinct passive ability icons: top-left REPAIR, a small stone battlement and bronze hammer with one mint healing cross; top-right POWER, raised armored bronze fist and small gold star; bottom-left RAPID RELOAD, compact bronze crossbow plus cyan circular speed arrow; bottom-right CRITICAL INSIGHT, a gold eye with a small red diamond target in the pupil. All icons bold readable at 28-48px, crisp dark outline, clear 3-5 tone groups, coherent with reference palette, centered in central 65-70% of each cell, generous magenta margin on all four sides, NO icon frame borders NO grid NO text NO labels NO UI. Entire canvas background solid #FF00FF."
+    },
+    "orc_warrior": {
+      "source": "exec-f6d05fcd-93b2-490b-ba9f-2a150cbee7d7.png",
+      "references": [
+        "games/nightwatch/assets/orc_warrior.webp"
+      ],
+      "promptRecord": "brief_summary",
+      "prompt": "Archive brief summary (not a verbatim generation prompt). Match the supplied existing monster identity and crisp pixel-art palette. Exact 2 rows × 4 columns, eight row-major frames; one coherent locomotion cycle. Constant orthographic three-quarter camera, anatomical scale and shared root. Preserve foot-contact baseline; alternate visible steps and joint poses, without translating the whole body inside cells. Keep full silhouette inside central 70%, ample solid #FF00FF margins, no grid, labels, text, ground, shadow or detached attack FX. Eight-frame armored gold-brown orc run; clear foot alternation and arm/weapon follow-through."
+    },
+    "mage_red": {
+      "source": "exec-ba9edeb7-9c57-46f8-85b2-b6fbe54fcc84.png",
+      "references": [
+        "games/nightwatch/assets/mage_red.webp"
+      ],
+      "promptRecord": "brief_summary",
+      "prompt": "Archive brief summary (not a verbatim generation prompt). Match the supplied existing monster identity and crisp pixel-art palette. Exact 2 rows × 4 columns, eight row-major frames; one coherent locomotion cycle. Constant orthographic three-quarter camera, anatomical scale and shared root. Preserve foot-contact baseline; alternate visible steps and joint poses, without translating the whole body inside cells. Keep full silhouette inside central 70%, ample solid #FF00FF margins, no grid, labels, text, ground, shadow or detached attack FX. Eight-frame red-robed fire mage walk; feet step below the robe, staff and fabric move subtly."
+    },
+    "ghost_warrior": {
+      "source": "exec-9b180ff7-e4d7-4f8d-8936-ef4bec1e977c.png",
+      "references": [
+        "games/nightwatch/assets/ghost_warrior.webp"
+      ],
+      "promptRecord": "brief_summary",
+      "prompt": "Archive brief summary (not a verbatim generation prompt). Match the supplied existing monster identity and crisp pixel-art palette. Exact 2 rows × 4 columns, eight row-major frames; one coherent locomotion cycle. Constant orthographic three-quarter camera, anatomical scale and shared root. Preserve foot-contact baseline; alternate visible steps and joint poses, without translating the whole body inside cells. Keep full silhouette inside central 70%, ample solid #FF00FF margins, no grid, labels, text, ground, shadow or detached attack FX. Eight-frame spectral blue warrior hover; fixed silhouette center with controlled fabric/tail ripple."
+    },
+    "rock_golem": {
+      "source": "exec-55b53c0b-da8c-40c3-b20c-0fd9854766ea.png",
+      "references": [
+        "games/nightwatch/assets/rock_golem.webp"
+      ],
+      "promptRecord": "brief_summary",
+      "prompt": "Archive brief summary (not a verbatim generation prompt). Match the supplied existing monster identity and crisp pixel-art palette. Exact 2 rows × 4 columns, eight row-major frames; one coherent locomotion cycle. Constant orthographic three-quarter camera, anatomical scale and shared root. Preserve foot-contact baseline; alternate visible steps and joint poses, without translating the whole body inside cells. Keep full silhouette inside central 70%, ample solid #FF00FF margins, no grid, labels, text, ground, shadow or detached attack FX. Eight-frame blue-gray stone golem walk; heavy alternating planted feet, joint compression, stable head scale."
+    },
+    "skeleton_elite": {
+      "source": "exec-ede87185-63f1-48b3-ba24-b9023db54cce.png",
+      "references": [
+        "games/nightwatch/assets/skeleton_elite.webp"
+      ],
+      "promptRecord": "brief_summary",
+      "prompt": "Archive brief summary (not a verbatim generation prompt). Match the supplied existing monster identity and crisp pixel-art palette. Exact 2 rows × 4 columns, eight row-major frames; one coherent locomotion cycle. Constant orthographic three-quarter camera, anatomical scale and shared root. Preserve foot-contact baseline; alternate visible steps and joint poses, without translating the whole body inside cells. Keep full silhouette inside central 70%, ample solid #FF00FF margins, no grid, labels, text, ground, shadow or detached attack FX. Eight-frame elite golden skeleton walk; clear knee/foot alternation and attached armor motion."
+    },
+    "mage_low": {
+      "source": "exec-02b82865-1c5b-4bf4-93d0-273f28adc4f6.png",
+      "references": [
+        "games/nightwatch/assets/mage_low.webp"
+      ],
+      "promptRecord": "brief_summary",
+      "prompt": "Archive brief summary (not a verbatim generation prompt). Match the supplied existing monster identity and crisp pixel-art palette. Exact 2 rows × 4 columns, eight row-major frames; one coherent locomotion cycle. Constant orthographic three-quarter camera, anatomical scale and shared root. Preserve foot-contact baseline; alternate visible steps and joint poses, without translating the whole body inside cells. Keep full silhouette inside central 70%, ample solid #FF00FF margins, no grid, labels, text, ground, shadow or detached attack FX. Eight-frame low-rank blue mage walk; small visible steps, stable hat/body, cloth follow-through."
+    },
+    "vampire": {
+      "source": "exec-bb547dd9-136e-45f2-9f62-7e40d00fe722.png",
+      "references": [
+        "games/nightwatch/assets/vampire.webp"
+      ],
+      "promptRecord": "brief_summary",
+      "prompt": "Archive brief summary (not a verbatim generation prompt). Match the supplied existing monster identity and crisp pixel-art palette. Exact 2 rows × 4 columns, eight row-major frames; one coherent locomotion cycle. Constant orthographic three-quarter camera, anatomical scale and shared root. Preserve foot-contact baseline; alternate visible steps and joint poses, without translating the whole body inside cells. Keep full silhouette inside central 70%, ample solid #FF00FF margins, no grid, labels, text, ground, shadow or detached attack FX. Eight-frame vampire walk; gray face, dark clothes and red cape, distinct feet and restrained cape movement."
+    },
+    "dragon": {
+      "source": "exec-ee7fd817-7b8a-48d8-9543-c05469eb2a9f.png",
+      "references": [
+        "games/nightwatch/assets/dragon.webp"
+      ],
+      "promptRecord": "brief_summary",
+      "prompt": "Archive brief summary (not a verbatim generation prompt). Match the supplied existing monster identity and crisp pixel-art palette. Exact 2 rows × 4 columns, eight row-major frames; one coherent locomotion cycle. Constant orthographic three-quarter camera, anatomical scale and shared root. Preserve foot-contact baseline; alternate visible steps and joint poses, without translating the whole body inside cells. Keep full silhouette inside central 70%, ample solid #FF00FF margins, no grid, labels, text, ground, shadow or detached attack FX. Eight-frame green dragon grounded waddle; alternating hind feet, attached tail and small wings follow-through."
+    }
+  },
+  "reusedWalks": [
+    {
+      "id": "skeleton",
+      "frames": 16,
+      "source": "games/guard/assets/monsters/skeleton/walk/sheet-transparent.png"
+    },
+    {
+      "id": "guard_mid",
+      "frames": 16,
+      "source": "games/guard/assets/monsters/guard_mid/walk/sheet-transparent.png"
+    },
+    {
+      "id": "knight_black",
+      "frames": 16,
+      "source": "games/guard/assets/monsters/knight_black/walk/sheet-transparent.png"
+    }
+  ],
+  "processing": {
+    "tool": "tools/nightwatch-art-v2.py",
+    "cell": 128,
+    "bodyScaleCVLimit": 0.08,
+    "anchorYStdLimit": 0.05,
+    "heroProfileDriftLimit": 0.1,
+    "outputEdgeTouch": 0,
+    "emptyFrames": 0,
+    "pasteClamped": 0,
+    "rootRegistration": "Shared torso X with per-frame translational offsets; shared feet Y; no per-frame resizing",
+    "icons": "Crop alpha bbox and uniformly fit each independent icon into 106 pixels inside 128-pixel PNG",
+    "rowGutters": "Icon source inspected and cut at Y=0/370/700/1086 to preserve all tips"
+  }
+}

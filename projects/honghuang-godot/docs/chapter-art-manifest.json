@@ -1,0 +1,39 @@
+{
+  "version": "0.4.0",
+  "assets": [
+    {
+      "id": "danfire",
+      "path": "assets/battle/danfire-premium.webp",
+      "sha256": "8b8204d225c09434d43a90cae0463b0aa50ac2cd852cf67f24d5ea30fa2a88b7",
+      "bytes": 443226,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "original": "art-source/chapter-backgrounds/danfire-original.png",
+      "originalSha256": "0a01af41196f098426fd140da6f4983a54f5d5212a5222f90195071f484da85d",
+      "origin": "Original built-in image_gen for this authorized project",
+      "encoding": "RGB WebP quality92, no compositing or image edits",
+      "chapter": 2,
+      "sourcePrompt": "art-source/chapter-backgrounds/generation_manifest.json"
+    },
+    {
+      "id": "thundermarsh",
+      "path": "assets/battle/thundermarsh-premium.webp",
+      "sha256": "6110c24a89818cb8845ee5d15caef730e38c8ddd0ef27c261a18f1d86878d7d6",
+      "bytes": 474790,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "original": "art-source/chapter-backgrounds/thundermarsh-original.png",
+      "originalSha256": "d13ff9361ae4e894b5d4a26b5cd632ebb7d3c7556cf20f1c647a85bd15dc535a",
+      "origin": "Original built-in image_gen for this authorized project",
+      "encoding": "RGB WebP quality92, no compositing or image edits",
+      "chapter": 3,
+      "sourcePrompt": "art-source/chapter-backgrounds/generation_manifest.json"
+    }
+  ],
+  "integration": "BattleView chooses actual stage chapter; portraits and controls remain independent nodes.",
+  "review": "Both source paintings inspected as pixels before integration; final native composition is checked in round4."
+}

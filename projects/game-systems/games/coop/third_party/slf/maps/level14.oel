@@ -1,0 +1,83 @@
+<level>
+  <width>640</width>
+  <height>800</height>
+  <solids>
+    <rect x="0" y="0" w="640" h="10"/>
+    <rect x="0" y="10" w="10" h="790"/>
+    <rect x="10" y="110" w="40" h="30"/>
+    <rect x="10" y="300" w="390" h="50"/>
+    <rect x="10" y="620" w="630" h="180"/>
+    <rect x="100" y="10" w="40" h="150"/>
+    <rect x="100" y="450" w="540" h="30"/>
+    <rect x="160" y="440" w="20" h="10"/>
+    <rect x="170" y="480" w="60" h="80"/>
+    <rect x="240" y="350" w="20" h="30"/>
+    <rect x="290" y="10" w="350" h="210"/>
+    <rect x="320" y="420" w="20" h="30"/>
+    <rect x="630" y="220" w="10" h="230"/>
+    <rect x="630" y="480" w="10" h="140"/>
+  </solids>
+  <extraPlatforms>
+    <LargeCrate x="290" y="240"/>
+    <level2_spike2 x="290" y="220" width="80" height="10"/>
+    <level2_spike2 x="500" y="220" width="110" height="10"/>
+    <level2_spike2 x="240" y="380" width="20" height="10"/>
+    <level2_spike0 x="160" y="430" width="20" height="10"/>
+    <level2_specialBlock x="190" y="110" speed="40" movementType="1" animated="0"/>
+    <LargeCrate x="160" y="560"/>
+    <level2_spike1 x="10" y="350" width="10" height="270"/>
+    <helpBox x="30" y="560" type="0" helpString="Talk to Andre by pressing '_Action' while facing him."/>
+  </extraPlatforms>
+  <movingPlatforms>
+    <level2_specialPlatformSmall x="400" y="300" speed="80" movementType="1" animated="1">
+      <node x="590" y="300"/>
+    </level2_specialPlatformSmall>
+  </movingPlatforms>
+  <BGLayer1>
+    <level2_window x="90" y="350" width="150" height="50" scrollFactor="0.1"/>
+    <level2_MG2 x="0" y="130" scrollFactor="0.1"/>
+    <level2_metalPipe x="260" y="0" width="30" height="640" scrollFactor="0.3"/>
+  </BGLayer1>
+  <BGLayer2>
+    <level2_tank x="300" y="120" scrollFactor="0.7"/>
+    <level2_FMG3 x="300" y="350" scrollFactor="0.8"/>
+    <level2_FMG3 x="10" y="340" scrollFactor="0.7"/>
+    <level2_pipe1 x="370" y="130" width="270" height="70" scrollFactor="0.7"/>
+    <level2_greenPipe x="340" y="0" width="20" height="130" scrollFactor="0.7"/>
+    <level2_greenPipe x="150" y="0" width="20" height="640" scrollFactor="0.2"/>
+  </BGLayer2>
+  <BGLayer3>
+    <sodaPack x="240" y="430" scrollFactor="0.2"/>
+    <level2_braceLeft x="230" y="480"/>
+    <level2_braceRight x="150" y="480"/>
+    <level2_braceRight x="220" y="350"/>
+    <level2_braceRight x="610" y="220"/>
+    <palettes x="400" y="580" scrollFactor="0.2"/>
+  </BGLayer3>
+  <objects>
+    <Bottle x="35" y="372" width="12"/>
+    <exit x="545" y="530" nextLevel="2"/>
+    <liselotCheckPoint x="550" y="393" player="1"/>
+    <andreCheckPoint x="101" y="392" player="1"/>
+  </objects>
+  <characters>
+    <player x="10" y="60" speed="40" movementType="1" startsFirst="1" levelName="Sewer Depths" andreInitialFlip="0" liselotInitialFlip="1" followWidth="0" followHeight="0" talkString="A man with nothing to lose is a dangerous man.">
+      <node x="40" y="60"/>
+    </player>
+    <worker x="10" y="260" speed="40" movementType="1" talkString="I could ramp up the production. I could increase the bottles per hour. I could do it all. It would go unnoticed and my pay remain the same.">
+      <node x="360" y="260"/>
+    </worker>
+    <inspector x="350" y="410" speed="40" movementType="1" talkString="If I am using my wealth to exceed greater odds for my familys happiness, I dont see that as any more amoral as buying insurance.">
+      <node x="600" y="410"/>
+    </inspector>
+    <liselot x="190" y="60" speed="40" movementType="1" talkString="Just say yes.">
+      <node x="210" y="60"/>
+    </liselot>
+    <chef x="240" y="570" speed="40" movementType="1" talkString="The sugar we buy is harvested in the local area. We buy local, keep the profits in our neighborhood.">
+      <node x="590" y="570"/>
+    </chef>
+  </characters>
+  <FGLayer1>
+    <level2_chainTile x="290" y="1" width="12" height="639" scrollFactor="1.5"/>
+  </FGLayer1>
+</level>

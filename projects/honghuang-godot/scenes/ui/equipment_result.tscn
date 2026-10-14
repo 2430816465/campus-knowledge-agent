@@ -1,0 +1,120 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Theme" path="res://assets/ui-foundation/foundation.tres" id="theme"]
+[ext_resource type="Script" path="res://scripts/ui/equipment_result.gd" id="script"]
+[ext_resource type="PackedScene" path="res://scenes/ui/components/equipment_card.tscn" id="card"]
+
+[node name="EquipmentResult" type="Control"]
+theme = ExtResource("theme")
+metadata/ui_foundation = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("script")
+mouse_filter = 0
+z_index = 50
+
+
+[node name="Shade" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.03,0.07,0.06,0.72)
+mouse_filter = 0
+
+
+[node name="Design" type="Control" parent="."]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 941.0
+offset_bottom = 1672.0
+mouse_filter = 2
+
+
+[node name="Panel" type="PanelContainer" parent="Design"]
+offset_left = 32.0
+offset_top = 215.0
+offset_right = 909.0
+offset_bottom = 1445.0
+
+
+[node name="Content" type="VBoxContainer" parent="Design/Panel"]
+theme_override_constants/separation = 22
+
+
+[node name="Header" type="HBoxContainer" parent="Design/Panel/Content"]
+
+
+[node name="Title" type="Label" parent="Design/Panel/Content/Header"]
+size_flags_horizontal = 3
+horizontal_alignment = 1
+text = "炼器结果"
+theme_override_font_sizes/font_size = 47
+mouse_filter = 2
+
+
+[node name="Close" type="Button" parent="Design/Panel/Content/Header"]
+text = "×"
+custom_minimum_size = Vector2(76,76)
+
+
+[node name="Scroll" type="ScrollContainer" parent="Design/Panel/Content"]
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+
+[node name="Cards" type="HBoxContainer" parent="Design/Panel/Content/Scroll"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 38
+
+
+[node name="Current" parent="Design/Panel/Content/Scroll/Cards" instance=ExtResource("card")]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+
+[node name="New" parent="Design/Panel/Content/Scroll/Cards" instance=ExtResource("card")]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+
+[node name="Lock" type="CheckButton" parent="Design/Panel/Content"]
+text = "锁定装备（不参与分解）"
+custom_minimum_size = Vector2(0,72)
+
+
+[node name="Actions" type="HBoxContainer" parent="Design/Panel/Content"]
+
+
+[node name="Salvage" type="Button" parent="Design/Panel/Content/Actions"]
+text = "分解"
+custom_minimum_size = Vector2(0,94)
+size_flags_horizontal = 3
+
+
+[node name="Keep" type="Button" parent="Design/Panel/Content/Actions"]
+text = "保留"
+custom_minimum_size = Vector2(0,94)
+size_flags_horizontal = 3
+
+
+[node name="Equip" type="Button" parent="Design/Panel/Content/Actions"]
+text = "装备替换"
+custom_minimum_size = Vector2(0,94)
+size_flags_horizontal = 3
+theme_type_variation = &"Gold"
+
+
+[node name="Note" type="Label" parent="Design/Panel/Content"]
+horizontal_alignment = 1
+text = "关闭后装备保留在背包"
+theme_override_font_sizes/font_size = 23
+mouse_filter = 2
+

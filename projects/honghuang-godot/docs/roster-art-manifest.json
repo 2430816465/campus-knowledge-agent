@@ -1,0 +1,1375 @@
+{
+  "version": "v0.4.0",
+  "count": 36,
+  "original14": "Unchanged; existing provenance retained.",
+  "assets": [
+    {
+      "id": "yuanshi",
+      "name": "元始天尊",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/yuanshi.png",
+        "bytes": 2622476,
+        "sha256": "c88b5501044a5dd934e879a7316b1e33b4af820859178a362685d2e217ba453d"
+      },
+      "portrait": {
+        "path": "assets/portraits/yuanshi-premium.webp",
+        "bytes": 416596,
+        "sha256": "65f10e59b075d7cf1767bb77eac40f86189a243f2fe3f218d64aadf137c2c334"
+      },
+      "avatar": {
+        "path": "assets/avatars/yuanshi-premium.webp",
+        "bytes": 45894,
+        "sha256": "b077b6f73af60768fccb8876656b29871f47e01eca67d38ca928f468e000219d"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "STYLE reference ONLY: use input's polished hand-drawn 2D anime Chinese immortal card art, bold crisp ink lines and CEL SHADING, clean jewel colors and restrained ornate gold detailing. Create a completely NEW original character: 元始天尊，威严的银发长须老道，白金玉冠、白袍、玉如意、太极清光；长须智慧长者面孔，白金色为主. ONE character vertical2:3 waist-to-thigh portrait, distinct unique face, head entirely within frame upperthird, clear anatomy and hands, signature prop readable. Ivory background with character-specific FLAT geometric halo, no scenery. Match the reference collection quality, not photo, not 3D, no realistic skin. Do not copy reference face/armor/spear unless specified. NO text/letters/UI/cardborder/watermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "taishang",
+      "name": "太上老君",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/taishang.png",
+        "bytes": 2886806,
+        "sha256": "bc6e93ebca9d468da007f916c8781e60733a996d540f8afc4ac389fb1533b9c1"
+      },
+      "portrait": {
+        "path": "assets/portraits/taishang-premium.webp",
+        "bytes": 471338,
+        "sha256": "db9c0c3d04ea24aa122e49690d50beb86cac332845e3a693f2f392eb629e6f91"
+      },
+      "avatar": {
+        "path": "assets/avatars/taishang-premium.webp",
+        "bytes": 53086,
+        "sha256": "453d314bcc1966319dac1fd43142e9b551fdf2481b4e1d98edcef07a778f2747"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Use the input image ONLY as a STYLE and framing reference. Create a NEW distinct original Chinese myth RPG character portrait: 太上老君，慈祥但精神矍铄的白发老道，长须，青绿色道袍与金色细纹，手持拂尘，另一手托小巧丹炉，紫气和阴阳圆环，distinct elderly face. Match reference's hand-drawn 2D anime xianxia premium illustration: bold clear ink contours, controlled CEL SHADING, bright jewel palettes, ornamental gold details, not photoreal or live action. Vertical2:3, single character waist-to-thigh framing, head fully inside image upperthird, identifiable face and signature object, ivory background and character-specific ornate flat mandala. No letters, text, logo, UI border. Do not reuse reference face/blue armor/spear. New portrait fully drawn, same collection quality.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "nvwa",
+      "name": "女娲",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/nvwa.png",
+        "bytes": 2963810,
+        "sha256": "ea8b805113404924dbb4cce9875351aa6b5de67f5f7542e9a7caf94457191ef6"
+      },
+      "portrait": {
+        "path": "assets/portraits/nvwa-premium.webp",
+        "bytes": 509186,
+        "sha256": "31c842d366b22ac1100fbaa611e3e529252cd3558789b3775eb2bfe4aed62b12"
+      },
+      "avatar": {
+        "path": "assets/avatars/nvwa-premium.webp",
+        "bytes": 56928,
+        "sha256": "50d41d690e9ee769c23f712729094a9fac493a3b75fda7e762ccd44145c0b727"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Use the input image ONLY as a STYLE and framing reference. Create a NEW distinct original Chinese myth RPG character portrait: 女娲，成熟而慈和庄严的东方女神，乌黑长发与碧玉金冠，翡翠绿金色完整华服，掌心悬浮五彩补天石，五色飘带，优美沉静姿态，clearly feminine mature face. Match reference's hand-drawn 2D anime xianxia premium illustration: bold clear ink contours, controlled CEL SHADING, bright jewel palettes, ornamental gold details, not photoreal or live action. Vertical2:3, single character waist-to-thigh framing, head fully inside image upperthird, identifiable face and signature object, ivory background and character-specific ornate flat mandala. No letters, text, logo, UI border. Do not reuse reference face/blue armor/spear. New portrait fully drawn, same collection quality.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "jieyin",
+      "name": "接引道人",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/jieyin.png",
+        "bytes": 2794621,
+        "sha256": "a3a3d94c6d4f3c0d0633319e5d97a52f3d9eb6cba6f5572f4e2170c34a77cfaf"
+      },
+      "portrait": {
+        "path": "assets/portraits/jieyin-premium.webp",
+        "bytes": 480836,
+        "sha256": "38a50b9289473726a4cf6f6145f662ea27ce21c47e28f2c092620b443843cc6d"
+      },
+      "avatar": {
+        "path": "assets/avatars/jieyin-premium.webp",
+        "bytes": 46846,
+        "sha256": "bad039643b0b438e3f31583095a067a65ddde08fb6c75cd0cce89b42d7fd0e32"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        192,
+        90,
+        832,
+        730
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Use the input image ONLY as a STYLE and framing reference. Create a NEW distinct original Chinese myth RPG character portrait: 接引道人，清瘦沉静的年长修行者，光头与长耳、素金法衣、金莲宝幢，掌间盛开莲花，淡金莲台几何光环，solemn distinct angular older face. Match reference's hand-drawn 2D anime xianxia premium illustration: bold clear ink contours, controlled CEL SHADING, bright jewel palettes, ornamental gold details, not photoreal or live action. Vertical2:3, single character waist-to-thigh framing, head fully inside image upperthird, identifiable face and signature object, ivory background and character-specific ornate flat mandala. No letters, text, logo, UI border. Do not reuse reference face/blue armor/spear. New portrait fully drawn, same collection quality.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "zhunti",
+      "name": "准提道人",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/zhunti.png",
+        "bytes": 2721462,
+        "sha256": "b8f133d61a2a6a3298a48214ca359809b56dc28ad8ab32d69b693f59d808819d"
+      },
+      "portrait": {
+        "path": "assets/portraits/zhunti-premium.webp",
+        "bytes": 464588,
+        "sha256": "8407d9e255cbd0ef77b3989f10da078e9e146e0807bf670d79b891e53a662ad3"
+      },
+      "avatar": {
+        "path": "assets/avatars/zhunti-premium.webp",
+        "bytes": 54264,
+        "sha256": "6b5a8084b0bebb5ed00bccc18f51c8e7a318c622b65b859b021a6fbbb5f6f8ed"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "STYLE reference ONLY: use input's polished hand-drawn 2D anime Chinese immortal card art, bold crisp ink lines and CEL SHADING, clean jewel colors and restrained ornate gold detailing. Create a completely NEW original character: 准提道人，慈眉但精明的中年修行者，卷曲短黑发，绿金法袍，手持挂满七色宝石的七宝妙树枝，圆形佛光，姿态沉着. ONE character vertical2:3 waist-to-thigh portrait, distinct unique face, head entirely within frame upperthird, clear anatomy and hands, signature prop readable. Ivory background with character-specific FLAT geometric halo, no scenery. Match the reference collection quality, not photo, not 3D, no realistic skin. Do not copy reference face/armor/spear unless specified. NO text/letters/UI/cardborder/watermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "kongxuan",
+      "name": "孔宣",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/kongxuan.png",
+        "bytes": 2901574,
+        "sha256": "9ed59f2d0e92bdee20505ecac7c86f911092b5c3c988e6e1bfcfe55657836d22"
+      },
+      "portrait": {
+        "path": "assets/portraits/kongxuan-premium.webp",
+        "bytes": 502492,
+        "sha256": "16dea4f4fe4b0d55a7dfc20b3f9d598e511b310c72bf3158f1b574a6eba9c916"
+      },
+      "avatar": {
+        "path": "assets/avatars/kongxuan-premium.webp",
+        "bytes": 57224,
+        "sha256": "dc07bfd9369cddcb646c279c13d41ff5cacf23acee166bef38c73c94bd820f2b"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "STYLE reference ONLY: use input's polished hand-drawn 2D anime Chinese immortal card art, bold crisp ink lines and CEL SHADING, clean jewel colors and restrained ornate gold detailing. Create a completely NEW original character: 孔宣，高傲俊美的成熟男子，黑长发，孔雀羽披，五色神光扇形散开，持长枪；青绿蓝紫羽毛和金甲，孔雀冠，面容锐利. ONE character vertical2:3 waist-to-thigh portrait, distinct unique face, head entirely within frame upperthird, clear anatomy and hands, signature prop readable. Ivory background with character-specific FLAT geometric halo, no scenery. Match the reference collection quality, not photo, not 3D, no realistic skin. Do not copy reference face/armor/spear unless specified. NO text/letters/UI/cardborder/watermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "randeng",
+      "name": "燃灯道人",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/randeng.png",
+        "bytes": 2538785,
+        "sha256": "51de286bc0c77ccd6b7412c4b753e98073900d268d8eb5859af1b62cfaf45c13"
+      },
+      "portrait": {
+        "path": "assets/portraits/randeng-premium.webp",
+        "bytes": 408436,
+        "sha256": "5b9a796012eae5bcbaeac6c390f7963242f93dd40ca22b743977c8814e28c014"
+      },
+      "avatar": {
+        "path": "assets/avatars/randeng-premium.webp",
+        "bytes": 49132,
+        "sha256": "2027fe11a5c6785b934569bc53bb64db85f96a673c841a1fc37da97ad7632377"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "STYLE reference ONLY: use input's polished hand-drawn 2D anime Chinese immortal card art, bold crisp ink lines and CEL SHADING, clean jewel colors and restrained ornate gold detailing. Create a completely NEW original character: 燃灯道人，瘦削年长男子，苍白发髻与短须，玄黑金边道袍，手持精巧琉璃灯，幽蓝灵火，沉静深邃眼神. ONE character vertical2:3 waist-to-thigh portrait, distinct unique face, head entirely within frame upperthird, clear anatomy and hands, signature prop readable. Ivory background with character-specific FLAT geometric halo, no scenery. Match the reference collection quality, not photo, not 3D, no realistic skin. Do not copy reference face/armor/spear unless specified. NO text/letters/UI/cardborder/watermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "luya",
+      "name": "陆压",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/luya.png",
+        "bytes": 2610478,
+        "sha256": "ad3572c266430d58a20e818f4abbc4ad8e2eec083fee97cf98e0af4e06bbe613"
+      },
+      "portrait": {
+        "path": "assets/portraits/luya-premium.webp",
+        "bytes": 441352,
+        "sha256": "be64a8a2d353846f177dbc6e6651a256db28db5a4a45825ade96f69e6746700f"
+      },
+      "avatar": {
+        "path": "assets/avatars/luya-premium.webp",
+        "bytes": 55152,
+        "sha256": "7ce7ebaa9863f11bd303145eb744cf63ccaa7466510cdeba3a9b5b595cdcca3a"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "STYLE reference ONLY: use input's polished hand-drawn 2D anime Chinese immortal card art, bold crisp ink lines and CEL SHADING, clean jewel colors and restrained ornate gold detailing. Create a completely NEW original character: 陆压，潇洒锐气的青年男子，赤金羽冠，黑棕发，红橙金色道袍，腰间大葫芦与小巧悬浮白色刃焰，灿烂日轮背纹. ONE character vertical2:3 waist-to-thigh portrait, distinct unique face, head entirely within frame upperthird, clear anatomy and hands, signature prop readable. Ivory background with character-specific FLAT geometric halo, no scenery. Match the reference collection quality, not photo, not 3D, no realistic skin. Do not copy reference face/armor/spear unless specified. NO text/letters/UI/cardborder/watermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "duobao",
+      "name": "多宝道人",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/duobao.png",
+        "bytes": 2829320,
+        "sha256": "cf361bfa89ded055fcd091e5d864c72a07b72234bbb17bb9c88ba8e87153e90b"
+      },
+      "portrait": {
+        "path": "assets/portraits/duobao-premium.webp",
+        "bytes": 477180,
+        "sha256": "001da2a472831f853a16a123ebda74b164edfb279d2c880b95d4b27912c69bec"
+      },
+      "avatar": {
+        "path": "assets/avatars/duobao-premium.webp",
+        "bytes": 53860,
+        "sha256": "06bbba62687f0ec2cc055702a3b57da866b0c06a670a8a812a314d28bd2206bc"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "STYLE reference ONLY: use input's polished hand-drawn 2D anime Chinese immortal card art, bold crisp ink lines and CEL SHADING, clean jewel colors and restrained ornate gold detailing. Create a completely NEW original character: 多宝道人，健硕宽额的中年男子，紫金法衣，浮空法宝环与铜镜钟铃，手托古雅宝匣，温厚机敏脸，形体不同于瘦长剑客. ONE character vertical2:3 waist-to-thigh portrait, distinct unique face, head entirely within frame upperthird, clear anatomy and hands, signature prop readable. Ivory background with character-specific FLAT geometric halo, no scenery. Match the reference collection quality, not photo, not 3D, no realistic skin. Do not copy reference face/armor/spear unless specified. NO text/letters/UI/cardborder/watermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "jinling",
+      "name": "金灵圣母",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/jinling.png",
+        "bytes": 2926219,
+        "sha256": "cd5232400c677c8032e9411b9fd823a610819d60ae46a470c23bd59667cbf6ae"
+      },
+      "portrait": {
+        "path": "assets/portraits/jinling-premium.webp",
+        "bytes": 505978,
+        "sha256": "1eaaaf16512c64fe9e8a334e2768d758cd5bfa005cd6edfcc9cf5401cb955eab"
+      },
+      "avatar": {
+        "path": "assets/avatars/jinling-premium.webp",
+        "bytes": 55648,
+        "sha256": "c28751a5680c432bcc34b6186aa6b3f8a148347aa619d96ce14ff56a86c53cd8"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "STYLE reference ONLY: use input's polished hand-drawn 2D anime Chinese immortal card art, bold crisp ink lines and CEL SHADING, clean jewel colors and restrained ornate gold detailing. Create a completely NEW original character: 金灵圣母，英气凌厉的成熟女性仙人，金白冠饰，深金长发，白金战法衣，龙虎如意与星芒剑气，目光自信不温柔怯懦. ONE character vertical2:3 waist-to-thigh portrait, distinct unique face, head entirely within frame upperthird, clear anatomy and hands, signature prop readable. Ivory background with character-specific FLAT geometric halo, no scenery. Match the reference collection quality, not photo, not 3D, no realistic skin. Do not copy reference face/armor/spear unless specified. NO text/letters/UI/cardborder/watermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "guangchengzi",
+      "name": "广成子",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/guangchengzi.png",
+        "bytes": 2757611,
+        "sha256": "c92d938c06e9977888e1b3401a24c32a3c4e9f0e2d12831e8802897338c07492"
+      },
+      "portrait": {
+        "path": "assets/portraits/guangchengzi-premium.webp",
+        "bytes": 460934,
+        "sha256": "4daea23bc62dd9c6d17162ddc7ddac68ef6999ed18e396507027181550ff7791"
+      },
+      "avatar": {
+        "path": "assets/avatars/guangchengzi-premium.webp",
+        "bytes": 52928,
+        "sha256": "23ef34d1b65b6d0fe2df4396bdf7ca7e251b0bc2a48072f4b660f7fba713157a"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "STYLE reference ONLY: use input's polished hand-drawn 2D anime Chinese immortal card art, bold crisp ink lines and CEL SHADING, clean jewel colors and restrained ornate gold detailing. Create a completely NEW original character: 广成子，刚毅中年道者，赤白道袍，髻发短黑须，掌前悬浮巨大方形翻天印，赤金山纹法阵，稳重武者气质. ONE character vertical2:3 waist-to-thigh portrait, distinct unique face, head entirely within frame upperthird, clear anatomy and hands, signature prop readable. Ivory background with character-specific FLAT geometric halo, no scenery. Match the reference collection quality, not photo, not 3D, no realistic skin. Do not copy reference face/armor/spear unless specified. NO text/letters/UI/cardborder/watermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "chijingzi",
+      "name": "赤精子",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/chijingzi.png",
+        "bytes": 2731653,
+        "sha256": "9b8dd564a91a4add4eb2377369a92c99f0e4156d9141b1720b74feeeef3a2838"
+      },
+      "portrait": {
+        "path": "assets/portraits/chijingzi-premium.webp",
+        "bytes": 451086,
+        "sha256": "d3199c2b98e03287bedf3f6f95c5aaa2fccac7ed0f577a4daf191ca05ff4065d"
+      },
+      "avatar": {
+        "path": "assets/avatars/chijingzi-premium.webp",
+        "bytes": 53778,
+        "sha256": "edaadb8883a7a348dc939051ab4092ddabb59cce104dfef4ba01d6b492e609c3"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input is STYLE reference only. NEW original Chinese mythology RPG portrait: 赤精子，严谨中年男性道士，浓眉红棕发髻与短须，赭红长袍，手举黑白双面阴阳宝镜，铜光，镜中太极，沉稳方脸. Match high-quality 2D anime xianxia CARD illustration, clearly drawn crisp ink contours, controlled flat CEL SHADING, vivid palette, elegant embroidered fabrics, no photo/3D realism. ONE distinct character vertical2:3 thigh-up with wholehead inside upperthird, expressive individualface, clearly visible signature object, dynamic but readable cloth. Ivory backdrop plus flat character-specific geometric mandala. Originaldesign not copiedactor. Do NOT reuse reference face/bluearmor/spear. No text, no UI, no border, no watermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "yuding",
+      "name": "玉鼎真人",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/yuding.png",
+        "bytes": 2834287,
+        "sha256": "6403cd78cba79f01457b3ab91f2bdc7bd5f89c9e60e689d3a3ad326cda281ded"
+      },
+      "portrait": {
+        "path": "assets/portraits/yuding-premium.webp",
+        "bytes": 456016,
+        "sha256": "08b734ce783893e654d2c5981b73a6e96c751d5ef6c24a6f2266ca8812baed3c"
+      },
+      "avatar": {
+        "path": "assets/avatars/yuding-premium.webp",
+        "bytes": 51146,
+        "sha256": "17a23a0864316ff02f8dafb83db0f05bfc148d0b63e3c3e33fe5596f6954c520"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input is STYLE reference only. NEW original Chinese mythology RPG portrait: 玉鼎真人，清俊沉静的青年男性剑仙，修长黑发青玉冠，青玉道衣，长剑斜持，清光玉环，清瘦轮廓与翠绿色眼神. Match high-quality 2D anime xianxia CARD illustration, clearly drawn crisp ink contours, controlled flat CEL SHADING, vivid palette, elegant embroidered fabrics, no photo/3D realism. ONE distinct character vertical2:3 thigh-up with wholehead inside upperthird, expressive individualface, clearly visible signature object, dynamic but readable cloth. Ivory backdrop plus flat character-specific geometric mandala. Originaldesign not copiedactor. Do NOT reuse reference face/bluearmor/spear. No text, no UI, no border, no watermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "wenshu",
+      "name": "文殊广法天尊",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/wenshu.png",
+        "bytes": 3026489,
+        "sha256": "3ac75420ebe87678a01286455dafdebe96cf04abdd2b33bf696385314dc004f8"
+      },
+      "portrait": {
+        "path": "assets/portraits/wenshu-premium.webp",
+        "bytes": 534516,
+        "sha256": "820dca197a97fbd863f47b09d22c35ed0418b880a50ad23a3fa05f155b4aa02b"
+      },
+      "avatar": {
+        "path": "assets/avatars/wenshu-premium.webp",
+        "bytes": 54156,
+        "sha256": "d7ccd9b60b135f592197b72900e29e01e4bcdd9dbbb1fa49c02a3ad2e164fcfa"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input is STYLE reference only. NEW original Chinese mythology RPG portrait: 文殊广法天尊，睿智成熟男性，金色细冠，靛金道袍，三环遁龙桩和环绕金绳，小型三层法桩悬浮，冷静审视的眼睛. Match high-quality 2D anime xianxia CARD illustration, clearly drawn crisp ink contours, controlled flat CEL SHADING, vivid palette, elegant embroidered fabrics, no photo/3D realism. ONE distinct character vertical2:3 thigh-up with wholehead inside upperthird, expressive individualface, clearly visible signature object, dynamic but readable cloth. Ivory backdrop plus flat character-specific geometric mandala. Originaldesign not copiedactor. Do NOT reuse reference face/bluearmor/spear. No text, no UI, no border, no watermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "puxian",
+      "name": "普贤真人",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/puxian.png",
+        "bytes": 2885889,
+        "sha256": "a5a43d0e58da0a1a4dfe5749d2ddcb79a7ff0de5b3376249274aa0f23c7dc3f5"
+      },
+      "portrait": {
+        "path": "assets/portraits/puxian-premium.webp",
+        "bytes": 472210,
+        "sha256": "0fcc672371ffef9ea76964662b38c0501d19d56212546441dfd064d93e3b6c3d"
+      },
+      "avatar": {
+        "path": "assets/avatars/puxian-premium.webp",
+        "bytes": 51996,
+        "sha256": "3bc968afebf01e5e4341b31d1a8252fc22d8bcbdf98883d8719a77699fda3571"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input is STYLE reference only. NEW original Chinese mythology RPG portrait: 普贤真人，端庄成熟男性，白紫仙衣，黑发束冠，双手持不同弧形吴钩双剑，交错剑弧，白紫金色，微笑但坚定. Match high-quality 2D anime xianxia CARD illustration, clearly drawn crisp ink contours, controlled flat CEL SHADING, vivid palette, elegant embroidered fabrics, no photo/3D realism. ONE distinct character vertical2:3 thigh-up with wholehead inside upperthird, expressive individualface, clearly visible signature object, dynamic but readable cloth. Ivory backdrop plus flat character-specific geometric mandala. Originaldesign not copiedactor. Do NOT reuse reference face/bluearmor/spear. No text, no UI, no border, no watermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "cihang",
+      "name": "慈航道人",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/cihang.png",
+        "bytes": 2639509,
+        "sha256": "39287f126b210322f26cda67f4c44266b7dd03c940213fd871844782271a1eb3"
+      },
+      "portrait": {
+        "path": "assets/portraits/cihang-premium.webp",
+        "bytes": 439884,
+        "sha256": "727f9792ae5310b0aeee27e8c1f9648cca27364476bfffc043824857fdb6c12a"
+      },
+      "avatar": {
+        "path": "assets/avatars/cihang-premium.webp",
+        "bytes": 49962,
+        "sha256": "fdb6f2caebef15f235e0e0207b959fc7ad439ee52e2eba09447bcd0a38c109c1"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input is STYLE reference only. NEW original Chinese mythology RPG portrait: 慈航道人，慈和中性偏女性的清雅修道者，白青纱衣，乌发简单玉簪，持白色净瓶和纤细柳枝，水珠，清净无攻击姿态. Match high-quality 2D anime xianxia CARD illustration, clearly drawn crisp ink contours, controlled flat CEL SHADING, vivid palette, elegant embroidered fabrics, no photo/3D realism. ONE distinct character vertical2:3 thigh-up with wholehead inside upperthird, expressive individualface, clearly visible signature object, dynamic but readable cloth. Ivory backdrop plus flat character-specific geometric mandala. Originaldesign not copiedactor. Do NOT reuse reference face/bluearmor/spear. No text, no UI, no border, no watermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "daoxing",
+      "name": "道行天尊",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/daoxing.png",
+        "bytes": 2706555,
+        "sha256": "f5a4024f02d53fffd39f6668eda6d7b0178991ce3a8e0ed18444d670e65dcd91"
+      },
+      "portrait": {
+        "path": "assets/portraits/daoxing-premium.webp",
+        "bytes": 404698,
+        "sha256": "d9d1b3083a4b0909ae19a7bf546049397bed3cd48dab0f492e715901ed274fdb"
+      },
+      "avatar": {
+        "path": "assets/avatars/daoxing-premium.webp",
+        "bytes": 49200,
+        "sha256": "592aea201606b0335b7ba5c3e5d11cdb8a52dff8895ae0428db4223f7064b06d"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input is STYLE reference only. NEW original Chinese mythology RPG portrait: 道行天尊，坚毅粗眉中年男道者，浅灰青袍，长柄降魔杵，山石纹，低调青铜饰物，黑短须，与华丽人物区别明显. Match high-quality 2D anime xianxia CARD illustration, clearly drawn crisp ink contours, controlled flat CEL SHADING, vivid palette, elegant embroidered fabrics, no photo/3D realism. ONE distinct character vertical2:3 thigh-up with wholehead inside upperthird, expressive individualface, clearly visible signature object, dynamic but readable cloth. Ivory backdrop plus flat character-specific geometric mandala. Originaldesign not copiedactor. Do NOT reuse reference face/bluearmor/spear. No text, no UI, no border, no watermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "qingxu",
+      "name": "清虚道德真君",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/qingxu.png",
+        "bytes": 2911102,
+        "sha256": "27b8e7f7a92100c1e61022743ba71809cc93cf328d6239994f6267052fd21ed8"
+      },
+      "portrait": {
+        "path": "assets/portraits/qingxu-premium.webp",
+        "bytes": 494706,
+        "sha256": "698d0a11527e4b3b8bc88a4dc91a844dd34d2c536cd034fa5198e6eabff86af5"
+      },
+      "avatar": {
+        "path": "assets/avatars/qingxu-premium.webp",
+        "bytes": 56904,
+        "sha256": "0c55b54ec140f5be80b51220679a0e15278fe9d8840362f619523716e86ee4cd"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input is STYLE reference only. NEW original Chinese mythology RPG portrait: 清虚道德真君，神采清逸的成熟男仙，苍青羽衣，灰黑飘发，七色羽扇，细碎火羽，层次轻盈，多色扇叶鲜明. Match high-quality 2D anime xianxia CARD illustration, clearly drawn crisp ink contours, controlled flat CEL SHADING, vivid palette, elegant embroidered fabrics, no photo/3D realism. ONE distinct character vertical2:3 thigh-up with wholehead inside upperthird, expressive individualface, clearly visible signature object, dynamic but readable cloth. Ivory backdrop plus flat character-specific geometric mandala. Originaldesign not copiedactor. Do NOT reuse reference face/bluearmor/spear. No text, no UI, no border, no watermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "huanglong",
+      "name": "黄龙真人",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/huanglong.png",
+        "bytes": 2817869,
+        "sha256": "c972f084e747bbd373ade733861d96c1fefa5e73f81efca705afeaed6c112755"
+      },
+      "portrait": {
+        "path": "assets/portraits/huanglong-premium.webp",
+        "bytes": 467780,
+        "sha256": "9d9dc1c8a9615c8cdc1a4801c2b7c5a6de15949ba52b15f35374cd63426ff5ef"
+      },
+      "avatar": {
+        "path": "assets/avatars/huanglong-premium.webp",
+        "bytes": 54776,
+        "sha256": "8dd8b171f5c6abe0a3392eae15b59fb9cdb753bc37245d6f1f846f33c77de507"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input is STYLE reference only. NEW original Chinese mythology RPG portrait: 黄龙真人，宽脸亲和中年男道者，土金道袍，褐黑发束髻，龙纹玉佩，岩金鳞纹，金色龙影圆环，温厚而勇敢. Match high-quality 2D anime xianxia CARD illustration, clearly drawn crisp ink contours, controlled flat CEL SHADING, vivid palette, elegant embroidered fabrics, no photo/3D realism. ONE distinct character vertical2:3 thigh-up with wholehead inside upperthird, expressive individualface, clearly visible signature object, dynamic but readable cloth. Ivory backdrop plus flat character-specific geometric mandala. Originaldesign not copiedactor. Do NOT reuse reference face/bluearmor/spear. No text, no UI, no border, no watermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "juliusun",
+      "name": "惧留孙",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/juliusun.png",
+        "bytes": 2675051,
+        "sha256": "e3cfaa9c2cf47cf242290ddf843a2f25a064be09d03160ba1149589135a6cdb8"
+      },
+      "portrait": {
+        "path": "assets/portraits/juliusun-premium.webp",
+        "bytes": 424306,
+        "sha256": "dd49a8429ed683f7b9d90270a63b495acdc7b0ad937a0ac4c27c0416ae74bfcd"
+      },
+      "avatar": {
+        "path": "assets/avatars/juliusun-premium.webp",
+        "bytes": 49956,
+        "sha256": "0f90c88fd8e88e3ed158f1d469766f2cc3599fb1e05ce7ff43fcc6970bd9b6ba"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        192,
+        100,
+        832,
+        740
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input is STYLE reference only. NEW original Chinese mythology RPG portrait: 惧留孙，体态矮壮圆润的年长男性道人，黄褐道袍，光亮额头短灰须，手持金色捆仙绳，绳索结阵光环，亲切狡黠智慧. Match high-quality 2D anime xianxia CARD illustration, clearly drawn crisp ink contours, controlled flat CEL SHADING, vivid palette, elegant embroidered fabrics, no photo/3D realism. ONE distinct character vertical2:3 thigh-up with wholehead inside upperthird, expressive individualface, clearly visible signature object, dynamic but readable cloth. Ivory backdrop plus flat character-specific geometric mandala. Originaldesign not copiedactor. Do NOT reuse reference face/bluearmor/spear. No text, no UI, no border, no watermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "wudang",
+      "name": "无当圣母",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/wudang.png",
+        "bytes": 2994128,
+        "sha256": "7620df743973ad16691b532e444cf2fe11b5c5fc1d55c3ef2e9bb042cc732708"
+      },
+      "portrait": {
+        "path": "assets/portraits/wudang-premium.webp",
+        "bytes": 457054,
+        "sha256": "1359bbbac65e323b6683aa1a9d3b70b6a106890b54d5464562a314bcbcc5997b"
+      },
+      "avatar": {
+        "path": "assets/avatars/wudang-premium.webp",
+        "bytes": 53598,
+        "sha256": "9b00abb28ba249581de7aa25fe6eb7bbfbe1efa6d78ce1daabd535359fa3c1fc"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input is STYLE reference ONLY. Create completely original Chinese mythology RPG character 无当圣母，冷静威严的成年女剑仙，墨青法衣，黑色高束发与清冷银冠，细长星芒剑阵，素净银翠饰品，狭长锐利眼睛，坚定姿态. Premium hand-drawn 2D anime xianxia CARD art, crisp clear inkline, rich restrained CEL SHADING, ornamental embroidery and gold/silver trim, clean painterly colors notphoto/not3D. ONE character vertical2:3 thigh-up, completeheadinsideupperthird, distinctindividualface, signaturepropreadable, anatomicalhands, dynamiccloth. Cleanivorybackground withflatcharacter-specificmandala. DO NOTcopyreferenceface/bluearmor/spear. No text no logo noUI noborder nowatermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "guiling",
+      "name": "龟灵圣母",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/guiling.png",
+        "bytes": 3038678,
+        "sha256": "5ec711e3347d9fd0a0b4aaf88b6e70f6f184a8092b5eded7d27eb8f292487e18"
+      },
+      "portrait": {
+        "path": "assets/portraits/guiling-premium.webp",
+        "bytes": 510672,
+        "sha256": "b07abfbe17f0173e45aa1bb07f23a838085bee2e108985deb62bd452a365774a"
+      },
+      "avatar": {
+        "path": "assets/avatars/guiling-premium.webp",
+        "bytes": 57438,
+        "sha256": "5e6b6deeb584d15a0a64715509cee447e62f018501b75ef0edc75f1c818e7532"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        180,
+        65,
+        820,
+        705
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input is STYLE reference ONLY. Create completely original Chinese mythology RPG character 龟灵圣母，健壮英气的成年女性守护者，深棕发编辫，玄碧重衣与龟甲纹护肩，日月双珠，一面有水纹的盾，深绿蓝金色，有力量感不同于纤细少女. Premium hand-drawn 2D anime xianxia CARD art, crisp clear inkline, rich restrained CEL SHADING, ornamental embroidery and gold/silver trim, clean painterly colors notphoto/not3D. ONE character vertical2:3 thigh-up, completeheadinsideupperthird, distinctindividualface, signaturepropreadable, anatomicalhands, dynamiccloth. Cleanivorybackground withflatcharacter-specificmandala. DO NOTcopyreferenceface/bluearmor/spear. No text no logo noUI noborder nowatermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "shiji",
+      "name": "石矶娘娘",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/shiji.png",
+        "bytes": 2871429,
+        "sha256": "2126c4c378fcd71a47e0960ea515585eb8539cd593a27422a1245c89b2014eba"
+      },
+      "portrait": {
+        "path": "assets/portraits/shiji-premium.webp",
+        "bytes": 450350,
+        "sha256": "c49ce9c6ea6dbdbaa9aac75b98c7705ecbf52a9cb5ed09ed0d479d5a50ae1049"
+      },
+      "avatar": {
+        "path": "assets/avatars/shiji-premium.webp",
+        "bytes": 52722,
+        "sha256": "0e728ed57be7a13683b871fc5d337284953c15398a4243aa2a284c8892ec3959"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input is STYLE reference ONLY. Create completely original Chinese mythology RPG character 石矶娘娘，成熟沉稳女性，青灰石纹仙衣，灰紫长发，八卦云光帕在手间展开，琥珀色石晶，冷静端正方圆脸，山石几何光环. Premium hand-drawn 2D anime xianxia CARD art, crisp clear inkline, rich restrained CEL SHADING, ornamental embroidery and gold/silver trim, clean painterly colors notphoto/not3D. ONE character vertical2:3 thigh-up, completeheadinsideupperthird, distinctindividualface, signaturepropreadable, anatomicalhands, dynamiccloth. Cleanivorybackground withflatcharacter-specificmandala. DO NOTcopyreferenceface/bluearmor/spear. No text no logo noUI noborder nowatermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "wenzhong",
+      "name": "闻仲",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/wenzhong.png",
+        "bytes": 2980587,
+        "sha256": "1277b5a2f5e1b6fa6bd67c8f69c71017d60da22399d9da236944a636bae2723e"
+      },
+      "portrait": {
+        "path": "assets/portraits/wenzhong-premium.webp",
+        "bytes": 468040,
+        "sha256": "84a21efd9be81fd20f196e916f13d0a8f3a8cc3c838b82660109201566b1799c"
+      },
+      "avatar": {
+        "path": "assets/avatars/wenzhong-premium.webp",
+        "bytes": 57140,
+        "sha256": "1b8c4f670261d6d024295c61cbb7db8eb432a6c1144b4599e5eeb93a1817bf11"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input is STYLE reference ONLY. Create completely original Chinese mythology RPG character 闻仲，严肃威武的老年男性军师，银白长髯，额心第三只神目，墨黑战甲，手持雌雄双鞭，蓝白雷纹，军人坚定锐眼. Premium hand-drawn 2D anime xianxia CARD art, crisp clear inkline, rich restrained CEL SHADING, ornamental embroidery and gold/silver trim, clean painterly colors notphoto/not3D. ONE character vertical2:3 thigh-up, completeheadinsideupperthird, distinctindividualface, signaturepropreadable, anatomicalhands, dynamiccloth. Cleanivorybackground withflatcharacter-specificmandala. DO NOTcopyreferenceface/bluearmor/spear. No text no logo noUI noborder nowatermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "jiangziya",
+      "name": "姜子牙",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/jiangziya.png",
+        "bytes": 2825547,
+        "sha256": "59ed4508eb2d51a3cb5799938481d0cee06d958c81623e2c4d7f5b663b8d4903"
+      },
+      "portrait": {
+        "path": "assets/portraits/jiangziya-premium.webp",
+        "bytes": 462898,
+        "sha256": "3bb63169ea1cd494817f904620918fe56a4597613dbe579f592678d8a1ed670c"
+      },
+      "avatar": {
+        "path": "assets/avatars/jiangziya-premium.webp",
+        "bytes": 51196,
+        "sha256": "040ffbb96addc69f41b8753283ce54dffcb8a697665ef4f6ab4eada94b5199d5"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input is STYLE reference ONLY. Create completely original Chinese mythology RPG character 姜子牙，鹤发白须的老年男性统帅，白袍棕金外披，手持打神鞭，杏黄旗在身后展开，无文字，仁厚但富有谋略的神情. Premium hand-drawn 2D anime xianxia CARD art, crisp clear inkline, rich restrained CEL SHADING, ornamental embroidery and gold/silver trim, clean painterly colors notphoto/not3D. ONE character vertical2:3 thigh-up, completeheadinsideupperthird, distinctindividualface, signaturepropreadable, anatomicalhands, dynamiccloth. Cleanivorybackground withflatcharacter-specificmandala. DO NOTcopyreferenceface/bluearmor/spear. No text no logo noUI noborder nowatermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "shengongbao",
+      "name": "申公豹",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/shengongbao.png",
+        "bytes": 2890125,
+        "sha256": "a641360cba4169a5eb3ca36e973e81b4c48256c9266f998cf13195b49279298d"
+      },
+      "portrait": {
+        "path": "assets/portraits/shengongbao-premium.webp",
+        "bytes": 456320,
+        "sha256": "682e4b26ca1d9025620fc3e89fa6f609acfb0eb985f90daa969e28e3765ef900"
+      },
+      "avatar": {
+        "path": "assets/avatars/shengongbao-premium.webp",
+        "bytes": 52350,
+        "sha256": "a762e24f1094720713fbfa284de3e5d3e2485c6c5f6b3ce1673524cf9e71c07d"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input is STYLE reference ONLY. Create completely original Chinese mythology RPG character 申公豹，精明有锋芒的成年男性道士，尖下巴短黑须，黑绿道袍，虎纹护肩，飘浮雷符只有抽象纹理无文字，斜举拂尘，眼神狡黠. Premium hand-drawn 2D anime xianxia CARD art, crisp clear inkline, rich restrained CEL SHADING, ornamental embroidery and gold/silver trim, clean painterly colors notphoto/not3D. ONE character vertical2:3 thigh-up, completeheadinsideupperthird, distinctindividualface, signaturepropreadable, anatomicalhands, dynamiccloth. Cleanivorybackground withflatcharacter-specificmandala. DO NOTcopyreferenceface/bluearmor/spear. No text no logo noUI noborder nowatermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "sudaji",
+      "name": "苏妲己",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/sudaji.png",
+        "bytes": 2849972,
+        "sha256": "8934a4a0a4606b8555c3ba47a3086edf313a7d19d9ea126705a5c4a9d0a61964"
+      },
+      "portrait": {
+        "path": "assets/portraits/sudaji-premium.webp",
+        "bytes": 457320,
+        "sha256": "436276e1720f624909da81fbed6f581fea8512da7db3873d9ba4be974f2087ae"
+      },
+      "avatar": {
+        "path": "assets/avatars/sudaji-premium.webp",
+        "bytes": 51064,
+        "sha256": "9cfcdce2a5530873d17bc23a30fdb12b1397078be570770addc0653189b5fff3"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input is STYLE reference ONLY. Create completely original Chinese mythology RPG character 苏妲己，成年女性狐仙，精致成熟容貌，紫红宫衣，黑发金狐冠，白色九尾狐尾若隐若现，手持轻羽扇，优雅狡黠，端庄华丽不露骨，狐纹圆形背光. Premium hand-drawn 2D anime xianxia CARD art, crisp clear inkline, rich restrained CEL SHADING, ornamental embroidery and gold/silver trim, clean painterly colors notphoto/not3D. ONE character vertical2:3 thigh-up, completeheadinsideupperthird, distinctindividualface, signaturepropreadable, anatomicalhands, dynamiccloth. Cleanivorybackground withflatcharacter-specificmandala. DO NOTcopyreferenceface/bluearmor/spear. No text no logo noUI noborder nowatermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "longji",
+      "name": "龙吉公主",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/longji.png",
+        "bytes": 2861397,
+        "sha256": "71e5114d360a0dda91502097746b8c66d2f651b49e0f6872b6f3974754c8c95f"
+      },
+      "portrait": {
+        "path": "assets/portraits/longji-premium.webp",
+        "bytes": 477568,
+        "sha256": "2a7a14248124e21bdc228f3566f26c566eef5578f31ce1542eb8cb107f4bd2a7"
+      },
+      "avatar": {
+        "path": "assets/avatars/longji-premium.webp",
+        "bytes": 53658,
+        "sha256": "a758c384c5dad5f47cb64f011f29be7c9e3ae1731bd89dc81bdc7e4ce5503b58"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input is STYLE reference ONLY. Create completely original Chinese mythology RPG character 龙吉公主，优雅沉静的成年女仙，水蓝银衣，银色鸾凤冠与乌黑长发，掌中雾露光网和水晶宝瓶，凤凰羽纹，清透蓝紫银色. Premium hand-drawn 2D anime xianxia CARD art, crisp clear inkline, rich restrained CEL SHADING, ornamental embroidery and gold/silver trim, clean painterly colors notphoto/not3D. ONE character vertical2:3 thigh-up, completeheadinsideupperthird, distinctindividualface, signaturepropreadable, anatomicalhands, dynamiccloth. Cleanivorybackground withflatcharacter-specificmandala. DO NOTcopyreferenceface/bluearmor/spear. No text no logo noUI noborder nowatermark.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "tuxingsun",
+      "name": "土行孙",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/tuxingsun.png",
+        "bytes": 2726036,
+        "sha256": "63f12936fefa8882804db0b88225e816fa732b1d2f8f781e819d48f29770dc60"
+      },
+      "portrait": {
+        "path": "assets/portraits/tuxingsun-premium.webp",
+        "bytes": 430528,
+        "sha256": "7f700bb082978bfd1e93357bee469818becc4d4afabfb4a870b70ea764de1e66"
+      },
+      "avatar": {
+        "path": "assets/avatars/tuxingsun-premium.webp",
+        "bytes": 47550,
+        "sha256": "6674a6bf90e202e3eb338f8860c89b3f495ae48a17702bfa882d2d36d0a6c4f1"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        150,
+        105,
+        790,
+        745
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input image is STYLE reference ONLY, not costume. New original mythic Chinese RPG character: 土行孙，成年矮壮男性土行武者，宽脸棕色短乱发，顽皮但坚毅目光，赭衣与耐用铜护臂，肩扛地行短棍，土石飞尘，画面明确矮壮体型不是长身剑仙，不搞丑化. Match polished hand-drawn 2D anime xianxia card art, expressive readable face, strong crisp ink outline, flat controlled celshading and rich fabrictexture, no photograph/3D. This lower-rarity role should have DISTINCT simpler practical clothing but same premium illustrationquality, notplaceholder. Single character vertical2:3 thigh-up completeheadinsideupperthird,clearhandsandprop, unique face/body andsilhouette. Ivorybackground withone restrainedflatgeometricmotif in rolepalette. Noreferenceface/bluearmor/spearunlessspecified. No textUIborderwatermark. Fullyoriginaldesign.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "dengchanyu",
+      "name": "邓婵玉",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/dengchanyu.png",
+        "bytes": 2580330,
+        "sha256": "ef6bc131df7df8200a4233befa2d574779ce5cc4cb0a0df95daa5de07cc99885"
+      },
+      "portrait": {
+        "path": "assets/portraits/dengchanyu-premium.webp",
+        "bytes": 396884,
+        "sha256": "2943a0e46500238cf8839406410fec76a1acf0a8920eea96b57eaad6fb981b1a"
+      },
+      "avatar": {
+        "path": "assets/avatars/dengchanyu-premium.webp",
+        "bytes": 50658,
+        "sha256": "59051591467547f91526fee58087b9fb839172daade0b96e8a4904391adfbbe0"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        230,
+        70,
+        870,
+        710
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input image is STYLE reference ONLY, not costume. New original mythic Chinese RPG character: 邓婵玉，英姿飒爽的年轻成年女将，朱红轻甲与深红高马尾，五色飞石在掌间悬浮，利落飘带，黑金护腕，活力明亮独立脸型. Match polished hand-drawn 2D anime xianxia card art, expressive readable face, strong crisp ink outline, flat controlled celshading and rich fabrictexture, no photograph/3D. This lower-rarity role should have DISTINCT simpler practical clothing but same premium illustrationquality, notplaceholder. Single character vertical2:3 thigh-up completeheadinsideupperthird,clearhandsandprop, unique face/body andsilhouette. Ivorybackground withone restrainedflatgeometricmotif in rolepalette. Noreferenceface/bluearmor/spearunlessspecified. No textUIborderwatermark. Fullyoriginaldesign.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "huangtianhua",
+      "name": "黄天化",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/huangtianhua.png",
+        "bytes": 2764467,
+        "sha256": "9e334d257fea24b707637d6902ac56977d6543260a56c38f0a768bc03f0243d6"
+      },
+      "portrait": {
+        "path": "assets/portraits/huangtianhua-premium.webp",
+        "bytes": 460110,
+        "sha256": "e855857241877df79870616f95ae3b23bb9a6f9eef8e17e2c8127413d42e6e56"
+      },
+      "avatar": {
+        "path": "assets/avatars/huangtianhua-premium.webp",
+        "bytes": 54428,
+        "sha256": "2d51916a6ee476d0c1e8f956b1f65d44ec955cda96a1828fe9a34d885533faab"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input image is STYLE reference ONLY, not costume. New original mythic Chinese RPG character: 黄天化，意气风发的年轻成年男子，青黑战甲与棕黑短束发，双手战锤，金色钉光，锐气自信露齿微笑，与长袍仙人明显不同. Match polished hand-drawn 2D anime xianxia card art, expressive readable face, strong crisp ink outline, flat controlled celshading and rich fabrictexture, no photograph/3D. This lower-rarity role should have DISTINCT simpler practical clothing but same premium illustrationquality, notplaceholder. Single character vertical2:3 thigh-up completeheadinsideupperthird,clearhandsandprop, unique face/body andsilhouette. Ivorybackground withone restrainedflatgeometricmotif in rolepalette. Noreferenceface/bluearmor/spearunlessspecified. No textUIborderwatermark. Fullyoriginaldesign.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "yangren",
+      "name": "杨任",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/yangren.png",
+        "bytes": 2661293,
+        "sha256": "6ae945532cc20593bd071b37a3362258cab264bfd4cb81281ba09ebc16a425af"
+      },
+      "portrait": {
+        "path": "assets/portraits/yangren-premium.webp",
+        "bytes": 412736,
+        "sha256": "2215384cd6a821ab0467f23db70b75d5781f368526980db68b4d00ccbeb365e5"
+      },
+      "avatar": {
+        "path": "assets/avatars/yangren-premium.webp",
+        "bytes": 49660,
+        "sha256": "7ae8ea3f06b5f2bbcbbd8249e7497e80b3029c643e3289d91269b827b6026fb3"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input image is STYLE reference ONLY, not costume. New original mythic Chinese RPG character: 杨任，端正儒雅的中年男性儒将，青绿儒将袍，短黑须，手持绘有慧眼符号的金扇，清亮目光，闭合的手眼纹艺术符号而非恐怖真实伤口. Match polished hand-drawn 2D anime xianxia card art, expressive readable face, strong crisp ink outline, flat controlled celshading and rich fabrictexture, no photograph/3D. This lower-rarity role should have DISTINCT simpler practical clothing but same premium illustrationquality, notplaceholder. Single character vertical2:3 thigh-up completeheadinsideupperthird,clearhandsandprop, unique face/body andsilhouette. Ivorybackground withone restrainedflatgeometricmotif in rolepalette. Noreferenceface/bluearmor/spearunlessspecified. No textUIborderwatermark. Fullyoriginaldesign.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "zhenglun",
+      "name": "郑伦",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/zhenglun.png",
+        "bytes": 2776751,
+        "sha256": "0cbcd82e57170e60914b4770e15efa7d985ba962dac5dbab05fc5b4fb1d0ec55"
+      },
+      "portrait": {
+        "path": "assets/portraits/zhenglun-premium.webp",
+        "bytes": 435170,
+        "sha256": "c7d6b6d287910070d1ec4b826b70bbdcd94eb1c6460802dde40f96f847da2f32"
+      },
+      "avatar": {
+        "path": "assets/avatars/zhenglun-premium.webp",
+        "bytes": 51272,
+        "sha256": "2b5393a7df98f0eb73fb892467513f402da087fed2b2e736912068ca228badb1"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input image is STYLE reference ONLY, not costume. New original mythic Chinese RPG character: 郑伦，魁梧厚重的成年男性战将，铜金重甲，短黑发浓眉宽鼻，白色气流缠绕降魔杵，沉稳肃穆，盔甲厚实不长发美男. Match polished hand-drawn 2D anime xianxia card art, expressive readable face, strong crisp ink outline, flat controlled celshading and rich fabrictexture, no photograph/3D. This lower-rarity role should have DISTINCT simpler practical clothing but same premium illustrationquality, notplaceholder. Single character vertical2:3 thigh-up completeheadinsideupperthird,clearhandsandprop, unique face/body andsilhouette. Ivorybackground withone restrainedflatgeometricmotif in rolepalette. Noreferenceface/bluearmor/spearunlessspecified. No textUIborderwatermark. Fullyoriginaldesign.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "chenqi",
+      "name": "陈奇",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/chenqi.png",
+        "bytes": 2781794,
+        "sha256": "691ff54ad092f6ef8e357230b181f7747d66329841d0ad7aa9dd0463791538dc"
+      },
+      "portrait": {
+        "path": "assets/portraits/chenqi-premium.webp",
+        "bytes": 453952,
+        "sha256": "68666221e738b8a6187d787aa738444349b44e615d137c025f1ae8bbaf7548dd"
+      },
+      "avatar": {
+        "path": "assets/avatars/chenqi-premium.webp",
+        "bytes": 51210,
+        "sha256": "6d3fbd8d1977d8cd222d3468720e6ea1f1eb72f6ca0a17e64ba2ddfebb928442"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input image is STYLE reference ONLY, not costume. New original mythic Chinese RPG character: 陈奇，魁梧成年男性战将，暗红重甲，棕红发髻和浓密络腮胡，黄色气流环绕荡魔杵，豪迈坚定，与郑伦有明显不同脸形服装姿态. Match polished hand-drawn 2D anime xianxia card art, expressive readable face, strong crisp ink outline, flat controlled celshading and rich fabrictexture, no photograph/3D. This lower-rarity role should have DISTINCT simpler practical clothing but same premium illustrationquality, notplaceholder. Single character vertical2:3 thigh-up completeheadinsideupperthird,clearhandsandprop, unique face/body andsilhouette. Ivorybackground withone restrainedflatgeometricmotif in rolepalette. Noreferenceface/bluearmor/spearunlessspecified. No textUIborderwatermark. Fullyoriginaldesign.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "weihu",
+      "name": "韦护",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/weihu.png",
+        "bytes": 2777904,
+        "sha256": "255b99f4e4c498f04004a79c2efa6805edb52a678de6bebe2d4078a496a8b87e"
+      },
+      "portrait": {
+        "path": "assets/portraits/weihu-premium.webp",
+        "bytes": 416890,
+        "sha256": "599b21c95b761e64b27e7de6b945e255e07bed191a5b8c22618de78886d47704"
+      },
+      "avatar": {
+        "path": "assets/avatars/weihu-premium.webp",
+        "bytes": 46138,
+        "sha256": "978c6b6964c8eb2ddce0a5d20b6d7fb548c2e334f6a7532759c31e7b00969699"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        200,
+        80,
+        840,
+        720
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input image is STYLE reference ONLY, not costume. New original mythic Chinese RPG character: 韦护，干练年轻成年男性行者，灰蓝行者装，短黑发或简朴束髻，素色绳结，金降魔杵，护法般沉稳善意表情，简朴实用不帝王冠. Match polished hand-drawn 2D anime xianxia card art, expressive readable face, strong crisp ink outline, flat controlled celshading and rich fabrictexture, no photograph/3D. This lower-rarity role should have DISTINCT simpler practical clothing but same premium illustrationquality, notplaceholder. Single character vertical2:3 thigh-up completeheadinsideupperthird,clearhandsandprop, unique face/body andsilhouette. Ivorybackground withone restrainedflatgeometricmotif in rolepalette. Noreferenceface/bluearmor/spearunlessspecified. No textUIborderwatermark. Fullyoriginaldesign.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    },
+    {
+      "id": "wuji",
+      "name": "武吉",
+      "status": "final-generated-original",
+      "generator": "built-in image_gen",
+      "source": {
+        "path": "art-source/new-roster/wuji.png",
+        "bytes": 2671920,
+        "sha256": "6426ff6b2a1cbae083194deb76b87127856f4849961d22f0e60b7121cd63d561"
+      },
+      "portrait": {
+        "path": "assets/portraits/wuji-premium.webp",
+        "bytes": 397806,
+        "sha256": "5a36808449d03b0d9e87543b5aa57c59d0de9ae8173986d82745300b9267a7a0"
+      },
+      "avatar": {
+        "path": "assets/avatars/wuji-premium.webp",
+        "bytes": 44022,
+        "sha256": "3a595c1adbfb56a12d3b249906382bd0c3fe7d6c25d6e594794b09189a4a27dd"
+      },
+      "size": [
+        1024,
+        1536
+      ],
+      "avatarCrop": [
+        210,
+        130,
+        850,
+        770
+      ],
+      "avatarSize": [
+        320,
+        320
+      ],
+      "transparency": "Opaque ivory portrait by design; no cutout claimed.",
+      "prompt": "Input image is STYLE reference ONLY, not costume. New original mythic Chinese RPG character: 武吉，成年健壮樵夫勇士，粗布青袍与棕皮护臂，棕色短发，手持短斧和护民木盾，可靠热心的方脸，朴素装束有磨损织物，非华丽神王. Match polished hand-drawn 2D anime xianxia card art, expressive readable face, strong crisp ink outline, flat controlled celshading and rich fabrictexture, no photograph/3D. This lower-rarity role should have DISTINCT simpler practical clothing but same premium illustrationquality, notplaceholder. Single character vertical2:3 thigh-up completeheadinsideupperthird,clearhandsandprop, unique face/body andsilhouette. Ivorybackground withone restrainedflatgeometricmotif in rolepalette. Noreferenceface/bluearmor/spearunlessspecified. No textUIborderwatermark. Fullyoriginaldesign.",
+      "licenseNote": "Original generated game artwork; no third-party character/UI assets copied."
+    }
+  ]
+}

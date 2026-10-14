@@ -1,0 +1,267 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    1000
+  </width>
+  
+  
+  <height>
+    800
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="10" w="1000" x="0" y="0"/>
+    
+    
+    <rect h="790" w="10" x="0" y="10"/>
+    
+    
+    <rect h="30" w="40" x="10" y="110"/>
+    
+    
+    <rect h="50" w="390" x="10" y="300"/>
+    
+    
+    <rect h="180" w="990" x="10" y="620"/>
+    
+    
+    <rect h="150" w="40" x="100" y="10"/>
+    
+    
+    <rect h="30" w="900" x="100" y="450"/>
+    
+    
+    <rect h="30" w="20" x="160" y="420"/>
+    
+    
+    <rect h="80" w="60" x="170" y="480"/>
+    
+    
+    <rect h="30" w="20" x="240" y="350"/>
+    
+    
+    <rect h="210" w="440" x="290" y="10"/>
+    
+    
+    <rect h="30" w="20" x="320" y="420"/>
+    
+    
+    <rect h="140" w="370" x="630" y="480"/>
+    
+    
+    <rect h="30" w="150" x="730" y="190"/>
+    
+    
+    <rect h="120" w="80" x="800" y="10"/>
+    
+    
+    <rect h="20" w="20" x="880" y="220"/>
+    
+    
+    <rect h="440" w="10" x="990" y="10"/>
+    
+  
+  </solids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <LargeCrate x="290" y="240"/>
+    
+    
+    <level2_spike2 height="10" width="80" x="290" y="220"/>
+    
+    
+    <level2_spike2 height="10" width="110" x="500" y="220"/>
+    
+    
+    <level2_spike2 height="10" width="20" x="240" y="380"/>
+    
+    
+    <level2_spike0 height="10" width="20" x="160" y="410"/>
+    
+    
+    <level2_specialBlock animated="0" movementType="1" speed="40" x="190" y="170"/>
+    
+    
+    <LargeCrate x="160" y="560"/>
+    
+    
+    <level2_spike1 height="270" width="10" x="10" y="350"/>
+    
+    
+    <LargeCrate x="790" y="130"/>
+    
+    
+    <level2_spike0 height="10" width="20" x="320" y="410"/>
+    
+    
+    <level2_spike3 height="30" width="10" x="90" y="450"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <movingPlatforms>
+    
+    
+    <level2_specialPlatformSmall animated="1" movementType="5" speed="160" x="400" y="300">
+      
+      
+      <node x="950" y="300"/>
+      
+    
+    </level2_specialPlatformSmall>
+    
+  
+  </movingPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level2_window height="50" scrollFactor="0.1" width="150" x="90" y="350"/>
+    
+    
+    <level2_MG2 scrollFactor="0.1" x="0" y="130"/>
+    
+    
+    <level2_metalPipe height="640" scrollFactor="0.3" width="30" x="260" y="0"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer2>
+    
+    
+    <level2_tank scrollFactor="0.7" x="300" y="120"/>
+    
+    
+    <level2_FMG3 scrollFactor="0.8" x="300" y="350"/>
+    
+    
+    <level2_FMG3 scrollFactor="0.7" x="10" y="340"/>
+    
+    
+    <level2_pipe1 height="70" scrollFactor="0.7" width="630" x="370" y="130"/>
+    
+    
+    <level2_greenPipe height="130" scrollFactor="0.7" width="20" x="340" y="0"/>
+    
+    
+    <level2_greenPipe height="640" scrollFactor="0.2" width="20" x="150" y="0"/>
+    
+  
+  </BGLayer2>
+  
+  
+  <BGLayer3>
+    
+    
+    <sodaPack scrollFactor="0.2" x="240" y="430"/>
+    
+    
+    <level2_braceLeft x="230" y="480"/>
+    
+    
+    <level2_braceRight x="150" y="480"/>
+    
+    
+    <level2_braceRight x="220" y="350"/>
+    
+    
+    <level2_braceRight x="610" y="480"/>
+    
+    
+    <palettes scrollFactor="0.2" x="400" y="580"/>
+    
+    
+    <sugarBags scrollFactor="0.2" x="760" y="410"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <Bottle width="12" x="203" y="64"/>
+    
+    
+    <exit nextLevel="2" x="545" y="530"/>
+    
+    
+    <liselotCheckPoint player="1" x="550" y="393"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <player andreInitialFlip="0" followHeight="0" followWidth="0" levelName="Sewer Depths" liselotInitialFlip="1" movementType="1" speed="40" startsFirst="1" talkString="A man with nothing to lose is a dangerous man. The bottom of the barrel is a often more dangerous for those around someone who is residing there." x="10" y="60">
+      
+      
+      <node x="50" y="60"/>
+      
+    
+    </player>
+    
+    
+    <worker movementType="1" speed="40" talkString="I wrote her a love letter, but she doesn't know how to read." x="10" y="260">
+      
+      
+      <node x="370" y="260"/>
+      
+    
+    </worker>
+    
+    
+    <inspector movementType="1" speed="40" talkString="Dirt, dust and scum. I don't envy the people doing the cleaning, but it has to be done." x="350" y="410">
+      
+      
+      <node x="960" y="410"/>
+      
+    
+    </inspector>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="730" y="140">
+      
+      
+      <node x="760" y="140"/>
+      
+    
+    </liselot>
+    
+    
+    <chef movementType="1" speed="40" talkString="Hard work beats talent when talent refuses to work hard." x="240" y="570">
+      
+      
+      <node x="590" y="570"/>
+      
+    
+    </chef>
+    
+  
+  </characters>
+  
+  
+  <FGLayer1>
+    
+    
+    <level2_chainTile height="788" scrollFactor="1.5" width="12" x="328" y="1"/>
+    
+  
+  </FGLayer1>
+  
+
+</level>

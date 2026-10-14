@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="../shared/rewarded-ads.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>再挖一层：矿脉远征 V1.0</title>
+<link rel="icon" type="image/png" href="assets/mining/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+<script src="../shared/camp-ui.js"></script><script type="module" src="../shared/legibility.js"></script>
+</head>
+<body>
+<div class="app">
+  <canvas id="board" width="720" height="1280"></canvas>
+</div>
+
+<!-- 按顺序加载：底层 → 配置（数据驱动）→ 矿坑模块 → 场景 → 启动 -->
+<script src="src/core/namespace.js"></script>
+<script src="src/core/utils.js"></script>
+<script src="src/core/input.js"></script>
+
+<script src="src/config/mining/miningBalance.js"></script>
+<script src="src/config/mining/mines.js"></script>
+<script src="src/config/mining/terrain.js"></script>
+<script src="src/config/mining/resources.js"></script>
+<script src="src/config/mining/tools.js"></script>
+<script src="src/config/mining/depthLayers.js"></script>
+<script src="src/config/mining/rooms.js"></script>
+<script src="src/config/mining/crafting.js"></script>
+<script src="src/config/mining/upgrades.js"></script>
+
+<script src="src/modes/mining/MiningRNG.js"></script>
+<script src="src/modes/mining/MiningState.js"></script>
+<script src="src/modes/mining/MiningMap.js"></script>
+<script src="src/modes/mining/MiningPathfinder.js"></script>
+<script src="src/modes/mining/MiningVision.js"></script>
+<script src="src/modes/mining/MiningResourceSystem.js"></script>
+<script src="src/modes/mining/MiningUpgradeSystem.js"></script>
+<script src="src/modes/mining/MiningCraftingSystem.js"></script>
+<script src="src/modes/mining/MiningProgressSystem.js"></script>
+<script src="src/modes/mining/MiningStyleSystem.js"></script>
+<script src="src/modes/mining/MiningSave.js"></script>
+<script src="src/modes/mining/MiningRelicSystem.js"></script>
+<script src="src/modes/mining/MiningExpeditionSystem.js"></script>
+<script src="src/modes/mining/MiningTelemetry.js"></script>
+<script src="src/modes/mining/MiningGenerator.js"></script>
+<script src="src/modes/mining/MiningValidator.js"></script>
+<script src="src/modes/mining/MiningSimulator.js"></script>
+<script src="src/modes/mining/MiningRoomSystem.js"></script>
+<script src="src/modes/mining/MiningTreasureSystem.js"></script>
+<script src="src/modes/mining/MiningCartSystem.js"></script>
+<script src="src/modes/mining/MiningDigSystem.js"></script>
+<script src="src/modes/mining/MiningMovement.js"></script>
+<script src="src/modes/mining/MiningToolSystem.js"></script>
+<script src="src/modes/mining/MiningRewardSystem.js"></script>
+<script src="src/modes/mining/MiningPlayer.js"></script>
+<script src="src/modes/mining/MiningEffects.js"></script>
+<script src="src/modes/mining/MiningAssets.js"></script>
+<script src="src/modes/mining/MiningArt.js"></script>
+<script src="src/modes/mining/MiningAudio.js"></script>
+<script src="src/modes/mining/MiningUI.js"></script>
+<script src="src/modes/mining/MiningTutorial.js"></script>
+<script src="src/modes/mining/MiningTips.js"></script>
+<script src="src/modes/mining/MiningDebugPanel.js"></script>
+<script src="src/modes/mining/MiningMode.js"></script>
+
+<script src="src/modes/mining/MiningAdventure.js"></script>
+<script src="src/scenes/TitleScene.js"></script>
+<script src="src/scenes/MainPlaceholderScene.js"></script>
+
+<script src="src/app.js"></script>
+<script src="../camp-bridge.js"></script>
+<link rel="stylesheet" href="../shared/camp-ui.css"><script type="module" src="../shared/camp-wallet.js"></script></body>
+</html>
+
+
+

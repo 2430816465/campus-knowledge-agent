@@ -1,0 +1,3 @@
+import {chromium} from 'file:///C:/Users/24308/.codex/skills/develop-web-game/node_modules/playwright/index.mjs';
+import fs from 'node:fs/promises';
+const b=await chromium.launch({headless:true}),p=await b.newPage({viewport:{width:844,height:390}});p.on('pageerror',console.error);await p.goto('http://127.0.0.1:4173/games/marble/index.html');await p.locator('[data-action=new]').click();await p.screenshot({path:'output/marble-landscape-client/full.png'});await p.evaluate(()=>{Marble.run.selections=2;Marble.makeOffer('upgrade');advanceTime(0)});await p.screenshot({path:'output/marble-landscape-client/cards.png'});console.log(await p.locator('#board').boundingBox());await b.close();

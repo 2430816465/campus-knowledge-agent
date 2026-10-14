@@ -1,0 +1,504 @@
+{
+  "version": "v0.4.0",
+  "guides": {
+    "yuanshi": {
+      "role": "群体破防、削减定力，兼顾弱者护盾。",
+      "partners": [
+        "qiongxiao",
+        "nezha",
+        "bigan"
+      ],
+      "substitutes": [
+        "yunxiao"
+      ],
+      "route": "array-pressure",
+      "tip": "先以玉清镇岳铺开破防，再让琼霄利用通用减益收割；需要保命时选择B分支。"
+    },
+    "taishang": {
+      "role": "全队净化与持续恢复，缓解长线损耗。",
+      "partners": [
+        "huangfeihu",
+        "zhaogongming",
+        "qingxu"
+      ],
+      "substitutes": [
+        "bigan",
+        "taiyi"
+      ],
+      "route": "ward-counter",
+      "tip": "恢复与持续恢复各有时点；敌方多灼烧时保留神通作净化，不必满血提前施放。"
+    },
+    "nvwa": {
+      "role": "群体治疗和护盾，半血队友的兜底保护。",
+      "partners": [
+        "zhouwang",
+        "huangfeihu",
+        "luya"
+      ],
+      "substitutes": [
+        "taiyi",
+        "longji"
+      ],
+      "route": "ward-counter",
+      "tip": "治疗不计溢出收益，盾用于承受下一击；让高输出队友承担爆发，女娲稳定战线。"
+    },
+    "jieyin": {
+      "role": "以群体减伤和缓慢恢复支撑队伍。",
+      "partners": [
+        "zhenglun",
+        "zhouwang",
+        "randeng"
+      ],
+      "substitutes": [
+        "bixiao",
+        "shiji"
+      ],
+      "route": "ward-counter",
+      "tip": "预告重击前施放减伤；持续恢复不能代替当下急救，可搭配一位即时治疗。"
+    },
+    "zhunti": {
+      "role": "驱散敌方普通增益，压低群敌优势。",
+      "partners": [
+        "qiongxiao",
+        "luya",
+        "bigan"
+      ],
+      "substitutes": [
+        "chijingzi"
+      ],
+      "route": "array-pressure",
+      "tip": "先查看敌方状态；能移除的普通增益与首领固有机制不同，不能当成清除所有规则。"
+    },
+    "kongxuan": {
+      "role": "群体削盾与清场，击倒后组织队伍提速。",
+      "partners": [
+        "yangjian",
+        "wudang",
+        "bigan"
+      ],
+      "substitutes": [
+        "nezha",
+        "guangchengzi"
+      ],
+      "route": "array-pressure",
+      "tip": "神通先按当前护盾比例削盾再伤害；护盾厚时先手收益更高，疾行不会凭空增加本轮行动。"
+    },
+    "randeng": {
+      "role": "单体灼烧兼顾低血治疗，击倒自我续航。",
+      "partners": [
+        "sudaji",
+        "huangfeihu",
+        "longji"
+      ],
+      "substitutes": [
+        "qingxu",
+        "bigan"
+      ],
+      "route": "array-pressure",
+      "tip": "持续灼烧配合破防压低强敌；最低生命治疗不足以独自应付全队重伤。"
+    },
+    "luya": {
+      "role": "锁定后的单体爆发，直接命中促进提速。",
+      "partners": [
+        "jifa",
+        "jiangziya",
+        "taiyi"
+      ],
+      "substitutes": [
+        "yangjian",
+        "yuding"
+      ],
+      "route": "mark-follow",
+      "tip": "集中同一个危险目标，不要把锁定分散到即将退场的小怪；速度变化从合法轮次生效。"
+    },
+    "duobao": {
+      "role": "攻守并用，普攻也能补最低生命队友的盾。",
+      "partners": [
+        "zhaogongming",
+        "zhouwang",
+        "bigan"
+      ],
+      "substitutes": [
+        "bixiao",
+        "weihu"
+      ],
+      "route": "ward-counter",
+      "tip": "神通护全队，冷却期以普攻维持小盾；与反击角色组成不依赖同阵营的防护线。"
+    },
+    "jinling": {
+      "role": "针对减益目标追加打击，同时压低定力。",
+      "partners": [
+        "yangjian",
+        "yunxiao",
+        "sudaji"
+      ],
+      "substitutes": [
+        "qiongxiao"
+      ],
+      "route": "mark-follow",
+      "tip": "先由队友建立任意通用减益，再让金灵输出；追加每轮有上限，不会递归触发。"
+    },
+    "guangchengzi": {
+      "role": "优先削掉厚盾，再集中伤害和定力压制。",
+      "partners": [
+        "jifa",
+        "yuding",
+        "bigan"
+      ],
+      "substitutes": [
+        "huangtianhua",
+        "kongxuan"
+      ],
+      "route": "mark-follow",
+      "tip": "翻天印适合厚盾目标；没有护盾时仍有单体输出，不必为了削盾强留神通。"
+    },
+    "chijingzi": {
+      "role": "单体驱散与攻击削弱，受击也能软化敌人。",
+      "partners": [
+        "huangfeihu",
+        "qiongxiao",
+        "longji"
+      ],
+      "substitutes": [
+        "zhunti",
+        "sudaji"
+      ],
+      "route": "ward-counter",
+      "tip": "把削弱落在预告重击者身上；驱散普通增益后再集中输出。"
+    },
+    "yuding": {
+      "role": "单体锁定与攻击，顺带保护最低生命队友。",
+      "partners": [
+        "nezha",
+        "jinling",
+        "bigan"
+      ],
+      "substitutes": [
+        "yangjian",
+        "dengchanyu"
+      ],
+      "route": "mark-follow",
+      "tip": "自身能建立锁定，不要求杨戬在场；用这个通用减益让追击队友接手。"
+    },
+    "wenshu": {
+      "role": "牵制普通敌人、削减首领定力，护住弱者。",
+      "partners": [
+        "luya",
+        "qiongxiao",
+        "bigan"
+      ],
+      "substitutes": [
+        "yunxiao",
+        "juliusun"
+      ],
+      "route": "array-pressure",
+      "tip": "普通敌人可被牵制；首领不吃牵制但仍会损失定力，别把控制成功与否混为一谈。"
+    },
+    "puxian": {
+      "role": "打击主目标并波及后排，击倒后鼓舞全队。",
+      "partners": [
+        "yangjian",
+        "jiangziya",
+        "taiyi"
+      ],
+      "substitutes": [
+        "nezha",
+        "qingxu"
+      ],
+      "route": "morale-focus",
+      "tip": "优先选择快被击倒的合法目标，利用战令帮助后续队友，不靠额外行动滚雪球。"
+    },
+    "cihang": {
+      "role": "强净化与全队治疗，针对减益压力。",
+      "partners": [
+        "zhouwang",
+        "guangchengzi",
+        "leizhenzi"
+      ],
+      "substitutes": [
+        "bigan",
+        "longji"
+      ],
+      "route": "ward-counter",
+      "tip": "每次可净化两项普通减益；敌人持续施加异常时把施放时点放在队友受影响之后。"
+    },
+    "daoxing": {
+      "role": "削减蓄势与攻击削弱，打断重击准备。",
+      "partners": [
+        "leizhenzi",
+        "bigan",
+        "jinling"
+      ],
+      "substitutes": [
+        "juliusun"
+      ],
+      "route": "array-pressure",
+      "tip": "观察首领预告与蓄势层数；没有蓄势时仍有伤害和削弱，可用护持应对下一招。"
+    },
+    "qingxu": {
+      "role": "群体灼烧清场，神通后获得疾行。",
+      "partners": [
+        "qiongxiao",
+        "jifa",
+        "longji"
+      ],
+      "substitutes": [
+        "nezha",
+        "wudang"
+      ],
+      "route": "array-pressure",
+      "tip": "灼烧是琼霄等角色可利用的通用减益；敌人免疫某个控制不等于免疫所有异常。"
+    },
+    "huanglong": {
+      "role": "群体护盾与自身减伤，朴实的前排守护。",
+      "partners": [
+        "zhaogongming",
+        "bigan",
+        "luya"
+      ],
+      "substitutes": [
+        "huangfeihu",
+        "shiji"
+      ],
+      "route": "ward-counter",
+      "tip": "自身耐久更强，优先前排；全队盾帮助反击队友创造合法抵挡事件。"
+    },
+    "juliusun": {
+      "role": "牵制普通目标并削减蓄势，兼顾自保。",
+      "partners": [
+        "luya",
+        "leizhenzi",
+        "bigan"
+      ],
+      "substitutes": [
+        "daoxing",
+        "wenshu"
+      ],
+      "route": "array-pressure",
+      "tip": "捆仙索不能永久锁首领，削势仍有价值；控制与伤害目标都在正常行动内结算。"
+    },
+    "wudang": {
+      "role": "群体破防与后排续盾，为清场创造条件。",
+      "partners": [
+        "nezha",
+        "qiongxiao",
+        "bigan"
+      ],
+      "substitutes": [
+        "yunxiao",
+        "qingxu"
+      ],
+      "route": "array-pressure",
+      "tip": "先上破防再接群攻；后排盾不是全队盾，前排压力仍需护持或恢复。"
+    },
+    "guiling": {
+      "role": "厚盾、前排减伤和有上限的受击反制。",
+      "partners": [
+        "zhaogongming",
+        "bigan",
+        "zhouwang"
+      ],
+      "substitutes": [
+        "huangfeihu",
+        "bixiao"
+      ],
+      "route": "ward-counter",
+      "tip": "放在前排承受直接攻击；反制每轮有限，不能靠反击互相触发无限连锁。"
+    },
+    "shiji": {
+      "role": "全队护盾与减伤，低血时追加保护。",
+      "partners": [
+        "zhouwang",
+        "luya",
+        "longji"
+      ],
+      "substitutes": [
+        "bixiao",
+        "huanglong"
+      ],
+      "route": "ward-counter",
+      "tip": "在预告重招前铺盾；盾被耗尽后可用治疗补线，两个入口不会无限叠保护。"
+    },
+    "wenzhong": {
+      "role": "以战令鼓舞队伍，并削减关键目标蓄势。",
+      "partners": [
+        "zhouwang",
+        "huangfeihu",
+        "qingxu"
+      ],
+      "substitutes": [
+        "jifa",
+        "jiangziya"
+      ],
+      "route": "morale-focus",
+      "tip": "队伍增益不要求同阵营；把削势留给预告重击者，冷却期正常输出。"
+    },
+    "jiangziya": {
+      "role": "锁定集火、全队护盾和前排进攻组织。",
+      "partners": [
+        "nezha",
+        "jinling",
+        "huangfeihu"
+      ],
+      "substitutes": [
+        "jifa",
+        "yuding"
+      ],
+      "route": "morale-focus",
+      "tip": "先定集火目标再衔接队友神通；护盾支持输出，不会额外增加第六个行动位。"
+    },
+    "shengongbao": {
+      "role": "群体攻击削弱，降低多敌同时出手的压力。",
+      "partners": [
+        "qiongxiao",
+        "randeng",
+        "bigan"
+      ],
+      "substitutes": [
+        "yunxiao",
+        "chenqi"
+      ],
+      "route": "array-pressure",
+      "tip": "适合多敌场景；削弱也是通用减益，可让队友追击或收割，不需要固定教派。"
+    },
+    "sudaji": {
+      "role": "单体双重削弱与自身小幅续航。",
+      "partners": [
+        "jinling",
+        "luya",
+        "huangfeihu"
+      ],
+      "substitutes": [
+        "yangjian",
+        "chijingzi"
+      ],
+      "route": "mark-follow",
+      "tip": "将攻击削弱给威胁最高的敌人，破防交给全队利用；自疗不替代队伍治疗。"
+    },
+    "longji": {
+      "role": "净化、治疗、群体减伤兼备的稳定辅助。",
+      "partners": [
+        "zhouwang",
+        "guangchengzi",
+        "qingxu"
+      ],
+      "substitutes": [
+        "bigan",
+        "cihang"
+      ],
+      "route": "ward-counter",
+      "tip": "敌方异常后净化，预告重击前减伤；选择神通时点比无脑冷却好了就放更有用。"
+    },
+    "tuxingsun": {
+      "role": "小成本单体削盾，普攻周期维持自保。",
+      "partners": [
+        "yangjian",
+        "bigan",
+        "jiangziya"
+      ],
+      "substitutes": [
+        "huangtianhua"
+      ],
+      "route": "mark-follow",
+      "tip": "针对当前有盾的合法目标打洞破防；普攻小盾每轮有上限。"
+    },
+    "dengchanyu": {
+      "role": "建立锁定并给低血队友少量疾行。",
+      "partners": [
+        "nezha",
+        "jinling",
+        "bigan"
+      ],
+      "substitutes": [
+        "yuding",
+        "jifa"
+      ],
+      "route": "mark-follow",
+      "tip": "五光石建立的锁定能被不同队友利用；不需要指定稀有角色才能参与追击路线。"
+    },
+    "huangtianhua": {
+      "role": "单体削盾输出，击倒后获得自保。",
+      "partners": [
+        "jifa",
+        "yuding",
+        "bigan"
+      ],
+      "substitutes": [
+        "guangchengzi",
+        "tuxingsun"
+      ],
+      "route": "mark-follow",
+      "tip": "先帮助队伍打开护盾，再寻找可击倒目标；击倒护盾是附带收益而非复活。"
+    },
+    "yangren": {
+      "role": "群体锁定与小幅恢复，支持多目标打击。",
+      "partners": [
+        "nezha",
+        "qingxu",
+        "jinling"
+      ],
+      "substitutes": [
+        "jifa",
+        "jiangziya"
+      ],
+      "route": "mark-follow",
+      "tip": "给多个敌人建立通用锁定；小额被动恢复只作补充，高压战仍带专职治疗。"
+    },
+    "zhenglun": {
+      "role": "单体削弱、自盾与有限受击反制。",
+      "partners": [
+        "zhaogongming",
+        "bigan",
+        "jifa"
+      ],
+      "substitutes": [
+        "huangfeihu",
+        "guiling"
+      ],
+      "route": "ward-counter",
+      "tip": "前排受击可以触发反制；保护自己也让队友有时间输出，别当作无限反伤。"
+    },
+    "chenqi": {
+      "role": "群体削弱与自盾，护持后积累进攻增益。",
+      "partners": [
+        "zhouwang",
+        "bigan",
+        "wenzhong"
+      ],
+      "substitutes": [
+        "shengongbao",
+        "zhenglun"
+      ],
+      "route": "morale-focus",
+      "tip": "危险回合主动护持，下一轮再用战令输出；群体削弱有利于面对杂兵群。"
+    },
+    "weihu": {
+      "role": "攻击同时护住最低生命队友，补足前排救急。",
+      "partners": [
+        "huangfeihu",
+        "zhouwang",
+        "bigan"
+      ],
+      "substitutes": [
+        "duobao",
+        "huanglong"
+      ],
+      "route": "ward-counter",
+      "tip": "先查看最低生命位置，护盾落点按实际生命比例决定，不是固定保护前排。"
+    },
+    "wuji": {
+      "role": "前排减伤与受击战令，培养门槛低的守卫。",
+      "partners": [
+        "bigan",
+        "jifa",
+        "nezha"
+      ],
+      "substitutes": [
+        "huangfeihu",
+        "zhenglun"
+      ],
+      "route": "morale-focus",
+      "tip": "靠正常护持和减伤承压，受击战令帮助反攻；没有高稀有度也能完成基础阵容。"
+    }
+  }
+}

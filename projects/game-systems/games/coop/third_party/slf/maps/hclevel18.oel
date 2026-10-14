@@ -1,0 +1,351 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    1100
+  </width>
+  
+  
+  <height>
+    640
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="10" w="1100" x="0" y="0"/>
+    
+    
+    <rect h="30" w="130" x="0" y="10"/>
+    
+    
+    <rect h="600" w="10" x="0" y="40"/>
+    
+    
+    <rect h="120" w="120" x="10" y="240"/>
+    
+    
+    <rect h="40" w="80" x="10" y="360"/>
+    
+    
+    <rect h="40" w="40" x="10" y="400"/>
+    
+    
+    <rect h="120" w="80" x="10" y="520"/>
+    
+    
+    <rect h="40" w="80" x="50" y="120"/>
+    
+    
+    <rect h="40" w="40" x="90" y="480"/>
+    
+    
+    <rect h="80" w="1010" x="90" y="560"/>
+    
+    
+    <rect h="80" w="40" x="130" y="40"/>
+    
+    
+    <rect h="40" w="40" x="130" y="440"/>
+    
+    
+    <rect h="40" w="40" x="170" y="400"/>
+    
+    
+    <rect h="40" w="40" x="210" y="120"/>
+    
+    
+    <rect h="40" w="40" x="210" y="360"/>
+    
+    
+    <rect h="40" w="40" x="250" y="320"/>
+    
+    
+    <rect h="40" w="40" x="290" y="280"/>
+    
+    
+    <rect h="50" w="210" x="320" y="440"/>
+    
+    
+    <rect h="40" w="40" x="330" y="240"/>
+    
+    
+    <rect h="90" w="40" x="350" y="290"/>
+    
+    
+    <rect h="130" w="120" x="370" y="10"/>
+    
+    
+    <rect h="40" w="160" x="370" y="200"/>
+    
+    
+    <rect h="200" w="40" x="530" y="240"/>
+    
+    
+    <rect h="130" w="40" x="570" y="10"/>
+    
+    
+    <rect h="210" w="40" x="610" y="240"/>
+    
+    
+    <rect h="40" w="40" x="650" y="200"/>
+    
+    
+    <rect h="40" w="100" x="650" y="450"/>
+    
+    
+    <rect h="40" w="40" x="670" y="490"/>
+    
+    
+    <rect h="90" w="40" x="690" y="10"/>
+    
+    
+    <rect h="40" w="40" x="690" y="160"/>
+    
+    
+    <rect h="40" w="290" x="810" y="450"/>
+    
+    
+    <rect h="40" w="190" x="910" y="410"/>
+    
+    
+    <rect h="270" w="150" x="950" y="140"/>
+    
+    
+    <rect h="70" w="150" x="950" y="490"/>
+    
+    
+    <rect h="130" w="10" x="1090" y="10"/>
+    
+  
+  </solids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <LargeCrate x="390" y="140"/>
+    
+    
+    <level2_spike2 height="10" width="40" x="50" y="400"/>
+    
+    
+    <level2_spike2 height="10" width="40" x="90" y="360"/>
+    
+    
+    <level2_spike2 height="10" width="40" x="10" y="440"/>
+    
+    
+    <LargeCrate x="330" y="380"/>
+    
+    
+    <LargeCrate x="710" y="100"/>
+    
+    
+    <level2_spike2 height="10" width="40" x="130" y="480"/>
+    
+    
+    <level2_spike2 height="10" width="40" x="170" y="440"/>
+    
+    
+    <level2_spike2 height="10" width="40" x="210" y="400"/>
+    
+    
+    <level2_spike2 height="10" width="40" x="250" y="360"/>
+    
+    
+    <level2_spike1 height="210" width="10" x="650" y="240"/>
+    
+    
+    <level2_spike1 height="40" width="10" x="690" y="200"/>
+    
+    
+    <level2_specialPlatform animated="0" movementType="1" speed="40" x="850" y="140"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <movingPlatforms>
+    
+    
+    <level2_specialBlock animated="0" movementType="5" speed="80" x="810" y="160">
+      
+      
+      <node x="810" y="370"/>
+      
+    
+    </level2_specialBlock>
+    
+  
+  </movingPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level2_FMG3 scrollFactor="0.4" x="130" y="210"/>
+    
+    
+    <level2_FMG3 scrollFactor="0.5" x="410" y="380"/>
+    
+    
+    <level2_FMG3 scrollFactor="0.45" x="480" y="40"/>
+    
+    
+    <level2_pipe1 height="70" scrollFactor="0.2" width="960" x="0" y="60"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer2>
+    
+    
+    <level2_MG2 scrollFactor="0.1" x="0" y="130"/>
+    
+    
+    <level2_metalPipe height="640" scrollFactor="0.2" width="30" x="250" y="0"/>
+    
+    
+    <level2_greenPipe height="640" scrollFactor="0.8" width="20" x="480" y="0"/>
+    
+    
+    <level2_greenPipe height="640" scrollFactor="0.6" width="20" x="180" y="0"/>
+    
+    
+    <level2_tank scrollFactor="0.6" x="140" y="330"/>
+    
+    
+    <level2_tank scrollFactor="0.8" x="440" y="180"/>
+    
+    
+    <level2_pipe1 height="70" scrollFactor="0.6" width="760" x="200" y="360"/>
+    
+    
+    <level2_pipe1 height="70" scrollFactor="0.8" width="470" x="490" y="210"/>
+    
+  
+  </BGLayer2>
+  
+  
+  <BGLayer3>
+    
+    
+    <palettes scrollFactor="0.2" x="360" y="520"/>
+    
+    
+    <sodaPack scrollFactor="0.2" x="870" y="430"/>
+    
+    
+    <sodaPack scrollFactor="0.2" x="670" y="430"/>
+    
+    
+    <sodaPack scrollFactor="0.2" x="180" y="540"/>
+    
+    
+    <sugarBags scrollFactor="0.2" x="860" y="520"/>
+    
+    
+    <level2_braceLeft x="290" y="320"/>
+    
+    
+    <level2_braceLeft x="330" y="280"/>
+    
+    
+    <level2_braceLeft x="10" y="40"/>
+    
+    
+    <level2_braceRight x="110" y="40"/>
+    
+    
+    <level2_braceLeft x="90" y="520"/>
+    
+    
+    <level2_braceLeft x="710" y="490"/>
+    
+    
+    <level2_braceRight x="930" y="490"/>
+    
+    
+    <level2_braceLeft x="370" y="240"/>
+    
+    
+    <level2_braceLeft x="130" y="120"/>
+    
+    
+    <level2_braceRight x="930" y="160"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <smallSugarBag width="22" x="15" y="492"/>
+    
+    
+    <L1_SmallCrate width="32" x="832" y="427"/>
+    
+    
+    <exit nextLevel="2" x="454" y="350"/>
+    
+    
+    <Bottle width="12" x="1062" y="28"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="840" y="510">
+      
+      
+      <node x="890" y="510"/>
+      
+    
+    </liselot>
+    
+    
+    <player andreInitialFlip="0" followHeight="0" followWidth="0" levelName="Our Favourite Game" liselotInitialFlip="1" movementType="1" speed="40" startsFirst="1" talkString="My older brother Jan, who has joined the Dutch army, is in Burma." x="60" y="70">
+      
+      
+      <node x="90" y="70"/>
+      
+    
+    </player>
+    
+    
+    <worker movementType="1" speed="40" talkString="We could use new tools. The tools would be available for everyone to use." x="850" y="100">
+      
+      
+      <node x="1060" y="100"/>
+      
+    
+    </worker>
+    
+  
+  </characters>
+  
+  
+  <FGLayer1>
+    
+    
+    <level2_chainTile height="637" scrollFactor="1.5" width="12" x="293" y="3"/>
+    
+    
+    <level2_chainTile height="640" scrollFactor="1.6" width="12" x="592" y="0"/>
+    
+    
+    <level2_chainTile height="640" scrollFactor="1.7" width="12" x="917" y="0"/>
+    
+  
+  </FGLayer1>
+  
+
+</level>

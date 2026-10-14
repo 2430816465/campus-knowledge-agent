@@ -1,0 +1,69 @@
+<level>
+  <width>700</width>
+  <height>480</height>
+  <solids>
+    <rect x="0" y="0" w="10" h="480"/>
+    <rect x="10" y="400" w="690" h="80"/>
+    <rect x="50" y="0" w="300" h="50"/>
+    <rect x="50" y="50" w="210" h="50"/>
+    <rect x="50" y="160" w="300" h="30"/>
+    <rect x="60" y="320" w="40" h="20"/>
+    <rect x="190" y="270" w="60" h="20"/>
+    <rect x="370" y="210" w="30" h="150"/>
+    <rect x="470" y="280" w="40" h="20"/>
+    <rect x="570" y="220" w="130" h="20"/>
+    <rect x="690" y="0" w="10" h="220"/>
+    <rect x="690" y="240" w="10" h="160"/>
+  </solids>
+  <extraPlatforms>
+    <LargeCrate x="170" y="100"/>
+    <level2_spike2 x="280" y="50" width="70" height="10"/>
+    <level2_spike3 x="680" y="0" width="10" height="50"/>
+    <level2_specialBlock x="10" y="40" speed="40" movementType="1" animated="0"/>
+    <level2_spike0 x="370" y="200" width="30" height="10"/>
+  </extraPlatforms>
+  <movingPlatforms>
+    <level2_specialBlock x="10" y="160" speed="40" movementType="5" animated="0">
+      <node x="10" y="330"/>
+    </level2_specialBlock>
+    <level2_specialPlatformSmall x="350" y="140" speed="80" movementType="5" animated="1">
+      <node x="560" y="140"/>
+    </level2_specialPlatformSmall>
+  </movingPlatforms>
+  <BGLayer1>
+    <level2_MG2 x="0" y="140" scrollFactor="0.1"/>
+    <level2_pipe1 x="10" y="240" width="690" height="70" scrollFactor="0.1"/>
+    <level2_greenPipe x="140" y="0" width="20" height="480" scrollFactor="0.2"/>
+    <level2_greenPipe x="370" y="0" width="20" height="480" scrollFactor="0.4"/>
+  </BGLayer1>
+  <BGLayer2>
+    <level2_metalPipe x="200" y="0" width="30" height="480" scrollFactor="0.6"/>
+    <level2_tank x="250" y="0" scrollFactor="0.8"/>
+    <level2_FMG3 x="50" y="90" scrollFactor="0.7"/>
+    <level2_greenPipe x="510" y="0" width="20" height="480" scrollFactor="0.7"/>
+    <level2_tank x="470" y="180" scrollFactor="0.7"/>
+  </BGLayer2>
+  <BGLayer3>
+    <level2_braceLeft x="260" y="50"/>
+  </BGLayer3>
+  <objects>
+    <exit x="270" y="70" nextLevel="2"/>
+    <L1_SmallCrate x="215" y="246" width="32"/>
+    <smallSugarBag x="431" y="2" width="22"/>
+    <Bottle x="379" y="162" width="12"/>
+  </objects>
+  <characters>
+    <player x="630" y="350" speed="40" movementType="1" startsFirst="0" levelName="The Wall, The Fence" andreInitialFlip="1" liselotInitialFlip="0" followWidth="700" followHeight="480" talkString="My father owned a bicycle factory in the city of Malang.">
+      <node x="650" y="350"/>
+    </player>
+    <liselot x="60" y="350" speed="40" movementType="1" talkString="Just say yes.">
+      <node x="90" y="350"/>
+    </liselot>
+    <worker x="570" y="180" speed="30" movementType="1" talkString="I oppose your your private ownership of this company and feel that you engage in wage slavery.">
+      <node x="650" y="180"/>
+    </worker>
+  </characters>
+  <FGLayer1>
+    <level2_chainTile x="241" y="3" width="12" height="477" scrollFactor="2"/>
+  </FGLayer1>
+</level>

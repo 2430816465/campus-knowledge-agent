@@ -1,0 +1,68 @@
+<level>
+  <width>1800</width>
+  <height>640</height>
+  <solids>
+    <rect x="0" y="0" w="10" h="640"/>
+    <rect x="10" y="290" w="560" h="110"/>
+    <rect x="10" y="540" w="1050" h="100"/>
+    <rect x="220" y="400" w="60" h="80"/>
+    <rect x="260" y="160" w="50" h="130"/>
+    <rect x="570" y="340" w="240" h="110"/>
+    <rect x="950" y="420" w="850" h="120"/>
+    <rect x="1790" y="0" w="10" h="420"/>
+  </solids>
+  <extraPlatforms>
+    <LargeCrate x="210" y="480"/>
+    <level1_specialBlock x="450" y="500" speed="40" movementType="1" animated="0"/>
+    <helpBox x="110" y="480" type="0" helpString="Press '_Action' to dash. Dashing will break large crates."/>
+    <helpBox x="300" y="480" type="0" helpString="Press '_Jump' to jump."/>
+    <helpBox x="830" y="480" type="0" helpString="Press '_Switch' to switch characters."/>
+    <helpBox x="140" y="230" type="0" helpString="Press jump in mid air to double jump. Only Liselot can double jump."/>
+    <helpBox x="620" y="280" type="0" helpString="Push this crate off the ledge."/>
+    <helpBox x="1030" y="360" type="0" helpString="To finish a level, get both Andre and Liselot to the exit."/>
+    <helpBox x="1230" y="360" type="0" helpString="Liselot can stop and have a chat with co-workers."/>
+  </extraPlatforms>
+  <movingPlatforms>
+    <level1_specialPlatformSmall x="810" y="290" speed="40" movementType="5" animated="1">
+      <node x="1000" y="290"/>
+    </level1_specialPlatformSmall>
+  </movingPlatforms>
+  <BGLayer1>
+    <level1_windows x="20" y="190" width="240" height="54" scrollFactor="0.1"/>
+    <level1_windows x="330" y="140" width="240" height="54" scrollFactor="0.1"/>
+    <level1_shelfTile x="0" y="0" width="480" height="640" scrollFactor="0.2"/>
+    <level1_shelfTile x="560" y="0" width="480" height="630" scrollFactor="0.3"/>
+  </BGLayer1>
+  <BGLayer2>
+    <sugarBagsAndCrates x="590" y="410" scrollFactor="0.6"/>
+    <cratesBox x="1060" y="240" scrollFactor="0.95"/>
+    <sugarBags x="190" y="250" scrollFactor="0.8"/>
+  </BGLayer2>
+  <BGLayer3>
+    <sodaPack x="270" y="140" scrollFactor="0.2"/>
+    <sugarBags x="330" y="250" scrollFactor="0.2"/>
+    <palettes x="1010" y="380" scrollFactor="0.2"/>
+    <sugarBags x="490" y="500" scrollFactor="0.2"/>
+    <sodaPack x="590" y="320" scrollFactor="0.2"/>
+    <sodaPack x="80" y="520" scrollFactor="0.2"/>
+  </BGLayer3>
+  <objects>
+    <L1_SmallCrate x="726" y="317" width="32"/>
+    <exit x="1717" y="330" nextLevel="2"/>
+    <smallSugarBag x="1078" y="196" width="22"/>
+    <Bottle x="1333" y="386" width="12"/>
+    <andreCheckPoint x="959" y="364" player="1"/>
+    <liselotCheckPoint x="1197" y="363" player="1"/>
+  </objects>
+  <characters>
+    <liselot x="20" y="240" speed="40" movementType="1" talkString="Just say yes.">
+      <node x="70" y="250"/>
+    </liselot>
+    <player x="20" y="490" speed="40" movementType="1" startsFirst="1" levelName="Tutorial" andreInitialFlip="0" liselotInitialFlip="0" followWidth="0" followHeight="480" talkString="Every month the same old news. Since WWII ended, every month more scare tactics. I run a business, my interest lies with sustaining my business and feeding my family, not war.">
+      <node x="60" y="490"/>
+    </player>
+    <worker x="1350" y="380" speed="40" movementType="1" talkString="The efforts of industry are not without casualties. And yet we work, and we work hard. Are we not entitled to that which we produce.">
+      <node x="1660" y="380"/>
+    </worker>
+  </characters>
+</level>

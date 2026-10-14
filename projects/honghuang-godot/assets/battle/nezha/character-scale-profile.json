@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "name": "nezha-review",
+  "processing": {
+    "cell_size": 512,
+    "fit_scale": 0.8,
+    "trim_border": 4,
+    "edge_clean_depth": 3,
+    "align": "feet",
+    "shared_scale": true,
+    "scale_strategy": "preserve",
+    "component_mode": "largest",
+    "component_padding": 0,
+    "min_component_area": 1,
+    "edge_touch_margin": 0
+  },
+  "output_origin": [
+    256.0,
+    461
+  ],
+  "reference": {
+    "target": "player",
+    "mode": "idle",
+    "rows": 2,
+    "cols": 2,
+    "body_scale_mean": 0.5046972008373478,
+    "body_scale_cv": 0.006787993763355098,
+    "anchor_y_mean": 0.8625992063492064
+  },
+  "qc": {
+    "max_body_scale_drift": 0.08
+  }
+}

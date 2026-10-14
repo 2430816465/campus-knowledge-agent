@@ -1,0 +1,288 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    1000
+  </width>
+  
+  
+  <height>
+    1050
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="10" w="1000" x="0" y="0"/>
+    
+    
+    <rect h="1040" w="10" x="0" y="10"/>
+    
+    
+    <rect h="110" w="990" x="10" y="940"/>
+    
+    
+    <rect h="20" w="20" x="30" y="760"/>
+    
+    
+    <rect h="50" w="220" x="70" y="110"/>
+    
+    
+    <rect h="30" w="220" x="80" y="820"/>
+    
+    
+    <rect h="40" w="250" x="90" y="300"/>
+    
+    
+    <rect h="20" w="20" x="160" y="700"/>
+    
+    
+    <rect h="80" w="40" x="250" y="160"/>
+    
+    
+    <rect h="20" w="110" x="290" y="700"/>
+    
+    
+    <rect h="20" w="140" x="330" y="380"/>
+    
+    
+    <rect h="20" w="20" x="440" y="290"/>
+    
+    
+    <rect h="20" w="60" x="500" y="670"/>
+    
+    
+    <rect h="20" w="60" x="550" y="260"/>
+    
+    
+    <rect h="20" w="40" x="590" y="510"/>
+    
+    
+    <rect h="100" w="410" x="590" y="840"/>
+    
+    
+    <rect h="20" w="50" x="630" y="650"/>
+    
+    
+    <rect h="20" w="40" x="700" y="220"/>
+    
+    
+    <rect h="20" w="40" x="700" y="480"/>
+    
+    
+    <rect h="20" w="60" x="760" y="620"/>
+    
+    
+    <rect h="20" w="40" x="820" y="220"/>
+    
+    
+    <rect h="20" w="40" x="830" y="490"/>
+    
+    
+    <rect h="20" w="70" x="880" y="600"/>
+    
+    
+    <rect h="30" w="30" x="950" y="510"/>
+    
+    
+    <rect h="830" w="10" x="990" y="10"/>
+    
+  
+  </solids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <level2_spike0 height="10" width="140" x="330" y="370"/>
+    
+    
+    <level2_spike3 height="20" width="10" x="320" y="380"/>
+    
+    
+    <level2_spike2 height="10" width="140" x="330" y="400"/>
+    
+    
+    <LargeCrate x="260" y="240"/>
+    
+    
+    <level2_spike0 height="10" width="70" x="10" y="930"/>
+    
+    
+    <level2_spike0 height="10" width="400" x="590" y="830"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <movingPlatforms>
+    
+    
+    <level2_specialPlatformSmall animated="1" movementType="5" speed="80" x="50" y="300">
+      
+      
+      <node x="50" y="510"/>
+      
+    
+    </level2_specialPlatformSmall>
+    
+    
+    <level2_specialPlatformSmall animated="1" movementType="5" speed="130" x="80" y="510">
+      
+      
+      <node x="540" y="510"/>
+      
+    
+    </level2_specialPlatformSmall>
+    
+    
+    <level2_specialPlatformSmall animated="1" movementType="5" speed="80" x="290" y="110">
+      
+      
+      <node x="850" y="110"/>
+      
+    
+    </level2_specialPlatformSmall>
+    
+    
+    <level2_specialPlatformSmall animated="1" movementType="5" speed="80" x="890" y="110">
+      
+      
+      <node x="890" y="300"/>
+      
+    
+    </level2_specialPlatformSmall>
+    
+  
+  </movingPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level2_greenPipe height="1050" scrollFactor="0.2" width="20" x="150" y="0"/>
+    
+    
+    <level2_tank scrollFactor="0.2" x="110" y="160"/>
+    
+    
+    <level2_tank scrollFactor="0.2" x="110" y="650"/>
+    
+    
+    <level2_pipe1 height="70" scrollFactor="0.2" width="420" x="180" y="670"/>
+    
+    
+    <level2_pipe1 height="70" scrollFactor="0.2" width="420" x="180" y="180"/>
+    
+    
+    <level2_MG2 scrollFactor="0.2" x="0" y="110"/>
+    
+    
+    <level2_MG2 scrollFactor="0.2" x="0" y="440"/>
+    
+    
+    <level2_MG2 scrollFactor="0.2" x="0" y="790"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer2>
+    
+    
+    <level2_metalPipe height="1050" scrollFactor="0.6" width="30" x="40" y="0"/>
+    
+    
+    <level2_metalPipe height="1050" scrollFactor="0.6" width="30" x="420" y="0"/>
+    
+    
+    <level2_greenPipe height="320" scrollFactor="0.8" width="20" x="480" y="0"/>
+    
+    
+    <level2_tank scrollFactor="0.2" x="440" y="300"/>
+    
+    
+    <level2_pipe1 height="70" scrollFactor="0.2" width="90" x="510" y="330"/>
+    
+  
+  </BGLayer2>
+  
+  
+  <BGLayer3>
+    
+    
+    <palettes scrollFactor="0.2" x="520" y="900"/>
+    
+    
+    <sodaPack scrollFactor="0.2" x="160" y="90"/>
+    
+    
+    <palettes scrollFactor="0.2" x="170" y="260"/>
+    
+    
+    <sugarBags scrollFactor="0.2" x="120" y="900"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <L1_SmallCrate width="32" x="352" y="675"/>
+    
+    
+    <exit nextLevel="2" x="80" y="20"/>
+    
+    
+    <Bottle width="12" x="712" y="276"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <player andreInitialFlip="1" followHeight="0" followWidth="0" levelName="Elevator, Take Me Home" liselotInitialFlip="0" movementType="1" speed="40" startsFirst="1" talkString="We asked what had happened to the bicycle factory and shop.  Ma started to cry and said that everything was confiscated." x="360" y="890">
+      
+      
+      <node x="400" y="890"/>
+      
+    
+    </player>
+    
+    
+    <army movementType="1" speed="40" talkString="A dead man is a quiet man." x="80" y="770">
+      
+      
+      <node x="280" y="770"/>
+      
+    
+    </army>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="300" y="650">
+      
+      
+      <node x="350" y="650"/>
+      
+    
+    </liselot>
+    
+    
+    <chef movementType="1" speed="40" talkString="Caffeine citrate and citric acid deliveries are always followed by army personnel." x="90" y="250">
+      
+      
+      <node x="310" y="250"/>
+      
+    
+    </chef>
+    
+  
+  </characters>
+  
+
+</level>

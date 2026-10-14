@@ -1,0 +1,189 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    1060
+  </width>
+  
+  
+  <height>
+    640
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="10" w="1060" x="0" y="0"/>
+    
+    
+    <rect h="630" w="10" x="0" y="10"/>
+    
+    
+    <rect h="110" w="1050" x="10" y="530"/>
+    
+    
+    <rect h="50" w="50" x="240" y="480"/>
+    
+    
+    <rect h="100" w="30" x="390" y="430"/>
+    
+    
+    <rect h="130" w="20" x="580" y="400"/>
+    
+    
+    <rect h="50" w="260" x="800" y="420"/>
+    
+    
+    <rect h="20" w="20" x="950" y="220"/>
+    
+    
+    <rect h="160" w="110" x="950" y="260"/>
+    
+    
+    <rect h="60" w="110" x="950" y="470"/>
+    
+    
+    <rect h="250" w="10" x="1050" y="10"/>
+    
+  
+  </solids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <LargeCrate x="790" y="470"/>
+    
+    
+    <level3_spike3 height="50" width="10" x="790" y="420"/>
+    
+    
+    <level3_specialBlock animated="0" movementType="1" speed="40" x="580" y="220"/>
+    
+    
+    <level3_specialBlock animated="0" movementType="1" speed="40" x="420" y="250"/>
+    
+    
+    <level3_specialBlock animated="0" movementType="1" speed="40" x="260" y="290"/>
+    
+    
+    <level3_spike0 height="10" width="30" x="290" y="520"/>
+    
+    
+    <level3_spike0 height="10" width="30" x="420" y="520"/>
+    
+    
+    <level3_spike0 height="10" width="30" x="600" y="520"/>
+    
+    
+    <level3_spike0 height="10" width="30" x="360" y="520"/>
+    
+    
+    <level3_spike0 height="10" width="30" x="550" y="520"/>
+    
+    
+    <helpBox helpString="You can still dash in mid-air." type="0" x="110" y="470"/>
+    
+    
+    <level3_spike0 height="10" width="100" x="950" y="250"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <movingPlatforms>
+    
+    
+    <level3_specialPlatformSmall animated="1" movementType="5" speed="80" x="710" y="280">
+      
+      
+      <node x="710" y="450"/>
+      
+    
+    </level3_specialPlatformSmall>
+    
+  
+  </movingPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level3_window height="320" scrollFactor="0.2" width="960" x="0" y="210"/>
+    
+    
+    <level3_painting1 scrollFactor="0.2" x="20" y="80"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer2>
+    
+    
+    <filingCab2 scrollFactor="0.9" x="360" y="470"/>
+    
+    
+    <filingCab2 scrollFactor="0.9" x="520" y="470"/>
+    
+  
+  </BGLayer2>
+  
+  
+  <BGLayer3>
+    
+    
+    <plant2 scrollFactor="0.2" x="20" y="430"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <exit nextLevel="2" x="41" y="440"/>
+    
+    
+    <Bottle width="12" x="1000" y="79"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <player andreInitialFlip="0" followHeight="640" followWidth="960" levelName="Wait For It" liselotInitialFlip="1" movementType="1" speed="40" startsFirst="1" talkString="Although the political scene has improved, there is a vast disconnect between those in offices and those in the city." x="80" y="480">
+      
+      
+      <node x="120" y="480"/>
+      
+    
+    </player>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="920" y="480">
+      
+      
+      <node x="970" y="490"/>
+      
+    
+    </liselot>
+    
+    
+    <chef movementType="1" speed="40" talkString="To answer your question about what exactly are bitters, we use orange peel and quinine." x="800" y="370">
+      
+      
+      <node x="920" y="370"/>
+      
+    
+    </chef>
+    
+  
+  </characters>
+  
+
+</level>

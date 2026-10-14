@@ -1,0 +1,28 @@
+// Hand-drawn integer-grid symbols, shared by controls, navigation and statuses.
+export const pixelPaths={
+ rush:'M1 2h4v4H1Z M6 0h4v4H6Z M11 2h4v4h-4Z M2 7h3v7H2Z M7 5h3v9H7Z M12 7h3v7h-3Z',
+ nightwatch:'M7 0h2v2h5v8h-2v2h-2v2H9v2H7v-2H6v-2H4v-2H2V2h5Z M7 4v7h2V4Z',
+ compass:'M6 0h4v3h3v3h3v4h-3v3h-3v3H6v-3H3v-3H0V6h3V3h3Z M7 4v3H4v2h3v3h2V9h3V7H9V4Z',
+ coin:'M4 1h8v2h2v2h1v6h-1v2h-2v2H4v-2H2v-2H1V5h1V3h2Z M6 4v8h4v-2H8V6h2V4Z',
+ book:'M1 2h6v1h2V2h6v11H9v2H7v-2H1Z M3 4v7h3V4Z M10 4v7h3V4Z',
+ bag:'M5 1h6v4h3v9H2V5h3Z M7 3v2h2V3Z M5 8v2h6V8Z',
+ user:'M5 1h6v6H5Z M3 10h2V8h6v2h2v5H3Z',
+ tower:'M2 1h3v3h2V1h2v3h2V1h3v5h-2v8h2v2H2v-2h2V6H2Z M7 10v4h2v-4Z',
+ guard:'M7 0h2v2h5v8h-2v2h-2v2H9v2H7v-2H6v-2H4v-2H2V2h5Z M7 4v7h2V4Z',
+ marble:'M6 0h4v2h3v3h2v6h-2v3h-3v2H6v-2H3v-2H1V5h2V2h3Z M6 5v2H5v4h1v2h4v-2h1V7h-1V5Z',
+ pick:'M3 1h7v2h3v2h2v5h-2V7h-3V5H7v3H5V5H1V3h2Z M8 7h3v3H9v2H7v2H5v2H2v-3h2v-2h2V9h2Z',
+ coop:'M2 1h4v5H2Z M10 1h4v5h-4Z M0 9h2V7h4v2h2v6H0Z M8 9h2V7h4v2h2v6H8Z',
+ arrow:'M8 2h2v2h2v2h2v2h2v1h-2v2h-2v2h-2v2H8v-4h2V9H0V7h10V6H8Z',
+ back:'M6 2h2v4H6v1h10v2H6v2h2v4H6v-2H4v-2H2V9H0V7h2V5h2V3h2Z',
+ check:'M13 2h3v3h-2v2h-2v2h-2v2H8v2H6v2H4v-2H2v-2H0V8h3v2h2v1h1V9h2V7h2V5h3Z',
+ gear:'M6 0h4v3h3v3h3v4h-3v3h-3v3H6v-3H3v-3H0V6h3V3h3Z M6 6v4h4V6Z',
+ flag:'M2 0h2v2h10v7H4v7H2Z M6 4v3h6V4Z',
+ scarf:'M3 1h10v6H3Z M1 7h14v4h-3v5H8v-5H1Z',
+ close:'M2 0h2v2h2v2h2v2h2V4h2V2h2V0h2v4h-2v2h-2v4h2v2h2v4h-2v-2h-2v-2h-2v-2H8v2H6v2H4v2H2v-4h2v-2h2V6H4V4H2Z',
+ liars:'M5 0h6v2h-1v4h2v2h1v6h-1v2H4v-2H3V8h1V6h2V2H5ZM5 9v4h6V9Z',
+ star:'M7 0h2v4h2v2h5v3h-3v3h1v4h-3v-2H9v-1H7v1H5v2H2v-4h1V9H0V6h5V4h2Z',
+ info:'M3 0h10v2h3v12h-3v2H3v-2H0V2h3Z M7 3v2h2V3Z M7 7v6h2V7Z',
+ lock:'M4 1h8v6h2v9H2V7h2Z M6 3v4h4V3Z M7 10v3h2v-3Z',
+ link:'M9 0h5v2h2v5h-2v2h-3V7h2V3h-3v2H8V2h1Z M5 7h3v2H6v4H3v-3h2Z M2 7h3v2H3v4h4v-2h2v3H7v2H2v-2H0V9h2Z M6 6h4v4H6Z',
+ heart:'M2 1h4v2h4V1h4v2h2v6h-2v2h-2v2h-2v2H6v-2H4v-2H2V9H0V3h2Z'
+};

@@ -1,0 +1,231 @@
+<?xml version="1.0" ?>
+<level>
+  
+  
+  <width>
+    1400
+  </width>
+  
+  
+  <height>
+    640
+  </height>
+  
+  
+  <solids>
+    
+    
+    <rect h="10" w="1400" x="0" y="0"/>
+    
+    
+    <rect h="630" w="20" x="0" y="10"/>
+    
+    
+    <rect h="120" w="1380" x="20" y="520"/>
+    
+    
+    <rect h="20" w="20" x="200" y="110"/>
+    
+    
+    <rect h="360" w="260" x="260" y="160"/>
+    
+    
+    <rect h="80" w="400" x="610" y="160"/>
+    
+    
+    <rect h="120" w="280" x="740" y="400"/>
+    
+    
+    <rect h="20" w="20" x="1050" y="310"/>
+    
+    
+    <rect h="20" w="20" x="1070" y="210"/>
+    
+    
+    <rect h="70" w="70" x="1090" y="450"/>
+    
+    
+    <rect h="510" w="10" x="1390" y="10"/>
+    
+  
+  </solids>
+  
+  
+  <fakesolids>
+    
+    
+    <rect h="150" w="400" x="610" y="10"/>
+    
+  
+  </fakesolids>
+  
+  
+  <extraPlatforms>
+    
+    
+    <level1_specialBlock animated="0" movementType="1" speed="40" x="220" y="480"/>
+    
+    
+    <level1_specialBlock animated="0" movementType="1" speed="40" x="520" y="480"/>
+    
+    
+    <spike0 height="10" width="70" x="1020" y="510"/>
+    
+    
+    <spike3 height="40" width="10" x="250" y="440"/>
+    
+    
+    <spike3 height="110" width="10" x="730" y="410"/>
+    
+    
+    <spike1 height="40" width="10" x="520" y="440"/>
+    
+    
+    <spike1 height="100" width="10" x="1020" y="410"/>
+    
+    
+    <spike1 height="60" width="10" x="1160" y="460"/>
+    
+    
+    <spike3 height="20" width="10" x="190" y="110"/>
+    
+    
+    <spike1 height="20" width="10" x="220" y="110"/>
+    
+    
+    <spike1 height="80" width="10" x="520" y="160"/>
+    
+    
+    <spike3 height="80" width="10" x="600" y="160"/>
+    
+  
+  </extraPlatforms>
+  
+  
+  <movingPlatforms>
+    
+    
+    <level1_specialPlatformSmall animated="1" movementType="5" speed="80" x="100" y="160">
+      
+      
+      <node x="100" y="430"/>
+      
+    
+    </level1_specialPlatformSmall>
+    
+  
+  </movingPlatforms>
+  
+  
+  <BGLayer1>
+    
+    
+    <level1_windows height="54" scrollFactor="0.1" width="480" x="0" y="290"/>
+    
+    
+    <level1_windows height="54" scrollFactor="0.1" width="540" x="300" y="200"/>
+    
+    
+    <level1_shelfTile height="520" scrollFactor="0.2" width="560" x="260" y="0"/>
+    
+    
+    <noticeBoard scrollFactor="0.1" x="210" y="400"/>
+    
+    
+    <L1_Shelf scrollFactor="0.2" x="20" y="200"/>
+    
+  
+  </BGLayer1>
+  
+  
+  <BGLayer2>
+    
+    
+    <cratesBox scrollFactor="0.5" x="0" y="340"/>
+    
+    
+    <sugarBagsAndCrates scrollFactor="0.7" x="380" y="390"/>
+    
+    
+    <sugarBagsAndCrates scrollFactor="0.6" x="720" y="390"/>
+    
+    
+    <sugarBagsAndCrates scrollFactor="0.7" x="1100" y="390"/>
+    
+  
+  </BGLayer2>
+  
+  
+  <BGLayer3>
+    
+    
+    <sugarBags scrollFactor="0.2" x="1200" y="480"/>
+    
+    
+    <palettes scrollFactor="0.2" x="880" y="360"/>
+    
+  
+  </BGLayer3>
+  
+  
+  <objects>
+    
+    
+    <exit nextLevel="2" x="1320" y="431"/>
+    
+    
+    <L1_SmallCrate width="32" x="763" y="373"/>
+    
+    
+    <smallSugarBag width="22" x="1216" y="336"/>
+    
+    
+    <Bottle width="12" x="1061" y="78"/>
+    
+  
+  </objects>
+  
+  
+  <characters>
+    
+    
+    <worker movementType="1" speed="120" talkString="You work like a dog, and what do you get?" x="800" y="360">
+      
+      
+      <node x="990" y="360"/>
+      
+    
+    </worker>
+    
+    
+    <army movementType="1" speed="120" talkString="The civil unrest is of some concern, but it's nothing my men can't handle." x="260" y="110">
+      
+      
+      <node x="490" y="110"/>
+      
+    
+    </army>
+    
+    
+    <player andreInitialFlip="0" followHeight="0" followWidth="0" levelName="Gentle Introduction" liselotInitialFlip="0" movementType="1" speed="40" startsFirst="1" talkString="It's hard to imagine now, but in 1930's and 1940's bicycles were the main mode of transport. If you saw a car it was usually a government head of department." x="30" y="470">
+      
+      
+      <node x="80" y="470"/>
+      
+    
+    </player>
+    
+    
+    <liselot movementType="1" speed="40" talkString="Just say yes." x="610" y="470">
+      
+      
+      <node x="680" y="470"/>
+      
+    
+    </liselot>
+    
+  
+  </characters>
+  
+
+</level>

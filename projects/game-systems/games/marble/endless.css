@@ -1,0 +1,149 @@
+html[data-game-ui="marble"] .arena-shell{background:#241b19;color:#f3dfb9;font-family:system-ui,sans-serif}
+html[data-game-ui="marble"] .arena-shell .arena-field{display:flex;align-items:center;justify-content:center;background:#241b19;overflow:hidden}
+html[data-game-ui="marble"] .arena-shell #board{flex:none;max-width:100%;max-height:100%;object-fit:contain;image-rendering:pixelated;touch-action:none}
+html[data-game-ui="marble"] .arena-shell .arena-hud{top:max(4px,env(safe-area-inset-top));left:max(8px,env(safe-area-inset-left));right:max(8px,env(safe-area-inset-right));height:32px;gap:12px;justify-content:flex-start;font-size:12px;pointer-events:none;color:#f2ddbd;text-shadow:0 1px #241b19}
+html[data-game-ui="marble"] .arena-shell .arena-hud{background:transparent;border:0;box-shadow:none;padding:0}
+html[data-game-ui="marble"] .arena-hud button{min-width:44px;min-height:44px;border:2px solid #ab804f;border-radius:0;background:#35251de8;color:#f7deaf;pointer-events:auto}
+html[data-game-ui="marble"] .arena-hud .arena-settings{margin-left:auto}
+html[data-game-ui="marble"] .arena-stage{position:absolute;z-index:3;left:max(12px,env(safe-area-inset-left));bottom:7px;max-width:145px;pointer-events:none;padding:3px 7px;background:#241b19b8;color:#e9cea8;border-left:2px solid #bd9258}
+html[data-game-ui="marble"] .arena-stage small:nth-child(2){display:none}
+html[data-game-ui="marble"] .arena-stage b{display:block;font-size:11px}
+html[data-game-ui="marble"] .arena-stage small{display:block;font-size:9px;line-height:1.4;color:#d1b495}
+html[data-game-ui="marble"] .arena-mini-xp{height:3px;background:#594336;margin:3px 0;overflow:hidden}
+html[data-game-ui="marble"] .arena-mini-xp i{display:block;height:100%;background:#e5b366}
+html[data-game-ui="marble"] .arena-shell .arena-status{bottom:5px;right:12px;left:auto;max-width:45%;padding:2px 6px;border:0;background:#241b19b8;color:#e8cba2;font-size:10px;pointer-events:none}
+html[data-game-ui="marble"] .arena-shell .arena-choices{z-index:6;inset:0;padding:44px 18px 12px;background:#211812e8;backdrop-filter:none;display:flex;flex-direction:column;justify-content:center;align-items:stretch;overflow:auto}
+html[data-game-ui="marble"] .arena-choices>header{display:flex;align-items:center;justify-content:space-between;width:min(760px,100%);margin:0 auto 12px;gap:12px;color:#f6e2bf}
+html[data-game-ui="marble"] .arena-choices>header div{display:flex;flex-direction:column;gap:4px}
+html[data-game-ui="marble"] .arena-choices>header b{font-size:19px}
+html[data-game-ui="marble"] .arena-choices>header small{font-size:11px;color:#d7b897}
+html[data-game-ui="marble"] .arena-choices>header .m-btn{flex:none;width:auto!important;margin:0;min-height:36px;font-size:11px;background:#493325;color:#efd6af;border:2px solid #aa8050;border-radius:0;padding:6px 10px}
+html[data-game-ui="marble"] .arena-choices .inline-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;width:min(760px,100%);margin:0 auto}
+html[data-game-ui="marble"] .arena-choices.imprint .inline-cards{grid-template-columns:repeat(2,minmax(0,1fr));max-width:600px}
+html[data-game-ui="marble"] .arena-choices .inline-card{display:flex;flex-direction:column;min-width:0;border:3px solid var(--rarity);border-radius:0;background:#f5e7c8;box-shadow:3px 3px 0 #0e0b08;animation:ember-card .24s ease-out both;animation-delay:var(--reveal,0ms)}
+html[data-game-ui="marble"] .arena-choices .pick-power{flex:1;display:flex;flex-direction:column;gap:10px;width:100%;padding:14px;text-align:left;background:transparent;color:#533721;border:0;min-height:210px;border-radius:0;cursor:pointer}
+html[data-game-ui="marble"] .arena-choices .card-title{display:flex;align-items:center;gap:9px;min-height:44px}
+html[data-game-ui="marble"] .arena-choices .card-title svg{width:34px;height:34px;flex:none;stroke:#81592e}
+html[data-game-ui="marble"] .arena-choices .card-title span{font-size:10px;color:#836344}
+html[data-game-ui="marble"] .arena-choices .card-title b{display:block;font-size:18px;margin-top:3px;color:#48301e}
+html[data-game-ui="marble"] .arena-choices .pick-power p{margin:0;font-size:13px;line-height:1.5;color:#513921}
+html[data-game-ui="marble"] .arena-choices .pick-power small{font-size:11px;line-height:1.5;color:#7c634b}
+html[data-game-ui="marble"] .arena-choices .pick-label{display:block;text-align:center;width:100%;padding:8px 0;margin-top:auto;background:#e2c58e;color:#644022;border-radius:0;font-size:13px;min-height:32px;box-sizing:border-box}
+html[data-game-ui="marble"] .arena-choices .tier-ad{margin:0 8px 8px;min-height:30px;border:1px dashed #aa8350;border-radius:0;background:#f2dfb8;color:#7d5b32;font-size:10px}
+html[data-game-ui="marble"] .arena-choices .card-change{font-variant-numeric:tabular-nums;font-size:13px}
+html[data-game-ui="marble"] .arena-choices .rarity-label{display:inline-block;padding:3px 7px;background:var(--rarity);color:#17212b;font-style:normal;font-weight:800;line-height:1.2}
+html[data-game-ui="marble"] .arena-choices .rarity-0{background:#eceef1}
+html[data-game-ui="marble"] .arena-choices .rarity-1{background:#dceef8}
+html[data-game-ui="marble"] .arena-choices .rarity-2{background:#eee0f8}
+html[data-game-ui="marble"] .arena-choices .rarity-3{background:#fae6b8}
+html[data-game-ui="marble"] .arena-shell .arena-sidebar{z-index:9;max-height:calc(100% - 12px);background:#f6e8cd;border:3px solid #aa7c4d;border-radius:0;box-shadow:4px 4px #18120d;color:#503727;padding:12px;overflow-y:auto;width:min(300px,85vw)}
+html[data-game-ui="marble"] .arena-sidebar[hidden]{display:none!important}
+html[data-game-ui="marble"] .arena-sidebar :is(button,.arena-level,.arena-support,.owned-power){border-radius:0!important}
+html[data-game-ui="marble"] .arena-sidebar .arena-panel-tools{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+html[data-game-ui="marble"] .pushback-support{margin:8px 0;padding:8px;border:1px solid #8da99c;background:#e0ead9}
+html[data-game-ui="marble"] .pushback-support>small{display:block;font-size:10px;line-height:1.5;color:#4b6558}
+html[data-game-ui="marble"] .pushback-support p{font-size:11px;margin:3px 0 7px;color:#465846}
+html[data-game-ui="marble"] .pushback-support button{display:block;width:100%;min-height:44px;margin:0 0 5px;padding:6px;background:#4c7264;border:2px solid #324f45;color:#fff3d5;font-size:13px}
+html[data-game-ui="marble"] .pushback-support button small{display:block;font-size:10px;margin-top:3px}
+html[data-game-ui="marble"] .pushback-support button:disabled{opacity:.5;cursor:default}
+html[data-game-ui="marble"] .evolution-progress{padding:8px 0;border-top:1px solid #cbad80}
+html[data-game-ui="marble"] .evolution-row{padding:5px 0;font-size:12px}
+html[data-game-ui="marble"] .evolution-row small{display:block;font-size:10px;color:#a08d79}
+html[data-game-ui="marble"] .evolution-row .ready,html[data-game-ui="marble"] .evolution-row.unlocked{color:#587949}
+html[data-game-ui="marble"] .endless :is(.panel,.m-btn,.hero){border-radius:0!important;box-shadow:3px 3px 0 #ba9467}
+html[data-game-ui="marble"] .endless-records,.codex-badges{display:flex;gap:12px;justify-content:space-around;margin:18px 0;font-size:12px}
+html[data-game-ui="marble"] .endless-codex .codex-entry small{display:block;line-height:1.6}
+html[data-game-ui="marble"] .endless-codex{border-radius:0;border:3px solid #ae8150}
+html[data-game-ui="marble"] .arena-shell button:focus-visible{outline:3px solid #fff1c6;outline-offset:3px}
+@keyframes ember-card{from{opacity:.35;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-height:400px) and (orientation:landscape){html[data-game-ui="marble"] .arena-choices{padding-top:36px}html[data-game-ui="marble"] .arena-choices .pick-power{min-height:175px;padding:10px;gap:6px}html[data-game-ui="marble"] .arena-choices>header{margin-bottom:8px}html[data-game-ui="marble"] .arena-choices .card-title b{font-size:16px}}
+@media(orientation:portrait){html[data-game-ui="marble"] .arena-choices .inline-cards{grid-template-columns:1fr}html[data-game-ui="marble"] .arena-shell .rotate-hint{z-index:5}html[data-game-ui="marble"] .arena-choices{justify-content:flex-start;padding-top:48px}html[data-game-ui="marble"] .arena-stage{display:none}}
+@media(prefers-reduced-motion:reduce){html[data-game-ui="marble"] .inline-card{animation:none}}
+
+/* Portrait is the default, with settings separated from growing build inventory. */
+html[data-game-ui="marble"] .rotate-hint{display:none!important}
+html[data-game-ui="marble"] .arena-settings-page[hidden]{display:none!important}
+html[data-game-ui="marble"] .arena-settings-tabs{display:flex;gap:6px;flex:none}
+html[data-game-ui="marble"] .arena-settings-tabs button{flex:1;min-height:44px}
+html[data-game-ui="marble"] .arena-sidebar{overflow:hidden!important;max-height:calc(100dvh - 14px)}
+html[data-game-ui="marble"] .arena-panel-head,html[data-game-ui="marble"] .arena-sidebar>.arena-panel-note{flex:none}
+html[data-game-ui="marble"] .arena-settings-page{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;touch-action:pan-y;display:flex;flex-direction:column;gap:10px;padding:0 2px 8px;scrollbar-gutter:stable}
+html[data-game-ui="marble"] .arena-settings-page>*{flex-shrink:0;min-width:0;box-sizing:border-box}
+html[data-game-ui="marble"] .arena-support>button{width:100%;min-height:52px!important;padding:8px;line-height:1.4}
+html[data-game-ui="marble"] .arena-support>small{line-height:1.5;color:#71563d}
+html[data-game-ui="marble"] .arena-support button small{line-height:1.4;color:inherit;opacity:.85}
+html[data-game-ui="marble"] .pushback-support{margin:0}
+html[data-game-ui="marble"] .arena-panel-tools{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+html[data-game-ui="marble"] .arena-panel-tools button{min-height:44px!important}
+html[data-game-ui="marble"] .arena-settings-page .owned-powers{max-height:calc(100dvh - 230px)}
+@media(orientation:portrait){
+html[data-game-ui="marble"] .arena-shell{display:grid!important;grid-template-columns:minmax(0,1fr)!important;grid-template-rows:48px minmax(0,1fr)!important;height:100dvh;padding:4px 6px}
+html[data-game-ui="marble"] .arena-shell .arena-hud{grid-column:1;gap:8px;font-size:11px;height:44px}
+html[data-game-ui="marble"] .arena-shell .arena-field{grid-column:1;grid-row:2;min-height:0;height:auto;display:flex!important}
+html[data-game-ui="marble"] .arena-shell #board{display:block!important}
+html[data-game-ui="marble"] .arena-sidebar{inset:60px 10px auto auto!important;width:calc(100% - 20px)!important;box-sizing:border-box;max-height:calc(100dvh - 80px);padding:12px}
+html[data-game-ui="marble"] .arena-choices{padding:12px!important;justify-content:center!important}
+html[data-game-ui="marble"] .arena-choices>header{margin-bottom:8px;gap:8px}
+html[data-game-ui="marble"] .arena-choices .inline-cards{grid-template-columns:1fr!important;gap:8px}
+html[data-game-ui="marble"] .arena-choices .pick-power{min-height:0!important;padding:8px!important;gap:4px}
+html[data-game-ui="marble"] .arena-choices .card-title{min-height:32px}.arena-choices .card-title b{font-size:15px!important}
+html[data-game-ui="marble"] .arena-choices .pick-power p{font-size:12px;line-height:1.35}
+html[data-game-ui="marble"] .arena-choices .pick-label{margin:0;padding:3px;min-height:24px}
+html[data-game-ui="marble"] .arena-choices .tier-ad{min-height:28px;margin:0 8px 5px}
+}
+
+@media(orientation:portrait){html[data-game-ui="marble"] .arena-shell .arena-field{position:relative!important;inset:auto!important}html[data-game-ui="marble"] .arena-shell .arena-hud{position:relative!important;inset:auto!important}html[data-game-ui="marble"] .arena-shell .arena-stage{bottom:32px;display:block!important}}
+
+/* A viewport-sized entrance, with artwork taking the space left by useful controls. */
+html[data-game-ui="marble"] body:has(.marble-home) #app{padding:max(8px,env(safe-area-inset-top)) max(8px,env(safe-area-inset-right)) max(8px,env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left));height:100dvh;min-height:0;box-sizing:border-box}
+html[data-game-ui="marble"] .marble-home{height:100%;max-width:1000px!important;min-height:0;display:grid!important;grid-template-columns:minmax(0,1fr);grid-template-rows:44px minmax(125px,1fr) auto;gap:8px;padding:0;color:#eef1e7}
+html[data-game-ui="marble"] .marble-home .top{grid-column:1/-1;grid-row:1;min-height:44px;color:#e6e8e0;gap:8px}
+html[data-game-ui="marble"] .marble-home .top .m-btn{width:auto;min-width:44px;min-height:44px;font-size:13px;padding:6px 10px}
+html[data-game-ui="marble"] .marble-home .hero{grid-column:1;grid-row:2;height:auto;min-height:0;margin:0;border-color:#927a51;box-shadow:none!important;background-position:center 40%}
+html[data-game-ui="marble"] .marble-home .hero-copy{position:absolute;left:16px;bottom:14px;right:12px}
+html[data-game-ui="marble"] .marble-home .hero-copy p{margin:0 0 5px;color:#c3edee;font-size:10px}
+html[data-game-ui="marble"] .marble-home .hero-copy h1{margin:0;font-size:42px;line-height:1.2;color:#ffe0a0}
+html[data-game-ui="marble"] .marble-home .hero-copy h2{margin:5px 0 0;font-size:14px;color:#eef4ef}
+html[data-game-ui="marble"] .marble-home .home-marble{width:42px;height:42px;right:12%;top:24%}
+html[data-game-ui="marble"] .marble-home .home-content{display:flex;flex-direction:column;justify-content:space-between;gap:8px;min-width:0;min-height:0}
+html[data-game-ui="marble"] .marble-home .story{margin:0;padding:10px 12px;background:#223743!important;border:1px solid #728578!important;box-shadow:none!important}
+html[data-game-ui="marble"] .marble-home .story strong{font-size:18px;color:#ffe0a0;line-height:1.3}
+html[data-game-ui="marble"] .marble-home .story p{font-size:13px;line-height:1.5;margin:5px 0 0;color:#e0e9e5}
+html[data-game-ui="marble"] .marble-home .home-actions{display:flex;gap:8px}
+html[data-game-ui="marble"] .marble-home .home-actions>*{flex:1;min-width:0}
+html[data-game-ui="marble"] .marble-home .m-btn{background:#293d4a!important;border:1px solid #879484!important;color:#edf1e7!important;box-shadow:none!important;min-height:44px;padding:8px 6px;font-size:13px;line-height:1.3}
+html[data-game-ui="marble"] .marble-home .m-btn.gold{background:#e7c580!important;border-color:#ffe7ad!important;color:#25313b!important;font-size:18px}
+html[data-game-ui="marble"] .marble-home .m-btn:hover{filter:brightness(1.1)}
+html[data-game-ui="marble"] .marble-home .m-btn:focus-visible{outline:3px solid #96ead9;outline-offset:2px}
+html[data-game-ui="marble"] .marble-home .home-tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+html[data-game-ui="marble"] .marble-home .home-tools .m-btn{font-size:12px;padding:6px 3px}
+html[data-game-ui="marble"] .marble-home .endless-records{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:0;font-size:11px;text-align:center;color:#d9e4de}
+html[data-game-ui="marble"] .marble-home .endless-records span{padding:6px 2px;background:#172c38;border:1px solid #4d6570;line-height:1.25}
+html[data-game-ui="marble"] .marble-home .endless-records b{display:block;margin-top:3px;color:#ffe0a0;font-size:17px;font-variant-numeric:tabular-nums}
+html[data-game-ui="marble"] .marble-home .footnote{margin:0;font-size:10px;line-height:1.4;color:#d2dddc;text-align:center}
+#marble-rotate{position:fixed;inset:0;z-index:8000;place-items:center;padding:20px;background:radial-gradient(ellipse at 50% 30%,#2f4852,#102331 75%);color:#eef1e7;text-align:center}
+#marble-rotate .marble-rotate-card{width:min(100%,360px);padding:24px 18px;border:1px solid #8e845f;background:#1d3340;box-shadow:0 8px 30px #07101c66}
+#marble-rotate .marble-rotate-device{display:grid;place-items:center;margin:0 auto 20px;width:100px;height:58px;border:3px solid #e7c580;border-radius:9px;font-size:36px;color:#e7c580;line-height:1}
+#marble-rotate h2{font-size:20px;color:#ffe0a0;margin:0 0 10px}
+#marble-rotate p{font-size:13px;line-height:1.7;color:#d8e5e3;margin:0 0 18px}
+#marble-rotate button{display:block;width:100%;min-height:44px;margin-top:10px;padding:10px;border:1px solid #8e9b91;background:#2a4350;color:#edf1e7;font:inherit;font-size:13px}
+#marble-rotate [data-rotate=landscape]{background:#e7c580;color:#25313b;border-color:#ffe7ad;font-weight:bold}
+@media(orientation:landscape){
+html[data-game-ui="marble"] .marble-home{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);grid-template-rows:44px minmax(0,1fr)}
+html[data-game-ui="marble"] .marble-home .home-content{grid-column:2;grid-row:2;gap:6px}
+html[data-game-ui="marble"] .marble-home .story{padding:8px 10px}
+html[data-game-ui="marble"] .marble-home .story p{font-size:12px;line-height:1.4;margin-top:4px}
+html[data-game-ui="marble"] .marble-home .hero-copy h1{font-size:clamp(30px,5vw,46px)}
+html[data-game-ui="marble"] .marble-home .endless-records span{padding:4px 2px}
+}
+@media(orientation:landscape) and (max-height:300px){
+html[data-game-ui="marble"] .marble-home{position:relative}
+html[data-game-ui="marble"] .marble-home .hero{margin-bottom:48px}
+html[data-game-ui="marble"] .marble-home .endless-records{position:absolute;left:0;bottom:0;width:calc(47.619% - 3.81px)}
+html[data-game-ui="marble"] .marble-home .hero-copy{left:10px;bottom:10px}
+html[data-game-ui="marble"] .marble-home .hero-copy h1{font-size:29px}
+html[data-game-ui="marble"] .marble-home .hero-copy h2{font-size:12px}
+html[data-game-ui="marble"] .marble-home .home-content{gap:5px}
+html[data-game-ui="marble"] .marble-home .story{padding:6px 8px}
+html[data-game-ui="marble"] .marble-home .story strong{font-size:16px}
+}

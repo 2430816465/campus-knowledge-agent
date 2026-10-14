@@ -1,0 +1,18 @@
+/* A small instruction rail stays above the playfield; introductions use a centered card. */
+body[data-guide=true] .scene-label,body[data-guide=true] .beacons{visibility:hidden}
+body[data-guide=true] .letter-button,body[data-guide=true] #goal-progress{visibility:hidden}
+body #workshop>#guide.guide{position:absolute;inset:auto;left:12px;right:12px;top:66px;bottom:auto;width:auto;max-height:none;overflow:visible;padding:8px 12px;border:2px solid #80572f;border-radius:12px;background:#fff0d8f5;color:#573a25;box-shadow:0 4px 0 #56382530;z-index:5;display:grid;grid-template-columns:1fr auto;column-gap:12px;pointer-events:none;backdrop-filter:none}
+body #workshop>#guide[hidden]{display:none!important}
+#workshop>#guide .guide-heading{grid-column:1/-1;font-size:11px;color:#976035;height:30px}
+#workshop>#guide .guide-heading button{pointer-events:auto;min-height:30px;height:30px;min-width:48px;padding:2px 8px;border:0;border-image:none;background:transparent;color:#805a3c;font-size:12px}
+#workshop>#guide h2{grid-column:1;margin:0;font-size:15px;line-height:1.4;color:#573a25}
+#workshop>#guide p{grid-column:1;margin:4px 0 0;font-size:12px;line-height:1.55;color:#76543a}
+#workshop>#guide #guide-actions{grid-column:2;grid-row:2/4;align-self:center}
+#workshop>#guide #guide-action{pointer-events:auto;min-height:44px;height:auto;min-width:88px;width:auto;padding:6px 12px;margin:0;border-image:none;border:2px solid #95602f;border-radius:8px;background:#f2ce88;color:#573719;font-size:12px;line-height:1.4;box-shadow:0 3px 0 #a9743b}
+body #workshop>#guide.guide:is([data-step="0"],[data-step="8"],[data-step="9"]){left:50%;right:auto;top:50%;width:min(360px,calc(100vw - 32px));transform:translate(-50%,-50%);box-sizing:border-box;padding:16px;display:block;pointer-events:auto;box-shadow:0 12px 60px #38260c66}
+#workshop>#guide:is([data-step="0"],[data-step="8"],[data-step="9"]) h2{font-size:20px;margin:12px 0}
+#workshop>#guide:is([data-step="0"],[data-step="8"],[data-step="9"]) p{font-size:14px;line-height:1.7;margin-bottom:16px}
+#workshop>#guide:is([data-step="0"],[data-step="8"],[data-step="9"]) #guide-action{width:100%}
+body .scene-bottom>span{left:12px;max-width:calc(100% - 160px)}
+@media(orientation:landscape){body #workshop>#guide.guide{right:auto;width:min(330px,30vw);top:58px;box-sizing:border-box;grid-template-columns:1fr}#workshop>#guide .guide-heading{height:24px}#workshop>#guide h2{font-size:13px}#workshop>#guide p{font-size:11px}#workshop>#guide #guide-actions{grid-column:1;grid-row:auto;margin-top:6px}#workshop>#guide #guide-action{width:100%}}
+@media(max-width:380px){#workshop>#guide h2{font-size:13px}#workshop>#guide p{font-size:11px}#workshop>#guide #guide-action{min-width:76px;padding:6px}}

@@ -1,0 +1,54 @@
+@font-face{font-family:Camp;src:url('../../assets/fonts/camp-display.woff')}*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#314c45;color:#343b35;font-family:Camp,'Microsoft YaHei',sans-serif}button{font:inherit;cursor:pointer;touch-action:manipulation}button:focus-visible{outline:3px solid #54bda7;outline-offset:2px}button:disabled{opacity:.43;cursor:default}#game{position:relative;width:min(100vw,calc(100dvh * .6));height:100dvh;margin:auto;overflow:hidden;box-shadow:0 0 80px #182d32}canvas{display:block;position:absolute;inset:0;width:100%;height:100%;touch-action:none;image-rendering:pixelated}#hud{position:absolute;top:max(12px,env(safe-area-inset-top));left:14px;right:14px;display:flex;justify-content:space-between;pointer-events:none}#hud[hidden]{display:none}.hud-left{padding:10px 12px;background:#253f39e8;color:#f6edd3;border:1px solid #b6bc86;border-radius:12px;min-width:150px}.hud-left span{font-size:12px;display:block}.hud-left strong{display:block;font-size:22px;margin-top:3px}.progress{height:4px;background:#536555;border-radius:8px;margin-top:7px}.progress i{display:block;height:100%;background:#deb96e;width:0;border-radius:8px}#pause{width:48px;height:46px;border:1px solid #c7c29e;background:#263f38e8;color:#fff1c6;border-radius:12px;pointer-events:auto;font-size:22px}#announcement{position:absolute;top:125px;left:10px;right:10px;text-align:center;color:#ffffed;font-size:16px;font-weight:bold;text-shadow:0 2px 3px #162e27;pointer-events:none}#overlay{position:absolute;inset:0;background:#142d2970;display:flex;align-items:center;justify-content:center;padding:12px max(12px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left))}#overlay:empty{display:none}.panel{width:100%;max-height:100%;overflow:auto;overscroll-behavior:contain;background:#f6f1e5;border:2px solid #b4a67e;border-radius:19px;box-shadow:0 10px 40px #112a2866;padding:20px 18px 16px;scrollbar-width:thin}.eyebrow{color:#547f70;font-size:11px;letter-spacing:2px}h1{font-size:34px;letter-spacing:3px;margin:5px 0 8px}h2{font-size:24px;margin:4px 0 12px}h3{margin:12px 0 8px;font-size:16px}p{font-size:13px;line-height:1.8;margin:8px 0;color:#65716a}.hero{height:100px;border-radius:11px;position:relative;overflow:hidden;background:linear-gradient(135deg,#7f9985,#3d5f5d);margin:12px 0}.hero img{position:absolute;bottom:0;height:95%;right:18px;image-rendering:pixelated}.hero img:nth-child(2){height:65%;right:85px}.hero span{position:absolute;left:13px;top:20px;color:#fff5d6;font-size:19px;line-height:1.6}.hero small{font-size:11px;display:block}.wallet{display:flex;justify-content:space-between;gap:10px;background:#e8e5d4;border-radius:8px;padding:10px;font-size:13px}.chapter-head{display:flex;justify-content:space-between;align-items:center;margin-top:16px;font-size:13px}.chapter-head small{font-size:11px;color:#808578}.stages{display:grid;grid-template-columns:repeat(6,1fr);gap:5px;margin-top:7px}.stages button{padding:8px 0;background:#eee7d5;color:#737566;border:1px solid #d3ccb8;border-radius:8px;min-height:40px}.stages button.selected{background:#416b5e;color:#fff6dc;border-color:#416b5e}.stages button.cleared{box-shadow:inset 0 -3px #79ad88}.stage-note{padding:10px;border-left:3px solid #c0a565;background:#eee8d9;margin:14px 0;font-size:12px;line-height:1.7}.actions{display:flex;gap:8px;margin-top:10px}.actions>*{flex:1}.btn{padding:11px 9px;min-height:44px;border-radius:10px;background:#eee6d3;color:#526459;border:1px solid #c8bea6;font-size:14px}.primary{background:#416f60;color:#fff5dc;border-color:#416f60}.full{width:100%;margin-top:9px}.quiet{background:transparent;border-color:transparent;color:#6b796c}.caption{text-align:center;font-size:11px;color:#7d8274;margin-top:10px}.training{display:grid;gap:10px;margin:12px 0}.training article{padding:14px;background:#eee8d7;border:1px solid #d4c9ae;border-radius:10px}.training strong{font-size:15px}.training small{float:right;color:#718277;font-size:12px}.training p{margin:5px 0}.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:15px 0}.stat-grid div{padding:12px;background:#eee7d7;border-radius:9px;text-align:center}.stat-grid b{display:block;font-size:23px;color:#436b5c}.stat-grid span{font-size:11px;color:#7a7f71}.guide{display:flex;gap:10px;padding:11px;background:#eee8da;border-radius:10px;margin:10px 0}.guide b{background:#598574;border-radius:6px;min-width:54px;color:#ffefc5;text-align:center;padding:8px 5px}.guide div{font-size:12px;line-height:1.7}#error{position:absolute;bottom:12px;left:12px;right:12px;background:#ffefd2;color:#934e33;border:1px solid #c38c64;padding:12px;font-size:12px;border-radius:10px;z-index:5}#loading{position:absolute;inset:0;display:grid;place-items:center;background:#f1ecd9;font-size:17px}#loading[hidden]{display:none}@media(max-height:580px){.panel{padding:12px}.hero{height:64px;margin:8px 0}.hero span{font-size:14px;top:6px;line-height:1.4}h1{font-size:25px}.chapter-head{margin-top:10px}.stages button{min-height:32px;padding:5px 0}.caption{font-size:10px}#game{width:min(100vw,calc(100dvh * .75))}}
+
+.stages button strong{display:block;font-weight:normal}.stages button small{display:block;font-size:9px;line-height:14px;margin-top:3px}
+
+/* Menus use the screen width; the playable vertical track keeps its aspect. */
+@media(orientation:landscape) and (max-height:500px){
+ #game:has(#overlay:not(:empty)){width:100vw}#overlay .panel{max-width:760px}
+ #game[data-screen="home"] .panel,#game[data-screen="paused"] .panel{display:grid;grid-template-columns:1fr 1fr;gap:6px;overflow:hidden;padding:10px}
+ #game[data-screen="home"] .panel h1{font-size:23px;margin:0;align-self:center}
+ #game[data-screen="home"] .wallet{font-size:12px;padding:7px}
+ #game[data-screen="home"] .stage-note{grid-column:1/-1;margin:0;padding:7px}
+ #game[data-screen="home"] .stage-note p{margin:2px 0;line-height:1.4;font-size:12px}
+ #game[data-screen="home"] .actions{grid-column:1/-1;margin:0}
+ #game[data-screen="home"] .btn,#game[data-screen="paused"] .btn{margin:0;min-height:44px;padding:7px}
+ #game[data-screen="home"] .caption{display:none}
+ #game[data-screen="paused"] :is(.eyebrow,h2,p){grid-column:1/-1;margin:0;line-height:1.4}
+ #game[data-screen="paused"] [data-action="resume"]{grid-column:1/-1}
+}
+
+/* Choice expansion: thumb-sized options, read before confirming. */
+.choice-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px}.choice-cards button{min-height:125px;text-align:left;border:2px solid #a68b56;background:#fff8e6;padding:12px}.choice-cards strong,.choice-cards span,.choice-cards small{display:block}.choice-cards strong{font-size:18px;color:#3f6758}.choice-cards span{font-size:12px;line-height:1.5;margin:8px 0}.choice-cards small{font-size:11px;color:#776648}.choice-panel h2{margin-bottom:4px}.quiet{background:#74523d!important;color:#fff2d6!important;border-color:#74523d!important}#announcement{top:145px;font-size:13px;background:#294535bb;padding:4px 8px;border-radius:5px}#announcement:empty{display:none}.hud-left{max-width:calc(100% - 58px)}.hud-left strong{font-size:20px}.hud-left span{font-size:11px}#buff-label{margin-top:4px}
+@media(max-width:360px){.panel{padding:12px}.choice-cards button{min-height:108px;padding:9px}.choice-cards strong{font-size:16px}.stage-note{margin:8px 0}.full{margin-top:6px}h1{font-size:28px}}
+@media(orientation:landscape) and (max-height:500px){.choice-cards{grid-template-columns:repeat(4,1fr)}.choice-cards button{min-height:110px}.choice-panel{max-width:760px}.choice-panel p{margin:3px 0}#game[data-screen="home"] .panel>.full{margin:0}}
+
+/* Keep the three training choices visible together on wide phones. */
+.progress[hidden]{display:none}
+#game[data-screen="playing"] #announcement{top:auto;bottom:max(12px,env(safe-area-inset-bottom))}
+@media(max-height:580px){
+ #game[data-screen="playing"] #hud{top:max(8px,env(safe-area-inset-top))}
+ #game[data-screen="playing"] .hud-left{padding:4px 8px}
+ #game[data-screen="playing"] .hud-left span{font-size:11px;line-height:14px}
+ #game[data-screen="playing"] .hud-left strong{font-size:16px;line-height:18px;margin-top:0}
+ #game[data-screen="playing"] #buff-label{margin-top:0}
+}
+/* The unused side margins keep short landscape HUDs clear of the boss's head. */
+@media(orientation:landscape) and (max-height:500px) and (min-width:520px){
+ #game[data-screen="playing"]{overflow:visible}
+ #game[data-screen="playing"] #hud{left:0;right:0}
+ #game[data-screen="playing"] .hud-left{position:absolute;left:-146px;width:136px;min-width:0;max-width:none;padding:8px}
+ #game[data-screen="playing"] #pause{position:absolute;right:-58px}
+}
+#game[data-screen="training"] .training article{padding:11px}
+#game[data-screen="training"] .training p{font-size:13px;line-height:1.5}
+@media(orientation:landscape) and (max-height:500px){
+ #game[data-screen="training"] .panel{max-width:800px;padding:12px}
+ #game[data-screen="training"] .training{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:9px 0}
+ #game[data-screen="training"] .training article{display:flex;flex-direction:column;gap:4px;padding:10px}
+ #game[data-screen="training"] .training small{float:none}
+ #game[data-screen="training"] .training p{flex:1;margin:0;font-size:12px;line-height:1.5}
+ #game[data-screen="training"] .training .btn{margin:0;min-height:44px}
+ #game[data-screen="training"] .panel>p{font-size:12px;line-height:1.5;margin:4px 0}
+ #game[data-screen="training"] .wallet{padding:6px 10px}
+ #game[data-screen="training"] h2{font-size:21px;margin:3px 0 6px}
+}
