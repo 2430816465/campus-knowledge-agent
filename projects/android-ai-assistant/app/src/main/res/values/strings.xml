@@ -1,3 +1,0 @@
-<resources>
-    <string name="accessibility_description">仅用于你授权的测试微信会话：记录可见节点与屏幕OCR。不会点击、填写或发送消息；不能读取微信后台私有数据库。请勿在实验期间打开私人聊天。</string>
-</resources>

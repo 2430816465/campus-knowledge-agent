@@ -26,7 +26,5 @@
 **/*.pck
 **/*.db
 **/*.sqlite*
-projects/campus-rag/data/
-projects/honghuang-godot/docs/combat/*.json
-projects/honghuang-godot/docs/audits/*
-!projects/honghuang-godot/docs/audits/.gitkeep
+
+data/
