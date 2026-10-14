@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-15",
+  "captured_at": "2026-10-15T01:51:25+08:00",
+  "repository": "campus-knowledge-agent",
+  "source_version": "unversioned application snapshot",
+  "selected_source_files": 255,
+  "source_comparison": "All selected files matched current main working directory after ignoring only UTF-8 BOM and CRLF/LF differences.",
+  "added_source_files": 0,
+  "updated_source_files": 0,
+  "inventory_sha256": "033aedc9cd2f02ab38667ba0dd967d06a13c9e271624e091fae1df0b0abc9ea1",
+  "scope": "Independent project source and engineering documents; original private databases, credentials, model weights, caches and local delivery archives not published."
+}
