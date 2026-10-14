@@ -1,6 +1,6 @@
-# 校园知识服务与溯源问答
+# 校园知识服务 Agent 智能体平台
 
-面向校园公开通知、竞赛与办事资料的应用项目。使用 Python、FastAPI、SQLAlchemy、Ollama 与 Qwen3，贯通资料采集、文档解析、检索、问答和原文溯源。开发中实际使用过 PostgreSQL、Docker 与 Dify；本展示副本默认 SQLite，不包含运行数据或 Dify 全栈。
+面向校园公开通知、竞赛与办事资料搭建的知识服务 Agent，以 RAG 检索问答为核心。使用 Python、FastAPI、SQLAlchemy、Ollama 与 Qwen3，贯通资料采集、文档解析、检索、问答、原文溯源和审核发布，形成可运行的智能体应用工作流。开发中实际使用过 PostgreSQL、Docker 与 Dify；本展示副本默认 SQLite，不包含运行数据或 Dify 全栈。
 
 ## 实现内容
 
